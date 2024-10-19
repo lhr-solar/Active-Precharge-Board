@@ -319,6 +319,174 @@
 				)
 			)
 		)
+		(symbol "Connector_Generic:Conn_01x03"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x03"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x03_1_1"
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:C"
 			(pin_numbers hide)
 			(pin_names
@@ -2242,6 +2410,16 @@
 	)
 	(wire
 		(pts
+			(xy 173.99 124.46) (xy 173.99 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "086cd0e8-6043-4176-bb33-d4d26cad3fc2")
+	)
+	(wire
+		(pts
 			(xy 181.61 45.72) (xy 181.61 48.26)
 		)
 		(stroke
@@ -2249,6 +2427,16 @@
 			(type default)
 		)
 		(uuid "092ba33a-2dfd-418d-bb60-d204f6cddc07")
+	)
+	(wire
+		(pts
+			(xy 34.29 40.64) (xy 40.64 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c5783bf-7917-49f9-9884-fe8ab429bf60")
 	)
 	(wire
 		(pts
@@ -2269,16 +2457,6 @@
 			(type default)
 		)
 		(uuid "0e3ac2cb-8489-4af1-bf40-54115d18a9d8")
-	)
-	(wire
-		(pts
-			(xy 173.99 143.51) (xy 173.99 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "15d5a183-2ce0-41ca-ab41-790cc5929206")
 	)
 	(wire
 		(pts
@@ -2339,6 +2517,16 @@
 			(type default)
 		)
 		(uuid "20742468-0d7a-44fd-89f7-b63cef66bef7")
+	)
+	(wire
+		(pts
+			(xy 173.99 134.62) (xy 173.99 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23a2652c-f949-4a83-95e4-c6be6c7066ec")
 	)
 	(wire
 		(pts
@@ -2492,16 +2680,6 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 120.65) (xy 173.99 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "67e8c79d-aa80-4a6d-b4e2-eb6b01fd42cb")
-	)
-	(wire
-		(pts
 			(xy 111.76 172.72) (xy 111.76 175.26)
 		)
 		(stroke
@@ -2642,6 +2820,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 40.64) (xy 34.29 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "963f824a-700c-4d5f-9f48-ff3d54b9d9b8")
+	)
+	(wire
+		(pts
 			(xy 102.87 161.29) (xy 111.76 161.29)
 		)
 		(stroke
@@ -2722,6 +2910,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 38.1) (xy 40.64 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b017be56-7957-42ad-925d-44282e2636f7")
+	)
+	(wire
+		(pts
 			(xy 53.34 140.97) (xy 63.5 140.97)
 		)
 		(stroke
@@ -2732,16 +2930,6 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 132.08) (xy 173.99 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b61f3b7d-4ba0-46fa-b673-08dc976ec128")
-	)
-	(wire
-		(pts
 			(xy 31.75 152.4) (xy 31.75 154.94)
 		)
 		(stroke
@@ -2749,6 +2937,16 @@
 			(type default)
 		)
 		(uuid "b659f068-4a3b-40c8-ae68-a20dabb6bc90")
+	)
+	(wire
+		(pts
+			(xy 173.99 144.78) (xy 173.99 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b820eeb3-df16-40ac-8810-f9927a61e7f6")
 	)
 	(wire
 		(pts
@@ -2869,6 +3067,16 @@
 			(type default)
 		)
 		(uuid "cf8d5840-7bcf-457d-af95-9af97e1c4c5b")
+	)
+	(wire
+		(pts
+			(xy 173.99 114.3) (xy 173.99 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4272407-bb3f-40ba-bb50-4e972b39358b")
 	)
 	(wire
 		(pts
@@ -3000,6 +3208,16 @@
 		)
 		(uuid "fc159cfb-7863-4ce1-ba83-f99116b37cf5")
 	)
+	(wire
+		(pts
+			(xy 34.29 35.56) (xy 40.64 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd78a60b-7bd9-4fb7-81ce-6535c6031cc3")
+	)
 	(text "SignalHV high when Vin > Vref,\nie, when Vmotor > 91%Vbattery.\nSignalHV = Vcc = 3.3V when high."
 		(exclude_from_sim no)
 		(at 126.746 60.198 0)
@@ -3020,7 +3238,7 @@
 		)
 		(uuid "6d2ee2ed-47d6-4456-b3a4-fb15fb7dbc25")
 	)
-	(text "Contactor Driver Circuit\nwith indicator LED"
+	(text "Contactor Driver Circuit\nwith indicator LED (Green)\n"
 		(exclude_from_sim no)
 		(at 182.372 96.012 0)
 		(effects
@@ -3060,9 +3278,9 @@
 		)
 		(uuid "84b85356-e34a-452a-a3df-90ea0eef0d8d")
 	)
-	(text "HV Indicator LED\n"
+	(text "HV Indicator LED (Red)\n"
 		(exclude_from_sim no)
-		(at 173.736 156.464 0)
+		(at 175.26 156.464 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3111,7 +3329,7 @@
 		)
 		(uuid "071bc4d1-58f9-45e5-bffd-4d6584144915")
 	)
-	(label "Vmotor"
+	(label "HVIn"
 		(at 53.34 116.84 0)
 		(fields_autoplaced yes)
 		(effects
@@ -3166,7 +3384,18 @@
 		)
 		(uuid "69265a92-59be-41b7-bdf3-b80aeaac39d8")
 	)
-	(label "Vbattery"
+	(label "HVIn"
+		(at 34.29 38.1 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6bfe2daa-e653-46a9-8966-9da3274479ee")
+	)
+	(label "HVRef"
 		(at 31.75 116.84 0)
 		(fields_autoplaced yes)
 		(effects
@@ -3177,7 +3406,7 @@
 		)
 		(uuid "7016a047-b1a6-4899-80b6-4a2c7e08cf28")
 	)
-	(label "Vbattery"
+	(label "HVRef"
 		(at 83.82 161.29 0)
 		(fields_autoplaced yes)
 		(effects
@@ -3189,7 +3418,7 @@
 		(uuid "754ce960-5255-47f2-9318-04e24a27743a")
 	)
 	(label "Vcc"
-		(at 173.99 120.65 0)
+		(at 173.99 114.3 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3220,6 +3449,17 @@
 			(justify left bottom)
 		)
 		(uuid "9d703ee1-4b0d-4aec-af21-e5c03f96afaa")
+	)
+	(label "HVRef"
+		(at 34.29 35.56 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c905bdd8-9a4d-439a-b66c-2bc3e17af227")
 	)
 	(label "SignalLV"
 		(at 135.89 96.52 180)
@@ -3412,7 +3652,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+		(property "Footprint" "LDO:SOT-89-3_2P7X4P7_ONS"
 			(at 128.27 146.05 0)
 			(effects
 				(font
@@ -3559,7 +3799,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "46205Fuse:FUSC10545X460N"
 			(at 96.52 163.068 90)
 			(effects
 				(font
@@ -3629,7 +3869,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 240.9952 53.34 0)
 			(effects
 				(font
@@ -3673,70 +3913,6 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 57.15 50.8 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0ed68f28-17cb-42ca-bde0-c628ffa93a68")
-		(property "Reference" "H7"
-			(at 59.69 49.5299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "HVIN+"
-			(at 59.69 52.0699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 57.15 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 57.15 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 57.15 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "ActivePrecharge"
-				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "H7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
 		(at 264.16 157.48 0)
 		(unit 1)
 		(exclude_from_sim yes)
@@ -3763,7 +3939,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3mm"
 			(at 264.16 157.48 0)
 			(effects
 				(font
@@ -3827,7 +4003,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "utsvt-conn:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical"
 			(at 226.06 105.41 0)
 			(effects
 				(font
@@ -4027,7 +4203,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+		(property "Footprint" "LDO:SOT-89-3_2P7X4P7_ONS"
 			(at 128.27 175.26 0)
 			(effects
 				(font
@@ -4166,7 +4342,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
 			(at 241.3 139.7 0)
 			(effects
 				(font
@@ -4203,35 +4379,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 173.99 139.7 90)
+		(lib_id "Device:R_US")
+		(at 173.99 120.65 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "37a872ea-9b48-4c23-b2f7-93cbf20c5b5b")
-		(property "Reference" "D4"
-			(at 177.8 140.0174 90)
+		(uuid "361104e4-a221-442f-ab7f-edd0a43ea4e0")
+		(property "Reference" "R6a1"
+			(at 176.53 119.3799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Value" "LED"
-			(at 177.8 142.5574 90)
+		(property "Value" "250"
+			(at 176.53 121.9199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 173.99 139.7 0)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 175.006 120.904 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4240,7 +4416,77 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 173.99 139.7 0)
+			(at 173.99 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 173.99 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c7e16dab-5741-4ec6-85a9-9f61ed1aff6b")
+		)
+		(pin "1"
+			(uuid "3997468e-b394-4f1f-b6c7-a62b3fa8bc6a")
+		)
+		(instances
+			(project ""
+				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
+					(reference "R6a1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 173.99 140.97 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "37a872ea-9b48-4c23-b2f7-93cbf20c5b5b")
+		(property "Reference" "D4"
+			(at 177.8 141.2874 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 177.8 143.8274 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 173.99 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 173.99 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4249,7 +4495,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 173.99 139.7 0)
+			(at 173.99 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4340,70 +4586,6 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 57.15 38.1 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "451ce4e2-b884-4cef-a6c7-fd79ab05b347")
-		(property "Reference" "H8"
-			(at 59.69 36.8299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "HVIN-"
-			(at 59.69 39.3699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 57.15 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 57.15 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 57.15 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "ActivePrecharge"
-				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "H8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
 		(at 241.3 148.59 0)
 		(unit 1)
 		(exclude_from_sim yes)
@@ -4430,7 +4612,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3mm"
 			(at 241.3 148.59 0)
 			(effects
 				(font
@@ -4560,7 +4742,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 32.766 133.604 90)
 			(effects
 				(font
@@ -4597,6 +4779,72 @@
 			(project ""
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
 					(reference "R1b1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 34.29 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4d0c5241-0cf0-463e-b5f3-ed1a0fd1dec3")
+		(property "Reference" "#PWR017"
+			(at 34.29 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "HVGND"
+			(at 34.29 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 34.29 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 34.29 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 34.29 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c3a51795-ad52-4956-9dff-475aafba7975")
+		)
+		(instances
+			(project ""
+				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -4762,7 +5010,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 54.356 148.844 90)
 			(effects
 				(font
@@ -4832,7 +5080,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 54.356 128.524 90)
 			(effects
 				(font
@@ -4968,7 +5216,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "utsvt-passive:V2F22HM"
 			(at 181.61 52.07 0)
 			(effects
 				(font
@@ -5038,7 +5286,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "73186626-394b-4607-b6a7-c44e18358d40")
-		(property "Reference" "Contactor1"
+		(property "Reference" "J3"
 			(at 196.85 52.0699 0)
 			(effects
 				(font
@@ -5056,7 +5304,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "utsvt-conn:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical"
 			(at 194.31 52.07 0)
 			(effects
 				(font
@@ -5092,71 +5340,7 @@
 		(instances
 			(project ""
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "Contactor1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 31.75 38.1 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "78ccce3b-4149-4c64-8037-c9264ebb32ee")
-		(property "Reference" "H5"
-			(at 34.29 36.8299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "HV+"
-			(at 34.29 39.3699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 31.75 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 31.75 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 31.75 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project ""
-				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "H5")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -5171,7 +5355,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8033aad1-5e25-412c-9fbe-de6be3afdaa7")
-		(property "Reference" "R8"
+		(property "Reference" "R11"
 			(at 176.53 78.7399 0)
 			(effects
 				(font
@@ -5189,7 +5373,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 175.006 80.264 90)
 			(effects
 				(font
@@ -5225,7 +5409,7 @@
 		(instances
 			(project ""
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "R8")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -5336,7 +5520,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 32.766 124.714 90)
 			(effects
 				(font
@@ -5406,7 +5590,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3mm"
 			(at 241.3 157.48 0)
 			(effects
 				(font
@@ -5536,7 +5720,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3mm"
 			(at 264.16 148.59 0)
 			(effects
 				(font
@@ -5591,7 +5775,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5.1k"
+		(property "Value" "5k"
 			(at 262.89 45.7199 0)
 			(effects
 				(font
@@ -5600,7 +5784,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 261.366 44.704 90)
 			(effects
 				(font
@@ -5670,7 +5854,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 143.2052 172.72 0)
 			(effects
 				(font
@@ -5707,6 +5891,79 @@
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
 					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 45.72 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b46986de-e705-4d32-b2d1-5202102ac3e0")
+		(property "Reference" "J2"
+			(at 48.26 36.8299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x03"
+			(at 48.26 39.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "utsvt-conn:Molex_MicroFit3.0_1x3xP3.00mm_PolarizingPeg_Vertical"
+			(at 45.72 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 45.72 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 45.72 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "dbef2a6a-cf9c-46ac-99db-d61b614adcfa")
+		)
+		(pin "1"
+			(uuid "4d3fe431-a8eb-41e4-9979-f0483f82f000")
+		)
+		(pin "3"
+			(uuid "6096e4ba-7c78-45e3-8137-df0e1bc619b7")
+		)
+		(instances
+			(project ""
+				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -5807,7 +6064,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
 			(at 264.16 139.7 0)
 			(effects
 				(font
@@ -5871,7 +6128,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 143.2052 143.51 0)
 			(effects
 				(font
@@ -5941,7 +6198,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 166.37 52.07 0)
 			(effects
 				(font
@@ -6011,7 +6268,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 112.7252 172.72 0)
 			(effects
 				(font
@@ -6055,7 +6312,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 173.99 128.27 0)
+		(at 173.99 130.81 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6063,16 +6320,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c8b4bd1c-0a3e-491e-a01b-65eec230bb83")
-		(property "Reference" "R1"
-			(at 176.53 126.9999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "750"
+		(property "Reference" "R6b1"
 			(at 176.53 129.5399 0)
 			(effects
 				(font
@@ -6081,8 +6329,17 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 175.006 128.524 90)
+		(property "Value" "500"
+			(at 176.53 132.0799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 175.006 131.064 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6091,7 +6348,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 173.99 128.27 0)
+			(at 173.99 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6100,7 +6357,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 173.99 128.27 0)
+			(at 173.99 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6117,7 +6374,7 @@
 		(instances
 			(project ""
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "R1")
+					(reference "R6b1")
 					(unit 1)
 				)
 			)
@@ -6283,7 +6540,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 32.766 148.844 90)
 			(effects
 				(font
@@ -6353,7 +6610,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 227.0252 53.34 0)
 			(effects
 				(font
@@ -6603,70 +6860,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 31.75 50.8 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e10c31fa-ddbf-41e2-be9d-7d81ed299128")
-		(property "Reference" "H6"
-			(at 34.29 49.5299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "HV-"
-			(at 34.29 52.0699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 31.75 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 31.75 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 31.75 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "ActivePrecharge"
-				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "H6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+12V")
 		(at 220.98 100.33 0)
 		(unit 1)
@@ -6816,7 +7009,7 @@
 				)
 			)
 		)
-		(property "Value" "5050"
+		(property "Value" "5k"
 			(at 173.99 41.91 90)
 			(effects
 				(font
@@ -6824,7 +7017,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 174.244 44.704 90)
 			(effects
 				(font
@@ -6894,7 +7087,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 260.35 53.34 0)
 			(effects
 				(font
@@ -6964,7 +7157,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 112.7252 143.51 0)
 			(effects
 				(font
@@ -7083,7 +7276,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f96826ce-7294-4b4a-9986-819180814226")
-		(property "Reference" "R7"
+		(property "Reference" "R8"
 			(at 104.14 86.3599 0)
 			(effects
 				(font
@@ -7101,7 +7294,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 102.616 87.884 90)
 			(effects
 				(font
@@ -7137,7 +7330,7 @@
 		(instances
 			(project ""
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "R7")
+					(reference "R8")
 					(unit 1)
 				)
 			)
