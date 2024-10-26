@@ -4,4 +4,5 @@
   (lib (name "utsvt-conn")(type "KiCad")(uri "C:/Users/jacob/OneDrive/Desktop/LHR/Active-Precharge-Board/UTSVT-KiCadLibraries/UTSVT_Connectors.pretty")(options "")(descr ""))
   (lib (name "utsvt-passive")(type "KiCad")(uri "C:/Users/jacob/OneDrive/Desktop/LHR/Active-Precharge-Board/UTSVT-KiCadLibraries/UTSVT_Passive.pretty")(options "")(descr ""))
   (lib (name "46205Fuse")(type "KiCad")(uri "C:/Users/jacob/Solar/ActivePrecharge_Footprints/46205Fuse")(options "")(descr ""))
+  (lib (name "BigCap")(type "KiCad")(uri "C:/Users/jacob/Solar/ActivePrecharge_Footprints/2220B225K251CT/KiCad")(options "")(descr ""))
 )

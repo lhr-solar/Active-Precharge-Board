@@ -3,4 +3,5 @@
   (lib (name "utsvt-chips")(type "KiCad")(uri "C:/Users/jacob/OneDrive/Desktop/LHR/Active-Precharge-Board/UTSVT-KiCadLibraries/utsvt-chips.kicad_sym")(options "")(descr ""))
   (lib (name "utsvt-conn")(type "KiCad")(uri "C:/Users/jacob/OneDrive/Desktop/LHR/Active-Precharge-Board/UTSVT-KiCadLibraries/utsvt-connectors.kicad_sym")(options "")(descr ""))
   (lib (name "utsvt-microcontrokller")(type "KiCad")(uri "C:/Users/jacob/OneDrive/Desktop/LHR/Active-Precharge-Board/UTSVT-KiCadLibraries/utsvt-microcontrollers.kicad_sym")(options "")(descr ""))
+  (lib (name "utsvt-conn-sym")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/utsvt-connectors.kicad_sym")(options "")(descr ""))
 )
