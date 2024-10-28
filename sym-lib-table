@@ -1,7 +1,8 @@
 (sym_lib_table
   (version 7)
-  (lib (name "utsvt-chips")(type "KiCad")(uri "C:/Users/jacob/OneDrive/Desktop/LHR/Active-Precharge-Board/UTSVT-KiCadLibraries/utsvt-chips.kicad_sym")(options "")(descr ""))
-  (lib (name "utsvt-conn")(type "KiCad")(uri "C:/Users/jacob/OneDrive/Desktop/LHR/Active-Precharge-Board/UTSVT-KiCadLibraries/utsvt-connectors.kicad_sym")(options "")(descr ""))
-  (lib (name "utsvt-microcontrokller")(type "KiCad")(uri "C:/Users/jacob/OneDrive/Desktop/LHR/Active-Precharge-Board/UTSVT-KiCadLibraries/utsvt-microcontrollers.kicad_sym")(options "")(descr ""))
+  (lib (name "utsvt-chips")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/utsvt-chips.kicad_sym")(options "")(descr ""))
+  (lib (name "utsvt-conn")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/utsvt-connectors.kicad_sym")(options "")(descr ""))
+  (lib (name "utsvt-microcontrokller")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/utsvt-microcontrollers.kicad_sym")(options "")(descr ""))
   (lib (name "utsvt-conn-sym")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/utsvt-connectors.kicad_sym")(options "")(descr ""))
+  (lib (name "Nucleo32")(type "KiCad")(uri "${KIPRJMOD}/NUCLEO-L432KC/NUCLEO-L432KC.kicad_sym")(options "")(descr ""))
 )
