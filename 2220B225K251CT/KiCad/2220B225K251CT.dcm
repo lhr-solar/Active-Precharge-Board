@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP 2220B225K251CT
-D Multilayer Ceramic Capacitors MLCC - SMD/SMT 2220 MLCC X7R 2.2 uF '+/- 10% 250 V T&R MH
-K
-F https://www.mouser.es/datasheet/2/210/Middle_and_High_Voltage_DS-1535659.pdf
-$ENDCMP
-#
-#End Doc Library
