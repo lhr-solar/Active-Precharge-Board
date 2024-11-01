@@ -786,139 +786,6 @@
 				)
 			)
 		)
-		(symbol "Device:Fuse"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "F"
-				(at 2.032 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Fuse"
-				(at -1.905 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.778 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Fuse"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "fuse"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "*Fuse*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Fuse_0_1"
-				(rectangle
-					(start -0.762 -2.54)
-					(end 0.762 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Fuse_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:LED"
 			(pin_numbers hide)
 			(pin_names
@@ -2295,19 +2162,19 @@
 		(uuid "0007dbfb-89ee-4b96-a72e-283abe2a07d3")
 	)
 	(junction
-		(at 43.18 139.7)
+		(at 41.91 137.16)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "246c4716-a95a-4aec-86c4-2983991d461e")
 	)
 	(junction
-		(at 69.85 139.7)
+		(at 68.58 137.16)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4ae36399-44e9-466e-896e-3c58c8b5419d")
 	)
 	(junction
-		(at 58.42 184.15)
+		(at 57.15 181.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6823dca2-736f-40a3-b4ee-a2fbc902f238")
@@ -2319,7 +2186,7 @@
 		(uuid "7dc7e119-23f7-4b5f-ae1b-bbc9912dceae")
 	)
 	(junction
-		(at 43.18 170.18)
+		(at 41.91 167.64)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8fee61cb-11db-4ad5-bd8a-1e9a9ecc61d0")
@@ -2337,7 +2204,7 @@
 		(uuid "a64bed97-3fe9-4260-b3d9-849727e8483b")
 	)
 	(junction
-		(at 31.75 156.21)
+		(at 30.48 153.67)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b64a34ca-266d-4591-a82f-6679851bd4b0")
@@ -2355,13 +2222,13 @@
 		(uuid "c518a025-aee5-4870-88e1-f8fbcf35e57b")
 	)
 	(junction
-		(at 69.85 170.18)
+		(at 68.58 167.64)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c8083f44-350c-495b-a2a6-e6bc0817697d")
 	)
 	(junction
-		(at 58.42 153.67)
+		(at 57.15 151.13)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f9506399-8dff-4738-86f9-938da31f9246")
@@ -2374,7 +2241,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 170.18) (xy 72.39 170.18)
+			(xy 68.58 167.64) (xy 71.12 167.64)
 		)
 		(stroke
 			(width 0)
@@ -2394,7 +2261,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 170.18) (xy 43.18 170.18)
+			(xy 30.48 167.64) (xy 41.91 167.64)
 		)
 		(stroke
 			(width 0)
@@ -2451,16 +2318,6 @@
 			(type default)
 		)
 		(uuid "1d573d18-fbd8-46e7-9c71-483dc2102fd8")
-	)
-	(wire
-		(pts
-			(xy 20.32 156.21) (xy 22.86 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1dbeb9d0-2465-4828-bc91-5ea10f5c8ecb")
 	)
 	(wire
 		(pts
@@ -2524,7 +2381,17 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 184.15) (xy 69.85 184.15)
+			(xy 20.32 153.67) (xy 30.48 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f961a50-dc0e-4802-af78-24403e4e5fe3")
+	)
+	(wire
+		(pts
+			(xy 57.15 181.61) (xy 68.58 181.61)
 		)
 		(stroke
 			(width 0)
@@ -2544,7 +2411,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 149.86) (xy 58.42 153.67)
+			(xy 57.15 147.32) (xy 57.15 151.13)
 		)
 		(stroke
 			(width 0)
@@ -2574,7 +2441,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 139.7) (xy 48.26 139.7)
+			(xy 41.91 137.16) (xy 46.99 137.16)
 		)
 		(stroke
 			(width 0)
@@ -2584,7 +2451,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 139.7) (xy 69.85 143.51)
+			(xy 68.58 137.16) (xy 68.58 140.97)
 		)
 		(stroke
 			(width 0)
@@ -2594,7 +2461,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 181.61) (xy 69.85 184.15)
+			(xy 68.58 179.07) (xy 68.58 181.61)
 		)
 		(stroke
 			(width 0)
@@ -2614,7 +2481,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 170.18) (xy 69.85 173.99)
+			(xy 68.58 167.64) (xy 68.58 171.45)
 		)
 		(stroke
 			(width 0)
@@ -2634,7 +2501,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 156.21) (xy 31.75 160.02)
+			(xy 30.48 153.67) (xy 30.48 157.48)
 		)
 		(stroke
 			(width 0)
@@ -2664,17 +2531,7 @@
 	)
 	(wire
 		(pts
-			(xy 20.32 139.7) (xy 20.32 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "64c000a2-0f63-4cb3-bc5b-29791fd659e4")
-	)
-	(wire
-		(pts
-			(xy 82.55 170.18) (xy 80.01 170.18)
+			(xy 81.28 167.64) (xy 78.74 167.64)
 		)
 		(stroke
 			(width 0)
@@ -2684,7 +2541,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 151.13) (xy 43.18 153.67)
+			(xy 41.91 148.59) (xy 41.91 151.13)
 		)
 		(stroke
 			(width 0)
@@ -2714,7 +2571,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 153.67) (xy 58.42 153.67)
+			(xy 41.91 151.13) (xy 57.15 151.13)
 		)
 		(stroke
 			(width 0)
@@ -2724,7 +2581,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 180.34) (xy 58.42 184.15)
+			(xy 57.15 177.8) (xy 57.15 181.61)
 		)
 		(stroke
 			(width 0)
@@ -2744,7 +2601,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 151.13) (xy 69.85 153.67)
+			(xy 68.58 148.59) (xy 68.58 151.13)
 		)
 		(stroke
 			(width 0)
@@ -2754,7 +2611,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 167.64) (xy 31.75 170.18)
+			(xy 30.48 165.1) (xy 30.48 167.64)
 		)
 		(stroke
 			(width 0)
@@ -2784,7 +2641,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 139.7) (xy 83.82 139.7)
+			(xy 68.58 137.16) (xy 82.55 137.16)
 		)
 		(stroke
 			(width 0)
@@ -2804,7 +2661,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 139.7) (xy 69.85 139.7)
+			(xy 67.31 137.16) (xy 68.58 137.16)
 		)
 		(stroke
 			(width 0)
@@ -2834,7 +2691,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 139.7) (xy 31.75 143.51)
+			(xy 30.48 137.16) (xy 30.48 140.97)
 		)
 		(stroke
 			(width 0)
@@ -2934,7 +2791,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 170.18) (xy 48.26 170.18)
+			(xy 41.91 167.64) (xy 46.99 167.64)
 		)
 		(stroke
 			(width 0)
@@ -2994,16 +2851,6 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 156.21) (xy 31.75 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b98296d5-ab74-410e-b14e-c24815326aab")
-	)
-	(wire
-		(pts
 			(xy 201.93 34.29) (xy 201.93 36.83)
 		)
 		(stroke
@@ -3034,7 +2881,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 170.18) (xy 82.55 173.99)
+			(xy 81.28 167.64) (xy 81.28 171.45)
 		)
 		(stroke
 			(width 0)
@@ -3044,7 +2891,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 181.61) (xy 82.55 184.15)
+			(xy 81.28 179.07) (xy 81.28 181.61)
 		)
 		(stroke
 			(width 0)
@@ -3074,7 +2921,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 139.7) (xy 43.18 139.7)
+			(xy 30.48 137.16) (xy 41.91 137.16)
 		)
 		(stroke
 			(width 0)
@@ -3084,7 +2931,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 153.67) (xy 69.85 153.67)
+			(xy 57.15 151.13) (xy 68.58 151.13)
 		)
 		(stroke
 			(width 0)
@@ -3104,7 +2951,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 181.61) (xy 43.18 184.15)
+			(xy 41.91 179.07) (xy 41.91 181.61)
 		)
 		(stroke
 			(width 0)
@@ -3114,7 +2961,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 151.13) (xy 31.75 156.21)
+			(xy 30.48 148.59) (xy 30.48 153.67)
 		)
 		(stroke
 			(width 0)
@@ -3124,7 +2971,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 170.18) (xy 43.18 173.99)
+			(xy 41.91 167.64) (xy 41.91 171.45)
 		)
 		(stroke
 			(width 0)
@@ -3134,7 +2981,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 139.7) (xy 43.18 143.51)
+			(xy 41.91 137.16) (xy 41.91 140.97)
 		)
 		(stroke
 			(width 0)
@@ -3144,7 +2991,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 170.18) (xy 69.85 170.18)
+			(xy 67.31 167.64) (xy 68.58 167.64)
 		)
 		(stroke
 			(width 0)
@@ -3204,7 +3051,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 184.15) (xy 58.42 184.15)
+			(xy 41.91 181.61) (xy 57.15 181.61)
 		)
 		(stroke
 			(width 0)
@@ -3320,10 +3167,10 @@
 		)
 		(uuid d3f16c02-352c-4adc-8970-3d50715b62ca)
 	)
-	(text_box "LDO: NCP785AH50T1G\nVin max = 450V \nVin min = 50V \nVout = 5.0V\nBypass capacitors and values given by the LDO's datasheet.\n\nLDO (U1) used to supply constant 5V at Vcc for the comparator. LDO (U2) used in series w/ 1600ohm res to create consistent Vf for HV1.\nEach LDO also has built in current limiting capabilities, if the output components ask for a current draw of >10mA, LDO will limit to 10mA, although how it does this is not explained in the data sheet.\nFuse used as back up against very high inrush currents, just in case. However, LDOs have built in current limiting features, and each LDO's load is drawing only 2mA, should be no need for the fuse.\n\nPower Calc without series resistor (R5/R6):\nVoltage across U1 or U2 (Vu) = HVRef - 5V = 110V - 5V = 105V. Power dissipated in each LDO (Pu) = (Vu)(2mA) = (105V)(2mA) = 0.21W\nLDOs, thermal resistance junction to air (Rja) = 79degC/W. P = 0.21W therefore temp rise in air = 16.6degC. This however will be less because the LDO is connected to the conductive ground plane and therefore heat will dissipate better than in air.\n\nPower Calc with series resistor (R5/R6):\nCurrent through U1 or U2 = 2mA, Vres = (2mA)(10kohm) = 20V. \nVoltage across U1 or U2 = HVRef - VRes - 5V = 110-20-5V = 85V. Power dissipated in each LDO (Pu) = (Vu)(2mA) = (85V)(2mA) = 0.17W. Power dissipated in each resistor (Pr) = (Vres)(2mA) = (20V)(2mA) = 0.04W. \nLDOs, thermal resistance junction to air (Rja) = 79degC/W. P = 0.17W therefore temp rise in air = 13.4degC. This however will be less because the LDO is connected to the conductive ground plane and therefore heat will dissipate better than in air.\n\nAdvantages of series resistor:\n1. Dissipates some power in the resistor rather than all in the LDO, will make the LDO cooler during operation. Could increase the resistor value from 10k to dissipate more power. However, voltage into the LDO, Vin has to be more than 50V, so higher R values come with the value of more power dissipation with the drawback of decreasing Vin, closer to the minimum.\n2. Drops the input voltage of the LDO to 90V rather than 110V. This means that the 2.2u cap will have 90V across instead of 110V. It is rated for 250V, either should be fine, but 90V across the cap will allow for more energy storage due to the capacitor's derating curve.\n3. No drawbacks. If for any reason, we decide we don't need it, or it messes up the functionality of the circuit, just put a zero ohm resistor on the footprint.\n"
+	(text_box "LDO: NCP785AH50T1G\nVin max = 450V \nVin min = 50V \nVout = 5.0V\nBypass capacitors and values given by the LDO's datasheet.\n\nLDO (U1) used to supply constant 5V at Vcc for the comparator. LDO (U2) used in series w/ 1600ohm res to create consistent Vf for HV1.\nEach LDO also has built in current limiting capabilities, if the output components ask for a current draw of >10mA, LDO will limit to 10mA, although how it does this is not explained in the data sheet.\nConsidered implementing a fuse as back up against very high inrush currents,h owever, LDOs have built in current limiting features, and each LDO's load is drawing only 2mA, should be no need for a fuse.\n\nPower Calc without series resistor (R5/R6):\nVoltage across U1 or U2 (Vu) = HVRef - 5V = 110V - 5V = 105V. Power dissipated in each LDO (Pu) = (Vu)(2mA) = (105V)(2mA) = 0.21W\nLDOs, thermal resistance junction to air (Rja) = 79degC/W. P = 0.21W therefore temp rise in air = 16.6degC. This however will be less because the LDO is connected to the conductive ground plane and therefore heat will dissipate better than in air.\n\nPower Calc with series resistor (R5/R6):\nCurrent through U1 or U2 = 2mA, Vres = (2mA)(10kohm) = 20V. \nVoltage across U1 or U2 = HVRef - VRes - 5V = 110-20-5V = 85V. Power dissipated in each LDO (Pu) = (Vu)(2mA) = (85V)(2mA) = 0.17W. Power dissipated in each resistor (Pr) = (Vres)(2mA) = (20V)(2mA) = 0.04W. \nLDOs, thermal resistance junction to air (Rja) = 79degC/W. P = 0.17W therefore temp rise in air = 13.4degC. This however will be less because the LDO is connected to the conductive ground plane and therefore heat will dissipate better than in air.\n\nAdvantages of series resistor:\n1. Dissipates some power in the resistor rather than all in the LDO, will make the LDO cooler during operation. Could increase the resistor value from 10k to dissipate more power. However, voltage into the LDO, Vin has to be more than 50V, so higher R values come with the value of more power dissipation with the drawback of decreasing Vin, closer to the minimum.\n2. Drops the input voltage of the LDO to 90V rather than 110V. This means that the 2.2u cap will have 90V across instead of 110V. It is rated for 250V, either should be fine, but 90V across the cap will allow for more energy storage due to the capacitor's derating curve.\n3. No drawbacks. If for any reason, we decide we don't need it, or it messes up the functionality of the circuit, just put a zero ohm resistor on the footprint.\n"
 		(exclude_from_sim no)
-		(at 92.71 121.92 0)
-		(size 57.15 154.94)
+		(at 91.44 121.92 0)
+		(size 58.42 72.39)
 		(stroke
 			(width 0)
 			(type default)
@@ -3333,7 +3180,7 @@
 		)
 		(effects
 			(font
-				(size 1.016 1.016)
+				(size 0.9398 0.9398)
 			)
 			(justify left top)
 		)
@@ -3377,7 +3224,7 @@
 		)
 		(uuid "4ed2d4be-5fa7-4880-b268-d7260b53bae3")
 	)
-	(text_box "Compares Vin and Vref. \nVref > Vin, SignalHV = Vcc- = 0V (SignalHV low).\nVref < Vin, SignalHV = Vcc+ = 5V (SignalHV high).\nTLV9301: Vcc ((Vcc+)-(Vcc-)) reccomended to use between 4.5-40V. Vcc+ = 5V, Vcc- = 0V, thus Vcc = (5-0)V which is within the reccomended operating range.\n"
+	(text_box "Compares Vin and Vref. \nVref > Vin, SignalHV = Vcc- = 0V (SignalHV low).\nVref < Vin, SignalHV = Vcc+ = 5V (SignalHV high).\nTLV9301: Vcc ((Vcc+)-(Vcc-)) recommended to use between 4.5-40V. Vcc+ = 5V, Vcc- = 0V, thus Vcc = (5-0)V which is within the recommended operating range.\n"
 		(exclude_from_sim no)
 		(at 78.74 49.53 0)
 		(size 71.12 13.97)
@@ -3454,10 +3301,10 @@
 		)
 		(uuid "8df324bb-73bb-4407-9a87-cc7e9919fb14")
 	)
-	(text_box "Contactor driver circuit w/ indicator LED (green):\n\nSignalLV = 12V when SignalHV is high.\nSignalLV pulled to ground by 100kohm pull down resistor, when SignalHV is low.\nSignalLV = Vgate (Vg) of NMOS (IRLML0030).\nVs = 0V (grounded) therefore Vgs = Vg and Vds = Vd. Vthreshold (Vt) = 2.3V. Vgsmax = 20V. Vdsmax = 30V.\nContinuous max drain current (Idc) = 5.3A, contactor inrush current = 4A for 75ms, IRLML0030 can handle the inrush current.\nSignalHV low, Vgs = 0V, NMOS open. SignalHV high, Vgs = 12V, NMOS is shorted (Vgs > Vt, Vgs < Vgsmax)\nThe lack of a current limiting resistor in series with the gate of the NMOS is explained in the optocoupler section.\nWhen NMOS open, circuit is open and current cannot flow to the contactor coil to close the contactor. When NMOS is shorted, circuit is closed, contactor coil gets 12V, current can flow through the coil and the contactor closes.\nIn addition, LED indicator can only have current flow when NMOS shorted, thus indicating if the contactor should be closed.\nD1 is the flyback diode. Although I have added the footprint for the diode, the contactor data sheet explicitly states to not implement a flyback diode. The contactor has its own built in \"internal transient voltage suppressor for coil suppression.\"\n-note 8 of the contactor data sheet \"These DC coils have built-in coil suppression. The use of additional external coil suppression can slow the release time and invalidate the life cycle ratings, or can cause the contactor not to be able to interrupt the maximum current specified. \"\nJ3 is a 1x2 MicroMolex to which the contactor's coil leads can plug into to give the coil the 12V. Rated for 5A of continous current, can handle the 4A of inrush current from contactor."
+	(text_box "Contactor driver circuit w/ indicator LED (green):\n\nSignalLV = 12V when SignalHV is high.\nSignalLV pulled to ground by 10kohm pull down resistor, when SignalHV is low.\n. SignalLV = Vgate (Vg) of NMOS (IRLML0030).\nVs = 0V (grounded) therefore Vgs = Vg and Vds = Vd. Vthreshold (Vt) = 2.3V. Vgsmax = 20V. Vdsmax = 30V.\nOptocoupler dark current (current when off) = 0.1uA. Voltage drop across Rpd (Vres) = (10kohm)(0.1uA) = 0.001V. Therefore Vgs of NMOS = 0.01V when SignalHV is low, much below threshold voltage.\nOptocoupler max output current (as explained in the optocoupler section) =  4.2mA. NMOS gate to source leakage current = 0.1uA (negligible in comparison to 4.2mA). Current through Rpd (Ipd) = 4.2mA. Power dissipated in Rpd = (Ipd^2)(Rpd) = (4.2mA)^2(10kohm) = 0.18W.\nContinuous max drain current (Idc) = 5.3A, contactor inrush current = 4A for 75ms, IRLML0030 can handle the inrush current.\nSignalHV low, Vgs = 0V, NMOS open. SignalHV high, Vgs = 12V, NMOS is shorted (Vgs > Vt, Vgs < Vgsmax)\nThe lack of a current limiting resistor in series with the gate of the NMOS is explained in the optocoupler section.\nWhen NMOS open, circuit is open and current cannot flow to the contactor coil to close the contactor. When NMOS is shorted, circuit is closed, contactor coil gets 12V, current can flow through the coil and the contactor closes.\nIn addition, LED indicator can only have current flow when NMOS shorted, thus indicating if the contactor should be closed.\nD1 is the flyback diode. Although I have added the footprint for the diode, the contactor data sheet explicitly states to not implement a flyback diode. The contactor has its own, built in \"internal transient voltage suppressor for coil suppression.\"\n-note 8 of the contactor data sheet \"These DC coils have built-in coil suppression. The use of additional external coil suppression can slow the release time and invalidate the life cycle ratings, or can cause the contactor not to be able to interrupt the maximum current specified. \"\nJ3 is a 1x2 MicroMolex to which the contactor's coil leads can plug into to give the coil the 12V. Rated for 5A of continuous current, can handle the 4A of inrush current from contactor.\n"
 		(exclude_from_sim no)
-		(at 160.02 80.01 0)
-		(size 81.28 60.96)
+		(at 160.02 81.28 0)
+		(size 81.28 59.69)
 		(stroke
 			(width 0)
 			(type default)
@@ -3467,7 +3314,7 @@
 		)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 1.0922 1.0922)
 			)
 			(justify left top)
 		)
@@ -3513,7 +3360,7 @@
 	)
 	(text "HV Indicator LED (red)\n"
 		(exclude_from_sim no)
-		(at 72.644 192.024 0)
+		(at 77.47 189.484 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3586,7 +3433,7 @@
 		(uuid "2aea6298-5c7e-41ec-9d97-1129f01f2e53")
 	)
 	(label "Vcc+"
-		(at 83.82 139.7 180)
+		(at 82.55 137.16 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3641,7 +3488,7 @@
 		(uuid "7016a047-b1a6-4899-80b6-4a2c7e08cf28")
 	)
 	(label "HVRef"
-		(at 20.32 139.7 0)
+		(at 20.32 153.67 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3719,7 +3566,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 82.55 184.15 0)
+		(at 81.28 181.61 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3728,7 +3575,7 @@
 		(fields_autoplaced yes)
 		(uuid "076b131c-ced9-4bad-8ffe-b8f71bab73dd")
 		(property "Reference" "#PWR022"
-			(at 82.55 190.5 0)
+			(at 81.28 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3737,7 +3584,7 @@
 			)
 		)
 		(property "Value" "HVGND"
-			(at 82.55 189.23 0)
+			(at 81.28 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3745,7 +3592,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 82.55 184.15 0)
+			(at 81.28 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3754,7 +3601,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 82.55 184.15 0)
+			(at 81.28 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3763,7 +3610,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 82.55 184.15 0)
+			(at 81.28 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3851,7 +3698,7 @@
 	)
 	(symbol
 		(lib_id "Regulator_Linear:LT1963AxST-3.3")
-		(at 58.42 172.72 0)
+		(at 57.15 170.18 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3860,7 +3707,7 @@
 		(fields_autoplaced yes)
 		(uuid "094ca5ef-96b3-4bd7-bff5-7c53f7c3784a")
 		(property "Reference" "U2"
-			(at 58.42 162.56 0)
+			(at 57.15 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3868,7 +3715,7 @@
 			)
 		)
 		(property "Value" "NCP785AH50T1G"
-			(at 58.42 165.1 0)
+			(at 57.15 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3876,7 +3723,7 @@
 			)
 		)
 		(property "Footprint" "Active-PrechargeLib:SOT-89-3_2P7X4P7_ONS"
-			(at 58.42 184.15 0)
+			(at 57.15 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3885,7 +3732,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/1963aff.pdf"
-			(at 58.42 186.69 0)
+			(at 57.15 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3894,7 +3741,7 @@
 			)
 		)
 		(property "Description" "3.3V, 1.5A, Low Noise, Fast Transient Response LDO Regulator, SOT-223"
-			(at 58.42 172.72 0)
+			(at 57.15 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3991,74 +3838,6 @@
 			(project ""
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
 					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Fuse")
-		(at 26.67 156.21 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0d104815-df75-4c5b-83a4-7e42367f2040")
-		(property "Reference" "F1"
-			(at 26.67 149.86 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "46205"
-			(at 26.67 152.4 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Active-PrechargeLib:FUSC10545X460N"
-			(at 26.67 157.988 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 26.67 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Fuse"
-			(at 26.67 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "23e0d711-dbe1-4f71-82e4-50cf0d9e794d")
-		)
-		(pin "1"
-			(uuid "ed5077db-d992-4916-92bd-651c217059a0")
-		)
-		(instances
-			(project ""
-				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "F1")
 					(unit 1)
 				)
 			)
@@ -4402,7 +4181,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 58.42 153.67 0)
+		(at 57.15 151.13 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4411,7 +4190,7 @@
 		(fields_autoplaced yes)
 		(uuid "28dda39c-bf8b-4064-a6a9-876fb3c7bfcb")
 		(property "Reference" "#PWR024"
-			(at 58.42 160.02 0)
+			(at 57.15 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4420,7 +4199,7 @@
 			)
 		)
 		(property "Value" "HVGND"
-			(at 58.42 158.75 0)
+			(at 57.15 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4428,7 +4207,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 58.42 153.67 0)
+			(at 57.15 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4437,7 +4216,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 58.42 153.67 0)
+			(at 57.15 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4446,7 +4225,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 58.42 153.67 0)
+			(at 57.15 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4468,7 +4247,7 @@
 	)
 	(symbol
 		(lib_id "Regulator_Linear:LT1963AxST-3.3")
-		(at 58.42 142.24 0)
+		(at 57.15 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4477,7 +4256,7 @@
 		(fields_autoplaced yes)
 		(uuid "2b37d1dd-8506-4b06-b5e0-164a70a376fe")
 		(property "Reference" "U1"
-			(at 58.42 132.08 0)
+			(at 57.15 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4485,7 +4264,7 @@
 			)
 		)
 		(property "Value" "NCP785AH50T1G"
-			(at 58.42 134.62 0)
+			(at 57.15 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4493,7 +4272,7 @@
 			)
 		)
 		(property "Footprint" "Active-PrechargeLib:SOT-89-3_2P7X4P7_ONS"
-			(at 58.42 153.67 0)
+			(at 57.15 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4502,7 +4281,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/1963aff.pdf"
-			(at 58.42 156.21 0)
+			(at 57.15 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4511,7 +4290,7 @@
 			)
 		)
 		(property "Description" "3.3V, 1.5A, Low Noise, Fast Transient Response LDO Regulator, SOT-223"
-			(at 58.42 142.24 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4539,7 +4318,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 58.42 184.15 0)
+		(at 57.15 181.61 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4548,7 +4327,7 @@
 		(fields_autoplaced yes)
 		(uuid "320d2472-9604-4c09-a84f-8ef26aa3d659")
 		(property "Reference" "#PWR04"
-			(at 58.42 190.5 0)
+			(at 57.15 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4557,7 +4336,7 @@
 			)
 		)
 		(property "Value" "HVGND"
-			(at 58.42 189.23 0)
+			(at 57.15 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4565,7 +4344,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 58.42 184.15 0)
+			(at 57.15 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4574,7 +4353,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 58.42 184.15 0)
+			(at 57.15 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4583,7 +4362,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 58.42 184.15 0)
+			(at 57.15 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4669,7 +4448,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 82.55 177.8 90)
+		(at 81.28 175.26 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4678,7 +4457,7 @@
 		(fields_autoplaced yes)
 		(uuid "37a872ea-9b48-4c23-b2f7-93cbf20c5b5b")
 		(property "Reference" "HV1"
-			(at 86.36 178.1174 90)
+			(at 85.09 175.5774 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4687,7 +4466,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 86.36 180.6574 90)
+			(at 85.09 178.1174 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4696,7 +4475,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
-			(at 82.55 177.8 0)
+			(at 81.28 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4705,7 +4484,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 82.55 177.8 0)
+			(at 81.28 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4714,7 +4493,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 82.55 177.8 0)
+			(at 81.28 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5519,7 +5298,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "10k"
 			(at 194.31 68.5799 0)
 			(effects
 				(font
@@ -5572,7 +5351,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 31.75 147.32 180)
+		(at 30.48 144.78 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5581,7 +5360,7 @@
 		(fields_autoplaced yes)
 		(uuid "82eca7e6-ca7f-4d68-a674-afbd7cef6c2b")
 		(property "Reference" "R5"
-			(at 34.29 146.0499 0)
+			(at 33.02 143.5099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5590,7 +5369,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 34.29 148.5899 0)
+			(at 33.02 146.0499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5599,7 +5378,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 30.734 147.066 90)
+			(at 29.464 144.526 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5608,7 +5387,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 31.75 147.32 0)
+			(at 30.48 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5617,7 +5396,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 31.75 147.32 0)
+			(at 30.48 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5983,7 +5762,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 69.85 147.32 0)
+		(at 68.58 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5992,7 +5771,7 @@
 		(fields_autoplaced yes)
 		(uuid "a320d74a-d511-4f77-a521-c33459be7cc9")
 		(property "Reference" "C2"
-			(at 73.66 146.0499 0)
+			(at 72.39 143.5099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6001,7 +5780,7 @@
 			)
 		)
 		(property "Value" "22u"
-			(at 73.66 148.5899 0)
+			(at 72.39 146.0499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6010,7 +5789,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 70.8152 151.13 0)
+			(at 69.5452 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6019,7 +5798,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 69.85 147.32 0)
+			(at 68.58 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6028,7 +5807,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 69.85 147.32 0)
+			(at 68.58 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6257,7 +6036,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 69.85 177.8 0)
+		(at 68.58 175.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6266,7 +6045,7 @@
 		(fields_autoplaced yes)
 		(uuid "c1b73f27-59dc-4e10-ac39-a86f246fce48")
 		(property "Reference" "C4"
-			(at 73.66 176.5299 0)
+			(at 72.39 173.9899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6275,7 +6054,7 @@
 			)
 		)
 		(property "Value" "22u"
-			(at 73.66 179.0699 0)
+			(at 72.39 176.5299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6284,7 +6063,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 70.8152 181.61 0)
+			(at 69.5452 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6293,7 +6072,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 69.85 177.8 0)
+			(at 68.58 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6302,7 +6081,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 69.85 177.8 0)
+			(at 68.58 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6397,7 +6176,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 43.18 147.32 0)
+		(at 41.91 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6406,7 +6185,7 @@
 		(fields_autoplaced yes)
 		(uuid "c7494050-b8bc-4f76-9152-52362c248170")
 		(property "Reference" "C1"
-			(at 46.99 146.0499 0)
+			(at 45.72 143.5099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6415,7 +6194,7 @@
 			)
 		)
 		(property "Value" "2.2u"
-			(at 46.99 148.5899 0)
+			(at 45.72 146.0499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6424,7 +6203,7 @@
 			)
 		)
 		(property "Footprint" "Active-PrechargeLib:CAPC5750X220N"
-			(at 44.1452 151.13 0)
+			(at 42.8752 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6433,7 +6212,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 43.18 147.32 0)
+			(at 41.91 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6442,7 +6221,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 43.18 147.32 0)
+			(at 41.91 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6467,7 +6246,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 76.2 170.18 90)
+		(at 74.93 167.64 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6476,7 +6255,7 @@
 		(fields_autoplaced yes)
 		(uuid "c8b4bd1c-0a3e-491e-a01b-65eec230bb83")
 		(property "Reference" "R7"
-			(at 76.2 163.83 90)
+			(at 74.93 161.29 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6484,7 +6263,7 @@
 			)
 		)
 		(property "Value" "1600"
-			(at 76.2 166.37 90)
+			(at 74.93 163.83 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6492,7 +6271,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 76.454 169.164 90)
+			(at 75.184 166.624 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6501,7 +6280,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 76.2 170.18 0)
+			(at 74.93 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6510,7 +6289,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 76.2 170.18 0)
+			(at 74.93 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6535,7 +6314,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 31.75 163.83 180)
+		(at 30.48 161.29 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6544,7 +6323,7 @@
 		(fields_autoplaced yes)
 		(uuid "c9543931-adfb-4f24-a229-366ff5bed17f")
 		(property "Reference" "R6"
-			(at 34.29 162.5599 0)
+			(at 33.02 160.0199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6553,7 +6332,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 34.29 165.0999 0)
+			(at 33.02 162.5599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6562,7 +6341,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 30.734 163.576 90)
+			(at 29.464 161.036 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6571,7 +6350,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 31.75 163.83 0)
+			(at 30.48 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6580,7 +6359,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 31.75 163.83 0)
+			(at 30.48 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7354,7 +7133,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 43.18 177.8 0)
+		(at 41.91 175.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7362,7 +7141,7 @@
 		(dnp no)
 		(uuid "f39dd312-1dd5-4e86-94c0-212bc15c3b56")
 		(property "Reference" "C3"
-			(at 47.498 176.53 0)
+			(at 46.228 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7371,7 +7150,7 @@
 			)
 		)
 		(property "Value" "2.2u"
-			(at 47.498 179.07 0)
+			(at 46.228 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7380,7 +7159,7 @@
 			)
 		)
 		(property "Footprint" "Active-PrechargeLib:CAPC5750X220N"
-			(at 44.1452 181.61 0)
+			(at 42.8752 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7389,7 +7168,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 43.18 177.8 0)
+			(at 41.91 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7398,7 +7177,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 43.18 177.8 0)
+			(at 41.91 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
