@@ -5,4 +5,8 @@
   (lib (name "utsvt-microcontrokller")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/utsvt-microcontrollers.kicad_sym")(options "")(descr ""))
   (lib (name "utsvt-conn-sym")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/utsvt-connectors.kicad_sym")(options "")(descr ""))
   (lib (name "Nucleo32")(type "KiCad")(uri "${KIPRJMOD}/NUCLEO-L432KC/NUCLEO-L432KC.kicad_sym")(options "")(descr ""))
+  (lib (name "AMC1311")(type "KiCad")(uri "${KIPRJMOD}/AMC1311BDWVR/KiCad/AMC1311BDWVR.kicad_sym")(options "")(descr ""))
+  (lib (name "LDO")(type "KiCad")(uri "${KIPRJMOD}/LDO/2024-10-19_18-57-48.kicad_sym")(options "")(descr ""))
+  (lib (name "Fuse")(type "KiCad")(uri "${KIPRJMOD}/46205Fuse/46205000000.kicad_sym")(options "")(descr ""))
+  (lib (name "Capacitor")(type "KiCad")(uri "${KIPRJMOD}/2220B225K251CT/KiCad/2220B225K251CT.kicad_sym")(options "")(descr ""))
 )

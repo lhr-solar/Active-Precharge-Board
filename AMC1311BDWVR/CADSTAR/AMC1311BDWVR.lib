@@ -1,0 +1,16 @@
+.AMC1311BDWVR :1 ;Precision Reinforced Isolated Amplifier With High CMTI for Current Sensing
+SOIC127P1150X280-8N
+*STM IC
+*NGS
+*PLB 1="VDD1" 2="VIN" 3="SHTDN" 4="GND1" 5="GND2" 6="VOUTN" 7="VOUTP" 8="VDD2"
+*MXP 8
+*DFN AMC1311BDWVR
+~!Mouser Part Number (595-AMC1311BDWVR)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/AMC1311BDWVR?qs=W0yvOO0ixfFQekR98E4CkQ%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (AMC1311BDWVR)
+~!Link Datasheet (http://www.ti.com/lit/gpn/amc1311)
+~!Height (2.8mm)
+~!3D_Model (AMC1311BDWVR)
+AMC1311BDWVR
+1.1!U 2.1!U 3.1!U 4.1!U 8.1!U 7.1!U 6.1!U 5.1!U 

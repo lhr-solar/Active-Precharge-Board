@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AMC1311BDWVR
+D Precision Reinforced Isolated Amplifier With High CMTI for Current Sensing
+K
+F http://www.ti.com/lit/gpn/amc1311
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "2220B225K251CT"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2022-12-13-10:54:06)
+    (mountForm default
+        (footprintRef "CAPC5750X220N")
+        (spec "System")
+    )
+)

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 46205000000
+D Surface Mount Fuses .5  AMP 250V TIME DELAY
+K
+F http://m.littelfuse.com/~/media/electronics/datasheets/fuses/littelfuse_fuse_462_datasheet.pdf.pdf
+$ENDCMP
+#
+#End Doc Library

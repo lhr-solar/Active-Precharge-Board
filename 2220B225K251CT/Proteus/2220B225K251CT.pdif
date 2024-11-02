@@ -1,0 +1,103 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "2220B225K251CT"
+   (description "Multilayer Ceramic Capacitors MLCC - SMD/SMT 2220 MLCC X7R 2.2 uF \'+/- 10% 250 V T&R MH")
+   (family "CAP")
+   (package "CAPC5750X220N")
+   (attribute "Datasheet Link" "https://www.mouser.es/datasheet/2/210/Middle_and_High_Voltage_DS-1535659.pdf")
+   (attribute "Geometry.Height" "2.2mm")
+   (attribute "Mouser Part Number" "791-2220B225K251CT")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Walsin/2220B225K251CT?qs=wUXugUrL1qxv5pi1nAqMEA%3D%3D")
+   (attribute "Manufacturer_Name" "Walsin Technology Corporation")
+   (attribute "Manufacturer_Part_Number" "2220B225K251CT")
+   (gate
+    (symbol "2220B225K251CT")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+   )
+  )
+  (symbol "2220B225K251CT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 220 100) (pt 220 -100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 280 100) (pt 280 -100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 200 0) (pt 220 0))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 280 0) (pt 300 0))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 0 -10) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 0 10) (rot 0) (just BOTTOM LEFT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 500 0) (rot 0) (mir X) (visible true))
+    (name (pt 0 -10) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 0 10) (rot 0) (just BOTTOM LEFT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "CAPC5750X220N"
+   (units MM)
+   (layer OCCA
+    (graphic
+     (stroke 0.05)
+     (path
+      (closed true)
+      (pt -3.41 2.86)
+      (pt 3.41 2.86)
+      (pt 3.41 -2.86)
+      (pt -3.41 -2.86)
+      (pt -3.41 2.86))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -2.85 2.5)
+      (pt 2.85 2.5)
+      (pt 2.85 -2.5)
+      (pt -2.85 -2.5)
+      (pt -2.85 2.5))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 0 2.4)
+      (pt 0 -2.4))))
+   (leg 1 (pt -2.47 0) (padstack 0))
+   (leg 2 (pt 2.47 0) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 1.58 5.41 0 0 90))
+   )
+   (model "2220B225K251CT.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)

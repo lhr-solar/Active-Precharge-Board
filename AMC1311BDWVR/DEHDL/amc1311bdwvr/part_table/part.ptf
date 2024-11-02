@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'AMC1311BDWVR'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "AMC1311BDWVR" (!) = "", "SOIC127P1150X280-8N", "Small Outline Packages", "595-AMC1311BDWVR", "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/AMC1311BDWVR?qs=W0yvOO0ixfFQekR98E4CkQ%3D%3D", "Precision Reinforced Isolated Amplifier With High CMTI for Current Sensing", "http://www.ti.com/lit/gpn/amc1311", "2.8 mm"
+END_PART
+
+END.

@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=AMC1311BDWVR
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=8
+Version=1.2
+Released=2017-12-23 18:45:15
+Downloaded=2024-10-28 03:58:04
+3D=Y
