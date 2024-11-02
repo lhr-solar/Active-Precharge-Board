@@ -8301,7 +8301,7 @@
 		(uuid "ec42e525-a84c-4601-b2ba-041d9b78d508")
 	)
 	(gr_text "HVRef\n(Batt)"
-		(at 102.34 104.3 0)
+		(at 104.25 104.3 0)
 		(layer "F.SilkS")
 		(uuid "15db6e6e-57fe-4718-b2c5-9e856d849f72")
 		(effects
@@ -8400,7 +8400,7 @@
 		)
 	)
 	(gr_text "HVGND"
-		(at 97.34 97.55 0)
+		(at 99.25 97.55 0)
 		(layer "F.SilkS")
 		(uuid "e69cc32a-3318-4b22-9357-620da016cece")
 		(effects
