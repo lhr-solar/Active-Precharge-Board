@@ -1421,7 +1421,7 @@
 		(uuid "25cdb94c-bb18-41fe-a35a-a3d1865ed746")
 		(at 140.36 98.65 -90)
 		(property "Reference" "J3"
-			(at 1.5 -3.5 180)
+			(at -5.4 -0.39 180)
 			(layer "F.SilkS")
 			(uuid "22dc415f-726a-47b8-b5ce-245ba05d9688")
 			(effects
@@ -4966,7 +4966,7 @@
 	(footprint "MountingHole:MountingHole_3mm"
 		(layer "F.Cu")
 		(uuid "93d1cf39-e301-4d57-ae7d-07d16f2af8ef")
-		(at 139.75 117.75)
+		(at 140.75 117.75)
 		(descr "Mounting Hole 3mm, no annular")
 		(tags "mounting hole 3mm no annular")
 		(property "Reference" "H2"
@@ -6893,7 +6893,7 @@
 	(footprint "MountingHole:MountingHole_3mm"
 		(layer "F.Cu")
 		(uuid "cefd5f31-d1c7-4f59-8121-67dd008e6f8b")
-		(at 139.75 73.25)
+		(at 140.75 73.25)
 		(descr "Mounting Hole 3mm, no annular")
 		(tags "mounting hole 3mm no annular")
 		(property "Reference" "H1"
@@ -7742,7 +7742,7 @@
 		(uuid "ff5edef1-2db9-4fc0-abcb-31e91d649065")
 		(at 140.36 84.78 -90)
 		(property "Reference" "J2"
-			(at 1.5 -3.5 180)
+			(at -5.28 -0.39 180)
 			(layer "F.SilkS")
 			(uuid "da264b73-2738-4ba4-b64d-9dca1b60607e")
 			(effects
@@ -8076,8 +8076,8 @@
 		(uuid "8497a9cc-f15c-43b7-840a-8db0c96f941b")
 	)
 	(gr_line
-		(start 144.75 70.25)
-		(end 144.75 120.75)
+		(start 145.75 70.25)
+		(end 145.75 120.75)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -8086,9 +8086,9 @@
 		(uuid "a957d706-1be1-4b0a-8b3a-2625b445f818")
 	)
 	(gr_arc
-		(start 144.75 120.75)
-		(mid 144.164214 122.164214)
-		(end 142.75 122.75)
+		(start 145.75 120.75)
+		(mid 145.164214 122.164214)
+		(end 143.75 122.75)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -8097,7 +8097,7 @@
 		(uuid "c4b7c4df-db6c-44f9-8601-3896e7eb2140")
 	)
 	(gr_line
-		(start 142.75 122.75)
+		(start 143.75 122.75)
 		(end 76.25 122.75)
 		(stroke
 			(width 0.05)
@@ -8107,9 +8107,9 @@
 		(uuid "cfa875d4-f85d-4f3e-91cb-6c83871b7437")
 	)
 	(gr_arc
-		(start 142.75 68.25)
-		(mid 144.164217 68.835783)
-		(end 144.75 70.25)
+		(start 143.75 68.25)
+		(mid 145.164214 68.835786)
+		(end 145.75 70.25)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -8119,7 +8119,7 @@
 	)
 	(gr_line
 		(start 76.25 68.25)
-		(end 142.75 68.25)
+		(end 143.75 68.25)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -8273,6 +8273,31 @@
 		(layer "User.1")
 		(uuid "f3d147e1-6ef2-4f91-a866-f9e0b58c5420")
 	)
+	(gr_text "HVRef\n(Battery)"
+		(at 104.25 102.75 0)
+		(layer "F.SilkS")
+		(uuid "15db6e6e-57fe-4718-b2c5-9e856d849f72")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify right bottom)
+		)
+	)
+	(gr_text "C-"
+		(at 142.7 102.25 0)
+		(layer "F.SilkS")
+		(uuid "43176744-b378-49af-be3b-ad6b3550e926")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "Active Precharge v.1\nLHRs\nJacob Guidry\nTony Chen"
 		(at 107.48 119.37 0)
 		(layer "F.SilkS")
@@ -8282,6 +8307,67 @@
 				(size 1 1)
 				(thickness 0.2)
 				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "12V"
+		(at 142.4 85 0)
+		(layer "F.SilkS")
+		(uuid "9d92178b-4025-47e1-9010-b360b0e178b6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "HVIn"
+		(at 101 98.5 0)
+		(layer "F.SilkS")
+		(uuid "acdc96cf-47a0-4e96-ab44-2a49a08a0932")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 142.4 88.5 0)
+		(layer "F.SilkS")
+		(uuid "caa411c6-7373-4776-b342-99bd64076174")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "C+"
+		(at 142.7 99.25 0)
+		(layer "F.SilkS")
+		(uuid "ce11e793-f243-4ee4-b143-8199094f2431")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "HVGND"
+		(at 99.25 105.75 0)
+		(layer "F.SilkS")
+		(uuid "e69cc32a-3318-4b22-9357-620da016cece")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
@@ -8301,15 +8387,15 @@
 	(dimension
 		(type aligned)
 		(layer "User.1")
-		(uuid "2505b247-df64-46d2-8650-4e489daf87e0")
+		(uuid "10440008-222d-4d32-8f33-7294828d5e0c")
 		(pts
-			(xy 144.75 122.75) (xy 144.75 68.25)
+			(xy 74.25 122.75) (xy 145.75 122.75)
 		)
-		(height 21.75)
-		(gr_text "54.5000 mm"
-			(at 165.35 95.5 90)
+		(height 15.75)
+		(gr_text "71.5000 mm"
+			(at 110 137.35 0)
 			(layer "User.1")
-			(uuid "2505b247-df64-46d2-8650-4e489daf87e0")
+			(uuid "10440008-222d-4d32-8f33-7294828d5e0c")
 			(effects
 				(font
 					(size 1 1)
@@ -8334,15 +8420,15 @@
 	(dimension
 		(type aligned)
 		(layer "User.1")
-		(uuid "2c87e716-0914-48de-9b56-fe32a2ed93c4")
+		(uuid "2505b247-df64-46d2-8650-4e489daf87e0")
 		(pts
-			(xy 79.25 117.75) (xy 139.75 117.75)
+			(xy 144.75 122.75) (xy 144.75 68.25)
 		)
-		(height 12.5)
-		(gr_text "60.5000 mm"
-			(at 109.5 129.1 0)
+		(height 21.75)
+		(gr_text "54.5000 mm"
+			(at 165.35 95.5 90)
 			(layer "User.1")
-			(uuid "2c87e716-0914-48de-9b56-fe32a2ed93c4")
+			(uuid "2505b247-df64-46d2-8650-4e489daf87e0")
 			(effects
 				(font
 					(size 1 1)
@@ -8400,15 +8486,15 @@
 	(dimension
 		(type aligned)
 		(layer "User.1")
-		(uuid "57df7908-58b9-42d2-b9ae-6eaca85c5fc7")
+		(uuid "c7037fa7-7b14-4dd8-b025-45b2a3a9ba82")
 		(pts
-			(xy 74.25 122.75) (xy 144.75 122.75)
+			(xy 140.75 117.75) (xy 140.75 73.25)
 		)
 		(height 16.75)
-		(gr_text "70.5000 mm"
-			(at 109.5 138.35 0)
+		(gr_text "44.5000 mm"
+			(at 156.35 95.5 90)
 			(layer "User.1")
-			(uuid "57df7908-58b9-42d2-b9ae-6eaca85c5fc7")
+			(uuid "c7037fa7-7b14-4dd8-b025-45b2a3a9ba82")
 			(effects
 				(font
 					(size 1 1)
@@ -8433,15 +8519,15 @@
 	(dimension
 		(type aligned)
 		(layer "User.1")
-		(uuid "cfc1f7f1-4def-4359-9f1c-db438a09fb67")
+		(uuid "d7f8619f-f4e2-4445-b833-f6dc07ab4bfd")
 		(pts
-			(xy 128.475 115.75) (xy 128.475 75.25)
+			(xy 79.25 117.75) (xy 140.75 117.75)
 		)
-		(height 19.775)
-		(gr_text "40.5000 mm"
-			(at 147.1 95.5 90)
+		(height 14.5)
+		(gr_text "61.5000 mm"
+			(at 110 131.1 0)
 			(layer "User.1")
-			(uuid "cfc1f7f1-4def-4359-9f1c-db438a09fb67")
+			(uuid "d7f8619f-f4e2-4445-b833-f6dc07ab4bfd")
 			(effects
 				(font
 					(size 1 1)
@@ -8499,15 +8585,15 @@
 	(dimension
 		(type aligned)
 		(layer "User.1")
-		(uuid "f3c1d89e-ff07-478b-b4b1-60313249709a")
+		(uuid "f59d7eb3-47e6-4359-8308-a4b4a74d9b1c")
 		(pts
-			(xy 139.75 117.75) (xy 139.75 73.25)
+			(xy 128.475 115.75) (xy 128.475 75.25)
 		)
-		(height 18.75)
-		(gr_text "44.5000 mm"
-			(at 157.35 95.5 90)
+		(height 22.275)
+		(gr_text "40.5000 mm"
+			(at 149.6 95.5 90)
 			(layer "User.1")
-			(uuid "f3c1d89e-ff07-478b-b4b1-60313249709a")
+			(uuid "f59d7eb3-47e6-4359-8308-a4b4a74d9b1c")
 			(effects
 				(font
 					(size 1 1)
@@ -9355,14 +9441,14 @@
 		)
 		(polygon
 			(pts
-				(xy 129.75 112) (xy 144 112) (xy 144 79.75) (xy 129.75 79.75)
+				(xy 129.75 112) (xy 144.25 112) (xy 144.25 79.75) (xy 129.75 79.75)
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 143.943039 79.769685) (xy 143.988794 79.822489) (xy 144 79.874) (xy 144 111.876) (xy 143.980315 111.943039)
-				(xy 143.927511 111.988794) (xy 143.876 112) (xy 129.874 112) (xy 129.806961 111.980315) (xy 129.761206 111.927511)
+				(xy 144.193039 79.769685) (xy 144.238794 79.822489) (xy 144.25 79.874) (xy 144.25 111.876) (xy 144.230315 111.943039)
+				(xy 144.177511 111.988794) (xy 144.126 112) (xy 129.874 112) (xy 129.806961 111.980315) (xy 129.761206 111.927511)
 				(xy 129.75 111.876) (xy 129.75 110.329613) (xy 129.769685 110.262574) (xy 129.822489 110.216819)
 				(xy 129.891647 110.206875) (xy 129.940622 110.228051) (xy 129.941842 110.226111) (xy 129.947737 110.229815)
 				(xy 129.947738 110.229816) (xy 130.100478 110.325789) (xy 130.270745 110.385368) (xy 130.27075 110.385369)
@@ -9727,7 +9813,7 @@
 				(xy 141.900551 80.995283) (xy 141.755526 81.092186) (xy 141.755522 81.092189) (xy 141.632189 81.215522)
 				(xy 141.632186 81.215526) (xy 141.535283 81.360551) (xy 141.535278 81.36056) (xy 141.468529 81.521708)
 				(xy 141.468527 81.521716) (xy 141.4345 81.692781) (xy 129.75 81.692781) (xy 129.75 79.874) (xy 129.769685 79.806961)
-				(xy 129.822489 79.761206) (xy 129.874 79.75) (xy 143.876 79.75)
+				(xy 129.822489 79.761206) (xy 129.874 79.75) (xy 144.126 79.75)
 			)
 		)
 	)
