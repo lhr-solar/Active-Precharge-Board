@@ -3171,7 +3171,7 @@
 	(footprint "MountingHole:MountingHole_3mm"
 		(layer "F.Cu")
 		(uuid "3c7c0c03-2016-476d-a8cd-ae4c2ad59f02")
-		(at 77.59 117.8)
+		(at 77.59 118)
 		(descr "Mounting Hole 3mm, no annular")
 		(tags "mounting hole 3mm no annular")
 		(property "Reference" "H3"
@@ -3710,7 +3710,7 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "51c4860c-c2b9-4b6d-a1ad-6a4708927750")
-		(at 99 115)
+		(at 99 115.2)
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "RH2"
@@ -5718,7 +5718,7 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "bd8514da-a706-4179-b844-f671365d8f45")
-		(at 77.59 75.3)
+		(at 77.59 75.5)
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "RH1"
@@ -7980,8 +7980,8 @@
 		(uuid "b7fd9198-fa46-4bf1-85d0-4a3db5ac4be2")
 	)
 	(gr_line
-		(start 96.45 120.55)
-		(end 80.09 120.55)
+		(start 96.45 120.75)
+		(end 80.09 120.75)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -7990,8 +7990,8 @@
 		(uuid "37e7ea39-684f-47b6-a716-74f9546c8ec7")
 	)
 	(gr_line
-		(start 80.09 69.8)
-		(end 73.59 69.8)
+		(start 80.09 70)
+		(end 73.59 70)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -8000,8 +8000,8 @@
 		(uuid "4071839b-2cd7-40b4-bd6c-653428a34206")
 	)
 	(gr_line
-		(start 73.59 75.35)
-		(end 80.09 75.35)
+		(start 73.59 75.55)
+		(end 80.09 75.55)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -8010,8 +8010,8 @@
 		(uuid "4d2d71d4-54d1-4617-845b-e3a161b0ef0b")
 	)
 	(gr_line
-		(start 96.45 120.55)
-		(end 102.99 120.55)
+		(start 96.45 120.75)
+		(end 102.5 120.75)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -8020,8 +8020,8 @@
 		(uuid "6a50c9f3-764b-4e2b-b9ae-0b2b7b55334c")
 	)
 	(gr_line
-		(start 73.59 69.8)
-		(end 73.59 75.35)
+		(start 73.59 70)
+		(end 73.59 75.55)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -8030,8 +8030,8 @@
 		(uuid "a8cbe482-7bd8-44d5-b2ea-6692562c0bd3")
 	)
 	(gr_line
-		(start 96.45 69.8)
-		(end 96.45 120.55)
+		(start 96 70)
+		(end 96 120.75)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -8040,8 +8040,8 @@
 		(uuid "b34c6397-36ba-4259-8e9e-1b92358f04b8")
 	)
 	(gr_line
-		(start 102.99 114.99)
-		(end 96.45 114.99)
+		(start 102.5 115.19)
+		(end 96.45 115.19)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -8050,8 +8050,8 @@
 		(uuid "b5e1523f-4657-4e7e-a550-8feadb0211db")
 	)
 	(gr_line
-		(start 80.09 69.8)
-		(end 96.45 69.8)
+		(start 80.09 70)
+		(end 96 70)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -8060,8 +8060,8 @@
 		(uuid "cd67756a-1500-480f-bae8-90d8e6ad61e0")
 	)
 	(gr_line
-		(start 104.9 120.75)
-		(end 104.9 115.19)
+		(start 102.5 120.75)
+		(end 102.5 115.19)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -8070,8 +8070,8 @@
 		(uuid "d3fdb819-5e84-49c3-a626-9bbb82170af8")
 	)
 	(gr_line
-		(start 80.09 120.55)
-		(end 80.09 69.8)
+		(start 80.09 120.75)
+		(end 80.09 70)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -8090,9 +8090,9 @@
 		(uuid "06e725a8-c43b-49dd-abb8-ab7bb8286142")
 	)
 	(gr_arc
-		(start 72.59 69.8)
-		(mid 73.175786 68.385786)
-		(end 74.59 67.8)
+		(start 72.59 70)
+		(mid 73.175786 68.585786)
+		(end 74.59 68)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -8122,9 +8122,9 @@
 		(uuid "3f3d38bc-eaad-45f6-9632-c572ddc4cc3a")
 	)
 	(gr_arc
-		(start 74.59 122.8)
-		(mid 73.175786 122.214214)
-		(end 72.59 120.8)
+		(start 74.59 123)
+		(mid 73.175786 122.414214)
+		(end 72.59 121)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -8164,8 +8164,8 @@
 		(uuid "c4b7c4df-db6c-44f9-8601-3896e7eb2140")
 	)
 	(gr_line
-		(start 141.59 122.8)
-		(end 74.59 122.8)
+		(start 143.5 123)
+		(end 74.59 123)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -8185,8 +8185,8 @@
 		(uuid "d0f5b846-0b74-4875-bcc5-8351e5f918bb")
 	)
 	(gr_line
-		(start 74.59 67.8)
-		(end 141.59 67.8)
+		(start 74.59 68)
+		(end 143.5 68)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -8227,8 +8227,8 @@
 		(uuid "e5d504fa-efd5-40be-b100-299b7294913c")
 	)
 	(gr_line
-		(start 72.59 120.8)
-		(end 72.59 69.8)
+		(start 72.59 121)
+		(end 72.59 70)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -8248,8 +8248,8 @@
 		(uuid "f0640c17-56b6-46d3-bc27-6679ee132835")
 	)
 	(gr_rect
-		(start 96.45 114.995)
-		(end 102.99 120.55)
+		(start 96 115.195)
+		(end 102.54 120.75)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -8259,8 +8259,8 @@
 		(uuid "04a03e31-3ed6-4e2f-b0d0-d7759df597fd")
 	)
 	(gr_line
-		(start 77.55 75.35)
-		(end 77.55 69.8)
+		(start 77.55 75.55)
+		(end 77.55 70)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -8279,8 +8279,8 @@
 		(uuid "a3b76d2b-0d3b-4174-a95d-d90173756b20")
 	)
 	(gr_rect
-		(start 80.09 69.8)
-		(end 96.45 120.55)
+		(start 80.09 70)
+		(end 96 120.75)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -8290,8 +8290,8 @@
 		(uuid "d92bc029-7612-43d4-a958-b150772bedfc")
 	)
 	(gr_rect
-		(start 73.59 69.8)
-		(end 80.09 75.35)
+		(start 73.59 70)
+		(end 80.09 75.55)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -8300,7 +8300,7 @@
 		(layer "User.1")
 		(uuid "ec42e525-a84c-4601-b2ba-041d9b78d508")
 	)
-	(gr_text "HVRef\n(Batt)"
+	(gr_text "HVRef\n(Battery)"
 		(at 104.25 104.3 0)
 		(layer "F.SilkS")
 		(uuid "15db6e6e-57fe-4718-b2c5-9e856d849f72")
@@ -8326,7 +8326,7 @@
 		)
 	)
 	(gr_text "Precharge Resistor"
-		(at 78.96 102.47 90)
+		(at 78.96 102.67 90)
 		(layer "F.SilkS")
 		(uuid "82715b86-a69a-45f9-b95f-c6d9a6e30aa1")
 		(effects
@@ -8424,7 +8424,7 @@
 		)
 	)
 	(gr_text "Precharge Resistor"
-		(at 89.63 101.59 90)
+		(at 89.63 101.79 90)
 		(layer "User.1")
 		(uuid "d51c8e96-9521-4b7a-9469-19e32da6a1bc")
 		(effects
@@ -8440,11 +8440,11 @@
 		(layer "User.1")
 		(uuid "10440008-222d-4d32-8f33-7294828d5e0c")
 		(pts
-			(xy 72.59 120.8) (xy 143.59 120.8)
+			(xy 72.59 121) (xy 143.59 121)
 		)
 		(height 15.75)
 		(gr_text "71.0000 mm"
-			(at 108.09 135.4 0)
+			(at 108.09 135.6 0)
 			(layer "User.1")
 			(uuid "10440008-222d-4d32-8f33-7294828d5e0c")
 			(effects
@@ -8506,11 +8506,11 @@
 		(layer "User.1")
 		(uuid "4c80ff58-14fa-47dd-9e57-b4fa54b41eea")
 		(pts
-			(xy 77.59 75.3) (xy 99 115)
+			(xy 77.59 75.5) (xy 99 115.2)
 		)
 		(height 38.290443)
 		(gr_text "45.1052 mm"
-			(at 55.60529 112.779388 298.3377502)
+			(at 55.60529 112.979388 298.3377502)
 			(layer "User.1")
 			(uuid "4c80ff58-14fa-47dd-9e57-b4fa54b41eea")
 			(effects
@@ -8539,11 +8539,11 @@
 		(layer "User.1")
 		(uuid "6eed40bb-ef26-427e-a1d6-cc44df4e9a50")
 		(pts
-			(xy 77.59 117.8) (xy 72.59 117.8)
+			(xy 77.59 118) (xy 72.59 118)
 		)
 		(height 0)
 		(gr_text "5.0000 mm"
-			(at 75.09 116.65 0)
+			(at 75.09 116.85 0)
 			(layer "User.1")
 			(uuid "6eed40bb-ef26-427e-a1d6-cc44df4e9a50")
 			(effects
@@ -8572,11 +8572,11 @@
 		(layer "User.1")
 		(uuid "7474685c-de9f-4c2f-ba10-8da6d8574791")
 		(pts
-			(xy 77.59 75.3) (xy 77.59 117.8)
+			(xy 77.59 75.5) (xy 77.59 118)
 		)
 		(height 11.98)
 		(gr_text "42.5000 mm"
-			(at 64.46 96.55 90)
+			(at 64.46 96.75 90)
 			(layer "User.1")
 			(uuid "7474685c-de9f-4c2f-ba10-8da6d8574791")
 			(effects
@@ -8605,11 +8605,11 @@
 		(layer "User.1")
 		(uuid "b91314a4-445d-4b94-957c-44d3698465df")
 		(pts
-			(xy 77.59 117.8) (xy 77.59 122.8)
+			(xy 77.59 118) (xy 77.59 123)
 		)
 		(height 0)
 		(gr_text "5.0000 mm"
-			(at 76.44 120.3 90)
+			(at 76.44 120.5 90)
 			(layer "User.1")
 			(uuid "b91314a4-445d-4b94-957c-44d3698465df")
 			(effects
@@ -8671,11 +8671,11 @@
 		(layer "User.1")
 		(uuid "d7f8619f-f4e2-4445-b833-f6dc07ab4bfd")
 		(pts
-			(xy 77.59 117.8) (xy 138.59 117.8)
+			(xy 77.59 118) (xy 138.59 118)
 		)
 		(height 14.5)
 		(gr_text "61.0000 mm"
-			(at 108.09 131.15 0)
+			(at 108.09 131.35 0)
 			(layer "User.1")
 			(uuid "d7f8619f-f4e2-4445-b833-f6dc07ab4bfd")
 			(effects
