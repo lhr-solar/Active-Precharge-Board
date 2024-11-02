@@ -7714,7 +7714,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.vishay.com/docs/83510/tcmt1100.pdf"
+		(property "Datasheet" "https://www.vishay.com/docs/83510/tcmt11.pdf"
 			(at 127 82.55 0)
 			(effects
 				(font
