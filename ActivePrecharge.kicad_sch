@@ -2662,12 +2662,6 @@
 		(uuid "059b4131-95dc-4533-9407-c974edf14d3b")
 	)
 	(junction
-		(at 262.89 85.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1695c4df-585a-46b9-a509-5d9a25e5e5d9")
-	)
-	(junction
 		(at 69.85 134.62)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2708,12 +2702,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5b4428a0-9b48-4690-94b6-74158538a4da")
-	)
-	(junction
-		(at 186.69 35.56)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5c29b075-607a-4c0c-8836-ab836c990d2f")
 	)
 	(junction
 		(at 72.39 134.62)
@@ -2859,7 +2847,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 34.29) (xy 186.69 35.56)
+			(xy 186.69 34.29) (xy 186.69 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2916,16 +2904,6 @@
 			(type default)
 		)
 		(uuid "0f2d0460-03fe-438c-b743-5fd57b51845c")
-	)
-	(wire
-		(pts
-			(xy 262.89 86.36) (xy 262.89 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11701675-d824-4175-ba08-25834d052e83")
 	)
 	(wire
 		(pts
@@ -3029,7 +3007,7 @@
 	)
 	(wire
 		(pts
-			(xy 262.89 83.82) (xy 262.89 85.09)
+			(xy 262.89 83.82) (xy 262.89 86.36)
 		)
 		(stroke
 			(width 0)
@@ -3656,16 +3634,6 @@
 			(type default)
 		)
 		(uuid "ba22ef33-6468-4019-9404-3729974bc4f3")
-	)
-	(wire
-		(pts
-			(xy 186.69 35.56) (xy 186.69 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bb736105-f202-45c3-8d2a-5d2b2ad9e115")
 	)
 	(wire
 		(pts
@@ -8566,73 +8534,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 262.89 85.09 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c93722d3-b658-4217-9d63-71a9f3665ac0")
-		(property "Reference" "LVI_TP1"
-			(at 267.97 83.8199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 267.97 86.3599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Active-PrechargeLib:TestPoint_HEX_3mmID"
-			(at 262.89 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 262.89 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 262.89 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "70e117c1-7c37-4cfd-9144-d40f4e8bac44")
-		)
-		(instances
-			(project ""
-				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "LVI_TP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
 		(at 26.67 161.29 180)
 		(unit 1)
@@ -9507,71 +9408,6 @@
 			(project ""
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
 					(reference "#PWR019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 186.69 35.56 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e6c5718c-dfed-4a1d-8170-b57275ba0f80")
-		(property "Reference" "Indicator_TP1"
-			(at 183.388 30.48 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 183.388 33.02 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Active-PrechargeLib:TestPoint_HEX_3mmID"
-			(at 186.69 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 186.69 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 186.69 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b166bea8-fca1-4fbd-825a-a1c5fb74c5d9")
-		)
-		(instances
-			(project ""
-				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "Indicator_TP1")
 					(unit 1)
 				)
 			)
