@@ -2568,7 +2568,7 @@
 			)
 		)
 		(property "Value" "BZT52-B12-QX"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "c60fc402-da37-4ffa-bdf4-4549ebb5cae4")
@@ -2580,7 +2580,7 @@
 			)
 		)
 		(property "Footprint" "Active-PrechargeLib:BZT52B12QX"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6ac06db4-960f-4332-b68a-a7f58ebdade9")
@@ -2592,7 +2592,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ca1158b4-c8a9-43f1-9f86-74afe609723f")
@@ -2604,7 +2604,7 @@
 			)
 		)
 		(property "Description" "Zener diode"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3b96e972-6362-4866-a403-fab12cc140a4")
@@ -2721,7 +2721,7 @@
 			(uuid "6fbcb9b7-f36b-48f1-9c58-f7c173fbac74")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "a974a0da-d2dc-48fb-babf-69e71d66a482")
 			(effects
@@ -3296,7 +3296,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R8"
-			(at -0.0125 -2.08 360)
+			(at -0.0125 -2.08 0)
 			(layer "F.SilkS")
 			(uuid "cb4245b2-8754-486a-a8f9-1631e9657a49")
 			(effects
@@ -6592,7 +6592,7 @@
 		(descr "LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "LED")
 		(property "Reference" "LV1"
-			(at -3.06 -0.01 360)
+			(at -3.06 -0.01 0)
 			(layer "F.SilkS")
 			(uuid "94774a8a-c7f1-46e5-b078-64cd8c6f0b0a")
 			(effects
@@ -6603,7 +6603,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 1.2275 1.6075 360)
+			(at 1.2275 1.6075 0)
 			(layer "F.Fab")
 			(uuid "ad03989d-8107-493f-b7ce-c439b44ab46d")
 			(effects
@@ -6778,7 +6778,7 @@
 			(uuid "fdf591d6-f304-4316-b10b-9913423da448")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "59cdf95b-8d67-4940-8208-16a23200cb8f")
 			(effects
@@ -7253,7 +7253,7 @@
 		(descr "D_SOD-123F")
 		(tags "D_SOD-123F")
 		(property "Reference" "D2"
-			(at 0 1.75 360)
+			(at 0 1.75 0)
 			(layer "F.SilkS")
 			(uuid "1e41f3aa-d148-40de-bb0b-77bc43f85db8")
 			(effects
@@ -7264,7 +7264,7 @@
 			)
 		)
 		(property "Value" "RSX068MP2STR"
-			(at 0 2.1 360)
+			(at 0 2.1 0)
 			(layer "F.Fab")
 			(uuid "6f8084f6-0025-4253-a63f-1653e0201f43")
 			(effects
@@ -7499,7 +7499,7 @@
 			(uuid "ba33313d-2b59-406e-b532-d7f631da0863")
 		)
 		(fp_text user "${REFERENCE}"
-			(at -0.127 -1.905 360)
+			(at -0.127 -1.905 0)
 			(layer "F.Fab")
 			(uuid "79f4c876-1a01-4cea-bf27-7371f45a77d5")
 			(effects
@@ -8425,7 +8425,7 @@
 		(descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "Q1"
-			(at -3.1 -0.65 360)
+			(at -3.1 -0.65 0)
 			(layer "F.SilkS")
 			(uuid "e1872a4c-fb4f-4255-b01f-e044a3ef6216")
 			(effects
@@ -8436,7 +8436,7 @@
 			)
 		)
 		(property "Value" "PMV35EPER"
-			(at 0 2.4 360)
+			(at 0 2.4 0)
 			(layer "F.Fab")
 			(uuid "2ace8b44-2aa8-4d3b-8bf0-2a1f1421f377")
 			(effects
@@ -8671,7 +8671,7 @@
 			(uuid "fbf951be-70b5-4eea-a307-a5a654b1da1a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "42d9842b-6e3a-40eb-8872-f5dd7d0bd66b")
 			(effects
