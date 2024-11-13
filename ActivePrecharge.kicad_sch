@@ -3892,16 +3892,6 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 109.22) (xy 234.95 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "49b5344a-97e9-44d7-bac6-a1d2fe343bb4")
-	)
-	(wire
-		(pts
 			(xy 26.67 140.97) (xy 26.67 142.24)
 		)
 		(stroke
@@ -4619,6 +4609,16 @@
 			(type default)
 		)
 		(uuid "cf343db0-58ca-45d9-8aae-0c598db78a28")
+	)
+	(wire
+		(pts
+			(xy 232.41 109.22) (xy 234.95 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d174d9aa-e5cd-49cd-991b-b4f762547afd")
 	)
 	(wire
 		(pts
@@ -6115,16 +6115,16 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 227.33 109.22 180)
+		(at 227.33 106.68 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1b3380b2-9213-4c70-8f34-391a58d6869b")
 		(property "Reference" "J2"
-			(at 227.33 100.33 0)
+			(at 227.33 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6132,7 +6132,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02"
-			(at 227.33 102.87 0)
+			(at 227.33 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6140,7 +6140,7 @@
 			)
 		)
 		(property "Footprint" "utsvt-conn:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical"
-			(at 227.33 109.22 0)
+			(at 227.33 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6149,7 +6149,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 227.33 109.22 0)
+			(at 227.33 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6158,7 +6158,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 227.33 109.22 0)
+			(at 227.33 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10490,7 +10490,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+12V"
+		(property "Value" "LV+"
 			(at 147.32 88.9 0)
 			(effects
 				(font
