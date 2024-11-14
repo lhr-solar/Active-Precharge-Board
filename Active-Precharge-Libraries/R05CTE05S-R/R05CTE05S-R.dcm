@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP R05CTE05S-R
+D 1 Watt 16-Pin SOIC Single Output, 5VDC, Tape & Reel
+K
+F https://recom-power.com/pdf/Econoline/RxxCTExxS.pdf
+$ENDCMP
+#
+#End Doc Library

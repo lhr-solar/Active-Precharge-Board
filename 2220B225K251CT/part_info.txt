@@ -1,9 +1,0 @@
-Manufacturer=Walsin Technology Corporation
-PartNumber=2220B225K251CT
-PartCategory=Capacitor
-PackageCategory=Capacitor Chip Non-polarised
-PinCount=2
-Version=1.1
-Released=2022-12-13 10:54:06
-Downloaded=2024-10-25 03:08:30
-3D=Y
