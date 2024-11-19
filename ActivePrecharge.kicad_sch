@@ -4594,8 +4594,8 @@
 	)
 	(text_box "Voltage dividers to compare HVRef and HVIn and lower voltage levels.\nWith bypass caps to steady inputs to the comparator from noise.\nComparator with hysteresis to compare Vin and Vref.\nHigher threshold (VH) = 0.9989V (90.87% of HVRef) when SignalHV is high. \nLower threshold (VL) = 0.8891V (81.64% of HVIn) when SignalHV is low.\nInitially Vin < Vref (VH), SignalHV = Vcc+ = 5V.\nVin > VH, SignalHV = HGND = 0V and VRef then = VL, which eliminates oscillations of SignalHV from noisy Vin signal.\nIf Vin < VL, SignalHV = Vcc+ = 5V and VRef then = VH again, which again eliminates oscillations of SignalHV from noisy Vin signal.\nNMOS w/ voltage dividers used to prevent edge cases where battery contactors open yet active precharge contactor does not. Current only passes through NMOS when the battery is on (HVRef is high). Battery contactors open, NMOS opens, current cannot flow through optocoupler. "
 		(exclude_from_sim no)
-		(at 17.78 172.72 0)
-		(size 143.51 22.86)
+		(at 17.78 173.99 0)
+		(size 143.51 21.59)
 		(stroke
 			(width 0)
 			(type default)
