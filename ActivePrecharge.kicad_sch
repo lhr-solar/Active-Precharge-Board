@@ -6652,17 +6652,6 @@
 		)
 		(uuid "30113793-f8ca-41a1-a845-0416ed0f22eb")
 	)
-	(label "SignalRefN"
-		(at 154.94 48.26 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "346fa2df-de30-4ea7-888f-bf02601c6d1f")
-	)
 	(label "LV+"
 		(at 121.92 88.9 180)
 		(fields_autoplaced yes)
@@ -6684,6 +6673,17 @@
 			(justify left bottom)
 		)
 		(uuid "3fdb2ad7-84d2-497b-aa93-793c1c038f71")
+	)
+	(label "SignalInP"
+		(at 154.94 60.96 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "49a8eaef-bb30-4440-958b-0f7fa8eadd31")
 	)
 	(label "LV+"
 		(at 243.84 128.27 0)
@@ -6708,7 +6708,7 @@
 		(uuid "534d410d-0bf0-4cf9-b095-646f1894622a")
 	)
 	(label "SignalRefP"
-		(at 154.94 45.72 180)
+		(at 154.94 48.26 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6716,7 +6716,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "64b6439c-c4c6-49e3-8fd3-e00ae76b27b8")
+		(uuid "5ce96794-27df-4dd1-b7ec-41b31f5c6e35")
 	)
 	(label "HVRef"
 		(at 24.13 81.28 0)
@@ -6728,17 +6728,6 @@
 			(justify left bottom)
 		)
 		(uuid "7016a047-b1a6-4899-80b6-4a2c7e08cf28")
-	)
-	(label "SignalInN"
-		(at 154.94 60.96 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "74a29855-2325-431c-b304-763ce2fb4fcb")
 	)
 	(label "HVGND"
 		(at 76.2 149.86 0)
@@ -6861,6 +6850,17 @@
 		)
 		(uuid "acdb23ac-1b2e-4d52-bace-7561d077893f")
 	)
+	(label "SignalInN"
+		(at 154.94 58.42 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ada9a4b8-c65e-4185-ad96-707407b79d7c")
+	)
 	(label "HVGND"
 		(at 24.13 124.46 0)
 		(fields_autoplaced yes)
@@ -6916,8 +6916,8 @@
 		)
 		(uuid "cbdd1a98-3293-483e-86d6-f0387be4baa6")
 	)
-	(label "SignalInP"
-		(at 154.94 58.42 180)
+	(label "SignalRefN"
+		(at 154.94 45.72 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6925,7 +6925,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "ce01d4ce-3c71-4131-bb76-f400d8e298d3")
+		(uuid "d8329ad3-35e8-4aca-a050-ba3e70395b36")
 	)
 	(label "SignalInP"
 		(at 133.35 162.56 0)
@@ -7183,7 +7183,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0605fb6a-a900-47e9-b6c9-43bf3d5f543e")
-		(property "Reference" "ISO_PWR_TP6"
+		(property "Reference" "Vref1"
 			(at 40.894 99.314 0)
 			(effects
 				(font
@@ -7234,7 +7234,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "ISO_PWR_TP6")
+					(reference "Vref1")
 					(unit 1)
 				)
 			)
@@ -7861,7 +7861,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1e17ba2c-c74f-4f5e-83c1-e390c65a9d76")
-		(property "Reference" "HVR_TP1"
+		(property "Reference" "HVR1"
 			(at 50.8 55.626 0)
 			(effects
 				(font
@@ -7912,7 +7912,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "HVR_TP1")
+					(reference "HVR1")
 					(unit 1)
 				)
 			)
@@ -8056,7 +8056,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "23a2dde1-5c84-4d8c-922c-7cd8aaa6928f")
-		(property "Reference" "HVI_TP1"
+		(property "Reference" "HVI1"
 			(at 41.91 29.7179 0)
 			(effects
 				(font
@@ -8107,7 +8107,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "HVI_TP1")
+					(reference "HVI1")
 					(unit 1)
 				)
 			)
@@ -8122,7 +8122,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "241e6380-f4fc-422b-a624-8de871961c82")
-		(property "Reference" "ISO_PWR_TP9"
+		(property "Reference" "SignalInN1"
 			(at 156.464 164.084 0)
 			(effects
 				(font
@@ -8173,7 +8173,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "ISO_PWR_TP9")
+					(reference "SignalInN1")
 					(unit 1)
 				)
 			)
@@ -8188,7 +8188,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2994bf43-0271-4622-83c5-539b447eaea1")
-		(property "Reference" "ISO_PWR_TP4"
+		(property "Reference" "SignalInP1"
 			(at 136.144 156.464 0)
 			(effects
 				(font
@@ -8239,7 +8239,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "ISO_PWR_TP4")
+					(reference "SignalInP1")
 					(unit 1)
 				)
 			)
@@ -9689,7 +9689,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6bc8f771-0944-4bb5-8210-78897c3d2786")
-		(property "Reference" "LVGND_TP1"
+		(property "Reference" "LVGND1"
 			(at 228.6 98.044 90)
 			(effects
 				(font
@@ -9738,7 +9738,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "LVGND_TP1")
+					(reference "LVGND1")
 					(unit 1)
 				)
 			)
@@ -9820,7 +9820,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6ee29a72-3157-44fa-98a5-c85e25783a96")
-		(property "Reference" "HVG_TP1"
+		(property "Reference" "HVGND1"
 			(at 73.152 46.736 0)
 			(effects
 				(font
@@ -9871,7 +9871,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "HVG_TP1")
+					(reference "HVGND1")
 					(unit 1)
 				)
 			)
@@ -10041,7 +10041,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "729cb10e-f982-4837-a12e-98b9f2bfac5b")
-		(property "Reference" "ISO_PWR_TP2"
+		(property "Reference" "Vin1"
 			(at 63.754 99.314 0)
 			(effects
 				(font
@@ -10092,7 +10092,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "ISO_PWR_TP2")
+					(reference "Vin1")
 					(unit 1)
 				)
 			)
@@ -11151,7 +11151,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ab99a87e-84fd-4670-b92e-37660dc9a334")
-		(property "Reference" "ISO_PWR_TP8"
+		(property "Reference" "3.3V1"
 			(at 197.104 124.714 0)
 			(effects
 				(font
@@ -11202,7 +11202,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "ISO_PWR_TP8")
+					(reference "3.3V1")
 					(unit 1)
 				)
 			)
@@ -11287,7 +11287,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b5e8f1c0-2942-4524-b6e9-1626e11eab46")
-		(property "Reference" "ISO_PWR_TP5"
+		(property "Reference" "SignalRefN1"
 			(at 155.194 136.144 0)
 			(effects
 				(font
@@ -11338,7 +11338,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "ISO_PWR_TP5")
+					(reference "SignalRefN1")
 					(unit 1)
 				)
 			)
@@ -11484,7 +11484,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "be459ffb-d541-4529-9384-9423b989333f")
-		(property "Reference" "12V_TP1"
+		(property "Reference" "12V1"
 			(at 264.414 78.486 0)
 			(effects
 				(font
@@ -11535,7 +11535,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "12V_TP1")
+					(reference "12V1")
 					(unit 1)
 				)
 			)
@@ -11550,7 +11550,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bf2ef94f-9d9e-490b-8177-86b80854fe0e")
-		(property "Reference" "ISO_PWR_TP3"
+		(property "Reference" "SignalRefP1"
 			(at 136.144 128.524 0)
 			(effects
 				(font
@@ -11601,7 +11601,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "ISO_PWR_TP3")
+					(reference "SignalRefP1")
 					(unit 1)
 				)
 			)
@@ -11687,7 +11687,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c76865b7-cc1d-4204-a19c-42e21f4d82ef")
-		(property "Reference" "ISO_PWR_TP1"
+		(property "Reference" "ISO_PWR1"
 			(at 77.216 82.804 0)
 			(effects
 				(font
@@ -11738,7 +11738,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "ISO_PWR_TP1")
+					(reference "ISO_PWR1")
 					(unit 1)
 				)
 			)
@@ -11949,7 +11949,8 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:PMOS")
-		(at 254 88.9 90)
+		(at 254 88.9 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11973,7 +11974,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
-			(at 251.46 83.82 0)
+			(at 256.54 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11982,7 +11983,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 266.7 88.9 0)
+			(at 241.3 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12000,7 +12001,7 @@
 			)
 		)
 		(property "Sim.Device" "PMOS"
-			(at 271.145 88.9 0)
+			(at 236.855 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12009,7 +12010,7 @@
 			)
 		)
 		(property "Sim.Type" "VDMOS"
-			(at 273.05 88.9 0)
+			(at 234.95 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12018,7 +12019,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 269.24 88.9 0)
+			(at 238.76 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12256,7 +12257,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "daa21557-05d6-4201-9423-aab931e62a49")
-		(property "Reference" "ISO_PWR_TP7"
+		(property "Reference" "SignalLV1"
 			(at 186.944 66.294 0)
 			(effects
 				(font
@@ -12307,7 +12308,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "ISO_PWR_TP7")
+					(reference "SignalLV1")
 					(unit 1)
 				)
 			)

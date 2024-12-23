@@ -12,4 +12,5 @@
   (lib (name "utsvt-mech")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/UTSVT_Mechanical.pretty")(options "")(descr ""))
   (lib (name "utsvt-power")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/UTSVT_Power.pretty")(options "")(descr ""))
   (lib (name "utsvt-special")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/UTSVT_Special.pretty")(options "")(descr ""))
+  (lib (name "Active-PrechargeLib")(type "KiCad")(uri "C:/Users/Tony/Documents/LHR/Active-Precharge-Board-v.1/ActivePrechargeLib/ActivePrechargeLib.pretty")(options "")(descr ""))
 )
