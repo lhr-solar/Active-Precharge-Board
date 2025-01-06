@@ -6236,14 +6236,12 @@
 	)
 	(symbol
 		(lib_id "Device:Q_PMOS_GDS")
-		(at 248.92 46.99 270)
-		(mirror x)
+		(at 248.92 46.99 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "266fa557-0027-45f2-8433-4e829a6a860e")
 		(property "Reference" "Q4"
 			(at 248.92 38.1 90)
@@ -6262,7 +6260,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
-			(at 251.46 41.91 0)
+			(at 246.38 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
