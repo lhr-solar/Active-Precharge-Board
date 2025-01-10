@@ -7027,7 +7027,7 @@
 		(uuid "ee7b2f7f-81a7-477d-a1ca-1c0e73e49dd0")
 	)
 	(label "HVGND"
-		(at 85.09 44.45 180)
+		(at 82.55 44.45 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
