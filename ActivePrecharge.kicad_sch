@@ -6113,7 +6113,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "640"
+		(property "Value" "750"
 			(at 24.13 120.6499 0)
 			(effects
 				(font

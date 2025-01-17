@@ -46,9 +46,9 @@
 			(plot_on_all_layers_selection 0x0000000_00000000)
 			(disableapertmacros no)
 			(usegerberextensions yes)
-			(usegerberattributes yes)
-			(usegerberadvancedattributes yes)
-			(creategerberjobfile yes)
+			(usegerberattributes no)
+			(usegerberadvancedattributes no)
+			(creategerberjobfile no)
 			(dashed_line_dash_ratio 12.000000)
 			(dashed_line_gap_ratio 3.000000)
 			(svgprecision 4)
@@ -67,7 +67,7 @@
 			(psnegative no)
 			(psa4output no)
 			(plotreference yes)
-			(plotvalue yes)
+			(plotvalue no)
 			(plotfptext yes)
 			(plotinvisibletext no)
 			(sketchpadsonfab no)
@@ -12881,7 +12881,7 @@
 			)
 		)
 		(property "Value" "BZT52-B12-QX"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
 			(uuid "647ce5b0-6c00-494d-a462-c4c007f57bc3")
@@ -12894,7 +12894,7 @@
 			)
 		)
 		(property "Footprint" "Active-PrechargeLib:BZT52B12QX"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "5b84cf26-d2f1-4946-b0b0-a42b847b147d")
@@ -12907,7 +12907,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "8c84b380-a237-41cf-bee6-bf221fe17c91")
@@ -12920,7 +12920,7 @@
 			)
 		)
 		(property "Description" "Zener diode"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "3d5e6641-a5dc-4d75-89ae-833723fd1fc5")
@@ -13038,7 +13038,7 @@
 			(uuid "b891c398-6085-4883-93bb-18f933c7267a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(uuid "b19659d3-1a18-4dd7-9242-212517e50104")
 			(effects
@@ -16116,7 +16116,7 @@
 		(descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "Q4"
-			(at 0.05 -2.7 360)
+			(at 0.05 -2.7 0)
 			(layer "B.SilkS")
 			(uuid "ee9b7e30-c81c-474c-b02d-27314accc218")
 			(effects
@@ -18142,7 +18142,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R12"
-			(at -1.5 -1.7 360)
+			(at -1.5 -1.7 0)
 			(layer "B.SilkS")
 			(uuid "873b516c-9f9d-4ed4-a906-b27404095ad7")
 			(effects
@@ -18154,7 +18154,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 0 -1.65 360)
+			(at 0 -1.65 0)
 			(layer "B.Fab")
 			(uuid "056b2e10-a610-4e4e-89de-c96c2426dfe2")
 			(effects
@@ -18313,7 +18313,7 @@
 			(uuid "2f003140-729a-4592-8610-3f348692df59")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(uuid "b869ba75-ba5f-4580-a874-5af4d3545686")
 			(effects
@@ -28615,7 +28615,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R10"
-			(at 2.4 -0.5 360)
+			(at 2.4 -0.5 0)
 			(layer "B.SilkS")
 			(uuid "88e28ce0-3b7b-41a0-9460-46b11dcd37ea")
 			(effects
