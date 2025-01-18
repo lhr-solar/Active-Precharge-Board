@@ -4906,7 +4906,7 @@
 		(uuid "509b7a6d-5ff4-43ce-b7dd-50bb2890ff61")
 	)
 	(junction
-		(at 83.82 88.9)
+		(at 83.82 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "51a13381-8a1a-44ae-b937-64be2ad6c476")
@@ -4970,6 +4970,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9411d8f4-65ee-4d00-8201-76fa372e6f53")
+	)
+	(junction
+		(at 262.89 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "97c6285e-80f4-473c-92ea-266f22a9a862")
 	)
 	(junction
 		(at 184.15 53.34)
@@ -5072,6 +5078,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f2f51b2b-0f72-4c3e-a7f7-fee73422c882")
+	)
+	(junction
+		(at 275.59 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fb8a4944-a09c-465a-8994-f6d5ffa39e85")
 	)
 	(junction
 		(at 212.09 105.41)
@@ -5223,7 +5235,7 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 88.9) (xy 83.82 88.9)
+			(xy 72.39 114.3) (xy 83.82 114.3)
 		)
 		(stroke
 			(width 0)
@@ -5233,7 +5245,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 27.94) (xy 207.01 27.94)
+			(xy 201.93 27.94) (xy 210.82 27.94)
 		)
 		(stroke
 			(width 0)
@@ -5310,6 +5322,16 @@
 			(type default)
 		)
 		(uuid "17ab265b-92de-4e03-8617-61734d910d5c")
+	)
+	(wire
+		(pts
+			(xy 265.43 86.36) (xy 275.59 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1986eb83-86a2-4eaa-b0aa-04338a31850d")
 	)
 	(wire
 		(pts
@@ -5393,6 +5415,16 @@
 	)
 	(wire
 		(pts
+			(xy 262.89 86.36) (xy 265.43 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2818b106-f215-41c9-98d7-9dda782ba351")
+	)
+	(wire
+		(pts
 			(xy 201.93 58.42) (xy 201.93 67.31)
 		)
 		(stroke
@@ -5443,7 +5475,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 88.9) (xy 116.84 88.9)
+			(xy 121.92 114.3) (xy 116.84 114.3)
 		)
 		(stroke
 			(width 0)
@@ -5643,7 +5675,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 93.98) (xy 72.39 93.98)
+			(xy 86.36 119.38) (xy 72.39 119.38)
 		)
 		(stroke
 			(width 0)
@@ -5993,7 +6025,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 93.98) (xy 116.84 93.98)
+			(xy 121.92 119.38) (xy 116.84 119.38)
 		)
 		(stroke
 			(width 0)
@@ -6023,7 +6055,7 @@
 	)
 	(polyline
 		(pts
-			(xy 101.6 11.43) (xy 101.6 196.85)
+			(xy 101.6 12.7) (xy 101.6 198.12)
 		)
 		(stroke
 			(width 0.254)
@@ -6040,6 +6072,16 @@
 			(type default)
 		)
 		(uuid "90e6d1d0-c21d-4470-bf31-168e2af1fa48")
+	)
+	(wire
+		(pts
+			(xy 275.59 86.36) (xy 278.13 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "914d222c-2762-4010-93fb-65afb0058d17")
 	)
 	(wire
 		(pts
@@ -6363,7 +6405,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 95.25) (xy 121.92 93.98)
+			(xy 121.92 120.65) (xy 121.92 119.38)
 		)
 		(stroke
 			(width 0)
@@ -6483,7 +6525,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 88.9) (xy 86.36 88.9)
+			(xy 83.82 114.3) (xy 86.36 114.3)
 		)
 		(stroke
 			(width 0)
@@ -6540,16 +6582,6 @@
 			(type default)
 		)
 		(uuid "d43712c5-277f-4d31-8ab2-a526eadf54f1")
-	)
-	(wire
-		(pts
-			(xy 265.43 86.36) (xy 275.59 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d50120c8-1735-431a-a51e-6fc006bcc63c")
 	)
 	(wire
 		(pts
@@ -6773,16 +6805,6 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 22.86) (xy 201.93 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4a33ffa-8b8b-4e1b-b022-1e38c388f878")
-	)
-	(wire
-		(pts
 			(xy 215.9 105.41) (xy 215.9 115.57)
 		)
 		(stroke
@@ -6843,7 +6865,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 86.36) (xy 265.43 86.36)
+			(xy 259.08 86.36) (xy 262.89 86.36)
 		)
 		(stroke
 			(width 0)
@@ -6880,9 +6902,9 @@
 		)
 		(uuid "0b0f3d5e-cc48-4c58-9a5b-b45626223b72")
 	)
-	(text_box "Isolated 12-5V DCDC convertor to power comparator and optocoupler from 12V battery (ISOPWR). \n"
+	(text_box "Isolated 12-5V DCDC convertor to power comparator and isolating amplifiers from 12V battery (ISOPWR). \n"
 		(exclude_from_sim no)
-		(at 74.93 102.87 0)
+		(at 72.39 93.98 0)
 		(size 54.61 5.08)
 		(stroke
 			(width 0)
@@ -6978,7 +7000,7 @@
 	)
 	(text "Contactor Driver Gate \nSignal and Contactor Sense \nSignal for controls"
 		(exclude_from_sim no)
-		(at 199.898 152.146 0)
+		(at 213.36 154.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7176,7 +7198,7 @@
 		(uuid "32ef03b6-8346-428e-bb31-0110e7c65a37")
 	)
 	(label "LV+"
-		(at 121.92 88.9 180)
+		(at 121.92 114.3 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7273,6 +7295,17 @@
 			(justify left bottom)
 		)
 		(uuid "5e553cb4-8d20-4db2-89c4-69ad15d2b19c")
+	)
+	(label "Con+"
+		(at 278.13 86.36 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5e8a8ca5-be81-4d43-8379-949e292c7833")
 	)
 	(label "Con+"
 		(at 252.73 140.97 180)
@@ -7384,6 +7417,17 @@
 		)
 		(uuid "97bc5365-6666-41b5-92f3-26bf84de1fc5")
 	)
+	(label "Con+"
+		(at 160.02 33.02 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9afe23bc-70ed-4f1a-9d8a-47eb95efa4f8")
+	)
 	(label "LV+"
 		(at 220.98 143.51 0)
 		(fields_autoplaced yes)
@@ -7418,7 +7462,7 @@
 		(uuid "a7b97e82-7906-47b3-9da2-00ac37a89d6d")
 	)
 	(label "ISO_PWR"
-		(at 72.39 88.9 0)
+		(at 72.39 114.3 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7483,17 +7527,6 @@
 		)
 		(uuid "b5f5e9fe-9c62-458f-b74e-712efa6c905f")
 	)
-	(label "LV+"
-		(at 201.93 22.86 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b97b584e-0652-46c9-b388-c4064192ec73")
-	)
 	(label "Sense"
 		(at 266.7 143.51 180)
 		(fields_autoplaced yes)
@@ -7517,7 +7550,7 @@
 		(uuid "cbdd1a98-3293-483e-86d6-f0387be4baa6")
 	)
 	(label "Con+"
-		(at 207.01 27.94 0)
+		(at 210.82 27.94 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7549,19 +7582,8 @@
 		)
 		(uuid "d95fc51f-7f5c-4af8-961c-15423a0cc43b")
 	)
-	(label "LV+"
-		(at 160.02 33.02 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d9ecd0a5-db47-4952-b01f-1c7841da8abe")
-	)
 	(label "HVGND"
-		(at 72.39 93.98 0)
+		(at 72.39 119.38 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7581,17 +7603,6 @@
 			(justify left bottom)
 		)
 		(uuid "e0e6e52e-e9b6-4eea-a032-378f1a595021")
-	)
-	(label "LV+"
-		(at 275.59 86.36 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e6fafc5a-7dbd-4c12-af10-fc7a88ac4b98")
 	)
 	(label "3.3V"
 		(at 146.05 107.95 0)
@@ -8478,7 +8489,7 @@
 	)
 	(symbol
 		(lib_id "DCDC-isolator:1769205241")
-		(at 116.84 88.9 0)
+		(at 116.84 114.3 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8487,7 +8498,7 @@
 		(dnp no)
 		(uuid "1ed9e77e-3216-437f-9a05-0046e322b50f")
 		(property "Reference" "IC3"
-			(at 101.6 81.28 0)
+			(at 101.6 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8495,7 +8506,7 @@
 			)
 		)
 		(property "Value" "1769205241"
-			(at 101.6 83.82 0)
+			(at 101.6 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8503,7 +8514,7 @@
 			)
 		)
 		(property "Footprint" "Active-PrechargeLib:1769205241"
-			(at 90.17 183.82 0)
+			(at 90.17 209.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8513,7 +8524,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/1769205241.pdf"
-			(at 90.17 283.82 0)
+			(at 90.17 309.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8523,7 +8534,7 @@
 			)
 		)
 		(property "Description" "WURTH ELEKTRONIK - 1769205241 - Isolated Surface Mount DC/DC Converter, ITE, 1 W, 1 Output, 5 V, 200 mA"
-			(at 116.84 75.692 0)
+			(at 116.84 101.092 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8532,7 +8543,7 @@
 			)
 		)
 		(property "Height" "7.5"
-			(at 90.17 483.82 0)
+			(at 90.17 509.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8542,7 +8553,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Wurth Elektronik"
-			(at 90.17 583.82 0)
+			(at 90.17 609.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8552,7 +8563,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "1769205241"
-			(at 90.17 683.82 0)
+			(at 90.17 709.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8562,7 +8573,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 90.17 783.82 0)
+			(at 90.17 809.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8572,7 +8583,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 90.17 883.82 0)
+			(at 90.17 909.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9072,6 +9083,72 @@
 			(project ""
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
 					(reference "PreResH1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 275.59 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "340fe391-8bf0-41ab-a60a-dc28f9d1f134")
+		(property "Reference" "#FLG01"
+			(at 275.59 84.455 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 270.764 82.042 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 275.59 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 275.59 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 275.59 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1a256337-5edd-4f37-a7d1-db3d7eaa6828")
+		)
+		(instances
+			(project "ActivePrecharge"
+				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
@@ -12050,7 +12127,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 121.92 95.25 0)
+		(at 121.92 120.65 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12060,7 +12137,7 @@
 		(fields_autoplaced yes)
 		(uuid "bc17a4ff-061f-4684-919f-7a1fbd8b68f6")
 		(property "Reference" "#PWR0102"
-			(at 121.92 101.6 0)
+			(at 121.92 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12069,7 +12146,7 @@
 			)
 		)
 		(property "Value" "LVGND"
-			(at 121.92 100.33 0)
+			(at 121.92 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12077,7 +12154,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 121.92 95.25 0)
+			(at 121.92 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12086,7 +12163,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 95.25 0)
+			(at 121.92 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12095,7 +12172,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 121.92 95.25 0)
+			(at 121.92 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12117,7 +12194,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 265.43 86.36 0)
+		(at 262.89 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12125,7 +12202,7 @@
 		(dnp no)
 		(uuid "be459ffb-d541-4529-9384-9423b989333f")
 		(property "Reference" "12V1"
-			(at 264.414 78.486 0)
+			(at 261.874 78.486 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12134,7 +12211,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 264.414 80.772 0)
+			(at 261.874 80.772 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12143,7 +12220,7 @@
 			)
 		)
 		(property "Footprint" "Active-PrechargeLib:TestPoint_HEX_3mmID"
-			(at 270.51 86.36 0)
+			(at 267.97 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12152,7 +12229,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 270.51 86.36 0)
+			(at 267.97 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12161,7 +12238,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 265.43 86.36 0)
+			(at 262.89 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12319,7 +12396,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 83.82 88.9 0)
+		(at 83.82 114.3 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12328,7 +12405,7 @@
 		(dnp no)
 		(uuid "c76865b7-cc1d-4204-a19c-42e21f4d82ef")
 		(property "Reference" "ISO_PWR1"
-			(at 77.216 82.804 0)
+			(at 77.216 108.204 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12337,7 +12414,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 77.978 80.264 0)
+			(at 77.978 105.664 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12346,7 +12423,7 @@
 			)
 		)
 		(property "Footprint" "utsvt-special:TestPoint_HEX_3mmID"
-			(at 78.74 88.9 0)
+			(at 78.74 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12355,7 +12432,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 78.74 88.9 0)
+			(at 78.74 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12364,7 +12441,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 83.82 88.9 0)
+			(at 83.82 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
