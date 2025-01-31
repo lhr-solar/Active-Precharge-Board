@@ -180,7 +180,8 @@
       "track_widths": [
         0.0,
         0.4,
-        1.0
+        1.0,
+        1.6
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -485,7 +486,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "ActivePrecharge_v.2_Gerbers",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
