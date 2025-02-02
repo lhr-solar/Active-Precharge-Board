@@ -7448,7 +7448,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "74a1220f-1f46-48b5-b064-e31f3f76902e")
-		(property "Reference" "J2"
+		(property "Reference" "J3"
 			(at 146.05 29.21 0)
 			(effects
 				(font
@@ -7506,7 +7506,7 @@
 		(instances
 			(project ""
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "J2")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -8060,7 +8060,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9919ec69-527c-435f-85d7-6fd8b1234b40")
-		(property "Reference" "J?"
+		(property "Reference" "J2"
 			(at 20.32 34.29 0)
 			(effects
 				(font
@@ -8076,7 +8076,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "utsvt-conn:Molex_MicroFit3.0_1x3xP3.00mm_PolarizingPeg_Vertical"
 			(at 20.32 43.18 0)
 			(effects
 				(font
@@ -8115,7 +8115,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "J?")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -8598,7 +8598,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb493b4f-4bfa-43b0-8f10-df418ef5e22f")
-		(property "Reference" "J?"
+		(property "Reference" "J1"
 			(at 20.32 19.05 0)
 			(effects
 				(font
@@ -8614,7 +8614,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "utsvt-conn:Molex_MicroFit3.0_1x3xP3.00mm_PolarizingPeg_Vertical"
 			(at 20.32 27.94 0)
 			(effects
 				(font
@@ -8653,7 +8653,7 @@
 		(instances
 			(project ""
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
-					(reference "J?")
+					(reference "J1")
 					(unit 1)
 				)
 			)

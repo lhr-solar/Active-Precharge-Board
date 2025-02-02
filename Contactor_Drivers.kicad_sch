@@ -3415,7 +3415,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 102.616 141.224 90)
 			(effects
 				(font
@@ -3780,7 +3780,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 102.616 152.654 90)
 			(effects
 				(font
@@ -3938,7 +3938,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 171.196 141.224 90)
 			(effects
 				(font
@@ -4008,7 +4008,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 128.016 152.654 90)
 			(effects
 				(font
@@ -4242,7 +4242,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 128.016 141.224 90)
 			(effects
 				(font
@@ -4451,7 +4451,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 171.196 152.654 90)
 			(effects
 				(font
@@ -4648,7 +4648,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a57b969d-6b7a-492e-8cbe-98da761324ed")
-		(property "Reference" "J7"
+		(property "Reference" "J8"
 			(at 267.97 109.2199 0)
 			(effects
 				(font
@@ -4708,7 +4708,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/c0036b4f-8078-47a1-85ab-72dbdcf28d35"
-					(reference "J7")
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -5024,7 +5024,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 148.336 141.224 90)
 			(effects
 				(font
@@ -5162,7 +5162,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 148.336 152.654 90)
 			(effects
 				(font
@@ -5498,7 +5498,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ef978df1-17dc-4321-9f36-4dfb4b3efc19")
-		(property "Reference" "J4"
+		(property "Reference" "J5"
 			(at 76.2 107.9499 0)
 			(effects
 				(font
@@ -5558,7 +5558,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/c0036b4f-8078-47a1-85ab-72dbdcf28d35"
-					(reference "J4")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -5574,7 +5574,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "efb671c6-fae1-4169-907b-149bbd34392e")
-		(property "Reference" "J3"
+		(property "Reference" "J4"
 			(at 68.58 144.7799 0)
 			(effects
 				(font
@@ -5592,7 +5592,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "utsvt-conn:Molex_MicroFit_01x06_Horizontal"
 			(at 66.04 146.05 0)
 			(effects
 				(font
@@ -5637,7 +5637,7 @@
 		(instances
 			(project ""
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/c0036b4f-8078-47a1-85ab-72dbdcf28d35"
-					(reference "J3")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -5653,7 +5653,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f0742394-080c-4f29-bfe2-098793384220")
-		(property "Reference" "J6"
+		(property "Reference" "J7"
 			(at 208.28 109.2199 0)
 			(effects
 				(font
@@ -5713,7 +5713,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/c0036b4f-8078-47a1-85ab-72dbdcf28d35"
-					(reference "J6")
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -5886,7 +5886,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f733b2dc-bf94-4c8e-b175-99893af2b6cd")
-		(property "Reference" "J5"
+		(property "Reference" "J6"
 			(at 140.97 107.9499 0)
 			(effects
 				(font
@@ -5946,7 +5946,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/c0036b4f-8078-47a1-85ab-72dbdcf28d35"
-					(reference "J5")
+					(reference "J6")
 					(unit 1)
 				)
 			)
