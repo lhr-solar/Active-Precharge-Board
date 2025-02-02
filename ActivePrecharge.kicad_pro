@@ -571,6 +571,36 @@
           "label": "Description",
           "name": "Description",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Name",
+          "name": "Manufacturer_Name",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Part_Number",
+          "name": "Manufacturer_Part_Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Arrow Part Number",
+          "name": "Arrow Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Arrow Price/Stock",
+          "name": "Arrow Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Height",
+          "name": "Height",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -622,6 +652,18 @@
     [
       "b9847a31-2b3b-47ca-9561-fab506416f6d",
       "Root"
+    ],
+    [
+      "27dbb16c-0867-45c1-9eb8-11b8a424e215",
+      "Precharge Logic"
+    ],
+    [
+      "c0036b4f-8078-47a1-85ab-72dbdcf28d35",
+      "Contactor Drivers"
+    ],
+    [
+      "a2982df7-4a65-4a2b-8298-6a7a639680dd",
+      "CAN"
     ]
   ],
   "text_variables": {}
