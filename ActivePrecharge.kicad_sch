@@ -3799,7 +3799,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 142.24) (xy 259.08 142.24)
+			(xy 135.89 177.8) (xy 144.78 177.8)
 		)
 		(stroke
 			(width 0)
@@ -3859,7 +3859,7 @@
 	)
 	(wire
 		(pts
-			(xy 279.4 142.24) (xy 279.4 143.51)
+			(xy 165.1 177.8) (xy 165.1 179.07)
 		)
 		(stroke
 			(width 0)
@@ -3899,7 +3899,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 137.16) (xy 259.08 137.16)
+			(xy 135.89 172.72) (xy 144.78 172.72)
 		)
 		(stroke
 			(width 0)
@@ -3909,7 +3909,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 134.62) (xy 259.08 134.62)
+			(xy 135.89 170.18) (xy 144.78 170.18)
 		)
 		(stroke
 			(width 0)
@@ -4259,7 +4259,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 139.7) (xy 259.08 139.7)
+			(xy 135.89 175.26) (xy 144.78 175.26)
 		)
 		(stroke
 			(width 0)
@@ -4789,7 +4789,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 142.24) (xy 279.4 142.24)
+			(xy 157.48 177.8) (xy 165.1 177.8)
 		)
 		(stroke
 			(width 0)
@@ -5018,6 +5018,25 @@
 		)
 		(uuid "4a7d307a-42bc-4b05-ab59-2b00ab4cd806")
 	)
+	(text_box "M_Pre_signal: signal from optocoupler\nA_Signal: controls safety signal (sent to mostfet)\nA_Pre_Signal: signal from optocoupler\nMot_Pre_Sense: precharge sense pin\nMot_Sense: contactor sense pin\nMot_Pre_Signal: M_Pre_Signal AND M_Signal (verify mosfet works)\nMot_Signal: contactor driver signal\nArr_Pre_sense: precharge sense pin\nArr_Sense: contactor sense pin\nArr_Pre_Signal: M_Pre_Signal AND M_Signal (verify mosfet works)\nArr_Signal: contactor driver signal\nM_Signal: controls safety signal (sent to mostfet)"
+		(exclude_from_sim no)
+		(at 247.65 124.46 0)
+		(size 36.83 40.64)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "58167ae9-57d1-43fa-aedf-e1b25c0e6bac")
+	)
 	(text_box ""
 		(exclude_from_sim no)
 		(at 147.32 16.51 0)
@@ -5153,7 +5172,7 @@
 	)
 	(text_box "CAN circuits"
 		(exclude_from_sim no)
-		(at 257.81 148.59 0)
+		(at 143.51 184.15 0)
 		(size 13.97 3.81)
 		(stroke
 			(width 0)
@@ -5438,7 +5457,7 @@
 		(uuid "3ed1da96-73bb-4f87-b029-b594a350150a")
 	)
 	(label "CAN_TD"
-		(at 250.19 134.62 0)
+		(at 135.89 170.18 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5460,7 +5479,7 @@
 		(uuid "426ac4f9-7eb0-4865-8284-5cff3c4e9ccc")
 	)
 	(label "5V"
-		(at 250.19 139.7 0)
+		(at 135.89 175.26 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5482,7 +5501,7 @@
 		(uuid "435d00bc-15ce-4941-ac27-5156bb32ed4f")
 	)
 	(label "CAN_RD"
-		(at 250.19 137.16 0)
+		(at 135.89 172.72 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5515,7 +5534,7 @@
 		(uuid "5a58829a-933b-4277-a043-13b35c2470a1")
 	)
 	(label "3V3"
-		(at 250.19 142.24 0)
+		(at 135.89 177.8 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8746,7 +8765,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 279.4 143.51 0)
+		(at 165.1 179.07 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8755,7 +8774,7 @@
 		(fields_autoplaced yes)
 		(uuid "aa50b52e-86e4-4130-ad16-da245a758719")
 		(property "Reference" "#PWR014"
-			(at 279.4 149.86 0)
+			(at 165.1 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8764,7 +8783,7 @@
 			)
 		)
 		(property "Value" "LVGND"
-			(at 279.4 148.59 0)
+			(at 165.1 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8772,7 +8791,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 279.4 143.51 0)
+			(at 165.1 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8781,7 +8800,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 279.4 143.51 0)
+			(at 165.1 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8790,7 +8809,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 279.4 143.51 0)
+			(at 165.1 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10440,7 +10459,7 @@
 		)
 	)
 	(sheet
-		(at 259.08 133.35)
+		(at 144.78 168.91)
 		(size 12.7 11.43)
 		(fields_autoplaced yes)
 		(stroke
@@ -10452,7 +10471,7 @@
 		)
 		(uuid "a2982df7-4a65-4a2b-8298-6a7a639680dd")
 		(property "Sheetname" "CAN"
-			(at 259.08 132.6384 0)
+			(at 144.78 168.1984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10461,7 +10480,7 @@
 			)
 		)
 		(property "Sheetfile" "CAN.kicad_sch"
-			(at 259.08 145.3646 0)
+			(at 144.78 180.9246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10470,7 +10489,7 @@
 			)
 		)
 		(pin "CAN_RX" output
-			(at 259.08 137.16 180)
+			(at 144.78 172.72 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10480,7 +10499,7 @@
 			(uuid "53f25b62-c79f-49bd-a0f8-39478d8af0b8")
 		)
 		(pin "CAN_TX" input
-			(at 259.08 134.62 180)
+			(at 144.78 170.18 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10490,7 +10509,7 @@
 			(uuid "b2ae92e9-23e1-4692-9841-5b136c35cb09")
 		)
 		(pin "5V" input
-			(at 259.08 139.7 180)
+			(at 144.78 175.26 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10500,7 +10519,7 @@
 			(uuid "417303e6-4f26-4f8c-a6c9-e7921f3e2ec3")
 		)
 		(pin "GND" input
-			(at 271.78 142.24 0)
+			(at 157.48 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10510,7 +10529,7 @@
 			(uuid "fcdfa6a7-4860-4bbf-8ae0-e78cb6efe4ad")
 		)
 		(pin "3V3" input
-			(at 259.08 142.24 180)
+			(at 144.78 177.8 180)
 			(effects
 				(font
 					(size 1.27 1.27)
