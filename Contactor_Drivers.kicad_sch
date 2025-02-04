@@ -2476,7 +2476,26 @@
 		)
 		(uuid "ff3d88a6-a2cb-4643-ba08-abaa4e73e24b")
 	)
-	(text "Motor/Array\nCoil+"
+	(text_box "Voltage dividers for signals that go to the Nucleo. \nSense signals from contactors are 12v and the Nucleo pins operate at 3.3v\n\n12v*(10k)/(10k+30k) = 3v "
+		(exclude_from_sim no)
+		(at 186.69 137.16 0)
+		(size 54.61 12.7)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "c9a28422-44a4-4ca5-9580-d0126ce73fc9")
+	)
+	(text "Array\nCoil+"
 		(exclude_from_sim no)
 		(at 255.778 102.616 0)
 		(effects
@@ -2496,7 +2515,7 @@
 		)
 		(uuid "0b68e44b-84c7-4663-a856-d3d60d757862")
 	)
-	(text "Motor/Array\nContactor\nIndicator\nLED"
+	(text "Array\nContactor\nIndicator\nLED"
 		(exclude_from_sim no)
 		(at 232.664 47.244 0)
 		(effects
@@ -2536,7 +2555,7 @@
 		)
 		(uuid "374e6e45-f1d5-4b9c-86b4-42f8c4b005d8")
 	)
-	(text "Motor/Array\nContactor\nIndicator\nLED"
+	(text "Motor\nContactor\nIndicator\nLED"
 		(exclude_from_sim no)
 		(at 172.974 47.244 0)
 		(effects
@@ -2546,7 +2565,7 @@
 		)
 		(uuid "45ae0c64-2b26-408d-9edb-a0b27e6b2aba")
 	)
-	(text "Precharge\nContactor\nIndicator\nLED"
+	(text "Motor\nPrecharge\nContactor\nIndicator\nLED"
 		(exclude_from_sim no)
 		(at 44.704 47.244 0)
 		(effects
@@ -2556,9 +2575,9 @@
 		)
 		(uuid "5dd0e14c-b3b6-45d9-b668-2ce809ef4bb1")
 	)
-	(text "Precharge\nCoil+"
+	(text "Motor\nPrecharge\nCoil+"
 		(exclude_from_sim no)
-		(at 64.008 101.346 0)
+		(at 65.024 99.568 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2566,7 +2585,7 @@
 		)
 		(uuid "6cda1b47-d02b-474e-8b49-1bbb6da769a0")
 	)
-	(text "Precharge\nContactor\nIndicator\nLED"
+	(text "Array\nPrecharge\nContactor\nIndicator\nLED"
 		(exclude_from_sim no)
 		(at 106.934 47.244 0)
 		(effects
@@ -2586,9 +2605,9 @@
 		)
 		(uuid "710906a6-59fa-4e39-a14f-dbc98c348079")
 	)
-	(text "Precharge\nCoil+"
+	(text "Array\nPrecharge\nCoil+"
 		(exclude_from_sim no)
-		(at 128.778 101.346 0)
+		(at 130.048 99.822 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2636,7 +2655,7 @@
 		)
 		(uuid "da207313-5194-4d2a-bdba-d038eaf7e173")
 	)
-	(text "Motor/Array\nCoil+"
+	(text "Motor\nCoil+"
 		(exclude_from_sim no)
 		(at 196.088 102.616 0)
 		(effects
@@ -2701,17 +2720,6 @@
 		)
 		(uuid "1518e29c-dc99-4805-bc2e-c9ae47e3d5ac")
 	)
-	(label "LV+"
-		(at 60.96 107.95 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "23ef962c-e46d-4152-9148-10ede1914935")
-	)
 	(label "A_Pre_Sense"
 		(at 110.49 110.49 180)
 		(fields_autoplaced yes)
@@ -2734,7 +2742,7 @@
 		)
 		(uuid "3c0d56b9-776b-487c-a221-f7c7035877a9")
 	)
-	(label "PreCon-"
+	(label "A_PreCon-"
 		(at 125.73 113.03 0)
 		(fields_autoplaced yes)
 		(effects
@@ -2745,7 +2753,7 @@
 		)
 		(uuid "539dfd6d-8829-4de8-a449-0c8e1bd531bb")
 	)
-	(label "PreCon-"
+	(label "M_PreCon-"
 		(at 81.28 57.15 180)
 		(fields_autoplaced yes)
 		(effects
@@ -2756,18 +2764,7 @@
 		)
 		(uuid "5c5181e2-c4a4-454e-901f-a5d891e1615c")
 	)
-	(label "LV+"
-		(at 60.96 105.41 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5e98e4e4-ac0e-4d4e-b601-fe5106d73bef")
-	)
-	(label "PreCon-"
+	(label "M_PreCon-"
 		(at 60.96 113.03 0)
 		(fields_autoplaced yes)
 		(effects
@@ -2788,28 +2785,6 @@
 			(justify right bottom)
 		)
 		(uuid "93fd0725-5bb2-40a6-9d5b-e33d68fa5bae")
-	)
-	(label "LV+"
-		(at 125.73 107.95 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9bb12182-2a83-4e2a-bdfe-3ab322ab5c61")
-	)
-	(label "LV+"
-		(at 125.73 105.41 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a57cb992-8cec-4aee-af86-64676f505b18")
 	)
 	(label "ACon-"
 		(at 252.73 114.3 0)
@@ -2888,7 +2863,7 @@
 		)
 		(uuid "d8c04a72-8b57-4fe9-bd7a-695016153ba3")
 	)
-	(label "PreCon-"
+	(label "A_PreCon-"
 		(at 143.51 57.15 180)
 		(fields_autoplaced yes)
 		(effects
@@ -2909,6 +2884,18 @@
 			(justify right bottom)
 		)
 		(uuid "efa4ac43-659c-4b7d-8816-7b2e5b5769ab")
+	)
+	(hierarchical_label "LV+"
+		(shape input)
+		(at 125.73 105.41 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0676edef-ef12-4132-a58c-314ae17230a5")
 	)
 	(hierarchical_label "LV+"
 		(shape input)
@@ -2945,6 +2932,18 @@
 			(justify left)
 		)
 		(uuid "158efb65-8801-4007-91a1-3075ea9cc7c2")
+	)
+	(hierarchical_label "LV+"
+		(shape input)
+		(at 60.96 105.41 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "190dc25f-c97b-46df-8d34-76180aa5ba4b")
 	)
 	(hierarchical_label "LVGND"
 		(shape input)
@@ -3042,6 +3041,18 @@
 		)
 		(uuid "49ca6c1b-0ebe-4956-93aa-56b38f646ed5")
 	)
+	(hierarchical_label "LV+"
+		(shape input)
+		(at 125.73 107.95 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "50c24bf8-7ff9-4d6f-8901-c578cad1e18e")
+	)
 	(hierarchical_label "LVGND"
 		(shape input)
 		(at 129.54 80.01 0)
@@ -3065,6 +3076,18 @@
 			(justify left)
 		)
 		(uuid "5bf35fdd-7479-4965-ba21-1a36b69acb5b")
+	)
+	(hierarchical_label "LV+"
+		(shape input)
+		(at 60.96 107.95 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "60b56cd7-f1c2-43a4-a705-b74fb23a54c9")
 	)
 	(hierarchical_label "LV+"
 		(shape input)
@@ -3187,7 +3210,7 @@
 		(uuid "a3671e6e-de73-4439-8275-017afef4dbc6")
 	)
 	(hierarchical_label "Mot_Pre_Sense"
-		(shape input)
+		(shape output)
 		(at 105.41 147.32 0)
 		(fields_autoplaced yes)
 		(effects
@@ -3199,7 +3222,7 @@
 		(uuid "b69387f9-4367-4b45-b16a-27e601c2bedc")
 	)
 	(hierarchical_label "Mot_Sense"
-		(shape input)
+		(shape output)
 		(at 130.81 147.32 0)
 		(fields_autoplaced yes)
 		(effects
@@ -3247,7 +3270,7 @@
 		(uuid "ca2f89f2-aec8-4285-81f5-438b93dc2ae8")
 	)
 	(hierarchical_label "Arr_Sense"
-		(shape input)
+		(shape output)
 		(at 173.99 147.32 0)
 		(fields_autoplaced yes)
 		(effects
@@ -3271,7 +3294,7 @@
 		(uuid "e37ab452-4cf7-4c90-9c24-dc30299012e3")
 	)
 	(hierarchical_label "Arr_Pre_Sense"
-		(shape input)
+		(shape output)
 		(at 151.13 147.32 0)
 		(fields_autoplaced yes)
 		(effects
