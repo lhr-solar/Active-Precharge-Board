@@ -2018,7 +2018,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 148.59) (xy 60.96 148.59)
+			(xy 45.72 148.59) (xy 60.96 148.59)
 		)
 		(stroke
 			(width 0)
@@ -2115,6 +2115,16 @@
 			(type default)
 		)
 		(uuid "9a5fa1f7-c825-4bb1-abf7-5250e849f568")
+	)
+	(wire
+		(pts
+			(xy 45.72 140.97) (xy 60.96 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b9e5dfd-85ee-4f11-8e91-cbfa07e54a6e")
 	)
 	(wire
 		(pts
@@ -2218,7 +2228,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 146.05) (xy 60.96 146.05)
+			(xy 45.72 146.05) (xy 60.96 146.05)
 		)
 		(stroke
 			(width 0)
@@ -2438,7 +2448,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 143.51) (xy 60.96 143.51)
+			(xy 45.72 143.51) (xy 60.96 143.51)
 		)
 		(stroke
 			(width 0)
@@ -2698,7 +2708,7 @@
 		)
 		(uuid "13e784b3-2e69-4424-abdd-b84c498efed9")
 	)
-	(label "MACon-"
+	(label "ACon-"
 		(at 269.24 57.15 180)
 		(fields_autoplaced yes)
 		(effects
@@ -2708,17 +2718,6 @@
 			(justify right bottom)
 		)
 		(uuid "14cf914b-365b-48c8-ad59-25e0f0d2d2fc")
-	)
-	(label "M_Pre_Signal"
-		(at 58.42 146.05 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1518e29c-dc99-4805-bc2e-c9ae47e3d5ac")
 	)
 	(label "A_Pre_Sense"
 		(at 110.49 110.49 180)
@@ -2775,17 +2774,6 @@
 		)
 		(uuid "89367a81-ad62-47ef-b883-73747dd631c5")
 	)
-	(label "M_Signal"
-		(at 58.42 148.59 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "93fd0725-5bb2-40a6-9d5b-e33d68fa5bae")
-	)
 	(label "ACon-"
 		(at 252.73 114.3 0)
 		(fields_autoplaced yes)
@@ -2808,7 +2796,7 @@
 		)
 		(uuid "bfc6966e-32fe-467f-a707-f8bc4135c2fc")
 	)
-	(label "MACon-"
+	(label "MCon-"
 		(at 209.55 57.15 180)
 		(fields_autoplaced yes)
 		(effects
@@ -2842,13 +2830,13 @@
 		(uuid "d71bfb77-8ed5-4c96-822f-85b9ea62ee52")
 	)
 	(label "M_Pre_Sense"
-		(at 58.42 140.97 180)
+		(at 45.72 140.97 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "d812b922-ca14-4a46-9d6e-75a451f45feb")
 	)
@@ -2875,13 +2863,13 @@
 		(uuid "dffe355f-0b42-42eb-bef1-109d9e39657c")
 	)
 	(label "M_Sense"
-		(at 58.42 143.51 180)
+		(at 45.72 143.51 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "efa4ac43-659c-4b7d-8816-7b2e5b5769ab")
 	)
@@ -2956,6 +2944,18 @@
 			(justify left)
 		)
 		(uuid "1e0f9077-241a-4b5b-9477-7469da6a7e4d")
+	)
+	(hierarchical_label "Mot_Pre_Signal"
+		(shape input)
+		(at 45.72 146.05 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "27f7c2c0-0792-4dd2-9bca-f1e0c291d731")
 	)
 	(hierarchical_label "Arr_Pre_Signal"
 		(shape input)
@@ -3185,18 +3185,6 @@
 		)
 		(uuid "9cae0754-81f7-42a9-ad4a-fabee9d629b8")
 	)
-	(hierarchical_label "Arr_Pre_Sense"
-		(shape input)
-		(at 83.82 182.88 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a2df97d7-bc04-48d4-a36b-93cdf090b8af")
-	)
 	(hierarchical_label "LVGND"
 		(shape input)
 		(at 54.61 80.01 0)
@@ -3268,6 +3256,18 @@
 			(justify left)
 		)
 		(uuid "ca2f89f2-aec8-4285-81f5-438b93dc2ae8")
+	)
+	(hierarchical_label "Mot_Signal"
+		(shape input)
+		(at 45.72 148.59 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d90f864e-f943-473e-94e2-a7bb35e30db8")
 	)
 	(hierarchical_label "Arr_Sense"
 		(shape output)

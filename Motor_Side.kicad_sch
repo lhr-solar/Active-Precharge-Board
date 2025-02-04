@@ -901,12 +901,6 @@
 		(uuid "06a8891a-0d3a-44ff-9739-e71334b82c90")
 	)
 	(junction
-		(at 76.2 40.64)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0eeb958b-928e-47ee-83f9-7f368a83daec")
-	)
-	(junction
 		(at 66.04 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -925,6 +919,12 @@
 		(uuid "21e5156f-ff5e-4738-b928-e4c0abfe7729")
 	)
 	(junction
+		(at 76.2 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3636999e-ce59-4a71-9f06-549033986ca6")
+	)
+	(junction
 		(at 76.2 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -937,16 +937,16 @@
 		(uuid "3d4df37e-5b22-4ce3-9d26-b522e165e435")
 	)
 	(junction
+		(at 78.74 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "42305ce7-4ebb-482e-b1e3-5c7b10d7473e")
+	)
+	(junction
 		(at 68.58 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "455def20-e99a-4f3d-a0e9-30fc3a164de1")
-	)
-	(junction
-		(at 78.74 123.19)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4626a7b5-2594-4d14-8562-f37e420d0745")
 	)
 	(junction
 		(at 58.42 113.03)
@@ -1094,7 +1094,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 30.48) (xy 76.2 40.64)
+			(xy 76.2 30.48) (xy 76.2 35.56)
 		)
 		(stroke
 			(width 0)
@@ -1121,6 +1121,16 @@
 			(type default)
 		)
 		(uuid "1f2d2d5d-e645-4066-8688-826973bd9b86")
+	)
+	(wire
+		(pts
+			(xy 78.74 118.11) (xy 78.74 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2174100f-9b41-4e62-891a-f99fa230a1e5")
 	)
 	(wire
 		(pts
@@ -1174,7 +1184,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 49.53) (xy 120.65 49.53)
+			(xy 107.95 49.53) (xy 124.46 49.53)
 		)
 		(stroke
 			(width 0)
@@ -1271,6 +1281,16 @@
 			(type default)
 		)
 		(uuid "543a7dbb-c161-4365-869c-9e581fe39291")
+	)
+	(wire
+		(pts
+			(xy 76.2 35.56) (xy 76.2 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b4de95c-a70a-49d0-b158-10eab4258768")
 	)
 	(wire
 		(pts
@@ -1524,16 +1544,6 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 40.64) (xy 76.2 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a51be472-ad15-43a7-a75a-04aa7e776301")
-	)
-	(wire
-		(pts
 			(xy 85.09 52.07) (xy 73.66 52.07)
 		)
 		(stroke
@@ -1594,7 +1604,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 132.08) (xy 123.19 132.08)
+			(xy 110.49 132.08) (xy 127 132.08)
 		)
 		(stroke
 			(width 0)
@@ -1704,16 +1714,6 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 123.19) (xy 78.74 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e0528844-ae17-4fba-9d80-53e3e801e1b4")
-	)
-	(wire
-		(pts
 			(xy 66.04 64.77) (xy 55.88 64.77)
 		)
 		(stroke
@@ -1734,7 +1734,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 113.03) (xy 78.74 123.19)
+			(xy 78.74 113.03) (xy 78.74 118.11)
 		)
 		(stroke
 			(width 0)
@@ -1932,7 +1932,7 @@
 		(uuid "0c149d99-611d-4adb-a509-d80032d4ef2a")
 	)
 	(label "Mot_SignalHV"
-		(at 120.65 49.53 180)
+		(at 124.46 49.53 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1998,7 +1998,7 @@
 		(uuid "d0a00586-4f87-4449-a5e7-ddb4936a541a")
 	)
 	(label "Arr_SignalHV"
-		(at 123.19 132.08 180)
+		(at 127 132.08 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2104,7 +2104,7 @@
 		)
 		(uuid "42e743bc-6e91-4ecf-8463-511b5045a2b4")
 	)
-	(hierarchical_label "Mot_Signal"
+	(hierarchical_label "M_Pre_Signal"
 		(shape input)
 		(at 186.69 57.15 0)
 		(fields_autoplaced yes)
@@ -2176,7 +2176,7 @@
 		)
 		(uuid "a2be327a-5513-4d02-bd76-27eefd4c6435")
 	)
-	(hierarchical_label "Arr_Signal"
+	(hierarchical_label "A_Pre_Signal"
 		(shape input)
 		(at 186.69 139.7 0)
 		(fields_autoplaced yes)
@@ -2361,7 +2361,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 76.2 40.64 270)
+		(at 76.2 35.56 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2370,7 +2370,7 @@
 		(fields_autoplaced yes)
 		(uuid "05e0f5a7-27fd-470e-bbbb-4112b988922a")
 		(property "Reference" "M_Ref_TP1"
-			(at 81.28 39.3699 90)
+			(at 81.28 34.2899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2379,7 +2379,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 81.28 41.9099 90)
+			(at 81.28 36.8299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2388,7 +2388,7 @@
 			)
 		)
 		(property "Footprint" "utsvt-special:TestPoint_HEX_3mmID"
-			(at 76.2 45.72 0)
+			(at 76.2 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2397,7 +2397,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 76.2 45.72 0)
+			(at 76.2 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2406,7 +2406,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 76.2 40.64 0)
+			(at 76.2 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2428,7 +2428,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 78.74 123.19 270)
+		(at 78.74 118.11 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2436,8 +2436,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a4ad161-b7de-4c99-96a6-b3a8ecb05412")
-		(property "Reference" "A_Ref_TP2"
-			(at 83.82 121.9199 90)
+		(property "Reference" "A_Ref_TP1"
+			(at 83.82 116.8399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2446,7 +2446,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 83.82 124.4599 90)
+			(at 83.82 119.3799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2455,7 +2455,7 @@
 			)
 		)
 		(property "Footprint" "utsvt-special:TestPoint_HEX_3mmID"
-			(at 78.74 128.27 0)
+			(at 78.74 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2464,7 +2464,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 78.74 128.27 0)
+			(at 78.74 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2473,7 +2473,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 78.74 123.19 0)
+			(at 78.74 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2487,7 +2487,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/27dbb16c-0867-45c1-9eb8-11b8a424e215"
-					(reference "A_Ref_TP2")
+					(reference "A_Ref_TP1")
 					(unit 1)
 				)
 			)
@@ -2789,7 +2789,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1e67cc57-7a2d-4590-9195-c09c2c6caed5")
-		(property "Reference" "A_SignalLV2"
+		(property "Reference" "A_SignalLV1"
 			(at 184.15 143.0019 0)
 			(effects
 				(font
@@ -2840,7 +2840,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/27dbb16c-0867-45c1-9eb8-11b8a424e215"
-					(reference "A_SignalLV2")
+					(reference "A_SignalLV1")
 					(unit 1)
 				)
 			)
@@ -3679,7 +3679,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7e5dffd6-70f9-42b2-a700-b67a96a8222c")
-		(property "Reference" "A_SigHV2"
+		(property "Reference" "A_SigHV1"
 			(at 99.06 134.874 0)
 			(effects
 				(font
@@ -3730,7 +3730,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/27dbb16c-0867-45c1-9eb8-11b8a424e215"
-					(reference "A_SigHV2")
+					(reference "A_SigHV1")
 					(unit 1)
 				)
 			)
