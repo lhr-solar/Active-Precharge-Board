@@ -895,7 +895,7 @@
 		(uuid "067dcc91-1db3-4003-92d1-d879e30667fb")
 	)
 	(junction
-		(at 184.15 139.7)
+		(at 181.61 139.7)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "06a8891a-0d3a-44ff-9739-e71334b82c90")
@@ -961,7 +961,7 @@
 		(uuid "5f1d713c-c6c6-46a4-a6b3-97068d68f936")
 	)
 	(junction
-		(at 154.94 134.62)
+		(at 152.4 134.62)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "715811b8-ef24-46b5-b7a9-c27a3dc53d31")
@@ -1034,7 +1034,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 134.62) (xy 158.75 134.62)
+			(xy 152.4 134.62) (xy 156.21 134.62)
 		)
 		(stroke
 			(width 0)
@@ -1104,7 +1104,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 134.62) (xy 154.94 134.62)
+			(xy 142.24 134.62) (xy 152.4 134.62)
 		)
 		(stroke
 			(width 0)
@@ -1151,6 +1151,16 @@
 			(type default)
 		)
 		(uuid "29b69051-35f9-429f-b988-d3d1906ca645")
+	)
+	(polyline
+		(pts
+			(xy 163.83 13.97) (xy 163.83 195.58)
+		)
+		(stroke
+			(width 0.254)
+			(type dash)
+		)
+		(uuid "32fa9d06-8d99-402d-a380-76527e06ba18")
 	)
 	(wire
 		(pts
@@ -1264,7 +1274,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 119.38) (xy 144.78 123.19)
+			(xy 142.24 119.38) (xy 142.24 123.19)
 		)
 		(stroke
 			(width 0)
@@ -1284,7 +1294,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 139.7) (xy 189.23 139.7)
+			(xy 181.61 139.7) (xy 186.69 139.7)
 		)
 		(stroke
 			(width 0)
@@ -1444,7 +1454,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 140.97) (xy 184.15 139.7)
+			(xy 181.61 140.97) (xy 181.61 139.7)
 		)
 		(stroke
 			(width 0)
@@ -1594,7 +1604,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 139.7) (xy 184.15 139.7)
+			(xy 171.45 139.7) (xy 181.61 139.7)
 		)
 		(stroke
 			(width 0)
@@ -1764,7 +1774,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 139.7) (xy 158.75 139.7)
+			(xy 142.24 139.7) (xy 156.21 139.7)
 		)
 		(stroke
 			(width 0)
@@ -1794,7 +1804,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 134.62) (xy 177.8 134.62)
+			(xy 171.45 134.62) (xy 175.26 134.62)
 		)
 		(stroke
 			(width 0)
@@ -1824,7 +1834,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 129.54) (xy 177.8 134.62)
+			(xy 175.26 129.54) (xy 175.26 134.62)
 		)
 		(stroke
 			(width 0)
@@ -1844,7 +1854,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 134.62) (xy 144.78 130.81)
+			(xy 142.24 134.62) (xy 142.24 130.81)
 		)
 		(stroke
 			(width 0)
@@ -1902,7 +1912,7 @@
 	)
 	(text "Optocoupler\n(Galvonic isolation)"
 		(exclude_from_sim no)
-		(at 166.878 144.526 0)
+		(at 164.338 144.526 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1944,7 +1954,7 @@
 		(uuid "5e44310e-245a-4e74-bac2-f886b6c4b9fa")
 	)
 	(label "Arr_SignalHV"
-		(at 144.78 139.7 0)
+		(at 142.24 139.7 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2048,7 +2058,7 @@
 	)
 	(hierarchical_label "ISO_PWR"
 		(shape input)
-		(at 144.78 119.38 0)
+		(at 142.24 119.38 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2168,7 +2178,7 @@
 	)
 	(hierarchical_label "Arr_Signal"
 		(shape input)
-		(at 189.23 139.7 0)
+		(at 186.69 139.7 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2192,7 +2202,7 @@
 	)
 	(hierarchical_label "LV+"
 		(shape input)
-		(at 177.8 129.54 0)
+		(at 175.26 129.54 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2359,7 +2369,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "05e0f5a7-27fd-470e-bbbb-4112b988922a")
-		(property "Reference" "Ref_TP1"
+		(property "Reference" "M_Ref_TP1"
 			(at 81.28 39.3699 90)
 			(effects
 				(font
@@ -2410,7 +2420,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/27dbb16c-0867-45c1-9eb8-11b8a424e215"
-					(reference "Ref_TP1")
+					(reference "M_Ref_TP1")
 					(unit 1)
 				)
 			)
@@ -2426,7 +2436,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a4ad161-b7de-4c99-96a6-b3a8ecb05412")
-		(property "Reference" "Ref_TP2"
+		(property "Reference" "A_Ref_TP2"
 			(at 83.82 121.9199 90)
 			(effects
 				(font
@@ -2477,7 +2487,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/27dbb16c-0867-45c1-9eb8-11b8a424e215"
-					(reference "Ref_TP2")
+					(reference "A_Ref_TP2")
 					(unit 1)
 				)
 			)
@@ -2771,7 +2781,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 184.15 140.97 180)
+		(at 181.61 140.97 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2779,8 +2789,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1e67cc57-7a2d-4590-9195-c09c2c6caed5")
-		(property "Reference" "SignalLV2"
-			(at 186.69 143.0019 0)
+		(property "Reference" "A_SignalLV2"
+			(at 184.15 143.0019 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2789,7 +2799,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 186.69 145.5419 0)
+			(at 184.15 145.5419 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2798,7 +2808,7 @@
 			)
 		)
 		(property "Footprint" "utsvt-special:TestPoint_HEX_3mmID"
-			(at 179.07 140.97 0)
+			(at 176.53 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2807,7 +2817,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 179.07 140.97 0)
+			(at 176.53 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2816,7 +2826,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 184.15 140.97 0)
+			(at 181.61 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2830,7 +2840,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/27dbb16c-0867-45c1-9eb8-11b8a424e215"
-					(reference "SignalLV2")
+					(reference "A_SignalLV2")
 					(unit 1)
 				)
 			)
@@ -2913,7 +2923,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3b9a3219-d023-4ccb-9062-e59f3b965fc1")
-		(property "Reference" "SignalLV1"
+		(property "Reference" "M_SignalLV1"
 			(at 184.15 60.4519 0)
 			(effects
 				(font
@@ -2964,7 +2974,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/27dbb16c-0867-45c1-9eb8-11b8a424e215"
-					(reference "SignalLV1")
+					(reference "M_SignalLV1")
 					(unit 1)
 				)
 			)
@@ -3042,7 +3052,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 144.78 127 180)
+		(at 142.24 127 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3051,7 +3061,7 @@
 		(fields_autoplaced yes)
 		(uuid "4b1ce712-e60f-4951-a215-49bc13217d81")
 		(property "Reference" "R15"
-			(at 147.32 125.7299 0)
+			(at 144.78 125.7299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3060,7 +3070,7 @@
 			)
 		)
 		(property "Value" "380"
-			(at 147.32 128.2699 0)
+			(at 144.78 128.2699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3069,7 +3079,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 143.764 126.746 90)
+			(at 141.224 126.746 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3078,7 +3088,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 144.78 127 0)
+			(at 142.24 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3087,7 +3097,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 144.78 127 0)
+			(at 142.24 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3119,7 +3129,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4c719d57-1b93-4129-b09f-1dfdb25b4ef4")
-		(property "Reference" "SigHV_TP1"
+		(property "Reference" "M_SigHV1"
 			(at 96.52 52.324 0)
 			(effects
 				(font
@@ -3170,7 +3180,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/27dbb16c-0867-45c1-9eb8-11b8a424e215"
-					(reference "SigHV_TP1")
+					(reference "M_SigHV1")
 					(unit 1)
 				)
 			)
@@ -3318,7 +3328,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 154.94 134.62 0)
+		(at 152.4 134.62 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3326,7 +3336,7 @@
 		(dnp no)
 		(uuid "6f3eed93-87dc-42a9-a030-8722170c77e9")
 		(property "Reference" "OptVf_TP2"
-			(at 161.544 128.524 0)
+			(at 159.004 128.524 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3335,7 +3345,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 160.782 125.984 0)
+			(at 158.242 125.984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3344,7 +3354,7 @@
 			)
 		)
 		(property "Footprint" "utsvt-special:TestPoint_HEX_3mmID"
-			(at 160.02 134.62 0)
+			(at 157.48 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3353,7 +3363,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 160.02 134.62 0)
+			(at 157.48 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3362,7 +3372,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 154.94 134.62 0)
+			(at 152.4 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3587,7 +3597,7 @@
 	)
 	(symbol
 		(lib_id "Isolator:TCMT1106")
-		(at 166.37 137.16 0)
+		(at 163.83 137.16 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3596,7 +3606,7 @@
 		(fields_autoplaced yes)
 		(uuid "796f3e9d-8bdb-40a4-92d4-67ddebb1cfcb")
 		(property "Reference" "U5"
-			(at 166.37 128.27 0)
+			(at 163.83 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3604,7 +3614,7 @@
 			)
 		)
 		(property "Value" "TCMT1106"
-			(at 166.37 130.81 0)
+			(at 163.83 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3612,7 +3622,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOP-4_4.4x2.6mm_P1.27mm"
-			(at 166.37 144.78 0)
+			(at 163.83 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3621,7 +3631,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/83510/tcmt11.pdf"
-			(at 166.37 138.43 0)
+			(at 163.83 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3631,7 +3641,7 @@
 			)
 		)
 		(property "Description" "Optocoupler, Vce 70V, CTR 100-300%, Viso 3750V (RMS), SOP-4"
-			(at 166.37 137.16 0)
+			(at 163.83 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3669,7 +3679,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7e5dffd6-70f9-42b2-a700-b67a96a8222c")
-		(property "Reference" "SigHV_TP2"
+		(property "Reference" "A_SigHV2"
 			(at 99.06 134.874 0)
 			(effects
 				(font
@@ -3720,7 +3730,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/27dbb16c-0867-45c1-9eb8-11b8a424e215"
-					(reference "SigHV_TP2")
+					(reference "A_SigHV2")
 					(unit 1)
 				)
 			)
