@@ -4259,7 +4259,7 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 34.29) (xy 247.65 38.1)
+			(xy 250.19 34.29) (xy 250.19 36.83)
 		)
 		(stroke
 			(width 0)
@@ -4499,7 +4499,7 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 45.72) (xy 247.65 49.53)
+			(xy 250.19 44.45) (xy 250.19 49.53)
 		)
 		(stroke
 			(width 0)
@@ -5133,25 +5133,6 @@
 		)
 		(uuid "82bafbe6-9ddc-4df4-90f3-162d847984f9")
 	)
-	(text_box "LV Power bypass capacitors, LV Indicator LED (Red), and DC-DC Isolator bypass capacitor"
-		(exclude_from_sim no)
-		(at 229.87 59.69 0)
-		(size 46.99 6.35)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "8df324bb-73bb-4407-9a87-cc7e9919fb14")
-	)
 	(text_box "Additional Notes:\n\nHVGND and LVGND will be entirely separate ground planes, separated by an airgap, which is bridged by the optocoupler.\nPrecharge resistor is housed on the active precharge board. It is mounted to the board by the two mounting holes, RH1 and RH2.\nHVRef and HVIn will be tapped off of the precharge resistor's (+) and (-) terminals by copper lugs (according to Emech) and wires from these lugs will plug into J1 (HVRef and HVIn).\nHVGND will be routed from the groud of the battery (on the side closest to the (-) terminal of the battery before BPS's battery contactor) and into J1 (HVGND)."
 		(exclude_from_sim no)
 		(at 17.78 171.45 0)
@@ -5170,25 +5151,6 @@
 			(justify left top)
 		)
 		(uuid "aeef61ed-59f4-4936-bb1f-ff28819f573e")
-	)
-	(text_box "ISOPWR indicator LED\nBypass cap for comparator supply rails."
-		(exclude_from_sim no)
-		(at 36.83 144.78 0)
-		(size 29.21 7.62)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "d76c557e-f4b7-42d4-bc2f-c40e1b9dbb19")
 	)
 	(text_box "CAN circuits"
 		(exclude_from_sim no)
@@ -5209,10 +5171,10 @@
 		)
 		(uuid "e067cb97-b769-4e54-85e1-7268535bcbd1")
 	)
-	(text_box "Inputs from the battery (HVRef), motor (HVIn) and HVGND.\nReverse polarity protection for HVIN, HVRef, HVGND."
+	(text_box "Reverse polarity protection for comparison nodes \n(Battery and motor/array sides of precharge resistors and HVGND)"
 		(exclude_from_sim no)
-		(at 25.4 104.14 0)
-		(size 60.96 6.35)
+		(at 29.21 102.87 0)
+		(size 68.58 5.08)
 		(stroke
 			(width 0)
 			(type default)
@@ -5258,6 +5220,26 @@
 		)
 		(uuid "3ee8500c-b4ea-41b2-89e5-d7a5757d0863")
 	)
+	(text "ISO DCDC Input \nBypass Cap"
+		(exclude_from_sim no)
+		(at 274.32 49.022 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4ad2d0b9-5bef-4519-b8c6-bcf8e76cc20c")
+	)
+	(text "ISO DCDC \nOutput Bypass\nCap"
+		(exclude_from_sim no)
+		(at 87.376 136.652 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "5077aa0a-28f2-421c-b367-5941414594be")
+	)
 	(text "HV Circuitry"
 		(exclude_from_sim no)
 		(at 83.058 16.256 0)
@@ -5279,6 +5261,26 @@
 		)
 		(uuid "90be4442-4500-46ef-98ac-34b23d6193e4")
 	)
+	(text "LV PWR \nindicator LED"
+		(exclude_from_sim no)
+		(at 230.124 40.386 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "93e25e7f-6c6d-47c8-9ac8-ce4b9beba645")
+	)
+	(text "Motor and Array\nComparator Bypass\nCaps"
+		(exclude_from_sim no)
+		(at 58.674 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a3a6071a-1aba-45d8-bdf7-e28e8d838432")
+	)
 	(text "(except optocoupler and isolated DCDC convertor which bridges HV and LV)"
 		(exclude_from_sim no)
 		(at 225.044 20.066 0)
@@ -5288,6 +5290,26 @@
 			)
 		)
 		(uuid "df3c44a1-cb00-4bca-9af4-b3b8166d39b8")
+	)
+	(text "12V Input\nBypass Cap"
+		(exclude_from_sim no)
+		(at 250.19 58.674 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ebc0e1c7-df2e-4460-8e33-05b19408888b")
+	)
+	(text "ISO_PWR \nindicator LED"
+		(exclude_from_sim no)
+		(at 26.924 128.778 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "efa416e0-3515-4b80-852f-e6cfbe0ac453")
 	)
 	(text "Active Precharge Board\nJacob Guidry and Tony Chen\nLHRs\n"
 		(exclude_from_sim no)
@@ -7026,7 +7048,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 247.65 34.29 0)
+		(at 250.19 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7035,7 +7057,7 @@
 		(fields_autoplaced yes)
 		(uuid "4880f099-ffd6-4648-83c1-be417fc1c364")
 		(property "Reference" "#PWR08"
-			(at 247.65 38.1 0)
+			(at 250.19 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7044,7 +7066,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 247.65 29.21 0)
+			(at 250.19 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7052,7 +7074,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 247.65 34.29 0)
+			(at 250.19 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7061,7 +7083,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 247.65 34.29 0)
+			(at 250.19 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7070,7 +7092,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 247.65 34.29 0)
+			(at 250.19 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9497,7 +9519,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 247.65 41.91 0)
+		(at 250.19 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9506,7 +9528,7 @@
 		(fields_autoplaced yes)
 		(uuid "cf1c672c-b220-4e87-b9e5-2f50ac57ff9e")
 		(property "Reference" "C7"
-			(at 251.46 40.6399 0)
+			(at 254 39.3699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9515,7 +9537,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 251.46 43.1799 0)
+			(at 254 41.9099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9524,7 +9546,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 248.6152 45.72 0)
+			(at 251.1552 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9533,7 +9555,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 247.65 41.91 0)
+			(at 250.19 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9542,7 +9564,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 247.65 41.91 0)
+			(at 250.19 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9637,7 +9659,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 247.65 49.53 0)
+		(at 250.19 49.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9646,7 +9668,7 @@
 		(fields_autoplaced yes)
 		(uuid "d45fc35a-2142-4a79-aa5c-50f39e0e64f1")
 		(property "Reference" "#PWR09"
-			(at 247.65 55.88 0)
+			(at 250.19 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9655,7 +9677,7 @@
 			)
 		)
 		(property "Value" "LVGND"
-			(at 247.65 54.61 0)
+			(at 250.19 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9663,7 +9685,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 247.65 49.53 0)
+			(at 250.19 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9672,7 +9694,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 247.65 49.53 0)
+			(at 250.19 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9681,7 +9703,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 247.65 49.53 0)
+			(at 250.19 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
