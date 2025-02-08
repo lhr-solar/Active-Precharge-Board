@@ -907,12 +907,6 @@
 		(uuid "133d6418-ddfd-40fd-bc99-575cb2e2c385")
 	)
 	(junction
-		(at 179.07 139.7)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "13b7fc3c-30c8-474e-a382-20a5b9389b10")
-	)
-	(junction
 		(at 76.2 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -949,28 +943,10 @@
 		(uuid "5058a335-8077-4ad1-9cee-4df00b7d630e")
 	)
 	(junction
-		(at 152.4 52.07)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5f1d713c-c6c6-46a4-a6b3-97068d68f936")
-	)
-	(junction
 		(at 200.66 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5f473c72-ed7a-483a-92d0-a33b139556de")
-	)
-	(junction
-		(at 179.07 57.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6a9c14b3-f805-4836-bca1-a7ef9e67b265")
-	)
-	(junction
-		(at 152.4 134.62)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "715811b8-ef24-46b5-b7a9-c27a3dc53d31")
 	)
 	(junction
 		(at 110.49 132.08)
@@ -1046,7 +1022,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 134.62) (xy 156.21 134.62)
+			(xy 142.24 134.62) (xy 156.21 134.62)
 		)
 		(stroke
 			(width 0)
@@ -1056,7 +1032,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 57.15) (xy 186.69 57.15)
+			(xy 171.45 57.15) (xy 186.69 57.15)
 		)
 		(stroke
 			(width 0)
@@ -1073,16 +1049,6 @@
 			(type default)
 		)
 		(uuid "0611c3ae-9341-4c76-a3ed-3481f5d96ba5")
-	)
-	(wire
-		(pts
-			(xy 179.07 140.97) (xy 179.07 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "06a48d40-fd8e-446a-8f66-68acf1ce36e7")
 	)
 	(wire
 		(pts
@@ -1133,16 +1099,6 @@
 			(type default)
 		)
 		(uuid "11918643-5426-4626-a965-55684a51f07c")
-	)
-	(wire
-		(pts
-			(xy 142.24 134.62) (xy 152.4 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "147fd09e-bba2-4381-9d81-0107bb86cc29")
 	)
 	(wire
 		(pts
@@ -1236,23 +1192,13 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 139.7) (xy 179.07 139.7)
+			(xy 171.45 139.7) (xy 186.69 139.7)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "3a37fb4d-c163-40d8-b9a0-f50db8307db9")
-	)
-	(wire
-		(pts
-			(xy 179.07 139.7) (xy 186.69 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c6f65e7-0a16-4425-a7ac-f03c76b97c7e")
 	)
 	(wire
 		(pts
@@ -1386,16 +1332,6 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 57.15) (xy 179.07 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "69e54746-cde2-4d3a-922c-e4a073177719")
-	)
-	(wire
-		(pts
 			(xy 92.71 144.78) (xy 92.71 139.7)
 		)
 		(stroke
@@ -1466,7 +1402,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 52.07) (xy 152.4 52.07)
+			(xy 142.24 52.07) (xy 156.21 52.07)
 		)
 		(stroke
 			(width 0)
@@ -1573,16 +1509,6 @@
 			(type default)
 		)
 		(uuid "97490e23-431a-492b-b648-d61a6993b172")
-	)
-	(wire
-		(pts
-			(xy 152.4 52.07) (xy 156.21 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9982f6a8-2fe3-4a37-8cd8-b7e35127290d")
 	)
 	(wire
 		(pts
@@ -1773,16 +1699,6 @@
 			(type default)
 		)
 		(uuid "dbc65feb-c7fc-4d12-9ed6-62c0645872dd")
-	)
-	(wire
-		(pts
-			(xy 179.07 58.42) (xy 179.07 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dc79a87f-0376-44c6-baa3-a8714acd9de9")
 	)
 	(wire
 		(pts
@@ -2751,7 +2667,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 179.07 140.97 180)
+		(at 200.66 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2759,26 +2675,26 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "13ca242d-12cc-492d-b4be-0339debf0024")
-		(property "Reference" "A_SignalLV1"
-			(at 181.61 143.0019 0)
+		(property "Reference" "A_Pre_Ready_TP1"
+			(at 203.2 135.1279 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 181.61 145.5419 0)
+			(at 203.2 137.6679 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "utsvt-special:TestPoint_HEX_3mmID"
-			(at 173.99 140.97 0)
+			(at 205.74 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2787,7 +2703,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 173.99 140.97 0)
+			(at 205.74 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2796,7 +2712,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 179.07 140.97 0)
+			(at 200.66 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2810,7 +2726,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/27dbb16c-0867-45c1-9eb8-11b8a424e215"
-					(reference "A_SignalLV1")
+					(reference "A_Pre_Ready_TP1")
 					(unit 1)
 				)
 			)
@@ -3057,7 +2973,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 201.676 146.304 90)
 			(effects
 				(font
@@ -3101,7 +3017,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 179.07 58.42 180)
+		(at 200.66 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3109,26 +3025,26 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3b9a3219-d023-4ccb-9062-e59f3b965fc1")
-		(property "Reference" "M_SignalLV1"
-			(at 181.61 60.4519 0)
+		(property "Reference" "M_Pre_Ready_TP1"
+			(at 203.2 52.5779 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 181.61 62.9919 0)
+			(at 203.2 55.1179 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "utsvt-special:TestPoint_HEX_3mmID"
-			(at 173.99 58.42 0)
+			(at 205.74 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3137,7 +3053,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 173.99 58.42 0)
+			(at 205.74 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3146,7 +3062,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 179.07 58.42 0)
+			(at 200.66 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3160,7 +3076,7 @@
 		(instances
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/27dbb16c-0867-45c1-9eb8-11b8a424e215"
-					(reference "M_SignalLV1")
+					(reference "M_Pre_Ready_TP1")
 					(unit 1)
 				)
 			)
@@ -3468,7 +3384,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 190.754 56.134 90)
 			(effects
 				(font
@@ -3575,72 +3491,6 @@
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/27dbb16c-0867-45c1-9eb8-11b8a424e215"
 					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 152.4 134.62 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6f3eed93-87dc-42a9-a030-8722170c77e9")
-		(property "Reference" "OptVf_TP2"
-			(at 159.004 128.524 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 158.242 125.984 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "utsvt-special:TestPoint_HEX_3mmID"
-			(at 157.48 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 157.48 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 152.4 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "34461614-0978-4a64-bbcb-075ebee73bf6")
-		)
-		(instances
-			(project "ActivePrecharge"
-				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/27dbb16c-0867-45c1-9eb8-11b8a424e215"
-					(reference "OptVf_TP2")
 					(unit 1)
 				)
 			)
@@ -4154,7 +4004,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 190.754 138.684 90)
 			(effects
 				(font
@@ -4334,72 +4184,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 152.4 52.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e055cbb7-a0d9-4a11-9a15-de6ce81f67a5")
-		(property "Reference" "OptVf_TP1"
-			(at 159.004 45.974 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 158.242 43.434 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "utsvt-special:TestPoint_HEX_3mmID"
-			(at 157.48 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 157.48 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 152.4 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4f1a2246-baf5-46e6-b31b-ba8f36612634")
-		)
-		(instances
-			(project "ActivePrecharge"
-				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/27dbb16c-0867-45c1-9eb8-11b8a424e215"
-					(reference "OptVf_TP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
 		(at 58.42 140.97 0)
 		(unit 1)
@@ -4572,7 +4356,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 201.676 63.754 90)
 			(effects
 				(font
