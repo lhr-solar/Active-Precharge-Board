@@ -45352,7 +45352,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "Contactor Driver v.1\nLHRs\nJacob Guidry\nTony Chen"
+	(gr_text "Contactor Board v.1\nLHRs\nJacob Guidry\nTony Chen"
 		(at 141.75 125 0)
 		(layer "F.SilkS")
 		(uuid "83ddfa49-f381-4a7c-9adc-937c592258a8")
