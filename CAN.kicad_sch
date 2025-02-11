@@ -2794,8 +2794,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
-		(at 219.71 95.25 0)
-		(mirror x)
+		(at 219.71 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2803,7 +2802,7 @@
 		(dnp no)
 		(uuid "1690b566-0cc3-433d-9239-200946f0efba")
 		(property "Reference" "J9"
-			(at 221.742 95.0468 0)
+			(at 221.742 92.9132 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2812,7 +2811,7 @@
 			)
 		)
 		(property "Value" "CAN_OUT"
-			(at 221.742 92.7354 0)
+			(at 221.742 95.2246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2821,7 +2820,7 @@
 			)
 		)
 		(property "Footprint" "utsvt-conn:Molex_MicroFit3.0_1x4xP3.00mm_PolarizingPeg_Vertical"
-			(at 219.71 95.25 0)
+			(at 219.71 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2830,7 +2829,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 219.71 95.25 0)
+			(at 219.71 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2839,7 +2838,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 219.71 95.25 0)
+			(at 219.71 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2848,7 +2847,7 @@
 			)
 		)
 		(property "Id" ""
-			(at 219.71 95.25 0)
+			(at 219.71 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2857,7 +2856,7 @@
 			)
 		)
 		(property "Vds" ""
-			(at 219.71 95.25 0)
+			(at 219.71 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2866,7 +2865,7 @@
 			)
 		)
 		(property "Digikey" ""
-			(at 219.71 95.25 0)
+			(at 219.71 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2875,7 +2874,7 @@
 			)
 		)
 		(property "P/N" "436500244"
-			(at 219.71 95.25 0)
+			(at 219.71 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4429,8 +4428,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
-		(at 219.71 83.82 0)
-		(mirror x)
+		(at 219.71 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4438,7 +4436,7 @@
 		(dnp no)
 		(uuid "d71d6d57-05b4-45f4-af74-878bff282d90")
 		(property "Reference" "J8"
-			(at 221.7166 83.6168 0)
+			(at 221.7166 81.4832 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4447,7 +4445,7 @@
 			)
 		)
 		(property "Value" "CAN_IN"
-			(at 221.7166 81.3054 0)
+			(at 221.7166 83.7946 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4456,7 +4454,7 @@
 			)
 		)
 		(property "Footprint" "utsvt-conn:Molex_MicroFit3.0_1x4xP3.00mm_PolarizingPeg_Vertical"
-			(at 219.71 83.82 0)
+			(at 219.71 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4465,7 +4463,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 219.71 83.82 0)
+			(at 219.71 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4474,7 +4472,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 219.71 83.82 0)
+			(at 219.71 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4483,7 +4481,7 @@
 			)
 		)
 		(property "Id" ""
-			(at 219.71 83.82 0)
+			(at 219.71 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4492,7 +4490,7 @@
 			)
 		)
 		(property "Vds" ""
-			(at 219.71 83.82 0)
+			(at 219.71 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4501,7 +4499,7 @@
 			)
 		)
 		(property "Digikey" ""
-			(at 219.71 83.82 0)
+			(at 219.71 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4510,7 +4508,7 @@
 			)
 		)
 		(property "P/N" "436500244"
-			(at 219.71 83.82 0)
+			(at 219.71 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
