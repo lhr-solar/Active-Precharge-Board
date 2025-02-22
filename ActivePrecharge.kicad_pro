@@ -490,7 +490,7 @@
       "plot": "ActivePrecharge_v.2_Gerbers",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "ActivePrecharge.step",
       "svg": "",
       "vrml": ""
     },
