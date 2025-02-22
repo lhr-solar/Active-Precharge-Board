@@ -1,3 +1,6 @@
 [submodule "UTSVT-KiCadLibraries"]
 	path = UTSVT-KiCadLibraries
-	url = https://github.com/lhr-solar/UTSVT-KiCadLibraries.git`
+	url = https://github.com/lhr-solar/UTSVT-KiCadLibraries.git
+[submodule "Nucleo-Code/Embedded-Sharepoint"]
+	path = Nucleo-Code/Embedded-Sharepoint
+	url = https://github.com/lhr-solar/Embedded-Sharepoint.git
