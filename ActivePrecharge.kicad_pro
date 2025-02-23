@@ -38,8 +38,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 3.0,
-          "width": 3.0
+          "height": 1.1,
+          "width": 1.1
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -181,6 +181,7 @@
         0.0,
         0.4,
         1.0,
+        1.3,
         1.6
       ],
       "tuning_pattern_settings": {
@@ -489,7 +490,7 @@
       "plot": "ActivePrecharge_v.2_Gerbers",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "ActivePrecharge.step",
       "svg": "",
       "vrml": ""
     },
@@ -622,6 +623,18 @@
     [
       "b9847a31-2b3b-47ca-9561-fab506416f6d",
       "Root"
+    ],
+    [
+      "27dbb16c-0867-45c1-9eb8-11b8a424e215",
+      "Precharge Logic"
+    ],
+    [
+      "c0036b4f-8078-47a1-85ab-72dbdcf28d35",
+      "Contactor Drivers"
+    ],
+    [
+      "a2982df7-4a65-4a2b-8298-6a7a639680dd",
+      "CAN"
     ]
   ],
   "text_variables": {}
