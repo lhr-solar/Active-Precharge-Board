@@ -3728,16 +3728,6 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 134.62) (xy 194.31 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "29e8de2c-3860-490f-b834-f9423f1d3b16")
-	)
-	(wire
-		(pts
 			(xy 276.86 95.25) (xy 261.62 95.25)
 		)
 		(stroke
@@ -4228,16 +4218,6 @@
 	)
 	(wire
 		(pts
-			(xy 276.86 102.87) (xy 261.62 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ea8d5c1-c316-4539-829f-6268ff96499c")
-	)
-	(wire
-		(pts
 			(xy 203.2 40.64) (xy 213.36 40.64)
 		)
 		(stroke
@@ -4448,16 +4428,6 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 118.11) (xy 194.31 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d2f1b289-145f-4c51-8059-eeb2063d7c17")
-	)
-	(wire
-		(pts
 			(xy 234.95 48.26) (xy 234.95 49.53)
 		)
 		(stroke
@@ -4555,16 +4525,6 @@
 			(type default)
 		)
 		(uuid "ece022a8-3e9a-4153-849b-df99bdc2c329")
-	)
-	(wire
-		(pts
-			(xy 276.86 100.33) (xy 261.62 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eee77116-a046-452b-af08-1754951df767")
 	)
 	(wire
 		(pts
@@ -5217,17 +5177,6 @@
 		)
 		(uuid "61a676df-7ba0-47f9-aae4-b7680b15b573")
 	)
-	(label "A_Enable"
-		(at 276.86 102.87 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "6214ed44-34a2-4332-9fa8-ee40dcb280a1")
-	)
 	(label "5V"
 		(at 270.51 90.17 180)
 		(fields_autoplaced yes)
@@ -5448,17 +5397,6 @@
 		)
 		(uuid "97d2369f-765e-4c6a-8e37-acd1979f7280")
 	)
-	(label "A_Sense"
-		(at 276.86 100.33 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "995fb121-73a1-4dfd-99a5-28a492c90b8c")
-	)
 	(label "Array HVRef"
 		(at 82.55 87.63 180)
 		(fields_autoplaced yes)
@@ -5491,17 +5429,6 @@
 			(justify right bottom)
 		)
 		(uuid "a19e7687-f0f6-4c31-b1a2-644acd150975")
-	)
-	(label "A_Enable"
-		(at 194.31 118.11 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a428ec7f-d2fd-4c80-8beb-f25aca7bc85b")
 	)
 	(label "ISO_PWR"
 		(at 78.74 120.65 0)
@@ -5601,17 +5528,6 @@
 			(justify right bottom)
 		)
 		(uuid "d8889f2d-5d13-4824-a135-45d8e0ac5dd5")
-	)
-	(label "A_Sense"
-		(at 194.31 134.62 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e8eb911c-2726-4084-9a76-76bb68565b0e")
 	)
 	(label "HVGND"
 		(at 87.63 31.75 180)
@@ -9673,16 +9589,6 @@
 			)
 			(uuid "29daf62a-86c2-4928-aac8-e3e8dbcde815")
 		)
-		(pin "A_Enable" input
-			(at 187.96 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "83a1fcbb-e789-44bf-9cdb-a52bbef25479")
-		)
 		(pin "M_Pre_Sense" output
 			(at 187.96 127 0)
 			(effects
@@ -9712,16 +9618,6 @@
 				(justify right)
 			)
 			(uuid "d1d807a8-a5b3-42a0-bf40-eab027fdd8f1")
-		)
-		(pin "A_Sense" output
-			(at 187.96 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "67e665f9-cee1-49e4-bb96-6c9f2ad2389b")
 		)
 		(pin "M_Enable" input
 			(at 187.96 115.57 0)
