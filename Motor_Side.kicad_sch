@@ -1214,6 +1214,12 @@
 		(uuid "3a422060-e7f6-4a0f-a60e-5d7fc24c80fd")
 	)
 	(junction
+		(at 134.62 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3bf0b20f-6934-4255-82a2-5fddf4ada5d3")
+	)
+	(junction
 		(at 76.2 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1284,6 +1290,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a902c335-f6e3-4e6e-856f-39572714f405")
+	)
+	(junction
+		(at 134.62 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b25583a6-6349-4e15-87d1-38c6caa8d55d")
 	)
 	(junction
 		(at 66.04 59.69)
@@ -1897,6 +1909,16 @@
 	)
 	(wire
 		(pts
+			(xy 134.62 57.15) (xy 140.97 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be909d3c-7394-48eb-adab-0a36a2127683")
+	)
+	(wire
+		(pts
 			(xy 212.09 142.24) (xy 212.09 144.78)
 		)
 		(stroke
@@ -1904,6 +1926,16 @@
 			(type default)
 		)
 		(uuid "c9e3c219-ffd1-48d9-8aae-7986fb893f0e")
+	)
+	(wire
+		(pts
+			(xy 134.62 142.24) (xy 140.97 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb493696-5d6d-49b9-8c97-4a5900684be7")
 	)
 	(wire
 		(pts
@@ -1997,7 +2029,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 142.24) (xy 140.97 142.24)
+			(xy 125.73 142.24) (xy 134.62 142.24)
 		)
 		(stroke
 			(width 0)
@@ -2157,7 +2189,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 57.15) (xy 140.97 57.15)
+			(xy 125.73 57.15) (xy 134.62 57.15)
 		)
 		(stroke
 			(width 0)
@@ -3654,7 +3686,8 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 107.95 57.15 180)
+		(at 134.62 57.15 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3662,7 +3695,7 @@
 		(dnp no)
 		(uuid "4c719d57-1b93-4129-b09f-1dfdb25b4ef4")
 		(property "Reference" "M_SigHV1"
-			(at 96.52 59.944 0)
+			(at 146.05 59.944 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3671,7 +3704,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 97.282 62.738 0)
+			(at 145.288 62.738 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3680,7 +3713,7 @@
 			)
 		)
 		(property "Footprint" "utsvt-special:TestPoint_HEX_3mmID"
-			(at 102.87 57.15 0)
+			(at 139.7 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3689,7 +3722,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 102.87 57.15 0)
+			(at 139.7 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3698,7 +3731,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 107.95 57.15 0)
+			(at 134.62 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4206,7 +4239,8 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 107.95 142.24 180)
+		(at 134.62 142.24 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4214,7 +4248,7 @@
 		(dnp no)
 		(uuid "7e5dffd6-70f9-42b2-a700-b67a96a8222c")
 		(property "Reference" "A_SigHV1"
-			(at 96.52 145.034 0)
+			(at 146.05 145.034 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4223,7 +4257,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 97.282 147.828 0)
+			(at 145.288 147.828 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4232,7 +4266,7 @@
 			)
 		)
 		(property "Footprint" "utsvt-special:TestPoint_HEX_3mmID"
-			(at 102.87 142.24 0)
+			(at 139.7 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4241,7 +4275,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 102.87 142.24 0)
+			(at 139.7 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4250,7 +4284,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 107.95 142.24 0)
+			(at 134.62 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)

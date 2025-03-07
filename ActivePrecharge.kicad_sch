@@ -3518,6 +3518,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.62 102.87) (xy 276.86 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d67a321-6dc9-414a-ae3f-df668b9846f1")
+	)
+	(wire
+		(pts
 			(xy 107.95 114.3) (xy 120.65 114.3)
 		)
 		(stroke
@@ -4448,7 +4458,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 115.57) (xy 194.31 115.57)
+			(xy 187.96 120.65) (xy 194.31 120.65)
 		)
 		(stroke
 			(width 0)
@@ -4555,16 +4565,6 @@
 			(type default)
 		)
 		(uuid "f722319b-db46-4817-bc94-699b0233ea8c")
-	)
-	(wire
-		(pts
-			(xy 276.86 107.95) (xy 261.62 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fcf3b301-ac4f-43c1-9b16-773cb41a08d0")
 	)
 	(rectangle
 		(start 358.394 127.762)
@@ -5011,17 +5011,6 @@
 			(justify left bottom)
 		)
 		(uuid "1d52b427-5f4b-4d7b-aa50-876be1e356be")
-	)
-	(label "M_Enable"
-		(at 276.86 107.95 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "273efb38-0e7a-423e-94ee-ec4e448165d8")
 	)
 	(label "Motor HRef"
 		(at 36.83 27.94 180)
@@ -5574,7 +5563,7 @@
 		(uuid "ef049d30-a819-4af6-9c6d-521d5d215559")
 	)
 	(label "M_Enable"
-		(at 194.31 115.57 0)
+		(at 194.31 120.65 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5605,6 +5594,17 @@
 			(justify left bottom)
 		)
 		(uuid "fd786709-a449-46c9-9259-98bccef2a544")
+	)
+	(label "M_Enable"
+		(at 276.86 102.87 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "fd87270f-5566-424f-b485-da78e699f430")
 	)
 	(symbol
 		(lib_id "Device:Fuse")
@@ -9619,16 +9619,6 @@
 			)
 			(uuid "d1d807a8-a5b3-42a0-bf40-eab027fdd8f1")
 		)
-		(pin "M_Enable" input
-			(at 187.96 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "c963ee2a-2428-4d07-8780-33e3db819518")
-		)
 		(pin "A_Pre_Enable" input
 			(at 187.96 113.03 0)
 			(effects
@@ -9648,6 +9638,16 @@
 				(justify right)
 			)
 			(uuid "fae2b7cd-9f0f-4fcb-8d67-c7714c0b6aa8")
+		)
+		(pin "M_Enable" output
+			(at 187.96 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "78e4820e-b65c-4c06-a25e-fe028fb3d9e3")
 		)
 		(instances
 			(project "ActivePrecharge"
