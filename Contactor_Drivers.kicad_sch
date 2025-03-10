@@ -107,174 +107,6 @@
 				)
 			)
 		)
-		(symbol "Connector_Generic:Conn_01x03"
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x03"
-				(at 0 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Conn_01x03_1_1"
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Connector_Generic:Conn_01x04"
 			(pin_names
 				(offset 1.016) hide)
@@ -1110,6 +942,311 @@
 				)
 			)
 		)
+		(symbol "Isolator:VOS618A"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -5.08 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "VOS618A"
+				(at -5.08 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_SO:SSOP-4_4.4x2.6mm_P1.27mm"
+				(at -5.08 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.vishay.com/docs/83465/vos618a.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "Optocoupler, Phototransistor Output, Low Input Current, SSOP-4"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "NPN DC Optocoupler"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*SSOP*4.4x2.6mm*P1.27mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "VOS618A_0_1"
+				(rectangle
+					(start -5.08 3.81)
+					(end 5.08 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 -0.635) (xy -1.905 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0.635) (xy 4.445 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -2.54) (xy 2.54 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -2.54) (xy 5.08 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 2.54) (xy 5.08 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -0.635) (xy -2.54 -2.54) (xy -5.08 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.905) (xy 2.54 -1.905) (xy 2.54 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 2.54) (xy -2.54 2.54) (xy -2.54 -1.27) (xy -2.54 0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -0.635) (xy -3.175 0.635) (xy -1.905 0.635) (xy -2.54 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 -0.508) (xy 0.762 -0.508) (xy 0.381 -0.635) (xy 0.381 -0.381) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 0.508) (xy 0.762 0.508) (xy 0.381 0.381) (xy 0.381 0.635) (xy 0.762 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.048 -1.651) (xy 3.556 -1.143) (xy 4.064 -2.159) (xy 3.048 -1.651) (xy 3.048 -1.651)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "VOS618A_1_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Transistor_FET:IRLML0030"
 			(pin_names hide)
 			(exclude_from_sim no)
@@ -1508,6 +1645,16 @@
 	)
 	(wire
 		(pts
+			(xy 111.76 167.64) (xy 111.76 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04c4e24b-aaf7-47db-853d-b20b1565f1c0")
+	)
+	(wire
+		(pts
 			(xy 62.23 110.49) (xy 69.85 110.49)
 		)
 		(stroke
@@ -1608,16 +1755,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 156.21) (xy 62.23 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "21b0c22e-daf4-47d8-9e49-70773359c2f4")
-	)
-	(wire
-		(pts
 			(xy 237.49 119.38) (xy 237.49 123.19)
 		)
 		(stroke
@@ -1685,6 +1822,16 @@
 			(type default)
 		)
 		(uuid "35cbf713-d13a-412d-9810-4c04386ac42e")
+	)
+	(wire
+		(pts
+			(xy 127 175.26) (xy 111.76 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36b514d1-f7db-4211-9b01-54b430e590c6")
 	)
 	(wire
 		(pts
@@ -1798,6 +1945,16 @@
 	)
 	(wire
 		(pts
+			(xy 115.57 180.34) (xy 127 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "505676a8-1804-4bd3-aadd-afe61db04948")
+	)
+	(wire
+		(pts
 			(xy 135.89 33.02) (xy 135.89 40.64)
 		)
 		(stroke
@@ -1815,6 +1972,16 @@
 			(type default)
 		)
 		(uuid "5148b507-f25a-4726-ac85-b6449515989e")
+	)
+	(wire
+		(pts
+			(xy 59.69 180.34) (xy 59.69 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "517eefab-939f-494e-865b-14a12bddaf50")
 	)
 	(wire
 		(pts
@@ -1998,6 +2165,16 @@
 	)
 	(wire
 		(pts
+			(xy 69.85 180.34) (xy 59.69 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83ece69b-88c1-4016-a0e9-0ec04068c7b5")
+	)
+	(wire
+		(pts
 			(xy 228.6 66.04) (xy 232.41 66.04)
 		)
 		(stroke
@@ -2038,13 +2215,13 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 156.21) (xy 46.99 161.29)
+			(xy 85.09 180.34) (xy 96.52 180.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9b7a50e7-ff2d-4b6e-a4b2-7a3e516feea1")
+		(uuid "97ed166e-f851-4d76-8f56-e4d1651954b2")
 	)
 	(wire
 		(pts
@@ -2138,16 +2315,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 153.67) (xy 62.23 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0d6b2a6-782f-455e-9336-5709168df7e2")
-	)
-	(wire
-		(pts
 			(xy 228.6 50.8) (xy 228.6 54.61)
 		)
 		(stroke
@@ -2158,7 +2325,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 151.13) (xy 62.23 151.13)
+			(xy 48.26 175.26) (xy 55.88 175.26)
 		)
 		(stroke
 			(width 0)
@@ -2188,6 +2355,16 @@
 	)
 	(wire
 		(pts
+			(xy 115.57 177.8) (xy 127 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c74e5b4a-15b2-4cb1-96e8-78c8ffe1148b")
+	)
+	(wire
+		(pts
 			(xy 69.85 105.41) (xy 62.23 105.41)
 		)
 		(stroke
@@ -2195,6 +2372,16 @@
 			(type default)
 		)
 		(uuid "c7ff7195-ffea-4f1e-a8d2-7e03fb9eeb59")
+	)
+	(wire
+		(pts
+			(xy 124.46 172.72) (xy 127 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8548e1f-aa21-4bcd-b558-29aca181a8da")
 	)
 	(wire
 		(pts
@@ -2245,6 +2432,26 @@
 			(type default)
 		)
 		(uuid "dd272b33-433f-422a-b63d-6ab9bdff8098")
+	)
+	(wire
+		(pts
+			(xy 85.09 175.26) (xy 96.52 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e13331a7-8684-4a8a-8f25-ceebc899e307")
+	)
+	(wire
+		(pts
+			(xy 63.5 175.26) (xy 69.85 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1339bf7-c55a-4c0a-a830-b06424148b8a")
 	)
 	(wire
 		(pts
@@ -2354,7 +2561,7 @@
 	)
 	(text_box "Voltage dividers for signals that go to the Nucleo. \nSense signals from contactors are 12v and the Nucleo pins operate at 3.3v\n\n12v*(10k)/(10k+30k) = 3v "
 		(exclude_from_sim no)
-		(at 109.22 146.05 0)
+		(at 106.68 137.16 0)
 		(size 54.61 12.7)
 		(stroke
 			(width 0)
@@ -2532,6 +2739,28 @@
 		)
 		(uuid "0d916759-3ebc-4a25-998f-577c8b2a1580")
 	)
+	(label "AUX-"
+		(at 96.52 180.34 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "27dbe07c-d8ba-4b2e-96c2-2bfc238e2d5a")
+	)
+	(label "AUX+"
+		(at 96.52 175.26 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3ba96b14-65fe-431d-89a2-3b0486d823bf")
+	)
 	(label "A_PreCon-"
 		(at 241.3 110.49 0)
 		(fields_autoplaced yes)
@@ -2565,6 +2794,17 @@
 		)
 		(uuid "89367a81-ad62-47ef-b883-73747dd631c5")
 	)
+	(label "AUX-"
+		(at 115.57 180.34 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8b6a2eb2-1ac0-489a-a560-0b31ffcd7d85")
+	)
 	(label "MCon-"
 		(at 80.01 54.61 180)
 		(fields_autoplaced yes)
@@ -2586,6 +2826,17 @@
 			(justify right bottom)
 		)
 		(uuid "dffe355f-0b42-42eb-bef1-109d9e39657c")
+	)
+	(label "AUX+"
+		(at 115.57 177.8 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fc983304-ebcc-4ac2-8a94-78b9f8899024")
 	)
 	(hierarchical_label "LV+"
 		(shape input)
@@ -2635,6 +2886,30 @@
 		)
 		(uuid "1e0f9077-241a-4b5b-9477-7469da6a7e4d")
 	)
+	(hierarchical_label "LVGND"
+		(shape input)
+		(at 59.69 184.15 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "211b67e8-902d-42e3-a6e9-cfe5e00b214e")
+	)
+	(hierarchical_label "M_Enable"
+		(shape output)
+		(at 124.46 172.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "25bdb818-2031-47de-ad05-8edd83c8cf14")
+	)
 	(hierarchical_label "A_Pre_Enable"
 		(shape input)
 		(at 228.6 66.04 180)
@@ -2658,6 +2933,18 @@
 			(justify right)
 		)
 		(uuid "322bf918-5513-47a4-a366-9073a2dd22b0")
+	)
+	(hierarchical_label "LV+"
+		(shape input)
+		(at 111.76 167.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "39c20e52-e53d-4dea-8ac3-eb06c44fbfaa")
 	)
 	(hierarchical_label "LVGND"
 		(shape input)
@@ -2694,18 +2981,6 @@
 			(justify left)
 		)
 		(uuid "49ca6c1b-0ebe-4956-93aa-56b38f646ed5")
-	)
-	(hierarchical_label "LVGND"
-		(shape input)
-		(at 46.99 161.29 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "49f01374-74e2-4f72-a292-bf0c866a59e4")
 	)
 	(hierarchical_label "LV+"
 		(shape input)
@@ -2779,18 +3054,6 @@
 		)
 		(uuid "8c7d1de6-2492-41df-bbb1-e4a1bc1e513e")
 	)
-	(hierarchical_label "M_Enable"
-		(shape output)
-		(at 46.99 153.67 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "92ce4ba7-7c1f-48ca-a4b4-0527bbf279a6")
-	)
 	(hierarchical_label "LVGND"
 		(shape input)
 		(at 123.19 77.47 0)
@@ -2853,7 +3116,7 @@
 	)
 	(hierarchical_label "M_Sense"
 		(shape output)
-		(at 46.99 151.13 180)
+		(at 48.26 175.26 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2946,79 +3209,6 @@
 			(justify right)
 		)
 		(uuid "f27051b9-06bd-40c4-a023-4e1e1664658b")
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x03")
-		(at 67.31 153.67 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0852fac3-8ff0-4da1-a313-a412922bc7dd")
-		(property "Reference" "J7"
-			(at 69.85 152.3999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Conn_01x03"
-			(at 69.85 154.9399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "utsvt-conn:Molex_MicroFit3.0_1x3xP3.00mm_PolarizingPeg_Vertical"
-			(at 67.31 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 67.31 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 67.31 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "46f17a94-36f3-4c44-9fa4-b56c0329934d")
-		)
-		(pin "1"
-			(uuid "5b9d1136-1314-4c7a-a103-f2b1b79a4bac")
-		)
-		(pin "3"
-			(uuid "e6430649-31fa-49cb-ad14-841852be9d68")
-		)
-		(instances
-			(project ""
-				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/c0036b4f-8078-47a1-85ab-72dbdcf28d35"
-					(reference "J7")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:R_US")
@@ -3824,6 +4014,74 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
+		(at 59.69 175.26 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6f1645fe-c205-43e6-8f01-6524913abd45")
+		(property "Reference" "R26"
+			(at 59.69 168.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R_US"
+			(at 59.69 171.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 59.944 174.244 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 59.69 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 59.69 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "96a94790-0901-466d-898a-d548c0251970")
+		)
+		(pin "1"
+			(uuid "8a6241fc-8927-4ffd-9dfd-9c7bdf8eb013")
+		)
+		(instances
+			(project ""
+				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/c0036b4f-8078-47a1-85ab-72dbdcf28d35"
+					(reference "R26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
 		(at 232.41 72.39 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4306,6 +4564,83 @@
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/c0036b4f-8078-47a1-85ab-72dbdcf28d35"
 					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:VOS618A")
+		(at 77.47 177.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b97858a0-703f-4844-96b7-cdacae7a602e")
+		(property "Reference" "U8"
+			(at 77.47 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VOS618A"
+			(at 77.47 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOP-4_4.4x2.6mm_P1.27mm"
+			(at 72.39 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/83465/vos618a.pdf"
+			(at 77.47 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Optocoupler, Phototransistor Output, Low Input Current, SSOP-4"
+			(at 77.47 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "18da3727-1ad0-4bbb-97a9-5f288fe2d310")
+		)
+		(pin "2"
+			(uuid "0860bb7b-5f61-42f6-8138-1bc6709eb982")
+		)
+		(pin "3"
+			(uuid "e5d95017-57d0-4e76-b0ce-13ffe45b40a8")
+		)
+		(pin "4"
+			(uuid "295c68da-1ede-44b9-ad5e-723d7268dd5a")
+		)
+		(instances
+			(project ""
+				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/c0036b4f-8078-47a1-85ab-72dbdcf28d35"
+					(reference "U8")
 					(unit 1)
 				)
 			)
@@ -4798,6 +5133,82 @@
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/c0036b4f-8078-47a1-85ab-72dbdcf28d35"
 					(reference "Q6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 132.08 175.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eddc5855-41e6-437f-9e36-7533679cca43")
+		(property "Reference" "J7"
+			(at 134.62 175.2599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 134.62 177.7999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "utsvt-conn:Molex_MicroFit3.0_1x4xP3.00mm_PolarizingPeg_Vertical"
+			(at 132.08 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 132.08 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 132.08 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "64f662dd-1bcd-4a6b-b97d-8e32f6a5b88a")
+		)
+		(pin "4"
+			(uuid "ff78d60e-8ecf-4eb5-adf8-148fdb9abe36")
+		)
+		(pin "1"
+			(uuid "860c9a98-3565-4253-8fa6-cd783af038fd")
+		)
+		(pin "3"
+			(uuid "ff9d3e54-2c29-448d-8436-4ad2653db9cc")
+		)
+		(instances
+			(project ""
+				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d/c0036b4f-8078-47a1-85ab-72dbdcf28d35"
+					(reference "J7")
 					(unit 1)
 				)
 			)

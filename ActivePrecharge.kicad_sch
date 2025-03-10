@@ -3451,6 +3451,10 @@
 		(uuid "a3aa8ef4-d369-4f39-a01e-c60cc834e171")
 	)
 	(no_connect
+		(at 261.62 107.95)
+		(uuid "b3997505-a944-49a5-8068-6a0715cfad1c")
+	)
+	(no_connect
 		(at 236.22 110.49)
 		(uuid "bee7ac39-89f7-4a7a-9a03-597ce1fca09d")
 	)
@@ -3466,9 +3470,13 @@
 		(at 236.22 102.87)
 		(uuid "e95be334-0a28-49f2-b901-0a7e2bd9357f")
 	)
+	(no_connect
+		(at 261.62 100.33)
+		(uuid "f6efc595-6248-43f7-b917-d8bf9eb54ba3")
+	)
 	(wire
 		(pts
-			(xy 276.86 118.11) (xy 261.62 118.11)
+			(xy 276.86 105.41) (xy 261.62 105.41)
 		)
 		(stroke
 			(width 0)
@@ -3518,7 +3526,7 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 102.87) (xy 276.86 102.87)
+			(xy 261.62 118.11) (xy 276.86 118.11)
 		)
 		(stroke
 			(width 0)
@@ -4108,7 +4116,7 @@
 	)
 	(wire
 		(pts
-			(xy 276.86 105.41) (xy 261.62 105.41)
+			(xy 276.86 110.49) (xy 261.62 110.49)
 		)
 		(stroke
 			(width 0)
@@ -4508,7 +4516,7 @@
 	)
 	(wire
 		(pts
-			(xy 276.86 110.49) (xy 261.62 110.49)
+			(xy 276.86 102.87) (xy 261.62 102.87)
 		)
 		(stroke
 			(width 0)
@@ -4958,7 +4966,7 @@
 		(uuid "14a5c96c-db4f-4cf8-98e3-34b9b075ab25")
 	)
 	(label "M_Pre_Sense"
-		(at 276.86 110.49 180)
+		(at 276.86 102.87 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5431,7 +5439,7 @@
 		(uuid "a4efa740-5048-45ac-b294-5823eec60065")
 	)
 	(label "M_Sense"
-		(at 276.86 105.41 180)
+		(at 276.86 110.49 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5497,7 +5505,7 @@
 		(uuid "d723469e-7651-430c-9e11-1da4bd15d6f6")
 	)
 	(label "M_Pre_Enable"
-		(at 276.86 118.11 180)
+		(at 276.86 105.41 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5596,7 +5604,7 @@
 		(uuid "fd786709-a449-46c9-9259-98bccef2a544")
 	)
 	(label "M_Enable"
-		(at 276.86 102.87 180)
+		(at 276.86 118.11 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
