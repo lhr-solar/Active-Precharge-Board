@@ -3649,14 +3649,6 @@
 		(uuid "2584d024-a694-4a59-b96c-fd70961f2d19")
 	)
 	(no_connect
-		(at 236.22 82.55)
-		(uuid "3b4cb233-53f7-4881-a3b7-1a7940783c6b")
-	)
-	(no_connect
-		(at 236.22 85.09)
-		(uuid "3e6b5ce4-d5e8-4421-be10-1742555e6b8a")
-	)
-	(no_connect
 		(at 261.62 113.03)
 		(uuid "64155a65-eda5-4b81-ae2e-599b141e022d")
 	)
@@ -3815,6 +3807,16 @@
 			(type default)
 		)
 		(uuid "183d846c-f601-4c30-8738-e6801823fc30")
+	)
+	(wire
+		(pts
+			(xy 261.62 118.11) (xy 276.86 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b106aba-74af-4b4c-ba55-cbdedb15d6c0")
 	)
 	(wire
 		(pts
@@ -4068,6 +4070,16 @@
 	)
 	(wire
 		(pts
+			(xy 297.18 143.51) (xy 297.18 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a57ced2-efdf-4317-befb-95570b7b085e")
+	)
+	(wire
+		(pts
 			(xy 231.14 140.97) (xy 220.98 140.97)
 		)
 		(stroke
@@ -4095,6 +4107,16 @@
 			(type default)
 		)
 		(uuid "3cab9f42-c80a-4111-829c-0a399d310193")
+	)
+	(wire
+		(pts
+			(xy 316.23 152.4) (xy 316.23 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e5abff9-941d-44c4-9022-9d77e601554c")
 	)
 	(wire
 		(pts
@@ -4318,6 +4340,16 @@
 	)
 	(wire
 		(pts
+			(xy 297.18 152.4) (xy 297.18 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6929b11d-0874-48ce-b6b4-fb0663a610fc")
+	)
+	(wire
+		(pts
 			(xy 245.11 133.35) (xy 245.11 135.89)
 		)
 		(stroke
@@ -4338,7 +4370,7 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 118.11) (xy 276.86 118.11)
+			(xy 236.22 85.09) (xy 220.98 85.09)
 		)
 		(stroke
 			(width 0)
@@ -4355,6 +4387,16 @@
 			(type default)
 		)
 		(uuid "6fbc7d71-c333-4b22-b409-e8feb9891624")
+	)
+	(wire
+		(pts
+			(xy 220.98 82.55) (xy 236.22 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7186f295-a05e-4d63-9c14-ede5bf2c0405")
 	)
 	(wire
 		(pts
@@ -4448,6 +4490,16 @@
 	)
 	(wire
 		(pts
+			(xy 316.23 133.35) (xy 316.23 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84665a7d-5ba0-436f-a48a-9aee3316ca46")
+	)
+	(wire
+		(pts
 			(xy 49.53 135.89) (xy 49.53 144.78)
 		)
 		(stroke
@@ -4538,6 +4590,16 @@
 	)
 	(wire
 		(pts
+			(xy 297.18 133.35) (xy 297.18 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9379f6c4-f0b2-4724-bfb2-b520cc3d1771")
+	)
+	(wire
+		(pts
 			(xy 114.3 55.88) (xy 116.84 55.88)
 		)
 		(stroke
@@ -4605,6 +4667,16 @@
 			(type default)
 		)
 		(uuid "ad46d57a-8b36-4bdb-93bb-fd5e7cf63096")
+	)
+	(wire
+		(pts
+			(xy 316.23 143.51) (xy 316.23 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afc44895-39ef-4525-9ef8-23c7cfb8c7d2")
 	)
 	(wire
 		(pts
@@ -5220,6 +5292,26 @@
 		)
 		(uuid "787707a7-569d-47ee-b6c4-7ff3f0b62862")
 	)
+	(text "Fault\nindicator LED"
+		(exclude_from_sim no)
+		(at 292.354 149.606 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "7ba9e4f7-aeb2-4ef8-8420-5e6db2bed413")
+	)
+	(text "Timeout Fault\nindicator LED"
+		(exclude_from_sim no)
+		(at 311.912 149.352 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8c14b1bd-153c-40ab-9053-2c3049e49ffd")
+	)
 	(text "(except optocoupler and isolated DCDC converter which bridges HV and LV)"
 		(exclude_from_sim no)
 		(at 84.836 20.066 0)
@@ -5333,6 +5425,17 @@
 		)
 		(uuid "080008d3-2fe4-4dcd-9dae-17171fb4b120")
 	)
+	(label "ATimeout_Fault"
+		(at 316.23 133.35 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "08370e1c-71b4-47ed-87e5-b503927d0e84")
+	)
 	(label "LV+"
 		(at 275.59 82.55 180)
 		(fields_autoplaced yes)
@@ -5387,6 +5490,17 @@
 			(justify right bottom)
 		)
 		(uuid "14a5c96c-db4f-4cf8-98e3-34b9b075ab25")
+	)
+	(label "ATimeout_Fault"
+		(at 276.86 118.11 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "16449c21-2499-42b2-8dca-0cd6dc3cb791")
 	)
 	(label "M_Pre_Sense"
 		(at 276.86 102.87 180)
@@ -5443,16 +5557,38 @@
 		)
 		(uuid "1d52b427-5f4b-4d7b-aa50-876be1e356be")
 	)
-	(label "Timeout_Fault"
-		(at 276.86 118.11 180)
+	(label "AFault"
+		(at 220.98 82.55 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
+		)
+		(uuid "1ddfd542-546b-43ca-84e4-7fa8fc3a33f1")
+	)
+	(label "MTimeout_Fault"
+		(at 220.98 85.09 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
 		)
 		(uuid "25573ad0-fe29-4990-a81b-fa30b535716b")
+	)
+	(label "LVGND"
+		(at 297.18 157.48 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2a3cb906-7f6a-4922-9500-afd9813ef078")
 	)
 	(label "Motor HRef"
 		(at 36.83 27.94 180)
@@ -5597,7 +5733,7 @@
 		)
 		(uuid "5b3970e1-5028-4b83-8c34-3cbf7a8f0429")
 	)
-	(label "Fault"
+	(label "MFault"
 		(at 220.98 110.49 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5750,6 +5886,17 @@
 			(justify right bottom)
 		)
 		(uuid "8140d664-9923-44ee-97ca-853d30bd0171")
+	)
+	(label "LVGND"
+		(at 316.23 157.48 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "823c3a1d-52f3-4e47-b649-c9c1686d04b9")
 	)
 	(label "A_Pre_Enable"
 		(at 276.86 95.25 180)
@@ -5949,7 +6096,7 @@
 		)
 		(uuid "a8d16afa-964e-4a74-bcfa-5b36bd438316")
 	)
-	(label "Timeout_Fault"
+	(label "MTimeout_Fault"
 		(at 264.16 133.35 0)
 		(fields_autoplaced yes)
 		(effects
@@ -6015,6 +6162,17 @@
 		)
 		(uuid "ce2bbcbf-f77e-41cd-a6cf-ab17a954c59c")
 	)
+	(label "AFault"
+		(at 297.18 133.35 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d4e240f1-3f25-4608-845a-cd34bb8dc8c3")
+	)
 	(label "IO4"
 		(at 231.14 148.59 180)
 		(fields_autoplaced yes)
@@ -6048,7 +6206,7 @@
 		)
 		(uuid "d7a4efbc-3902-49b1-9e90-14a8cdb7c437")
 	)
-	(label "Fault"
+	(label "MFault"
 		(at 245.11 133.35 0)
 		(fields_autoplaced yes)
 		(effects
@@ -6644,6 +6802,76 @@
 			(project ""
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 316.23 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3a39aecd-65b3-4c49-a3af-6fbb807fa7f8")
+		(property "Reference" "R38"
+			(at 318.77 138.4299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "750"
+			(at 318.77 140.9699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 317.246 139.954 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 316.23 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 316.23 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "489fe749-b931-44c1-9532-e0636f6a88b0")
+		)
+		(pin "2"
+			(uuid "cf636a79-a3a6-4255-86b6-9ca87fb4ae58")
+		)
+		(instances
+			(project "ActivePrecharge"
+				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
+					(reference "R38")
 					(unit 1)
 				)
 			)
@@ -8869,6 +9097,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 297.18 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "adc0a28f-834b-488a-bacf-5dfff0237a5f")
+		(property "Reference" "R35"
+			(at 299.72 138.4299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "750"
+			(at 299.72 140.9699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 298.196 139.954 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 297.18 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 297.18 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "07fd0755-7a75-42a7-87a7-d20923250556")
+		)
+		(pin "2"
+			(uuid "6a7e56c6-3c08-4cab-8351-009bed2135c1")
+		)
+		(instances
+			(project "ActivePrecharge"
+				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
+					(reference "R35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D_Zener")
 		(at 203.2 45.72 270)
 		(unit 1)
@@ -9690,6 +9988,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED")
+		(at 316.23 148.59 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dfab8b3b-b409-43b4-aaa3-8812f36672a5")
+		(property "Reference" "Fault4"
+			(at 320.04 148.9074 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 320.04 151.4474 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 316.23 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 316.23 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 316.23 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2dfc047e-eb09-4ea6-9327-cb97f91fedc0")
+		)
+		(pin "2"
+			(uuid "b9ec83c0-dab6-4b88-9a55-0894ec88dcb2")
+		)
+		(instances
+			(project "ActivePrecharge"
+				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
+					(reference "Fault4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 265.43 40.64 0)
 		(unit 1)
@@ -9885,6 +10253,76 @@
 			(project "ActivePrecharge"
 				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 297.18 148.59 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e793c2e3-9f89-46f2-97aa-470441320eb6")
+		(property "Reference" "Fault3"
+			(at 300.99 148.9074 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 300.99 151.4474 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 297.18 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 297.18 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 297.18 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bbac97f0-938e-451d-8ebd-2d6f9e0625e6")
+		)
+		(pin "2"
+			(uuid "7d8a899c-b4ec-441c-b8e9-cbf4b9acd710")
+		)
+		(instances
+			(project "ActivePrecharge"
+				(path "/b9847a31-2b3b-47ca-9561-fab506416f6d"
+					(reference "Fault3")
 					(unit 1)
 				)
 			)
