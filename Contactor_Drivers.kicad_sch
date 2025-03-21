@@ -3365,7 +3365,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "2k"
 			(at 127 36.83 90)
 			(effects
 				(font
@@ -4030,7 +4030,7 @@
 				)
 			)
 		)
-		(property "Value" "R_US"
+		(property "Value" "1k"
 			(at 59.69 171.45 90)
 			(effects
 				(font
@@ -4450,7 +4450,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "2k"
 			(at 57.15 36.83 90)
 			(effects
 				(font
@@ -4587,7 +4587,7 @@
 				)
 			)
 		)
-		(property "Value" "VOS618A"
+		(property "Value" "TCMT1106"
 			(at 77.47 171.45 0)
 			(effects
 				(font
@@ -4732,7 +4732,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "2k"
 			(at 236.22 36.83 90)
 			(effects
 				(font

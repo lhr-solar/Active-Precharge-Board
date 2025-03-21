@@ -76,7 +76,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "ActivePrecharge_v.2_Gerbers")
+			(outputdirectory "Contactor_v.2_Gerbers")
 		)
 	)
 	(net 0 "")
