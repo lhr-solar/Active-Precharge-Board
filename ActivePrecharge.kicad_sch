@@ -5099,7 +5099,7 @@
 	)
 	(text_box "NucleoL432KC board to process signals, CAN, and supply 3.3v"
 		(exclude_from_sim no)
-		(at 215.9 69.85 0)
+		(at 217.17 68.58 0)
 		(size 63.5 3.81)
 		(stroke
 			(width 0)
@@ -5394,7 +5394,7 @@
 	)
 	(text "Active Precharge Board\nJacob Guidry and Tony Chen\nLHRs\n"
 		(exclude_from_sim no)
-		(at 220.472 188.214 0)
+		(at 207.518 174.244 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -6826,7 +6826,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "750"
+		(property "Value" "1k"
 			(at 318.77 140.9699 0)
 			(effects
 				(font
@@ -8034,7 +8034,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "750"
+		(property "Value" "1k"
 			(at 36.83 128.2699 0)
 			(effects
 				(font
@@ -8841,7 +8841,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "750"
+		(property "Value" "1k"
 			(at 266.7 140.9699 0)
 			(effects
 				(font
@@ -9115,7 +9115,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "750"
+		(property "Value" "1k"
 			(at 299.72 140.9699 0)
 			(effects
 				(font
@@ -10498,7 +10498,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "750"
+		(property "Value" "1k"
 			(at 247.65 140.9699 0)
 			(effects
 				(font
