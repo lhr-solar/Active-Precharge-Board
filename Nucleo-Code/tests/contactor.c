@@ -2,6 +2,19 @@
 
 #include "stm32xx_hal.h"
 
+#define m_enable_pin GPIO_PIN_0
+#define mpre_enable_pin GPIO_PIN_3
+#define apre_enable_pin GPIO_PIN_7
+#define m_sense_pin GPIO_PIN_1
+#define mpre_sense_pin GPIO_PIN_4
+#define apre_sense_pin GPIO_PIN_2
+#define mt_fault_pin GPIO_PIN_10
+#define ms_fault_pin GPIO_PIN_8
+#define at_fault_pin GPIO_PIN_3   //B PLEASE REMEMBER
+#define as_fault_pin GPIO_PIN_9
+#define mpre_ready_pin GPIO_PIN_4 //B PLEASE REMEMBER
+#define apre_ready_pin GPIO_PIN_5 //B PLEASE REMEMBER
+
 /**
  * @brief GPIO Initialization Function
  * @param None
@@ -18,22 +31,21 @@ static void MX_GPIO_Init(void) {
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1 | GPIO_PIN_6,
+  HAL_GPIO_WritePin(GPIOA, m_enable_pin | mpre_enable_pin | apre_enable_pin | mt_fault_pin | ms_fault_pin | as_fault_pin,
                     GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, at_fault_pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : PA0 PA2 PA3 PA5
                            PA7 */
-  GPIO_InitStruct.Pin =
-      GPIO_PIN_0 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_7 | GPIO_PIN_9 | GPIO_PIN_10;
+  GPIO_InitStruct.Pin = m_sense_pin | mpre_sense_pin | apre_sense_pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PA1 PA4 PA6 PA9 PA10 */
-  GPIO_InitStruct.Pin = GPIO_PIN_1 | GPIO_PIN_6;
+  GPIO_InitStruct.Pin = m_enable_pin | mpre_enable_pin | apre_enable_pin | mt_fault_pin | ms_fault_pin | as_fault_pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -48,14 +60,14 @@ static void MX_GPIO_Init(void) {
   // HAL_GPIO_Init(VCP_RX_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : LD3_Pin */
-  GPIO_InitStruct.Pin = LD3_Pin;
+  GPIO_InitStruct.Pin = at_fault_pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LD3_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PB4 PB5 */
-  GPIO_InitStruct.Pin = GPIO_PIN_4 | GPIO_PIN_5;
+  GPIO_InitStruct.Pin = mpre_ready_pin | apre_ready_pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);

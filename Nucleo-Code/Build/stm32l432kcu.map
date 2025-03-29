@@ -3696,273 +3696,272 @@ LOAD /usr/share/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-
  .text.contactorTask
                 0x0000000008000220       0xb4 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/contactor.o
  .text.MX_GPIO_Init
-                0x00000000080002d4       0xb8 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/contactor.o
- .text.main     0x000000000800038c       0x40 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/contactor.o
-                0x000000000800038c                main
+                0x00000000080002d4       0xbc /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/contactor.o
+ .text.main     0x0000000008000390       0x40 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/contactor.o
+                0x0000000008000390                main
  .text.HAL_Init
-                0x00000000080003cc       0x1e /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal.o
-                0x00000000080003cc                HAL_Init
- *fill*         0x00000000080003ea        0x2 
+                0x00000000080003d0       0x1e /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal.o
+                0x00000000080003d0                HAL_Init
+ *fill*         0x00000000080003ee        0x2 
  .text.HAL_IncTick
-                0x00000000080003ec       0x18 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal.o
-                0x00000000080003ec                HAL_IncTick
+                0x00000000080003f0       0x18 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal.o
+                0x00000000080003f0                HAL_IncTick
  .text.HAL_GetTick
-                0x0000000008000404        0xc /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal.o
-                0x0000000008000404                HAL_GetTick
+                0x0000000008000408        0xc /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal.o
+                0x0000000008000408                HAL_GetTick
  .text.HAL_CAN_AddTxMessage
-                0x0000000008000410       0xea /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
-                0x0000000008000410                HAL_CAN_AddTxMessage
+                0x0000000008000414       0xea /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
+                0x0000000008000414                HAL_CAN_AddTxMessage
  .text.HAL_CAN_GetRxMessage
-                0x00000000080004fa      0x16a /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
-                0x00000000080004fa                HAL_CAN_GetRxMessage
+                0x00000000080004fe      0x16a /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
+                0x00000000080004fe                HAL_CAN_GetRxMessage
  .text.HAL_CAN_TxMailbox0AbortCallback
-                0x0000000008000664        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
-                0x0000000008000664                HAL_CAN_TxMailbox0AbortCallback
- .text.HAL_CAN_TxMailbox1AbortCallback
-                0x0000000008000666        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
-                0x0000000008000666                HAL_CAN_TxMailbox1AbortCallback
- .text.HAL_CAN_TxMailbox2AbortCallback
                 0x0000000008000668        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
-                0x0000000008000668                HAL_CAN_TxMailbox2AbortCallback
- .text.HAL_CAN_RxFifo0FullCallback
+                0x0000000008000668                HAL_CAN_TxMailbox0AbortCallback
+ .text.HAL_CAN_TxMailbox1AbortCallback
                 0x000000000800066a        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
-                0x000000000800066a                HAL_CAN_RxFifo0FullCallback
- .text.HAL_CAN_RxFifo1MsgPendingCallback
+                0x000000000800066a                HAL_CAN_TxMailbox1AbortCallback
+ .text.HAL_CAN_TxMailbox2AbortCallback
                 0x000000000800066c        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
-                0x000000000800066c                HAL_CAN_RxFifo1MsgPendingCallback
- .text.HAL_CAN_RxFifo1FullCallback
+                0x000000000800066c                HAL_CAN_TxMailbox2AbortCallback
+ .text.HAL_CAN_RxFifo0FullCallback
                 0x000000000800066e        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
-                0x000000000800066e                HAL_CAN_RxFifo1FullCallback
- .text.HAL_CAN_SleepCallback
+                0x000000000800066e                HAL_CAN_RxFifo0FullCallback
+ .text.HAL_CAN_RxFifo1MsgPendingCallback
                 0x0000000008000670        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
-                0x0000000008000670                HAL_CAN_SleepCallback
- .text.HAL_CAN_WakeUpFromRxMsgCallback
+                0x0000000008000670                HAL_CAN_RxFifo1MsgPendingCallback
+ .text.HAL_CAN_RxFifo1FullCallback
                 0x0000000008000672        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
-                0x0000000008000672                HAL_CAN_WakeUpFromRxMsgCallback
- .text.HAL_CAN_ErrorCallback
+                0x0000000008000672                HAL_CAN_RxFifo1FullCallback
+ .text.HAL_CAN_SleepCallback
                 0x0000000008000674        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
-                0x0000000008000674                HAL_CAN_ErrorCallback
+                0x0000000008000674                HAL_CAN_SleepCallback
+ .text.HAL_CAN_WakeUpFromRxMsgCallback
+                0x0000000008000676        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
+                0x0000000008000676                HAL_CAN_WakeUpFromRxMsgCallback
+ .text.HAL_CAN_ErrorCallback
+                0x0000000008000678        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
+                0x0000000008000678                HAL_CAN_ErrorCallback
  .text.HAL_CAN_IRQHandler
-                0x0000000008000676      0x24a /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
-                0x0000000008000676                HAL_CAN_IRQHandler
+                0x000000000800067a      0x24a /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
+                0x000000000800067a                HAL_CAN_IRQHandler
  .text.__NVIC_EnableIRQ
-                0x00000000080008c0       0x1c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_cortex.o
+                0x00000000080008c4       0x1c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_cortex.o
  .text.__NVIC_SetPriority
-                0x00000000080008dc       0x28 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_cortex.o
+                0x00000000080008e0       0x28 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_cortex.o
  .text.NVIC_EncodePriority
-                0x0000000008000904       0x3e /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_cortex.o
- *fill*         0x0000000008000942        0x2 
+                0x0000000008000908       0x3e /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_cortex.o
+ *fill*         0x0000000008000946        0x2 
  .text.HAL_NVIC_SetPriorityGrouping
-                0x0000000008000944       0x24 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_cortex.o
-                0x0000000008000944                HAL_NVIC_SetPriorityGrouping
+                0x0000000008000948       0x24 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_cortex.o
+                0x0000000008000948                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x0000000008000968       0x20 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_cortex.o
-                0x0000000008000968                HAL_NVIC_SetPriority
+                0x000000000800096c       0x20 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_cortex.o
+                0x000000000800096c                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x0000000008000988        0x8 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_cortex.o
-                0x0000000008000988                HAL_NVIC_EnableIRQ
+                0x000000000800098c        0x8 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_cortex.o
+                0x000000000800098c                HAL_NVIC_EnableIRQ
  .text.HAL_GPIO_Init
-                0x0000000008000990      0x1b0 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_gpio.o
-                0x0000000008000990                HAL_GPIO_Init
+                0x0000000008000994      0x1b0 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_gpio.o
+                0x0000000008000994                HAL_GPIO_Init
  .text.HAL_GPIO_ReadPin
-                0x0000000008000b40        0xe /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_gpio.o
-                0x0000000008000b40                HAL_GPIO_ReadPin
+                0x0000000008000b44        0xe /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_gpio.o
+                0x0000000008000b44                HAL_GPIO_ReadPin
  .text.HAL_GPIO_WritePin
-                0x0000000008000b4e        0xa /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_gpio.o
-                0x0000000008000b4e                HAL_GPIO_WritePin
+                0x0000000008000b52        0xa /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_gpio.o
+                0x0000000008000b52                HAL_GPIO_WritePin
  .text.HAL_RCC_GetHCLKFreq
-                0x0000000008000b58        0xc /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_rcc.o
-                0x0000000008000b58                HAL_RCC_GetHCLKFreq
+                0x0000000008000b5c        0xc /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_rcc.o
+                0x0000000008000b5c                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_GetPCLK2Freq
-                0x0000000008000b64       0x24 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_rcc.o
-                0x0000000008000b64                HAL_RCC_GetPCLK2Freq
+                0x0000000008000b68       0x24 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_rcc.o
+                0x0000000008000b68                HAL_RCC_GetPCLK2Freq
  .text.HAL_RCC_GetClockConfig
-                0x0000000008000b88       0x3c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_rcc.o
-                0x0000000008000b88                HAL_RCC_GetClockConfig
+                0x0000000008000b8c       0x3c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_rcc.o
+                0x0000000008000b8c                HAL_RCC_GetClockConfig
  .text.HAL_TIM_Base_MspInit
-                0x0000000008000bc4        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
-                0x0000000008000bc4                HAL_TIM_Base_MspInit
- *fill*         0x0000000008000bc6        0x2 
+                0x0000000008000bc8        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
+                0x0000000008000bc8                HAL_TIM_Base_MspInit
+ *fill*         0x0000000008000bca        0x2 
  .text.HAL_TIM_Base_Start_IT
-                0x0000000008000bc8       0x6c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
-                0x0000000008000bc8                HAL_TIM_Base_Start_IT
+                0x0000000008000bcc       0x6c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
+                0x0000000008000bcc                HAL_TIM_Base_Start_IT
  .text.HAL_TIM_OC_DelayElapsedCallback
-                0x0000000008000c34        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
-                0x0000000008000c34                HAL_TIM_OC_DelayElapsedCallback
- .text.HAL_TIM_IC_CaptureCallback
-                0x0000000008000c36        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
-                0x0000000008000c36                HAL_TIM_IC_CaptureCallback
- .text.HAL_TIM_PWM_PulseFinishedCallback
                 0x0000000008000c38        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
-                0x0000000008000c38                HAL_TIM_PWM_PulseFinishedCallback
- .text.HAL_TIM_TriggerCallback
+                0x0000000008000c38                HAL_TIM_OC_DelayElapsedCallback
+ .text.HAL_TIM_IC_CaptureCallback
                 0x0000000008000c3a        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
-                0x0000000008000c3a                HAL_TIM_TriggerCallback
+                0x0000000008000c3a                HAL_TIM_IC_CaptureCallback
+ .text.HAL_TIM_PWM_PulseFinishedCallback
+                0x0000000008000c3c        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
+                0x0000000008000c3c                HAL_TIM_PWM_PulseFinishedCallback
+ .text.HAL_TIM_TriggerCallback
+                0x0000000008000c3e        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
+                0x0000000008000c3e                HAL_TIM_TriggerCallback
  .text.HAL_TIM_IRQHandler
-                0x0000000008000c3c      0x17a /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
-                0x0000000008000c3c                HAL_TIM_IRQHandler
- *fill*         0x0000000008000db6        0x2 
+                0x0000000008000c40      0x17a /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
+                0x0000000008000c40                HAL_TIM_IRQHandler
+ *fill*         0x0000000008000dba        0x2 
  .text.TIM_Base_SetConfig
-                0x0000000008000db8       0x80 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
-                0x0000000008000db8                TIM_Base_SetConfig
+                0x0000000008000dbc       0x80 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
+                0x0000000008000dbc                TIM_Base_SetConfig
  .text.HAL_TIM_Base_Init
-                0x0000000008000e38       0x60 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
-                0x0000000008000e38                HAL_TIM_Base_Init
+                0x0000000008000e3c       0x60 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
+                0x0000000008000e3c                HAL_TIM_Base_Init
  .text.HAL_TIMEx_CommutCallback
-                0x0000000008000e98        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim_ex.o
-                0x0000000008000e98                HAL_TIMEx_CommutCallback
- .text.HAL_TIMEx_BreakCallback
-                0x0000000008000e9a        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim_ex.o
-                0x0000000008000e9a                HAL_TIMEx_BreakCallback
- .text.HAL_TIMEx_Break2Callback
                 0x0000000008000e9c        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim_ex.o
-                0x0000000008000e9c                HAL_TIMEx_Break2Callback
- *fill*         0x0000000008000e9e        0x2 
+                0x0000000008000e9c                HAL_TIMEx_CommutCallback
+ .text.HAL_TIMEx_BreakCallback
+                0x0000000008000e9e        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim_ex.o
+                0x0000000008000e9e                HAL_TIMEx_BreakCallback
+ .text.HAL_TIMEx_Break2Callback
+                0x0000000008000ea0        0x2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim_ex.o
+                0x0000000008000ea0                HAL_TIMEx_Break2Callback
+ *fill*         0x0000000008000ea2        0x2 
  .text.SystemInit
-                0x0000000008000ea0       0x14 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/system_stm32l4xx.o
-                0x0000000008000ea0                SystemInit
+                0x0000000008000ea4       0x14 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/system_stm32l4xx.o
+                0x0000000008000ea4                SystemInit
  .text.HAL_MspInit
-                0x0000000008000eb4       0x40 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_init.o
-                0x0000000008000eb4                HAL_MspInit
+                0x0000000008000eb8       0x40 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_init.o
+                0x0000000008000eb8                HAL_MspInit
  .text.HAL_InitTick
-                0x0000000008000ef4       0x94 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_timebase_tim.o
-                0x0000000008000ef4                HAL_InitTick
+                0x0000000008000ef8       0x94 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_timebase_tim.o
+                0x0000000008000ef8                HAL_InitTick
  .text.HAL_TIM_PeriodElapsedCallback
-                0x0000000008000f88       0x18 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_timebase_tim.o
-                0x0000000008000f88                HAL_TIM_PeriodElapsedCallback
+                0x0000000008000f8c       0x18 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_timebase_tim.o
+                0x0000000008000f8c                HAL_TIM_PeriodElapsedCallback
  .text.TIM1_UP_TIM16_IRQHandler
-                0x0000000008000fa0       0x10 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_timebase_tim.o
-                0x0000000008000fa0                TIM1_UP_TIM16_IRQHandler
+                0x0000000008000fa4       0x10 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_timebase_tim.o
+                0x0000000008000fa4                TIM1_UP_TIM16_IRQHandler
  .text.vListInitialise
-                0x0000000008000fb0       0x16 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/list.o
-                0x0000000008000fb0                vListInitialise
+                0x0000000008000fb4       0x16 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/list.o
+                0x0000000008000fb4                vListInitialise
  .text.vListInitialiseItem
-                0x0000000008000fc6        0x6 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/list.o
-                0x0000000008000fc6                vListInitialiseItem
+                0x0000000008000fca        0x6 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/list.o
+                0x0000000008000fca                vListInitialiseItem
  .text.vListInsert
-                0x0000000008000fcc       0x32 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/list.o
-                0x0000000008000fcc                vListInsert
+                0x0000000008000fd0       0x32 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/list.o
+                0x0000000008000fd0                vListInsert
  .text.uxListRemove
-                0x0000000008000ffe       0x24 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/list.o
-                0x0000000008000ffe                uxListRemove
+                0x0000000008001002       0x24 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/list.o
+                0x0000000008001002                uxListRemove
  .text.prvIsQueueEmpty
-                0x0000000008001022       0x1a /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
+                0x0000000008001026       0x1a /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
  .text.prvCopyDataFromQueue
-                0x000000000800103c       0x24 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
+                0x0000000008001040       0x24 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
  .text.prvUnlockQueue
-                0x0000000008001060       0x6e /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
+                0x0000000008001064       0x6e /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
  .text.xQueueGenericReset
-                0x00000000080010ce       0xaa /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
-                0x00000000080010ce                xQueueGenericReset
+                0x00000000080010d2       0xaa /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
+                0x00000000080010d2                xQueueGenericReset
  .text.prvInitialiseNewQueue
-                0x0000000008001178       0x1c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
+                0x000000000800117c       0x1c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
  .text.xQueueGenericCreateStatic
-                0x0000000008001194       0x64 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
-                0x0000000008001194                xQueueGenericCreateStatic
+                0x0000000008001198       0x64 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
+                0x0000000008001198                xQueueGenericCreateStatic
  .text.xQueueReceive
-                0x00000000080011f8      0x15e /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
-                0x00000000080011f8                xQueueReceive
+                0x00000000080011fc      0x15e /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
+                0x00000000080011fc                xQueueReceive
  .text.xQueueReceiveFromISR
-                0x0000000008001356       0xd2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
-                0x0000000008001356                xQueueReceiveFromISR
+                0x000000000800135a       0xd2 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
+                0x000000000800135a                xQueueReceiveFromISR
  .text.vQueueAddToRegistry
-                0x0000000008001428       0x60 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
-                0x0000000008001428                vQueueAddToRegistry
+                0x000000000800142c       0x60 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
+                0x000000000800142c                vQueueAddToRegistry
  .text.vQueueWaitForMessageRestricted
-                0x0000000008001488       0x52 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
-                0x0000000008001488                vQueueWaitForMessageRestricted
- *fill*         0x00000000080014da        0x2 
+                0x000000000800148c       0x52 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
+                0x000000000800148c                vQueueWaitForMessageRestricted
+ *fill*         0x00000000080014de        0x2 
  .text.prvResetNextTaskUnblockTime
-                0x00000000080014dc       0x28 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x00000000080014e0       0x28 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
  .text.prvInitialiseNewTask
-                0x0000000008001504       0x84 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001508       0x84 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
  .text.prvCreateStaticTask
-                0x0000000008001588       0x8a /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
- *fill*         0x0000000008001612        0x2 
+                0x000000000800158c       0x8a /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+ *fill*         0x0000000008001616        0x2 
  .text.prvInitialiseTaskLists
-                0x0000000008001614       0x68 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001618       0x68 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
  .text.prvAddNewTaskToReadyList
-                0x000000000800167c       0xcc /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001680       0xcc /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
  .text.prvCheckTasksWaitingTermination
-                0x0000000008001748       0x40 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x000000000800174c       0x40 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
  .text.prvIdleTask
-                0x0000000008001788       0x28 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x000000000800178c       0x28 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
  .text.prvAddCurrentTaskToDelayedList
-                0x00000000080017b0       0xbc /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x00000000080017b4       0xbc /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
  .text.xTaskCreateStatic
-                0x000000000800186c       0x28 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
-                0x000000000800186c                xTaskCreateStatic
+                0x0000000008001870       0x28 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001870                xTaskCreateStatic
  .text.prvCreateIdleTasks
-                0x0000000008001894       0x6c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001898       0x6c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
  .text.vTaskStartScheduler
-                0x0000000008001900       0x6c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
-                0x0000000008001900                vTaskStartScheduler
+                0x0000000008001904       0x6c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001904                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x000000000800196c       0x10 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
-                0x000000000800196c                vTaskSuspendAll
+                0x0000000008001970       0x10 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001970                vTaskSuspendAll
  .text.xTaskGetTickCount
-                0x000000000800197c        0xc /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
-                0x000000000800197c                xTaskGetTickCount
+                0x0000000008001980        0xc /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001980                xTaskGetTickCount
  .text.uxTaskGetNumberOfTasks
-                0x0000000008001988        0xc /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
-                0x0000000008001988                uxTaskGetNumberOfTasks
+                0x000000000800198c        0xc /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x000000000800198c                uxTaskGetNumberOfTasks
  .text.xTaskIncrementTick
-                0x0000000008001994      0x178 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
-                0x0000000008001994                xTaskIncrementTick
+                0x0000000008001998      0x178 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001998                xTaskIncrementTick
  .text.xTaskResumeAll
-                0x0000000008001b0c      0x158 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
-                0x0000000008001b0c                xTaskResumeAll
+                0x0000000008001b10      0x158 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001b10                xTaskResumeAll
  .text.vTaskSwitchContext
-                0x0000000008001c64       0x98 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
-                0x0000000008001c64                vTaskSwitchContext
+                0x0000000008001c68       0x98 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001c68                vTaskSwitchContext
  .text.vTaskPlaceOnEventList
-                0x0000000008001cfc       0x30 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
-                0x0000000008001cfc                vTaskPlaceOnEventList
+                0x0000000008001d00       0x30 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001d00                vTaskPlaceOnEventList
  .text.vTaskPlaceOnEventListRestricted
-                0x0000000008001d2c       0x54 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
-                0x0000000008001d2c                vTaskPlaceOnEventListRestricted
+                0x0000000008001d30       0x54 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001d30                vTaskPlaceOnEventListRestricted
  .text.xTaskRemoveFromEventList
-                0x0000000008001d80       0xf8 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
-                0x0000000008001d80                xTaskRemoveFromEventList
+                0x0000000008001d84       0xf8 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001d84                xTaskRemoveFromEventList
  .text.vTaskInternalSetTimeOutState
-                0x0000000008001e78       0x18 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
-                0x0000000008001e78                vTaskInternalSetTimeOutState
+                0x0000000008001e7c       0x18 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001e7c                vTaskInternalSetTimeOutState
  .text.xTaskCheckForTimeOut
-                0x0000000008001e90       0x88 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
-                0x0000000008001e90                xTaskCheckForTimeOut
+                0x0000000008001e94       0x88 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001e94                xTaskCheckForTimeOut
  .text.vTaskMissedYield
-                0x0000000008001f18        0xc /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
-                0x0000000008001f18                vTaskMissedYield
+                0x0000000008001f1c        0xc /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001f1c                vTaskMissedYield
  .text.xTaskGetSchedulerState
-                0x0000000008001f24       0x20 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
-                0x0000000008001f24                xTaskGetSchedulerState
+                0x0000000008001f28       0x20 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+                0x0000000008001f28                xTaskGetSchedulerState
  .text.prvGetNextExpireTime
-                0x0000000008001f44       0x20 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
+                0x0000000008001f48       0x20 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
  .text.prvInsertTimerInActiveList
-                0x0000000008001f64       0x48 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
+                0x0000000008001f68       0x48 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
  .text.prvReloadTimer
-                0x0000000008001fac       0x28 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
+                0x0000000008001fb0       0x28 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
  .text.prvProcessExpiredTimer
-                0x0000000008001fd4       0x40 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
+                0x0000000008001fd8       0x40 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
  .text.prvSwitchTimerLists
-                0x0000000008002014       0x30 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
+                0x0000000008002018       0x30 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
  .text.prvSampleTimeNow
-                0x0000000008002044       0x2c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
+                0x0000000008002048       0x2c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
  .text.prvProcessTimerOrBlockTask
-                0x0000000008002070       0x74 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
+                0x0000000008002074       0x74 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
  .text.prvProcessReceivedCommands
-                0x00000000080020e4       0xec /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
+                0x00000000080020e8       0xec /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
  .text.prvTimerTask
-                0x00000000080021d0       0x16 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
- *fill*         0x00000000080021e6        0x2 
+                0x00000000080021d4       0x16 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
+ *fill*         0x00000000080021ea        0x2 
  .text.prvCheckForValidListAndQueue
-                0x00000000080021e8       0x70 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
+                0x00000000080021ec       0x70 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
  .text.xTimerCreateTimerTask
-                0x0000000008002258       0x64 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
-                0x0000000008002258                xTimerCreateTimerTask
+                0x000000000800225c       0x64 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
+                0x000000000800225c                xTimerCreateTimerTask
  .text.prvTaskExitError
-                0x00000000080022bc       0x40 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/port.o
- *fill*         0x00000000080022fc        0x4 
+                0x00000000080022c0       0x40 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/port.o
  .text.SVC_Handler
                 0x0000000008002300       0x24 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/port.o
                 0x0000000008002300                SVC_Handler
@@ -4433,26 +4432,26 @@ LOAD /usr/share/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-
  .comment       0x0000000000000045       0x46 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/freertos.o
  .comment       0x0000000000000045       0x46 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/CAN.o
 
-.debug_info     0x0000000000000000    0x174b9
- .debug_info    0x0000000000000000      0xc95 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/contactor.o
- .debug_info    0x0000000000000c95      0xb86 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal.o
- .debug_info    0x000000000000181b     0x13d3 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
- .debug_info    0x0000000000002bee     0x1117 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_cortex.o
- .debug_info    0x0000000000003d05      0x91c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_gpio.o
- .debug_info    0x0000000000004621     0x1072 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_rcc.o
- .debug_info    0x0000000000005693     0x4220 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
- .debug_info    0x00000000000098b3     0x1fb8 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim_ex.o
- .debug_info    0x000000000000b86b      0x682 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/system_stm32l4xx.o
- .debug_info    0x000000000000beed      0x898 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_init.o
- .debug_info    0x000000000000c785      0xe88 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_timebase_tim.o
- .debug_info    0x000000000000d60d      0x30a /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/list.o
- .debug_info    0x000000000000d917     0x27f9 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
- .debug_info    0x0000000000010110     0x34a4 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
- .debug_info    0x00000000000135b4     0x1a42 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
- .debug_info    0x0000000000014ff6      0x66f /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/port.o
- .debug_info    0x0000000000015665      0x329 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/freertos.o
- .debug_info    0x000000000001598e     0x1afb /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/CAN.o
- .debug_info    0x0000000000017489       0x30 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/startup_stm32l432xx.o
+.debug_info     0x0000000000000000    0x174ba
+ .debug_info    0x0000000000000000      0xc96 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/contactor.o
+ .debug_info    0x0000000000000c96      0xb86 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal.o
+ .debug_info    0x000000000000181c     0x13d3 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_can.o
+ .debug_info    0x0000000000002bef     0x1117 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_cortex.o
+ .debug_info    0x0000000000003d06      0x91c /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_gpio.o
+ .debug_info    0x0000000000004622     0x1072 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_rcc.o
+ .debug_info    0x0000000000005694     0x4220 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim.o
+ .debug_info    0x00000000000098b4     0x1fb8 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_tim_ex.o
+ .debug_info    0x000000000000b86c      0x682 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/system_stm32l4xx.o
+ .debug_info    0x000000000000beee      0x898 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_init.o
+ .debug_info    0x000000000000c786      0xe88 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/stm32l4xx_hal_timebase_tim.o
+ .debug_info    0x000000000000d60e      0x30a /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/list.o
+ .debug_info    0x000000000000d918     0x27f9 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/queue.o
+ .debug_info    0x0000000000010111     0x34a4 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/tasks.o
+ .debug_info    0x00000000000135b5     0x1a42 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/timers.o
+ .debug_info    0x0000000000014ff7      0x66f /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/port.o
+ .debug_info    0x0000000000015666      0x329 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/freertos.o
+ .debug_info    0x000000000001598f     0x1afb /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/CAN.o
+ .debug_info    0x000000000001748a       0x30 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/startup_stm32l432xx.o
 
 .debug_abbrev   0x0000000000000000     0x2ecf
  .debug_abbrev  0x0000000000000000      0x298 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/contactor.o
