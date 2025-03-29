@@ -1,0 +1,1051 @@
+ARM GAS  /tmp/ccnyBAUy.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"contactor.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c"
+  20              		.section	.text.error_handler,"ax",%progbits
+  21              		.align	1
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	error_handler:
+  27              	.LFB295:
+   1:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** #include "contactor.h"
+   2:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+   3:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** #include "stm32xx_hal.h"
+   4:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+   5:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** /**
+   6:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****  * @brief GPIO Initialization Function
+   7:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****  * @param None
+   8:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****  * @retval None
+   9:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****  */
+  10:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** static void MX_GPIO_Init(void) {
+  11:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+  12:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /* USER CODE BEGIN MX_GPIO_Init_1 */
+  13:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /* USER CODE END MX_GPIO_Init_1 */
+  14:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  15:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /* GPIO Ports Clock Enable */
+  16:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   __HAL_RCC_GPIOC_CLK_ENABLE();
+  17:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+  18:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   __HAL_RCC_GPIOB_CLK_ENABLE();
+  19:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  20:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /*Configure GPIO pin Output Level */
+  21:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1 | GPIO_PIN_6,
+  22:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****                     GPIO_PIN_RESET);
+  23:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  24:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /*Configure GPIO pin Output Level */
+  25:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_RESET);
+  26:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  27:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /*Configure GPIO pins : PA0 PA2 PA3 PA5
+  28:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****                            PA7 */
+  29:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pin =
+  30:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****       GPIO_PIN_0 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_7 | GPIO_PIN_9 | GPIO_PIN_10;
+  31:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ARM GAS  /tmp/ccnyBAUy.s 			page 2
+
+
+  32:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  33:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  34:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  35:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /*Configure GPIO pins : PA1 PA4 PA6 PA9 PA10 */
+  36:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pin = GPIO_PIN_1 | GPIO_PIN_6;
+  37:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  38:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  39:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  40:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  41:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  42:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /*Configure GPIO pin : VCP_RX_Pin */
+  43:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // GPIO_InitStruct.Pin = VCP_RX_Pin;
+  44:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  45:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // GPIO_InitStruct.Pull = GPIO_NOPULL;
+  46:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  47:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // GPIO_InitStruct.Alternate = GPIO_AF3_USART2;
+  48:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // HAL_GPIO_Init(VCP_RX_GPIO_Port, &GPIO_InitStruct);
+  49:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  50:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /*Configure GPIO pin : LD3_Pin */
+  51:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pin = LD3_Pin;
+  52:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  53:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  54:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  55:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_GPIO_Init(LD3_GPIO_Port, &GPIO_InitStruct);
+  56:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  57:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /*Configure GPIO pins : PB4 PB5 */
+  58:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pin = GPIO_PIN_4 | GPIO_PIN_5;
+  59:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  60:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  61:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  62:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  63:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /* USER CODE BEGIN MX_GPIO_Init_2 */
+  64:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /* USER CODE END MX_GPIO_Init_2 */
+  65:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** }
+  66:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  67:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //  typedef enum {
+  68:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //     OPEN,
+  69:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //     CLOSED,
+  70:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //     FAULT
+  71:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // } State;
+  72:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  73:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // #define start &contactorFSM[0]
+  74:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // #define closing &contactorFSM[1]
+  75:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // #define closed &contactorFSM[2]
+  76:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // #define opening &contactorFSM[3]
+  77:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // #define fault &contactorFSM[4]
+  78:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  79:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // #define prestart &prechargeFSM[0]
+  80:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // #define precharge &prechargeFSM[1]
+  81:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // #define preclosing &prechargeFSM[2]
+  82:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // #define preclosed &prechargeFSM[3]
+  83:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // #define preopening &prechargeFSM[4]
+  84:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // #define prefault &prechargeFSM[5]
+  85:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  86:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** typedef struct motorContactor {
+  87:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   int state;  // open, closed
+  88:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   int enable_in;
+ARM GAS  /tmp/ccnyBAUy.s 			page 3
+
+
+  89:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   int sense_out;   // GPIO pin to read the contactor's state
+  90:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   int enable_out;  // GPIO pin to control the contactor
+  91:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   int fault;
+  92:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   int timeout;
+  93:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   uint32_t start_time;  // HAL_getTick()
+  94:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // const struct motorContactor *next[4];
+  95:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** } motorContactor;
+  96:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  97:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // const motorContactor motorContactorFSM[5] = {
+  98:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //     {0, 0, 0, {start, fault, closing, fault}}, //open
+  99:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //     {1, 0, 1, {opening, opening, closing, closed}},//closing
+ 100:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //     {1, 1, 1, {fault, opening, fault, closed}},//closed
+ 101:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //     {0, 1, 0, {start, opening, start, closed}},//opening
+ 102:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //     {0, 0, 0, {fault, fault, fault, fault}} // fault
+ 103:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // };
+ 104:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 105:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** typedef struct Precharge {
+ 106:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   int state;      // open, closed
+ 107:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   int sense_in;   // GPIO pin to read the contactor's state
+ 108:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   int pre_ready;  // Precharge ready signal
+ 109:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   int pre_sense;
+ 110:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   int enable_out;  // GPIO pin to control the contactor
+ 111:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   int fault;
+ 112:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   int timeout;
+ 113:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   uint32_t start_time;
+ 114:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // const struct Precharge *next[8];
+ 115:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** } Precharge;
+ 116:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 117:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // const Contactor prechargeFSM[6] = {
+ 118:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //   {0, 0, 0, 0, {prestart, prefault, prestart, prefault, precharge, prefault,
+ 119:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //   precharge, prefault}}, //open {1, 0, 0, 0, {prestart, prefault, prestart,
+ 120:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //   prefault, precharge, prefault, preclosing, prefault}},//charging {1, 1, 0,
+ 121:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //   1, {prestart, prestart, prestart, prestart, precharge, prefault,
+ 122:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //   preclosing, preclosed}},//closing {1, 1, 1, 1, {prefault, prefault,
+ 123:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //   prefault, preopening, prefault, prefault, prefault, preclosed}},//closed
+ 124:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //   {0, 1, 1, 0, {prestart, preopening, prestart, preopening, preopening,
+ 125:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //   prefault, prestart, preopening}}, // opening {0, 0, 0, 0, {fault, fault,
+ 126:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** //   fault, fault, fault, fault, fault, fault}} // fault
+ 127:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // };
+ 128:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 129:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // Contactor*
+ 130:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** #define m_CAN HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_9)      // D1 B
+ 131:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** #define m_direct HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10)  // D0 B
+ 132:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 133:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** #define m_enable(state) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, state)  // A1 A
+ 134:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** // #define a_enable(state) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, state)   // A
+ 135:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** #define m_pre_enable(state) HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, state)  // D13 B
+ 136:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** #define a_pre_enable(state) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, state)  // A5 A
+ 137:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 138:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** #define m_sense HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_3)      // A2 A
+ 139:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** #define a_sense HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_4)      // A3 A
+ 140:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** #define m_pre_sense HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0)  // A0 A
+ 141:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** #define a_pre_sense HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_7)  // A6 A
+ 142:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 143:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** #define m_pre_ready HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_4)  // D12 B
+ 144:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** #define a_pre_ready HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_5)  // D11 B
+ 145:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ARM GAS  /tmp/ccnyBAUy.s 			page 4
+
+
+ 146:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** motorContactor motor = {0, 0, 0, 0, 0, 0, 0};
+ 147:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** Precharge motorPre = {0, 0, 0, 0, 0, 0};
+ 148:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** Precharge arrayPre = {0, 0, 0, 0, 0, 0};
+ 149:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** int time;
+ 150:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** int BPS_safe;
+ 151:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** int moco_fault;
+ 152:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** int fault;
+ 153:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** int on = 1;
+ 154:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** int cycles =0;
+ 155:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 156:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** static void contactorTask(void* pvParamters) {
+ 157:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   while(1){
+ 158:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   time = HAL_GetTick();
+ 159:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /* // blinky tester
+ 160:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   m_pre_enable(1);
+ 161:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   m_enable(1);
+ 162:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   a_pre_enable(1);
+ 163:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_Delay(1000);
+ 164:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   m_pre_enable(0);
+ 165:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   m_enable(0);
+ 166:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   a_pre_enable(0);
+ 167:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_Delay(1000);
+ 168:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   */
+ 169:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // if(time/1000 >cycles){
+ 170:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   if(on ==0){
+ 171:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //     on = 1;
+ 172:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   }else{
+ 173:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //     on = 0;
+ 174:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   }
+ 175:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   cycles++;
+ 176:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // }
+ 177:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // m_enable(on);
+ 178:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // m_pre_enable(on);
+ 179:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // a_pre_enable(on);
+ 180:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, 1);
+ 181:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // m_enable(1);
+ 182:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // return;
+ 183:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 184:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // if ((motor.fault | motorPre.fault | arrayPre.fault | BPS_safe | moco_fault |
+ 185:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //      motor.timeout | motorPre.timeout | arrayPre.timeout) != 0) {
+ 186:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   motor.enable_out = 0;
+ 187:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   motorPre.enable_out = 0;
+ 188:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   arrayPre.enable_out = 0;
+ 189:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   fault = 1;
+ 190:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // } else {
+ 191:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motor.enable_in = (m_CAN); //& m_direct);
+ 192:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motor.sense_out = m_sense;
+ 193:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 194:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motorPre.pre_ready = m_pre_ready;
+ 195:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motorPre.pre_sense = m_pre_sense;
+ 196:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motorPre.sense_in = motor.sense_out;
+ 197:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 198:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     arrayPre.pre_ready = a_pre_ready;
+ 199:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     arrayPre.pre_sense = a_pre_sense;
+ 200:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     arrayPre.sense_in = a_sense;
+ 201:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 202:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motor.enable_out = motor.enable_in;
+ARM GAS  /tmp/ccnyBAUy.s 			page 5
+
+
+ 203:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motorPre.enable_out = motorPre.sense_in;
+ 204:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     arrayPre.enable_out = a_pre_ready;
+ 205:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 206:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     m_enable(motor.enable_out);
+ 207:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     m_pre_enable(motorPre.enable_out);
+ 208:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     // a_pre_enable(arrayPre.enable_out);
+ 209:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     a_pre_enable(1);
+ 210:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 211:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     // HAL_Delay(500);
+ 212:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     // HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_5));
+ 213:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //   if ((motor.enable_in == 1) && (motor.fault == 0)) {
+ 214:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //     if (){
+ 215:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //       motor.fault = 1;
+ 216:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //     }
+ 217:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 218:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //     if (motor.enable_out == 0) {
+ 219:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //       motor.enable_out = 1;
+ 220:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //       motor.start_time = HAL_GetTick();
+ 221:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //     } else if (motor.sense_out == 0) {
+ 222:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //       if (HAL_GetTick() > motor.start_time + 1000) {
+ 223:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //         motor.timeout = 1;
+ 224:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //       }
+ 225:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 226:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //     }
+ 227:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //   }else if(motor.enable_in == 0 && motor.fault == 0){
+ 228:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //     if(motor.enable_out = 1){
+ 229:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //       motor.enable_out = 0;
+ 230:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //       motor.start_time = HAL_GetTick();
+ 231:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //     }else if(motor.sense_out == 1){
+ 232:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //       if(HAL_GetTick()>motor.start_time+1000){
+ 233:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //         motor.timeout = 1;
+ 234:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //       }
+ 235:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //     }
+ 236:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //   }
+ 237:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 238:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //   if ((arrayPre.enable_out == 0) && (arrayPre.pre_sense == 0) &&
+ 239:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //       (arrayPre.fault == 0)) {
+ 240:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //     // if contactor was already open (state = 0) and CAN
+ 241:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //     // tells it to close and no fault
+ 242:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //     arrayPre.enable_out = 1;  // enable contactor
+ 243:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //     arrayPre.start_time = HAL_GetTick();
+ 244:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     //   }
+ 245:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // }
+ 246:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 247:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // contactor logic
+ 248:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 249:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // if ((HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6)) ) {
+ 250:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   // HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_1);
+ 251:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   HAL_Delay(500);
+ 252:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, 1);
+ 253:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   m_state = 1;
+ 254:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // }else {
+ 255:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, 0);
+ 256:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // }
+ 257:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 258:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, ~HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_7));
+ 259:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // int output = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6);
+ARM GAS  /tmp/ccnyBAUy.s 			page 6
+
+
+ 260:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // int out1 = output;
+ 261:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // if(output!=0){
+ 262:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   out1=0;
+ 263:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // }else{
+ 264:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   out1=1;
+ 265:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // }
+ 266:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // HAL_GPIO_WritePin(GPIOA, ( GPIO_PIN_6), out1);
+ 267:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // HAL_GPIO_WritePin(GPIOA, (GPIO_PIN_1),out1);//HAL_GPIO_ReadPin(GPIOB,
+ 268:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // GPIO_PIN_6)); HAL_GPIO_WritePin(GPIOA, (GPIO_PIN_4), output);//
+ 269:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6));
+ 270:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 271:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, 1);
+ 272:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // m_enable(GPIO_PIN_SET);
+ 273:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 274:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // // if (m_CAN == 0) {  // if CAN tells contactor to close
+ 275:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // //   m_enable(0);
+ 276:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // //   m_state = 0;
+ 277:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // // }
+ 278:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // if (a_CAN == 0) {  // if CAN tells contactor to close
+ 279:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   a_enable(0);
+ 280:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   a_state = 0;
+ 281:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // }
+ 282:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 283:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // if ((m_sense == 1) && (m_pre_ready == 1) && (m_fault == 0) &&
+ 284:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //     (m_pre_fault == 0)) {  // if m_contactor is closed (sense = 0) and
+ 285:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //                            // precharge ready and neither has faulted
+ 286:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   m_pre_enable(1);
+ 287:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   m_pre_state = 1;
+ 288:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // }
+ 289:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // if ((a_sense == 1) && (a_pre_ready == 1) && (a_fault == 0) &&
+ 290:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //     (a_pre_fault == 0)) {  // if a_contactor is closed (sense = 0) and
+ 291:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //                            // precharge ready and neither has faulted
+ 292:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   a_pre_enable(1);
+ 293:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   a_pre_state = 1;
+ 294:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // }
+ 295:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 296:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // if ((m_sense == 0) &&
+ 297:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //     (m_pre_sense ==
+ 298:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //      1)) {          // if m contactor open and m_pre contactor is closed
+ 299:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   m_pre_enable(0);  // turn m_pre contactor off
+ 300:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   m_pre_state = 0;  // set state info off
+ 301:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // }
+ 302:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // if ((a_sense == 0) &&
+ 303:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //     (a_pre_sense ==
+ 304:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //      1)) {          // if a contactor open and a_pre contactor is closed
+ 305:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   a_pre_enable(0);  // turn a_pre contactor off
+ 306:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   a_pre_state = 0;  // set state info off
+ 307:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // }
+ 308:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 309:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // if ((m_fault == 1) || (m_pre_fault == 1)) {  // if either faults
+ 310:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   m_pre_enable(
+ 311:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //       0);  // disable precharge for saftey and send fault message over CAN
+ 312:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   m_pre_state = 0;
+ 313:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // }
+ 314:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // if ((a_fault == 1) || (a_pre_fault == 1)) {  // if either faults
+ 315:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   a_pre_enable(
+ 316:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //       0);  // disable precharge for saftey and send fault message over CAN
+ARM GAS  /tmp/ccnyBAUy.s 			page 7
+
+
+ 317:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //   a_pre_state = 0;
+ 318:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // }
+ 319:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** }
+ 320:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** }
+ 321:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 322:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** StaticTask_t task_buffer;
+ 323:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** StackType_t task_stack[configMINIMAL_STACK_SIZE];
+ 324:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 325:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** static void error_handler(void) {
+  28              		.loc 1 325 33 view -0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34              	.L2:
+ 326:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   while (1) {
+  35              		.loc 1 326 3 discriminator 1 view .LVU1
+ 327:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   }
+  36              		.loc 1 327 3 discriminator 1 view .LVU2
+ 326:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   while (1) {
+  37              		.loc 1 326 9 discriminator 1 view .LVU3
+  38 0000 FEE7     		b	.L2
+  39              		.cfi_endproc
+  40              	.LFE295:
+  42              		.section	.text.contactorTask,"ax",%progbits
+  43              		.align	1
+  44              		.syntax unified
+  45              		.thumb
+  46              		.thumb_func
+  48              	contactorTask:
+  49              	.LFB294:
+ 156:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   while(1){
+  50              		.loc 1 156 46 view -0
+  51              		.cfi_startproc
+  52              		@ Volatile: function does not return.
+  53              		@ args = 0, pretend = 0, frame = 0
+  54              		@ frame_needed = 0, uses_anonymous_args = 0
+  55              	.LVL0:
+ 156:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   while(1){
+  56              		.loc 1 156 46 is_stmt 0 view .LVU5
+  57 0000 80B5     		push	{r7, lr}
+  58              	.LCFI0:
+  59              		.cfi_def_cfa_offset 8
+  60              		.cfi_offset 7, -8
+  61              		.cfi_offset 14, -4
+  62              	.LVL1:
+  63              	.L4:
+ 157:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   time = HAL_GetTick();
+  64              		.loc 1 157 3 is_stmt 1 discriminator 1 view .LVU6
+ 158:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /* // blinky tester
+  65              		.loc 1 158 3 discriminator 1 view .LVU7
+ 158:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /* // blinky tester
+  66              		.loc 1 158 10 is_stmt 0 discriminator 1 view .LVU8
+  67 0002 FFF7FEFF 		bl	HAL_GetTick
+  68              	.LVL2:
+ 158:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /* // blinky tester
+ARM GAS  /tmp/ccnyBAUy.s 			page 8
+
+
+  69              		.loc 1 158 8 discriminator 1 view .LVU9
+  70 0006 264B     		ldr	r3, .L6
+  71 0008 1860     		str	r0, [r3]
+ 191:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motor.sense_out = m_sense;
+  72              		.loc 1 191 5 is_stmt 1 discriminator 1 view .LVU10
+ 191:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motor.sense_out = m_sense;
+  73              		.loc 1 191 24 is_stmt 0 discriminator 1 view .LVU11
+  74 000a 4FF40071 		mov	r1, #512
+  75 000e 4FF09040 		mov	r0, #1207959552
+  76 0012 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+  77              	.LVL3:
+ 191:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motor.sense_out = m_sense;
+  78              		.loc 1 191 21 discriminator 1 view .LVU12
+  79 0016 234D     		ldr	r5, .L6+4
+  80 0018 6860     		str	r0, [r5, #4]
+ 192:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  81              		.loc 1 192 5 is_stmt 1 discriminator 1 view .LVU13
+ 192:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  82              		.loc 1 192 23 is_stmt 0 discriminator 1 view .LVU14
+  83 001a 0821     		movs	r1, #8
+  84 001c 4FF09040 		mov	r0, #1207959552
+  85 0020 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+  86              	.LVL4:
+ 192:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+  87              		.loc 1 192 21 discriminator 1 view .LVU15
+  88 0024 A860     		str	r0, [r5, #8]
+ 194:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motorPre.pre_sense = m_pre_sense;
+  89              		.loc 1 194 5 is_stmt 1 discriminator 1 view .LVU16
+ 194:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motorPre.pre_sense = m_pre_sense;
+  90              		.loc 1 194 26 is_stmt 0 discriminator 1 view .LVU17
+  91 0026 204E     		ldr	r6, .L6+8
+  92 0028 1021     		movs	r1, #16
+  93 002a 3046     		mov	r0, r6
+  94 002c FFF7FEFF 		bl	HAL_GPIO_ReadPin
+  95              	.LVL5:
+ 194:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motorPre.pre_sense = m_pre_sense;
+  96              		.loc 1 194 24 discriminator 1 view .LVU18
+  97 0030 1E4C     		ldr	r4, .L6+12
+  98 0032 A060     		str	r0, [r4, #8]
+ 195:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motorPre.sense_in = motor.sense_out;
+  99              		.loc 1 195 5 is_stmt 1 discriminator 1 view .LVU19
+ 195:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motorPre.sense_in = motor.sense_out;
+ 100              		.loc 1 195 26 is_stmt 0 discriminator 1 view .LVU20
+ 101 0034 0121     		movs	r1, #1
+ 102 0036 4FF09040 		mov	r0, #1207959552
+ 103 003a FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 104              	.LVL6:
+ 195:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motorPre.sense_in = motor.sense_out;
+ 105              		.loc 1 195 24 discriminator 1 view .LVU21
+ 106 003e E060     		str	r0, [r4, #12]
+ 196:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 107              		.loc 1 196 5 is_stmt 1 discriminator 1 view .LVU22
+ 196:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 108              		.loc 1 196 30 is_stmt 0 discriminator 1 view .LVU23
+ 109 0040 AB68     		ldr	r3, [r5, #8]
+ 196:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 110              		.loc 1 196 23 discriminator 1 view .LVU24
+ARM GAS  /tmp/ccnyBAUy.s 			page 9
+
+
+ 111 0042 6360     		str	r3, [r4, #4]
+ 198:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     arrayPre.pre_sense = a_pre_sense;
+ 112              		.loc 1 198 5 is_stmt 1 discriminator 1 view .LVU25
+ 198:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     arrayPre.pre_sense = a_pre_sense;
+ 113              		.loc 1 198 26 is_stmt 0 discriminator 1 view .LVU26
+ 114 0044 2021     		movs	r1, #32
+ 115 0046 3046     		mov	r0, r6
+ 116 0048 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 117              	.LVL7:
+ 198:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     arrayPre.pre_sense = a_pre_sense;
+ 118              		.loc 1 198 24 discriminator 1 view .LVU27
+ 119 004c 184F     		ldr	r7, .L6+16
+ 120 004e B860     		str	r0, [r7, #8]
+ 199:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     arrayPre.sense_in = a_sense;
+ 121              		.loc 1 199 5 is_stmt 1 discriminator 1 view .LVU28
+ 199:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     arrayPre.sense_in = a_sense;
+ 122              		.loc 1 199 26 is_stmt 0 discriminator 1 view .LVU29
+ 123 0050 8021     		movs	r1, #128
+ 124 0052 4FF09040 		mov	r0, #1207959552
+ 125 0056 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 126              	.LVL8:
+ 199:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     arrayPre.sense_in = a_sense;
+ 127              		.loc 1 199 24 discriminator 1 view .LVU30
+ 128 005a F860     		str	r0, [r7, #12]
+ 200:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 129              		.loc 1 200 5 is_stmt 1 discriminator 1 view .LVU31
+ 200:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 130              		.loc 1 200 25 is_stmt 0 discriminator 1 view .LVU32
+ 131 005c 1021     		movs	r1, #16
+ 132 005e 4FF09040 		mov	r0, #1207959552
+ 133 0062 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 134              	.LVL9:
+ 200:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 135              		.loc 1 200 23 discriminator 1 view .LVU33
+ 136 0066 7860     		str	r0, [r7, #4]
+ 202:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motorPre.enable_out = motorPre.sense_in;
+ 137              		.loc 1 202 5 is_stmt 1 discriminator 1 view .LVU34
+ 202:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motorPre.enable_out = motorPre.sense_in;
+ 138              		.loc 1 202 29 is_stmt 0 discriminator 1 view .LVU35
+ 139 0068 6B68     		ldr	r3, [r5, #4]
+ 202:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     motorPre.enable_out = motorPre.sense_in;
+ 140              		.loc 1 202 22 discriminator 1 view .LVU36
+ 141 006a EB60     		str	r3, [r5, #12]
+ 203:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     arrayPre.enable_out = a_pre_ready;
+ 142              		.loc 1 203 5 is_stmt 1 discriminator 1 view .LVU37
+ 203:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     arrayPre.enable_out = a_pre_ready;
+ 143              		.loc 1 203 35 is_stmt 0 discriminator 1 view .LVU38
+ 144 006c 6368     		ldr	r3, [r4, #4]
+ 203:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     arrayPre.enable_out = a_pre_ready;
+ 145              		.loc 1 203 25 discriminator 1 view .LVU39
+ 146 006e 2361     		str	r3, [r4, #16]
+ 204:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 147              		.loc 1 204 5 is_stmt 1 discriminator 1 view .LVU40
+ 204:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 148              		.loc 1 204 27 is_stmt 0 discriminator 1 view .LVU41
+ 149 0070 2021     		movs	r1, #32
+ 150 0072 3046     		mov	r0, r6
+ARM GAS  /tmp/ccnyBAUy.s 			page 10
+
+
+ 151 0074 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 152              	.LVL10:
+ 204:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 153              		.loc 1 204 25 discriminator 1 view .LVU42
+ 154 0078 3861     		str	r0, [r7, #16]
+ 206:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     m_pre_enable(motorPre.enable_out);
+ 155              		.loc 1 206 5 is_stmt 1 discriminator 1 view .LVU43
+ 156 007a 2A7B     		ldrb	r2, [r5, #12]	@ zero_extendqisi2
+ 157 007c 0221     		movs	r1, #2
+ 158 007e 4FF09040 		mov	r0, #1207959552
+ 159 0082 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 160              	.LVL11:
+ 207:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****     // a_pre_enable(arrayPre.enable_out);
+ 161              		.loc 1 207 5 discriminator 1 view .LVU44
+ 162 0086 227C     		ldrb	r2, [r4, #16]	@ zero_extendqisi2
+ 163 0088 0821     		movs	r1, #8
+ 164 008a 3046     		mov	r0, r6
+ 165 008c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 166              	.LVL12:
+ 209:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 167              		.loc 1 209 5 discriminator 1 view .LVU45
+ 168 0090 0122     		movs	r2, #1
+ 169 0092 4021     		movs	r1, #64
+ 170 0094 4FF09040 		mov	r0, #1207959552
+ 171 0098 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 172              	.LVL13:
+ 157:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   time = HAL_GetTick();
+ 173              		.loc 1 157 8 discriminator 1 view .LVU46
+ 174 009c B1E7     		b	.L4
+ 175              	.L7:
+ 176 009e 00BF     		.align	2
+ 177              	.L6:
+ 178 00a0 00000000 		.word	time
+ 179 00a4 00000000 		.word	motor
+ 180 00a8 00040048 		.word	1207960576
+ 181 00ac 00000000 		.word	motorPre
+ 182 00b0 00000000 		.word	arrayPre
+ 183              		.cfi_endproc
+ 184              	.LFE294:
+ 186              		.section	.text.MX_GPIO_Init,"ax",%progbits
+ 187              		.align	1
+ 188              		.syntax unified
+ 189              		.thumb
+ 190              		.thumb_func
+ 192              	MX_GPIO_Init:
+ 193              	.LFB293:
+  10:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+ 194              		.loc 1 10 32 view -0
+ 195              		.cfi_startproc
+ 196              		@ args = 0, pretend = 0, frame = 32
+ 197              		@ frame_needed = 0, uses_anonymous_args = 0
+ 198 0000 70B5     		push	{r4, r5, r6, lr}
+ 199              	.LCFI1:
+ 200              		.cfi_def_cfa_offset 16
+ 201              		.cfi_offset 4, -16
+ 202              		.cfi_offset 5, -12
+ 203              		.cfi_offset 6, -8
+ARM GAS  /tmp/ccnyBAUy.s 			page 11
+
+
+ 204              		.cfi_offset 14, -4
+ 205 0002 88B0     		sub	sp, sp, #32
+ 206              	.LCFI2:
+ 207              		.cfi_def_cfa_offset 48
+  11:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /* USER CODE BEGIN MX_GPIO_Init_1 */
+ 208              		.loc 1 11 3 view .LVU48
+  11:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   /* USER CODE BEGIN MX_GPIO_Init_1 */
+ 209              		.loc 1 11 20 is_stmt 0 view .LVU49
+ 210 0004 0024     		movs	r4, #0
+ 211 0006 0394     		str	r4, [sp, #12]
+ 212 0008 0494     		str	r4, [sp, #16]
+ 213 000a 0594     		str	r4, [sp, #20]
+ 214 000c 0694     		str	r4, [sp, #24]
+ 215 000e 0794     		str	r4, [sp, #28]
+  16:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+ 216              		.loc 1 16 3 is_stmt 1 view .LVU50
+ 217              	.LBB2:
+  16:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+ 218              		.loc 1 16 3 view .LVU51
+  16:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+ 219              		.loc 1 16 3 view .LVU52
+ 220 0010 274B     		ldr	r3, .L10
+ 221 0012 DA6C     		ldr	r2, [r3, #76]
+ 222 0014 42F00402 		orr	r2, r2, #4
+ 223 0018 DA64     		str	r2, [r3, #76]
+  16:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+ 224              		.loc 1 16 3 view .LVU53
+ 225 001a DA6C     		ldr	r2, [r3, #76]
+ 226 001c 02F00402 		and	r2, r2, #4
+ 227 0020 0092     		str	r2, [sp]
+  16:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+ 228              		.loc 1 16 3 view .LVU54
+ 229 0022 009A     		ldr	r2, [sp]
+ 230              	.LBE2:
+  16:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+ 231              		.loc 1 16 3 view .LVU55
+  17:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   __HAL_RCC_GPIOB_CLK_ENABLE();
+ 232              		.loc 1 17 3 view .LVU56
+ 233              	.LBB3:
+  17:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   __HAL_RCC_GPIOB_CLK_ENABLE();
+ 234              		.loc 1 17 3 view .LVU57
+  17:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   __HAL_RCC_GPIOB_CLK_ENABLE();
+ 235              		.loc 1 17 3 view .LVU58
+ 236 0024 DA6C     		ldr	r2, [r3, #76]
+ 237 0026 42F00102 		orr	r2, r2, #1
+ 238 002a DA64     		str	r2, [r3, #76]
+  17:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   __HAL_RCC_GPIOB_CLK_ENABLE();
+ 239              		.loc 1 17 3 view .LVU59
+ 240 002c DA6C     		ldr	r2, [r3, #76]
+ 241 002e 02F00102 		and	r2, r2, #1
+ 242 0032 0192     		str	r2, [sp, #4]
+  17:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   __HAL_RCC_GPIOB_CLK_ENABLE();
+ 243              		.loc 1 17 3 view .LVU60
+ 244 0034 019A     		ldr	r2, [sp, #4]
+ 245              	.LBE3:
+  17:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   __HAL_RCC_GPIOB_CLK_ENABLE();
+ 246              		.loc 1 17 3 view .LVU61
+ARM GAS  /tmp/ccnyBAUy.s 			page 12
+
+
+  18:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 247              		.loc 1 18 3 view .LVU62
+ 248              	.LBB4:
+  18:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 249              		.loc 1 18 3 view .LVU63
+  18:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 250              		.loc 1 18 3 view .LVU64
+ 251 0036 DA6C     		ldr	r2, [r3, #76]
+ 252 0038 42F00202 		orr	r2, r2, #2
+ 253 003c DA64     		str	r2, [r3, #76]
+  18:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 254              		.loc 1 18 3 view .LVU65
+ 255 003e DB6C     		ldr	r3, [r3, #76]
+ 256 0040 03F00203 		and	r3, r3, #2
+ 257 0044 0293     		str	r3, [sp, #8]
+  18:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 258              		.loc 1 18 3 view .LVU66
+ 259 0046 029B     		ldr	r3, [sp, #8]
+ 260              	.LBE4:
+  18:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 261              		.loc 1 18 3 view .LVU67
+  21:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****                     GPIO_PIN_RESET);
+ 262              		.loc 1 21 3 view .LVU68
+ 263 0048 2246     		mov	r2, r4
+ 264 004a 4221     		movs	r1, #66
+ 265 004c 4FF09040 		mov	r0, #1207959552
+ 266 0050 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 267              	.LVL14:
+  25:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 268              		.loc 1 25 3 view .LVU69
+ 269 0054 174D     		ldr	r5, .L10+4
+ 270 0056 2246     		mov	r2, r4
+ 271 0058 0821     		movs	r1, #8
+ 272 005a 2846     		mov	r0, r5
+ 273 005c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 274              	.LVL15:
+  29:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****       GPIO_PIN_0 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_7 | GPIO_PIN_9 | GPIO_PIN_10;
+ 275              		.loc 1 29 3 view .LVU70
+  29:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****       GPIO_PIN_0 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_7 | GPIO_PIN_9 | GPIO_PIN_10;
+ 276              		.loc 1 29 23 is_stmt 0 view .LVU71
+ 277 0060 40F29D63 		movw	r3, #1693
+ 278 0064 0393     		str	r3, [sp, #12]
+  31:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 279              		.loc 1 31 3 is_stmt 1 view .LVU72
+  31:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 280              		.loc 1 31 24 is_stmt 0 view .LVU73
+ 281 0066 0494     		str	r4, [sp, #16]
+  32:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 282              		.loc 1 32 3 is_stmt 1 view .LVU74
+  32:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 283              		.loc 1 32 24 is_stmt 0 view .LVU75
+ 284 0068 0594     		str	r4, [sp, #20]
+  33:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 285              		.loc 1 33 3 is_stmt 1 view .LVU76
+ 286 006a 03A9     		add	r1, sp, #12
+ 287 006c 4FF09040 		mov	r0, #1207959552
+ 288 0070 FFF7FEFF 		bl	HAL_GPIO_Init
+ARM GAS  /tmp/ccnyBAUy.s 			page 13
+
+
+ 289              	.LVL16:
+  36:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 290              		.loc 1 36 3 view .LVU77
+  36:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 291              		.loc 1 36 23 is_stmt 0 view .LVU78
+ 292 0074 4223     		movs	r3, #66
+ 293 0076 0393     		str	r3, [sp, #12]
+  37:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 294              		.loc 1 37 3 is_stmt 1 view .LVU79
+  37:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 295              		.loc 1 37 24 is_stmt 0 view .LVU80
+ 296 0078 0126     		movs	r6, #1
+ 297 007a 0496     		str	r6, [sp, #16]
+  38:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 298              		.loc 1 38 3 is_stmt 1 view .LVU81
+  38:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 299              		.loc 1 38 24 is_stmt 0 view .LVU82
+ 300 007c 0594     		str	r4, [sp, #20]
+  39:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 301              		.loc 1 39 3 is_stmt 1 view .LVU83
+  39:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 302              		.loc 1 39 25 is_stmt 0 view .LVU84
+ 303 007e 0694     		str	r4, [sp, #24]
+  40:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 304              		.loc 1 40 3 is_stmt 1 view .LVU85
+ 305 0080 03A9     		add	r1, sp, #12
+ 306 0082 4FF09040 		mov	r0, #1207959552
+ 307 0086 FFF7FEFF 		bl	HAL_GPIO_Init
+ 308              	.LVL17:
+  51:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 309              		.loc 1 51 3 view .LVU86
+  51:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 310              		.loc 1 51 23 is_stmt 0 view .LVU87
+ 311 008a 0823     		movs	r3, #8
+ 312 008c 0393     		str	r3, [sp, #12]
+  52:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 313              		.loc 1 52 3 is_stmt 1 view .LVU88
+  52:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 314              		.loc 1 52 24 is_stmt 0 view .LVU89
+ 315 008e 0496     		str	r6, [sp, #16]
+  53:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 316              		.loc 1 53 3 is_stmt 1 view .LVU90
+  53:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 317              		.loc 1 53 24 is_stmt 0 view .LVU91
+ 318 0090 0594     		str	r4, [sp, #20]
+  54:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_GPIO_Init(LD3_GPIO_Port, &GPIO_InitStruct);
+ 319              		.loc 1 54 3 is_stmt 1 view .LVU92
+  54:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_GPIO_Init(LD3_GPIO_Port, &GPIO_InitStruct);
+ 320              		.loc 1 54 25 is_stmt 0 view .LVU93
+ 321 0092 0694     		str	r4, [sp, #24]
+  55:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 322              		.loc 1 55 3 is_stmt 1 view .LVU94
+ 323 0094 03A9     		add	r1, sp, #12
+ 324 0096 2846     		mov	r0, r5
+ 325 0098 FFF7FEFF 		bl	HAL_GPIO_Init
+ 326              	.LVL18:
+  58:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ARM GAS  /tmp/ccnyBAUy.s 			page 14
+
+
+ 327              		.loc 1 58 3 view .LVU95
+  58:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 328              		.loc 1 58 23 is_stmt 0 view .LVU96
+ 329 009c 3023     		movs	r3, #48
+ 330 009e 0393     		str	r3, [sp, #12]
+  59:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 331              		.loc 1 59 3 is_stmt 1 view .LVU97
+  59:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 332              		.loc 1 59 24 is_stmt 0 view .LVU98
+ 333 00a0 0494     		str	r4, [sp, #16]
+  60:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 334              		.loc 1 60 3 is_stmt 1 view .LVU99
+  60:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 335              		.loc 1 60 24 is_stmt 0 view .LVU100
+ 336 00a2 0594     		str	r4, [sp, #20]
+  61:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 337              		.loc 1 61 3 is_stmt 1 view .LVU101
+ 338 00a4 03A9     		add	r1, sp, #12
+ 339 00a6 2846     		mov	r0, r5
+ 340 00a8 FFF7FEFF 		bl	HAL_GPIO_Init
+ 341              	.LVL19:
+  65:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 342              		.loc 1 65 1 is_stmt 0 view .LVU102
+ 343 00ac 08B0     		add	sp, sp, #32
+ 344              	.LCFI3:
+ 345              		.cfi_def_cfa_offset 16
+ 346              		@ sp needed
+ 347 00ae 70BD     		pop	{r4, r5, r6, pc}
+ 348              	.L11:
+ 349              		.align	2
+ 350              	.L10:
+ 351 00b0 00100240 		.word	1073876992
+ 352 00b4 00040048 		.word	1207960576
+ 353              		.cfi_endproc
+ 354              	.LFE293:
+ 356              		.section	.rodata.main.str1.4,"aMS",%progbits,1
+ 357              		.align	2
+ 358              	.LC0:
+ 359 0000 636F6E74 		.ascii	"contactor task\000"
+ 359      6163746F 
+ 359      72207461 
+ 359      736B00
+ 360              		.section	.text.main,"ax",%progbits
+ 361              		.align	1
+ 362              		.global	main
+ 363              		.syntax unified
+ 364              		.thumb
+ 365              		.thumb_func
+ 367              	main:
+ 368              	.LFB296:
+ 328:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** }
+ 329:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 330:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** int main() {
+ 369              		.loc 1 330 12 is_stmt 1 view -0
+ 370              		.cfi_startproc
+ 371              		@ Volatile: function does not return.
+ 372              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/ccnyBAUy.s 			page 15
+
+
+ 373              		@ frame_needed = 0, uses_anonymous_args = 0
+ 374 0000 00B5     		push	{lr}
+ 375              	.LCFI4:
+ 376              		.cfi_def_cfa_offset 4
+ 377              		.cfi_offset 14, -4
+ 378 0002 85B0     		sub	sp, sp, #20
+ 379              	.LCFI5:
+ 380              		.cfi_def_cfa_offset 24
+ 331:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_Init();
+ 381              		.loc 1 331 3 view .LVU104
+ 382 0004 FFF7FEFF 		bl	HAL_Init
+ 383              	.LVL20:
+ 332:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   HAL_MspInit();
+ 384              		.loc 1 332 3 view .LVU105
+ 385 0008 FFF7FEFF 		bl	HAL_MspInit
+ 386              	.LVL21:
+ 333:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   MX_GPIO_Init();
+ 387              		.loc 1 333 3 view .LVU106
+ 388 000c FFF7FEFF 		bl	MX_GPIO_Init
+ 389              	.LVL22:
+ 334:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 335:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // __HAL_RCC_GPIOB_CLK_ENABLE(); // enable clock for GPIOA
+ 336:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // HAL_GPIO_Init(GPIOB, &led_config); // initialize GPIOA with led_config
+ 337:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 338:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // while(1){
+ 339:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //     // HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_3);
+ 340:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //     // update
+ 341:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 342:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //     // error: send can error message
+ 343:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   //     HAL_Delay(1000);
+ 344:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   // }
+ 345:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   xTaskCreateStatic(contactorTask, "contactor task", configMINIMAL_STACK_SIZE,
+ 390              		.loc 1 345 3 view .LVU107
+ 391 0010 074B     		ldr	r3, .L14
+ 392 0012 0293     		str	r3, [sp, #8]
+ 393 0014 074B     		ldr	r3, .L14+4
+ 394 0016 0193     		str	r3, [sp, #4]
+ 395 0018 0223     		movs	r3, #2
+ 396 001a 0093     		str	r3, [sp]
+ 397 001c 0023     		movs	r3, #0
+ 398 001e 8022     		movs	r2, #128
+ 399 0020 0549     		ldr	r1, .L14+8
+ 400 0022 0648     		ldr	r0, .L14+12
+ 401 0024 FFF7FEFF 		bl	xTaskCreateStatic
+ 402              	.LVL23:
+ 346:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****                     NULL, tskIDLE_PRIORITY + 2, task_stack, &task_buffer);
+ 347:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 348:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   vTaskStartScheduler();
+ 403              		.loc 1 348 3 view .LVU108
+ 404 0028 FFF7FEFF 		bl	vTaskStartScheduler
+ 405              	.LVL24:
+ 349:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c **** 
+ 350:/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c ****   error_handler();
+ 406              		.loc 1 350 3 view .LVU109
+ 407 002c FFF7FEFF 		bl	error_handler
+ 408              	.LVL25:
+ 409              	.L15:
+ARM GAS  /tmp/ccnyBAUy.s 			page 16
+
+
+ 410              		.align	2
+ 411              	.L14:
+ 412 0030 00000000 		.word	task_buffer
+ 413 0034 00000000 		.word	task_stack
+ 414 0038 00000000 		.word	.LC0
+ 415 003c 00000000 		.word	contactorTask
+ 416              		.cfi_endproc
+ 417              	.LFE296:
+ 419              		.global	task_stack
+ 420              		.section	.bss.task_stack,"aw",%nobits
+ 421              		.align	2
+ 424              	task_stack:
+ 425 0000 00000000 		.space	512
+ 425      00000000 
+ 425      00000000 
+ 425      00000000 
+ 425      00000000 
+ 426              		.global	task_buffer
+ 427              		.section	.bss.task_buffer,"aw",%nobits
+ 428              		.align	2
+ 431              	task_buffer:
+ 432 0000 00000000 		.space	84
+ 432      00000000 
+ 432      00000000 
+ 432      00000000 
+ 432      00000000 
+ 433              		.global	cycles
+ 434              		.section	.bss.cycles,"aw",%nobits
+ 435              		.align	2
+ 438              	cycles:
+ 439 0000 00000000 		.space	4
+ 440              		.global	on
+ 441              		.section	.data.on,"aw"
+ 442              		.align	2
+ 445              	on:
+ 446 0000 01000000 		.word	1
+ 447              		.global	fault
+ 448              		.section	.bss.fault,"aw",%nobits
+ 449              		.align	2
+ 452              	fault:
+ 453 0000 00000000 		.space	4
+ 454              		.global	moco_fault
+ 455              		.section	.bss.moco_fault,"aw",%nobits
+ 456              		.align	2
+ 459              	moco_fault:
+ 460 0000 00000000 		.space	4
+ 461              		.global	BPS_safe
+ 462              		.section	.bss.BPS_safe,"aw",%nobits
+ 463              		.align	2
+ 466              	BPS_safe:
+ 467 0000 00000000 		.space	4
+ 468              		.global	time
+ 469              		.section	.bss.time,"aw",%nobits
+ 470              		.align	2
+ 473              	time:
+ 474 0000 00000000 		.space	4
+ 475              		.global	arrayPre
+ARM GAS  /tmp/ccnyBAUy.s 			page 17
+
+
+ 476              		.section	.bss.arrayPre,"aw",%nobits
+ 477              		.align	2
+ 480              	arrayPre:
+ 481 0000 00000000 		.space	32
+ 481      00000000 
+ 481      00000000 
+ 481      00000000 
+ 481      00000000 
+ 482              		.global	motorPre
+ 483              		.section	.bss.motorPre,"aw",%nobits
+ 484              		.align	2
+ 487              	motorPre:
+ 488 0000 00000000 		.space	32
+ 488      00000000 
+ 488      00000000 
+ 488      00000000 
+ 488      00000000 
+ 489              		.global	motor
+ 490              		.section	.bss.motor,"aw",%nobits
+ 491              		.align	2
+ 494              	motor:
+ 495 0000 00000000 		.space	28
+ 495      00000000 
+ 495      00000000 
+ 495      00000000 
+ 495      00000000 
+ 496              		.text
+ 497              	.Letext0:
+ 498              		.file 2 "/usr/share/arm-gnu-toolchain/arm-none-eabi/include/machine/_default_types.h"
+ 499              		.file 3 "/usr/share/arm-gnu-toolchain/arm-none-eabi/include/sys/_stdint.h"
+ 500              		.file 4 "stm/stm32l4xx/CMSIS/Device/ST/STM32L4xx/Include/stm32l432xx.h"
+ 501              		.file 5 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 502              		.file 6 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 503              		.file 7 "FreeRTOS-Kernel/include/projdefs.h"
+ 504              		.file 8 "FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h"
+ 505              		.file 9 "FreeRTOS-Kernel/include/FreeRTOS.h"
+ 506              		.file 10 "FreeRTOS-Kernel/include/task.h"
+ 507              		.file 11 "common/Inc/stm32x4xx_hal_init.h"
+ 508              		.file 12 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ARM GAS  /tmp/ccnyBAUy.s 			page 18
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 contactor.c
+     /tmp/ccnyBAUy.s:21     .text.error_handler:0000000000000000 $t
+     /tmp/ccnyBAUy.s:26     .text.error_handler:0000000000000000 error_handler
+     /tmp/ccnyBAUy.s:43     .text.contactorTask:0000000000000000 $t
+     /tmp/ccnyBAUy.s:48     .text.contactorTask:0000000000000000 contactorTask
+     /tmp/ccnyBAUy.s:178    .text.contactorTask:00000000000000a0 $d
+     /tmp/ccnyBAUy.s:473    .bss.time:0000000000000000 time
+     /tmp/ccnyBAUy.s:494    .bss.motor:0000000000000000 motor
+     /tmp/ccnyBAUy.s:487    .bss.motorPre:0000000000000000 motorPre
+     /tmp/ccnyBAUy.s:480    .bss.arrayPre:0000000000000000 arrayPre
+     /tmp/ccnyBAUy.s:187    .text.MX_GPIO_Init:0000000000000000 $t
+     /tmp/ccnyBAUy.s:192    .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
+     /tmp/ccnyBAUy.s:351    .text.MX_GPIO_Init:00000000000000b0 $d
+     /tmp/ccnyBAUy.s:357    .rodata.main.str1.4:0000000000000000 $d
+     /tmp/ccnyBAUy.s:361    .text.main:0000000000000000 $t
+     /tmp/ccnyBAUy.s:367    .text.main:0000000000000000 main
+     /tmp/ccnyBAUy.s:412    .text.main:0000000000000030 $d
+     /tmp/ccnyBAUy.s:431    .bss.task_buffer:0000000000000000 task_buffer
+     /tmp/ccnyBAUy.s:424    .bss.task_stack:0000000000000000 task_stack
+     /tmp/ccnyBAUy.s:421    .bss.task_stack:0000000000000000 $d
+     /tmp/ccnyBAUy.s:428    .bss.task_buffer:0000000000000000 $d
+     /tmp/ccnyBAUy.s:438    .bss.cycles:0000000000000000 cycles
+     /tmp/ccnyBAUy.s:435    .bss.cycles:0000000000000000 $d
+     /tmp/ccnyBAUy.s:445    .data.on:0000000000000000 on
+     /tmp/ccnyBAUy.s:442    .data.on:0000000000000000 $d
+     /tmp/ccnyBAUy.s:452    .bss.fault:0000000000000000 fault
+     /tmp/ccnyBAUy.s:449    .bss.fault:0000000000000000 $d
+     /tmp/ccnyBAUy.s:459    .bss.moco_fault:0000000000000000 moco_fault
+     /tmp/ccnyBAUy.s:456    .bss.moco_fault:0000000000000000 $d
+     /tmp/ccnyBAUy.s:466    .bss.BPS_safe:0000000000000000 BPS_safe
+     /tmp/ccnyBAUy.s:463    .bss.BPS_safe:0000000000000000 $d
+     /tmp/ccnyBAUy.s:470    .bss.time:0000000000000000 $d
+     /tmp/ccnyBAUy.s:477    .bss.arrayPre:0000000000000000 $d
+     /tmp/ccnyBAUy.s:484    .bss.motorPre:0000000000000000 $d
+     /tmp/ccnyBAUy.s:491    .bss.motor:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+HAL_GetTick
+HAL_GPIO_ReadPin
+HAL_GPIO_WritePin
+HAL_GPIO_Init
+HAL_Init
+HAL_MspInit
+xTaskCreateStatic
+vTaskStartScheduler
