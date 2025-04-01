@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccrRI83F.s 			page 1
+ARM GAS  /tmp/ccvUZatd.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccrRI83F.s 			page 1
   10:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * SPDX-License-Identifier: Apache-2.0
   11:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  *
   12:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
-ARM GAS  /tmp/ccrRI83F.s 			page 2
+ARM GAS  /tmp/ccvUZatd.s 			page 2
 
 
   13:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * not use this file except in compliance with the License.
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccrRI83F.s 			page 1
   67:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_UNION
   68:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
   69:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  /tmp/ccrRI83F.s 			page 3
+ARM GAS  /tmp/ccvUZatd.s 			page 3
 
 
   70:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccrRI83F.s 			page 1
  124:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /**
  125:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \brief   Initializes data and bss sections
  126:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \details This default implementations initialized all data and additional bss
-ARM GAS  /tmp/ccrRI83F.s 			page 4
+ARM GAS  /tmp/ccvUZatd.s 			page 4
 
 
  127:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****            sections relying on .copy.table and .zero.table specified properly
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccrRI83F.s 			page 1
  181:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __VECTOR_TABLE_ATTRIBUTE
  182:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __VECTOR_TABLE_ATTRIBUTE  __attribute((used, section(".vectors")))
  183:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  /tmp/ccrRI83F.s 			page 5
+ARM GAS  /tmp/ccvUZatd.s 			page 5
 
 
  184:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccrRI83F.s 			page 1
   64              	HAL_MspInit:
   65              	.LFB289:
   13:stm/stm32l4xx/stm32l4xx_hal_init.c **** }
-ARM GAS  /tmp/ccrRI83F.s 			page 6
+ARM GAS  /tmp/ccvUZatd.s 			page 6
 
 
   14:stm/stm32l4xx/stm32l4xx_hal_init.c **** 
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccrRI83F.s 			page 1
   26:stm/stm32l4xx/stm32l4xx_hal_init.c ****   HAL_NVIC_SetPriority(PendSV_IRQn, 15, 0);
  108              		.loc 1 26 3 view .LVU20
  109 002a 0022     		movs	r2, #0
-ARM GAS  /tmp/ccrRI83F.s 			page 7
+ARM GAS  /tmp/ccvUZatd.s 			page 7
 
 
  110 002c 0F21     		movs	r1, #15
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccrRI83F.s 			page 1
  156 000e 0023     		movs	r3, #0
  157 0010 0093     		str	r3, [sp]
  158 0012 0193     		str	r3, [sp, #4]
-ARM GAS  /tmp/ccrRI83F.s 			page 8
+ARM GAS  /tmp/ccvUZatd.s 			page 8
 
 
  159 0014 0293     		str	r3, [sp, #8]
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccrRI83F.s 			page 1
   55:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_OscInitStruct.PLL.PLLN = 40;
  195              		.loc 1 55 3 is_stmt 1 view .LVU44
  196              		.loc 1 55 30 is_stmt 0 view .LVU45
-ARM GAS  /tmp/ccrRI83F.s 			page 9
+ARM GAS  /tmp/ccvUZatd.s 			page 9
 
 
  197 003c 2822     		movs	r2, #40
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccrRI83F.s 			page 1
   73:stm/stm32l4xx/stm32l4xx_hal_init.c ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
  234              		.loc 1 73 3 is_stmt 1 view .LVU65
  235              		.loc 1 73 7 is_stmt 0 view .LVU66
-ARM GAS  /tmp/ccrRI83F.s 			page 10
+ARM GAS  /tmp/ccvUZatd.s 			page 10
 
 
  236 0060 0421     		movs	r1, #4
@@ -587,18 +587,18 @@ ARM GAS  /tmp/ccrRI83F.s 			page 1
  273              		.file 8 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h"
  274              		.file 9 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h"
  275              		.file 10 "<built-in>"
-ARM GAS  /tmp/ccrRI83F.s 			page 11
+ARM GAS  /tmp/ccvUZatd.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_init.c
-     /tmp/ccrRI83F.s:21     .text.Error_Handler:0000000000000000 $t
-     /tmp/ccrRI83F.s:26     .text.Error_Handler:0000000000000000 Error_Handler
-     /tmp/ccrRI83F.s:58     .text.HAL_MspInit:0000000000000000 $t
-     /tmp/ccrRI83F.s:64     .text.HAL_MspInit:0000000000000000 HAL_MspInit
-     /tmp/ccrRI83F.s:123    .text.HAL_MspInit:000000000000003c $d
-     /tmp/ccrRI83F.s:128    .text.SystemClock_Config:0000000000000000 $t
-     /tmp/ccrRI83F.s:134    .text.SystemClock_Config:0000000000000000 SystemClock_Config
+     /tmp/ccvUZatd.s:21     .text.Error_Handler:0000000000000000 $t
+     /tmp/ccvUZatd.s:26     .text.Error_Handler:0000000000000000 Error_Handler
+     /tmp/ccvUZatd.s:58     .text.HAL_MspInit:0000000000000000 $t
+     /tmp/ccvUZatd.s:64     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+     /tmp/ccvUZatd.s:123    .text.HAL_MspInit:000000000000003c $d
+     /tmp/ccvUZatd.s:128    .text.SystemClock_Config:0000000000000000 $t
+     /tmp/ccvUZatd.s:134    .text.SystemClock_Config:0000000000000000 SystemClock_Config
 
 UNDEFINED SYMBOLS
 HAL_NVIC_SetPriority

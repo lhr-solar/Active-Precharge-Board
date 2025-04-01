@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccwt3kCc.s 			page 1
+ARM GAS  /tmp/ccJw1tyY.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
   28:FreeRTOS-Kernel/tasks.c **** 
   29:FreeRTOS-Kernel/tasks.c **** /* Standard includes. */
   30:FreeRTOS-Kernel/tasks.c **** #include <stdlib.h>
-ARM GAS  /tmp/ccwt3kCc.s 			page 2
+ARM GAS  /tmp/ccJw1tyY.s 			page 2
 
 
   31:FreeRTOS-Kernel/tasks.c **** #include <string.h>
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
   85:FreeRTOS-Kernel/tasks.c ****     } while( 0 )
   86:FreeRTOS-Kernel/tasks.c **** 
   87:FreeRTOS-Kernel/tasks.c ****         #define taskYIELD_ANY_CORE_IF_USING_PREEMPTION( pxTCB ) \
-ARM GAS  /tmp/ccwt3kCc.s 			page 3
+ARM GAS  /tmp/ccJw1tyY.s 			page 3
 
 
   88:FreeRTOS-Kernel/tasks.c ****     do {                                                        \
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  142:FreeRTOS-Kernel/tasks.c **** #define tskDELETED_CHAR      ( 'D' )
  143:FreeRTOS-Kernel/tasks.c **** #define tskSUSPENDED_CHAR    ( 'S' )
  144:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 4
+ARM GAS  /tmp/ccJw1tyY.s 			page 4
 
 
  145:FreeRTOS-Kernel/tasks.c **** /*
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  199:FreeRTOS-Kernel/tasks.c **** 
  200:FreeRTOS-Kernel/tasks.c **** /*-----------------------------------------------------------*/
  201:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 5
+ARM GAS  /tmp/ccJw1tyY.s 			page 5
 
 
  202:FreeRTOS-Kernel/tasks.c **** /* Define away taskRESET_READY_PRIORITY() and portRESET_READY_PRIORITY() as
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  256:FreeRTOS-Kernel/tasks.c ****         pxDelayedTaskList = pxOverflowDelayedTaskList;                            \
  257:FreeRTOS-Kernel/tasks.c ****         pxOverflowDelayedTaskList = pxTemp;                                       \
  258:FreeRTOS-Kernel/tasks.c ****         xNumOfOverflows = ( BaseType_t ) ( xNumOfOverflows + 1 );                 \
-ARM GAS  /tmp/ccwt3kCc.s 			page 6
+ARM GAS  /tmp/ccJw1tyY.s 			page 6
 
 
  259:FreeRTOS-Kernel/tasks.c ****         prvResetNextTaskUnblockTime();                                            \
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  313:FreeRTOS-Kernel/tasks.c ****     #define taskTASK_IS_RUNNING_OR_SCHEDULED_TO_YIELD( pxTCB )    ( ( ( pxTCB )->xTaskRunState != t
  314:FreeRTOS-Kernel/tasks.c **** #endif
  315:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 7
+ARM GAS  /tmp/ccJw1tyY.s 			page 7
 
 
  316:FreeRTOS-Kernel/tasks.c **** /* Indicates that the task is an Idle task. */
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  370:FreeRTOS-Kernel/tasks.c ****     ListItem_t xStateListItem;                  /**< The list that the state list item of a task is
  371:FreeRTOS-Kernel/tasks.c ****     ListItem_t xEventListItem;                  /**< Used to reference a task from an event list. *
  372:FreeRTOS-Kernel/tasks.c ****     UBaseType_t uxPriority;                     /**< The priority of the task.  0 is the lowest pri
-ARM GAS  /tmp/ccwt3kCc.s 			page 8
+ARM GAS  /tmp/ccJw1tyY.s 			page 8
 
 
  373:FreeRTOS-Kernel/tasks.c ****     StackType_t * pxStack;                      /**< Points to the start of the stack. */
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  427:FreeRTOS-Kernel/tasks.c ****     #endif
  428:FreeRTOS-Kernel/tasks.c **** 
  429:FreeRTOS-Kernel/tasks.c ****     #if ( INCLUDE_xTaskAbortDelay == 1 )
-ARM GAS  /tmp/ccwt3kCc.s 			page 9
+ARM GAS  /tmp/ccJw1tyY.s 			page 9
 
 
  430:FreeRTOS-Kernel/tasks.c ****         uint8_t ucDelayAborted;
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  484:FreeRTOS-Kernel/tasks.c **** 
  485:FreeRTOS-Kernel/tasks.c **** /* Other file private variables. --------------------------------*/
  486:FreeRTOS-Kernel/tasks.c **** PRIVILEGED_DATA static volatile UBaseType_t uxCurrentNumberOfTasks = ( UBaseType_t ) 0U;
-ARM GAS  /tmp/ccwt3kCc.s 			page 10
+ARM GAS  /tmp/ccJw1tyY.s 			page 10
 
 
  487:FreeRTOS-Kernel/tasks.c **** PRIVILEGED_DATA static volatile TickType_t xTickCount = ( TickType_t ) configINITIAL_TICK_COUNT;
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  541:FreeRTOS-Kernel/tasks.c **** #endif /* #if ( configNUMBER_OF_CORES > 1 ) */
  542:FreeRTOS-Kernel/tasks.c **** 
  543:FreeRTOS-Kernel/tasks.c **** #if ( configNUMBER_OF_CORES > 1 )
-ARM GAS  /tmp/ccwt3kCc.s 			page 11
+ARM GAS  /tmp/ccJw1tyY.s 			page 11
 
 
  544:FreeRTOS-Kernel/tasks.c **** 
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  598:FreeRTOS-Kernel/tasks.c **** /*
  599:FreeRTOS-Kernel/tasks.c ****  * Utility to free all memory allocated by the scheduler to hold a TCB,
  600:FreeRTOS-Kernel/tasks.c ****  * including the stack pointed to by the TCB.
-ARM GAS  /tmp/ccwt3kCc.s 			page 12
+ARM GAS  /tmp/ccJw1tyY.s 			page 12
 
 
  601:FreeRTOS-Kernel/tasks.c ****  *
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  655:FreeRTOS-Kernel/tasks.c ****  * determining how much of the stack remains at the original preset value.
  656:FreeRTOS-Kernel/tasks.c ****  */
  657:FreeRTOS-Kernel/tasks.c **** #if ( ( configUSE_TRACE_FACILITY == 1 ) || ( INCLUDE_uxTaskGetStackHighWaterMark == 1 ) || ( INCLUD
-ARM GAS  /tmp/ccwt3kCc.s 			page 13
+ARM GAS  /tmp/ccJw1tyY.s 			page 13
 
 
  658:FreeRTOS-Kernel/tasks.c **** 
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  712:FreeRTOS-Kernel/tasks.c **** static void prvAddNewTaskToReadyList( TCB_t * pxNewTCB ) PRIVILEGED_FUNCTION;
  713:FreeRTOS-Kernel/tasks.c **** 
  714:FreeRTOS-Kernel/tasks.c **** /*
-ARM GAS  /tmp/ccwt3kCc.s 			page 14
+ARM GAS  /tmp/ccJw1tyY.s 			page 14
 
 
  715:FreeRTOS-Kernel/tasks.c ****  * Create a task with static buffer for both TCB and stack. Returns a handle to
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  769:FreeRTOS-Kernel/tasks.c **** 
  770:FreeRTOS-Kernel/tasks.c **** #endif
  771:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 15
+ARM GAS  /tmp/ccJw1tyY.s 			page 15
 
 
  772:FreeRTOS-Kernel/tasks.c **** #if ( configUSE_PASSIVE_IDLE_HOOK == 1 )
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  826:FreeRTOS-Kernel/tasks.c ****             * if our state changed again during the reacquisition. */
  827:FreeRTOS-Kernel/tasks.c ****             uxPrevCriticalNesting = portGET_CRITICAL_NESTING_COUNT();
  828:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 16
+ARM GAS  /tmp/ccJw1tyY.s 			page 16
 
 
  829:FreeRTOS-Kernel/tasks.c ****             if( uxPrevCriticalNesting > 0U )
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  883:FreeRTOS-Kernel/tasks.c ****         #if ( configRUN_MULTIPLE_PRIORITIES == 0 )
  884:FreeRTOS-Kernel/tasks.c **** 
  885:FreeRTOS-Kernel/tasks.c ****             /* No task should yield for this one if it is a lower priority
-ARM GAS  /tmp/ccwt3kCc.s 			page 17
+ARM GAS  /tmp/ccJw1tyY.s 			page 17
 
 
  886:FreeRTOS-Kernel/tasks.c ****              * than priority level of currently ready tasks. */
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  940:FreeRTOS-Kernel/tasks.c ****                         if( ( xCurrentCoreTaskPriority > ( ( BaseType_t ) tskIDLE_PRIORITY - 1 ) ) 
  941:FreeRTOS-Kernel/tasks.c ****                             ( xCurrentCoreTaskPriority < ( BaseType_t ) pxTCB->uxPriority ) )
  942:FreeRTOS-Kernel/tasks.c ****                         {
-ARM GAS  /tmp/ccwt3kCc.s 			page 18
+ARM GAS  /tmp/ccJw1tyY.s 			page 18
 
 
  943:FreeRTOS-Kernel/tasks.c ****                             prvYieldCore( xCoreID );
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  997:FreeRTOS-Kernel/tasks.c ****         /* This function should be called when scheduler is running. */
  998:FreeRTOS-Kernel/tasks.c ****         configASSERT( xSchedulerRunning == pdTRUE );
  999:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 19
+ARM GAS  /tmp/ccJw1tyY.s 			page 19
 
 
 1000:FreeRTOS-Kernel/tasks.c ****         /* A new task is created and a running task with the same priority yields
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1054:FreeRTOS-Kernel/tasks.c ****                         if( uxCurrentPriority < uxTopReadyPriority )
 1055:FreeRTOS-Kernel/tasks.c ****                         {
 1056:FreeRTOS-Kernel/tasks.c ****                             if( ( pxTCB->uxTaskAttributes & taskATTRIBUTE_IS_IDLE ) == 0U )
-ARM GAS  /tmp/ccwt3kCc.s 			page 20
+ARM GAS  /tmp/ccJw1tyY.s 			page 20
 
 
 1057:FreeRTOS-Kernel/tasks.c ****                             {
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1111:FreeRTOS-Kernel/tasks.c ****                     #if ( configRUN_MULTIPLE_PRIORITIES == 0 )
 1112:FreeRTOS-Kernel/tasks.c ****                     {
 1113:FreeRTOS-Kernel/tasks.c ****                         xPriorityDropped = pdTRUE;
-ARM GAS  /tmp/ccwt3kCc.s 			page 21
+ARM GAS  /tmp/ccJw1tyY.s 			page 21
 
 
 1114:FreeRTOS-Kernel/tasks.c ****                     }
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1168:FreeRTOS-Kernel/tasks.c ****                     BaseType_t xLowestPriorityCore = -1;
 1169:FreeRTOS-Kernel/tasks.c ****                     BaseType_t x;
 1170:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 22
+ARM GAS  /tmp/ccJw1tyY.s 			page 22
 
 
 1171:FreeRTOS-Kernel/tasks.c ****                     if( ( pxPreviousTCB->uxTaskAttributes & taskATTRIBUTE_IS_IDLE ) != 0U )
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1225:FreeRTOS-Kernel/tasks.c ****                                 ( xYieldPendings[ uxCore ] == pdFALSE ) )
 1226:FreeRTOS-Kernel/tasks.c ****                             {
 1227:FreeRTOS-Kernel/tasks.c ****                                 #if ( configUSE_TASK_PREEMPTION_DISABLE == 1 )
-ARM GAS  /tmp/ccwt3kCc.s 			page 23
+ARM GAS  /tmp/ccJw1tyY.s 			page 23
 
 
 1228:FreeRTOS-Kernel/tasks.c ****                                     if( pxCurrentTCBs[ uxCore ]->xPreemptionDisable == pdFALSE )
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1282:FreeRTOS-Kernel/tasks.c ****              * function - use them. */
 1283:FreeRTOS-Kernel/tasks.c ****             /* MISRA Ref 11.3.1 [Misaligned access] */
 1284:FreeRTOS-Kernel/tasks.c ****             /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule
-ARM GAS  /tmp/ccwt3kCc.s 			page 24
+ARM GAS  /tmp/ccJw1tyY.s 			page 24
 
 
 1285:FreeRTOS-Kernel/tasks.c ****             /* coverity[misra_c_2012_rule_11_3_violation] */
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1339:FreeRTOS-Kernel/tasks.c **** 
 1340:FreeRTOS-Kernel/tasks.c ****         traceRETURN_xTaskCreateStatic( xReturn );
 1341:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 25
+ARM GAS  /tmp/ccJw1tyY.s 			page 25
 
 
 1342:FreeRTOS-Kernel/tasks.c ****         return xReturn;
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1396:FreeRTOS-Kernel/tasks.c ****              * on the implementation of the port malloc function and whether or
 1397:FreeRTOS-Kernel/tasks.c ****              * not static allocation is being used. */
 1398:FreeRTOS-Kernel/tasks.c ****             pxNewTCB = ( TCB_t * ) pxTaskDefinition->pxTaskBuffer;
-ARM GAS  /tmp/ccwt3kCc.s 			page 26
+ARM GAS  /tmp/ccJw1tyY.s 			page 26
 
 
 1399:FreeRTOS-Kernel/tasks.c ****             ( void ) memset( ( void * ) pxNewTCB, 0x00, sizeof( TCB_t ) );
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1453:FreeRTOS-Kernel/tasks.c ****         else
 1454:FreeRTOS-Kernel/tasks.c ****         {
 1455:FreeRTOS-Kernel/tasks.c ****             xReturn = errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY;
-ARM GAS  /tmp/ccwt3kCc.s 			page 27
+ARM GAS  /tmp/ccJw1tyY.s 			page 27
 
 
 1456:FreeRTOS-Kernel/tasks.c ****         }
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1510:FreeRTOS-Kernel/tasks.c ****             /* MISRA Ref 11.5.1 [Malloc memory assignment] */
 1511:FreeRTOS-Kernel/tasks.c ****             /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule
 1512:FreeRTOS-Kernel/tasks.c ****             /* coverity[misra_c_2012_rule_11_5_violation] */
-ARM GAS  /tmp/ccwt3kCc.s 			page 28
+ARM GAS  /tmp/ccJw1tyY.s 			page 28
 
 
 1513:FreeRTOS-Kernel/tasks.c ****             pxNewTCB = ( TCB_t * ) pvPortMalloc( sizeof( TCB_t ) );
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1567:FreeRTOS-Kernel/tasks.c **** 
 1568:FreeRTOS-Kernel/tasks.c ****             prvAddNewTaskToReadyList( pxNewTCB );
 1569:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 29
+ARM GAS  /tmp/ccJw1tyY.s 			page 29
 
 
 1570:FreeRTOS-Kernel/tasks.c ****             xReturn = pdPASS;
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1624:FreeRTOS-Kernel/tasks.c ****                                   UBaseType_t uxPriority,
 1625:FreeRTOS-Kernel/tasks.c ****                                   TaskHandle_t * const pxCreatedTask )
 1626:FreeRTOS-Kernel/tasks.c ****     {
-ARM GAS  /tmp/ccwt3kCc.s 			page 30
+ARM GAS  /tmp/ccJw1tyY.s 			page 30
 
 
 1627:FreeRTOS-Kernel/tasks.c ****         TCB_t * pxNewTCB;
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1681:FreeRTOS-Kernel/tasks.c ****                 {
 1682:FreeRTOS-Kernel/tasks.c ****                     ( void ) memset( ( void * ) pxNewTCB, 0x00, sizeof( TCB_t ) );
 1683:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 31
+ARM GAS  /tmp/ccJw1tyY.s 			page 31
 
 
 1684:FreeRTOS-Kernel/tasks.c ****                     /* Store the stack location in the TCB. */
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1738:FreeRTOS-Kernel/tasks.c ****             }
 1739:FreeRTOS-Kernel/tasks.c ****             #endif
 1740:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 32
+ARM GAS  /tmp/ccJw1tyY.s 			page 32
 
 
 1741:FreeRTOS-Kernel/tasks.c ****             prvAddNewTaskToReadyList( pxNewTCB );
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1795:FreeRTOS-Kernel/tasks.c ****                                   const configSTACK_DEPTH_TYPE uxStackDepth,
 1796:FreeRTOS-Kernel/tasks.c ****                                   void * const pvParameters,
 1797:FreeRTOS-Kernel/tasks.c ****                                   UBaseType_t uxPriority,
-ARM GAS  /tmp/ccwt3kCc.s 			page 33
+ARM GAS  /tmp/ccJw1tyY.s 			page 33
 
 
 1798:FreeRTOS-Kernel/tasks.c ****                                   TaskHandle_t * const pxCreatedTask,
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1852:FreeRTOS-Kernel/tasks.c **** 
 1853:FreeRTOS-Kernel/tasks.c ****         /* Check the alignment of the calculated top of stack is correct. */
 1854:FreeRTOS-Kernel/tasks.c ****         configASSERT( ( ( ( portPOINTER_SIZE_TYPE ) pxTopOfStack & ( portPOINTER_SIZE_TYPE ) portBY
-ARM GAS  /tmp/ccwt3kCc.s 			page 34
+ARM GAS  /tmp/ccJw1tyY.s 			page 34
 
 
 1855:FreeRTOS-Kernel/tasks.c **** 
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1909:FreeRTOS-Kernel/tasks.c **** 
 1910:FreeRTOS-Kernel/tasks.c ****     vListInitialiseItem( &( pxNewTCB->xStateListItem ) );
 1911:FreeRTOS-Kernel/tasks.c ****     vListInitialiseItem( &( pxNewTCB->xEventListItem ) );
-ARM GAS  /tmp/ccwt3kCc.s 			page 35
+ARM GAS  /tmp/ccJw1tyY.s 			page 35
 
 
 1912:FreeRTOS-Kernel/tasks.c **** 
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1966:FreeRTOS-Kernel/tasks.c ****     #else /* portUSING_MPU_WRAPPERS */
 1967:FreeRTOS-Kernel/tasks.c ****     {
 1968:FreeRTOS-Kernel/tasks.c ****         /* If the port has capability to detect stack overflow,
-ARM GAS  /tmp/ccwt3kCc.s 			page 36
+ARM GAS  /tmp/ccJw1tyY.s 			page 36
 
 
 1969:FreeRTOS-Kernel/tasks.c ****          * pass the stack end address to the stack initialization
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2023:FreeRTOS-Kernel/tasks.c ****         taskENTER_CRITICAL();
 2024:FreeRTOS-Kernel/tasks.c ****         {
 2025:FreeRTOS-Kernel/tasks.c ****             uxCurrentNumberOfTasks = ( UBaseType_t ) ( uxCurrentNumberOfTasks + 1U );
-ARM GAS  /tmp/ccwt3kCc.s 			page 37
+ARM GAS  /tmp/ccJw1tyY.s 			page 37
 
 
 2026:FreeRTOS-Kernel/tasks.c **** 
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2080:FreeRTOS-Kernel/tasks.c ****         }
 2081:FreeRTOS-Kernel/tasks.c ****         taskEXIT_CRITICAL();
 2082:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 38
+ARM GAS  /tmp/ccJw1tyY.s 			page 38
 
 
 2083:FreeRTOS-Kernel/tasks.c ****         if( xSchedulerRunning != pdFALSE )
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2137:FreeRTOS-Kernel/tasks.c **** 
 2138:FreeRTOS-Kernel/tasks.c ****             if( xSchedulerRunning != pdFALSE )
 2139:FreeRTOS-Kernel/tasks.c ****             {
-ARM GAS  /tmp/ccwt3kCc.s 			page 39
+ARM GAS  /tmp/ccJw1tyY.s 			page 39
 
 
 2140:FreeRTOS-Kernel/tasks.c ****                 /* If the created task is of a higher priority than another
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2194:FreeRTOS-Kernel/tasks.c ****         BaseType_t xDeleteTCBInIdleTask = pdFALSE;
 2195:FreeRTOS-Kernel/tasks.c ****         BaseType_t xTaskIsRunningOrYielding;
 2196:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 40
+ARM GAS  /tmp/ccJw1tyY.s 			page 40
 
 
 2197:FreeRTOS-Kernel/tasks.c ****         traceENTER_vTaskDelete( xTaskToDelete );
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2251:FreeRTOS-Kernel/tasks.c ****                  * check the xTasksWaitingTermination list. */
 2252:FreeRTOS-Kernel/tasks.c ****                 ++uxDeletedTasksWaitingCleanUp;
 2253:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 41
+ARM GAS  /tmp/ccJw1tyY.s 			page 41
 
 
 2254:FreeRTOS-Kernel/tasks.c ****                 /* Call the delete hook before portPRE_TASK_DELETE_HOOK() as
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2308:FreeRTOS-Kernel/tasks.c ****         /* If the task is not deleting itself, call prvDeleteTCB from outside of
 2309:FreeRTOS-Kernel/tasks.c ****          * critical section. If a task deletes itself, prvDeleteTCB is called
 2310:FreeRTOS-Kernel/tasks.c ****          * from prvCheckTasksWaitingTermination which is called from Idle task. */
-ARM GAS  /tmp/ccwt3kCc.s 			page 42
+ARM GAS  /tmp/ccJw1tyY.s 			page 42
 
 
 2311:FreeRTOS-Kernel/tasks.c ****         if( xDeleteTCBInIdleTask != pdTRUE )
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2365:FreeRTOS-Kernel/tasks.c ****             if( xConstTickCount < *pxPreviousWakeTime )
 2366:FreeRTOS-Kernel/tasks.c ****             {
 2367:FreeRTOS-Kernel/tasks.c ****                 /* The tick count has overflowed since this function was
-ARM GAS  /tmp/ccwt3kCc.s 			page 43
+ARM GAS  /tmp/ccJw1tyY.s 			page 43
 
 
 2368:FreeRTOS-Kernel/tasks.c ****                  * lasted called.  In this case the only time we should ever
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2422:FreeRTOS-Kernel/tasks.c ****             mtCOVERAGE_TEST_MARKER();
 2423:FreeRTOS-Kernel/tasks.c ****         }
 2424:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 44
+ARM GAS  /tmp/ccJw1tyY.s 			page 44
 
 
 2425:FreeRTOS-Kernel/tasks.c ****         traceRETURN_xTaskDelayUntil( xShouldDelay );
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2479:FreeRTOS-Kernel/tasks.c **** 
 2480:FreeRTOS-Kernel/tasks.c **** #endif /* INCLUDE_vTaskDelay */
 2481:FreeRTOS-Kernel/tasks.c **** /*-----------------------------------------------------------*/
-ARM GAS  /tmp/ccwt3kCc.s 			page 45
+ARM GAS  /tmp/ccJw1tyY.s 			page 45
 
 
 2482:FreeRTOS-Kernel/tasks.c **** 
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2536:FreeRTOS-Kernel/tasks.c ****                     if( listLIST_ITEM_CONTAINER( &( pxTCB->xEventListItem ) ) == NULL )
 2537:FreeRTOS-Kernel/tasks.c ****                     {
 2538:FreeRTOS-Kernel/tasks.c ****                         #if ( configUSE_TASK_NOTIFICATIONS == 1 )
-ARM GAS  /tmp/ccwt3kCc.s 			page 46
+ARM GAS  /tmp/ccJw1tyY.s 			page 46
 
 
 2539:FreeRTOS-Kernel/tasks.c ****                         {
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2593:FreeRTOS-Kernel/tasks.c ****                         /* Is it actively running on a core? */
 2594:FreeRTOS-Kernel/tasks.c ****                         eReturn = eRunning;
 2595:FreeRTOS-Kernel/tasks.c ****                     }
-ARM GAS  /tmp/ccwt3kCc.s 			page 47
+ARM GAS  /tmp/ccJw1tyY.s 			page 47
 
 
 2596:FreeRTOS-Kernel/tasks.c ****                     else
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2650:FreeRTOS-Kernel/tasks.c **** 
 2651:FreeRTOS-Kernel/tasks.c ****         /* RTOS ports that support interrupt nesting have the concept of a
 2652:FreeRTOS-Kernel/tasks.c ****          * maximum  system call (or maximum API call) interrupt priority.
-ARM GAS  /tmp/ccwt3kCc.s 			page 48
+ARM GAS  /tmp/ccJw1tyY.s 			page 48
 
 
 2653:FreeRTOS-Kernel/tasks.c ****          * Interrupts that are  above the maximum system call priority are keep
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2707:FreeRTOS-Kernel/tasks.c ****         traceRETURN_uxTaskBasePriorityGet( uxReturn );
 2708:FreeRTOS-Kernel/tasks.c **** 
 2709:FreeRTOS-Kernel/tasks.c ****         return uxReturn;
-ARM GAS  /tmp/ccwt3kCc.s 			page 49
+ARM GAS  /tmp/ccJw1tyY.s 			page 49
 
 
 2710:FreeRTOS-Kernel/tasks.c ****     }
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2764:FreeRTOS-Kernel/tasks.c **** 
 2765:FreeRTOS-Kernel/tasks.c ****     void vTaskPrioritySet( TaskHandle_t xTask,
 2766:FreeRTOS-Kernel/tasks.c ****                            UBaseType_t uxNewPriority )
-ARM GAS  /tmp/ccwt3kCc.s 			page 50
+ARM GAS  /tmp/ccJw1tyY.s 			page 50
 
 
 2767:FreeRTOS-Kernel/tasks.c ****     {
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2821:FreeRTOS-Kernel/tasks.c ****                             if( uxNewPriority > pxCurrentTCB->uxPriority )
 2822:FreeRTOS-Kernel/tasks.c ****                             {
 2823:FreeRTOS-Kernel/tasks.c ****                                 xYieldRequired = pdTRUE;
-ARM GAS  /tmp/ccwt3kCc.s 			page 51
+ARM GAS  /tmp/ccJw1tyY.s 			page 51
 
 
 2824:FreeRTOS-Kernel/tasks.c ****                             }
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2878:FreeRTOS-Kernel/tasks.c ****                     else
 2879:FreeRTOS-Kernel/tasks.c ****                     {
 2880:FreeRTOS-Kernel/tasks.c ****                         mtCOVERAGE_TEST_MARKER();
-ARM GAS  /tmp/ccwt3kCc.s 			page 52
+ARM GAS  /tmp/ccJw1tyY.s 			page 52
 
 
 2881:FreeRTOS-Kernel/tasks.c ****                     }
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2935:FreeRTOS-Kernel/tasks.c ****                          * its priority is being raised. However, since it is not in a ready list
 2936:FreeRTOS-Kernel/tasks.c ****                          * we don't actually need to yield for it. */
 2937:FreeRTOS-Kernel/tasks.c ****                         xYieldForTask = pdFALSE;
-ARM GAS  /tmp/ccwt3kCc.s 			page 53
+ARM GAS  /tmp/ccJw1tyY.s 			page 53
 
 
 2938:FreeRTOS-Kernel/tasks.c ****                     }
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2992:FreeRTOS-Kernel/tasks.c ****         {
 2993:FreeRTOS-Kernel/tasks.c ****             pxTCB = prvGetTCBFromHandle( xTask );
 2994:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 54
+ARM GAS  /tmp/ccJw1tyY.s 			page 54
 
 
 2995:FreeRTOS-Kernel/tasks.c ****             uxPrevCoreAffinityMask = pxTCB->uxCoreAffinityMask;
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3049:FreeRTOS-Kernel/tasks.c **** 
 3050:FreeRTOS-Kernel/tasks.c ****         taskENTER_CRITICAL();
 3051:FreeRTOS-Kernel/tasks.c ****         {
-ARM GAS  /tmp/ccwt3kCc.s 			page 55
+ARM GAS  /tmp/ccJw1tyY.s 			page 55
 
 
 3052:FreeRTOS-Kernel/tasks.c ****             pxTCB = prvGetTCBFromHandle( xTask );
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3106:FreeRTOS-Kernel/tasks.c ****                     xCoreID = ( BaseType_t ) pxTCB->xTaskRunState;
 3107:FreeRTOS-Kernel/tasks.c ****                     prvYieldCore( xCoreID );
 3108:FreeRTOS-Kernel/tasks.c ****                 }
-ARM GAS  /tmp/ccwt3kCc.s 			page 56
+ARM GAS  /tmp/ccJw1tyY.s 			page 56
 
 
 3109:FreeRTOS-Kernel/tasks.c ****             }
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3163:FreeRTOS-Kernel/tasks.c ****                 {
 3164:FreeRTOS-Kernel/tasks.c ****                     if( pxTCB->ucNotifyState[ x ] == taskWAITING_NOTIFICATION )
 3165:FreeRTOS-Kernel/tasks.c ****                     {
-ARM GAS  /tmp/ccwt3kCc.s 			page 57
+ARM GAS  /tmp/ccJw1tyY.s 			page 57
 
 
 3166:FreeRTOS-Kernel/tasks.c ****                         /* The task was blocked to wait for a notification, but is
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3220:FreeRTOS-Kernel/tasks.c ****             if( xSchedulerRunning != pdFALSE )
 3221:FreeRTOS-Kernel/tasks.c ****             {
 3222:FreeRTOS-Kernel/tasks.c ****                 /* Reset the next expected unblock time in case it referred to the
-ARM GAS  /tmp/ccwt3kCc.s 			page 58
+ARM GAS  /tmp/ccJw1tyY.s 			page 58
 
 
 3223:FreeRTOS-Kernel/tasks.c ****                  * task that is now in the Suspended state. */
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3277:FreeRTOS-Kernel/tasks.c **** 
 3278:FreeRTOS-Kernel/tasks.c **** #endif /* INCLUDE_vTaskSuspend */
 3279:FreeRTOS-Kernel/tasks.c **** /*-----------------------------------------------------------*/
-ARM GAS  /tmp/ccwt3kCc.s 			page 59
+ARM GAS  /tmp/ccJw1tyY.s 			page 59
 
 
 3280:FreeRTOS-Kernel/tasks.c **** 
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
    7:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****  * Permission is hereby granted, free of charge, to any person obtaining a copy of
    8:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****  * this software and associated documentation files (the "Software"), to deal in
    9:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****  * the Software without restriction, including without limitation the rights to
-ARM GAS  /tmp/ccwt3kCc.s 			page 60
+ARM GAS  /tmp/ccJw1tyY.s 			page 60
 
 
   10:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****  * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
   64:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     #define portMAX_DELAY              ( TickType_t ) 0xffff
   65:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** #elif ( configTICK_TYPE_WIDTH_IN_BITS == TICK_TYPE_WIDTH_32_BITS )
   66:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     typedef uint32_t     TickType_t;
-ARM GAS  /tmp/ccwt3kCc.s 			page 61
+ARM GAS  /tmp/ccJw1tyY.s 			page 61
 
 
   67:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     #define portMAX_DELAY              ( TickType_t ) 0xffffffffUL
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  121:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** #define portCLEAR_INTERRUPT_MASK_FROM_ISR( x )    vPortSetBASEPRI( x )
  122:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** #define portDISABLE_INTERRUPTS()                  vPortRaiseBASEPRI()
  123:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** #define portENABLE_INTERRUPTS()                   vPortSetBASEPRI( 0 )
-ARM GAS  /tmp/ccwt3kCc.s 			page 62
+ARM GAS  /tmp/ccJw1tyY.s 			page 62
 
 
  124:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** #define portENTER_CRITICAL()                      vPortEnterCritical()
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  178:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     void vPortValidateInterruptPriority( void );
  179:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     #define portASSERT_IF_INTERRUPT_PRIORITY_INVALID()    vPortValidateInterruptPriority()
  180:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** #endif
-ARM GAS  /tmp/ccwt3kCc.s 			page 63
+ARM GAS  /tmp/ccJw1tyY.s 			page 63
 
 
  181:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
   75              	.LBE174:
   76              	.LBE173:
 3292:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 64
+ARM GAS  /tmp/ccJw1tyY.s 			page 64
 
 
   77              		.loc 1 3292 9 is_stmt 1 discriminator 1 view .LVU15
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  106 003a 08D0     		beq	.L10
 3315:FreeRTOS-Kernel/tasks.c ****                         {
  107              		.loc 1 3315 111 is_stmt 1 discriminator 2 view .LVU27
-ARM GAS  /tmp/ccwt3kCc.s 			page 65
+ARM GAS  /tmp/ccJw1tyY.s 			page 65
 
 
  108 003c 0132     		adds	r2, r2, #1
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3329:FreeRTOS-Kernel/tasks.c ****                 }
 3330:FreeRTOS-Kernel/tasks.c ****                 else
 3331:FreeRTOS-Kernel/tasks.c ****                 {
-ARM GAS  /tmp/ccwt3kCc.s 			page 66
+ARM GAS  /tmp/ccJw1tyY.s 			page 66
 
 
 3332:FreeRTOS-Kernel/tasks.c ****                     mtCOVERAGE_TEST_MARKER();
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3368:FreeRTOS-Kernel/tasks.c **** 
 3369:FreeRTOS-Kernel/tasks.c ****             /* The parameter cannot be NULL as it is impossible to resume the
 3370:FreeRTOS-Kernel/tasks.c ****              * currently executing task. It is also impossible to resume a task
-ARM GAS  /tmp/ccwt3kCc.s 			page 67
+ARM GAS  /tmp/ccJw1tyY.s 			page 67
 
 
 3371:FreeRTOS-Kernel/tasks.c ****              * that is actively running on another core but it is not safe
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3425:FreeRTOS-Kernel/tasks.c ****          * maximum  system call (or maximum API call) interrupt priority.
 3426:FreeRTOS-Kernel/tasks.c ****          * Interrupts that are  above the maximum system call priority are keep
 3427:FreeRTOS-Kernel/tasks.c ****          * permanently enabled, even when the RTOS kernel is in a critical section,
-ARM GAS  /tmp/ccwt3kCc.s 			page 68
+ARM GAS  /tmp/ccJw1tyY.s 			page 68
 
 
 3428:FreeRTOS-Kernel/tasks.c ****          * but cannot make any calls to FreeRTOS API functions.  If configASSERT()
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3482:FreeRTOS-Kernel/tasks.c ****                     vListInsertEnd( &( xPendingReadyList ), &( pxTCB->xEventListItem ) );
 3483:FreeRTOS-Kernel/tasks.c ****                 }
 3484:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 69
+ARM GAS  /tmp/ccJw1tyY.s 			page 69
 
 
 3485:FreeRTOS-Kernel/tasks.c ****                 #if ( ( configNUMBER_OF_CORES > 1 ) && ( configUSE_PREEMPTION == 1 ) )
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3539:FreeRTOS-Kernel/tasks.c ****         #if ( configNUMBER_OF_CORES == 1 )
 3540:FreeRTOS-Kernel/tasks.c ****         {
 3541:FreeRTOS-Kernel/tasks.c ****             pxIdleTaskFunction = prvIdleTask;
-ARM GAS  /tmp/ccwt3kCc.s 			page 70
+ARM GAS  /tmp/ccJw1tyY.s 			page 70
 
 
 3542:FreeRTOS-Kernel/tasks.c ****         }
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3596:FreeRTOS-Kernel/tasks.c ****                 vApplicationGetIdleTaskMemory( &pxIdleTaskTCBBuffer, &pxIdleTaskStackBuffer, &uxIdl
 3597:FreeRTOS-Kernel/tasks.c ****             }
 3598:FreeRTOS-Kernel/tasks.c ****             #else
-ARM GAS  /tmp/ccwt3kCc.s 			page 71
+ARM GAS  /tmp/ccJw1tyY.s 			page 71
 
 
 3599:FreeRTOS-Kernel/tasks.c ****             {
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3653:FreeRTOS-Kernel/tasks.c ****                 xIdleTaskHandles[ xCoreID ]->xTaskRunState = xCoreID;
 3654:FreeRTOS-Kernel/tasks.c ****                 pxCurrentTCBs[ xCoreID ] = xIdleTaskHandles[ xCoreID ];
 3655:FreeRTOS-Kernel/tasks.c ****             }
-ARM GAS  /tmp/ccwt3kCc.s 			page 72
+ARM GAS  /tmp/ccJw1tyY.s 			page 72
 
 
 3656:FreeRTOS-Kernel/tasks.c ****             #endif
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3710:FreeRTOS-Kernel/tasks.c ****         portDISABLE_INTERRUPTS();
 3711:FreeRTOS-Kernel/tasks.c **** 
 3712:FreeRTOS-Kernel/tasks.c ****         #if ( configUSE_C_RUNTIME_TLS_SUPPORT == 1 )
-ARM GAS  /tmp/ccwt3kCc.s 			page 73
+ARM GAS  /tmp/ccJw1tyY.s 			page 73
 
 
 3713:FreeRTOS-Kernel/tasks.c ****         {
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3767:FreeRTOS-Kernel/tasks.c **** 
 3768:FreeRTOS-Kernel/tasks.c **** void vTaskEndScheduler( void )
 3769:FreeRTOS-Kernel/tasks.c **** {
-ARM GAS  /tmp/ccwt3kCc.s 			page 74
+ARM GAS  /tmp/ccJw1tyY.s 			page 74
 
 
 3770:FreeRTOS-Kernel/tasks.c ****     traceENTER_vTaskEndScheduler();
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3824:FreeRTOS-Kernel/tasks.c ****         portSOFTWARE_BARRIER();
 3825:FreeRTOS-Kernel/tasks.c **** 
 3826:FreeRTOS-Kernel/tasks.c ****         /* The scheduler is suspended if uxSchedulerSuspended is non-zero.  An increment
-ARM GAS  /tmp/ccwt3kCc.s 			page 75
+ARM GAS  /tmp/ccJw1tyY.s 			page 75
 
 
 3827:FreeRTOS-Kernel/tasks.c ****          * is used to allow calls to vTaskSuspendAll() to nest. */
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3881:FreeRTOS-Kernel/tasks.c ****         {
 3882:FreeRTOS-Kernel/tasks.c ****             mtCOVERAGE_TEST_MARKER();
 3883:FreeRTOS-Kernel/tasks.c ****         }
-ARM GAS  /tmp/ccwt3kCc.s 			page 76
+ARM GAS  /tmp/ccJw1tyY.s 			page 76
 
 
 3884:FreeRTOS-Kernel/tasks.c ****     }
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3938:FreeRTOS-Kernel/tasks.c ****         {
 3939:FreeRTOS-Kernel/tasks.c ****             /* There are tasks in the Ready state that have a priority above the
 3940:FreeRTOS-Kernel/tasks.c ****              * idle priority.  This path can only be reached if
-ARM GAS  /tmp/ccwt3kCc.s 			page 77
+ARM GAS  /tmp/ccJw1tyY.s 			page 77
 
 
 3941:FreeRTOS-Kernel/tasks.c ****              * configUSE_PREEMPTION is 0. */
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3995:FreeRTOS-Kernel/tasks.c ****                         pxTCB = listGET_OWNER_OF_HEAD_ENTRY( ( &xPendingReadyList ) );
 3996:FreeRTOS-Kernel/tasks.c ****                         listREMOVE_ITEM( &( pxTCB->xEventListItem ) );
 3997:FreeRTOS-Kernel/tasks.c ****                         portMEMORY_BARRIER();
-ARM GAS  /tmp/ccwt3kCc.s 			page 78
+ARM GAS  /tmp/ccJw1tyY.s 			page 78
 
 
 3998:FreeRTOS-Kernel/tasks.c ****                         listREMOVE_ITEM( &( pxTCB->xStateListItem ) );
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4052:FreeRTOS-Kernel/tasks.c ****                                     /* Other cores are interrupted from
 4053:FreeRTOS-Kernel/tasks.c ****                                      * within xTaskIncrementTick(). */
 4054:FreeRTOS-Kernel/tasks.c ****                                     xYieldPendings[ xCoreID ] = pdTRUE;
-ARM GAS  /tmp/ccwt3kCc.s 			page 79
+ARM GAS  /tmp/ccJw1tyY.s 			page 79
 
 
 4055:FreeRTOS-Kernel/tasks.c ****                                 }
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4109:FreeRTOS-Kernel/tasks.c **** 
 4110:FreeRTOS-Kernel/tasks.c ****     traceENTER_xTaskGetTickCount();
 4111:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 80
+ARM GAS  /tmp/ccJw1tyY.s 			page 80
 
 
 4112:FreeRTOS-Kernel/tasks.c ****     /* Critical section required if running on a 16 bit processor. */
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4166:FreeRTOS-Kernel/tasks.c ****     traceRETURN_uxTaskGetNumberOfTasks( uxCurrentNumberOfTasks );
 4167:FreeRTOS-Kernel/tasks.c **** 
 4168:FreeRTOS-Kernel/tasks.c ****     return uxCurrentNumberOfTasks;
-ARM GAS  /tmp/ccwt3kCc.s 			page 81
+ARM GAS  /tmp/ccJw1tyY.s 			page 81
 
 
 4169:FreeRTOS-Kernel/tasks.c **** }
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4223:FreeRTOS-Kernel/tasks.c ****                         xBreakLoop = pdTRUE;
 4224:FreeRTOS-Kernel/tasks.c ****                     }
 4225:FreeRTOS-Kernel/tasks.c ****                     else if( cNextChar == ( char ) 0x00 )
-ARM GAS  /tmp/ccwt3kCc.s 			page 82
+ARM GAS  /tmp/ccJw1tyY.s 			page 82
 
 
 4226:FreeRTOS-Kernel/tasks.c ****                     {
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4280:FreeRTOS-Kernel/tasks.c **** 
 4281:FreeRTOS-Kernel/tasks.c ****                 if( pxTCB != NULL )
 4282:FreeRTOS-Kernel/tasks.c ****                 {
-ARM GAS  /tmp/ccwt3kCc.s 			page 83
+ARM GAS  /tmp/ccJw1tyY.s 			page 83
 
 
 4283:FreeRTOS-Kernel/tasks.c ****                     /* Found the handle. */
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4337:FreeRTOS-Kernel/tasks.c **** 
 4338:FreeRTOS-Kernel/tasks.c ****         traceENTER_xTaskGetStaticBuffers( xTask, ppuxStackBuffer, ppxTaskBuffer );
 4339:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 84
+ARM GAS  /tmp/ccJw1tyY.s 			page 84
 
 
 4340:FreeRTOS-Kernel/tasks.c ****         configASSERT( ppuxStackBuffer != NULL );
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4394:FreeRTOS-Kernel/tasks.c ****         {
 4395:FreeRTOS-Kernel/tasks.c ****             /* Is there a space in the array for each task in the system? */
 4396:FreeRTOS-Kernel/tasks.c ****             if( uxArraySize >= uxCurrentNumberOfTasks )
-ARM GAS  /tmp/ccwt3kCc.s 			page 85
+ARM GAS  /tmp/ccJw1tyY.s 			page 85
 
 
 4397:FreeRTOS-Kernel/tasks.c ****             {
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4451:FreeRTOS-Kernel/tasks.c ****         }
 4452:FreeRTOS-Kernel/tasks.c ****         ( void ) xTaskResumeAll();
 4453:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 86
+ARM GAS  /tmp/ccJw1tyY.s 			page 86
 
 
 4454:FreeRTOS-Kernel/tasks.c ****         traceRETURN_uxTaskGetSystemState( uxTask );
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4508:FreeRTOS-Kernel/tasks.c ****         traceENTER_vTaskStepTick( xTicksToJump );
 4509:FreeRTOS-Kernel/tasks.c **** 
 4510:FreeRTOS-Kernel/tasks.c ****         /* Correct the tick count value after a period during which the tick
-ARM GAS  /tmp/ccwt3kCc.s 			page 87
+ARM GAS  /tmp/ccJw1tyY.s 			page 87
 
 
 4511:FreeRTOS-Kernel/tasks.c ****          * was suppressed.  Note this does *not* call the tick hook function for
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4565:FreeRTOS-Kernel/tasks.c ****     taskEXIT_CRITICAL();
 4566:FreeRTOS-Kernel/tasks.c ****     xYieldOccurred = xTaskResumeAll();
 4567:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 88
+ARM GAS  /tmp/ccJw1tyY.s 			page 88
 
 
 4568:FreeRTOS-Kernel/tasks.c ****     traceRETURN_xTaskCatchUpTicks( xYieldOccurred );
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4622:FreeRTOS-Kernel/tasks.c **** 
 4623:FreeRTOS-Kernel/tasks.c ****                 /* A task being unblocked cannot cause an immediate context
 4624:FreeRTOS-Kernel/tasks.c ****                  * switch if preemption is turned off. */
-ARM GAS  /tmp/ccwt3kCc.s 			page 89
+ARM GAS  /tmp/ccJw1tyY.s 			page 89
 
 
 4625:FreeRTOS-Kernel/tasks.c ****                 #if ( configUSE_PREEMPTION == 1 )
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4679:FreeRTOS-Kernel/tasks.c **** 
 4680:FreeRTOS-Kernel/tasks.c ****     traceENTER_xTaskIncrementTick();
 4681:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 90
+ARM GAS  /tmp/ccJw1tyY.s 			page 90
 
 
 4682:FreeRTOS-Kernel/tasks.c ****     /* Called by the portable layer each time a tick interrupt occurs.
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4736:FreeRTOS-Kernel/tasks.c ****                     /* coverity[misra_c_2012_rule_11_5_violation] */
 4737:FreeRTOS-Kernel/tasks.c ****                     pxTCB = listGET_OWNER_OF_HEAD_ENTRY( pxDelayedTaskList );
 4738:FreeRTOS-Kernel/tasks.c ****                     xItemValue = listGET_LIST_ITEM_VALUE( &( pxTCB->xStateListItem ) );
-ARM GAS  /tmp/ccwt3kCc.s 			page 91
+ARM GAS  /tmp/ccJw1tyY.s 			page 91
 
 
 4739:FreeRTOS-Kernel/tasks.c **** 
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4793:FreeRTOS-Kernel/tasks.c ****                                 mtCOVERAGE_TEST_MARKER();
 4794:FreeRTOS-Kernel/tasks.c ****                             }
 4795:FreeRTOS-Kernel/tasks.c ****                         }
-ARM GAS  /tmp/ccwt3kCc.s 			page 92
+ARM GAS  /tmp/ccJw1tyY.s 			page 92
 
 
 4796:FreeRTOS-Kernel/tasks.c ****                         #else /* #if( configNUMBER_OF_CORES == 1 ) */
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4850:FreeRTOS-Kernel/tasks.c ****             }
 4851:FreeRTOS-Kernel/tasks.c ****             else
 4852:FreeRTOS-Kernel/tasks.c ****             {
-ARM GAS  /tmp/ccwt3kCc.s 			page 93
+ARM GAS  /tmp/ccJw1tyY.s 			page 93
 
 
 4853:FreeRTOS-Kernel/tasks.c ****                 mtCOVERAGE_TEST_MARKER();
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4907:FreeRTOS-Kernel/tasks.c ****         xPendedTicks += 1U;
 4908:FreeRTOS-Kernel/tasks.c **** 
 4909:FreeRTOS-Kernel/tasks.c ****         /* The tick hook gets called at regular intervals, even if the
-ARM GAS  /tmp/ccwt3kCc.s 			page 94
+ARM GAS  /tmp/ccJw1tyY.s 			page 94
 
 
 4910:FreeRTOS-Kernel/tasks.c ****          * scheduler is locked. */
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4964:FreeRTOS-Kernel/tasks.c **** 
 4965:FreeRTOS-Kernel/tasks.c ****         traceENTER_xTaskGetApplicationTaskTag( xTask );
 4966:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 95
+ARM GAS  /tmp/ccJw1tyY.s 			page 95
 
 
 4967:FreeRTOS-Kernel/tasks.c ****         /* If xTask is NULL then set the calling task's hook. */
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5021:FreeRTOS-Kernel/tasks.c ****                                              void * pvParameter )
 5022:FreeRTOS-Kernel/tasks.c ****     {
 5023:FreeRTOS-Kernel/tasks.c ****         TCB_t * xTCB;
-ARM GAS  /tmp/ccwt3kCc.s 			page 96
+ARM GAS  /tmp/ccJw1tyY.s 			page 96
 
 
 5024:FreeRTOS-Kernel/tasks.c ****         BaseType_t xReturn;
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5078:FreeRTOS-Kernel/tasks.c **** 
 5079:FreeRTOS-Kernel/tasks.c ****                 /* Add the amount of time the task has been running to the
 5080:FreeRTOS-Kernel/tasks.c ****                  * accumulated time so far.  The time the task started running was
-ARM GAS  /tmp/ccwt3kCc.s 			page 97
+ARM GAS  /tmp/ccJw1tyY.s 			page 97
 
 
 5081:FreeRTOS-Kernel/tasks.c ****                  * stored in ulTaskSwitchedInTime.  Note that there is no overflow
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5135:FreeRTOS-Kernel/tasks.c ****             #endif
 5136:FreeRTOS-Kernel/tasks.c ****         }
 5137:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 98
+ARM GAS  /tmp/ccJw1tyY.s 			page 98
 
 
 5138:FreeRTOS-Kernel/tasks.c ****         traceRETURN_vTaskSwitchContext();
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5192:FreeRTOS-Kernel/tasks.c ****                     {
 5193:FreeRTOS-Kernel/tasks.c ****                         mtCOVERAGE_TEST_MARKER();
 5194:FreeRTOS-Kernel/tasks.c ****                     }
-ARM GAS  /tmp/ccwt3kCc.s 			page 99
+ARM GAS  /tmp/ccJw1tyY.s 			page 99
 
 
 5195:FreeRTOS-Kernel/tasks.c **** 
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5249:FreeRTOS-Kernel/tasks.c **** 
 5250:FreeRTOS-Kernel/tasks.c ****     /* THIS FUNCTION MUST BE CALLED WITH THE
 5251:FreeRTOS-Kernel/tasks.c ****      * SCHEDULER SUSPENDED AND THE QUEUE BEING ACCESSED LOCKED. */
-ARM GAS  /tmp/ccwt3kCc.s 			page 100
+ARM GAS  /tmp/ccJw1tyY.s 			page 100
 
 
 5252:FreeRTOS-Kernel/tasks.c **** 
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5306:FreeRTOS-Kernel/tasks.c ****                                           const BaseType_t xWaitIndefinitely )
 5307:FreeRTOS-Kernel/tasks.c ****     {
 5308:FreeRTOS-Kernel/tasks.c ****         traceENTER_vTaskPlaceOnEventListRestricted( pxEventList, xTicksToWait, xWaitIndefinitely );
-ARM GAS  /tmp/ccwt3kCc.s 			page 101
+ARM GAS  /tmp/ccJw1tyY.s 			page 101
 
 
 5309:FreeRTOS-Kernel/tasks.c **** 
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5363:FreeRTOS-Kernel/tasks.c ****     /* coverity[misra_c_2012_rule_11_5_violation] */
 5364:FreeRTOS-Kernel/tasks.c ****     pxUnblockedTCB = listGET_OWNER_OF_HEAD_ENTRY( pxEventList );
 5365:FreeRTOS-Kernel/tasks.c ****     configASSERT( pxUnblockedTCB );
-ARM GAS  /tmp/ccwt3kCc.s 			page 102
+ARM GAS  /tmp/ccJw1tyY.s 			page 102
 
 
 5366:FreeRTOS-Kernel/tasks.c ****     listREMOVE_ITEM( &( pxUnblockedTCB->xEventListItem ) );
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5420:FreeRTOS-Kernel/tasks.c ****             if( xYieldPendings[ portGET_CORE_ID() ] != pdFALSE )
 5421:FreeRTOS-Kernel/tasks.c ****             {
 5422:FreeRTOS-Kernel/tasks.c ****                 xReturn = pdTRUE;
-ARM GAS  /tmp/ccwt3kCc.s 			page 103
+ARM GAS  /tmp/ccJw1tyY.s 			page 103
 
 
 5423:FreeRTOS-Kernel/tasks.c ****             }
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5477:FreeRTOS-Kernel/tasks.c ****     #if ( configNUMBER_OF_CORES == 1 )
 5478:FreeRTOS-Kernel/tasks.c ****     {
 5479:FreeRTOS-Kernel/tasks.c ****         if( pxUnblockedTCB->uxPriority > pxCurrentTCB->uxPriority )
-ARM GAS  /tmp/ccwt3kCc.s 			page 104
+ARM GAS  /tmp/ccJw1tyY.s 			page 104
 
 
 5480:FreeRTOS-Kernel/tasks.c ****         {
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5534:FreeRTOS-Kernel/tasks.c **** BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,
 5535:FreeRTOS-Kernel/tasks.c ****                                  TickType_t * const pxTicksToWait )
 5536:FreeRTOS-Kernel/tasks.c **** {
-ARM GAS  /tmp/ccwt3kCc.s 			page 105
+ARM GAS  /tmp/ccJw1tyY.s 			page 105
 
 
 5537:FreeRTOS-Kernel/tasks.c ****     BaseType_t xReturn;
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5591:FreeRTOS-Kernel/tasks.c ****             *pxTicksToWait = ( TickType_t ) 0;
 5592:FreeRTOS-Kernel/tasks.c ****             xReturn = pdTRUE;
 5593:FreeRTOS-Kernel/tasks.c ****         }
-ARM GAS  /tmp/ccwt3kCc.s 			page 106
+ARM GAS  /tmp/ccJw1tyY.s 			page 106
 
 
 5594:FreeRTOS-Kernel/tasks.c ****     }
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5648:FreeRTOS-Kernel/tasks.c ****         traceENTER_vTaskSetTaskNumber( xTask, uxHandle );
 5649:FreeRTOS-Kernel/tasks.c **** 
 5650:FreeRTOS-Kernel/tasks.c ****         if( xTask != NULL )
-ARM GAS  /tmp/ccwt3kCc.s 			page 107
+ARM GAS  /tmp/ccJw1tyY.s 			page 107
 
 
 5651:FreeRTOS-Kernel/tasks.c ****         {
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5705:FreeRTOS-Kernel/tasks.c ****                  * the ready list at the idle priority contains one more task than the
 5706:FreeRTOS-Kernel/tasks.c ****                  * number of idle tasks, which is equal to the configured numbers of cores
 5707:FreeRTOS-Kernel/tasks.c ****                  * then a task other than the idle task is ready to execute. */
-ARM GAS  /tmp/ccwt3kCc.s 			page 108
+ARM GAS  /tmp/ccJw1tyY.s 			page 108
 
 
 5708:FreeRTOS-Kernel/tasks.c ****                 if( listCURRENT_LIST_LENGTH( &( pxReadyTasksLists[ tskIDLE_PRIORITY ] ) ) > ( UBase
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5762:FreeRTOS-Kernel/tasks.c ****     {
 5763:FreeRTOS-Kernel/tasks.c ****         /* SMP all cores start up in the idle task. This initial yield gets the application
 5764:FreeRTOS-Kernel/tasks.c ****          * tasks started. */
-ARM GAS  /tmp/ccwt3kCc.s 			page 109
+ARM GAS  /tmp/ccJw1tyY.s 			page 109
 
 
 5765:FreeRTOS-Kernel/tasks.c ****         taskYIELD();
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5819:FreeRTOS-Kernel/tasks.c ****         #if ( configUSE_TICKLESS_IDLE != 0 )
 5820:FreeRTOS-Kernel/tasks.c ****         {
 5821:FreeRTOS-Kernel/tasks.c ****             TickType_t xExpectedIdleTime;
-ARM GAS  /tmp/ccwt3kCc.s 			page 110
+ARM GAS  /tmp/ccJw1tyY.s 			page 110
 
 
 5822:FreeRTOS-Kernel/tasks.c **** 
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5876:FreeRTOS-Kernel/tasks.c ****         }
 5877:FreeRTOS-Kernel/tasks.c ****         #endif /* #if ( ( configNUMBER_OF_CORES > 1 ) && ( configUSE_PASSIVE_IDLE_HOOK == 1 ) ) */
 5878:FreeRTOS-Kernel/tasks.c ****     }
-ARM GAS  /tmp/ccwt3kCc.s 			page 111
+ARM GAS  /tmp/ccJw1tyY.s 			page 111
 
 
 5879:FreeRTOS-Kernel/tasks.c **** }
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5933:FreeRTOS-Kernel/tasks.c **** 
 5934:FreeRTOS-Kernel/tasks.c **** #endif /* configUSE_TICKLESS_IDLE */
 5935:FreeRTOS-Kernel/tasks.c **** /*-----------------------------------------------------------*/
-ARM GAS  /tmp/ccwt3kCc.s 			page 112
+ARM GAS  /tmp/ccJw1tyY.s 			page 112
 
 
 5936:FreeRTOS-Kernel/tasks.c **** 
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5990:FreeRTOS-Kernel/tasks.c **** #if ( portUSING_MPU_WRAPPERS == 1 )
 5991:FreeRTOS-Kernel/tasks.c **** 
 5992:FreeRTOS-Kernel/tasks.c ****     void vTaskAllocateMPURegions( TaskHandle_t xTaskToModify,
-ARM GAS  /tmp/ccwt3kCc.s 			page 113
+ARM GAS  /tmp/ccJw1tyY.s 			page 113
 
 
 5993:FreeRTOS-Kernel/tasks.c ****                                   const MemoryRegion_t * const pxRegions )
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6047:FreeRTOS-Kernel/tasks.c ****     #if ( INCLUDE_vTaskDelete == 1 )
 6048:FreeRTOS-Kernel/tasks.c ****     {
 6049:FreeRTOS-Kernel/tasks.c ****         TCB_t * pxTCB;
-ARM GAS  /tmp/ccwt3kCc.s 			page 114
+ARM GAS  /tmp/ccJw1tyY.s 			page 114
 
 
 6050:FreeRTOS-Kernel/tasks.c **** 
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6104:FreeRTOS-Kernel/tasks.c ****                 }
 6105:FreeRTOS-Kernel/tasks.c ****                 taskEXIT_CRITICAL();
 6106:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 115
+ARM GAS  /tmp/ccJw1tyY.s 			page 115
 
 
 6107:FreeRTOS-Kernel/tasks.c ****                 if( pxTCB != NULL )
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6161:FreeRTOS-Kernel/tasks.c ****             pxTaskStatus->ulRunTimeCounter = pxTCB->ulRunTimeCounter;
 6162:FreeRTOS-Kernel/tasks.c ****         }
 6163:FreeRTOS-Kernel/tasks.c ****         #else
-ARM GAS  /tmp/ccwt3kCc.s 			page 116
+ARM GAS  /tmp/ccJw1tyY.s 			page 116
 
 
 6164:FreeRTOS-Kernel/tasks.c ****         {
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6218:FreeRTOS-Kernel/tasks.c ****                         ( void ) xTaskResumeAll();
 6219:FreeRTOS-Kernel/tasks.c ****                     }
 6220:FreeRTOS-Kernel/tasks.c ****                 }
-ARM GAS  /tmp/ccwt3kCc.s 			page 117
+ARM GAS  /tmp/ccJw1tyY.s 			page 117
 
 
 6221:FreeRTOS-Kernel/tasks.c ****                 #endif /* INCLUDE_vTaskSuspend */
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6275:FreeRTOS-Kernel/tasks.c ****         TCB_t * pxTCB = NULL;
 6276:FreeRTOS-Kernel/tasks.c **** 
 6277:FreeRTOS-Kernel/tasks.c ****         if( listCURRENT_LIST_LENGTH( pxList ) > ( UBaseType_t ) 0 )
-ARM GAS  /tmp/ccwt3kCc.s 			page 118
+ARM GAS  /tmp/ccJw1tyY.s 			page 118
 
 
 6278:FreeRTOS-Kernel/tasks.c ****         {
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6332:FreeRTOS-Kernel/tasks.c ****     configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask )
 6333:FreeRTOS-Kernel/tasks.c ****     {
 6334:FreeRTOS-Kernel/tasks.c ****         TCB_t * pxTCB;
-ARM GAS  /tmp/ccwt3kCc.s 			page 119
+ARM GAS  /tmp/ccJw1tyY.s 			page 119
 
 
 6335:FreeRTOS-Kernel/tasks.c ****         uint8_t * pucEndOfStack;
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6389:FreeRTOS-Kernel/tasks.c ****         #endif
 6390:FreeRTOS-Kernel/tasks.c **** 
 6391:FreeRTOS-Kernel/tasks.c ****         uxReturn = ( UBaseType_t ) prvTaskCheckFreeStackSpace( pucEndOfStack );
-ARM GAS  /tmp/ccwt3kCc.s 			page 120
+ARM GAS  /tmp/ccJw1tyY.s 			page 120
 
 
 6392:FreeRTOS-Kernel/tasks.c **** 
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6446:FreeRTOS-Kernel/tasks.c ****                 configASSERT( pxTCB->ucStaticallyAllocated == tskSTATICALLY_ALLOCATED_STACK_AND_TCB
 6447:FreeRTOS-Kernel/tasks.c ****                 mtCOVERAGE_TEST_MARKER();
 6448:FreeRTOS-Kernel/tasks.c ****             }
-ARM GAS  /tmp/ccwt3kCc.s 			page 121
+ARM GAS  /tmp/ccJw1tyY.s 			page 121
 
 
 6449:FreeRTOS-Kernel/tasks.c ****         }
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  191              		.loc 1 6474 1 view .LVU50
  192 001e 7047     		bx	lr
  193              	.L19:
-ARM GAS  /tmp/ccwt3kCc.s 			page 122
+ARM GAS  /tmp/ccJw1tyY.s 			page 122
 
 
  194              		.align	2
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  241              	.LVL17:
 1835:FreeRTOS-Kernel/tasks.c **** 
  242              		.loc 1 1835 9 is_stmt 1 view .LVU60
-ARM GAS  /tmp/ccwt3kCc.s 			page 123
+ARM GAS  /tmp/ccJw1tyY.s 			page 123
 
 
 1835:FreeRTOS-Kernel/tasks.c **** 
@@ -7378,7 +7378,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  279              		.loc 1 1884 62 view .LVU78
  280 0038 84F84330 		strb	r3, [r4, #67]
  281              	.LVL22:
-ARM GAS  /tmp/ccwt3kCc.s 			page 124
+ARM GAS  /tmp/ccJw1tyY.s 			page 124
 
 
  282              	.L22:
@@ -7438,7 +7438,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  322 0054 6664     		str	r6, [r4, #68]
 1910:FreeRTOS-Kernel/tasks.c ****     vListInitialiseItem( &( pxNewTCB->xEventListItem ) );
  323              		.loc 1 1910 5 is_stmt 1 view .LVU95
-ARM GAS  /tmp/ccwt3kCc.s 			page 125
+ARM GAS  /tmp/ccJw1tyY.s 			page 125
 
 
  324 0056 201D     		adds	r0, r4, #4
@@ -7498,7 +7498,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  362              		.cfi_endproc
  363              	.LFE7:
  365              		.section	.text.prvCreateStaticTask,"ax",%progbits
-ARM GAS  /tmp/ccwt3kCc.s 			page 126
+ARM GAS  /tmp/ccJw1tyY.s 			page 126
 
 
  366              		.align	1
@@ -7558,7 +7558,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 1274:FreeRTOS-Kernel/tasks.c ****             ( void ) xSize; /* Prevent unused variable warning when configASSERT() is not used. */
  411              		.loc 1 1274 13 is_stmt 1 discriminator 2 view .LVU122
  412 001a 059B     		ldr	r3, [sp, #20]
-ARM GAS  /tmp/ccwt3kCc.s 			page 127
+ARM GAS  /tmp/ccJw1tyY.s 			page 127
 
 
  413 001c 542B     		cmp	r3, #84
@@ -7618,7 +7618,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  458              	@ 0 "" 2
  459              	.LVL33:
  460              		.thumb
-ARM GAS  /tmp/ccwt3kCc.s 			page 128
+ARM GAS  /tmp/ccJw1tyY.s 			page 128
 
 
  461              		.syntax unified
@@ -7678,7 +7678,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  504              	.LVL36:
 1287:FreeRTOS-Kernel/tasks.c ****             pxNewTCB->pxStack = ( StackType_t * ) puxStackBuffer;
  505              		.loc 1 1287 13 discriminator 2 view .LVU149
-ARM GAS  /tmp/ccwt3kCc.s 			page 129
+ARM GAS  /tmp/ccJw1tyY.s 			page 129
 
 
 1287:FreeRTOS-Kernel/tasks.c ****             pxNewTCB->pxStack = ( StackType_t * ) puxStackBuffer;
@@ -7738,7 +7738,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  551              		.syntax unified
  552              		.thumb
  553              		.thumb_func
-ARM GAS  /tmp/ccwt3kCc.s 			page 130
+ARM GAS  /tmp/ccJw1tyY.s 			page 130
 
 
  555              	prvInitialiseTaskLists:
@@ -7798,7 +7798,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6021:FreeRTOS-Kernel/tasks.c ****     vListInitialise( &xPendingReadyList );
  599              		.loc 1 6021 5 is_stmt 0 view .LVU170
  600 0024 2046     		mov	r0, r4
-ARM GAS  /tmp/ccwt3kCc.s 			page 131
+ARM GAS  /tmp/ccJw1tyY.s 			page 131
 
 
  601 0026 FFF7FEFF 		bl	vListInitialise
@@ -7858,7 +7858,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  648              		.loc 1 2020 5 is_stmt 1 view -0
  649              		.cfi_startproc
  650              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccwt3kCc.s 			page 132
+ARM GAS  /tmp/ccJw1tyY.s 			page 132
 
 
  651              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -7918,7 +7918,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  690 0026 07D8     		bhi	.L48
 2054:FreeRTOS-Kernel/tasks.c ****                     }
  691              		.loc 1 2054 25 is_stmt 1 view .LVU195
-ARM GAS  /tmp/ccwt3kCc.s 			page 133
+ARM GAS  /tmp/ccJw1tyY.s 			page 133
 
 
 2054:FreeRTOS-Kernel/tasks.c ****                     }
@@ -7978,7 +7978,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  731 0054 02EB8303 		add	r3, r2, r3, lsl #2
  732 0058 5B68     		ldr	r3, [r3, #4]
  733              	.LVL54:
-ARM GAS  /tmp/ccwt3kCc.s 			page 134
+ARM GAS  /tmp/ccJw1tyY.s 			page 134
 
 
 2077:FreeRTOS-Kernel/tasks.c **** 
@@ -8038,7 +8038,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  771 0088 7BB1     		cbz	r3, .L46
 2087:FreeRTOS-Kernel/tasks.c ****         }
  772              		.loc 1 2087 13 is_stmt 1 view .LVU228
-ARM GAS  /tmp/ccwt3kCc.s 			page 135
+ARM GAS  /tmp/ccJw1tyY.s 			page 135
 
 
 2087:FreeRTOS-Kernel/tasks.c ****         }
@@ -8098,7 +8098,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  820              		.syntax unified
  821              		.thumb
  822              		.thumb_func
-ARM GAS  /tmp/ccwt3kCc.s 			page 136
+ARM GAS  /tmp/ccJw1tyY.s 			page 136
 
 
  824              	prvCheckTasksWaitingTermination:
@@ -8158,7 +8158,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  865 001e 1368     		ldr	r3, [r2]
  866 0020 013B     		subs	r3, r3, #1
  867 0022 1360     		str	r3, [r2]
-ARM GAS  /tmp/ccwt3kCc.s 			page 137
+ARM GAS  /tmp/ccJw1tyY.s 			page 137
 
 
 6069:FreeRTOS-Kernel/tasks.c **** 
@@ -8218,7 +8218,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5773:FreeRTOS-Kernel/tasks.c **** 
  915              		.loc 1 5773 9 view .LVU259
  916 0002 FFF7FEFF 		bl	prvCheckTasksWaitingTermination
-ARM GAS  /tmp/ccwt3kCc.s 			page 138
+ARM GAS  /tmp/ccJw1tyY.s 			page 138
 
 
  917              	.LVL66:
@@ -8278,7 +8278,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6483:FreeRTOS-Kernel/tasks.c **** 
 6484:FreeRTOS-Kernel/tasks.c ****             traceENTER_xTaskGetCurrentTaskHandle();
 6485:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 139
+ARM GAS  /tmp/ccJw1tyY.s 			page 139
 
 
 6486:FreeRTOS-Kernel/tasks.c ****             /* A critical section is not required as this is not called from
@@ -8338,7 +8338,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6540:FreeRTOS-Kernel/tasks.c ****     BaseType_t xTaskGetSchedulerState( void )
 6541:FreeRTOS-Kernel/tasks.c ****     {
 6542:FreeRTOS-Kernel/tasks.c ****         BaseType_t xReturn;
-ARM GAS  /tmp/ccwt3kCc.s 			page 140
+ARM GAS  /tmp/ccJw1tyY.s 			page 140
 
 
 6543:FreeRTOS-Kernel/tasks.c **** 
@@ -8398,7 +8398,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6597:FreeRTOS-Kernel/tasks.c ****                  * priority.  Only reset the event list item value if the value is
 6598:FreeRTOS-Kernel/tasks.c ****                  * not being used for anything else. */
 6599:FreeRTOS-Kernel/tasks.c ****                 if( ( listGET_LIST_ITEM_VALUE( &( pxMutexHolderTCB->xEventListItem ) ) & taskEVENT_
-ARM GAS  /tmp/ccwt3kCc.s 			page 141
+ARM GAS  /tmp/ccJw1tyY.s 			page 141
 
 
 6600:FreeRTOS-Kernel/tasks.c ****                 {
@@ -8458,7 +8458,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6654:FreeRTOS-Kernel/tasks.c ****                      * priority of the task attempting to take the mutex, but the
 6655:FreeRTOS-Kernel/tasks.c ****                      * current priority of the mutex holder is not lower than the
 6656:FreeRTOS-Kernel/tasks.c ****                      * priority of the task attempting to take the mutex.
-ARM GAS  /tmp/ccwt3kCc.s 			page 142
+ARM GAS  /tmp/ccJw1tyY.s 			page 142
 
 
 6657:FreeRTOS-Kernel/tasks.c ****                      * Therefore the mutex holder must have already inherited a
@@ -8518,7 +8518,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6711:FreeRTOS-Kernel/tasks.c ****                      * the holding task from the ready list. */
 6712:FreeRTOS-Kernel/tasks.c ****                     if( uxListRemove( &( pxTCB->xStateListItem ) ) == ( UBaseType_t ) 0 )
 6713:FreeRTOS-Kernel/tasks.c ****                     {
-ARM GAS  /tmp/ccwt3kCc.s 			page 143
+ARM GAS  /tmp/ccJw1tyY.s 			page 143
 
 
 6714:FreeRTOS-Kernel/tasks.c ****                         portRESET_READY_PRIORITY( pxTCB->uxPriority, uxTopReadyPriority );
@@ -8578,7 +8578,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6768:FreeRTOS-Kernel/tasks.c **** 
 6769:FreeRTOS-Kernel/tasks.c ****         return xReturn;
 6770:FreeRTOS-Kernel/tasks.c ****     }
-ARM GAS  /tmp/ccwt3kCc.s 			page 144
+ARM GAS  /tmp/ccJw1tyY.s 			page 144
 
 
 6771:FreeRTOS-Kernel/tasks.c **** 
@@ -8638,7 +8638,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6825:FreeRTOS-Kernel/tasks.c **** 
 6826:FreeRTOS-Kernel/tasks.c ****                     /* Only reset the event list item value if the value is not
 6827:FreeRTOS-Kernel/tasks.c ****                      * being used for anything else. */
-ARM GAS  /tmp/ccwt3kCc.s 			page 145
+ARM GAS  /tmp/ccJw1tyY.s 			page 145
 
 
 6828:FreeRTOS-Kernel/tasks.c ****                     if( ( listGET_LIST_ITEM_VALUE( &( pxTCB->xEventListItem ) ) & taskEVENT_LIST_IT
@@ -8698,7 +8698,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6882:FreeRTOS-Kernel/tasks.c ****             }
 6883:FreeRTOS-Kernel/tasks.c ****         }
 6884:FreeRTOS-Kernel/tasks.c ****         else
-ARM GAS  /tmp/ccwt3kCc.s 			page 146
+ARM GAS  /tmp/ccJw1tyY.s 			page 146
 
 
 6885:FreeRTOS-Kernel/tasks.c ****         {
@@ -8758,7 +8758,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6939:FreeRTOS-Kernel/tasks.c ****             {
 6940:FreeRTOS-Kernel/tasks.c ****                 portASSERT_IF_IN_ISR();
 6941:FreeRTOS-Kernel/tasks.c ****             }
-ARM GAS  /tmp/ccwt3kCc.s 			page 147
+ARM GAS  /tmp/ccJw1tyY.s 			page 147
 
 
 6942:FreeRTOS-Kernel/tasks.c ****         }
@@ -8818,7 +8818,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6996:FreeRTOS-Kernel/tasks.c **** 
 6997:FreeRTOS-Kernel/tasks.c ****         traceRETURN_vTaskEnterCritical();
 6998:FreeRTOS-Kernel/tasks.c ****     }
-ARM GAS  /tmp/ccwt3kCc.s 			page 148
+ARM GAS  /tmp/ccJw1tyY.s 			page 148
 
 
 6999:FreeRTOS-Kernel/tasks.c **** 
@@ -8878,7 +8878,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7053:FreeRTOS-Kernel/tasks.c ****             {
 7054:FreeRTOS-Kernel/tasks.c ****                 ( pxCurrentTCB->uxCriticalNesting )--;
 7055:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 149
+ARM GAS  /tmp/ccJw1tyY.s 			page 149
 
 
 7056:FreeRTOS-Kernel/tasks.c ****                 if( pxCurrentTCB->uxCriticalNesting == 0U )
@@ -8938,7 +8938,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7110:FreeRTOS-Kernel/tasks.c ****                     portENABLE_INTERRUPTS();
 7111:FreeRTOS-Kernel/tasks.c **** 
 7112:FreeRTOS-Kernel/tasks.c ****                     /* When a task yields in a critical section it just sets
-ARM GAS  /tmp/ccwt3kCc.s 			page 150
+ARM GAS  /tmp/ccJw1tyY.s 			page 150
 
 
 7113:FreeRTOS-Kernel/tasks.c ****                      * xYieldPending to true. So now that we have exited the
@@ -8998,7 +8998,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7167:FreeRTOS-Kernel/tasks.c ****             }
 7168:FreeRTOS-Kernel/tasks.c ****             else
 7169:FreeRTOS-Kernel/tasks.c ****             {
-ARM GAS  /tmp/ccwt3kCc.s 			page 151
+ARM GAS  /tmp/ccJw1tyY.s 			page 151
 
 
 7170:FreeRTOS-Kernel/tasks.c ****                 mtCOVERAGE_TEST_MARKER();
@@ -9058,7 +9058,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7224:FreeRTOS-Kernel/tasks.c ****         traceENTER_vTaskListTasks( pcWriteBuffer, uxBufferLength );
 7225:FreeRTOS-Kernel/tasks.c **** 
 7226:FreeRTOS-Kernel/tasks.c ****         /*
-ARM GAS  /tmp/ccwt3kCc.s 			page 152
+ARM GAS  /tmp/ccJw1tyY.s 			page 152
 
 
 7227:FreeRTOS-Kernel/tasks.c ****          * PLEASE NOTE:
@@ -9118,7 +9118,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7281:FreeRTOS-Kernel/tasks.c **** 
 7282:FreeRTOS-Kernel/tasks.c ****                     case eReady:
 7283:FreeRTOS-Kernel/tasks.c ****                         cStatus = tskREADY_CHAR;
-ARM GAS  /tmp/ccwt3kCc.s 			page 153
+ARM GAS  /tmp/ccJw1tyY.s 			page 153
 
 
 7284:FreeRTOS-Kernel/tasks.c ****                         break;
@@ -9178,7 +9178,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7338:FreeRTOS-Kernel/tasks.c ****                                                              uxBufferLength - uxConsumedBufferLengt
 7339:FreeRTOS-Kernel/tasks.c ****                                                              "\t%c\t%u\t%u\t%u\r\n",
 7340:FreeRTOS-Kernel/tasks.c ****                                                              cStatus,
-ARM GAS  /tmp/ccwt3kCc.s 			page 154
+ARM GAS  /tmp/ccJw1tyY.s 			page 154
 
 
 7341:FreeRTOS-Kernel/tasks.c ****                                                              ( unsigned int ) pxTaskStatusArray[ x 
@@ -9238,7 +9238,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7395:FreeRTOS-Kernel/tasks.c ****         traceENTER_vTaskGetRunTimeStatistics( pcWriteBuffer, uxBufferLength );
 7396:FreeRTOS-Kernel/tasks.c **** 
 7397:FreeRTOS-Kernel/tasks.c ****         /*
-ARM GAS  /tmp/ccwt3kCc.s 			page 155
+ARM GAS  /tmp/ccJw1tyY.s 			page 155
 
 
 7398:FreeRTOS-Kernel/tasks.c ****          * PLEASE NOTE:
@@ -9298,7 +9298,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7452:FreeRTOS-Kernel/tasks.c ****                      * This will always be rounded down to the nearest integer.
 7453:FreeRTOS-Kernel/tasks.c ****                      * ulTotalRunTime has already been divided by 100. */
 7454:FreeRTOS-Kernel/tasks.c ****                     ulStatsAsPercentage = pxTaskStatusArray[ x ].ulRunTimeCounter / ulTotalTime;
-ARM GAS  /tmp/ccwt3kCc.s 			page 156
+ARM GAS  /tmp/ccJw1tyY.s 			page 156
 
 
 7455:FreeRTOS-Kernel/tasks.c **** 
@@ -9358,7 +9358,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7509:FreeRTOS-Kernel/tasks.c ****                                     iSnprintfReturnValue = snprintf( pcWriteBuffer,
 7510:FreeRTOS-Kernel/tasks.c ****                                                                      uxBufferLength - uxConsumedBuf
 7511:FreeRTOS-Kernel/tasks.c ****                                                                      "\t%lu\t\t<1%%\r\n",
-ARM GAS  /tmp/ccwt3kCc.s 			page 157
+ARM GAS  /tmp/ccJw1tyY.s 			page 157
 
 
 7512:FreeRTOS-Kernel/tasks.c ****                                                                      pxTaskStatusArray[ x ].ulRunTi
@@ -9418,7 +9418,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7566:FreeRTOS-Kernel/tasks.c **** #endif /* ( ( configGENERATE_RUN_TIME_STATS == 1 ) && ( configUSE_STATS_FORMATTING_FUNCTIONS > 0 ) 
 7567:FreeRTOS-Kernel/tasks.c **** /*-----------------------------------------------------------*/
 7568:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 158
+ARM GAS  /tmp/ccJw1tyY.s 			page 158
 
 
 7569:FreeRTOS-Kernel/tasks.c **** TickType_t uxTaskResetEventItemValue( void )
@@ -9478,7 +9478,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7623:FreeRTOS-Kernel/tasks.c ****         configASSERT( uxIndexToWaitOn < configTASK_NOTIFICATION_ARRAY_ENTRIES );
 7624:FreeRTOS-Kernel/tasks.c **** 
 7625:FreeRTOS-Kernel/tasks.c ****         /* We suspend the scheduler here as prvAddCurrentTaskToDelayedList is a
-ARM GAS  /tmp/ccwt3kCc.s 			page 159
+ARM GAS  /tmp/ccJw1tyY.s 			page 159
 
 
 7626:FreeRTOS-Kernel/tasks.c ****          * non-deterministic operation. */
@@ -9538,7 +9538,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7680:FreeRTOS-Kernel/tasks.c ****         }
 7681:FreeRTOS-Kernel/tasks.c **** 
 7682:FreeRTOS-Kernel/tasks.c ****         taskENTER_CRITICAL();
-ARM GAS  /tmp/ccwt3kCc.s 			page 160
+ARM GAS  /tmp/ccJw1tyY.s 			page 160
 
 
 7683:FreeRTOS-Kernel/tasks.c ****         {
@@ -9598,7 +9598,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7737:FreeRTOS-Kernel/tasks.c ****             {
 7738:FreeRTOS-Kernel/tasks.c ****                 /* Only block if a notification is not already pending. */
 7739:FreeRTOS-Kernel/tasks.c ****                 if( pxCurrentTCB->ucNotifyState[ uxIndexToWaitOn ] != taskNOTIFICATION_RECEIVED )
-ARM GAS  /tmp/ccwt3kCc.s 			page 161
+ARM GAS  /tmp/ccJw1tyY.s 			page 161
 
 
 7740:FreeRTOS-Kernel/tasks.c ****                 {
@@ -9658,7 +9658,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7794:FreeRTOS-Kernel/tasks.c ****             if( pulNotificationValue != NULL )
 7795:FreeRTOS-Kernel/tasks.c ****             {
 7796:FreeRTOS-Kernel/tasks.c ****                 /* Output the current notification value, which may or may not
-ARM GAS  /tmp/ccwt3kCc.s 			page 162
+ARM GAS  /tmp/ccJw1tyY.s 			page 162
 
 
 7797:FreeRTOS-Kernel/tasks.c ****                  * have changed. */
@@ -9718,7 +9718,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7851:FreeRTOS-Kernel/tasks.c ****             {
 7852:FreeRTOS-Kernel/tasks.c ****                 *pulPreviousNotificationValue = pxTCB->ulNotifiedValue[ uxIndexToNotify ];
 7853:FreeRTOS-Kernel/tasks.c ****             }
-ARM GAS  /tmp/ccwt3kCc.s 			page 163
+ARM GAS  /tmp/ccJw1tyY.s 			page 163
 
 
 7854:FreeRTOS-Kernel/tasks.c **** 
@@ -9778,7 +9778,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7908:FreeRTOS-Kernel/tasks.c ****             {
 7909:FreeRTOS-Kernel/tasks.c ****                 listREMOVE_ITEM( &( pxTCB->xStateListItem ) );
 7910:FreeRTOS-Kernel/tasks.c ****                 prvAddTaskToReadyList( pxTCB );
-ARM GAS  /tmp/ccwt3kCc.s 			page 164
+ARM GAS  /tmp/ccJw1tyY.s 			page 164
 
 
 7911:FreeRTOS-Kernel/tasks.c **** 
@@ -9838,7 +9838,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7965:FreeRTOS-Kernel/tasks.c **** 
 7966:FreeRTOS-Kernel/tasks.c ****         configASSERT( xTaskToNotify );
 7967:FreeRTOS-Kernel/tasks.c ****         configASSERT( uxIndexToNotify < configTASK_NOTIFICATION_ARRAY_ENTRIES );
-ARM GAS  /tmp/ccwt3kCc.s 			page 165
+ARM GAS  /tmp/ccJw1tyY.s 			page 165
 
 
 7968:FreeRTOS-Kernel/tasks.c **** 
@@ -9898,7 +9898,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8022:FreeRTOS-Kernel/tasks.c ****                     else
 8023:FreeRTOS-Kernel/tasks.c ****                     {
 8024:FreeRTOS-Kernel/tasks.c ****                         /* The value could not be written to the task. */
-ARM GAS  /tmp/ccwt3kCc.s 			page 166
+ARM GAS  /tmp/ccJw1tyY.s 			page 166
 
 
 8025:FreeRTOS-Kernel/tasks.c ****                         xReturn = pdFAIL;
@@ -9958,7 +9958,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8079:FreeRTOS-Kernel/tasks.c ****                          * safe FreeRTOS function. */
 8080:FreeRTOS-Kernel/tasks.c ****                         xYieldPendings[ 0 ] = pdTRUE;
 8081:FreeRTOS-Kernel/tasks.c ****                     }
-ARM GAS  /tmp/ccwt3kCc.s 			page 167
+ARM GAS  /tmp/ccJw1tyY.s 			page 167
 
 
 8082:FreeRTOS-Kernel/tasks.c ****                     else
@@ -10018,7 +10018,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8136:FreeRTOS-Kernel/tasks.c ****          * is defined in FreeRTOSConfig.h then
 8137:FreeRTOS-Kernel/tasks.c ****          * portASSERT_IF_INTERRUPT_PRIORITY_INVALID() will result in an assertion
 8138:FreeRTOS-Kernel/tasks.c ****          * failure if a FreeRTOS API function is called from an interrupt that has
-ARM GAS  /tmp/ccwt3kCc.s 			page 168
+ARM GAS  /tmp/ccJw1tyY.s 			page 168
 
 
 8139:FreeRTOS-Kernel/tasks.c ****          * been assigned a priority above the configured maximum system call
@@ -10078,7 +10078,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8193:FreeRTOS-Kernel/tasks.c ****                         }
 8194:FreeRTOS-Kernel/tasks.c **** 
 8195:FreeRTOS-Kernel/tasks.c ****                         /* Mark that a yield is pending in case the user is not
-ARM GAS  /tmp/ccwt3kCc.s 			page 169
+ARM GAS  /tmp/ccJw1tyY.s 			page 169
 
 
 8196:FreeRTOS-Kernel/tasks.c ****                          * using the "xHigherPriorityTaskWoken" parameter in an ISR
@@ -10138,7 +10138,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8250:FreeRTOS-Kernel/tasks.c ****             if( pxTCB->ucNotifyState[ uxIndexToClear ] == taskNOTIFICATION_RECEIVED )
 8251:FreeRTOS-Kernel/tasks.c ****             {
 8252:FreeRTOS-Kernel/tasks.c ****                 pxTCB->ucNotifyState[ uxIndexToClear ] = taskNOT_WAITING_NOTIFICATION;
-ARM GAS  /tmp/ccwt3kCc.s 			page 170
+ARM GAS  /tmp/ccJw1tyY.s 			page 170
 
 
 8253:FreeRTOS-Kernel/tasks.c ****                 xReturn = pdPASS;
@@ -10198,7 +10198,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8307:FreeRTOS-Kernel/tasks.c ****     {
 8308:FreeRTOS-Kernel/tasks.c ****         TCB_t * pxTCB;
 8309:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 171
+ARM GAS  /tmp/ccJw1tyY.s 			page 171
 
 
 8310:FreeRTOS-Kernel/tasks.c ****         traceENTER_ulTaskGetRunTimeCounter( xTask );
@@ -10258,7 +10258,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8364:FreeRTOS-Kernel/tasks.c ****         for( i = 0; i < ( BaseType_t ) configNUMBER_OF_CORES; i++ )
 8365:FreeRTOS-Kernel/tasks.c ****         {
 8366:FreeRTOS-Kernel/tasks.c ****             ulReturn += xIdleTaskHandles[ i ]->ulRunTimeCounter;
-ARM GAS  /tmp/ccwt3kCc.s 			page 172
+ARM GAS  /tmp/ccJw1tyY.s 			page 172
 
 
 8367:FreeRTOS-Kernel/tasks.c ****         }
@@ -10318,7 +10318,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  961              		@ frame_needed = 0, uses_anonymous_args = 0
  962              		.loc 1 8417 1 is_stmt 0 view .LVU268
  963 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
-ARM GAS  /tmp/ccwt3kCc.s 			page 173
+ARM GAS  /tmp/ccJw1tyY.s 			page 173
 
 
  964              	.LCFI8:
@@ -10378,7 +10378,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8435:FreeRTOS-Kernel/tasks.c ****     {
 8436:FreeRTOS-Kernel/tasks.c ****         /* The current task must be in a ready list, so there is no need to
 8437:FreeRTOS-Kernel/tasks.c ****          * check, and the port reset macro can be called directly. */
-ARM GAS  /tmp/ccwt3kCc.s 			page 174
+ARM GAS  /tmp/ccJw1tyY.s 			page 174
 
 
 8438:FreeRTOS-Kernel/tasks.c ****         portRESET_READY_PRIORITY( pxCurrentTCB->uxPriority, uxTopReadyPriority );
@@ -10438,7 +10438,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1028 0044 A642     		cmp	r6, r4
  1029 0046 1DD9     		bls	.L71
 8465:FreeRTOS-Kernel/tasks.c ****             {
-ARM GAS  /tmp/ccwt3kCc.s 			page 175
+ARM GAS  /tmp/ccJw1tyY.s 			page 175
 
 
 8466:FreeRTOS-Kernel/tasks.c ****                 /* Wake time has overflowed.  Place this item in the overflow
@@ -10498,7 +10498,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8509:FreeRTOS-Kernel/tasks.c ****         {
 8510:FreeRTOS-Kernel/tasks.c ****             traceMOVED_TASK_TO_DELAYED_LIST();
 8511:FreeRTOS-Kernel/tasks.c ****             /* The wake time has not overflowed, so the current block list is used. */
-ARM GAS  /tmp/ccwt3kCc.s 			page 176
+ARM GAS  /tmp/ccJw1tyY.s 			page 176
 
 
 8512:FreeRTOS-Kernel/tasks.c ****             vListInsert( pxDelayedList, &( pxCurrentTCB->xStateListItem ) );
@@ -10558,7 +10558,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1066              		.loc 1 8452 13 is_stmt 1 view .LVU302
  1067 006c 1868     		ldr	r0, [r3]
  1068 006e 0430     		adds	r0, r0, #4
-ARM GAS  /tmp/ccwt3kCc.s 			page 177
+ARM GAS  /tmp/ccJw1tyY.s 			page 177
 
 
  1069 0070 6060     		str	r0, [r4, #4]
@@ -10618,7 +10618,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1109 009c DAE7     		b	.L67
  1110              	.L75:
  1111 009e 00BF     		.align	2
-ARM GAS  /tmp/ccwt3kCc.s 			page 178
+ARM GAS  /tmp/ccJw1tyY.s 			page 178
 
 
  1112              	.L74:
@@ -10678,7 +10678,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1160 0014 089C     		ldr	r4, [sp, #32]
  1161 0016 0094     		str	r4, [sp]
  1162 0018 FFF7FEFF 		bl	prvCreateStaticTask
-ARM GAS  /tmp/ccwt3kCc.s 			page 179
+ARM GAS  /tmp/ccJw1tyY.s 			page 179
 
 
  1163              	.LVL81:
@@ -10738,7 +10738,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1209              		.cfi_def_cfa_offset 64
 3513:FreeRTOS-Kernel/tasks.c ****     BaseType_t xCoreID;
  1210              		.loc 1 3513 5 view .LVU335
-ARM GAS  /tmp/ccwt3kCc.s 			page 180
+ARM GAS  /tmp/ccJw1tyY.s 			page 180
 
 
  1211              	.LVL83:
@@ -10798,7 +10798,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1248 0022 02DD     		ble	.L86
  1249 0024 0120     		movs	r0, #1
 3660:FreeRTOS-Kernel/tasks.c **** }
-ARM GAS  /tmp/ccwt3kCc.s 			page 181
+ARM GAS  /tmp/ccJw1tyY.s 			page 181
 
 
  1250              		.loc 1 3660 5 view .LVU353
@@ -10858,7 +10858,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1293              		.loc 1 3610 41 view .LVU364
  1294 0050 054B     		ldr	r3, .L88+8
  1295 0052 43F82400 		str	r0, [r3, r4, lsl #2]
-ARM GAS  /tmp/ccwt3kCc.s 			page 182
+ARM GAS  /tmp/ccJw1tyY.s 			page 182
 
 
 3618:FreeRTOS-Kernel/tasks.c ****             {
@@ -10918,7 +10918,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1340              		.cfi_startproc
  1341              		@ args = 0, pretend = 0, frame = 0
  1342              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccwt3kCc.s 			page 183
+ARM GAS  /tmp/ccJw1tyY.s 			page 183
 
 
 2192:FreeRTOS-Kernel/tasks.c ****         TCB_t * pxTCB;
@@ -10978,7 +10978,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1383 0026 9A40     		lsls	r2, r2, r3
  1384 0028 2849     		ldr	r1, .L106+4
  1385 002a 0B68     		ldr	r3, [r1]
-ARM GAS  /tmp/ccwt3kCc.s 			page 184
+ARM GAS  /tmp/ccJw1tyY.s 			page 184
 
 
  1386 002c 23EA0203 		bic	r3, r3, r2
@@ -11038,7 +11038,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1425              	.L95:
 2298:FreeRTOS-Kernel/tasks.c ****                 traceTASK_DELETE( pxTCB );
  1426              		.loc 1 2298 17 is_stmt 1 view .LVU406
-ARM GAS  /tmp/ccwt3kCc.s 			page 185
+ARM GAS  /tmp/ccJw1tyY.s 			page 185
 
 
  1427 0058 204A     		ldr	r2, .L106+20
@@ -11098,7 +11098,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1466 007c C6E7     		b	.L91
  1467              	.LVL105:
  1468              	.L103:
-ARM GAS  /tmp/ccwt3kCc.s 			page 186
+ARM GAS  /tmp/ccJw1tyY.s 			page 186
 
 
 2234:FreeRTOS-Kernel/tasks.c **** 
@@ -11158,7 +11158,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1511 00aa BFF34F8F 	   dsb                                                     
  1512              	
  1513              	@ 0 "" 2
-ARM GAS  /tmp/ccwt3kCc.s 			page 187
+ARM GAS  /tmp/ccJw1tyY.s 			page 187
 
 
  1514              	.LVL111:
@@ -11218,7 +11218,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1558              		.cfi_endproc
  1559              	.LFE9:
  1561              		.section	.text.uxTaskPriorityGet,"ax",%progbits
-ARM GAS  /tmp/ccwt3kCc.s 			page 188
+ARM GAS  /tmp/ccJw1tyY.s 			page 188
 
 
  1562              		.align	1
@@ -11278,7 +11278,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1603 0010 2046     		mov	r0, r4
  1604 0012 10BD     		pop	{r4, pc}
  1605              	.LVL117:
-ARM GAS  /tmp/ccwt3kCc.s 			page 189
+ARM GAS  /tmp/ccJw1tyY.s 			page 189
 
 
  1606              	.L111:
@@ -11338,7 +11338,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  219:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****         "   mov %0, %1                                              \n" \
  220:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****         "   msr basepri, %0                                         \n" \
  221:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****         "   isb                                                     \n" \
-ARM GAS  /tmp/ccwt3kCc.s 			page 190
+ARM GAS  /tmp/ccJw1tyY.s 			page 190
 
 
  222:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****         "   dsb                                                     \n" \
@@ -11398,7 +11398,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1677              		.loc 1 2677 22 is_stmt 0 discriminator 4 view .LVU478
  1678 001e E06A     		ldr	r0, [r4, #44]
  1679              	.LVL123:
-ARM GAS  /tmp/ccwt3kCc.s 			page 191
+ARM GAS  /tmp/ccJw1tyY.s 			page 191
 
 
 2679:FreeRTOS-Kernel/tasks.c **** 
@@ -11458,7 +11458,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1723              		.loc 1 2692 5 is_stmt 1 view -0
  1724              		.cfi_startproc
  1725              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccwt3kCc.s 			page 192
+ARM GAS  /tmp/ccJw1tyY.s 			page 192
 
 
  1726              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -11518,7 +11518,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1765              	.L125:
  1766 001a 00BF     		.align	2
  1767              	.L124:
-ARM GAS  /tmp/ccwt3kCc.s 			page 193
+ARM GAS  /tmp/ccJw1tyY.s 			page 193
 
 
  1768 001c 00000000 		.word	pxCurrentTCB
@@ -11578,7 +11578,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1813 0018 BFF34F8F 	   dsb                                                     
  1814              	
  1815              	@ 0 "" 2
-ARM GAS  /tmp/ccwt3kCc.s 			page 194
+ARM GAS  /tmp/ccJw1tyY.s 			page 194
 
 
  1816              	.LVL135:
@@ -11638,7 +11638,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1857 002a F8E7     		b	.L127
  1858              	.L131:
  1859              		.align	2
-ARM GAS  /tmp/ccwt3kCc.s 			page 195
+ARM GAS  /tmp/ccJw1tyY.s 			page 195
 
 
  1860              	.L130:
@@ -11698,7 +11698,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  1905              	@ 217 "FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h" 1
  1906 0006 4FF05003 		   mov r3, #80                                              
  1907 000a 83F31188 	   msr basepri, r3                                         
-ARM GAS  /tmp/ccwt3kCc.s 			page 196
+ARM GAS  /tmp/ccJw1tyY.s 			page 196
 
 
  1908 000e BFF36F8F 	   isb                                                     
@@ -11758,7 +11758,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2812:FreeRTOS-Kernel/tasks.c ****                 {
  1947              		.loc 1 2812 19 is_stmt 0 view .LVU554
  1948 0028 0DD9     		bls	.L137
-ARM GAS  /tmp/ccwt3kCc.s 			page 197
+ARM GAS  /tmp/ccJw1tyY.s 			page 197
 
 
 2816:FreeRTOS-Kernel/tasks.c ****                         {
@@ -11818,7 +11818,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2867:FreeRTOS-Kernel/tasks.c **** 
  1989              		.loc 1 2867 17 view .LVU569
 2867:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 198
+ARM GAS  /tmp/ccJw1tyY.s 			page 198
 
 
  1990              		.loc 1 2867 39 is_stmt 0 view .LVU570
@@ -11878,7 +11878,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2028              		.loc 1 2907 19 view .LVU586
  2029 0076 9942     		cmp	r1, r3
  2030 0078 13D0     		beq	.L149
-ARM GAS  /tmp/ccwt3kCc.s 			page 199
+ARM GAS  /tmp/ccJw1tyY.s 			page 199
 
 
  2031              	.LVL154:
@@ -11938,7 +11938,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2069 0096 0027     		movs	r7, #0
  2070 0098 DAE7     		b	.L138
  2071              	.L145:
-ARM GAS  /tmp/ccwt3kCc.s 			page 200
+ARM GAS  /tmp/ccJw1tyY.s 			page 200
 
 
 2823:FreeRTOS-Kernel/tasks.c ****                             }
@@ -11998,7 +11998,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2114 00d2 5B68     		ldr	r3, [r3, #4]
  2115              	.LVL160:
 2924:FreeRTOS-Kernel/tasks.c ****                 }
-ARM GAS  /tmp/ccwt3kCc.s 			page 201
+ARM GAS  /tmp/ccJw1tyY.s 			page 201
 
 
  2116              		.loc 1 2924 21 view .LVU615
@@ -12058,7 +12058,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2161              	.LVL162:
  2162              	.LFB19:
 3354:FreeRTOS-Kernel/tasks.c ****         TCB_t * const pxTCB = xTaskToResume;
-ARM GAS  /tmp/ccwt3kCc.s 			page 202
+ARM GAS  /tmp/ccJw1tyY.s 			page 202
 
 
  2163              		.loc 1 3354 5 view -0
@@ -12118,7 +12118,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2203              	.LVL166:
 3402:FreeRTOS-Kernel/tasks.c ****         }
  2204              		.loc 1 3402 37 view .LVU642
-ARM GAS  /tmp/ccwt3kCc.s 			page 203
+ARM GAS  /tmp/ccJw1tyY.s 			page 203
 
 
 3405:FreeRTOS-Kernel/tasks.c ****     }
@@ -12178,7 +12178,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3386:FreeRTOS-Kernel/tasks.c **** 
  2246              		.loc 1 3386 21 view .LVU656
 3386:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 204
+ARM GAS  /tmp/ccJw1tyY.s 			page 204
 
 
  2247              		.loc 1 3386 21 view .LVU657
@@ -12238,7 +12238,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2288              		.loc 1 3386 21 view .LVU670
 3386:FreeRTOS-Kernel/tasks.c **** 
  2289              		.loc 1 3386 21 view .LVU671
-ARM GAS  /tmp/ccwt3kCc.s 			page 205
+ARM GAS  /tmp/ccJw1tyY.s 			page 205
 
 
 3391:FreeRTOS-Kernel/tasks.c ****                 }
@@ -12298,7 +12298,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2338              		.loc 1 3415 5 is_stmt 0 view .LVU679
  2339 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
  2340              	.LCFI23:
-ARM GAS  /tmp/ccwt3kCc.s 			page 206
+ARM GAS  /tmp/ccJw1tyY.s 			page 206
 
 
  2341              		.cfi_def_cfa_offset 24
@@ -12358,7 +12358,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2382              	.LBE210:
  2383              	.LBE209:
 3447:FreeRTOS-Kernel/tasks.c ****             {
-ARM GAS  /tmp/ccwt3kCc.s 			page 207
+ARM GAS  /tmp/ccJw1tyY.s 			page 207
 
 
  2384              		.loc 1 3447 13 is_stmt 1 discriminator 2 view .LVU693
@@ -12418,7 +12418,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2422              		.loc 1 3474 30 is_stmt 0 view .LVU709
  2423 0046 271D     		adds	r7, r4, #4
  2424 0048 3846     		mov	r0, r7
-ARM GAS  /tmp/ccwt3kCc.s 			page 208
+ARM GAS  /tmp/ccJw1tyY.s 			page 208
 
 
  2425 004a FFF7FEFF 		bl	uxListRemove
@@ -12478,7 +12478,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2465 0082 0131     		adds	r1, r1, #1
  2466 0084 03EB8303 		add	r3, r3, r3, lsl #2
  2467 0088 42F82310 		str	r1, [r2, r3, lsl #2]
-ARM GAS  /tmp/ccwt3kCc.s 			page 209
+ARM GAS  /tmp/ccJw1tyY.s 			page 209
 
 
  2468              	.LBE211:
@@ -12538,7 +12538,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2509              	
  2510              	@ 0 "" 2
  2511              	.LVL185:
-ARM GAS  /tmp/ccwt3kCc.s 			page 210
+ARM GAS  /tmp/ccJw1tyY.s 			page 210
 
 
  2512              		.thumb
@@ -12598,7 +12598,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2561              	.LCFI24:
  2562              		.cfi_def_cfa_offset 8
  2563              		.cfi_offset 3, -8
-ARM GAS  /tmp/ccwt3kCc.s 			page 211
+ARM GAS  /tmp/ccJw1tyY.s 			page 211
 
 
  2564              		.cfi_offset 14, -4
@@ -12658,7 +12658,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2600              		.loc 1 3710 9 is_stmt 1 view .LVU762
  2601              	.LBB216:
  2602              	.LBI216:
-ARM GAS  /tmp/ccwt3kCc.s 			page 212
+ARM GAS  /tmp/ccJw1tyY.s 			page 212
 
 
  213:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** {
@@ -12718,7 +12718,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2643              	.L179:
 3753:FreeRTOS-Kernel/tasks.c ****     }
  2644              		.loc 1 3753 9 is_stmt 1 view .LVU777
-ARM GAS  /tmp/ccwt3kCc.s 			page 213
+ARM GAS  /tmp/ccJw1tyY.s 			page 213
 
 
  2645              	.LBB218:
@@ -12778,7 +12778,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2694              		.cfi_def_cfa_offset 8
  2695              		.cfi_offset 4, -8
  2696              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccwt3kCc.s 			page 214
+ARM GAS  /tmp/ccJw1tyY.s 			page 214
 
 
 3770:FreeRTOS-Kernel/tasks.c **** 
@@ -12838,7 +12838,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2738 0024 064B     		ldr	r3, .L186
  2739 0026 0022     		movs	r2, #0
  2740 0028 1A60     		str	r2, [r3]
-ARM GAS  /tmp/ccwt3kCc.s 			page 215
+ARM GAS  /tmp/ccJw1tyY.s 			page 215
 
 
 3805:FreeRTOS-Kernel/tasks.c **** 
@@ -12898,7 +12898,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2786              		.loc 1 3828 32 is_stmt 0 view .LVU808
  2787 0000 024A     		ldr	r2, .L189
  2788 0002 1368     		ldr	r3, [r2]
-ARM GAS  /tmp/ccwt3kCc.s 			page 216
+ARM GAS  /tmp/ccJw1tyY.s 			page 216
 
 
  2789 0004 0133     		adds	r3, r3, #1
@@ -12958,7 +12958,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2831 0006 00BF     		.align	2
  2832              	.L192:
  2833 0008 00000000 		.word	xTickCount
-ARM GAS  /tmp/ccwt3kCc.s 			page 217
+ARM GAS  /tmp/ccJw1tyY.s 			page 217
 
 
  2834              		.cfi_endproc
@@ -13018,7 +13018,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2879              		.section	.text.uxTaskGetNumberOfTasks,"ax",%progbits
  2880              		.align	1
  2881              		.global	uxTaskGetNumberOfTasks
-ARM GAS  /tmp/ccwt3kCc.s 			page 218
+ARM GAS  /tmp/ccJw1tyY.s 			page 218
 
 
  2882              		.syntax unified
@@ -13078,7 +13078,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2928 0002 10B1     		cbz	r0, .L204
  2929              	.LVL207:
  2930              	.L202:
-ARM GAS  /tmp/ccwt3kCc.s 			page 219
+ARM GAS  /tmp/ccJw1tyY.s 			page 219
 
 
 4181:FreeRTOS-Kernel/tasks.c **** 
@@ -13138,7 +13138,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  2972              		.align	2
  2973              	.L205:
  2974 0024 00000000 		.word	pxCurrentTCB
-ARM GAS  /tmp/ccwt3kCc.s 			page 220
+ARM GAS  /tmp/ccJw1tyY.s 			page 220
 
 
  2975              		.cfi_endproc
@@ -13198,7 +13198,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4371:FreeRTOS-Kernel/tasks.c ****         }
  3016              		.loc 1 4371 13 is_stmt 1 discriminator 4 view .LVU874
  3017              	.LVL213:
-ARM GAS  /tmp/ccwt3kCc.s 			page 221
+ARM GAS  /tmp/ccJw1tyY.s 			page 221
 
 
 4375:FreeRTOS-Kernel/tasks.c **** 
@@ -13258,7 +13258,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  3058              		.loc 2 215 5 view .LVU888
  217:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     (
  3059              		.loc 2 217 5 view .LVU889
-ARM GAS  /tmp/ccwt3kCc.s 			page 222
+ARM GAS  /tmp/ccJw1tyY.s 			page 222
 
 
  3060              		.syntax unified
@@ -13318,7 +13318,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  3109              		.cfi_def_cfa_offset 24
  3110              		.cfi_offset 3, -24
  3111              		.cfi_offset 4, -20
-ARM GAS  /tmp/ccwt3kCc.s 			page 223
+ARM GAS  /tmp/ccJw1tyY.s 			page 223
 
 
  3112              		.cfi_offset 5, -16
@@ -13378,7 +13378,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  3148 0018 1B68     		ldr	r3, [r3]
  3149 001a 1B68     		ldr	r3, [r3]
  3150 001c 43B1     		cbz	r3, .L221
-ARM GAS  /tmp/ccwt3kCc.s 			page 224
+ARM GAS  /tmp/ccJw1tyY.s 			page 224
 
 
 4703:FreeRTOS-Kernel/tasks.c ****         }
@@ -13438,7 +13438,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4703:FreeRTOS-Kernel/tasks.c ****         }
  3193              		.loc 1 4703 13 discriminator 2 view .LVU927
  3194 0044 FFF7FEFF 		bl	prvResetNextTaskUnblockTime
-ARM GAS  /tmp/ccwt3kCc.s 			page 225
+ARM GAS  /tmp/ccJw1tyY.s 			page 225
 
 
  3195              	.LVL224:
@@ -13498,7 +13498,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4863:FreeRTOS-Kernel/tasks.c ****                 {
  3235              		.loc 1 4863 19 view .LVU942
  3236 006c 002B     		cmp	r3, #0
-ARM GAS  /tmp/ccwt3kCc.s 			page 226
+ARM GAS  /tmp/ccJw1tyY.s 			page 226
 
 
  3237 006e 6BD0     		beq	.L218
@@ -13558,7 +13558,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  3277 008a 5160     		str	r1, [r2, #4]
  3278 008c 42E0     		b	.L227
  3279              	.LVL233:
-ARM GAS  /tmp/ccwt3kCc.s 			page 227
+ARM GAS  /tmp/ccJw1tyY.s 			page 227
 
 
  3280              	.L229:
@@ -13618,7 +13618,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  3320 00b8 9668     		ldr	r6, [r2, #8]
  3321 00ba DE60     		str	r6, [r3, #12]
 4771:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 228
+ARM GAS  /tmp/ccJw1tyY.s 			page 228
 
 
  3322              		.loc 1 4771 21 view .LVU971
@@ -13678,7 +13678,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4718:FreeRTOS-Kernel/tasks.c ****                 {
  3361              		.loc 1 4718 21 is_stmt 0 view .LVU987
  3362 00e8 1A4B     		ldr	r3, .L242+8
-ARM GAS  /tmp/ccwt3kCc.s 			page 229
+ARM GAS  /tmp/ccJw1tyY.s 			page 229
 
 
  3363 00ea 1B68     		ldr	r3, [r3]
@@ -13738,7 +13738,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  3403              	.L227:
 4756:FreeRTOS-Kernel/tasks.c **** 
  3404              		.loc 1 4756 21 discriminator 3 view .LVU1002
-ARM GAS  /tmp/ccwt3kCc.s 			page 230
+ARM GAS  /tmp/ccJw1tyY.s 			page 230
 
 
  3405 0114 0021     		movs	r1, #0
@@ -13798,7 +13798,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4907:FreeRTOS-Kernel/tasks.c **** 
  3446              		.loc 1 4907 22 is_stmt 0 view .LVU1016
  3447 013e 0D4A     		ldr	r2, .L242+40
-ARM GAS  /tmp/ccwt3kCc.s 			page 231
+ARM GAS  /tmp/ccJw1tyY.s 			page 231
 
 
  3448 0140 1368     		ldr	r3, [r2]
@@ -13858,7 +13858,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 3972:FreeRTOS-Kernel/tasks.c ****         {
  3498              		.loc 1 3972 9 view .LVU1023
  3499 0002 FFF7FEFF 		bl	vPortEnterCritical
-ARM GAS  /tmp/ccwt3kCc.s 			page 232
+ARM GAS  /tmp/ccJw1tyY.s 			page 232
 
 
  3500              	.LVL248:
@@ -13918,7 +13918,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  3540              		.loc 1 3981 34 discriminator 2 view .LVU1037
  3541 0024 1A60     		str	r2, [r3]
 3982:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 233
+ARM GAS  /tmp/ccJw1tyY.s 			page 233
 
 
  3542              		.loc 1 3982 36 is_stmt 1 discriminator 2 view .LVU1038
@@ -13978,7 +13978,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  3584              	.L248:
  3585              	.LBB252:
 4011:FreeRTOS-Kernel/tasks.c ****                             }
-ARM GAS  /tmp/ccwt3kCc.s 			page 234
+ARM GAS  /tmp/ccJw1tyY.s 			page 234
 
 
  3586              		.loc 1 4011 57 is_stmt 1 view .LVU1051
@@ -14038,7 +14038,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  3626 006e 0139     		subs	r1, r1, #1
  3627 0070 1160     		str	r1, [r2]
  3628              	.LBE246:
-ARM GAS  /tmp/ccwt3kCc.s 			page 235
+ARM GAS  /tmp/ccJw1tyY.s 			page 235
 
 
 3996:FreeRTOS-Kernel/tasks.c ****                         portMEMORY_BARRIER();
@@ -14098,7 +14098,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  3669 009c 2160     		str	r1, [r4]
 3999:FreeRTOS-Kernel/tasks.c **** 
  3670              		.loc 1 3999 25 is_stmt 1 discriminator 3 view .LVU1080
-ARM GAS  /tmp/ccwt3kCc.s 			page 236
+ARM GAS  /tmp/ccJw1tyY.s 			page 236
 
 
  3671              	.LBB248:
@@ -14158,7 +14158,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  3709 00d0 1E4A     		ldr	r2, .L264+20
  3710 00d2 1268     		ldr	r2, [r2]
  3711 00d4 D26A     		ldr	r2, [r2, #44]
-ARM GAS  /tmp/ccwt3kCc.s 			page 237
+ARM GAS  /tmp/ccJw1tyY.s 			page 237
 
 
 4005:FreeRTOS-Kernel/tasks.c ****                             {
@@ -14218,7 +14218,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4082:FreeRTOS-Kernel/tasks.c ****                         }
  3751              		.loc 1 4082 29 view .LVU1112
 4082:FreeRTOS-Kernel/tasks.c ****                         }
-ARM GAS  /tmp/ccwt3kCc.s 			page 238
+ARM GAS  /tmp/ccJw1tyY.s 			page 238
 
 
  3752              		.loc 1 4082 29 view .LVU1113
@@ -14278,7 +14278,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  3792 0118 0028     		cmp	r0, #0
  3793 011a F9D0     		beq	.L255
 4054:FreeRTOS-Kernel/tasks.c ****                                 }
-ARM GAS  /tmp/ccwt3kCc.s 			page 239
+ARM GAS  /tmp/ccJw1tyY.s 			page 239
 
 
  3794              		.loc 1 4054 37 is_stmt 1 view .LVU1128
@@ -14338,7 +14338,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  3837 014c 00000000 		.word	pxCurrentTCB
  3838 0150 00000000 		.word	xYieldPendings
  3839 0154 00000000 		.word	xPendedTicks
-ARM GAS  /tmp/ccwt3kCc.s 			page 240
+ARM GAS  /tmp/ccJw1tyY.s 			page 240
 
 
  3840              		.cfi_endproc
@@ -14398,7 +14398,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  3884              	@ 217 "FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h" 1
  3885 000a 4FF05003 		   mov r3, #80                                              
  3886 000e 83F31188 	   msr basepri, r3                                         
-ARM GAS  /tmp/ccwt3kCc.s 			page 241
+ARM GAS  /tmp/ccJw1tyY.s 			page 241
 
 
  3887 0012 BFF36F8F 	   isb                                                     
@@ -14458,7 +14458,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  3929              		.loc 1 2354 9 discriminator 2 view .LVU1163
  3930 002e FFF7FEFF 		bl	vTaskSuspendAll
  3931              	.LVL277:
-ARM GAS  /tmp/ccwt3kCc.s 			page 242
+ARM GAS  /tmp/ccJw1tyY.s 			page 242
 
 
  3932              	.LBB258:
@@ -14518,7 +14518,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2363:FreeRTOS-Kernel/tasks.c **** 
  3973              		.loc 1 2363 25 discriminator 2 view .LVU1177
  3974 0052 1C44     		add	r4, r4, r3
-ARM GAS  /tmp/ccwt3kCc.s 			page 243
+ARM GAS  /tmp/ccJw1tyY.s 			page 243
 
 
  3975              	.LVL280:
@@ -14578,7 +14578,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4013              		.loc 1 2374 21 is_stmt 1 view .LVU1193
 2397:FreeRTOS-Kernel/tasks.c **** 
  4014              		.loc 1 2397 13 view .LVU1194
-ARM GAS  /tmp/ccwt3kCc.s 			page 244
+ARM GAS  /tmp/ccJw1tyY.s 			page 244
 
 
 2397:FreeRTOS-Kernel/tasks.c **** 
@@ -14638,7 +14638,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4053              		.loc 1 2416 9 is_stmt 1 view .LVU1210
 2416:FreeRTOS-Kernel/tasks.c ****         {
  4054              		.loc 1 2416 11 is_stmt 0 view .LVU1211
-ARM GAS  /tmp/ccwt3kCc.s 			page 245
+ARM GAS  /tmp/ccJw1tyY.s 			page 245
 
 
  4055 0088 48B9     		cbnz	r0, .L266
@@ -14698,7 +14698,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4095              		.align	2
  4096              	.L283:
  4097 00a8 00000000 		.word	xTickCount
-ARM GAS  /tmp/ccwt3kCc.s 			page 246
+ARM GAS  /tmp/ccJw1tyY.s 			page 246
 
 
  4098 00ac 00000000 		.word	uxSchedulerSuspended
@@ -14758,7 +14758,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 2474:FreeRTOS-Kernel/tasks.c ****         }
  4144              		.loc 1 2474 37 view .LVU1236
 2477:FreeRTOS-Kernel/tasks.c ****     }
-ARM GAS  /tmp/ccwt3kCc.s 			page 247
+ARM GAS  /tmp/ccJw1tyY.s 			page 247
 
 
  4145              		.loc 1 2477 33 view .LVU1237
@@ -14818,7 +14818,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4188              	.L287:
 2446:FreeRTOS-Kernel/tasks.c **** 
  4189              		.loc 1 2446 59 discriminator 2 view .LVU1249
-ARM GAS  /tmp/ccwt3kCc.s 			page 248
+ARM GAS  /tmp/ccJw1tyY.s 			page 248
 
 
 2448:FreeRTOS-Kernel/tasks.c **** 
@@ -14878,7 +14878,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4234              	.LBB266:
  4235              	.LBI266:
  213:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** {
-ARM GAS  /tmp/ccwt3kCc.s 			page 249
+ARM GAS  /tmp/ccJw1tyY.s 			page 249
 
 
  4236              		.loc 2 213 30 view .LVU1262
@@ -14938,7 +14938,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 4565:FreeRTOS-Kernel/tasks.c ****     xYieldOccurred = xTaskResumeAll();
  4279              		.loc 1 4565 5 is_stmt 1 discriminator 2 view .LVU1274
  4280 002c FFF7FEFF 		bl	vPortExitCritical
-ARM GAS  /tmp/ccwt3kCc.s 			page 250
+ARM GAS  /tmp/ccJw1tyY.s 			page 250
 
 
  4281              	.LVL306:
@@ -14998,7 +14998,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4324 0008 0122     		movs	r2, #1
  4325 000a 1A60     		str	r2, [r3]
  4326 000c 7047     		bx	lr
-ARM GAS  /tmp/ccwt3kCc.s 			page 251
+ARM GAS  /tmp/ccJw1tyY.s 			page 251
 
 
  4327              	.L302:
@@ -15058,7 +15058,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4366 0022 03EB8301 		add	r1, r3, r3, lsl #2
  4367 0026 8A00     		lsls	r2, r1, #2
  4368 0028 1949     		ldr	r1, .L308+12
-ARM GAS  /tmp/ccwt3kCc.s 			page 252
+ARM GAS  /tmp/ccJw1tyY.s 			page 252
 
 
  4369 002a 8A58     		ldr	r2, [r1, r2]
@@ -15118,7 +15118,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4411 0050 03EB830C 		add	ip, r3, r3, lsl #2
  4412 0054 4FEA8C02 		lsl	r2, ip, #2
  4413 0058 0832     		adds	r2, r2, #8
-ARM GAS  /tmp/ccwt3kCc.s 			page 253
+ARM GAS  /tmp/ccJw1tyY.s 			page 253
 
 
  4414 005a 0244     		add	r2, r2, r0
@@ -15178,7 +15178,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4459              	.LBE274:
  4460              	.LBE275:
  4461              		.cfi_endproc
-ARM GAS  /tmp/ccwt3kCc.s 			page 254
+ARM GAS  /tmp/ccJw1tyY.s 			page 254
 
 
  4462              	.LFE33:
@@ -15238,7 +15238,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4506              		.loc 1 3139 17 is_stmt 1 view .LVU1335
 3139:FreeRTOS-Kernel/tasks.c ****             }
  4507              		.loc 1 3139 17 view .LVU1336
-ARM GAS  /tmp/ccwt3kCc.s 			page 255
+ARM GAS  /tmp/ccJw1tyY.s 			page 255
 
 
  4508 0014 E36A     		ldr	r3, [r4, #44]
@@ -15298,7 +15298,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4549              	.LBE276:
 3214:FreeRTOS-Kernel/tasks.c **** 
  4550              		.loc 1 3214 9 view .LVU1350
-ARM GAS  /tmp/ccwt3kCc.s 			page 256
+ARM GAS  /tmp/ccJw1tyY.s 			page 256
 
 
  4551 004a FFF7FEFF 		bl	vPortExitCritical
@@ -15358,7 +15358,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4591 006c 012A     		cmp	r2, #1
  4592 006e 01D0     		beq	.L327
  4593              	.L315:
-ARM GAS  /tmp/ccwt3kCc.s 			page 257
+ARM GAS  /tmp/ccJw1tyY.s 			page 257
 
 
 3162:FreeRTOS-Kernel/tasks.c ****                 {
@@ -15418,7 +15418,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  213:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** {
  4635              		.loc 2 213 30 view .LVU1378
  4636              	.LBB279:
-ARM GAS  /tmp/ccwt3kCc.s 			page 258
+ARM GAS  /tmp/ccJw1tyY.s 			page 258
 
 
  215:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
@@ -15478,7 +15478,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4679 00c0 084B     		ldr	r3, .L328+8
  4680 00c2 1B68     		ldr	r3, [r3]
  4681              	.LVL334:
-ARM GAS  /tmp/ccwt3kCc.s 			page 259
+ARM GAS  /tmp/ccJw1tyY.s 			page 259
 
 
 3254:FreeRTOS-Kernel/tasks.c ****                     {
@@ -15538,7 +15538,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4728              	.LVL338:
  4729              	.LFB34:
 5245:FreeRTOS-Kernel/tasks.c ****     traceENTER_vTaskPlaceOnEventList( pxEventList, xTicksToWait );
-ARM GAS  /tmp/ccwt3kCc.s 			page 260
+ARM GAS  /tmp/ccJw1tyY.s 			page 260
 
 
  4730              		.loc 1 5245 1 is_stmt 1 view -0
@@ -15598,7 +15598,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4772              	.LBB283:
  215:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
  4773              		.loc 2 215 5 view .LVU1414
-ARM GAS  /tmp/ccwt3kCc.s 			page 261
+ARM GAS  /tmp/ccJw1tyY.s 			page 261
 
 
  217:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     (
@@ -15658,7 +15658,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5278:FreeRTOS-Kernel/tasks.c **** 
  4823              		.loc 1 5278 5 view .LVU1422
  4824 0002 60B1     		cbz	r0, .L344
-ARM GAS  /tmp/ccwt3kCc.s 			page 262
+ARM GAS  /tmp/ccJw1tyY.s 			page 262
 
 
  4825 0004 0346     		mov	r3, r0
@@ -15718,7 +15718,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  217:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     (
  4866              		.loc 2 217 5 view .LVU1436
  4867              		.syntax unified
-ARM GAS  /tmp/ccwt3kCc.s 			page 263
+ARM GAS  /tmp/ccJw1tyY.s 			page 263
 
 
  4868              	@ 217 "FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h" 1
@@ -15778,7 +15778,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4909              		.loc 1 5294 5 discriminator 2 view .LVU1449
  4910 0046 0568     		ldr	r5, [r0]
  4911 0048 1835     		adds	r5, r5, #24
-ARM GAS  /tmp/ccwt3kCc.s 			page 264
+ARM GAS  /tmp/ccJw1tyY.s 			page 264
 
 
  4912 004a 6560     		str	r5, [r4, #4]
@@ -15838,7 +15838,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  4958              		.loc 1 5307 5 is_stmt 0 view .LVU1459
  4959 0000 38B5     		push	{r3, r4, r5, lr}
  4960              	.LCFI36:
-ARM GAS  /tmp/ccwt3kCc.s 			page 265
+ARM GAS  /tmp/ccJw1tyY.s 			page 265
 
 
  4961              		.cfi_def_cfa_offset 16
@@ -15898,7 +15898,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5001 0024 1B68     		ldr	r3, [r3]
  5002 0026 9D62     		str	r5, [r3, #40]
 5322:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 266
+ARM GAS  /tmp/ccJw1tyY.s 			page 266
 
 
  5003              		.loc 1 5322 9 discriminator 2 view .LVU1474
@@ -15958,7 +15958,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  217:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     (
  5045              		.loc 2 217 5 is_stmt 0 view .LVU1487
  5046              	.LBE291:
-ARM GAS  /tmp/ccwt3kCc.s 			page 267
+ARM GAS  /tmp/ccJw1tyY.s 			page 267
 
 
  5047              	.LBE290:
@@ -16018,7 +16018,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5091              		.loc 1 5365 35 is_stmt 1 discriminator 2 view .LVU1499
 5366:FreeRTOS-Kernel/tasks.c **** 
  5092              		.loc 1 5366 5 discriminator 2 view .LVU1500
-ARM GAS  /tmp/ccwt3kCc.s 			page 268
+ARM GAS  /tmp/ccJw1tyY.s 			page 268
 
 
  5093              	.LBB292:
@@ -16078,7 +16078,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5133 0032 5A69     		ldr	r2, [r3, #20]
  5134              	.LVL367:
 5370:FreeRTOS-Kernel/tasks.c ****         prvAddTaskToReadyList( pxUnblockedTCB );
-ARM GAS  /tmp/ccwt3kCc.s 			page 269
+ARM GAS  /tmp/ccJw1tyY.s 			page 269
 
 
  5135              		.loc 1 5370 9 view .LVU1515
@@ -16138,7 +16138,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5177              		.loc 1 5371 9 discriminator 3 view .LVU1527
 5371:FreeRTOS-Kernel/tasks.c **** 
  5178              		.loc 1 5371 9 discriminator 3 view .LVU1528
-ARM GAS  /tmp/ccwt3kCc.s 			page 270
+ARM GAS  /tmp/ccJw1tyY.s 			page 270
 
 
 5371:FreeRTOS-Kernel/tasks.c **** 
@@ -16198,7 +16198,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5217 0096 9A42     		cmp	r2, r3
  5218 0098 1FD9     		bls	.L364
 5401:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 271
+ARM GAS  /tmp/ccJw1tyY.s 			page 271
 
 
  5219              		.loc 1 5401 13 is_stmt 1 view .LVU1545
@@ -16258,7 +16258,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5263              	.L368:
  5264              	.LCFI39:
  5265              		.cfi_def_cfa_offset 8
-ARM GAS  /tmp/ccwt3kCc.s 			page 272
+ARM GAS  /tmp/ccJw1tyY.s 			page 272
 
 
  5266              		.cfi_offset 4, -8
@@ -16318,7 +16318,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5306 00d2 1168     		ldr	r1, [r2]
  5307              	.LVL381:
 5391:FreeRTOS-Kernel/tasks.c ****     }
-ARM GAS  /tmp/ccwt3kCc.s 			page 273
+ARM GAS  /tmp/ccJw1tyY.s 			page 273
 
 
  5308              		.loc 1 5391 9 is_stmt 0 view .LVU1570
@@ -16378,7 +16378,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5355 0004 43B9     		cbnz	r3, .L373
 5443:FreeRTOS-Kernel/tasks.c **** 
  5356              		.loc 1 5443 5 view .LVU1580
-ARM GAS  /tmp/ccwt3kCc.s 			page 274
+ARM GAS  /tmp/ccJw1tyY.s 			page 274
 
 
  5357              	.LBB300:
@@ -16438,7 +16438,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5398              		.cfi_def_cfa_offset 8
  5399              		.cfi_offset 4, -8
  5400              		.cfi_offset 5, -4
-ARM GAS  /tmp/ccwt3kCc.s 			page 275
+ARM GAS  /tmp/ccJw1tyY.s 			page 275
 
 
 5454:FreeRTOS-Kernel/tasks.c ****     listREMOVE_ITEM( pxEventListItem );
@@ -16498,7 +16498,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5441 004c 4860     		str	r0, [r1, #4]
 5474:FreeRTOS-Kernel/tasks.c ****     prvAddTaskToReadyList( pxUnblockedTCB );
  5442              		.loc 1 5474 5 discriminator 3 view .LVU1608
-ARM GAS  /tmp/ccwt3kCc.s 			page 276
+ARM GAS  /tmp/ccJw1tyY.s 			page 276
 
 
  5443 004e 5968     		ldr	r1, [r3, #4]
@@ -16558,7 +16558,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5475:FreeRTOS-Kernel/tasks.c **** 
  5484              		.loc 1 5475 5 discriminator 3 view .LVU1622
  5485 0080 6060     		str	r0, [r4, #4]
-ARM GAS  /tmp/ccwt3kCc.s 			page 277
+ARM GAS  /tmp/ccJw1tyY.s 			page 277
 
 
 5475:FreeRTOS-Kernel/tasks.c **** 
@@ -16618,7 +16618,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5525              		.cfi_restore 5
  5526              		.cfi_restore 4
  5527              		.cfi_def_cfa_offset 0
-ARM GAS  /tmp/ccwt3kCc.s 			page 278
+ARM GAS  /tmp/ccJw1tyY.s 			page 278
 
 
  5528 00b2 7047     		bx	lr
@@ -16678,7 +16678,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5572              		.loc 1 5474 5 is_stmt 1 discriminator 1 view .LVU1647
  5573 00cc D168     		ldr	r1, [r2, #12]
  5574 00ce 5960     		str	r1, [r3, #4]
-ARM GAS  /tmp/ccwt3kCc.s 			page 279
+ARM GAS  /tmp/ccJw1tyY.s 			page 279
 
 
  5575 00d0 C1E7     		b	.L378
@@ -16738,7 +16738,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5514:FreeRTOS-Kernel/tasks.c ****     }
  5622              		.loc 1 5514 36 is_stmt 0 discriminator 2 view .LVU1657
  5623 0010 084B     		ldr	r3, .L393+4
-ARM GAS  /tmp/ccwt3kCc.s 			page 280
+ARM GAS  /tmp/ccJw1tyY.s 			page 280
 
 
  5624 0012 1B68     		ldr	r3, [r3]
@@ -16798,7 +16798,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5668              		.cfi_endproc
  5669              	.LFE39:
  5671              		.section	.text.vTaskInternalSetTimeOutState,"ax",%progbits
-ARM GAS  /tmp/ccwt3kCc.s 			page 281
+ARM GAS  /tmp/ccJw1tyY.s 			page 281
 
 
  5672              		.align	1
@@ -16858,7 +16858,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5720              		@ args = 0, pretend = 0, frame = 0
  5721              		@ frame_needed = 0, uses_anonymous_args = 0
 5536:FreeRTOS-Kernel/tasks.c ****     BaseType_t xReturn;
-ARM GAS  /tmp/ccwt3kCc.s 			page 282
+ARM GAS  /tmp/ccJw1tyY.s 			page 282
 
 
  5722              		.loc 1 5536 1 is_stmt 0 view .LVU1677
@@ -16918,7 +16918,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5761 0018 B2F1FF3F 		cmp	r2, #-1
  5762 001c 2AD0     		beq	.L406
 5572:FreeRTOS-Kernel/tasks.c ****         {
-ARM GAS  /tmp/ccwt3kCc.s 			page 283
+ARM GAS  /tmp/ccJw1tyY.s 			page 283
 
 
  5763              		.loc 1 5572 9 is_stmt 1 view .LVU1693
@@ -16978,7 +16978,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5804              	.LVL412:
  5805              		.thumb
  5806              		.syntax unified
-ARM GAS  /tmp/ccwt3kCc.s 			page 284
+ARM GAS  /tmp/ccJw1tyY.s 			page 284
 
 
  5807              	.L400:
@@ -17038,7 +17038,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 5591:FreeRTOS-Kernel/tasks.c ****             xReturn = pdTRUE;
  5848              		.loc 1 5591 28 is_stmt 0 view .LVU1720
  5849 005c 0023     		movs	r3, #0
-ARM GAS  /tmp/ccwt3kCc.s 			page 285
+ARM GAS  /tmp/ccJw1tyY.s 			page 285
 
 
  5850 005e 2360     		str	r3, [r4]
@@ -17098,7 +17098,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5889              		.loc 1 5599 5 view .LVU1735
 5600:FreeRTOS-Kernel/tasks.c **** /*-----------------------------------------------------------*/
  5890              		.loc 1 5600 1 is_stmt 0 view .LVU1736
-ARM GAS  /tmp/ccwt3kCc.s 			page 286
+ARM GAS  /tmp/ccJw1tyY.s 			page 286
 
 
  5891 007a 2046     		mov	r0, r4
@@ -17158,7 +17158,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6481:FreeRTOS-Kernel/tasks.c ****             TaskHandle_t xReturn;
  5942              		.loc 1 6481 9 is_stmt 1 view -0
  5943              		.cfi_startproc
-ARM GAS  /tmp/ccwt3kCc.s 			page 287
+ARM GAS  /tmp/ccJw1tyY.s 			page 287
 
 
  5944              		@ args = 0, pretend = 0, frame = 0
@@ -17218,7 +17218,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  5986              		.loc 1 6524 25 is_stmt 0 view .LVU1758
  5987 0002 024B     		ldr	r3, .L422
  5988 0004 1868     		ldr	r0, [r3]
-ARM GAS  /tmp/ccwt3kCc.s 			page 288
+ARM GAS  /tmp/ccJw1tyY.s 			page 288
 
 
  5989              	.LVL427:
@@ -17278,7 +17278,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  6032 0006 054B     		ldr	r3, .L429+4
  6033 0008 1B68     		ldr	r3, [r3]
 6556:FreeRTOS-Kernel/tasks.c ****                 {
-ARM GAS  /tmp/ccwt3kCc.s 			page 289
+ARM GAS  /tmp/ccJw1tyY.s 			page 289
 
 
  6034              		.loc 1 6556 19 view .LVU1772
@@ -17338,7 +17338,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  6078              		.loc 1 6589 11 is_stmt 0 view .LVU1784
  6079 0000 0028     		cmp	r0, #0
  6080 0002 57D0     		beq	.L437
-ARM GAS  /tmp/ccwt3kCc.s 			page 290
+ARM GAS  /tmp/ccJw1tyY.s 			page 290
 
 
 6581:FreeRTOS-Kernel/tasks.c ****         TCB_t * const pxMutexHolderTCB = pxMutexHolder;
@@ -17398,7 +17398,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  6122 0034 05D0     		beq	.L443
 6641:FreeRTOS-Kernel/tasks.c ****                 }
  6123              		.loc 1 6641 21 is_stmt 1 view .LVU1798
-ARM GAS  /tmp/ccwt3kCc.s 			page 291
+ARM GAS  /tmp/ccJw1tyY.s 			page 291
 
 
 6641:FreeRTOS-Kernel/tasks.c ****                 }
@@ -17458,7 +17458,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6626:FreeRTOS-Kernel/tasks.c ****                     #if ( configNUMBER_OF_CORES > 1 )
  6165              		.loc 1 6626 21 is_stmt 1 view .LVU1812
 6626:FreeRTOS-Kernel/tasks.c ****                     #if ( configNUMBER_OF_CORES > 1 )
-ARM GAS  /tmp/ccwt3kCc.s 			page 292
+ARM GAS  /tmp/ccJw1tyY.s 			page 292
 
 
  6166              		.loc 1 6626 21 view .LVU1813
@@ -17518,7 +17518,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6626:FreeRTOS-Kernel/tasks.c ****                     #if ( configNUMBER_OF_CORES > 1 )
  6207              		.loc 1 6626 21 view .LVU1827
 6626:FreeRTOS-Kernel/tasks.c ****                     #if ( configNUMBER_OF_CORES > 1 )
-ARM GAS  /tmp/ccwt3kCc.s 			page 293
+ARM GAS  /tmp/ccJw1tyY.s 			page 293
 
 
  6208              		.loc 1 6626 21 view .LVU1828
@@ -17578,7 +17578,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6673:FreeRTOS-Kernel/tasks.c **** 
  6252              		.loc 1 6673 52 view .LVU1839
 6675:FreeRTOS-Kernel/tasks.c ****     }
-ARM GAS  /tmp/ccwt3kCc.s 			page 294
+ARM GAS  /tmp/ccJw1tyY.s 			page 294
 
 
  6253              		.loc 1 6675 9 view .LVU1840
@@ -17638,7 +17638,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6696:FreeRTOS-Kernel/tasks.c ****             configASSERT( pxTCB->uxMutexesHeld );
  6300              		.loc 1 6696 13 view .LVU1850
  6301              	.LBB318:
-ARM GAS  /tmp/ccwt3kCc.s 			page 295
+ARM GAS  /tmp/ccJw1tyY.s 			page 295
 
 
  6302              	.LBI318:
@@ -17698,7 +17698,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  6344              	@ 0 "" 2
  6345              	.LVL447:
  6346              		.thumb
-ARM GAS  /tmp/ccwt3kCc.s 			page 296
+ARM GAS  /tmp/ccJw1tyY.s 			page 296
 
 
  6347              		.syntax unified
@@ -17758,7 +17758,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  6383              		.loc 1 6712 21 is_stmt 1 view .LVU1880
 6712:FreeRTOS-Kernel/tasks.c ****                     {
  6384              		.loc 1 6712 25 is_stmt 0 view .LVU1881
-ARM GAS  /tmp/ccwt3kCc.s 			page 297
+ARM GAS  /tmp/ccJw1tyY.s 			page 297
 
 
  6385 004a 051D     		adds	r5, r0, #4
@@ -17818,7 +17818,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  6425 007e 03EB8303 		add	r3, r3, r3, lsl #2
  6426 0082 02EB8303 		add	r3, r2, r3, lsl #2
  6427 0086 5B68     		ldr	r3, [r3, #4]
-ARM GAS  /tmp/ccwt3kCc.s 			page 298
+ARM GAS  /tmp/ccJw1tyY.s 			page 298
 
 
  6428              	.LVL452:
@@ -17878,7 +17878,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6686:FreeRTOS-Kernel/tasks.c **** 
  6468              		.loc 1 6686 20 view .LVU1910
  6469 00ae 0020     		movs	r0, #0
-ARM GAS  /tmp/ccwt3kCc.s 			page 299
+ARM GAS  /tmp/ccJw1tyY.s 			page 299
 
 
  6470              	.LVL456:
@@ -17938,7 +17938,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  6516 0002 5FD0     		beq	.L473
 6779:FreeRTOS-Kernel/tasks.c ****         TCB_t * const pxTCB = pxMutexHolder;
  6517              		.loc 1 6779 5 view .LVU1921
-ARM GAS  /tmp/ccwt3kCc.s 			page 300
+ARM GAS  /tmp/ccJw1tyY.s 			page 300
 
 
  6518 0004 38B5     		push	{r3, r4, r5, lr}
@@ -17998,7 +17998,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  6560 0020 8A42     		cmp	r2, r1
  6561 0022 00D2     		bcs	.L467
 6798:FreeRTOS-Kernel/tasks.c ****             }
-ARM GAS  /tmp/ccwt3kCc.s 			page 301
+ARM GAS  /tmp/ccJw1tyY.s 			page 301
 
 
  6562              		.loc 1 6798 33 view .LVU1934
@@ -18058,7 +18058,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 6830:FreeRTOS-Kernel/tasks.c ****                     }
  6601              		.loc 1 6830 25 is_stmt 1 view .LVU1950
  6602 0042 C2F10702 		rsb	r2, r2, #7
-ARM GAS  /tmp/ccwt3kCc.s 			page 302
+ARM GAS  /tmp/ccJw1tyY.s 			page 302
 
 
  6603              	.LVL466:
@@ -18118,7 +18118,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  6642 0072 E36A     		ldr	r3, [r4, #44]
  6643 0074 0122     		movs	r2, #1
  6644 0076 9A40     		lsls	r2, r2, r3
-ARM GAS  /tmp/ccwt3kCc.s 			page 303
+ARM GAS  /tmp/ccJw1tyY.s 			page 303
 
 
  6645 0078 1549     		ldr	r1, .L478+8
@@ -18178,7 +18178,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  6684              		.loc 1 6886 37 view .LVU1980
 6889:FreeRTOS-Kernel/tasks.c ****     }
  6685              		.loc 1 6889 58 view .LVU1981
-ARM GAS  /tmp/ccwt3kCc.s 			page 304
+ARM GAS  /tmp/ccJw1tyY.s 			page 304
 
 
 6890:FreeRTOS-Kernel/tasks.c **** 
@@ -18238,7 +18238,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  6731              		.cfi_endproc
  6732              	.LFE53:
  6734              		.section	.text.uxTaskResetEventItemValue,"ax",%progbits
-ARM GAS  /tmp/ccwt3kCc.s 			page 305
+ARM GAS  /tmp/ccJw1tyY.s 			page 305
 
 
  6735              		.align	1
@@ -18298,7 +18298,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  6782              	.LFB55:
 7590:FreeRTOS-Kernel/tasks.c ****         TCB_t * pxTCB;
  6783              		.loc 1 7590 5 is_stmt 1 view -0
-ARM GAS  /tmp/ccwt3kCc.s 			page 306
+ARM GAS  /tmp/ccJw1tyY.s 			page 306
 
 
  6784              		.cfi_startproc
@@ -18358,7 +18358,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  6827              		.cfi_startproc
  6828              		@ args = 0, pretend = 0, frame = 0
  6829              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccwt3kCc.s 			page 307
+ARM GAS  /tmp/ccJw1tyY.s 			page 307
 
 
 7618:FreeRTOS-Kernel/tasks.c ****         BaseType_t xAlreadyYielded, xShouldBlock = pdFALSE;
@@ -18418,7 +18418,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7623:FreeRTOS-Kernel/tasks.c **** 
  6872              		.loc 1 7623 80 is_stmt 1 discriminator 2 view .LVU2027
 7627:FreeRTOS-Kernel/tasks.c ****         {
-ARM GAS  /tmp/ccwt3kCc.s 			page 308
+ARM GAS  /tmp/ccJw1tyY.s 			page 308
 
 
  6873              		.loc 1 7627 9 discriminator 2 view .LVU2028
@@ -18478,7 +18478,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7673:FreeRTOS-Kernel/tasks.c ****         {
  6911              		.loc 1 7673 9 is_stmt 1 view .LVU2045
 7673:FreeRTOS-Kernel/tasks.c ****         {
-ARM GAS  /tmp/ccwt3kCc.s 			page 309
+ARM GAS  /tmp/ccJw1tyY.s 			page 309
 
 
  6912              		.loc 1 7673 11 is_stmt 0 view .LVU2046
@@ -18538,7 +18538,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  6949              		.loc 1 7703 60 view .LVU2063
  6950 0072 2B44     		add	r3, r3, r5
  6951 0074 0022     		movs	r2, #0
-ARM GAS  /tmp/ccwt3kCc.s 			page 310
+ARM GAS  /tmp/ccJw1tyY.s 			page 310
 
 
  6952 0076 83F85020 		strb	r2, [r3, #80]
@@ -18598,7 +18598,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7643:FreeRTOS-Kernel/tasks.c ****                     }
  6990              		.loc 1 7643 38 view .LVU2080
  6991 0098 D5E7     		b	.L491
-ARM GAS  /tmp/ccwt3kCc.s 			page 311
+ARM GAS  /tmp/ccJw1tyY.s 			page 311
 
 
  6992              	.LVL493:
@@ -18658,7 +18658,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7038              		.thumb
  7039              		.thumb_func
  7041              	xTaskGenericNotifyWait:
-ARM GAS  /tmp/ccwt3kCc.s 			page 312
+ARM GAS  /tmp/ccJw1tyY.s 			page 312
 
 
  7042              	.LVL495:
@@ -18718,7 +18718,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7085              		.loc 1 7727 9 is_stmt 1 discriminator 1 view .LVU2100
 7727:FreeRTOS-Kernel/tasks.c **** 
  7086              		.loc 1 7727 9 discriminator 1 view .LVU2101
-ARM GAS  /tmp/ccwt3kCc.s 			page 313
+ARM GAS  /tmp/ccJw1tyY.s 			page 313
 
 
  7087 0014 FEE7     		b	.L504
@@ -18778,7 +18778,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7747:FreeRTOS-Kernel/tasks.c **** 
  7127              		.loc 1 7747 68 view .LVU2116
  7128 004c 3B44     		add	r3, r3, r7
-ARM GAS  /tmp/ccwt3kCc.s 			page 314
+ARM GAS  /tmp/ccJw1tyY.s 			page 314
 
 
  7129 004e 0122     		movs	r2, #1
@@ -18838,7 +18838,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7165 006c 1B68     		ldr	r3, [r3]
 7798:FreeRTOS-Kernel/tasks.c ****             }
  7166              		.loc 1 7798 70 view .LVU2135
-ARM GAS  /tmp/ccwt3kCc.s 			page 315
+ARM GAS  /tmp/ccJw1tyY.s 			page 315
 
 
  7167 006e 07F11202 		add	r2, r7, #18
@@ -18898,7 +18898,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7763:FreeRTOS-Kernel/tasks.c **** 
  7207              		.loc 1 7763 13 view .LVU2150
  7208 00a0 FFF7FEFF 		bl	vPortExitCritical
-ARM GAS  /tmp/ccwt3kCc.s 			page 316
+ARM GAS  /tmp/ccJw1tyY.s 			page 316
 
 
  7209              	.LVL509:
@@ -18958,7 +18958,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7249              	@ 0 "" 2
 7783:FreeRTOS-Kernel/tasks.c ****         }
  7250              		.loc 1 7783 13 view .LVU2165
-ARM GAS  /tmp/ccwt3kCc.s 			page 317
+ARM GAS  /tmp/ccJw1tyY.s 			page 317
 
 
  7251              	@ 7783 "FreeRTOS-Kernel/tasks.c" 1
@@ -19018,7 +19018,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7298              		@ frame_needed = 0, uses_anonymous_args = 0
 7837:FreeRTOS-Kernel/tasks.c ****         TCB_t * pxTCB;
  7299              		.loc 1 7837 5 is_stmt 0 view .LVU2175
-ARM GAS  /tmp/ccwt3kCc.s 			page 318
+ARM GAS  /tmp/ccJw1tyY.s 			page 318
 
 
  7300 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
@@ -19078,7 +19078,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7342              	.L519:
 7844:FreeRTOS-Kernel/tasks.c ****         configASSERT( xTaskToNotify );
  7343              		.loc 1 7844 9 is_stmt 0 discriminator 1 view .LVU2188
-ARM GAS  /tmp/ccwt3kCc.s 			page 319
+ARM GAS  /tmp/ccJw1tyY.s 			page 319
 
 
  7344 0016 0446     		mov	r4, r0
@@ -19138,7 +19138,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7383 0048 DFE806F0 		tbb	[pc, r6]
  7384              	.L526:
  7385 004c 13       		.byte	(.L530-.L526)/2
-ARM GAS  /tmp/ccwt3kCc.s 			page 320
+ARM GAS  /tmp/ccJw1tyY.s 			page 320
 
 
  7386 004d 0C       		.byte	(.L529-.L526)/2
@@ -19198,7 +19198,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7429              	.L530:
 7903:FreeRTOS-Kernel/tasks.c **** 
  7430              		.loc 1 7903 48 view .LVU2215
-ARM GAS  /tmp/ccwt3kCc.s 			page 321
+ARM GAS  /tmp/ccJw1tyY.s 			page 321
 
 
 7907:FreeRTOS-Kernel/tasks.c ****             {
@@ -19258,7 +19258,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7469              		.loc 1 7875 23 is_stmt 0 view .LVU2231
  7470 009c 022A     		cmp	r2, #2
  7471 009e 60D0     		beq	.L536
-ARM GAS  /tmp/ccwt3kCc.s 			page 322
+ARM GAS  /tmp/ccJw1tyY.s 			page 322
 
 
 7877:FreeRTOS-Kernel/tasks.c ****                     }
@@ -19318,7 +19318,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7514              	.LVL534:
 7909:FreeRTOS-Kernel/tasks.c ****                 prvAddTaskToReadyList( pxTCB );
  7515              		.loc 1 7909 17 view .LVU2244
-ARM GAS  /tmp/ccwt3kCc.s 			page 323
+ARM GAS  /tmp/ccJw1tyY.s 			page 323
 
 
  7516 00c8 A168     		ldr	r1, [r4, #8]
@@ -19378,7 +19378,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7557 00f4 03EB8303 		add	r3, r3, r3, lsl #2
  7558 00f8 02EB8303 		add	r3, r2, r3, lsl #2
  7559 00fc 5B68     		ldr	r3, [r3, #4]
-ARM GAS  /tmp/ccwt3kCc.s 			page 324
+ARM GAS  /tmp/ccJw1tyY.s 			page 324
 
 
  7560              	.LVL538:
@@ -19438,7 +19438,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7597              		.loc 2 217 5 view .LVU2274
  7598              		.syntax unified
  7599              	@ 217 "FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h" 1
-ARM GAS  /tmp/ccwt3kCc.s 			page 325
+ARM GAS  /tmp/ccJw1tyY.s 			page 325
 
 
  7600 0126 4FF05003 		   mov r3, #80                                              
@@ -19498,7 +19498,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7644 0156 BFF34F8F 		dsb
  7645              	@ 0 "" 2
 7933:FreeRTOS-Kernel/tasks.c ****             }
-ARM GAS  /tmp/ccwt3kCc.s 			page 326
+ARM GAS  /tmp/ccJw1tyY.s 			page 326
 
 
  7646              		.loc 1 7933 17 discriminator 1 view .LVU2285
@@ -19558,7 +19558,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 7958:FreeRTOS-Kernel/tasks.c ****         TCB_t * pxTCB;
  7695              		.loc 1 7958 5 is_stmt 0 view .LVU2293
  7696 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
-ARM GAS  /tmp/ccwt3kCc.s 			page 327
+ARM GAS  /tmp/ccJw1tyY.s 			page 327
 
 
  7697              	.LCFI57:
@@ -19618,7 +19618,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  217:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     (
  7739              		.loc 2 217 5 is_stmt 0 view .LVU2306
  7740              	.LBE344:
-ARM GAS  /tmp/ccwt3kCc.s 			page 328
+ARM GAS  /tmp/ccJw1tyY.s 			page 328
 
 
  7741              	.LBE343:
@@ -19678,7 +19678,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  229:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** {
  7782              		.loc 2 229 34 discriminator 2 view .LVU2320
  7783              	.LBB348:
-ARM GAS  /tmp/ccwt3kCc.s 			page 329
+ARM GAS  /tmp/ccJw1tyY.s 			page 329
 
 
  231:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
@@ -19738,7 +19738,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8002:FreeRTOS-Kernel/tasks.c ****             {
  7825              		.loc 1 8002 13 is_stmt 1 view .LVU2334
  7826 006a 042D     		cmp	r5, #4
-ARM GAS  /tmp/ccwt3kCc.s 			page 330
+ARM GAS  /tmp/ccJw1tyY.s 			page 330
 
 
  7827 006c 27D8     		bhi	.L552
@@ -19798,7 +19798,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7870              		.loc 1 8108 57 view .LVU2346
 8110:FreeRTOS-Kernel/tasks.c ****     }
  7871              		.loc 1 8110 9 view .LVU2347
-ARM GAS  /tmp/ccwt3kCc.s 			page 331
+ARM GAS  /tmp/ccJw1tyY.s 			page 331
 
 
 8111:FreeRTOS-Kernel/tasks.c **** 
@@ -19858,7 +19858,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7912              	.LBB351:
  7913              	.LBI351:
  213:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** {
-ARM GAS  /tmp/ccwt3kCc.s 			page 332
+ARM GAS  /tmp/ccJw1tyY.s 			page 332
 
 
  7914              		.loc 2 213 30 view .LVU2362
@@ -19918,7 +19918,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  7958              	.L562:
  217:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     (
  7959              		.loc 2 217 5 is_stmt 0 view .LVU2373
-ARM GAS  /tmp/ccwt3kCc.s 			page 333
+ARM GAS  /tmp/ccJw1tyY.s 			page 333
 
 
  7960              	.LBE354:
@@ -19978,7 +19978,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8000 0112 1A60     		str	r2, [r3]
  8001              	.LBE355:
 8056:FreeRTOS-Kernel/tasks.c ****                     prvAddTaskToReadyList( pxTCB );
-ARM GAS  /tmp/ccwt3kCc.s 			page 334
+ARM GAS  /tmp/ccJw1tyY.s 			page 334
 
 
  8002              		.loc 1 8056 21 discriminator 3 view .LVU2388
@@ -20038,7 +20038,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8041 013e 02EB8004 		add	r4, r2, r0, lsl #2
  8042 0142 7461     		str	r4, [r6, #20]
 8057:FreeRTOS-Kernel/tasks.c ****                 }
-ARM GAS  /tmp/ccwt3kCc.s 			page 335
+ARM GAS  /tmp/ccJw1tyY.s 			page 335
 
 
  8043              		.loc 1 8057 21 is_stmt 1 discriminator 3 view .LVU2404
@@ -20098,7 +20098,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8083              	.LBB357:
 8056:FreeRTOS-Kernel/tasks.c ****                     prvAddTaskToReadyList( pxTCB );
  8084              		.loc 1 8056 21 is_stmt 1 discriminator 1 view .LVU2419
-ARM GAS  /tmp/ccwt3kCc.s 			page 336
+ARM GAS  /tmp/ccJw1tyY.s 			page 336
 
 
  8085 0170 F268     		ldr	r2, [r6, #12]
@@ -20158,7 +20158,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8025:FreeRTOS-Kernel/tasks.c ****                     }
  8125              		.loc 1 8025 33 view .LVU2434
  8126 0192 0020     		movs	r0, #0
-ARM GAS  /tmp/ccwt3kCc.s 			page 337
+ARM GAS  /tmp/ccJw1tyY.s 			page 337
 
 
  8127 0194 7AE7     		b	.L559
@@ -20218,7 +20218,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8175 0002 60B1     		cbz	r0, .L590
  8176 0004 0C46     		mov	r4, r1
  8177 0006 1546     		mov	r5, r2
-ARM GAS  /tmp/ccwt3kCc.s 			page 338
+ARM GAS  /tmp/ccJw1tyY.s 			page 338
 
 
  8178 0008 0646     		mov	r6, r0
@@ -20278,7 +20278,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8219 0026 BFF36F8F 	   isb                                                     
  8220 002a BFF34F8F 	   dsb                                                     
  8221              	
-ARM GAS  /tmp/ccwt3kCc.s 			page 339
+ARM GAS  /tmp/ccJw1tyY.s 			page 339
 
 
  8222              	@ 0 "" 2
@@ -20338,7 +20338,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8156:FreeRTOS-Kernel/tasks.c ****             pxTCB->ucNotifyState[ uxIndexToNotify ] = taskNOTIFICATION_RECEIVED;
  8263              		.loc 1 8156 35 is_stmt 0 discriminator 2 view .LVU2469
  8264 0048 3319     		adds	r3, r6, r4
-ARM GAS  /tmp/ccwt3kCc.s 			page 340
+ARM GAS  /tmp/ccJw1tyY.s 			page 340
 
 
  8265 004a 93F85020 		ldrb	r2, [r3, #80]	@ zero_extendqisi2
@@ -20398,7 +20398,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8306              	.L591:
 8170:FreeRTOS-Kernel/tasks.c **** 
  8307              		.loc 1 8170 17 is_stmt 1 view .LVU2484
-ARM GAS  /tmp/ccwt3kCc.s 			page 341
+ARM GAS  /tmp/ccJw1tyY.s 			page 341
 
 
  8308 006e B36A     		ldr	r3, [r6, #40]
@@ -20458,7 +20458,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8174:FreeRTOS-Kernel/tasks.c ****                     prvAddTaskToReadyList( pxTCB );
  8349              		.loc 1 8174 21 view .LVU2498
  8350 008e B168     		ldr	r1, [r6, #8]
-ARM GAS  /tmp/ccwt3kCc.s 			page 342
+ARM GAS  /tmp/ccJw1tyY.s 			page 342
 
 
  8351 0090 F268     		ldr	r2, [r6, #12]
@@ -20518,7 +20518,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8392 00be 02EB8303 		add	r3, r2, r3, lsl #2
  8393 00c2 5B68     		ldr	r3, [r3, #4]
  8394              	.LVL589:
-ARM GAS  /tmp/ccwt3kCc.s 			page 343
+ARM GAS  /tmp/ccJw1tyY.s 			page 343
 
 
 8175:FreeRTOS-Kernel/tasks.c ****                 }
@@ -20578,7 +20578,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8432              		.loc 1 8186 23 discriminator 1 view .LVU2528
  8433 00f0 9A42     		cmp	r2, r3
  8434 00f2 B9D9     		bls	.L582
-ARM GAS  /tmp/ccwt3kCc.s 			page 344
+ARM GAS  /tmp/ccJw1tyY.s 			page 344
 
 
 8190:FreeRTOS-Kernel/tasks.c ****                         {
@@ -20638,7 +20638,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8474 0110 3462     		str	r4, [r6, #32]
 8181:FreeRTOS-Kernel/tasks.c ****                 }
  8475              		.loc 1 8181 21 is_stmt 1 view .LVU2544
-ARM GAS  /tmp/ccwt3kCc.s 			page 345
+ARM GAS  /tmp/ccJw1tyY.s 			page 345
 
 
  8476 0112 06F11801 		add	r1, r6, #24
@@ -20698,7 +20698,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8238:FreeRTOS-Kernel/tasks.c **** 
  8525              		.loc 1 8238 9 view .LVU2552
 8240:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 346
+ARM GAS  /tmp/ccJw1tyY.s 			page 346
 
 
  8526              		.loc 1 8240 73 view .LVU2553
@@ -20758,7 +20758,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8250:FreeRTOS-Kernel/tasks.c ****             {
  8567              		.loc 1 8250 37 is_stmt 0 discriminator 4 view .LVU2567
  8568 0020 6319     		adds	r3, r4, r5
-ARM GAS  /tmp/ccwt3kCc.s 			page 347
+ARM GAS  /tmp/ccJw1tyY.s 			page 347
 
 
  8569 0022 93F85030 		ldrb	r3, [r3, #80]	@ zero_extendqisi2
@@ -20818,7 +20818,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8610              	.L604:
  8611 0048 00000000 		.word	pxCurrentTCB
  8612              		.cfi_endproc
-ARM GAS  /tmp/ccwt3kCc.s 			page 348
+ARM GAS  /tmp/ccJw1tyY.s 			page 348
 
 
  8613              	.LFE61:
@@ -20878,7 +20878,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8657              		.loc 1 8281 9 discriminator 1 view .LVU2592
  8658 0012 FEE7     		b	.L608
  8659              	.L607:
-ARM GAS  /tmp/ccwt3kCc.s 			page 349
+ARM GAS  /tmp/ccJw1tyY.s 			page 349
 
 
 8275:FreeRTOS-Kernel/tasks.c ****         TCB_t * pxTCB;
@@ -20938,7 +20938,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8298:FreeRTOS-Kernel/tasks.c ****     }
  8700              		.loc 1 8298 9 discriminator 4 view .LVU2607
 8299:FreeRTOS-Kernel/tasks.c **** 
-ARM GAS  /tmp/ccwt3kCc.s 			page 350
+ARM GAS  /tmp/ccJw1tyY.s 			page 350
 
 
  8701              		.loc 1 8299 5 is_stmt 0 discriminator 4 view .LVU2608
@@ -20998,7 +20998,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8559:FreeRTOS-Kernel/tasks.c **** 
 8560:FreeRTOS-Kernel/tasks.c **** 
 8561:FreeRTOS-Kernel/tasks.c **** #if ( configINCLUDE_FREERTOS_TASK_C_ADDITIONS_H == 1 )
-ARM GAS  /tmp/ccwt3kCc.s 			page 351
+ARM GAS  /tmp/ccJw1tyY.s 			page 351
 
 
 8562:FreeRTOS-Kernel/tasks.c **** 
@@ -21058,7 +21058,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
 8616:FreeRTOS-Kernel/tasks.c **** #if ( ( configSUPPORT_STATIC_ALLOCATION == 1 ) && ( configKERNEL_PROVIDED_STATIC_MEMORY == 1 ) && (
 8617:FreeRTOS-Kernel/tasks.c **** 
 8618:FreeRTOS-Kernel/tasks.c **** /*
-ARM GAS  /tmp/ccwt3kCc.s 			page 352
+ARM GAS  /tmp/ccJw1tyY.s 			page 352
 
 
 8619:FreeRTOS-Kernel/tasks.c ****  * This is the kernel provided implementation of vApplicationGetTimerTaskMemory()
@@ -21118,7 +21118,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8742 0008 1360     		str	r3, [r2]
 8659:FreeRTOS-Kernel/tasks.c ****     }
 8660:FreeRTOS-Kernel/tasks.c ****     #endif /* #if ( INCLUDE_vTaskDelete == 1 ) */
-ARM GAS  /tmp/ccwt3kCc.s 			page 353
+ARM GAS  /tmp/ccJw1tyY.s 			page 353
 
 
 8661:FreeRTOS-Kernel/tasks.c **** 
@@ -21178,7 +21178,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8776              		.loc 1 8681 5 is_stmt 1 view .LVU2632
  8777              		.loc 1 8681 18 is_stmt 0 view .LVU2633
  8778 0028 0E4A     		ldr	r2, .L618+32
-ARM GAS  /tmp/ccwt3kCc.s 			page 354
+ARM GAS  /tmp/ccJw1tyY.s 			page 354
 
 
  8779 002a 1360     		str	r3, [r2]
@@ -21238,7 +21238,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8815 006c 00000000 		.word	uxSchedulerSuspended
  8816 0070 00000000 		.word	xYieldPendings
  8817              		.cfi_endproc
-ARM GAS  /tmp/ccwt3kCc.s 			page 355
+ARM GAS  /tmp/ccJw1tyY.s 			page 355
 
 
  8818              	.LFE64:
@@ -21298,7 +21298,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8897      00000000 
  8897      00000000 
  8897      00000000 
-ARM GAS  /tmp/ccwt3kCc.s 			page 356
+ARM GAS  /tmp/ccJw1tyY.s 			page 356
 
 
  8898              		.section	.bss.uxDeletedTasksWaitingCleanUp,"aw",%nobits
@@ -21358,7 +21358,7 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8948              		.align	2
  8951              	pxCurrentTCB:
  8952 0000 00000000 		.space	4
-ARM GAS  /tmp/ccwt3kCc.s 			page 357
+ARM GAS  /tmp/ccJw1tyY.s 			page 357
 
 
  8953              		.text
@@ -21374,247 +21374,247 @@ ARM GAS  /tmp/ccwt3kCc.s 			page 1
  8963              		.file 11 "FreeRTOS-Kernel/include/portable.h"
  8964              		.file 12 "/usr/share/arm-gnu-toolchain/arm-none-eabi/include/string.h"
  8965              		.file 13 "<built-in>"
-ARM GAS  /tmp/ccwt3kCc.s 			page 358
+ARM GAS  /tmp/ccJw1tyY.s 			page 358
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 tasks.c
-     /tmp/ccwt3kCc.s:21     .text.prvTaskIsTaskSuspended:0000000000000000 $t
-     /tmp/ccwt3kCc.s:26     .text.prvTaskIsTaskSuspended:0000000000000000 prvTaskIsTaskSuspended
-     /tmp/ccwt3kCc.s:150    .text.prvTaskIsTaskSuspended:0000000000000054 $d
-     /tmp/ccwt3kCc.s:8896   .bss.xSuspendedTaskList:0000000000000000 xSuspendedTaskList
-     /tmp/ccwt3kCc.s:8914   .bss.xPendingReadyList:0000000000000000 xPendingReadyList
-     /tmp/ccwt3kCc.s:156    .text.prvResetNextTaskUnblockTime:0000000000000000 $t
-     /tmp/ccwt3kCc.s:161    .text.prvResetNextTaskUnblockTime:0000000000000000 prvResetNextTaskUnblockTime
-     /tmp/ccwt3kCc.s:196    .text.prvResetNextTaskUnblockTime:0000000000000020 $d
-     /tmp/ccwt3kCc.s:8926   .bss.pxDelayedTaskList:0000000000000000 pxDelayedTaskList
-     /tmp/ccwt3kCc.s:8842   .bss.xNextTaskUnblockTime:0000000000000000 xNextTaskUnblockTime
-     /tmp/ccwt3kCc.s:202    .text.prvInitialiseNewTask:0000000000000000 $t
-     /tmp/ccwt3kCc.s:207    .text.prvInitialiseNewTask:0000000000000000 prvInitialiseNewTask
-     /tmp/ccwt3kCc.s:366    .text.prvCreateStaticTask:0000000000000000 $t
-     /tmp/ccwt3kCc.s:371    .text.prvCreateStaticTask:0000000000000000 prvCreateStaticTask
-     /tmp/ccwt3kCc.s:550    .text.prvInitialiseTaskLists:0000000000000000 $t
-     /tmp/ccwt3kCc.s:555    .text.prvInitialiseTaskLists:0000000000000000 prvInitialiseTaskLists
-     /tmp/ccwt3kCc.s:628    .text.prvInitialiseTaskLists:0000000000000048 $d
-     /tmp/ccwt3kCc.s:8944   .bss.pxReadyTasksLists:0000000000000000 pxReadyTasksLists
-     /tmp/ccwt3kCc.s:8938   .bss.xDelayedTaskList1:0000000000000000 xDelayedTaskList1
-     /tmp/ccwt3kCc.s:8932   .bss.xDelayedTaskList2:0000000000000000 xDelayedTaskList2
-     /tmp/ccwt3kCc.s:8908   .bss.xTasksWaitingTermination:0000000000000000 xTasksWaitingTermination
-     /tmp/ccwt3kCc.s:8920   .bss.pxOverflowDelayedTaskList:0000000000000000 pxOverflowDelayedTaskList
-     /tmp/ccwt3kCc.s:640    .text.prvAddNewTaskToReadyList:0000000000000000 $t
-     /tmp/ccwt3kCc.s:645    .text.prvAddNewTaskToReadyList:0000000000000000 prvAddNewTaskToReadyList
-     /tmp/ccwt3kCc.s:809    .text.prvAddNewTaskToReadyList:00000000000000b4 $d
-     /tmp/ccwt3kCc.s:8890   .bss.uxCurrentNumberOfTasks:0000000000000000 uxCurrentNumberOfTasks
-     /tmp/ccwt3kCc.s:8951   .bss.pxCurrentTCB:0000000000000000 pxCurrentTCB
-     /tmp/ccwt3kCc.s:8872   .bss.xSchedulerRunning:0000000000000000 xSchedulerRunning
-     /tmp/ccwt3kCc.s:8848   .bss.uxTaskNumber:0000000000000000 uxTaskNumber
-     /tmp/ccwt3kCc.s:8878   .bss.uxTopReadyPriority:0000000000000000 uxTopReadyPriority
-     /tmp/ccwt3kCc.s:819    .text.prvCheckTasksWaitingTermination:0000000000000000 $t
-     /tmp/ccwt3kCc.s:824    .text.prvCheckTasksWaitingTermination:0000000000000000 prvCheckTasksWaitingTermination
-     /tmp/ccwt3kCc.s:884    .text.prvCheckTasksWaitingTermination:0000000000000034 $d
-     /tmp/ccwt3kCc.s:8902   .bss.uxDeletedTasksWaitingCleanUp:0000000000000000 uxDeletedTasksWaitingCleanUp
-     /tmp/ccwt3kCc.s:891    .text.prvIdleTask:0000000000000000 $t
-     /tmp/ccwt3kCc.s:896    .text.prvIdleTask:0000000000000000 prvIdleTask
-     /tmp/ccwt3kCc.s:945    .text.prvIdleTask:0000000000000024 $d
-     /tmp/ccwt3kCc.s:950    .text.prvAddCurrentTaskToDelayedList:0000000000000000 $t
-     /tmp/ccwt3kCc.s:955    .text.prvAddCurrentTaskToDelayedList:0000000000000000 prvAddCurrentTaskToDelayedList
-     /tmp/ccwt3kCc.s:1113   .text.prvAddCurrentTaskToDelayedList:00000000000000a0 $d
-     /tmp/ccwt3kCc.s:8884   .bss.xTickCount:0000000000000000 xTickCount
-     /tmp/ccwt3kCc.s:1124   .text.xTaskCreateStatic:0000000000000000 $t
-     /tmp/ccwt3kCc.s:1130   .text.xTaskCreateStatic:0000000000000000 xTaskCreateStatic
-     /tmp/ccwt3kCc.s:1186   .rodata.prvCreateIdleTasks.str1.4:0000000000000000 $d
-     /tmp/ccwt3kCc.s:1190   .text.prvCreateIdleTasks:0000000000000000 $t
-     /tmp/ccwt3kCc.s:1195   .text.prvCreateIdleTasks:0000000000000000 prvCreateIdleTasks
-     /tmp/ccwt3kCc.s:1322   .text.prvCreateIdleTasks:0000000000000060 $d
-     /tmp/ccwt3kCc.s:8836   .bss.xIdleTaskHandles:0000000000000000 xIdleTaskHandles
-     /tmp/ccwt3kCc.s:1330   .text.vTaskDelete:0000000000000000 $t
-     /tmp/ccwt3kCc.s:1336   .text.vTaskDelete:0000000000000000 vTaskDelete
-     /tmp/ccwt3kCc.s:1549   .text.vTaskDelete:00000000000000c8 $d
-     /tmp/ccwt3kCc.s:8824   .bss.uxSchedulerSuspended:0000000000000000 uxSchedulerSuspended
-     /tmp/ccwt3kCc.s:1562   .text.uxTaskPriorityGet:0000000000000000 $t
-     /tmp/ccwt3kCc.s:1568   .text.uxTaskPriorityGet:0000000000000000 uxTaskPriorityGet
-     /tmp/ccwt3kCc.s:1616   .text.uxTaskPriorityGet:000000000000001c $d
-ARM GAS  /tmp/ccwt3kCc.s 			page 359
+     /tmp/ccJw1tyY.s:21     .text.prvTaskIsTaskSuspended:0000000000000000 $t
+     /tmp/ccJw1tyY.s:26     .text.prvTaskIsTaskSuspended:0000000000000000 prvTaskIsTaskSuspended
+     /tmp/ccJw1tyY.s:150    .text.prvTaskIsTaskSuspended:0000000000000054 $d
+     /tmp/ccJw1tyY.s:8896   .bss.xSuspendedTaskList:0000000000000000 xSuspendedTaskList
+     /tmp/ccJw1tyY.s:8914   .bss.xPendingReadyList:0000000000000000 xPendingReadyList
+     /tmp/ccJw1tyY.s:156    .text.prvResetNextTaskUnblockTime:0000000000000000 $t
+     /tmp/ccJw1tyY.s:161    .text.prvResetNextTaskUnblockTime:0000000000000000 prvResetNextTaskUnblockTime
+     /tmp/ccJw1tyY.s:196    .text.prvResetNextTaskUnblockTime:0000000000000020 $d
+     /tmp/ccJw1tyY.s:8926   .bss.pxDelayedTaskList:0000000000000000 pxDelayedTaskList
+     /tmp/ccJw1tyY.s:8842   .bss.xNextTaskUnblockTime:0000000000000000 xNextTaskUnblockTime
+     /tmp/ccJw1tyY.s:202    .text.prvInitialiseNewTask:0000000000000000 $t
+     /tmp/ccJw1tyY.s:207    .text.prvInitialiseNewTask:0000000000000000 prvInitialiseNewTask
+     /tmp/ccJw1tyY.s:366    .text.prvCreateStaticTask:0000000000000000 $t
+     /tmp/ccJw1tyY.s:371    .text.prvCreateStaticTask:0000000000000000 prvCreateStaticTask
+     /tmp/ccJw1tyY.s:550    .text.prvInitialiseTaskLists:0000000000000000 $t
+     /tmp/ccJw1tyY.s:555    .text.prvInitialiseTaskLists:0000000000000000 prvInitialiseTaskLists
+     /tmp/ccJw1tyY.s:628    .text.prvInitialiseTaskLists:0000000000000048 $d
+     /tmp/ccJw1tyY.s:8944   .bss.pxReadyTasksLists:0000000000000000 pxReadyTasksLists
+     /tmp/ccJw1tyY.s:8938   .bss.xDelayedTaskList1:0000000000000000 xDelayedTaskList1
+     /tmp/ccJw1tyY.s:8932   .bss.xDelayedTaskList2:0000000000000000 xDelayedTaskList2
+     /tmp/ccJw1tyY.s:8908   .bss.xTasksWaitingTermination:0000000000000000 xTasksWaitingTermination
+     /tmp/ccJw1tyY.s:8920   .bss.pxOverflowDelayedTaskList:0000000000000000 pxOverflowDelayedTaskList
+     /tmp/ccJw1tyY.s:640    .text.prvAddNewTaskToReadyList:0000000000000000 $t
+     /tmp/ccJw1tyY.s:645    .text.prvAddNewTaskToReadyList:0000000000000000 prvAddNewTaskToReadyList
+     /tmp/ccJw1tyY.s:809    .text.prvAddNewTaskToReadyList:00000000000000b4 $d
+     /tmp/ccJw1tyY.s:8890   .bss.uxCurrentNumberOfTasks:0000000000000000 uxCurrentNumberOfTasks
+     /tmp/ccJw1tyY.s:8951   .bss.pxCurrentTCB:0000000000000000 pxCurrentTCB
+     /tmp/ccJw1tyY.s:8872   .bss.xSchedulerRunning:0000000000000000 xSchedulerRunning
+     /tmp/ccJw1tyY.s:8848   .bss.uxTaskNumber:0000000000000000 uxTaskNumber
+     /tmp/ccJw1tyY.s:8878   .bss.uxTopReadyPriority:0000000000000000 uxTopReadyPriority
+     /tmp/ccJw1tyY.s:819    .text.prvCheckTasksWaitingTermination:0000000000000000 $t
+     /tmp/ccJw1tyY.s:824    .text.prvCheckTasksWaitingTermination:0000000000000000 prvCheckTasksWaitingTermination
+     /tmp/ccJw1tyY.s:884    .text.prvCheckTasksWaitingTermination:0000000000000034 $d
+     /tmp/ccJw1tyY.s:8902   .bss.uxDeletedTasksWaitingCleanUp:0000000000000000 uxDeletedTasksWaitingCleanUp
+     /tmp/ccJw1tyY.s:891    .text.prvIdleTask:0000000000000000 $t
+     /tmp/ccJw1tyY.s:896    .text.prvIdleTask:0000000000000000 prvIdleTask
+     /tmp/ccJw1tyY.s:945    .text.prvIdleTask:0000000000000024 $d
+     /tmp/ccJw1tyY.s:950    .text.prvAddCurrentTaskToDelayedList:0000000000000000 $t
+     /tmp/ccJw1tyY.s:955    .text.prvAddCurrentTaskToDelayedList:0000000000000000 prvAddCurrentTaskToDelayedList
+     /tmp/ccJw1tyY.s:1113   .text.prvAddCurrentTaskToDelayedList:00000000000000a0 $d
+     /tmp/ccJw1tyY.s:8884   .bss.xTickCount:0000000000000000 xTickCount
+     /tmp/ccJw1tyY.s:1124   .text.xTaskCreateStatic:0000000000000000 $t
+     /tmp/ccJw1tyY.s:1130   .text.xTaskCreateStatic:0000000000000000 xTaskCreateStatic
+     /tmp/ccJw1tyY.s:1186   .rodata.prvCreateIdleTasks.str1.4:0000000000000000 $d
+     /tmp/ccJw1tyY.s:1190   .text.prvCreateIdleTasks:0000000000000000 $t
+     /tmp/ccJw1tyY.s:1195   .text.prvCreateIdleTasks:0000000000000000 prvCreateIdleTasks
+     /tmp/ccJw1tyY.s:1322   .text.prvCreateIdleTasks:0000000000000060 $d
+     /tmp/ccJw1tyY.s:8836   .bss.xIdleTaskHandles:0000000000000000 xIdleTaskHandles
+     /tmp/ccJw1tyY.s:1330   .text.vTaskDelete:0000000000000000 $t
+     /tmp/ccJw1tyY.s:1336   .text.vTaskDelete:0000000000000000 vTaskDelete
+     /tmp/ccJw1tyY.s:1549   .text.vTaskDelete:00000000000000c8 $d
+     /tmp/ccJw1tyY.s:8824   .bss.uxSchedulerSuspended:0000000000000000 uxSchedulerSuspended
+     /tmp/ccJw1tyY.s:1562   .text.uxTaskPriorityGet:0000000000000000 $t
+     /tmp/ccJw1tyY.s:1568   .text.uxTaskPriorityGet:0000000000000000 uxTaskPriorityGet
+     /tmp/ccJw1tyY.s:1616   .text.uxTaskPriorityGet:000000000000001c $d
+ARM GAS  /tmp/ccJw1tyY.s 			page 359
 
 
-     /tmp/ccwt3kCc.s:1621   .text.uxTaskPriorityGetFromISR:0000000000000000 $t
-     /tmp/ccwt3kCc.s:1627   .text.uxTaskPriorityGetFromISR:0000000000000000 uxTaskPriorityGetFromISR
-     /tmp/ccwt3kCc.s:1709   .text.uxTaskPriorityGetFromISR:000000000000002c $d
-     /tmp/ccwt3kCc.s:1714   .text.uxTaskBasePriorityGet:0000000000000000 $t
-     /tmp/ccwt3kCc.s:1720   .text.uxTaskBasePriorityGet:0000000000000000 uxTaskBasePriorityGet
-     /tmp/ccwt3kCc.s:1768   .text.uxTaskBasePriorityGet:000000000000001c $d
-     /tmp/ccwt3kCc.s:1773   .text.uxTaskBasePriorityGetFromISR:0000000000000000 $t
-     /tmp/ccwt3kCc.s:1779   .text.uxTaskBasePriorityGetFromISR:0000000000000000 uxTaskBasePriorityGetFromISR
-     /tmp/ccwt3kCc.s:1861   .text.uxTaskBasePriorityGetFromISR:000000000000002c $d
-     /tmp/ccwt3kCc.s:1866   .text.vTaskPrioritySet:0000000000000000 $t
-     /tmp/ccwt3kCc.s:1872   .text.vTaskPrioritySet:0000000000000000 vTaskPrioritySet
-     /tmp/ccwt3kCc.s:2147   .text.vTaskPrioritySet:00000000000000fc $d
-     /tmp/ccwt3kCc.s:2154   .text.vTaskResume:0000000000000000 $t
-     /tmp/ccwt3kCc.s:2160   .text.vTaskResume:0000000000000000 vTaskResume
-     /tmp/ccwt3kCc.s:2318   .text.vTaskResume:000000000000009c $d
-     /tmp/ccwt3kCc.s:2325   .text.xTaskResumeFromISR:0000000000000000 $t
-     /tmp/ccwt3kCc.s:2331   .text.xTaskResumeFromISR:0000000000000000 xTaskResumeFromISR
-     /tmp/ccwt3kCc.s:2538   .text.xTaskResumeFromISR:00000000000000b8 $d
-     /tmp/ccwt3kCc.s:8860   .bss.xYieldPendings:0000000000000000 xYieldPendings
-     /tmp/ccwt3kCc.s:2548   .text.vTaskStartScheduler:0000000000000000 $t
-     /tmp/ccwt3kCc.s:2554   .text.vTaskStartScheduler:0000000000000000 vTaskStartScheduler
-     /tmp/ccwt3kCc.s:2672   .text.vTaskStartScheduler:000000000000005c $d
-     /tmp/ccwt3kCc.s:8830   .data.uxTopUsedPriority:0000000000000000 uxTopUsedPriority
-     /tmp/ccwt3kCc.s:2680   .text.vTaskEndScheduler:0000000000000000 $t
-     /tmp/ccwt3kCc.s:2686   .text.vTaskEndScheduler:0000000000000000 vTaskEndScheduler
-     /tmp/ccwt3kCc.s:2763   .text.vTaskEndScheduler:0000000000000040 $d
-     /tmp/ccwt3kCc.s:2770   .text.vTaskSuspendAll:0000000000000000 $t
-     /tmp/ccwt3kCc.s:2776   .text.vTaskSuspendAll:0000000000000000 vTaskSuspendAll
-     /tmp/ccwt3kCc.s:2799   .text.vTaskSuspendAll:000000000000000c $d
-     /tmp/ccwt3kCc.s:2804   .text.xTaskGetTickCount:0000000000000000 $t
-     /tmp/ccwt3kCc.s:2810   .text.xTaskGetTickCount:0000000000000000 xTaskGetTickCount
-     /tmp/ccwt3kCc.s:2833   .text.xTaskGetTickCount:0000000000000008 $d
-     /tmp/ccwt3kCc.s:2838   .text.xTaskGetTickCountFromISR:0000000000000000 $t
-     /tmp/ccwt3kCc.s:2844   .text.xTaskGetTickCountFromISR:0000000000000000 xTaskGetTickCountFromISR
-     /tmp/ccwt3kCc.s:2875   .text.xTaskGetTickCountFromISR:000000000000000c $d
-     /tmp/ccwt3kCc.s:2880   .text.uxTaskGetNumberOfTasks:0000000000000000 $t
-     /tmp/ccwt3kCc.s:2886   .text.uxTaskGetNumberOfTasks:0000000000000000 uxTaskGetNumberOfTasks
-     /tmp/ccwt3kCc.s:2904   .text.uxTaskGetNumberOfTasks:0000000000000008 $d
-     /tmp/ccwt3kCc.s:2909   .text.pcTaskGetName:0000000000000000 $t
-     /tmp/ccwt3kCc.s:2915   .text.pcTaskGetName:0000000000000000 pcTaskGetName
-     /tmp/ccwt3kCc.s:2974   .text.pcTaskGetName:0000000000000024 $d
-     /tmp/ccwt3kCc.s:2979   .text.xTaskGetStaticBuffers:0000000000000000 $t
-     /tmp/ccwt3kCc.s:2985   .text.xTaskGetStaticBuffers:0000000000000000 xTaskGetStaticBuffers
-     /tmp/ccwt3kCc.s:3090   .text.xTaskGetStaticBuffers:000000000000003c $d
-     /tmp/ccwt3kCc.s:3095   .text.xTaskIncrementTick:0000000000000000 $t
-     /tmp/ccwt3kCc.s:3101   .text.xTaskIncrementTick:0000000000000000 xTaskIncrementTick
-     /tmp/ccwt3kCc.s:3460   .text.xTaskIncrementTick:000000000000014c $d
-     /tmp/ccwt3kCc.s:8854   .bss.xNumOfOverflows:0000000000000000 xNumOfOverflows
-     /tmp/ccwt3kCc.s:8866   .bss.xPendedTicks:0000000000000000 xPendedTicks
-     /tmp/ccwt3kCc.s:3475   .text.xTaskResumeAll:0000000000000000 $t
-     /tmp/ccwt3kCc.s:3481   .text.xTaskResumeAll:0000000000000000 xTaskResumeAll
-     /tmp/ccwt3kCc.s:3832   .text.xTaskResumeAll:0000000000000138 $d
-     /tmp/ccwt3kCc.s:3844   .text.xTaskDelayUntil:0000000000000000 $t
-     /tmp/ccwt3kCc.s:3850   .text.xTaskDelayUntil:0000000000000000 xTaskDelayUntil
-     /tmp/ccwt3kCc.s:4097   .text.xTaskDelayUntil:00000000000000a8 $d
-     /tmp/ccwt3kCc.s:4103   .text.vTaskDelay:0000000000000000 $t
-     /tmp/ccwt3kCc.s:4109   .text.vTaskDelay:0000000000000000 vTaskDelay
-ARM GAS  /tmp/ccwt3kCc.s 			page 360
+     /tmp/ccJw1tyY.s:1621   .text.uxTaskPriorityGetFromISR:0000000000000000 $t
+     /tmp/ccJw1tyY.s:1627   .text.uxTaskPriorityGetFromISR:0000000000000000 uxTaskPriorityGetFromISR
+     /tmp/ccJw1tyY.s:1709   .text.uxTaskPriorityGetFromISR:000000000000002c $d
+     /tmp/ccJw1tyY.s:1714   .text.uxTaskBasePriorityGet:0000000000000000 $t
+     /tmp/ccJw1tyY.s:1720   .text.uxTaskBasePriorityGet:0000000000000000 uxTaskBasePriorityGet
+     /tmp/ccJw1tyY.s:1768   .text.uxTaskBasePriorityGet:000000000000001c $d
+     /tmp/ccJw1tyY.s:1773   .text.uxTaskBasePriorityGetFromISR:0000000000000000 $t
+     /tmp/ccJw1tyY.s:1779   .text.uxTaskBasePriorityGetFromISR:0000000000000000 uxTaskBasePriorityGetFromISR
+     /tmp/ccJw1tyY.s:1861   .text.uxTaskBasePriorityGetFromISR:000000000000002c $d
+     /tmp/ccJw1tyY.s:1866   .text.vTaskPrioritySet:0000000000000000 $t
+     /tmp/ccJw1tyY.s:1872   .text.vTaskPrioritySet:0000000000000000 vTaskPrioritySet
+     /tmp/ccJw1tyY.s:2147   .text.vTaskPrioritySet:00000000000000fc $d
+     /tmp/ccJw1tyY.s:2154   .text.vTaskResume:0000000000000000 $t
+     /tmp/ccJw1tyY.s:2160   .text.vTaskResume:0000000000000000 vTaskResume
+     /tmp/ccJw1tyY.s:2318   .text.vTaskResume:000000000000009c $d
+     /tmp/ccJw1tyY.s:2325   .text.xTaskResumeFromISR:0000000000000000 $t
+     /tmp/ccJw1tyY.s:2331   .text.xTaskResumeFromISR:0000000000000000 xTaskResumeFromISR
+     /tmp/ccJw1tyY.s:2538   .text.xTaskResumeFromISR:00000000000000b8 $d
+     /tmp/ccJw1tyY.s:8860   .bss.xYieldPendings:0000000000000000 xYieldPendings
+     /tmp/ccJw1tyY.s:2548   .text.vTaskStartScheduler:0000000000000000 $t
+     /tmp/ccJw1tyY.s:2554   .text.vTaskStartScheduler:0000000000000000 vTaskStartScheduler
+     /tmp/ccJw1tyY.s:2672   .text.vTaskStartScheduler:000000000000005c $d
+     /tmp/ccJw1tyY.s:8830   .data.uxTopUsedPriority:0000000000000000 uxTopUsedPriority
+     /tmp/ccJw1tyY.s:2680   .text.vTaskEndScheduler:0000000000000000 $t
+     /tmp/ccJw1tyY.s:2686   .text.vTaskEndScheduler:0000000000000000 vTaskEndScheduler
+     /tmp/ccJw1tyY.s:2763   .text.vTaskEndScheduler:0000000000000040 $d
+     /tmp/ccJw1tyY.s:2770   .text.vTaskSuspendAll:0000000000000000 $t
+     /tmp/ccJw1tyY.s:2776   .text.vTaskSuspendAll:0000000000000000 vTaskSuspendAll
+     /tmp/ccJw1tyY.s:2799   .text.vTaskSuspendAll:000000000000000c $d
+     /tmp/ccJw1tyY.s:2804   .text.xTaskGetTickCount:0000000000000000 $t
+     /tmp/ccJw1tyY.s:2810   .text.xTaskGetTickCount:0000000000000000 xTaskGetTickCount
+     /tmp/ccJw1tyY.s:2833   .text.xTaskGetTickCount:0000000000000008 $d
+     /tmp/ccJw1tyY.s:2838   .text.xTaskGetTickCountFromISR:0000000000000000 $t
+     /tmp/ccJw1tyY.s:2844   .text.xTaskGetTickCountFromISR:0000000000000000 xTaskGetTickCountFromISR
+     /tmp/ccJw1tyY.s:2875   .text.xTaskGetTickCountFromISR:000000000000000c $d
+     /tmp/ccJw1tyY.s:2880   .text.uxTaskGetNumberOfTasks:0000000000000000 $t
+     /tmp/ccJw1tyY.s:2886   .text.uxTaskGetNumberOfTasks:0000000000000000 uxTaskGetNumberOfTasks
+     /tmp/ccJw1tyY.s:2904   .text.uxTaskGetNumberOfTasks:0000000000000008 $d
+     /tmp/ccJw1tyY.s:2909   .text.pcTaskGetName:0000000000000000 $t
+     /tmp/ccJw1tyY.s:2915   .text.pcTaskGetName:0000000000000000 pcTaskGetName
+     /tmp/ccJw1tyY.s:2974   .text.pcTaskGetName:0000000000000024 $d
+     /tmp/ccJw1tyY.s:2979   .text.xTaskGetStaticBuffers:0000000000000000 $t
+     /tmp/ccJw1tyY.s:2985   .text.xTaskGetStaticBuffers:0000000000000000 xTaskGetStaticBuffers
+     /tmp/ccJw1tyY.s:3090   .text.xTaskGetStaticBuffers:000000000000003c $d
+     /tmp/ccJw1tyY.s:3095   .text.xTaskIncrementTick:0000000000000000 $t
+     /tmp/ccJw1tyY.s:3101   .text.xTaskIncrementTick:0000000000000000 xTaskIncrementTick
+     /tmp/ccJw1tyY.s:3460   .text.xTaskIncrementTick:000000000000014c $d
+     /tmp/ccJw1tyY.s:8854   .bss.xNumOfOverflows:0000000000000000 xNumOfOverflows
+     /tmp/ccJw1tyY.s:8866   .bss.xPendedTicks:0000000000000000 xPendedTicks
+     /tmp/ccJw1tyY.s:3475   .text.xTaskResumeAll:0000000000000000 $t
+     /tmp/ccJw1tyY.s:3481   .text.xTaskResumeAll:0000000000000000 xTaskResumeAll
+     /tmp/ccJw1tyY.s:3832   .text.xTaskResumeAll:0000000000000138 $d
+     /tmp/ccJw1tyY.s:3844   .text.xTaskDelayUntil:0000000000000000 $t
+     /tmp/ccJw1tyY.s:3850   .text.xTaskDelayUntil:0000000000000000 xTaskDelayUntil
+     /tmp/ccJw1tyY.s:4097   .text.xTaskDelayUntil:00000000000000a8 $d
+     /tmp/ccJw1tyY.s:4103   .text.vTaskDelay:0000000000000000 $t
+     /tmp/ccJw1tyY.s:4109   .text.vTaskDelay:0000000000000000 vTaskDelay
+ARM GAS  /tmp/ccJw1tyY.s 			page 360
 
 
-     /tmp/ccwt3kCc.s:4209   .text.vTaskDelay:000000000000004c $d
-     /tmp/ccwt3kCc.s:4214   .text.xTaskCatchUpTicks:0000000000000000 $t
-     /tmp/ccwt3kCc.s:4220   .text.xTaskCatchUpTicks:0000000000000000 xTaskCatchUpTicks
-     /tmp/ccwt3kCc.s:4295   .text.xTaskCatchUpTicks:0000000000000038 $d
-     /tmp/ccwt3kCc.s:4301   .text.vTaskSwitchContext:0000000000000000 $t
-     /tmp/ccwt3kCc.s:4307   .text.vTaskSwitchContext:0000000000000000 vTaskSwitchContext
-     /tmp/ccwt3kCc.s:4454   .text.vTaskSwitchContext:0000000000000084 $d
-     /tmp/ccwt3kCc.s:4465   .text.vTaskSuspend:0000000000000000 $t
-     /tmp/ccwt3kCc.s:4471   .text.vTaskSuspend:0000000000000000 vTaskSuspend
-     /tmp/ccwt3kCc.s:4710   .text.vTaskSuspend:00000000000000dc $d
-     /tmp/ccwt3kCc.s:4721   .text.vTaskPlaceOnEventList:0000000000000000 $t
-     /tmp/ccwt3kCc.s:4727   .text.vTaskPlaceOnEventList:0000000000000000 vTaskPlaceOnEventList
-     /tmp/ccwt3kCc.s:4796   .text.vTaskPlaceOnEventList:000000000000002c $d
-     /tmp/ccwt3kCc.s:4801   .text.vTaskPlaceOnUnorderedEventList:0000000000000000 $t
-     /tmp/ccwt3kCc.s:4807   .text.vTaskPlaceOnUnorderedEventList:0000000000000000 vTaskPlaceOnUnorderedEventList
-     /tmp/ccwt3kCc.s:4939   .text.vTaskPlaceOnUnorderedEventList:0000000000000068 $d
-     /tmp/ccwt3kCc.s:4945   .text.vTaskPlaceOnEventListRestricted:0000000000000000 $t
-     /tmp/ccwt3kCc.s:4951   .text.vTaskPlaceOnEventListRestricted:0000000000000000 vTaskPlaceOnEventListRestricted
-     /tmp/ccwt3kCc.s:5054   .text.vTaskPlaceOnEventListRestricted:0000000000000050 $d
-     /tmp/ccwt3kCc.s:5059   .text.xTaskRemoveFromEventList:0000000000000000 $t
-     /tmp/ccwt3kCc.s:5065   .text.xTaskRemoveFromEventList:0000000000000000 xTaskRemoveFromEventList
-     /tmp/ccwt3kCc.s:5326   .text.xTaskRemoveFromEventList:00000000000000e0 $d
-     /tmp/ccwt3kCc.s:5336   .text.vTaskRemoveFromUnorderedEventList:0000000000000000 $t
-     /tmp/ccwt3kCc.s:5342   .text.vTaskRemoveFromUnorderedEventList:0000000000000000 vTaskRemoveFromUnorderedEventList
-     /tmp/ccwt3kCc.s:5579   .text.vTaskRemoveFromUnorderedEventList:00000000000000d4 $d
-     /tmp/ccwt3kCc.s:5589   .text.vTaskSetTimeOutState:0000000000000000 $t
-     /tmp/ccwt3kCc.s:5595   .text.vTaskSetTimeOutState:0000000000000000 vTaskSetTimeOutState
-     /tmp/ccwt3kCc.s:5666   .text.vTaskSetTimeOutState:0000000000000030 $d
-     /tmp/ccwt3kCc.s:5672   .text.vTaskInternalSetTimeOutState:0000000000000000 $t
-     /tmp/ccwt3kCc.s:5678   .text.vTaskInternalSetTimeOutState:0000000000000000 vTaskInternalSetTimeOutState
-     /tmp/ccwt3kCc.s:5703   .text.vTaskInternalSetTimeOutState:0000000000000010 $d
-     /tmp/ccwt3kCc.s:5709   .text.xTaskCheckForTimeOut:0000000000000000 $t
-     /tmp/ccwt3kCc.s:5715   .text.xTaskCheckForTimeOut:0000000000000000 xTaskCheckForTimeOut
-     /tmp/ccwt3kCc.s:5898   .text.xTaskCheckForTimeOut:0000000000000080 $d
-     /tmp/ccwt3kCc.s:5904   .text.vTaskMissedYield:0000000000000000 $t
-     /tmp/ccwt3kCc.s:5910   .text.vTaskMissedYield:0000000000000000 vTaskMissedYield
-     /tmp/ccwt3kCc.s:5929   .text.vTaskMissedYield:0000000000000008 $d
-     /tmp/ccwt3kCc.s:5934   .text.xTaskGetCurrentTaskHandle:0000000000000000 $t
-     /tmp/ccwt3kCc.s:5940   .text.xTaskGetCurrentTaskHandle:0000000000000000 xTaskGetCurrentTaskHandle
-     /tmp/ccwt3kCc.s:5961   .text.xTaskGetCurrentTaskHandle:0000000000000008 $d
-     /tmp/ccwt3kCc.s:5966   .text.xTaskGetCurrentTaskHandleForCore:0000000000000000 $t
-     /tmp/ccwt3kCc.s:5972   .text.xTaskGetCurrentTaskHandleForCore:0000000000000000 xTaskGetCurrentTaskHandleForCore
-     /tmp/ccwt3kCc.s:6004   .text.xTaskGetCurrentTaskHandleForCore:000000000000000c $d
-     /tmp/ccwt3kCc.s:6009   .text.xTaskGetSchedulerState:0000000000000000 $t
-     /tmp/ccwt3kCc.s:6015   .text.xTaskGetSchedulerState:0000000000000000 xTaskGetSchedulerState
-     /tmp/ccwt3kCc.s:6055   .text.xTaskGetSchedulerState:0000000000000018 $d
-     /tmp/ccwt3kCc.s:6061   .text.xTaskPriorityInherit:0000000000000000 $t
-     /tmp/ccwt3kCc.s:6067   .text.xTaskPriorityInherit:0000000000000000 xTaskPriorityInherit
-     /tmp/ccwt3kCc.s:6259   .text.xTaskPriorityInherit:00000000000000bc $d
-     /tmp/ccwt3kCc.s:6266   .text.xTaskPriorityDisinherit:0000000000000000 $t
-     /tmp/ccwt3kCc.s:6272   .text.xTaskPriorityDisinherit:0000000000000000 xTaskPriorityDisinherit
-     /tmp/ccwt3kCc.s:6489   .text.xTaskPriorityDisinherit:00000000000000b8 $d
-     /tmp/ccwt3kCc.s:6496   .text.vTaskPriorityDisinheritAfterTimeout:0000000000000000 $t
-     /tmp/ccwt3kCc.s:6502   .text.vTaskPriorityDisinheritAfterTimeout:0000000000000000 vTaskPriorityDisinheritAfterTimeout
-     /tmp/ccwt3kCc.s:6728   .text.vTaskPriorityDisinheritAfterTimeout:00000000000000c8 $d
-     /tmp/ccwt3kCc.s:6735   .text.uxTaskResetEventItemValue:0000000000000000 $t
-     /tmp/ccwt3kCc.s:6741   .text.uxTaskResetEventItemValue:0000000000000000 uxTaskResetEventItemValue
-ARM GAS  /tmp/ccwt3kCc.s 			page 361
+     /tmp/ccJw1tyY.s:4209   .text.vTaskDelay:000000000000004c $d
+     /tmp/ccJw1tyY.s:4214   .text.xTaskCatchUpTicks:0000000000000000 $t
+     /tmp/ccJw1tyY.s:4220   .text.xTaskCatchUpTicks:0000000000000000 xTaskCatchUpTicks
+     /tmp/ccJw1tyY.s:4295   .text.xTaskCatchUpTicks:0000000000000038 $d
+     /tmp/ccJw1tyY.s:4301   .text.vTaskSwitchContext:0000000000000000 $t
+     /tmp/ccJw1tyY.s:4307   .text.vTaskSwitchContext:0000000000000000 vTaskSwitchContext
+     /tmp/ccJw1tyY.s:4454   .text.vTaskSwitchContext:0000000000000084 $d
+     /tmp/ccJw1tyY.s:4465   .text.vTaskSuspend:0000000000000000 $t
+     /tmp/ccJw1tyY.s:4471   .text.vTaskSuspend:0000000000000000 vTaskSuspend
+     /tmp/ccJw1tyY.s:4710   .text.vTaskSuspend:00000000000000dc $d
+     /tmp/ccJw1tyY.s:4721   .text.vTaskPlaceOnEventList:0000000000000000 $t
+     /tmp/ccJw1tyY.s:4727   .text.vTaskPlaceOnEventList:0000000000000000 vTaskPlaceOnEventList
+     /tmp/ccJw1tyY.s:4796   .text.vTaskPlaceOnEventList:000000000000002c $d
+     /tmp/ccJw1tyY.s:4801   .text.vTaskPlaceOnUnorderedEventList:0000000000000000 $t
+     /tmp/ccJw1tyY.s:4807   .text.vTaskPlaceOnUnorderedEventList:0000000000000000 vTaskPlaceOnUnorderedEventList
+     /tmp/ccJw1tyY.s:4939   .text.vTaskPlaceOnUnorderedEventList:0000000000000068 $d
+     /tmp/ccJw1tyY.s:4945   .text.vTaskPlaceOnEventListRestricted:0000000000000000 $t
+     /tmp/ccJw1tyY.s:4951   .text.vTaskPlaceOnEventListRestricted:0000000000000000 vTaskPlaceOnEventListRestricted
+     /tmp/ccJw1tyY.s:5054   .text.vTaskPlaceOnEventListRestricted:0000000000000050 $d
+     /tmp/ccJw1tyY.s:5059   .text.xTaskRemoveFromEventList:0000000000000000 $t
+     /tmp/ccJw1tyY.s:5065   .text.xTaskRemoveFromEventList:0000000000000000 xTaskRemoveFromEventList
+     /tmp/ccJw1tyY.s:5326   .text.xTaskRemoveFromEventList:00000000000000e0 $d
+     /tmp/ccJw1tyY.s:5336   .text.vTaskRemoveFromUnorderedEventList:0000000000000000 $t
+     /tmp/ccJw1tyY.s:5342   .text.vTaskRemoveFromUnorderedEventList:0000000000000000 vTaskRemoveFromUnorderedEventList
+     /tmp/ccJw1tyY.s:5579   .text.vTaskRemoveFromUnorderedEventList:00000000000000d4 $d
+     /tmp/ccJw1tyY.s:5589   .text.vTaskSetTimeOutState:0000000000000000 $t
+     /tmp/ccJw1tyY.s:5595   .text.vTaskSetTimeOutState:0000000000000000 vTaskSetTimeOutState
+     /tmp/ccJw1tyY.s:5666   .text.vTaskSetTimeOutState:0000000000000030 $d
+     /tmp/ccJw1tyY.s:5672   .text.vTaskInternalSetTimeOutState:0000000000000000 $t
+     /tmp/ccJw1tyY.s:5678   .text.vTaskInternalSetTimeOutState:0000000000000000 vTaskInternalSetTimeOutState
+     /tmp/ccJw1tyY.s:5703   .text.vTaskInternalSetTimeOutState:0000000000000010 $d
+     /tmp/ccJw1tyY.s:5709   .text.xTaskCheckForTimeOut:0000000000000000 $t
+     /tmp/ccJw1tyY.s:5715   .text.xTaskCheckForTimeOut:0000000000000000 xTaskCheckForTimeOut
+     /tmp/ccJw1tyY.s:5898   .text.xTaskCheckForTimeOut:0000000000000080 $d
+     /tmp/ccJw1tyY.s:5904   .text.vTaskMissedYield:0000000000000000 $t
+     /tmp/ccJw1tyY.s:5910   .text.vTaskMissedYield:0000000000000000 vTaskMissedYield
+     /tmp/ccJw1tyY.s:5929   .text.vTaskMissedYield:0000000000000008 $d
+     /tmp/ccJw1tyY.s:5934   .text.xTaskGetCurrentTaskHandle:0000000000000000 $t
+     /tmp/ccJw1tyY.s:5940   .text.xTaskGetCurrentTaskHandle:0000000000000000 xTaskGetCurrentTaskHandle
+     /tmp/ccJw1tyY.s:5961   .text.xTaskGetCurrentTaskHandle:0000000000000008 $d
+     /tmp/ccJw1tyY.s:5966   .text.xTaskGetCurrentTaskHandleForCore:0000000000000000 $t
+     /tmp/ccJw1tyY.s:5972   .text.xTaskGetCurrentTaskHandleForCore:0000000000000000 xTaskGetCurrentTaskHandleForCore
+     /tmp/ccJw1tyY.s:6004   .text.xTaskGetCurrentTaskHandleForCore:000000000000000c $d
+     /tmp/ccJw1tyY.s:6009   .text.xTaskGetSchedulerState:0000000000000000 $t
+     /tmp/ccJw1tyY.s:6015   .text.xTaskGetSchedulerState:0000000000000000 xTaskGetSchedulerState
+     /tmp/ccJw1tyY.s:6055   .text.xTaskGetSchedulerState:0000000000000018 $d
+     /tmp/ccJw1tyY.s:6061   .text.xTaskPriorityInherit:0000000000000000 $t
+     /tmp/ccJw1tyY.s:6067   .text.xTaskPriorityInherit:0000000000000000 xTaskPriorityInherit
+     /tmp/ccJw1tyY.s:6259   .text.xTaskPriorityInherit:00000000000000bc $d
+     /tmp/ccJw1tyY.s:6266   .text.xTaskPriorityDisinherit:0000000000000000 $t
+     /tmp/ccJw1tyY.s:6272   .text.xTaskPriorityDisinherit:0000000000000000 xTaskPriorityDisinherit
+     /tmp/ccJw1tyY.s:6489   .text.xTaskPriorityDisinherit:00000000000000b8 $d
+     /tmp/ccJw1tyY.s:6496   .text.vTaskPriorityDisinheritAfterTimeout:0000000000000000 $t
+     /tmp/ccJw1tyY.s:6502   .text.vTaskPriorityDisinheritAfterTimeout:0000000000000000 vTaskPriorityDisinheritAfterTimeout
+     /tmp/ccJw1tyY.s:6728   .text.vTaskPriorityDisinheritAfterTimeout:00000000000000c8 $d
+     /tmp/ccJw1tyY.s:6735   .text.uxTaskResetEventItemValue:0000000000000000 $t
+     /tmp/ccJw1tyY.s:6741   .text.uxTaskResetEventItemValue:0000000000000000 uxTaskResetEventItemValue
+ARM GAS  /tmp/ccJw1tyY.s 			page 361
 
 
-     /tmp/ccwt3kCc.s:6770   .text.uxTaskResetEventItemValue:0000000000000014 $d
-     /tmp/ccwt3kCc.s:6775   .text.pvTaskIncrementMutexHeldCount:0000000000000000 $t
-     /tmp/ccwt3kCc.s:6781   .text.pvTaskIncrementMutexHeldCount:0000000000000000 pvTaskIncrementMutexHeldCount
-     /tmp/ccwt3kCc.s:6812   .text.pvTaskIncrementMutexHeldCount:0000000000000010 $d
-     /tmp/ccwt3kCc.s:6817   .text.ulTaskGenericNotifyTake:0000000000000000 $t
-     /tmp/ccwt3kCc.s:6823   .text.ulTaskGenericNotifyTake:0000000000000000 ulTaskGenericNotifyTake
-     /tmp/ccwt3kCc.s:7030   .text.ulTaskGenericNotifyTake:00000000000000c8 $d
-     /tmp/ccwt3kCc.s:7035   .text.xTaskGenericNotifyWait:0000000000000000 $t
-     /tmp/ccwt3kCc.s:7041   .text.xTaskGenericNotifyWait:0000000000000000 xTaskGenericNotifyWait
-     /tmp/ccwt3kCc.s:7281   .text.xTaskGenericNotifyWait:00000000000000ec $d
-     /tmp/ccwt3kCc.s:7286   .text.xTaskGenericNotify:0000000000000000 $t
-     /tmp/ccwt3kCc.s:7292   .text.xTaskGenericNotify:0000000000000000 xTaskGenericNotify
-     /tmp/ccwt3kCc.s:7385   .text.xTaskGenericNotify:000000000000004c $d
-     /tmp/ccwt3kCc.s:7674   .text.xTaskGenericNotify:000000000000016c $d
-     /tmp/ccwt3kCc.s:7682   .text.xTaskGenericNotifyFromISR:0000000000000000 $t
-     /tmp/ccwt3kCc.s:7688   .text.xTaskGenericNotifyFromISR:0000000000000000 xTaskGenericNotifyFromISR
-     /tmp/ccwt3kCc.s:7830   .text.xTaskGenericNotifyFromISR:0000000000000072 $d
-     /tmp/ccwt3kCc.s:8136   .text.xTaskGenericNotifyFromISR:000000000000019c $d
-     /tmp/ccwt3kCc.s:8147   .text.vTaskGenericNotifyGiveFromISR:0000000000000000 $t
-     /tmp/ccwt3kCc.s:8153   .text.vTaskGenericNotifyGiveFromISR:0000000000000000 vTaskGenericNotifyGiveFromISR
-     /tmp/ccwt3kCc.s:8492   .text.vTaskGenericNotifyGiveFromISR:0000000000000124 $d
-     /tmp/ccwt3kCc.s:8503   .text.xTaskGenericNotifyStateClear:0000000000000000 $t
-     /tmp/ccwt3kCc.s:8509   .text.xTaskGenericNotifyStateClear:0000000000000000 xTaskGenericNotifyStateClear
-     /tmp/ccwt3kCc.s:8611   .text.xTaskGenericNotifyStateClear:0000000000000048 $d
-     /tmp/ccwt3kCc.s:8616   .text.ulTaskGenericNotifyValueClear:0000000000000000 $t
-     /tmp/ccwt3kCc.s:8622   .text.ulTaskGenericNotifyValueClear:0000000000000000 ulTaskGenericNotifyValueClear
-     /tmp/ccwt3kCc.s:8715   .text.ulTaskGenericNotifyValueClear:0000000000000040 $d
-     /tmp/ccwt3kCc.s:8720   .text.vTaskResetState:0000000000000000 $t
-     /tmp/ccwt3kCc.s:8726   .text.vTaskResetState:0000000000000000 vTaskResetState
-     /tmp/ccwt3kCc.s:8805   .text.vTaskResetState:0000000000000044 $d
-     /tmp/ccwt3kCc.s:8821   .bss.uxSchedulerSuspended:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8827   .data.uxTopUsedPriority:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8833   .bss.xIdleTaskHandles:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8839   .bss.xNextTaskUnblockTime:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8845   .bss.uxTaskNumber:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8851   .bss.xNumOfOverflows:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8857   .bss.xYieldPendings:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8863   .bss.xPendedTicks:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8869   .bss.xSchedulerRunning:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8875   .bss.uxTopReadyPriority:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8881   .bss.xTickCount:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8887   .bss.uxCurrentNumberOfTasks:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8893   .bss.xSuspendedTaskList:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8899   .bss.uxDeletedTasksWaitingCleanUp:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8905   .bss.xTasksWaitingTermination:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8911   .bss.xPendingReadyList:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8917   .bss.pxOverflowDelayedTaskList:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8923   .bss.pxDelayedTaskList:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8929   .bss.xDelayedTaskList2:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8935   .bss.xDelayedTaskList1:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8941   .bss.pxReadyTasksLists:0000000000000000 $d
-     /tmp/ccwt3kCc.s:8948   .bss.pxCurrentTCB:0000000000000000 $d
-     /tmp/ccwt3kCc.s:7391   .text.xTaskGenericNotify:0000000000000051 $d
-     /tmp/ccwt3kCc.s:7391   .text.xTaskGenericNotify:0000000000000052 $t
-     /tmp/ccwt3kCc.s:7835   .text.xTaskGenericNotifyFromISR:0000000000000077 $d
-     /tmp/ccwt3kCc.s:7835   .text.xTaskGenericNotifyFromISR:0000000000000078 $t
+     /tmp/ccJw1tyY.s:6770   .text.uxTaskResetEventItemValue:0000000000000014 $d
+     /tmp/ccJw1tyY.s:6775   .text.pvTaskIncrementMutexHeldCount:0000000000000000 $t
+     /tmp/ccJw1tyY.s:6781   .text.pvTaskIncrementMutexHeldCount:0000000000000000 pvTaskIncrementMutexHeldCount
+     /tmp/ccJw1tyY.s:6812   .text.pvTaskIncrementMutexHeldCount:0000000000000010 $d
+     /tmp/ccJw1tyY.s:6817   .text.ulTaskGenericNotifyTake:0000000000000000 $t
+     /tmp/ccJw1tyY.s:6823   .text.ulTaskGenericNotifyTake:0000000000000000 ulTaskGenericNotifyTake
+     /tmp/ccJw1tyY.s:7030   .text.ulTaskGenericNotifyTake:00000000000000c8 $d
+     /tmp/ccJw1tyY.s:7035   .text.xTaskGenericNotifyWait:0000000000000000 $t
+     /tmp/ccJw1tyY.s:7041   .text.xTaskGenericNotifyWait:0000000000000000 xTaskGenericNotifyWait
+     /tmp/ccJw1tyY.s:7281   .text.xTaskGenericNotifyWait:00000000000000ec $d
+     /tmp/ccJw1tyY.s:7286   .text.xTaskGenericNotify:0000000000000000 $t
+     /tmp/ccJw1tyY.s:7292   .text.xTaskGenericNotify:0000000000000000 xTaskGenericNotify
+     /tmp/ccJw1tyY.s:7385   .text.xTaskGenericNotify:000000000000004c $d
+     /tmp/ccJw1tyY.s:7674   .text.xTaskGenericNotify:000000000000016c $d
+     /tmp/ccJw1tyY.s:7682   .text.xTaskGenericNotifyFromISR:0000000000000000 $t
+     /tmp/ccJw1tyY.s:7688   .text.xTaskGenericNotifyFromISR:0000000000000000 xTaskGenericNotifyFromISR
+     /tmp/ccJw1tyY.s:7830   .text.xTaskGenericNotifyFromISR:0000000000000072 $d
+     /tmp/ccJw1tyY.s:8136   .text.xTaskGenericNotifyFromISR:000000000000019c $d
+     /tmp/ccJw1tyY.s:8147   .text.vTaskGenericNotifyGiveFromISR:0000000000000000 $t
+     /tmp/ccJw1tyY.s:8153   .text.vTaskGenericNotifyGiveFromISR:0000000000000000 vTaskGenericNotifyGiveFromISR
+     /tmp/ccJw1tyY.s:8492   .text.vTaskGenericNotifyGiveFromISR:0000000000000124 $d
+     /tmp/ccJw1tyY.s:8503   .text.xTaskGenericNotifyStateClear:0000000000000000 $t
+     /tmp/ccJw1tyY.s:8509   .text.xTaskGenericNotifyStateClear:0000000000000000 xTaskGenericNotifyStateClear
+     /tmp/ccJw1tyY.s:8611   .text.xTaskGenericNotifyStateClear:0000000000000048 $d
+     /tmp/ccJw1tyY.s:8616   .text.ulTaskGenericNotifyValueClear:0000000000000000 $t
+     /tmp/ccJw1tyY.s:8622   .text.ulTaskGenericNotifyValueClear:0000000000000000 ulTaskGenericNotifyValueClear
+     /tmp/ccJw1tyY.s:8715   .text.ulTaskGenericNotifyValueClear:0000000000000040 $d
+     /tmp/ccJw1tyY.s:8720   .text.vTaskResetState:0000000000000000 $t
+     /tmp/ccJw1tyY.s:8726   .text.vTaskResetState:0000000000000000 vTaskResetState
+     /tmp/ccJw1tyY.s:8805   .text.vTaskResetState:0000000000000044 $d
+     /tmp/ccJw1tyY.s:8821   .bss.uxSchedulerSuspended:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8827   .data.uxTopUsedPriority:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8833   .bss.xIdleTaskHandles:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8839   .bss.xNextTaskUnblockTime:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8845   .bss.uxTaskNumber:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8851   .bss.xNumOfOverflows:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8857   .bss.xYieldPendings:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8863   .bss.xPendedTicks:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8869   .bss.xSchedulerRunning:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8875   .bss.uxTopReadyPriority:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8881   .bss.xTickCount:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8887   .bss.uxCurrentNumberOfTasks:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8893   .bss.xSuspendedTaskList:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8899   .bss.uxDeletedTasksWaitingCleanUp:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8905   .bss.xTasksWaitingTermination:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8911   .bss.xPendingReadyList:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8917   .bss.pxOverflowDelayedTaskList:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8923   .bss.pxDelayedTaskList:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8929   .bss.xDelayedTaskList2:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8935   .bss.xDelayedTaskList1:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8941   .bss.pxReadyTasksLists:0000000000000000 $d
+     /tmp/ccJw1tyY.s:8948   .bss.pxCurrentTCB:0000000000000000 $d
+     /tmp/ccJw1tyY.s:7391   .text.xTaskGenericNotify:0000000000000051 $d
+     /tmp/ccJw1tyY.s:7391   .text.xTaskGenericNotify:0000000000000052 $t
+     /tmp/ccJw1tyY.s:7835   .text.xTaskGenericNotifyFromISR:0000000000000077 $d
+     /tmp/ccJw1tyY.s:7835   .text.xTaskGenericNotifyFromISR:0000000000000078 $t
 
-ARM GAS  /tmp/ccwt3kCc.s 			page 362
+ARM GAS  /tmp/ccJw1tyY.s 			page 362
 
 
 UNDEFINED SYMBOLS

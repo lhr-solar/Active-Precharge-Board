@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccmf0c9D.s 			page 1
+ARM GAS  /tmp/ccOpINPU.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
   28:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       The SPI HAL driver can be used as follows:
   29:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
   30:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       (#) Declare a SPI_HandleTypeDef handle structure, for example:
-ARM GAS  /tmp/ccmf0c9D.s 			page 2
+ARM GAS  /tmp/ccOpINPU.s 			page 2
 
 
   31:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           SPI_HandleTypeDef  hspi;
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
   85:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             (++) ErrorCallback         : SPI Error callback
   86:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             (++) AbortCpltCallback     : SPI Abort callback
   87:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             (++) MspInitCallback       : SPI Msp Init callback
-ARM GAS  /tmp/ccmf0c9D.s 			page 3
+ARM GAS  /tmp/ccOpINPU.s 			page 3
 
 
   88:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             (++) MspDeInitCallback     : SPI Msp DeInit callback
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  142:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****        DataSize = SPI_DATASIZE_8BIT:
  143:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****        +-------------------------------------------------------------------------------------------
  144:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****        |         |                | 2Lines Fullduplex   |     2Lines RxOnly    |         1Line     
-ARM GAS  /tmp/ccmf0c9D.s 			page 4
+ARM GAS  /tmp/ccOpINPU.s 			page 4
 
 
  145:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****        | Process | Transfer mode  |---------------------|----------------------|-------------------
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  199:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
  200:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  201:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /* Includes ------------------------------------------------------------------*/
-ARM GAS  /tmp/ccmf0c9D.s 			page 5
+ARM GAS  /tmp/ccOpINPU.s 			page 5
 
 
  202:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #include "stm32l4xx_hal.h"
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  256:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_2linesRxISR_16BITCRC(struct __SPI_HandleTypeDef *hspi);
  257:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
  258:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_AbortRx_ISR(SPI_HandleTypeDef *hspi);
-ARM GAS  /tmp/ccmf0c9D.s 			page 6
+ARM GAS  /tmp/ccOpINPU.s 			page 6
 
 
  259:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_AbortTx_ISR(SPI_HandleTypeDef *hspi);
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  313:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   *               the configuration information for SPI module.
  314:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @retval HAL status
  315:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
-ARM GAS  /tmp/ccmf0c9D.s 			page 7
+ARM GAS  /tmp/ccOpINPU.s 			page 7
 
 
  316:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** HAL_StatusTypeDef HAL_SPI_Init(SPI_HandleTypeDef *hspi)
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  370:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (hspi->State == HAL_SPI_STATE_RESET)
  371:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  372:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Allocate lock resource and initialize it */
-ARM GAS  /tmp/ccmf0c9D.s 			page 8
+ARM GAS  /tmp/ccOpINPU.s 			page 8
 
 
  373:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->Lock = HAL_UNLOCKED;
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  427:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                   (hspi->Init.CLKPhase & SPI_CR1_CPHA) |
  428:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                   (hspi->Init.NSS & SPI_CR1_SSM) |
  429:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                   (hspi->Init.BaudRatePrescaler & SPI_CR1_BR_Msk) |
-ARM GAS  /tmp/ccmf0c9D.s 			page 9
+ARM GAS  /tmp/ccOpINPU.s 			page 9
 
 
  430:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                   (hspi->Init.FirstBit  & SPI_CR1_LSBFIRST) |
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  484:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  485:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /**
  486:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @brief  De-Initialize the SPI peripheral.
-ARM GAS  /tmp/ccmf0c9D.s 			page 10
+ARM GAS  /tmp/ccOpINPU.s 			page 10
 
 
  487:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @param  hspi pointer to a SPI_HandleTypeDef structure that contains
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  541:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             the HAL_SPI_MspInit should be implemented in the user file
  542:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****    */
  543:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
-ARM GAS  /tmp/ccmf0c9D.s 			page 11
+ARM GAS  /tmp/ccOpINPU.s 			page 11
 
 
  544:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  598:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       case HAL_SPI_TX_RX_COMPLETE_CB_ID :
  599:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->TxRxCpltCallback = pCallback;
  600:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         break;
-ARM GAS  /tmp/ccmf0c9D.s 			page 12
+ARM GAS  /tmp/ccOpINPU.s 			page 12
 
 
  601:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  655:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         /* Return error status */
  656:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         status =  HAL_ERROR;
  657:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         break;
-ARM GAS  /tmp/ccmf0c9D.s 			page 13
+ARM GAS  /tmp/ccOpINPU.s 			page 13
 
 
  658:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  712:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  713:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       case HAL_SPI_TX_RX_HALF_COMPLETE_CB_ID :
  714:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->TxRxHalfCpltCallback = HAL_SPI_TxRxHalfCpltCallback; /* Legacy weak TxRxHalfCpltCallb
-ARM GAS  /tmp/ccmf0c9D.s 			page 14
+ARM GAS  /tmp/ccOpINPU.s 			page 14
 
 
  715:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         break;
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  769:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     status =  HAL_ERROR;
  770:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
  771:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 15
+ARM GAS  /tmp/ccOpINPU.s 			page 15
 
 
  772:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Release Lock */
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  826:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   uint16_t initial_TxXferCount;
  827:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  828:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Check Direction parameter */
-ARM GAS  /tmp/ccmf0c9D.s 			page 16
+ARM GAS  /tmp/ccOpINPU.s 			page 16
 
 
  829:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   assert_param(IS_SPI_DIRECTION_2LINES_OR_1LINE(hspi->Init.Direction));
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  883:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
  884:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  885:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Transmit data in 16 Bit mode */
-ARM GAS  /tmp/ccmf0c9D.s 			page 17
+ARM GAS  /tmp/ccOpINPU.s 			page 17
 
 
  886:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (hspi->Init.DataSize > SPI_DATASIZE_8BIT)
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  940:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         if (hspi->TxXferCount > 1U)
  941:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         {
  942:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           /* write on the data register in packing mode */
-ARM GAS  /tmp/ccmf0c9D.s 			page 18
+ARM GAS  /tmp/ccOpINPU.s 			page 18
 
 
  943:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           hspi->Instance->DR = *((const uint16_t *)hspi->pTxBuffPtr);
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  997:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
  998:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
  999:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 19
+ARM GAS  /tmp/ccOpINPU.s 			page 19
 
 
 1000:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /**
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1054:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 1055:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
 1056:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Reset CRC Calculation */
-ARM GAS  /tmp/ccmf0c9D.s 			page 20
+ARM GAS  /tmp/ccOpINPU.s 			page 20
 
 
 1057:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (hspi->Init.CRCCalculation == SPI_CRCCALCULATION_ENABLE)
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1111:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           hspi->State = HAL_SPI_STATE_READY;
 1112:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           __HAL_UNLOCK(hspi);
 1113:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           return HAL_TIMEOUT;
-ARM GAS  /tmp/ccmf0c9D.s 			page 21
+ARM GAS  /tmp/ccOpINPU.s 			page 21
 
 
 1114:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         }
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1168:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 1169:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Wait the CRC data */
 1170:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     if (SPI_WaitFlagStateUntilTimeout(hspi, SPI_FLAG_RXNE, SET, Timeout, tickstart) != HAL_OK)
-ARM GAS  /tmp/ccmf0c9D.s 			page 22
+ARM GAS  /tmp/ccOpINPU.s 			page 22
 
 
 1171:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1225:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     __HAL_SPI_CLEAR_CRCERRFLAG(hspi);
 1226:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 1227:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
-ARM GAS  /tmp/ccmf0c9D.s 			page 23
+ARM GAS  /tmp/ccOpINPU.s 			page 23
 
 
 1228:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1282:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
 1283:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   spi_cr1             = READ_REG(hspi->Instance->CR1);
 1284:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   spi_cr2             = READ_REG(hspi->Instance->CR2);
-ARM GAS  /tmp/ccmf0c9D.s 			page 24
+ARM GAS  /tmp/ccOpINPU.s 			page 24
 
 
 1285:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1339:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 1340:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 1341:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Check if the SPI is already enabled */
-ARM GAS  /tmp/ccmf0c9D.s 			page 25
+ARM GAS  /tmp/ccOpINPU.s 			page 25
 
 
 1342:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if ((hspi->Instance->CR1 & SPI_CR1_SPE) != SPI_CR1_SPE)
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1396:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       /* Check RXNE flag */
 1397:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       if ((__HAL_SPI_GET_FLAG(hspi, SPI_FLAG_RXNE)) && (hspi->RxXferCount > 0U))
 1398:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
-ARM GAS  /tmp/ccmf0c9D.s 			page 26
+ARM GAS  /tmp/ccOpINPU.s 			page 26
 
 
 1399:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         *((uint16_t *)hspi->pRxBuffPtr) = (uint16_t)hspi->Instance->DR;
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1453:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           hspi->TxXferCount -= 2U;
 1454:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         }
 1455:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         else
-ARM GAS  /tmp/ccmf0c9D.s 			page 27
+ARM GAS  /tmp/ccOpINPU.s 			page 27
 
 
 1456:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         {
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1510:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
 1511:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Read CRC from DR to close CRC calculation process */
 1512:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (hspi->Init.CRCCalculation == SPI_CRCCALCULATION_ENABLE)
-ARM GAS  /tmp/ccmf0c9D.s 			page 28
+ARM GAS  /tmp/ccOpINPU.s 			page 28
 
 
 1513:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1567:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
 1568:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 1569:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Check the end of the transaction */
-ARM GAS  /tmp/ccmf0c9D.s 			page 29
+ARM GAS  /tmp/ccOpINPU.s 			page 29
 
 
 1570:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (SPI_EndRxTxTransaction(hspi, Timeout, tickstart) != HAL_OK)
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1624:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferSize  = Size;
 1625:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount = Size;
 1626:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 30
+ARM GAS  /tmp/ccOpINPU.s 			page 30
 
 
 1627:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Init field not used in handle to zero */
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1681:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
 1682:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** HAL_StatusTypeDef HAL_SPI_Receive_IT(SPI_HandleTypeDef *hspi, uint8_t *pData, uint16_t Size)
 1683:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** {
-ARM GAS  /tmp/ccmf0c9D.s 			page 31
+ARM GAS  /tmp/ccOpINPU.s 			page 31
 
 
 1684:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1738:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SPI_1LINE_RX(hspi);
 1739:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 1740:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 32
+ARM GAS  /tmp/ccOpINPU.s 			page 32
 
 
 1741:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1795:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Init temporary variables */
 1796:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   tmp_state           = hspi->State;
 1797:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   tmp_mode            = hspi->Init.Mode;
-ARM GAS  /tmp/ccmf0c9D.s 			page 33
+ARM GAS  /tmp/ccOpINPU.s 			page 33
 
 
 1798:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1852:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   else
 1853:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 1854:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->CRCSize = 0U;
-ARM GAS  /tmp/ccmf0c9D.s 			page 34
+ARM GAS  /tmp/ccOpINPU.s 			page 34
 
 
 1855:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1909:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 1910:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     return HAL_ERROR;
 1911:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  /tmp/ccmf0c9D.s 			page 35
+ARM GAS  /tmp/ccOpINPU.s 			page 35
 
 
 1912:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1966:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       hspi->TxXferCount = (hspi->TxXferCount >> 1U);
 1967:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
 1968:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     else
-ARM GAS  /tmp/ccmf0c9D.s 			page 36
+ARM GAS  /tmp/ccOpINPU.s 			page 36
 
 
 1969:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2023:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 2024:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 2025:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if ((hspi->Init.Direction == SPI_DIRECTION_2LINES) && (hspi->Init.Mode == SPI_MODE_MASTER))
-ARM GAS  /tmp/ccmf0c9D.s 			page 37
+ARM GAS  /tmp/ccOpINPU.s 			page 37
 
 
 2026:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2080:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   else
 2081:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 2082:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Set RX Fifo threshold according the reception data length: 8bit */
-ARM GAS  /tmp/ccmf0c9D.s 			page 38
+ARM GAS  /tmp/ccOpINPU.s 			page 38
 
 
 2083:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SET_BIT(hspi->Instance->CR2, SPI_RXFIFO_THRESHOLD);
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2137:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __HAL_SPI_ENABLE_IT(hspi, (SPI_IT_ERR));
 2138:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 2139:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Enable Rx DMA Request */
-ARM GAS  /tmp/ccmf0c9D.s 			page 39
+ARM GAS  /tmp/ccOpINPU.s 			page 39
 
 
 2140:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   SET_BIT(hspi->Instance->CR2, SPI_CR2_RXDMAEN);
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2194:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->ErrorCode   = HAL_SPI_ERROR_NONE;
 2195:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->pTxBuffPtr  = (const uint8_t *)pTxData;
 2196:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferSize  = Size;
-ARM GAS  /tmp/ccmf0c9D.s 			page 40
+ARM GAS  /tmp/ccOpINPU.s 			page 40
 
 
 2197:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount = Size;
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2251:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
 2252:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       else
 2253:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
-ARM GAS  /tmp/ccmf0c9D.s 			page 41
+ARM GAS  /tmp/ccOpINPU.s 			page 41
 
 
 2254:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         SET_BIT(hspi->Instance->CR2, SPI_CR2_LDMARX);
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2308:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     __HAL_UNLOCK(hspi);
 2309:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     return HAL_ERROR;
 2310:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  /tmp/ccmf0c9D.s 			page 42
+ARM GAS  /tmp/ccOpINPU.s 			page 42
 
 
 2311:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2365:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       if (count == 0U)
 2366:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
 2367:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         SET_BIT(hspi->ErrorCode, HAL_SPI_ERROR_ABORT);
-ARM GAS  /tmp/ccmf0c9D.s 			page 43
+ARM GAS  /tmp/ccOpINPU.s 			page 43
 
 
 2368:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         break;
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2422:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                         HAL_GetTick()) != HAL_OK)
 2423:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
 2424:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->ErrorCode = HAL_SPI_ERROR_ABORT;
-ARM GAS  /tmp/ccmf0c9D.s 			page 44
+ARM GAS  /tmp/ccOpINPU.s 			page 44
 
 
 2425:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2479:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 2480:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 2481:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Clear the Error flags in the SR register */
-ARM GAS  /tmp/ccmf0c9D.s 			page 45
+ARM GAS  /tmp/ccOpINPU.s 			page 45
 
 
 2482:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __HAL_SPI_CLEAR_OVRFLAG(hspi);
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2536:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Reset Timeout Counter */
 2537:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     count = resetcount;
 2538:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  /tmp/ccmf0c9D.s 			page 46
+ARM GAS  /tmp/ccOpINPU.s 			page 46
 
 
 2539:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2593:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
 2594:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       /* Abort DMA Tx Handle linked to SPI Peripheral */
 2595:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       if (HAL_DMA_Abort_IT(hspi->hdmatx) != HAL_OK)
-ARM GAS  /tmp/ccmf0c9D.s 			page 47
+ARM GAS  /tmp/ccOpINPU.s 			page 47
 
 
 2596:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2650:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* As no DMA to be aborted, call directly user Abort complete callback */
 2651:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_HAL_SPI_REGISTER_CALLBACKS == 1U)
 2652:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->AbortCpltCallback(hspi);
-ARM GAS  /tmp/ccmf0c9D.s 			page 48
+ARM GAS  /tmp/ccOpINPU.s 			page 48
 
 
 2653:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #else
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2707:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** HAL_StatusTypeDef HAL_SPI_DMAStop(SPI_HandleTypeDef *hspi)
 2708:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** {
 2709:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   HAL_StatusTypeDef errorcode = HAL_OK;
-ARM GAS  /tmp/ccmf0c9D.s 			page 49
+ARM GAS  /tmp/ccOpINPU.s 			page 49
 
 
 2710:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* The Lock is not implemented on this API to allow the user application
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2764:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 2765:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->TxISR(hspi);
 2766:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     return;
-ARM GAS  /tmp/ccmf0c9D.s 			page 50
+ARM GAS  /tmp/ccOpINPU.s 			page 50
 
 
 2767:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2821:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             SET_BIT(hspi->ErrorCode, HAL_SPI_ERROR_ABORT);
 2822:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           }
 2823:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         }
-ARM GAS  /tmp/ccmf0c9D.s 			page 51
+ARM GAS  /tmp/ccOpINPU.s 			page 51
 
 
 2824:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         /* Abort the SPI DMA Tx channel */
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2878:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             the HAL_SPI_RxCpltCallback should be implemented in the user file
 2879:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****    */
 2880:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
-ARM GAS  /tmp/ccmf0c9D.s 			page 52
+ARM GAS  /tmp/ccOpINPU.s 			page 52
 
 
 2881:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2935:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
 2936:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** __weak void HAL_SPI_TxRxHalfCpltCallback(SPI_HandleTypeDef *hspi)
 2937:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** {
-ARM GAS  /tmp/ccmf0c9D.s 			page 53
+ARM GAS  /tmp/ccOpINPU.s 			page 53
 
 
 2938:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Prevent unused argument(s) compilation warning */
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2992:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     This subsection provides a set of functions allowing to control the SPI.
 2993:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****      (+) HAL_SPI_GetState() API can be helpful to check in run-time the state of the SPI peripheral
 2994:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****      (+) HAL_SPI_GetError() check in run-time Errors occurring during communication
-ARM GAS  /tmp/ccmf0c9D.s 			page 54
+ARM GAS  /tmp/ccOpINPU.s 			page 54
 
 
 2995:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** @endverbatim
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3049:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3050:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* DMA Normal Mode */
 3051:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if ((hdma->Instance->CCR & DMA_CCR_CIRC) != DMA_CCR_CIRC)
-ARM GAS  /tmp/ccmf0c9D.s 			page 55
+ARM GAS  /tmp/ccOpINPU.s 			page 55
 
 
 3052:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3106:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __IO uint8_t  tmpreg8 = 0;
 3107:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
 3108:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 56
+ARM GAS  /tmp/ccOpINPU.s 			page 56
 
 
 3109:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Init tickstart for timeout management*/
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3163:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
 3164:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       /* Disable Rx/Tx DMA Request (done by default to handle the case master rx direction 2 lines)
 3165:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       CLEAR_BIT(hspi->Instance->CR2, SPI_CR2_TXDMAEN | SPI_CR2_RXDMAEN);
-ARM GAS  /tmp/ccmf0c9D.s 			page 57
+ARM GAS  /tmp/ccOpINPU.s 			page 57
 
 
 3166:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3220:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
 3221:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __IO uint32_t tmpreg = 0U;
 3222:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __IO uint8_t  *ptmpreg8;
-ARM GAS  /tmp/ccmf0c9D.s 			page 58
+ARM GAS  /tmp/ccOpINPU.s 			page 58
 
 
 3223:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __IO uint8_t  tmpreg8 = 0;
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3277:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     CLEAR_BIT(hspi->Instance->CR2, SPI_CR2_TXDMAEN | SPI_CR2_RXDMAEN);
 3278:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3279:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->TxXferCount = 0U;
-ARM GAS  /tmp/ccmf0c9D.s 			page 59
+ARM GAS  /tmp/ccOpINPU.s 			page 59
 
 
 3280:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->RxXferCount = 0U;
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3334:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
 3335:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_DMAHalfReceiveCplt(DMA_HandleTypeDef *hdma)
 3336:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** {
-ARM GAS  /tmp/ccmf0c9D.s 			page 60
+ARM GAS  /tmp/ccOpINPU.s 			page 60
 
 
 3337:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   SPI_HandleTypeDef *hspi = (SPI_HandleTypeDef *)(((DMA_HandleTypeDef *)hdma)->Parent);
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3391:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @param  hdma DMA handle.
 3392:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @retval None
 3393:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
-ARM GAS  /tmp/ccmf0c9D.s 			page 61
+ARM GAS  /tmp/ccOpINPU.s 			page 61
 
 
 3394:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_DMAAbortOnError(DMA_HandleTypeDef *hdma)
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3448:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3449:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* No Abort process still ongoing : All DMA Stream/Channel are aborted, call user Abort Complete 
 3450:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->RxXferCount = 0U;
-ARM GAS  /tmp/ccmf0c9D.s 			page 62
+ARM GAS  /tmp/ccOpINPU.s 			page 62
 
 
 3451:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount = 0U;
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3505:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->ErrorCode = HAL_SPI_ERROR_ABORT;
 3506:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 3507:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 63
+ARM GAS  /tmp/ccOpINPU.s 			page 63
 
 
 3508:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Check if an Abort process is still ongoing */
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3562:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 3563:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Receive data in 8 Bit mode */
 3564:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   else
-ARM GAS  /tmp/ccmf0c9D.s 			page 64
+ARM GAS  /tmp/ccOpINPU.s 			page 64
 
 
 3565:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3619:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3620:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     if (hspi->TxXferCount == 0U)
 3621:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
-ARM GAS  /tmp/ccmf0c9D.s 			page 65
+ARM GAS  /tmp/ccOpINPU.s 			page 65
 
 
 3622:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       SPI_CloseRxTx_ISR(hspi);
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3676:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @brief  Rx 16-bit handler for Transmit and Receive in Interrupt mode.
 3677:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @param  hspi pointer to a SPI_HandleTypeDef structure that contains
 3678:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   *               the configuration information for SPI module.
-ARM GAS  /tmp/ccmf0c9D.s 			page 66
+ARM GAS  /tmp/ccOpINPU.s 			page 66
 
 
 3679:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @retval None
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3733:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @param  hspi pointer to a SPI_HandleTypeDef structure that contains
 3734:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   *               the configuration information for SPI module.
 3735:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @retval None
-ARM GAS  /tmp/ccmf0c9D.s 			page 67
+ARM GAS  /tmp/ccOpINPU.s 			page 67
 
 
 3736:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3790:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 3791:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SPI_CloseRx_ISR(hspi);
 3792:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  /tmp/ccmf0c9D.s 			page 68
+ARM GAS  /tmp/ccOpINPU.s 			page 68
 
 
 3793:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3847:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3848:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   SPI_CloseRx_ISR(hspi);
 3849:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
-ARM GAS  /tmp/ccmf0c9D.s 			page 69
+ARM GAS  /tmp/ccOpINPU.s 			page 69
 
 
 3850:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3904:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
 3905:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
 3906:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SPI_CloseTx_ISR(hspi);
-ARM GAS  /tmp/ccmf0c9D.s 			page 70
+ARM GAS  /tmp/ccOpINPU.s 			page 70
 
 
 3907:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
   41              		.cfi_offset 8, -16
   42              		.cfi_offset 9, -12
   43              		.cfi_offset 10, -8
-ARM GAS  /tmp/ccmf0c9D.s 			page 71
+ARM GAS  /tmp/ccOpINPU.s 			page 71
 
 
   44              		.cfi_offset 14, -4
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
   86 002e 2B68     		ldr	r3, [r5]
   87 0030 9C68     		ldr	r4, [r3, #8]
   88              		.loc 1 3960 48 view .LVU19
-ARM GAS  /tmp/ccmf0c9D.s 			page 72
+ARM GAS  /tmp/ccOpINPU.s 			page 72
 
 
   89 0032 38EA0404 		bics	r4, r8, r4
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  109              		.loc 1 3994 7 is_stmt 1 view .LVU27
  110              		.loc 1 3994 17 is_stmt 0 view .LVU28
  111 0052 019A     		ldr	r2, [sp, #4]
-ARM GAS  /tmp/ccmf0c9D.s 			page 73
+ARM GAS  /tmp/ccOpINPU.s 			page 73
 
 
  112              		.loc 1 3994 10 view .LVU29
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3989:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  151              		.loc 1 3989 9 discriminator 1 view .LVU43
  152 0082 0023     		movs	r3, #0
-ARM GAS  /tmp/ccmf0c9D.s 			page 74
+ARM GAS  /tmp/ccOpINPU.s 			page 74
 
 
  153 0084 85F85C30 		strb	r3, [r5, #92]
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  192              		.loc 1 4003 1 view .LVU55
  193 00be 02B0     		add	sp, sp, #8
  194              	.LCFI2:
-ARM GAS  /tmp/ccmf0c9D.s 			page 75
+ARM GAS  /tmp/ccOpINPU.s 			page 75
 
 
  195              		.cfi_def_cfa_offset 32
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  237 000a 1546     		mov	r5, r2
  238 000c 1F46     		mov	r7, r3
 4018:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __IO uint32_t count;
-ARM GAS  /tmp/ccmf0c9D.s 			page 76
+ARM GAS  /tmp/ccOpINPU.s 			page 76
 
 
  239              		.loc 1 4018 3 is_stmt 1 view .LVU59
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  279              		.loc 1 4032 9 view .LVU78
  280 003c 0193     		str	r3, [sp, #4]
 4033:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 77
+ARM GAS  /tmp/ccOpINPU.s 			page 77
 
 
 4034:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   while ((hspi->Instance->SR & Fifo) != State)
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  313 0062 8DF80330 		strb	r3, [sp, #3]
 4041:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
  314              		.loc 1 4041 7 is_stmt 1 view .LVU94
-ARM GAS  /tmp/ccmf0c9D.s 			page 78
+ARM GAS  /tmp/ccOpINPU.s 			page 78
 
 
  315 0066 9DF80330 		ldrb	r3, [sp, #3]	@ zero_extendqisi2
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 4079:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
 4080:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       count--;
  335              		.loc 1 4080 7 is_stmt 1 view .LVU102
-ARM GAS  /tmp/ccmf0c9D.s 			page 79
+ARM GAS  /tmp/ccOpINPU.s 			page 79
 
 
  336              		.loc 1 4080 12 is_stmt 0 view .LVU103
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  375 00ae 0320     		movs	r0, #3
  376 00b0 18E0     		b	.L26
  377              	.L33:
-ARM GAS  /tmp/ccmf0c9D.s 			page 80
+ARM GAS  /tmp/ccOpINPU.s 			page 80
 
 
 4055:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                                      || (hspi->Init.Direction == SPI_DIRECTION_2LIN
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  420              	.L35:
  421 00ec 00000000 		.word	SystemCoreClock
  422              		.cfi_endproc
-ARM GAS  /tmp/ccmf0c9D.s 			page 81
+ARM GAS  /tmp/ccOpINPU.s 			page 81
 
 
  423              	.LFE336:
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 4131:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static HAL_StatusTypeDef SPI_EndRxTxTransaction(SPI_HandleTypeDef *hspi, uint32_t Timeout, uint32_t
 4132:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** {
  434              		.loc 1 4132 1 is_stmt 1 view -0
-ARM GAS  /tmp/ccmf0c9D.s 			page 82
+ARM GAS  /tmp/ccOpINPU.s 			page 82
 
 
  435              		.cfi_startproc
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 4145:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 4146:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 4147:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Control if the RX fifo is empty */
-ARM GAS  /tmp/ccmf0c9D.s 			page 83
+ARM GAS  /tmp/ccOpINPU.s 			page 83
 
 
 4148:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (SPI_WaitFifoStateUntilTimeout(hspi, SPI_FLAG_FRLVL, SPI_FRLVL_EMPTY, Timeout, Tickstart) != H
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  519 005c 2366     		str	r3, [r4, #96]
 4144:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
  520              		.loc 1 4144 5 view .LVU150
-ARM GAS  /tmp/ccmf0c9D.s 			page 84
+ARM GAS  /tmp/ccOpINPU.s 			page 84
 
 
 4144:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 4105:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  569              		.loc 1 4105 7 view .LVU159
  570 001a 2046     		mov	r0, r4
-ARM GAS  /tmp/ccmf0c9D.s 			page 85
+ARM GAS  /tmp/ccOpINPU.s 			page 85
 
 
  571              	.LVL32:
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 4107:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     return HAL_TIMEOUT;
  614              		.loc 1 4107 5 is_stmt 1 view .LVU171
  615 0048 236E     		ldr	r3, [r4, #96]
-ARM GAS  /tmp/ccmf0c9D.s 			page 86
+ARM GAS  /tmp/ccOpINPU.s 			page 86
 
 
  616 004a 43F02003 		orr	r3, r3, #32
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  661              	SPI_AbortRx_ISR:
  662              	.LVL38:
  663              	.LFB342:
-ARM GAS  /tmp/ccmf0c9D.s 			page 87
+ARM GAS  /tmp/ccOpINPU.s 			page 87
 
 
 4156:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 4210:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->State = HAL_SPI_STATE_READY;
 4211:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         /* Call user TxRx complete callback */
 4212:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_HAL_SPI_REGISTER_CALLBACKS == 1U)
-ARM GAS  /tmp/ccmf0c9D.s 			page 88
+ARM GAS  /tmp/ccOpINPU.s 			page 88
 
 
 4213:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->TxRxCpltCallback(hspi);
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 4267:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
 4268:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     if (hspi->ErrorCode == HAL_SPI_ERROR_NONE)
 4269:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
-ARM GAS  /tmp/ccmf0c9D.s 			page 89
+ARM GAS  /tmp/ccOpINPU.s 			page 89
 
 
 4270:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       /* Call user Rx complete callback */
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 4324:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->ErrorCallback(hspi);
 4325:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #else
 4326:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     HAL_SPI_ErrorCallback(hspi);
-ARM GAS  /tmp/ccmf0c9D.s 			page 90
+ARM GAS  /tmp/ccOpINPU.s 			page 90
 
 
 4327:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_HAL_SPI_REGISTER_CALLBACKS */
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  691              		.loc 1 4353 31 view .LVU189
  692 001c 6422     		movs	r2, #100
  693 001e 02FB03F3 		mul	r3, r2, r3
-ARM GAS  /tmp/ccmf0c9D.s 			page 91
+ARM GAS  /tmp/ccOpINPU.s 			page 91
 
 
  694              		.loc 1 4353 9 view .LVU190
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  729              	.LVL39:
  730              		.loc 1 4370 7 view .LVU203
  731 0050 0090     		str	r0, [sp]
-ARM GAS  /tmp/ccmf0c9D.s 			page 92
+ARM GAS  /tmp/ccOpINPU.s 			page 92
 
 
  732 0052 6423     		movs	r3, #100
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  773              	.LVL43:
  774              	.L63:
  775              		.loc 1 4383 1 view .LVU215
-ARM GAS  /tmp/ccmf0c9D.s 			page 93
+ARM GAS  /tmp/ccOpINPU.s 			page 93
 
 
  776              		.align	2
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 4397:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Disable TXEIE interrupt */
 4398:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   CLEAR_BIT(hspi->Instance->CR2, (SPI_CR2_TXEIE));
  819              		.loc 1 4398 3 is_stmt 1 view .LVU223
-ARM GAS  /tmp/ccmf0c9D.s 			page 94
+ARM GAS  /tmp/ccOpINPU.s 			page 94
 
 
  820 001a 0268     		ldr	r2, [r0]
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  859              		.loc 1 4411 6 view .LVU236
  860 0050 08B1     		cbz	r0, .L68
 4412:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
-ARM GAS  /tmp/ccmf0c9D.s 			page 95
+ARM GAS  /tmp/ccOpINPU.s 			page 95
 
 
 4413:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->ErrorCode = HAL_SPI_ERROR_ABORT;
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  897 0084 5A68     		ldr	r2, [r3, #4]
  898 0086 22F04002 		bic	r2, r2, #64
  899 008a 5A60     		str	r2, [r3, #4]
-ARM GAS  /tmp/ccmf0c9D.s 			page 96
+ARM GAS  /tmp/ccOpINPU.s 			page 96
 
 
  900              	.L73:
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 4445:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
 4446:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       hspi->ErrorCode = HAL_SPI_ERROR_ABORT;
  938              		.loc 1 4446 7 is_stmt 1 view .LVU261
-ARM GAS  /tmp/ccmf0c9D.s 			page 97
+ARM GAS  /tmp/ccOpINPU.s 			page 97
 
 
  939              		.loc 1 4446 23 is_stmt 0 view .LVU262
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  983              		.weak	HAL_SPI_MspInit
  984              		.syntax unified
  985              		.thumb
-ARM GAS  /tmp/ccmf0c9D.s 			page 98
+ARM GAS  /tmp/ccOpINPU.s 			page 98
 
 
  986              		.thumb_func
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  1031              		.loc 1 330 3 view .LVU283
  331:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   assert_param(IS_SPI_NSSP(hspi->Init.NSSPMode));
  1032              		.loc 1 331 3 view .LVU284
-ARM GAS  /tmp/ccmf0c9D.s 			page 99
+ARM GAS  /tmp/ccOpINPU.s 			page 99
 
 
  332:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   assert_param(IS_SPI_BAUDRATE_PRESCALER(hspi->Init.BaudRatePrescaler));
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  1066              		.loc 1 367 29 is_stmt 0 view .LVU305
  1067 0020 0023     		movs	r3, #0
  1068 0022 A362     		str	r3, [r4, #40]
-ARM GAS  /tmp/ccmf0c9D.s 			page 100
+ARM GAS  /tmp/ccOpINPU.s 			page 100
 
 
  370:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  424:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                   (hspi->Init.Direction & (SPI_CR1_RXONLY | SPI_CR1_BIDIMODE)) |
  1108              		.loc 1 424 3 is_stmt 1 view .LVU321
  1109 0056 6368     		ldr	r3, [r4, #4]
-ARM GAS  /tmp/ccmf0c9D.s 			page 101
+ARM GAS  /tmp/ccOpINPU.s 			page 101
 
 
  1110 0058 03F48273 		and	r3, r3, #260
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  1158 00c2 84F85D30 		strb	r3, [r4, #93]
  482:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
  1159              		.loc 1 482 3 is_stmt 1 view .LVU328
-ARM GAS  /tmp/ccmf0c9D.s 			page 102
+ARM GAS  /tmp/ccOpINPU.s 			page 102
 
 
  483:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  554:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  1207              		.loc 1 554 3 view .LVU338
  559:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 103
+ARM GAS  /tmp/ccOpINPU.s 			page 103
 
 
  1208              		.loc 1 559 1 is_stmt 0 view .LVU339
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  1253 001c 2066     		str	r0, [r4, #96]
  521:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  1254              		.loc 1 521 3 is_stmt 1 view .LVU351
-ARM GAS  /tmp/ccmf0c9D.s 			page 104
+ARM GAS  /tmp/ccOpINPU.s 			page 104
 
 
  521:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  1301              		.cfi_offset 9, -8
  1302              		.cfi_offset 14, -4
  1303 0004 83B0     		sub	sp, sp, #12
-ARM GAS  /tmp/ccmf0c9D.s 			page 105
+ARM GAS  /tmp/ccOpINPU.s 			page 105
 
 
  1304              	.LCFI25:
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  849:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->ErrorCode   = HAL_SPI_ERROR_NONE;
  1342              		.loc 1 849 3 discriminator 2 view .LVU378
  849:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->ErrorCode   = HAL_SPI_ERROR_NONE;
-ARM GAS  /tmp/ccmf0c9D.s 			page 106
+ARM GAS  /tmp/ccOpINPU.s 			page 106
 
 
  1343              		.loc 1 849 21 is_stmt 0 discriminator 2 view .LVU379
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  863:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  1377              		.loc 1 863 6 discriminator 2 view .LVU400
  1378 0066 B3F5004F 		cmp	r3, #32768
-ARM GAS  /tmp/ccmf0c9D.s 			page 107
+ARM GAS  /tmp/ccOpINPU.s 			page 107
 
 
  1379 006a 1ED0     		beq	.L133
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  1416              		.loc 1 890 26 view .LVU417
  1417 0096 DA60     		str	r2, [r3, #12]
  891:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       hspi->TxXferCount--;
-ARM GAS  /tmp/ccmf0c9D.s 			page 108
+ARM GAS  /tmp/ccOpINPU.s 			page 108
 
 
  1418              		.loc 1 891 7 is_stmt 1 view .LVU418
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  907:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         {
  1460              		.loc 1 907 87 discriminator 3 view .LVU431
  1461 00d0 CDB1     		cbz	r5, .L114
-ARM GAS  /tmp/ccmf0c9D.s 			page 109
+ARM GAS  /tmp/ccOpINPU.s 			page 109
 
 
  1462              	.L110:
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  909:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           __HAL_UNLOCK(hspi);
  1500              		.loc 1 909 11 is_stmt 1 view .LVU448
  909:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           __HAL_UNLOCK(hspi);
-ARM GAS  /tmp/ccmf0c9D.s 			page 110
+ARM GAS  /tmp/ccOpINPU.s 			page 110
 
 
  1501              		.loc 1 909 23 is_stmt 0 view .LVU449
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  1538              		.loc 1 924 28 view .LVU466
  1539 012e DA60     		str	r2, [r3, #12]
  925:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->TxXferCount -= 2U;
-ARM GAS  /tmp/ccmf0c9D.s 			page 111
+ARM GAS  /tmp/ccOpINPU.s 			page 111
 
 
  1540              		.loc 1 925 9 is_stmt 1 view .LVU467
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  1578 0158 E387     		strh	r3, [r4, #62]	@ movhi
  1579 015a 14E0     		b	.L120
  1580              	.LVL74:
-ARM GAS  /tmp/ccmf0c9D.s 			page 112
+ARM GAS  /tmp/ccOpINPU.s 			page 112
 
 
  1581              	.L122:
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  1619 0184 BDB1     		cbz	r5, .L125
  1620              	.L120:
  935:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
-ARM GAS  /tmp/ccmf0c9D.s 			page 113
+ARM GAS  /tmp/ccOpINPU.s 			page 113
 
 
  1621              		.loc 1 935 30 is_stmt 1 view .LVU500
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  945:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         }
  1658              		.loc 1 945 29 view .LVU518
  1659 01ae 023B     		subs	r3, r3, #2
-ARM GAS  /tmp/ccmf0c9D.s 			page 114
+ARM GAS  /tmp/ccOpINPU.s 			page 114
 
 
  1660 01b0 9BB2     		uxth	r3, r3
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  1698              	.LBB2:
  983:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
  1699              		.loc 1 983 5 view .LVU535
-ARM GAS  /tmp/ccmf0c9D.s 			page 115
+ARM GAS  /tmp/ccOpINPU.s 			page 115
 
 
  1700 01da 0193     		str	r3, [sp, #4]
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  1739              	.LCFI26:
  1740              		.cfi_remember_state
  1741              		.cfi_def_cfa_offset 28
-ARM GAS  /tmp/ccmf0c9D.s 			page 116
+ARM GAS  /tmp/ccOpINPU.s 			page 116
 
 
  1742              		@ sp needed
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1269:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  1790              		.loc 1 1269 3 view .LVU559
  1791              	.LVL81:
-ARM GAS  /tmp/ccmf0c9D.s 			page 117
+ARM GAS  /tmp/ccOpINPU.s 			page 117
 
 
 1272:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1294:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  1829              		.loc 1 1294 6 is_stmt 0 view .LVU577
  1830 0036 B8F1000F 		cmp	r8, #0
-ARM GAS  /tmp/ccmf0c9D.s 			page 118
+ARM GAS  /tmp/ccOpINPU.s 			page 118
 
 
  1831 003a 00F05881 		beq	.L165
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  1868              		.loc 1 1311 3 is_stmt 1 view .LVU594
 1311:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->RxXferSize  = Size;
  1869              		.loc 1 1311 21 is_stmt 0 view .LVU595
-ARM GAS  /tmp/ccmf0c9D.s 			page 119
+ARM GAS  /tmp/ccOpINPU.s 			page 119
 
 
  1870 0074 A4F84670 		strh	r7, [r4, #70]	@ movhi
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  1906              		.loc 1 1342 3 view .LVU613
 1342:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  1907              		.loc 1 1342 12 is_stmt 0 view .LVU614
-ARM GAS  /tmp/ccmf0c9D.s 			page 120
+ARM GAS  /tmp/ccOpINPU.s 			page 120
 
 
  1908 009e 2368     		ldr	r3, [r4]
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  1945 00c8 A36B     		ldr	r3, [r4, #56]
 1354:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       hspi->TxXferCount--;
  1946              		.loc 1 1354 24 view .LVU632
-ARM GAS  /tmp/ccmf0c9D.s 			page 121
+ARM GAS  /tmp/ccOpINPU.s 			page 121
 
 
  1947 00ca 0233     		adds	r3, r3, #2
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  1987 00f2 A363     		str	r3, [r4, #56]
 1378:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         /* Next Data is a reception (Rx). Tx not allowed */
  1988              		.loc 1 1378 9 is_stmt 1 view .LVU647
-ARM GAS  /tmp/ccmf0c9D.s 			page 122
+ARM GAS  /tmp/ccOpINPU.s 			page 122
 
 
 1378:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         /* Next Data is a reception (Rx). Tx not allowed */
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1401:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         /* Next Data is a Transmission (Tx). Tx is allowed */
  2027              		.loc 1 1401 9 is_stmt 1 view .LVU664
 1401:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         /* Next Data is a Transmission (Tx). Tx is allowed */
-ARM GAS  /tmp/ccmf0c9D.s 			page 123
+ARM GAS  /tmp/ccOpINPU.s 			page 123
 
 
  2028              		.loc 1 1401 13 is_stmt 0 view .LVU665
@@ -7378,7 +7378,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  2068              		.loc 1 1374 7 is_stmt 1 view .LVU679
 1374:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
  2069              		.loc 1 1374 12 is_stmt 0 view .LVU680
-ARM GAS  /tmp/ccmf0c9D.s 			page 124
+ARM GAS  /tmp/ccOpINPU.s 			page 124
 
 
  2070 0150 2368     		ldr	r3, [r4]
@@ -7438,7 +7438,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  2109              	.L150:
 1418:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
  2110              		.loc 1 1418 7 is_stmt 1 view .LVU696
-ARM GAS  /tmp/ccmf0c9D.s 			page 125
+ARM GAS  /tmp/ccOpINPU.s 			page 125
 
 
 1418:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
@@ -7498,7 +7498,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1426:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->pTxBuffPtr++;
  2149              		.loc 1 1426 71 is_stmt 0 view .LVU713
  2150 01a4 A26B     		ldr	r2, [r4, #56]
-ARM GAS  /tmp/ccmf0c9D.s 			page 126
+ARM GAS  /tmp/ccOpINPU.s 			page 126
 
 
 1426:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->pTxBuffPtr++;
@@ -7558,7 +7558,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  2188              		.loc 1 1452 11 is_stmt 1 view .LVU730
 1452:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           hspi->TxXferCount -= 2U;
  2189              		.loc 1 1452 15 is_stmt 0 view .LVU731
-ARM GAS  /tmp/ccmf0c9D.s 			page 127
+ARM GAS  /tmp/ccOpINPU.s 			page 127
 
 
  2190 01cc A36B     		ldr	r3, [r4, #56]
@@ -7618,7 +7618,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  2228 01f2 9BB2     		uxth	r3, r3
  2229 01f4 E387     		strh	r3, [r4, #62]	@ movhi
 1462:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 128
+ARM GAS  /tmp/ccOpINPU.s 			page 128
 
 
  2230              		.loc 1 1462 19 view .LVU748
@@ -7678,7 +7678,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1499:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
  2270              		.loc 1 1499 19 view .LVU763
  2271 0222 0127     		movs	r7, #1
-ARM GAS  /tmp/ccmf0c9D.s 			page 129
+ARM GAS  /tmp/ccOpINPU.s 			page 129
 
 
  2272              	.LVL109:
@@ -7738,7 +7738,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1447:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
  2312              		.loc 1 1447 60 discriminator 1 view .LVU778
  2313 0252 E28F     		ldrh	r2, [r4, #62]
-ARM GAS  /tmp/ccmf0c9D.s 			page 130
+ARM GAS  /tmp/ccOpINPU.s 			page 130
 
 
  2314 0254 92B2     		uxth	r2, r2
@@ -7798,7 +7798,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1484:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           hspi->RxXferCount -= 2U;
  2352              		.loc 1 1484 28 view .LVU795
  2353 0282 0233     		adds	r3, r3, #2
-ARM GAS  /tmp/ccmf0c9D.s 			page 131
+ARM GAS  /tmp/ccOpINPU.s 			page 131
 
 
  2354 0284 2364     		str	r3, [r4, #64]
@@ -7858,7 +7858,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1570:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  2392              		.loc 1 1570 7 is_stmt 0 view .LVU812
  2393 02b2 3246     		mov	r2, r6
-ARM GAS  /tmp/ccmf0c9D.s 			page 132
+ARM GAS  /tmp/ccOpINPU.s 			page 132
 
 
  2394 02b4 2946     		mov	r1, r5
@@ -7918,7 +7918,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  2431              	.LVL116:
  2432              	.L162:
 1291:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  /tmp/ccmf0c9D.s 			page 133
+ARM GAS  /tmp/ccOpINPU.s 			page 133
 
 
  2433              		.loc 1 1291 12 view .LVU830
@@ -7978,7 +7978,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1300:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  2476              		.loc 1 1300 3 view .LVU842
  2477 02fa 0220     		movs	r0, #2
-ARM GAS  /tmp/ccmf0c9D.s 			page 134
+ARM GAS  /tmp/ccOpINPU.s 			page 134
 
 
  2478              	.LVL129:
@@ -8038,7 +8038,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  2525              		.loc 1 1023 18 is_stmt 0 view .LVU851
  2526 001a 4368     		ldr	r3, [r0, #4]
  2527              	.LVL131:
-ARM GAS  /tmp/ccmf0c9D.s 			page 135
+ARM GAS  /tmp/ccOpINPU.s 			page 135
 
 
 1023:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -8098,7 +8098,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  2565              		.loc 1 1043 21 is_stmt 0 discriminator 2 view .LVU868
  2566 0054 0023     		movs	r3, #0
  2567 0056 2366     		str	r3, [r4, #96]
-ARM GAS  /tmp/ccmf0c9D.s 			page 136
+ARM GAS  /tmp/ccOpINPU.s 			page 136
 
 
 1044:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->RxXferSize  = Size;
@@ -8158,7 +8158,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  2602 007e 5360     		str	r3, [r2, #4]
  2603              	.L180:
 1078:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
-ARM GAS  /tmp/ccmf0c9D.s 			page 137
+ARM GAS  /tmp/ccOpINPU.s 			page 137
 
 
  2604              		.loc 1 1078 3 view .LVU889
@@ -8218,7 +8218,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  2643              		.loc 1 1027 12 view .LVU904
  2644 00b0 FFF7FEFF 		bl	HAL_SPI_TransmitReceive
  2645              	.LVL136:
-ARM GAS  /tmp/ccmf0c9D.s 			page 138
+ARM GAS  /tmp/ccOpINPU.s 			page 138
 
 
 1027:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -8278,7 +8278,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  2688              		.loc 1 1096 16 is_stmt 0 view .LVU916
  2689 00ec B4F84630 		ldrh	r3, [r4, #70]
  2690 00f0 9BB2     		uxth	r3, r3
-ARM GAS  /tmp/ccmf0c9D.s 			page 139
+ARM GAS  /tmp/ccOpINPU.s 			page 139
 
 
 1096:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -8338,7 +8338,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  2728              		.loc 1 1112 11 is_stmt 1 view .LVU933
 1112:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           return HAL_TIMEOUT;
  2729              		.loc 1 1112 11 view .LVU934
-ARM GAS  /tmp/ccmf0c9D.s 			page 140
+ARM GAS  /tmp/ccOpINPU.s 			page 140
 
 
  2730 0122 0023     		movs	r3, #0
@@ -8398,7 +8398,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1126:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->pRxBuffPtr += sizeof(uint16_t);
  2768              		.loc 1 1126 67 is_stmt 0 view .LVU951
  2769 0150 DA68     		ldr	r2, [r3, #12]
-ARM GAS  /tmp/ccmf0c9D.s 			page 141
+ARM GAS  /tmp/ccOpINPU.s 			page 141
 
 
 1126:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->pRxBuffPtr += sizeof(uint16_t);
@@ -8458,7 +8458,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  2807 0184 2946     		mov	r1, r5
  2808 0186 2046     		mov	r0, r4
  2809 0188 FFF7FEFF 		bl	SPI_EndRxTransaction
-ARM GAS  /tmp/ccmf0c9D.s 			page 142
+ARM GAS  /tmp/ccOpINPU.s 			page 142
 
 
  2810              	.LVL141:
@@ -8518,7 +8518,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  2850              	.L198:
  2851              	.LCFI32:
  2852              		.cfi_restore_state
-ARM GAS  /tmp/ccmf0c9D.s 			page 143
+ARM GAS  /tmp/ccOpINPU.s 			page 143
 
 
 1039:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -8578,7 +8578,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  2897 0018 012B     		cmp	r3, #1
  2898 001a 43D0     		beq	.L212
 1618:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 144
+ARM GAS  /tmp/ccOpINPU.s 			page 144
 
 
  2899              		.loc 1 1618 3 discriminator 2 view .LVU995
@@ -8638,7 +8638,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1634:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  2933              		.loc 1 1634 17 is_stmt 0 discriminator 2 view .LVU1016
  2934 003e C368     		ldr	r3, [r0, #12]
-ARM GAS  /tmp/ccmf0c9D.s 			page 145
+ARM GAS  /tmp/ccOpINPU.s 			page 145
 
 
 1634:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -8698,7 +8698,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  2973 006c 4A68     		ldr	r2, [r1, #4]
  2974 006e 42F0A002 		orr	r2, r2, #160
  2975 0072 4A60     		str	r2, [r1, #4]
-ARM GAS  /tmp/ccmf0c9D.s 			page 146
+ARM GAS  /tmp/ccOpINPU.s 			page 146
 
 
 1671:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
@@ -8758,7 +8758,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3020              		.loc 1 1672 1 view .LVU1042
  3021 009a 7047     		bx	lr
  3022              	.LVL154:
-ARM GAS  /tmp/ccmf0c9D.s 			page 147
+ARM GAS  /tmp/ccOpINPU.s 			page 147
 
 
  3023              	.L210:
@@ -8818,7 +8818,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3071              	.LCFI38:
  3072              		.cfi_def_cfa_offset 4
  3073              		.cfi_offset 4, -4
-ARM GAS  /tmp/ccmf0c9D.s 			page 148
+ARM GAS  /tmp/ccOpINPU.s 			page 148
 
 
 1789:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   HAL_SPI_StateTypeDef tmp_state;
@@ -8878,7 +8878,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3111 002c 002B     		cmp	r3, #0
  3112 002e 54D0     		beq	.L235
 1812:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 149
+ARM GAS  /tmp/ccOpINPU.s 			page 149
 
 
  3113              		.loc 1 1812 3 is_stmt 1 view .LVU1068
@@ -8938,7 +8938,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3149 0058 0264     		str	r2, [r0, #64]
 1826:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->RxXferCount = Size;
  3150              		.loc 1 1826 3 is_stmt 1 view .LVU1087
-ARM GAS  /tmp/ccmf0c9D.s 			page 150
+ARM GAS  /tmp/ccOpINPU.s 			page 150
 
 
 1826:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->RxXferCount = Size;
@@ -8998,7 +8998,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3189              	.LVL167:
  3190              	.L228:
 1872:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
-ARM GAS  /tmp/ccmf0c9D.s 			page 151
+ARM GAS  /tmp/ccOpINPU.s 			page 151
 
 
  3191              		.loc 1 1872 3 is_stmt 1 view .LVU1104
@@ -9058,7 +9058,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3229              		.loc 1 1838 21 is_stmt 0 view .LVU1120
  3230 00b0 0F49     		ldr	r1, .L238+12
  3231 00b2 0165     		str	r1, [r0, #80]
-ARM GAS  /tmp/ccmf0c9D.s 			page 152
+ARM GAS  /tmp/ccOpINPU.s 			page 152
 
 
  3232 00b4 DDE7     		b	.L225
@@ -9118,7 +9118,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3276 00d2 0120     		movs	r0, #1
  3277              	.LVL180:
 1808:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  /tmp/ccmf0c9D.s 			page 153
+ARM GAS  /tmp/ccOpINPU.s 			page 153
 
 
  3278              		.loc 1 1808 12 view .LVU1131
@@ -9178,7 +9178,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3326 0000 8446     		mov	ip, r0
 1685:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  3327              		.loc 1 1685 3 is_stmt 1 view .LVU1140
-ARM GAS  /tmp/ccmf0c9D.s 			page 154
+ARM GAS  /tmp/ccOpINPU.s 			page 154
 
 
 1685:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -9238,7 +9238,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3367 0030 8CF85C30 		strb	r3, [ip, #92]
 1704:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  3368              		.loc 1 1704 3 discriminator 2 view .LVU1156
-ARM GAS  /tmp/ccmf0c9D.s 			page 155
+ARM GAS  /tmp/ccOpINPU.s 			page 155
 
 
 1707:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->ErrorCode   = HAL_SPI_ERROR_NONE;
@@ -9298,7 +9298,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3402 0060 B3F5E06F 		cmp	r3, #1792
  3403 0064 2AD9     		bls	.L243
 1723:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->RxISR = SPI_RxISR_16BIT;
-ARM GAS  /tmp/ccmf0c9D.s 			page 156
+ARM GAS  /tmp/ccOpINPU.s 			page 156
 
 
  3404              		.loc 1 1723 5 is_stmt 1 view .LVU1178
@@ -9358,7 +9358,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3443 009c DCF80020 		ldr	r2, [ip]
  3444 00a0 5368     		ldr	r3, [r2, #4]
  3445 00a2 43F06003 		orr	r3, r3, #96
-ARM GAS  /tmp/ccmf0c9D.s 			page 157
+ARM GAS  /tmp/ccOpINPU.s 			page 157
 
 
  3446 00a6 5360     		str	r3, [r2, #4]
@@ -9418,7 +9418,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3487 00d4 1368     		ldr	r3, [r2]
  3488 00d6 23F04003 		bic	r3, r3, #64
  3489 00da 1360     		str	r3, [r2]
-ARM GAS  /tmp/ccmf0c9D.s 			page 158
+ARM GAS  /tmp/ccOpINPU.s 			page 158
 
 
 1738:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -9478,7 +9478,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3540              		.cfi_offset 3, -16
  3541              		.cfi_offset 4, -12
  3542              		.cfi_offset 5, -8
-ARM GAS  /tmp/ccmf0c9D.s 			page 159
+ARM GAS  /tmp/ccOpINPU.s 			page 159
 
 
  3543              		.cfi_offset 14, -4
@@ -9538,7 +9538,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3579              		.loc 1 1919 21 is_stmt 0 discriminator 2 view .LVU1230
  3580 0036 8163     		str	r1, [r0, #56]
 1920:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount = Size;
-ARM GAS  /tmp/ccmf0c9D.s 			page 160
+ARM GAS  /tmp/ccOpINPU.s 			page 160
 
 
  3581              		.loc 1 1920 3 is_stmt 1 discriminator 2 view .LVU1231
@@ -9598,7 +9598,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 1950:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  3616              		.loc 1 1950 3 is_stmt 1 view .LVU1251
 1950:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 161
+ARM GAS  /tmp/ccOpINPU.s 			page 161
 
 
  3617              		.loc 1 1950 7 is_stmt 0 view .LVU1252
@@ -9658,7 +9658,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3655 0086 2268     		ldr	r2, [r4]
 1977:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  3656              		.loc 1 1977 38 view .LVU1269
-ARM GAS  /tmp/ccmf0c9D.s 			page 162
+ARM GAS  /tmp/ccOpINPU.s 			page 162
 
 
  3657 0088 E38F     		ldrh	r3, [r4, #62]
@@ -9718,7 +9718,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3697 00be 2268     		ldr	r2, [r4]
  3698 00c0 5368     		ldr	r3, [r2, #4]
  3699 00c2 43F00203 		orr	r3, r3, #2
-ARM GAS  /tmp/ccmf0c9D.s 			page 163
+ARM GAS  /tmp/ccOpINPU.s 			page 163
 
 
  3700 00c6 5360     		str	r3, [r2, #4]
@@ -9778,7 +9778,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3741              		.loc 1 1970 7 is_stmt 1 view .LVU1296
  3742 00fe 2268     		ldr	r2, [r4]
  3743 0100 5368     		ldr	r3, [r2, #4]
-ARM GAS  /tmp/ccmf0c9D.s 			page 164
+ARM GAS  /tmp/ccOpINPU.s 			page 164
 
 
  3744 0102 43F48043 		orr	r3, r3, #16384
@@ -9838,7 +9838,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3785              	.L270:
  3786 0130 00000000 		.word	SPI_DMAHalfTransmitCplt
  3787 0134 00000000 		.word	SPI_DMATransmitCplt
-ARM GAS  /tmp/ccmf0c9D.s 			page 165
+ARM GAS  /tmp/ccOpINPU.s 			page 165
 
 
  3788 0138 00000000 		.word	SPI_DMAError
@@ -9898,7 +9898,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3831              		.loc 1 2172 3 is_stmt 1 view .LVU1322
 2172:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         ((tmp_mode == SPI_MODE_MASTER) && (hspi->Init.Direction == SPI_DIRECTION_2LINES) &&
  3832              		.loc 1 2172 6 is_stmt 0 view .LVU1323
-ARM GAS  /tmp/ccmf0c9D.s 			page 166
+ARM GAS  /tmp/ccOpINPU.s 			page 166
 
 
  3833 000c 0128     		cmp	r0, #1
@@ -9958,7 +9958,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3872 004c C0B2     		uxtb	r0, r0
 2188:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  3873              		.loc 1 2188 6 discriminator 2 view .LVU1339
-ARM GAS  /tmp/ccmf0c9D.s 			page 167
+ARM GAS  /tmp/ccOpINPU.s 			page 167
 
 
  3874 004e 0428     		cmp	r0, #4
@@ -10018,7 +10018,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3908 006e 2065     		str	r0, [r4, #80]
 2215:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  3909              		.loc 1 2215 3 is_stmt 1 view .LVU1360
-ARM GAS  /tmp/ccmf0c9D.s 			page 168
+ARM GAS  /tmp/ccOpINPU.s 			page 168
 
 
  3910 0070 2268     		ldr	r2, [r4]
@@ -10078,7 +10078,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3949 00a0 DA62     		str	r2, [r3, #44]
  3950              	.L282:
 2275:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 169
+ARM GAS  /tmp/ccOpINPU.s 			page 169
 
 
  3951              		.loc 1 2275 3 is_stmt 1 view .LVU1376
@@ -10138,7 +10138,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  3989              		.loc 1 2288 12 is_stmt 0 view .LVU1392
  3990 00d2 0120     		movs	r0, #1
  3991 00d4 89E0     		b	.L274
-ARM GAS  /tmp/ccmf0c9D.s 			page 170
+ARM GAS  /tmp/ccOpINPU.s 			page 170
 
 
  3992              	.LVL222:
@@ -10198,7 +10198,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2250:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
  4032              		.loc 1 2250 9 view .LVU1407
 2250:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
-ARM GAS  /tmp/ccmf0c9D.s 			page 171
+ARM GAS  /tmp/ccOpINPU.s 			page 171
 
 
  4033              		.loc 1 2250 33 is_stmt 0 view .LVU1408
@@ -10258,7 +10258,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2254:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->RxXferCount = (hspi->RxXferCount >> 1U) + 1U;
  4074              		.loc 1 2254 9 is_stmt 1 view .LVU1422
  4075 0152 2268     		ldr	r2, [r4]
-ARM GAS  /tmp/ccmf0c9D.s 			page 172
+ARM GAS  /tmp/ccOpINPU.s 			page 172
 
 
  4076 0154 5368     		ldr	r3, [r2, #4]
@@ -10318,7 +10318,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4115              		.loc 1 2297 3 is_stmt 1 view .LVU1437
 2297:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->hdmatx->XferErrorCallback    = NULL;
  4116              		.loc 1 2297 7 is_stmt 0 view .LVU1438
-ARM GAS  /tmp/ccmf0c9D.s 			page 173
+ARM GAS  /tmp/ccOpINPU.s 			page 173
 
 
  4117 018a 626D     		ldr	r2, [r4, #84]
@@ -10378,7 +10378,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4154 01b4 42F04002 		orr	r2, r2, #64
  4155 01b8 1A60     		str	r2, [r3]
  4156              	.L285:
-ARM GAS  /tmp/ccmf0c9D.s 			page 174
+ARM GAS  /tmp/ccOpINPU.s 			page 174
 
 
 2320:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -10438,7 +10438,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4196 01ea 38BD     		pop	{r3, r4, r5, pc}
  4197              	.LVL227:
  4198              	.L287:
-ARM GAS  /tmp/ccmf0c9D.s 			page 175
+ARM GAS  /tmp/ccOpINPU.s 			page 175
 
 
 2176:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -10498,7 +10498,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4242 0210 00000000 		.word	SPI_DMAHalfReceiveCplt
  4243 0214 00000000 		.word	SPI_DMAReceiveCplt
  4244              		.cfi_endproc
-ARM GAS  /tmp/ccmf0c9D.s 			page 176
+ARM GAS  /tmp/ccOpINPU.s 			page 176
 
 
  4245              	.LFE300:
@@ -10558,7 +10558,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2036:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  4290              		.loc 1 2036 3 is_stmt 1 view .LVU1493
 2036:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
-ARM GAS  /tmp/ccmf0c9D.s 			page 177
+ARM GAS  /tmp/ccOpINPU.s 			page 177
 
 
  4291              		.loc 1 2036 6 is_stmt 0 view .LVU1494
@@ -10618,7 +10618,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2053:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferSize  = 0U;
  4327              		.loc 1 2053 21 is_stmt 0 discriminator 2 view .LVU1513
  4328 004e 2365     		str	r3, [r4, #80]
-ARM GAS  /tmp/ccmf0c9D.s 			page 178
+ARM GAS  /tmp/ccOpINPU.s 			page 178
 
 
 2054:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount = 0U;
@@ -10678,7 +10678,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2107:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  4367              		.loc 1 2107 34 view .LVU1530
  4368 007e 3E4A     		ldr	r2, .L314+4
-ARM GAS  /tmp/ccmf0c9D.s 			page 179
+ARM GAS  /tmp/ccOpINPU.s 			page 179
 
 
  4369 0080 DA62     		str	r2, [r3, #44]
@@ -10738,7 +10738,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4407              		.loc 1 2130 5 is_stmt 1 view .LVU1546
  4408 00b0 1A68     		ldr	r2, [r3]
  4409 00b2 42F04002 		orr	r2, r2, #64
-ARM GAS  /tmp/ccmf0c9D.s 			page 180
+ARM GAS  /tmp/ccOpINPU.s 			page 180
 
 
  4410 00b6 1A60     		str	r2, [r3]
@@ -10798,7 +10798,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4450              	.LVL245:
  4451              	.L312:
 2061:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SPI_1LINE_RX(hspi);
-ARM GAS  /tmp/ccmf0c9D.s 			page 181
+ARM GAS  /tmp/ccOpINPU.s 			page 181
 
 
  4452              		.loc 1 2061 5 is_stmt 1 view .LVU1561
@@ -10858,7 +10858,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4494 012c 23F40053 		bic	r3, r3, #8192
  4495 0130 5360     		str	r3, [r2, #4]
 2093:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
-ARM GAS  /tmp/ccmf0c9D.s 			page 182
+ARM GAS  /tmp/ccOpINPU.s 			page 182
 
 
  4496              		.loc 1 2093 9 view .LVU1574
@@ -10918,7 +10918,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4536              	.LVL250:
  4537              	.L300:
 2143:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 183
+ARM GAS  /tmp/ccOpINPU.s 			page 183
 
 
  4538              		.loc 1 2143 1 view .LVU1589
@@ -10978,7 +10978,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4585              		.loc 1 2352 61 is_stmt 0 view .LVU1598
  4586 0006 5E4B     		ldr	r3, .L337
  4587 0008 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/ccmf0c9D.s 			page 184
+ARM GAS  /tmp/ccOpINPU.s 			page 184
 
 
  4588 000a 5E4A     		ldr	r2, .L337+4
@@ -11038,7 +11038,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4626 003c 013B     		subs	r3, r3, #1
  4627 003e 0593     		str	r3, [sp, #20]
 2371:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Reset Timeout Counter */
-ARM GAS  /tmp/ccmf0c9D.s 			page 185
+ARM GAS  /tmp/ccOpINPU.s 			page 185
 
 
  4628              		.loc 1 2371 26 is_stmt 1 view .LVU1615
@@ -11098,7 +11098,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2387:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     } while (hspi->State != HAL_SPI_STATE_ABORT);
  4666              		.loc 1 2387 12 is_stmt 0 view .LVU1632
  4667 0068 059B     		ldr	r3, [sp, #20]
-ARM GAS  /tmp/ccmf0c9D.s 			page 186
+ARM GAS  /tmp/ccOpINPU.s 			page 186
 
 
  4668 006a 013B     		subs	r3, r3, #1
@@ -11158,7 +11158,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2404:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
  4706              		.loc 1 2404 11 is_stmt 0 view .LVU1649
  4707 0096 606D     		ldr	r0, [r4, #84]
-ARM GAS  /tmp/ccmf0c9D.s 			page 187
+ARM GAS  /tmp/ccOpINPU.s 			page 187
 
 
  4708              	.LVL254:
@@ -11218,7 +11218,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4749 00ce 0090     		str	r0, [sp]
  4750 00d0 6423     		movs	r3, #100
  4751 00d2 0022     		movs	r2, #0
-ARM GAS  /tmp/ccmf0c9D.s 			page 188
+ARM GAS  /tmp/ccOpINPU.s 			page 188
 
 
  4752 00d4 4FF4C061 		mov	r1, #1536
@@ -11278,7 +11278,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4790              	.L329:
 2446:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  4791              		.loc 1 2446 7 is_stmt 1 view .LVU1679
-ARM GAS  /tmp/ccmf0c9D.s 			page 189
+ARM GAS  /tmp/ccOpINPU.s 			page 189
 
 
  4792 0102 2268     		ldr	r2, [r4]
@@ -11338,7 +11338,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4835 0142 23F00103 		bic	r3, r3, #1
  4836 0146 5360     		str	r3, [r2, #4]
  4837              	.L328:
-ARM GAS  /tmp/ccmf0c9D.s 			page 190
+ARM GAS  /tmp/ccOpINPU.s 			page 190
 
 
 2466:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount = 0U;
@@ -11398,7 +11398,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4875              		.loc 1 2483 3 view .LVU1707
  4876 016a 0392     		str	r2, [sp, #12]
 2483:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 191
+ARM GAS  /tmp/ccOpINPU.s 			page 191
 
 
  4877              		.loc 1 2483 3 view .LVU1708
@@ -11458,7 +11458,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4925              		@ args = 0, pretend = 0, frame = 0
  4926              		@ frame_needed = 0, uses_anonymous_args = 0
  4927              		@ link register save eliminated.
-ARM GAS  /tmp/ccmf0c9D.s 			page 192
+ARM GAS  /tmp/ccOpINPU.s 			page 192
 
 
 2670:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -11518,7 +11518,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  4971              	.LVL271:
  4972              	.LFB304:
 2688:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Process Locked */
-ARM GAS  /tmp/ccmf0c9D.s 			page 193
+ARM GAS  /tmp/ccOpINPU.s 			page 193
 
 
  4973              		.loc 1 2688 1 is_stmt 1 view -0
@@ -11578,7 +11578,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5015              		.global	HAL_SPI_DMAStop
  5016              		.syntax unified
  5017              		.thumb
-ARM GAS  /tmp/ccmf0c9D.s 			page 194
+ARM GAS  /tmp/ccOpINPU.s 			page 194
 
 
  5018              		.thumb_func
@@ -11638,7 +11638,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5061              	.L348:
 2709:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* The Lock is not implemented on this API to allow the user application
  5062              		.loc 1 2709 21 view .LVU1756
-ARM GAS  /tmp/ccmf0c9D.s 			page 195
+ARM GAS  /tmp/ccOpINPU.s 			page 195
 
 
  5063 001c 0025     		movs	r5, #0
@@ -11698,7 +11698,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5102              	.LFE305:
  5104              		.section	.text.HAL_SPI_TxCpltCallback,"ax",%progbits
  5105              		.align	1
-ARM GAS  /tmp/ccmf0c9D.s 			page 196
+ARM GAS  /tmp/ccOpINPU.s 			page 196
 
 
  5106              		.weak	HAL_SPI_TxCpltCallback
@@ -11758,7 +11758,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5158              		@ args = 0, pretend = 0, frame = 0
  5159              		@ frame_needed = 0, uses_anonymous_args = 0
  5160              		@ link register save eliminated.
-ARM GAS  /tmp/ccmf0c9D.s 			page 197
+ARM GAS  /tmp/ccOpINPU.s 			page 197
 
 
 2891:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -11818,7 +11818,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5210 0002 806A     		ldr	r0, [r0, #40]
  5211              	.LVL291:
 3325:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_HAL_SPI_REGISTER_CALLBACKS */
-ARM GAS  /tmp/ccmf0c9D.s 			page 198
+ARM GAS  /tmp/ccOpINPU.s 			page 198
 
 
  5212              		.loc 1 3325 3 is_stmt 0 view .LVU1788
@@ -11878,7 +11878,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5262              		.loc 1 3343 3 view .LVU1796
  5263 0002 806A     		ldr	r0, [r0, #40]
  5264              	.LVL296:
-ARM GAS  /tmp/ccmf0c9D.s 			page 199
+ARM GAS  /tmp/ccOpINPU.s 			page 199
 
 
 3343:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_HAL_SPI_REGISTER_CALLBACKS */
@@ -11938,7 +11938,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3361:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_HAL_SPI_REGISTER_CALLBACKS */
  5315              		.loc 1 3361 3 view .LVU1805
  5316 0002 806A     		ldr	r0, [r0, #40]
-ARM GAS  /tmp/ccmf0c9D.s 			page 200
+ARM GAS  /tmp/ccOpINPU.s 			page 200
 
 
  5317              	.LVL301:
@@ -11998,7 +11998,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5368              		.cfi_def_cfa_offset 16
  5369 0004 0446     		mov	r4, r0
 4299:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 201
+ARM GAS  /tmp/ccOpINPU.s 			page 201
 
 
  5370              		.loc 1 4299 3 is_stmt 1 view .LVU1813
@@ -12058,7 +12058,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5409 0030 DA68     		ldr	r2, [r3, #12]
  5410 0032 0192     		str	r2, [sp, #4]
 4316:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  /tmp/ccmf0c9D.s 			page 202
+ARM GAS  /tmp/ccOpINPU.s 			page 202
 
 
  5411              		.loc 1 4316 5 view .LVU1829
@@ -12118,7 +12118,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5455              		.syntax unified
  5456              		.thumb
  5457              		.thumb_func
-ARM GAS  /tmp/ccmf0c9D.s 			page 203
+ARM GAS  /tmp/ccOpINPU.s 			page 203
 
 
  5459              	SPI_TxISR_8BIT:
@@ -12178,7 +12178,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5498 001c 9BB2     		uxth	r3, r3
 3897:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  5499              		.loc 1 3897 6 view .LVU1856
-ARM GAS  /tmp/ccmf0c9D.s 			page 204
+ARM GAS  /tmp/ccOpINPU.s 			page 204
 
 
  5500 001e 03B1     		cbz	r3, .L372
@@ -12238,7 +12238,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5544              		.loc 1 3920 7 is_stmt 0 view .LVU1868
  5545 000a 836B     		ldr	r3, [r0, #56]
 3920:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount--;
-ARM GAS  /tmp/ccmf0c9D.s 			page 205
+ARM GAS  /tmp/ccOpINPU.s 			page 205
 
 
  5546              		.loc 1 3920 20 view .LVU1869
@@ -12298,7 +12298,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5591 0000 10B5     		push	{r4, lr}
  5592              	.LCFI61:
  5593              		.cfi_def_cfa_offset 8
-ARM GAS  /tmp/ccmf0c9D.s 			page 206
+ARM GAS  /tmp/ccOpINPU.s 			page 206
 
 
  5594              		.cfi_offset 4, -8
@@ -12358,7 +12358,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5635              	.LVL324:
  5636              	.L379:
 4283:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_HAL_SPI_REGISTER_CALLBACKS */
-ARM GAS  /tmp/ccmf0c9D.s 			page 207
+ARM GAS  /tmp/ccOpINPU.s 			page 207
 
 
  5637              		.loc 1 4283 7 is_stmt 1 view .LVU1894
@@ -12418,7 +12418,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3806:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  5681              		.loc 1 3806 7 is_stmt 0 view .LVU1907
  5682 0010 B0F84630 		ldrh	r3, [r0, #70]
-ARM GAS  /tmp/ccmf0c9D.s 			page 208
+ARM GAS  /tmp/ccOpINPU.s 			page 208
 
 
  5683 0014 9BB2     		uxth	r3, r3
@@ -12478,7 +12478,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5728              		.loc 1 3860 52 is_stmt 0 view .LVU1918
  5729 0002 0368     		ldr	r3, [r0]
 3860:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->pRxBuffPtr += sizeof(uint16_t);
-ARM GAS  /tmp/ccmf0c9D.s 			page 209
+ARM GAS  /tmp/ccOpINPU.s 			page 209
 
 
  5730              		.loc 1 3860 62 view .LVU1919
@@ -12538,7 +12538,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5771              		.align	1
  5772              		.syntax unified
  5773              		.thumb
-ARM GAS  /tmp/ccmf0c9D.s 			page 210
+ARM GAS  /tmp/ccOpINPU.s 			page 210
 
 
  5774              		.thumb_func
@@ -12598,7 +12598,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5817              	.L391:
 4196:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
  5818              		.loc 1 4196 5 view .LVU1946
-ARM GAS  /tmp/ccmf0c9D.s 			page 211
+ARM GAS  /tmp/ccOpINPU.s 			page 211
 
 
 4196:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -12658,7 +12658,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5858 0056 2046     		mov	r0, r4
  5859 0058 FFF7FEFF 		bl	HAL_SPI_ErrorCallback
  5860              	.LVL342:
-ARM GAS  /tmp/ccmf0c9D.s 			page 212
+ARM GAS  /tmp/ccOpINPU.s 			page 212
 
 
 4232:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -12718,7 +12718,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3640:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->TxXferCount -= 2U;
  5904              		.loc 1 3640 22 view .LVU1975
  5905 0014 0233     		adds	r3, r3, #2
-ARM GAS  /tmp/ccmf0c9D.s 			page 213
+ARM GAS  /tmp/ccOpINPU.s 			page 213
 
 
  5906 0016 8363     		str	r3, [r0, #56]
@@ -12778,7 +12778,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  5945 0040 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
 3646:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->pTxBuffPtr++;
  5946              		.loc 1 3646 42 view .LVU1991
-ARM GAS  /tmp/ccmf0c9D.s 			page 214
+ARM GAS  /tmp/ccOpINPU.s 			page 214
 
 
  5947 0042 1A73     		strb	r2, [r3, #12]
@@ -12838,7 +12838,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3552:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  5992              		.loc 1 3552 11 is_stmt 0 view .LVU2003
  5993 0002 B0F84630 		ldrh	r3, [r0, #70]
-ARM GAS  /tmp/ccmf0c9D.s 			page 215
+ARM GAS  /tmp/ccOpINPU.s 			page 215
 
 
  5994 0006 9BB2     		uxth	r3, r3
@@ -12898,7 +12898,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6032 003a 5360     		str	r3, [r2, #4]
  6033 003c 0DE0     		b	.L405
  6034              	.L404:
-ARM GAS  /tmp/ccmf0c9D.s 			page 216
+ARM GAS  /tmp/ccOpINPU.s 			page 216
 
 
 3566:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->pRxBuffPtr++;
@@ -12958,7 +12958,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6072 006c C38F     		ldrh	r3, [r0, #62]
  6073 006e 9BB2     		uxth	r3, r3
 3586:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
-ARM GAS  /tmp/ccmf0c9D.s 			page 217
+ARM GAS  /tmp/ccOpINPU.s 			page 217
 
 
  6074              		.loc 1 3586 8 view .LVU2037
@@ -13018,7 +13018,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3741:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount--;
  6119              		.loc 1 3741 7 is_stmt 0 view .LVU2049
  6120 000a 836B     		ldr	r3, [r0, #56]
-ARM GAS  /tmp/ccmf0c9D.s 			page 218
+ARM GAS  /tmp/ccOpINPU.s 			page 218
 
 
 3741:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount--;
@@ -13078,7 +13078,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6161              	.LFE330:
  6163              		.section	.text.SPI_2linesRxISR_16BIT,"ax",%progbits
  6164              		.align	1
-ARM GAS  /tmp/ccmf0c9D.s 			page 219
+ARM GAS  /tmp/ccOpINPU.s 			page 219
 
 
  6165              		.syntax unified
@@ -13138,7 +13138,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3688:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  6206              		.loc 1 3688 11 is_stmt 0 view .LVU2078
  6207 001e B0F84630 		ldrh	r3, [r0, #70]
-ARM GAS  /tmp/ccmf0c9D.s 			page 220
+ARM GAS  /tmp/ccOpINPU.s 			page 220
 
 
  6208 0022 9BB2     		uxth	r3, r3
@@ -13198,7 +13198,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6254              		.cfi_offset 14, -4
 3373:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  6255              		.loc 1 3373 3 is_stmt 1 view .LVU2089
-ARM GAS  /tmp/ccmf0c9D.s 			page 221
+ARM GAS  /tmp/ccOpINPU.s 			page 221
 
 
 3373:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -13258,7 +13258,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6303 0004 0546     		mov	r5, r0
 3044:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   uint32_t tickstart;
  6304              		.loc 1 3044 3 is_stmt 1 view .LVU2099
-ARM GAS  /tmp/ccmf0c9D.s 			page 222
+ARM GAS  /tmp/ccOpINPU.s 			page 222
 
 
 3044:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   uint32_t tickstart;
@@ -13318,7 +13318,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6344 0038 43F02003 		orr	r3, r3, #32
  6345 003c 2366     		str	r3, [r4, #96]
  6346              	.L421:
-ARM GAS  /tmp/ccmf0c9D.s 			page 223
+ARM GAS  /tmp/ccOpINPU.s 			page 223
 
 
 3066:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -13378,7 +13378,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6384 0060 FFF7FEFF 		bl	HAL_SPI_TxCpltCallback
  6385              	.LVL367:
  6386              	.L419:
-ARM GAS  /tmp/ccmf0c9D.s 			page 224
+ARM GAS  /tmp/ccOpINPU.s 			page 224
 
 
 3091:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -13438,7 +13438,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6434              		.loc 1 3110 3 view .LVU2140
 3110:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  6435              		.loc 1 3110 15 is_stmt 0 view .LVU2141
-ARM GAS  /tmp/ccmf0c9D.s 			page 225
+ARM GAS  /tmp/ccOpINPU.s 			page 225
 
 
  6436 0006 FFF7FEFF 		bl	HAL_GetTick
@@ -13498,7 +13498,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6476              	.LVL374:
 3174:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
  6477              		.loc 1 3174 8 view .LVU2156
-ARM GAS  /tmp/ccmf0c9D.s 			page 226
+ARM GAS  /tmp/ccOpINPU.s 			page 226
 
 
  6478 003e 08B1     		cbz	r0, .L430
@@ -13558,7 +13558,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3199:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
  6519              		.loc 1 3199 7 view .LVU2170
  6520 006e F4E7     		b	.L426
-ARM GAS  /tmp/ccmf0c9D.s 			page 227
+ARM GAS  /tmp/ccOpINPU.s 			page 227
 
 
  6521              		.cfi_endproc
@@ -13618,7 +13618,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6565 0016 2168     		ldr	r1, [r4]
  6566 0018 4B68     		ldr	r3, [r1, #4]
  6567 001a 23F02003 		bic	r3, r3, #32
-ARM GAS  /tmp/ccmf0c9D.s 			page 228
+ARM GAS  /tmp/ccOpINPU.s 			page 228
 
 
  6568 001e 4B60     		str	r3, [r1, #4]
@@ -13678,7 +13678,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6606              		.loc 1 3307 3 is_stmt 1 view .LVU2198
  6607 004e 2046     		mov	r0, r4
  6608 0050 FFF7FEFF 		bl	HAL_SPI_TxRxCpltCallback
-ARM GAS  /tmp/ccmf0c9D.s 			page 229
+ARM GAS  /tmp/ccOpINPU.s 			page 229
 
 
  6609              	.LVL384:
@@ -13738,7 +13738,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6655              		.loc 1 2752 12 is_stmt 0 view .LVU2208
  6656 000a 9368     		ldr	r3, [r2, #8]
  6657              	.LVL389:
-ARM GAS  /tmp/ccmf0c9D.s 			page 230
+ARM GAS  /tmp/ccOpINPU.s 			page 230
 
 
 2755:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       (SPI_CHECK_FLAG(itflag, SPI_FLAG_RXNE) != RESET) && (SPI_CHECK_IT_SOURCE(itsource, SPI_IT_RXN
@@ -13798,7 +13798,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6696              		.loc 1 2779 9 view .LVU2224
  6697              	.LBB7:
 2779:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
-ARM GAS  /tmp/ccmf0c9D.s 			page 231
+ARM GAS  /tmp/ccOpINPU.s 			page 231
 
 
  6698              		.loc 1 2779 9 view .LVU2225
@@ -13858,7 +13858,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2796:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
  6738              		.loc 1 2796 5 discriminator 1 view .LVU2240
 2796:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
-ARM GAS  /tmp/ccmf0c9D.s 			page 232
+ARM GAS  /tmp/ccOpINPU.s 			page 232
 
 
  6739              		.loc 1 2796 8 is_stmt 0 discriminator 1 view .LVU2241
@@ -13918,7 +13918,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6778              		.loc 1 2809 7 is_stmt 1 view .LVU2256
 2809:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
  6779              		.loc 1 2809 10 is_stmt 0 view .LVU2257
-ARM GAS  /tmp/ccmf0c9D.s 			page 233
+ARM GAS  /tmp/ccOpINPU.s 			page 233
 
 
  6780 00a2 11F0030F 		tst	r1, #3
@@ -13978,7 +13978,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2830:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           {
  6818              		.loc 1 2830 25 is_stmt 0 view .LVU2274
  6819 00d2 606D     		ldr	r0, [r4, #84]
-ARM GAS  /tmp/ccmf0c9D.s 			page 234
+ARM GAS  /tmp/ccOpINPU.s 			page 234
 
 
  6820 00d4 FFF7FEFF 		bl	HAL_DMA_Abort_IT
@@ -14038,7 +14038,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6862 00fa 10BD     		pop	{r4, pc}
  6863              	.LVL400:
  6864              	.L446:
-ARM GAS  /tmp/ccmf0c9D.s 			page 235
+ARM GAS  /tmp/ccOpINPU.s 			page 235
 
 
  6865              	.LCFI79:
@@ -14098,7 +14098,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6910              		.cfi_startproc
  6911              		@ args = 0, pretend = 0, frame = 0
  6912              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccmf0c9D.s 			page 236
+ARM GAS  /tmp/ccOpINPU.s 			page 236
 
 
 3395:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   SPI_HandleTypeDef *hspi = (SPI_HandleTypeDef *)(((DMA_HandleTypeDef *)hdma)->Parent);
@@ -14158,7 +14158,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  6957              	.LFE314:
  6959              		.section	.text.HAL_SPI_Abort_IT,"ax",%progbits
  6960              		.align	1
-ARM GAS  /tmp/ccmf0c9D.s 			page 237
+ARM GAS  /tmp/ccOpINPU.s 			page 237
 
 
  6961              		.global	HAL_SPI_Abort_IT
@@ -14218,7 +14218,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2517:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  7004              		.loc 1 2517 3 is_stmt 1 view .LVU2322
 2517:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  /tmp/ccmf0c9D.s 			page 238
+ARM GAS  /tmp/ccOpINPU.s 			page 238
 
 
  7005              		.loc 1 2517 9 is_stmt 0 view .LVU2323
@@ -14278,7 +14278,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  7044              	.L483:
 2531:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         break;
  7045              		.loc 1 2531 9 is_stmt 1 view .LVU2339
-ARM GAS  /tmp/ccmf0c9D.s 			page 239
+ARM GAS  /tmp/ccOpINPU.s 			page 239
 
 
  7046 004c 236E     		ldr	r3, [r4, #96]
@@ -14338,7 +14338,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  7083 0074 072B     		cmp	r3, #7
  7084 0076 F5D1     		bne	.L468
  7085 0078 03E0     		b	.L467
-ARM GAS  /tmp/ccmf0c9D.s 			page 240
+ARM GAS  /tmp/ccOpINPU.s 			page 240
 
 
  7086              	.L484:
@@ -14398,7 +14398,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2578:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
  7123              		.loc 1 2578 8 view .LVU2374
  7124 009e 12F0010F 		tst	r2, #1
-ARM GAS  /tmp/ccmf0c9D.s 			page 241
+ARM GAS  /tmp/ccOpINPU.s 			page 241
 
 
  7125 00a2 15D0     		beq	.L472
@@ -14458,7 +14458,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  7162 00c8 06E0     		b	.L473
  7163              	.LVL411:
  7164              	.L470:
-ARM GAS  /tmp/ccmf0c9D.s 			page 242
+ARM GAS  /tmp/ccOpINPU.s 			page 242
 
 
 2570:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
@@ -14518,7 +14518,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 2615:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->ErrorCode = HAL_SPI_ERROR_ABORT;
  7203              		.loc 1 2615 41 view .LVU2408
  7204 00f0 0022     		movs	r2, #0
-ARM GAS  /tmp/ccmf0c9D.s 			page 243
+ARM GAS  /tmp/ccOpINPU.s 			page 243
 
 
  7205 00f2 9A63     		str	r2, [r3, #56]
@@ -14578,7 +14578,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  7246 0110 E387     		strh	r3, [r4, #62]	@ movhi
 2632:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
  7247              		.loc 1 2632 5 is_stmt 1 view .LVU2422
-ARM GAS  /tmp/ccmf0c9D.s 			page 244
+ARM GAS  /tmp/ccOpINPU.s 			page 244
 
 
 2632:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -14638,7 +14638,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  7286              		.loc 1 2648 5 view .LVU2438
 2648:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  7287              		.loc 1 2648 17 is_stmt 0 view .LVU2439
-ARM GAS  /tmp/ccmf0c9D.s 			page 245
+ARM GAS  /tmp/ccOpINPU.s 			page 245
 
 
  7288 0134 0123     		movs	r3, #1
@@ -14698,7 +14698,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  7338              	.LVL421:
 3488:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  7339              		.loc 1 3488 3 is_stmt 1 view .LVU2446
-ARM GAS  /tmp/ccmf0c9D.s 			page 246
+ARM GAS  /tmp/ccOpINPU.s 			page 246
 
 
  7340 0006 2268     		ldr	r2, [r4]
@@ -14758,7 +14758,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  7382 0046 2046     		mov	r0, r4
  7383 0048 FFF7FEFF 		bl	SPI_WaitFifoStateUntilTimeout
  7384              	.LVL425:
-ARM GAS  /tmp/ccmf0c9D.s 			page 247
+ARM GAS  /tmp/ccOpINPU.s 			page 247
 
 
 3502:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                     HAL_GetTick()) != HAL_OK)
@@ -14818,7 +14818,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3529:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __HAL_SPI_CLEAR_FREFLAG(hspi);
  7421              		.loc 1 3529 3 is_stmt 1 view .LVU2477
  7422              	.LBB13:
-ARM GAS  /tmp/ccmf0c9D.s 			page 248
+ARM GAS  /tmp/ccOpINPU.s 			page 248
 
 
 3529:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __HAL_SPI_CLEAR_FREFLAG(hspi);
@@ -14878,7 +14878,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
 3541:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  7463              		.loc 1 3541 1 view .LVU2492
  7464              		.cfi_endproc
-ARM GAS  /tmp/ccmf0c9D.s 			page 249
+ARM GAS  /tmp/ccOpINPU.s 			page 249
 
 
  7465              	.LFE326:
@@ -14938,7 +14938,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  7510 001c 6421     		movs	r1, #100
  7511 001e 2046     		mov	r0, r4
  7512 0020 FFF7FEFF 		bl	SPI_EndRxTxTransaction
-ARM GAS  /tmp/ccmf0c9D.s 			page 250
+ARM GAS  /tmp/ccOpINPU.s 			page 250
 
 
  7513              	.LVL430:
@@ -14998,7 +14998,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  7552              		.loc 1 3443 8 view .LVU2518
  7553 0054 D3B9     		cbnz	r3, .L495
  7554              	.L498:
-ARM GAS  /tmp/ccmf0c9D.s 			page 251
+ARM GAS  /tmp/ccOpINPU.s 			page 251
 
 
 3450:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount = 0U;
@@ -15058,7 +15058,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  7592 0078 0392     		str	r2, [sp, #12]
 3462:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  7593              		.loc 1 3462 3 view .LVU2536
-ARM GAS  /tmp/ccmf0c9D.s 			page 252
+ARM GAS  /tmp/ccOpINPU.s 			page 252
 
 
  7594 007a 9B68     		ldr	r3, [r3, #8]
@@ -15118,7 +15118,7 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  7639 0004 7047     		bx	lr
  7640              		.cfi_endproc
  7641              	.LFE315:
-ARM GAS  /tmp/ccmf0c9D.s 			page 253
+ARM GAS  /tmp/ccOpINPU.s 			page 253
 
 
  7643              		.section	.text.HAL_SPI_GetError,"ax",%progbits
@@ -15158,142 +15158,142 @@ ARM GAS  /tmp/ccmf0c9D.s 			page 1
  7675              		.file 8 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h"
  7676              		.file 9 "stm/stm32l4xx/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h"
  7677              		.file 10 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  /tmp/ccmf0c9D.s 			page 254
+ARM GAS  /tmp/ccOpINPU.s 			page 254
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_spi.c
-     /tmp/ccmf0c9D.s:21     .text.SPI_WaitFlagStateUntilTimeout:0000000000000000 $t
-     /tmp/ccmf0c9D.s:26     .text.SPI_WaitFlagStateUntilTimeout:0000000000000000 SPI_WaitFlagStateUntilTimeout
-     /tmp/ccmf0c9D.s:203    .text.SPI_WaitFlagStateUntilTimeout:00000000000000c4 $d
-     /tmp/ccmf0c9D.s:208    .text.SPI_WaitFifoStateUntilTimeout:0000000000000000 $t
-     /tmp/ccmf0c9D.s:213    .text.SPI_WaitFifoStateUntilTimeout:0000000000000000 SPI_WaitFifoStateUntilTimeout
-     /tmp/ccmf0c9D.s:421    .text.SPI_WaitFifoStateUntilTimeout:00000000000000ec $d
-     /tmp/ccmf0c9D.s:426    .text.SPI_EndRxTxTransaction:0000000000000000 $t
-     /tmp/ccmf0c9D.s:431    .text.SPI_EndRxTxTransaction:0000000000000000 SPI_EndRxTxTransaction
-     /tmp/ccmf0c9D.s:528    .text.SPI_EndRxTransaction:0000000000000000 $t
-     /tmp/ccmf0c9D.s:533    .text.SPI_EndRxTransaction:0000000000000000 SPI_EndRxTransaction
-     /tmp/ccmf0c9D.s:656    .text.SPI_AbortRx_ISR:0000000000000000 $t
-     /tmp/ccmf0c9D.s:661    .text.SPI_AbortRx_ISR:0000000000000000 SPI_AbortRx_ISR
-     /tmp/ccmf0c9D.s:778    .text.SPI_AbortRx_ISR:0000000000000088 $d
-     /tmp/ccmf0c9D.s:784    .text.SPI_AbortTx_ISR:0000000000000000 $t
-     /tmp/ccmf0c9D.s:789    .text.SPI_AbortTx_ISR:0000000000000000 SPI_AbortTx_ISR
-     /tmp/ccmf0c9D.s:976    .text.SPI_AbortTx_ISR:00000000000000e8 $d
-     /tmp/ccmf0c9D.s:982    .text.HAL_SPI_MspInit:0000000000000000 $t
-     /tmp/ccmf0c9D.s:988    .text.HAL_SPI_MspInit:0000000000000000 HAL_SPI_MspInit
-     /tmp/ccmf0c9D.s:1003   .text.HAL_SPI_Init:0000000000000000 $t
-     /tmp/ccmf0c9D.s:1009   .text.HAL_SPI_Init:0000000000000000 HAL_SPI_Init
-     /tmp/ccmf0c9D.s:1193   .text.HAL_SPI_MspDeInit:0000000000000000 $t
-     /tmp/ccmf0c9D.s:1199   .text.HAL_SPI_MspDeInit:0000000000000000 HAL_SPI_MspDeInit
-     /tmp/ccmf0c9D.s:1214   .text.HAL_SPI_DeInit:0000000000000000 $t
-     /tmp/ccmf0c9D.s:1220   .text.HAL_SPI_DeInit:0000000000000000 HAL_SPI_DeInit
-     /tmp/ccmf0c9D.s:1279   .text.HAL_SPI_Transmit:0000000000000000 $t
-     /tmp/ccmf0c9D.s:1285   .text.HAL_SPI_Transmit:0000000000000000 HAL_SPI_Transmit
-     /tmp/ccmf0c9D.s:1755   .text.HAL_SPI_TransmitReceive:0000000000000000 $t
-     /tmp/ccmf0c9D.s:1761   .text.HAL_SPI_TransmitReceive:0000000000000000 HAL_SPI_TransmitReceive
-     /tmp/ccmf0c9D.s:2485   .text.HAL_SPI_Receive:0000000000000000 $t
-     /tmp/ccmf0c9D.s:2491   .text.HAL_SPI_Receive:0000000000000000 HAL_SPI_Receive
-     /tmp/ccmf0c9D.s:2860   .text.HAL_SPI_Transmit_IT:0000000000000000 $t
-     /tmp/ccmf0c9D.s:2866   .text.HAL_SPI_Transmit_IT:0000000000000000 HAL_SPI_Transmit_IT
-     /tmp/ccmf0c9D.s:3049   .text.HAL_SPI_Transmit_IT:00000000000000a8 $d
-     /tmp/ccmf0c9D.s:5521   .text.SPI_TxISR_16BIT:0000000000000000 SPI_TxISR_16BIT
-     /tmp/ccmf0c9D.s:5459   .text.SPI_TxISR_8BIT:0000000000000000 SPI_TxISR_8BIT
-     /tmp/ccmf0c9D.s:3055   .text.HAL_SPI_TransmitReceive_IT:0000000000000000 $t
-     /tmp/ccmf0c9D.s:3061   .text.HAL_SPI_TransmitReceive_IT:0000000000000000 HAL_SPI_TransmitReceive_IT
-     /tmp/ccmf0c9D.s:3304   .text.HAL_SPI_TransmitReceive_IT:00000000000000e4 $d
-     /tmp/ccmf0c9D.s:6169   .text.SPI_2linesRxISR_16BIT:0000000000000000 SPI_2linesRxISR_16BIT
-     /tmp/ccmf0c9D.s:6096   .text.SPI_2linesTxISR_16BIT:0000000000000000 SPI_2linesTxISR_16BIT
-     /tmp/ccmf0c9D.s:5978   .text.SPI_2linesRxISR_8BIT:0000000000000000 SPI_2linesRxISR_8BIT
-     /tmp/ccmf0c9D.s:5872   .text.SPI_2linesTxISR_8BIT:0000000000000000 SPI_2linesTxISR_8BIT
-     /tmp/ccmf0c9D.s:3312   .text.HAL_SPI_Receive_IT:0000000000000000 $t
-     /tmp/ccmf0c9D.s:3318   .text.HAL_SPI_Receive_IT:0000000000000000 HAL_SPI_Receive_IT
-     /tmp/ccmf0c9D.s:3517   .text.HAL_SPI_Receive_IT:00000000000000f4 $d
-     /tmp/ccmf0c9D.s:5714   .text.SPI_RxISR_16BIT:0000000000000000 SPI_RxISR_16BIT
-     /tmp/ccmf0c9D.s:5652   .text.SPI_RxISR_8BIT:0000000000000000 SPI_RxISR_8BIT
-     /tmp/ccmf0c9D.s:3523   .text.HAL_SPI_Transmit_DMA:0000000000000000 $t
-     /tmp/ccmf0c9D.s:3529   .text.HAL_SPI_Transmit_DMA:0000000000000000 HAL_SPI_Transmit_DMA
-     /tmp/ccmf0c9D.s:3786   .text.HAL_SPI_Transmit_DMA:0000000000000130 $d
-     /tmp/ccmf0c9D.s:5194   .text.SPI_DMAHalfTransmitCplt:0000000000000000 SPI_DMAHalfTransmitCplt
-     /tmp/ccmf0c9D.s:6286   .text.SPI_DMATransmitCplt:0000000000000000 SPI_DMATransmitCplt
-     /tmp/ccmf0c9D.s:6242   .text.SPI_DMAError:0000000000000000 SPI_DMAError
-     /tmp/ccmf0c9D.s:3793   .text.HAL_SPI_TransmitReceive_DMA:0000000000000000 $t
-     /tmp/ccmf0c9D.s:3799   .text.HAL_SPI_TransmitReceive_DMA:0000000000000000 HAL_SPI_TransmitReceive_DMA
-ARM GAS  /tmp/ccmf0c9D.s 			page 255
+     /tmp/ccOpINPU.s:21     .text.SPI_WaitFlagStateUntilTimeout:0000000000000000 $t
+     /tmp/ccOpINPU.s:26     .text.SPI_WaitFlagStateUntilTimeout:0000000000000000 SPI_WaitFlagStateUntilTimeout
+     /tmp/ccOpINPU.s:203    .text.SPI_WaitFlagStateUntilTimeout:00000000000000c4 $d
+     /tmp/ccOpINPU.s:208    .text.SPI_WaitFifoStateUntilTimeout:0000000000000000 $t
+     /tmp/ccOpINPU.s:213    .text.SPI_WaitFifoStateUntilTimeout:0000000000000000 SPI_WaitFifoStateUntilTimeout
+     /tmp/ccOpINPU.s:421    .text.SPI_WaitFifoStateUntilTimeout:00000000000000ec $d
+     /tmp/ccOpINPU.s:426    .text.SPI_EndRxTxTransaction:0000000000000000 $t
+     /tmp/ccOpINPU.s:431    .text.SPI_EndRxTxTransaction:0000000000000000 SPI_EndRxTxTransaction
+     /tmp/ccOpINPU.s:528    .text.SPI_EndRxTransaction:0000000000000000 $t
+     /tmp/ccOpINPU.s:533    .text.SPI_EndRxTransaction:0000000000000000 SPI_EndRxTransaction
+     /tmp/ccOpINPU.s:656    .text.SPI_AbortRx_ISR:0000000000000000 $t
+     /tmp/ccOpINPU.s:661    .text.SPI_AbortRx_ISR:0000000000000000 SPI_AbortRx_ISR
+     /tmp/ccOpINPU.s:778    .text.SPI_AbortRx_ISR:0000000000000088 $d
+     /tmp/ccOpINPU.s:784    .text.SPI_AbortTx_ISR:0000000000000000 $t
+     /tmp/ccOpINPU.s:789    .text.SPI_AbortTx_ISR:0000000000000000 SPI_AbortTx_ISR
+     /tmp/ccOpINPU.s:976    .text.SPI_AbortTx_ISR:00000000000000e8 $d
+     /tmp/ccOpINPU.s:982    .text.HAL_SPI_MspInit:0000000000000000 $t
+     /tmp/ccOpINPU.s:988    .text.HAL_SPI_MspInit:0000000000000000 HAL_SPI_MspInit
+     /tmp/ccOpINPU.s:1003   .text.HAL_SPI_Init:0000000000000000 $t
+     /tmp/ccOpINPU.s:1009   .text.HAL_SPI_Init:0000000000000000 HAL_SPI_Init
+     /tmp/ccOpINPU.s:1193   .text.HAL_SPI_MspDeInit:0000000000000000 $t
+     /tmp/ccOpINPU.s:1199   .text.HAL_SPI_MspDeInit:0000000000000000 HAL_SPI_MspDeInit
+     /tmp/ccOpINPU.s:1214   .text.HAL_SPI_DeInit:0000000000000000 $t
+     /tmp/ccOpINPU.s:1220   .text.HAL_SPI_DeInit:0000000000000000 HAL_SPI_DeInit
+     /tmp/ccOpINPU.s:1279   .text.HAL_SPI_Transmit:0000000000000000 $t
+     /tmp/ccOpINPU.s:1285   .text.HAL_SPI_Transmit:0000000000000000 HAL_SPI_Transmit
+     /tmp/ccOpINPU.s:1755   .text.HAL_SPI_TransmitReceive:0000000000000000 $t
+     /tmp/ccOpINPU.s:1761   .text.HAL_SPI_TransmitReceive:0000000000000000 HAL_SPI_TransmitReceive
+     /tmp/ccOpINPU.s:2485   .text.HAL_SPI_Receive:0000000000000000 $t
+     /tmp/ccOpINPU.s:2491   .text.HAL_SPI_Receive:0000000000000000 HAL_SPI_Receive
+     /tmp/ccOpINPU.s:2860   .text.HAL_SPI_Transmit_IT:0000000000000000 $t
+     /tmp/ccOpINPU.s:2866   .text.HAL_SPI_Transmit_IT:0000000000000000 HAL_SPI_Transmit_IT
+     /tmp/ccOpINPU.s:3049   .text.HAL_SPI_Transmit_IT:00000000000000a8 $d
+     /tmp/ccOpINPU.s:5521   .text.SPI_TxISR_16BIT:0000000000000000 SPI_TxISR_16BIT
+     /tmp/ccOpINPU.s:5459   .text.SPI_TxISR_8BIT:0000000000000000 SPI_TxISR_8BIT
+     /tmp/ccOpINPU.s:3055   .text.HAL_SPI_TransmitReceive_IT:0000000000000000 $t
+     /tmp/ccOpINPU.s:3061   .text.HAL_SPI_TransmitReceive_IT:0000000000000000 HAL_SPI_TransmitReceive_IT
+     /tmp/ccOpINPU.s:3304   .text.HAL_SPI_TransmitReceive_IT:00000000000000e4 $d
+     /tmp/ccOpINPU.s:6169   .text.SPI_2linesRxISR_16BIT:0000000000000000 SPI_2linesRxISR_16BIT
+     /tmp/ccOpINPU.s:6096   .text.SPI_2linesTxISR_16BIT:0000000000000000 SPI_2linesTxISR_16BIT
+     /tmp/ccOpINPU.s:5978   .text.SPI_2linesRxISR_8BIT:0000000000000000 SPI_2linesRxISR_8BIT
+     /tmp/ccOpINPU.s:5872   .text.SPI_2linesTxISR_8BIT:0000000000000000 SPI_2linesTxISR_8BIT
+     /tmp/ccOpINPU.s:3312   .text.HAL_SPI_Receive_IT:0000000000000000 $t
+     /tmp/ccOpINPU.s:3318   .text.HAL_SPI_Receive_IT:0000000000000000 HAL_SPI_Receive_IT
+     /tmp/ccOpINPU.s:3517   .text.HAL_SPI_Receive_IT:00000000000000f4 $d
+     /tmp/ccOpINPU.s:5714   .text.SPI_RxISR_16BIT:0000000000000000 SPI_RxISR_16BIT
+     /tmp/ccOpINPU.s:5652   .text.SPI_RxISR_8BIT:0000000000000000 SPI_RxISR_8BIT
+     /tmp/ccOpINPU.s:3523   .text.HAL_SPI_Transmit_DMA:0000000000000000 $t
+     /tmp/ccOpINPU.s:3529   .text.HAL_SPI_Transmit_DMA:0000000000000000 HAL_SPI_Transmit_DMA
+     /tmp/ccOpINPU.s:3786   .text.HAL_SPI_Transmit_DMA:0000000000000130 $d
+     /tmp/ccOpINPU.s:5194   .text.SPI_DMAHalfTransmitCplt:0000000000000000 SPI_DMAHalfTransmitCplt
+     /tmp/ccOpINPU.s:6286   .text.SPI_DMATransmitCplt:0000000000000000 SPI_DMATransmitCplt
+     /tmp/ccOpINPU.s:6242   .text.SPI_DMAError:0000000000000000 SPI_DMAError
+     /tmp/ccOpINPU.s:3793   .text.HAL_SPI_TransmitReceive_DMA:0000000000000000 $t
+     /tmp/ccOpINPU.s:3799   .text.HAL_SPI_TransmitReceive_DMA:0000000000000000 HAL_SPI_TransmitReceive_DMA
+ARM GAS  /tmp/ccOpINPU.s 			page 255
 
 
-     /tmp/ccmf0c9D.s:4239   .text.HAL_SPI_TransmitReceive_DMA:0000000000000204 $d
-     /tmp/ccmf0c9D.s:5300   .text.SPI_DMAHalfTransmitReceiveCplt:0000000000000000 SPI_DMAHalfTransmitReceiveCplt
-     /tmp/ccmf0c9D.s:6530   .text.SPI_DMATransmitReceiveCplt:0000000000000000 SPI_DMATransmitReceiveCplt
-     /tmp/ccmf0c9D.s:5247   .text.SPI_DMAHalfReceiveCplt:0000000000000000 SPI_DMAHalfReceiveCplt
-     /tmp/ccmf0c9D.s:6413   .text.SPI_DMAReceiveCplt:0000000000000000 SPI_DMAReceiveCplt
-     /tmp/ccmf0c9D.s:4248   .text.HAL_SPI_Receive_DMA:0000000000000000 $t
-     /tmp/ccmf0c9D.s:4254   .text.HAL_SPI_Receive_DMA:0000000000000000 HAL_SPI_Receive_DMA
-     /tmp/ccmf0c9D.s:4549   .text.HAL_SPI_Receive_DMA:0000000000000174 $d
-     /tmp/ccmf0c9D.s:4556   .text.HAL_SPI_Abort:0000000000000000 $t
-     /tmp/ccmf0c9D.s:4562   .text.HAL_SPI_Abort:0000000000000000 HAL_SPI_Abort
-     /tmp/ccmf0c9D.s:4906   .text.HAL_SPI_Abort:0000000000000180 $d
-     /tmp/ccmf0c9D.s:4914   .text.HAL_SPI_DMAPause:0000000000000000 $t
-     /tmp/ccmf0c9D.s:4920   .text.HAL_SPI_DMAPause:0000000000000000 HAL_SPI_DMAPause
-     /tmp/ccmf0c9D.s:4964   .text.HAL_SPI_DMAResume:0000000000000000 $t
-     /tmp/ccmf0c9D.s:4970   .text.HAL_SPI_DMAResume:0000000000000000 HAL_SPI_DMAResume
-     /tmp/ccmf0c9D.s:5014   .text.HAL_SPI_DMAStop:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5020   .text.HAL_SPI_DMAStop:0000000000000000 HAL_SPI_DMAStop
-     /tmp/ccmf0c9D.s:5105   .text.HAL_SPI_TxCpltCallback:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5111   .text.HAL_SPI_TxCpltCallback:0000000000000000 HAL_SPI_TxCpltCallback
-     /tmp/ccmf0c9D.s:5126   .text.HAL_SPI_RxCpltCallback:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5132   .text.HAL_SPI_RxCpltCallback:0000000000000000 HAL_SPI_RxCpltCallback
-     /tmp/ccmf0c9D.s:5147   .text.HAL_SPI_TxRxCpltCallback:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5153   .text.HAL_SPI_TxRxCpltCallback:0000000000000000 HAL_SPI_TxRxCpltCallback
-     /tmp/ccmf0c9D.s:5168   .text.HAL_SPI_TxHalfCpltCallback:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5174   .text.HAL_SPI_TxHalfCpltCallback:0000000000000000 HAL_SPI_TxHalfCpltCallback
-     /tmp/ccmf0c9D.s:5189   .text.SPI_DMAHalfTransmitCplt:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5221   .text.HAL_SPI_RxHalfCpltCallback:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5227   .text.HAL_SPI_RxHalfCpltCallback:0000000000000000 HAL_SPI_RxHalfCpltCallback
-     /tmp/ccmf0c9D.s:5242   .text.SPI_DMAHalfReceiveCplt:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5274   .text.HAL_SPI_TxRxHalfCpltCallback:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5280   .text.HAL_SPI_TxRxHalfCpltCallback:0000000000000000 HAL_SPI_TxRxHalfCpltCallback
-     /tmp/ccmf0c9D.s:5295   .text.SPI_DMAHalfTransmitReceiveCplt:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5327   .text.HAL_SPI_ErrorCallback:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5333   .text.HAL_SPI_ErrorCallback:0000000000000000 HAL_SPI_ErrorCallback
-     /tmp/ccmf0c9D.s:5348   .text.SPI_CloseTx_ISR:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5353   .text.SPI_CloseTx_ISR:0000000000000000 SPI_CloseTx_ISR
-     /tmp/ccmf0c9D.s:5454   .text.SPI_TxISR_8BIT:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5516   .text.SPI_TxISR_16BIT:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5578   .text.SPI_CloseRx_ISR:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5583   .text.SPI_CloseRx_ISR:0000000000000000 SPI_CloseRx_ISR
-     /tmp/ccmf0c9D.s:5647   .text.SPI_RxISR_8BIT:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5709   .text.SPI_RxISR_16BIT:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5771   .text.SPI_CloseRxTx_ISR:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5776   .text.SPI_CloseRxTx_ISR:0000000000000000 SPI_CloseRxTx_ISR
-     /tmp/ccmf0c9D.s:5867   .text.SPI_2linesTxISR_8BIT:0000000000000000 $t
-     /tmp/ccmf0c9D.s:5973   .text.SPI_2linesRxISR_8BIT:0000000000000000 $t
-     /tmp/ccmf0c9D.s:6091   .text.SPI_2linesTxISR_16BIT:0000000000000000 $t
-     /tmp/ccmf0c9D.s:6164   .text.SPI_2linesRxISR_16BIT:0000000000000000 $t
-     /tmp/ccmf0c9D.s:6237   .text.SPI_DMAError:0000000000000000 $t
-     /tmp/ccmf0c9D.s:6281   .text.SPI_DMATransmitCplt:0000000000000000 $t
-     /tmp/ccmf0c9D.s:6408   .text.SPI_DMAReceiveCplt:0000000000000000 $t
-     /tmp/ccmf0c9D.s:6525   .text.SPI_DMATransmitReceiveCplt:0000000000000000 $t
-     /tmp/ccmf0c9D.s:6625   .text.HAL_SPI_IRQHandler:0000000000000000 $t
-     /tmp/ccmf0c9D.s:6631   .text.HAL_SPI_IRQHandler:0000000000000000 HAL_SPI_IRQHandler
-     /tmp/ccmf0c9D.s:6896   .text.HAL_SPI_IRQHandler:0000000000000114 $d
-     /tmp/ccmf0c9D.s:6906   .text.SPI_DMAAbortOnError:0000000000000000 SPI_DMAAbortOnError
-     /tmp/ccmf0c9D.s:6901   .text.SPI_DMAAbortOnError:0000000000000000 $t
-ARM GAS  /tmp/ccmf0c9D.s 			page 256
+     /tmp/ccOpINPU.s:4239   .text.HAL_SPI_TransmitReceive_DMA:0000000000000204 $d
+     /tmp/ccOpINPU.s:5300   .text.SPI_DMAHalfTransmitReceiveCplt:0000000000000000 SPI_DMAHalfTransmitReceiveCplt
+     /tmp/ccOpINPU.s:6530   .text.SPI_DMATransmitReceiveCplt:0000000000000000 SPI_DMATransmitReceiveCplt
+     /tmp/ccOpINPU.s:5247   .text.SPI_DMAHalfReceiveCplt:0000000000000000 SPI_DMAHalfReceiveCplt
+     /tmp/ccOpINPU.s:6413   .text.SPI_DMAReceiveCplt:0000000000000000 SPI_DMAReceiveCplt
+     /tmp/ccOpINPU.s:4248   .text.HAL_SPI_Receive_DMA:0000000000000000 $t
+     /tmp/ccOpINPU.s:4254   .text.HAL_SPI_Receive_DMA:0000000000000000 HAL_SPI_Receive_DMA
+     /tmp/ccOpINPU.s:4549   .text.HAL_SPI_Receive_DMA:0000000000000174 $d
+     /tmp/ccOpINPU.s:4556   .text.HAL_SPI_Abort:0000000000000000 $t
+     /tmp/ccOpINPU.s:4562   .text.HAL_SPI_Abort:0000000000000000 HAL_SPI_Abort
+     /tmp/ccOpINPU.s:4906   .text.HAL_SPI_Abort:0000000000000180 $d
+     /tmp/ccOpINPU.s:4914   .text.HAL_SPI_DMAPause:0000000000000000 $t
+     /tmp/ccOpINPU.s:4920   .text.HAL_SPI_DMAPause:0000000000000000 HAL_SPI_DMAPause
+     /tmp/ccOpINPU.s:4964   .text.HAL_SPI_DMAResume:0000000000000000 $t
+     /tmp/ccOpINPU.s:4970   .text.HAL_SPI_DMAResume:0000000000000000 HAL_SPI_DMAResume
+     /tmp/ccOpINPU.s:5014   .text.HAL_SPI_DMAStop:0000000000000000 $t
+     /tmp/ccOpINPU.s:5020   .text.HAL_SPI_DMAStop:0000000000000000 HAL_SPI_DMAStop
+     /tmp/ccOpINPU.s:5105   .text.HAL_SPI_TxCpltCallback:0000000000000000 $t
+     /tmp/ccOpINPU.s:5111   .text.HAL_SPI_TxCpltCallback:0000000000000000 HAL_SPI_TxCpltCallback
+     /tmp/ccOpINPU.s:5126   .text.HAL_SPI_RxCpltCallback:0000000000000000 $t
+     /tmp/ccOpINPU.s:5132   .text.HAL_SPI_RxCpltCallback:0000000000000000 HAL_SPI_RxCpltCallback
+     /tmp/ccOpINPU.s:5147   .text.HAL_SPI_TxRxCpltCallback:0000000000000000 $t
+     /tmp/ccOpINPU.s:5153   .text.HAL_SPI_TxRxCpltCallback:0000000000000000 HAL_SPI_TxRxCpltCallback
+     /tmp/ccOpINPU.s:5168   .text.HAL_SPI_TxHalfCpltCallback:0000000000000000 $t
+     /tmp/ccOpINPU.s:5174   .text.HAL_SPI_TxHalfCpltCallback:0000000000000000 HAL_SPI_TxHalfCpltCallback
+     /tmp/ccOpINPU.s:5189   .text.SPI_DMAHalfTransmitCplt:0000000000000000 $t
+     /tmp/ccOpINPU.s:5221   .text.HAL_SPI_RxHalfCpltCallback:0000000000000000 $t
+     /tmp/ccOpINPU.s:5227   .text.HAL_SPI_RxHalfCpltCallback:0000000000000000 HAL_SPI_RxHalfCpltCallback
+     /tmp/ccOpINPU.s:5242   .text.SPI_DMAHalfReceiveCplt:0000000000000000 $t
+     /tmp/ccOpINPU.s:5274   .text.HAL_SPI_TxRxHalfCpltCallback:0000000000000000 $t
+     /tmp/ccOpINPU.s:5280   .text.HAL_SPI_TxRxHalfCpltCallback:0000000000000000 HAL_SPI_TxRxHalfCpltCallback
+     /tmp/ccOpINPU.s:5295   .text.SPI_DMAHalfTransmitReceiveCplt:0000000000000000 $t
+     /tmp/ccOpINPU.s:5327   .text.HAL_SPI_ErrorCallback:0000000000000000 $t
+     /tmp/ccOpINPU.s:5333   .text.HAL_SPI_ErrorCallback:0000000000000000 HAL_SPI_ErrorCallback
+     /tmp/ccOpINPU.s:5348   .text.SPI_CloseTx_ISR:0000000000000000 $t
+     /tmp/ccOpINPU.s:5353   .text.SPI_CloseTx_ISR:0000000000000000 SPI_CloseTx_ISR
+     /tmp/ccOpINPU.s:5454   .text.SPI_TxISR_8BIT:0000000000000000 $t
+     /tmp/ccOpINPU.s:5516   .text.SPI_TxISR_16BIT:0000000000000000 $t
+     /tmp/ccOpINPU.s:5578   .text.SPI_CloseRx_ISR:0000000000000000 $t
+     /tmp/ccOpINPU.s:5583   .text.SPI_CloseRx_ISR:0000000000000000 SPI_CloseRx_ISR
+     /tmp/ccOpINPU.s:5647   .text.SPI_RxISR_8BIT:0000000000000000 $t
+     /tmp/ccOpINPU.s:5709   .text.SPI_RxISR_16BIT:0000000000000000 $t
+     /tmp/ccOpINPU.s:5771   .text.SPI_CloseRxTx_ISR:0000000000000000 $t
+     /tmp/ccOpINPU.s:5776   .text.SPI_CloseRxTx_ISR:0000000000000000 SPI_CloseRxTx_ISR
+     /tmp/ccOpINPU.s:5867   .text.SPI_2linesTxISR_8BIT:0000000000000000 $t
+     /tmp/ccOpINPU.s:5973   .text.SPI_2linesRxISR_8BIT:0000000000000000 $t
+     /tmp/ccOpINPU.s:6091   .text.SPI_2linesTxISR_16BIT:0000000000000000 $t
+     /tmp/ccOpINPU.s:6164   .text.SPI_2linesRxISR_16BIT:0000000000000000 $t
+     /tmp/ccOpINPU.s:6237   .text.SPI_DMAError:0000000000000000 $t
+     /tmp/ccOpINPU.s:6281   .text.SPI_DMATransmitCplt:0000000000000000 $t
+     /tmp/ccOpINPU.s:6408   .text.SPI_DMAReceiveCplt:0000000000000000 $t
+     /tmp/ccOpINPU.s:6525   .text.SPI_DMATransmitReceiveCplt:0000000000000000 $t
+     /tmp/ccOpINPU.s:6625   .text.HAL_SPI_IRQHandler:0000000000000000 $t
+     /tmp/ccOpINPU.s:6631   .text.HAL_SPI_IRQHandler:0000000000000000 HAL_SPI_IRQHandler
+     /tmp/ccOpINPU.s:6896   .text.HAL_SPI_IRQHandler:0000000000000114 $d
+     /tmp/ccOpINPU.s:6906   .text.SPI_DMAAbortOnError:0000000000000000 SPI_DMAAbortOnError
+     /tmp/ccOpINPU.s:6901   .text.SPI_DMAAbortOnError:0000000000000000 $t
+ARM GAS  /tmp/ccOpINPU.s 			page 256
 
 
-     /tmp/ccmf0c9D.s:6939   .text.HAL_SPI_AbortCpltCallback:0000000000000000 $t
-     /tmp/ccmf0c9D.s:6945   .text.HAL_SPI_AbortCpltCallback:0000000000000000 HAL_SPI_AbortCpltCallback
-     /tmp/ccmf0c9D.s:6960   .text.HAL_SPI_Abort_IT:0000000000000000 $t
-     /tmp/ccmf0c9D.s:6966   .text.HAL_SPI_Abort_IT:0000000000000000 HAL_SPI_Abort_IT
-     /tmp/ccmf0c9D.s:7303   .text.HAL_SPI_Abort_IT:0000000000000148 $d
-     /tmp/ccmf0c9D.s:7473   .text.SPI_DMATxAbortCallback:0000000000000000 SPI_DMATxAbortCallback
-     /tmp/ccmf0c9D.s:7318   .text.SPI_DMARxAbortCallback:0000000000000000 SPI_DMARxAbortCallback
-     /tmp/ccmf0c9D.s:7313   .text.SPI_DMARxAbortCallback:0000000000000000 $t
-     /tmp/ccmf0c9D.s:7468   .text.SPI_DMATxAbortCallback:0000000000000000 $t
-     /tmp/ccmf0c9D.s:7620   .text.HAL_SPI_GetState:0000000000000000 $t
-     /tmp/ccmf0c9D.s:7626   .text.HAL_SPI_GetState:0000000000000000 HAL_SPI_GetState
-     /tmp/ccmf0c9D.s:7644   .text.HAL_SPI_GetError:0000000000000000 $t
-     /tmp/ccmf0c9D.s:7650   .text.HAL_SPI_GetError:0000000000000000 HAL_SPI_GetError
+     /tmp/ccOpINPU.s:6939   .text.HAL_SPI_AbortCpltCallback:0000000000000000 $t
+     /tmp/ccOpINPU.s:6945   .text.HAL_SPI_AbortCpltCallback:0000000000000000 HAL_SPI_AbortCpltCallback
+     /tmp/ccOpINPU.s:6960   .text.HAL_SPI_Abort_IT:0000000000000000 $t
+     /tmp/ccOpINPU.s:6966   .text.HAL_SPI_Abort_IT:0000000000000000 HAL_SPI_Abort_IT
+     /tmp/ccOpINPU.s:7303   .text.HAL_SPI_Abort_IT:0000000000000148 $d
+     /tmp/ccOpINPU.s:7473   .text.SPI_DMATxAbortCallback:0000000000000000 SPI_DMATxAbortCallback
+     /tmp/ccOpINPU.s:7318   .text.SPI_DMARxAbortCallback:0000000000000000 SPI_DMARxAbortCallback
+     /tmp/ccOpINPU.s:7313   .text.SPI_DMARxAbortCallback:0000000000000000 $t
+     /tmp/ccOpINPU.s:7468   .text.SPI_DMATxAbortCallback:0000000000000000 $t
+     /tmp/ccOpINPU.s:7620   .text.HAL_SPI_GetState:0000000000000000 $t
+     /tmp/ccOpINPU.s:7626   .text.HAL_SPI_GetState:0000000000000000 HAL_SPI_GetState
+     /tmp/ccOpINPU.s:7644   .text.HAL_SPI_GetError:0000000000000000 $t
+     /tmp/ccOpINPU.s:7650   .text.HAL_SPI_GetError:0000000000000000 HAL_SPI_GetError
 
 UNDEFINED SYMBOLS
 HAL_GetTick

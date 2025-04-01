@@ -54,7 +54,8 @@
  FreeRTOS-Kernel/include/mpu_wrappers.h FreeRTOS-Kernel/include/task.h \
  FreeRTOS-Kernel/include/list.h FreeRTOS-Kernel/include/queue.h \
  FreeRTOS-Kernel/include/task.h FreeRTOS-Kernel/include/timers.h \
- FreeRTOS-Kernel/include/semphr.h FreeRTOS-Kernel/include/queue.h
+ FreeRTOS-Kernel/include/semphr.h FreeRTOS-Kernel/include/queue.h \
+ common/Inc/queue_ex.h
 bsp/Inc/CAN.h:
 common/Inc/stm32xx_hal.h:
 stm/stm32l4xx/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:
@@ -118,3 +119,4 @@ FreeRTOS-Kernel/include/task.h:
 FreeRTOS-Kernel/include/timers.h:
 FreeRTOS-Kernel/include/semphr.h:
 FreeRTOS-Kernel/include/queue.h:
+common/Inc/queue_ex.h:

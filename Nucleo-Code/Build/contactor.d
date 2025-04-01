@@ -1,10 +1,6 @@
 /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/Build/contactor.o: \
  /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.c \
- /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.h \
- stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
- common/Inc/stm32l4xx_hal_conf.h \
- stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
- stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h \
+ common/Inc/stm32xx_hal.h \
  stm/stm32l4xx/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h \
  stm/stm32l4xx/CMSIS/Device/ST/STM32L4xx/Include/stm32l432xx.h \
  stm/stm32l4xx/CMSIS/Include/core_cm4.h \
@@ -13,6 +9,10 @@
  stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h \
  stm/stm32l4xx/CMSIS/Include/mpu_armv7.h \
  stm/stm32l4xx/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h \
+ stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
+ common/Inc/stm32l4xx_hal_conf.h \
+ stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
+ stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h \
  stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
  stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h \
  stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h \
@@ -47,20 +47,18 @@
  stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_usart.h \
  stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_usart_ex.h \
  stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_wwdg.h \
- common/Inc/stm32xx_hal.h common/Inc/stm32x4xx_hal_init.h \
- FreeRTOS-Kernel/include/FreeRTOS.h common/Inc/FreeRTOSConfig.h \
- FreeRTOS-Kernel/include/projdefs.h FreeRTOS-Kernel/include/portable.h \
+ common/Inc/stm32x4xx_hal_init.h FreeRTOS-Kernel/include/FreeRTOS.h \
+ common/Inc/FreeRTOSConfig.h FreeRTOS-Kernel/include/projdefs.h \
+ FreeRTOS-Kernel/include/portable.h \
  FreeRTOS-Kernel/include/deprecated_definitions.h \
  FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h \
  FreeRTOS-Kernel/include/mpu_wrappers.h FreeRTOS-Kernel/include/task.h \
  FreeRTOS-Kernel/include/list.h FreeRTOS-Kernel/include/queue.h \
  FreeRTOS-Kernel/include/task.h FreeRTOS-Kernel/include/timers.h \
- FreeRTOS-Kernel/include/semphr.h FreeRTOS-Kernel/include/queue.h
-/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.h:
-stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
-common/Inc/stm32l4xx_hal_conf.h:
-stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:
-stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:
+ FreeRTOS-Kernel/include/semphr.h FreeRTOS-Kernel/include/queue.h \
+ /home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.h \
+ bsp/Inc/CAN.h
+common/Inc/stm32xx_hal.h:
 stm/stm32l4xx/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:
 stm/stm32l4xx/CMSIS/Device/ST/STM32L4xx/Include/stm32l432xx.h:
 stm/stm32l4xx/CMSIS/Include/core_cm4.h:
@@ -69,6 +67,10 @@ stm/stm32l4xx/CMSIS/Include/cmsis_compiler.h:
 stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h:
 stm/stm32l4xx/CMSIS/Include/mpu_armv7.h:
 stm/stm32l4xx/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h:
+stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
+common/Inc/stm32l4xx_hal_conf.h:
+stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:
+stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:
 stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h:
 stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h:
@@ -103,7 +105,6 @@ stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
 stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_usart.h:
 stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_usart_ex.h:
 stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_wwdg.h:
-common/Inc/stm32xx_hal.h:
 common/Inc/stm32x4xx_hal_init.h:
 FreeRTOS-Kernel/include/FreeRTOS.h:
 common/Inc/FreeRTOSConfig.h:
@@ -119,3 +120,5 @@ FreeRTOS-Kernel/include/task.h:
 FreeRTOS-Kernel/include/timers.h:
 FreeRTOS-Kernel/include/semphr.h:
 FreeRTOS-Kernel/include/queue.h:
+/home/tony/Desktop/Active-Precharge-Board/Nucleo-Code/tests/contactor.h:
+bsp/Inc/CAN.h:

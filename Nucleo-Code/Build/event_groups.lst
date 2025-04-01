@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccMPlAtg.s 			page 1
+ARM GAS  /tmp/ccPwwIpz.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
   28:FreeRTOS-Kernel/event_groups.c **** 
   29:FreeRTOS-Kernel/event_groups.c **** /* Standard includes. */
   30:FreeRTOS-Kernel/event_groups.c **** #include <stdlib.h>
-ARM GAS  /tmp/ccMPlAtg.s 			page 2
+ARM GAS  /tmp/ccPwwIpz.s 			page 2
 
 
   31:FreeRTOS-Kernel/event_groups.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
   85:FreeRTOS-Kernel/event_groups.c **** 
   86:FreeRTOS-Kernel/event_groups.c ****         EventGroupHandle_t xEventGroupCreateStatic( StaticEventGroup_t * pxEventGroupBuffer )
   87:FreeRTOS-Kernel/event_groups.c ****         {
-ARM GAS  /tmp/ccMPlAtg.s 			page 3
+ARM GAS  /tmp/ccPwwIpz.s 			page 3
 
 
   88:FreeRTOS-Kernel/event_groups.c ****             EventGroup_t * pxEventBits;
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  142:FreeRTOS-Kernel/event_groups.c **** 
  143:FreeRTOS-Kernel/event_groups.c ****     #if ( configSUPPORT_DYNAMIC_ALLOCATION == 1 )
  144:FreeRTOS-Kernel/event_groups.c **** 
-ARM GAS  /tmp/ccMPlAtg.s 			page 4
+ARM GAS  /tmp/ccPwwIpz.s 			page 4
 
 
  145:FreeRTOS-Kernel/event_groups.c ****         EventGroupHandle_t xEventGroupCreate( void )
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  199:FreeRTOS-Kernel/event_groups.c ****         #if ( ( INCLUDE_xTaskGetSchedulerState == 1 ) || ( configUSE_TIMERS == 1 ) )
  200:FreeRTOS-Kernel/event_groups.c ****         {
  201:FreeRTOS-Kernel/event_groups.c ****             configASSERT( !( ( xTaskGetSchedulerState() == taskSCHEDULER_SUSPENDED ) && ( xTicksToW
-ARM GAS  /tmp/ccMPlAtg.s 			page 5
+ARM GAS  /tmp/ccPwwIpz.s 			page 5
 
 
  202:FreeRTOS-Kernel/event_groups.c ****         }
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  256:FreeRTOS-Kernel/event_groups.c ****             else
  257:FreeRTOS-Kernel/event_groups.c ****             {
  258:FreeRTOS-Kernel/event_groups.c ****                 mtCOVERAGE_TEST_MARKER();
-ARM GAS  /tmp/ccMPlAtg.s 			page 6
+ARM GAS  /tmp/ccPwwIpz.s 			page 6
 
 
  259:FreeRTOS-Kernel/event_groups.c ****             }
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  313:FreeRTOS-Kernel/event_groups.c ****                                      const EventBits_t uxBitsToWaitFor,
  314:FreeRTOS-Kernel/event_groups.c ****                                      const BaseType_t xClearOnExit,
  315:FreeRTOS-Kernel/event_groups.c ****                                      const BaseType_t xWaitForAllBits,
-ARM GAS  /tmp/ccMPlAtg.s 			page 7
+ARM GAS  /tmp/ccPwwIpz.s 			page 7
 
 
  316:FreeRTOS-Kernel/event_groups.c ****                                      TickType_t xTicksToWait )
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  370:FreeRTOS-Kernel/event_groups.c ****                  * set.  uxControlBits are used to remember the specified behaviour of
  371:FreeRTOS-Kernel/event_groups.c ****                  * this call to xEventGroupWaitBits() - for use when the event bits
  372:FreeRTOS-Kernel/event_groups.c ****                  * unblock the task. */
-ARM GAS  /tmp/ccMPlAtg.s 			page 8
+ARM GAS  /tmp/ccPwwIpz.s 			page 8
 
 
  373:FreeRTOS-Kernel/event_groups.c ****                 if( xClearOnExit != pdFALSE )
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  427:FreeRTOS-Kernel/event_groups.c ****                     /* The task timed out, just return the current event bit value. */
  428:FreeRTOS-Kernel/event_groups.c ****                     uxReturn = pxEventBits->uxEventBits;
  429:FreeRTOS-Kernel/event_groups.c **** 
-ARM GAS  /tmp/ccMPlAtg.s 			page 9
+ARM GAS  /tmp/ccPwwIpz.s 			page 9
 
 
  430:FreeRTOS-Kernel/event_groups.c ****                     /* It is possible that the event bits were updated between this
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  484:FreeRTOS-Kernel/event_groups.c **** 
  485:FreeRTOS-Kernel/event_groups.c ****         taskENTER_CRITICAL();
  486:FreeRTOS-Kernel/event_groups.c ****         {
-ARM GAS  /tmp/ccMPlAtg.s 			page 10
+ARM GAS  /tmp/ccPwwIpz.s 			page 10
 
 
  487:FreeRTOS-Kernel/event_groups.c ****             traceEVENT_GROUP_CLEAR_BITS( xEventGroup, uxBitsToClear );
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  541:FreeRTOS-Kernel/event_groups.c ****         traceRETURN_xEventGroupGetBitsFromISR( uxReturn );
  542:FreeRTOS-Kernel/event_groups.c **** 
  543:FreeRTOS-Kernel/event_groups.c ****         return uxReturn;
-ARM GAS  /tmp/ccMPlAtg.s 			page 11
+ARM GAS  /tmp/ccPwwIpz.s 			page 11
 
 
  544:FreeRTOS-Kernel/event_groups.c ****     }
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  598:FreeRTOS-Kernel/event_groups.c ****                 }
  599:FreeRTOS-Kernel/event_groups.c ****                 else if( ( uxBitsWaitedFor & pxEventBits->uxEventBits ) == uxBitsWaitedFor )
  600:FreeRTOS-Kernel/event_groups.c ****                 {
-ARM GAS  /tmp/ccMPlAtg.s 			page 12
+ARM GAS  /tmp/ccPwwIpz.s 			page 12
 
 
  601:FreeRTOS-Kernel/event_groups.c ****                     /* All bits are set. */
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  655:FreeRTOS-Kernel/event_groups.c **** 
  656:FreeRTOS-Kernel/event_groups.c ****         pxTasksWaitingForBits = &( pxEventBits->xTasksWaitingForBits );
  657:FreeRTOS-Kernel/event_groups.c **** 
-ARM GAS  /tmp/ccMPlAtg.s 			page 13
+ARM GAS  /tmp/ccPwwIpz.s 			page 13
 
 
  658:FreeRTOS-Kernel/event_groups.c ****         vTaskSuspendAll();
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  712:FreeRTOS-Kernel/event_groups.c ****                 if( pxEventBits->ucStaticallyAllocated == ( uint8_t ) pdTRUE )
  713:FreeRTOS-Kernel/event_groups.c ****                 {
  714:FreeRTOS-Kernel/event_groups.c ****                     /* MISRA Ref 11.3.1 [Misaligned access] */
-ARM GAS  /tmp/ccMPlAtg.s 			page 14
+ARM GAS  /tmp/ccPwwIpz.s 			page 14
 
 
  715:FreeRTOS-Kernel/event_groups.c ****                     /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  769:FreeRTOS-Kernel/event_groups.c ****         ( void ) xEventGroupClearBits( pvEventGroup, ( EventBits_t ) ulBitsToClear );
  770:FreeRTOS-Kernel/event_groups.c **** 
  771:FreeRTOS-Kernel/event_groups.c ****         traceRETURN_vEventGroupClearBitsCallback();
-ARM GAS  /tmp/ccMPlAtg.s 			page 15
+ARM GAS  /tmp/ccPwwIpz.s 			page 15
 
 
  772:FreeRTOS-Kernel/event_groups.c ****     }
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
   54 000c 03D0     		beq	.L5
  779:FreeRTOS-Kernel/event_groups.c **** 
   55              		.loc 1 779 20 view .LVU11
-ARM GAS  /tmp/ccMPlAtg.s 			page 16
+ARM GAS  /tmp/ccPwwIpz.s 			page 16
 
 
   56 000e 0020     		movs	r0, #0
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
   93:FreeRTOS-Kernel/event_groups.c **** 
   95              		.loc 1 93 13 view .LVU22
   96 0000 80B1     		cbz	r0, .L13
-ARM GAS  /tmp/ccMPlAtg.s 			page 17
+ARM GAS  /tmp/ccPwwIpz.s 			page 17
 
 
   87:FreeRTOS-Kernel/event_groups.c ****             EventGroup_t * pxEventBits;
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
   25:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****  * https://github.com/FreeRTOS
   26:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****  *
   27:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****  */
-ARM GAS  /tmp/ccMPlAtg.s 			page 18
+ARM GAS  /tmp/ccPwwIpz.s 			page 18
 
 
   28:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
   82:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** #define portTICK_PERIOD_MS    ( ( TickType_t ) 1000 / configTICK_RATE_HZ )
   83:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** #define portBYTE_ALIGNMENT    8
   84:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** #define portDONT_DISCARD      __attribute__( ( used ) )
-ARM GAS  /tmp/ccMPlAtg.s 			page 19
+ARM GAS  /tmp/ccPwwIpz.s 			page 19
 
 
   85:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** /*-----------------------------------------------------------*/
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  139:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     #define portSUPPRESS_TICKS_AND_SLEEP( xExpectedIdleTime )    vPortSuppressTicksAndSleep( xExpec
  140:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** #endif
  141:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** /*-----------------------------------------------------------*/
-ARM GAS  /tmp/ccMPlAtg.s 			page 20
+ARM GAS  /tmp/ccPwwIpz.s 			page 20
 
 
  142:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  196:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     /* Obtain the number of the currently executing interrupt. */
  197:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
  198:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
-ARM GAS  /tmp/ccMPlAtg.s 			page 21
+ARM GAS  /tmp/ccPwwIpz.s 			page 21
 
 
  199:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     if( ulCurrentInterrupt == 0 )
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  152              	.LBI45:
  213:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** {
  153              		.loc 2 213 30 view .LVU37
-ARM GAS  /tmp/ccMPlAtg.s 			page 22
+ARM GAS  /tmp/ccPwwIpz.s 			page 22
 
 
  154              	.LBB46:
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  196              		.loc 1 135 63 view .LVU51
  137:FreeRTOS-Kernel/event_groups.c ****         }
  197              		.loc 1 137 13 view .LVU52
-ARM GAS  /tmp/ccMPlAtg.s 			page 23
+ARM GAS  /tmp/ccPwwIpz.s 			page 23
 
 
  138:FreeRTOS-Kernel/event_groups.c **** 
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  327:FreeRTOS-Kernel/event_groups.c ****         configASSERT( ( uxBitsToWaitFor & eventEVENT_BITS_CONTROL_BYTES ) == 0 );
  244              		.loc 1 327 36 is_stmt 1 discriminator 2 view .LVU63
  328:FreeRTOS-Kernel/event_groups.c ****         configASSERT( uxBitsToWaitFor != 0 );
-ARM GAS  /tmp/ccMPlAtg.s 			page 24
+ARM GAS  /tmp/ccPwwIpz.s 			page 24
 
 
  245              		.loc 1 328 9 discriminator 2 view .LVU64
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  291              	@ 217 "FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h" 1
  292 0026 4FF05003 		   mov r3, #80                                              
  293 002a 83F31188 	   msr basepri, r3                                         
-ARM GAS  /tmp/ccMPlAtg.s 			page 25
+ARM GAS  /tmp/ccPwwIpz.s 			page 25
 
 
  294 002e BFF36F8F 	   isb                                                     
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  341              	.LBE53:
  342              	.LBE52:
  329:FreeRTOS-Kernel/event_groups.c ****         #if ( ( INCLUDE_xTaskGetSchedulerState == 1 ) || ( configUSE_TIMERS == 1 ) )
-ARM GAS  /tmp/ccMPlAtg.s 			page 26
+ARM GAS  /tmp/ccPwwIpz.s 			page 26
 
 
  343              		.loc 1 329 9 is_stmt 1 discriminator 3 view .LVU86
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  386              	.LBB56:
  338:FreeRTOS-Kernel/event_groups.c **** 
  387              		.loc 1 338 13 discriminator 8 view .LVU100
-ARM GAS  /tmp/ccMPlAtg.s 			page 27
+ARM GAS  /tmp/ccPwwIpz.s 			page 27
 
 
  338:FreeRTOS-Kernel/event_groups.c **** 
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  425 008e 93B1     		cbz	r3, .L14
  408:FreeRTOS-Kernel/event_groups.c ****             {
  426              		.loc 1 408 13 is_stmt 1 view .LVU118
-ARM GAS  /tmp/ccMPlAtg.s 			page 28
+ARM GAS  /tmp/ccPwwIpz.s 			page 28
 
 
  408:FreeRTOS-Kernel/event_groups.c ****             {
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  466              		.loc 1 461 9 is_stmt 1 view .LVU133
  464:FreeRTOS-Kernel/event_groups.c **** 
  467              		.loc 1 464 9 view .LVU134
-ARM GAS  /tmp/ccMPlAtg.s 			page 29
+ARM GAS  /tmp/ccPwwIpz.s 			page 29
 
 
  466:FreeRTOS-Kernel/event_groups.c **** 
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  506 00d0 381D     		adds	r0, r7, #4
  507              	.LVL39:
  394:FreeRTOS-Kernel/event_groups.c **** 
-ARM GAS  /tmp/ccMPlAtg.s 			page 30
+ARM GAS  /tmp/ccPwwIpz.s 			page 30
 
 
  508              		.loc 1 394 17 view .LVU151
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  434:FreeRTOS-Kernel/event_groups.c ****                         {
  549              		.loc 1 434 27 is_stmt 0 view .LVU165
  550 00fc 16B1     		cbz	r6, .L30
-ARM GAS  /tmp/ccMPlAtg.s 			page 31
+ARM GAS  /tmp/ccPwwIpz.s 			page 31
 
 
  436:FreeRTOS-Kernel/event_groups.c ****                         }
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  595 0004 0C46     		mov	r4, r1
  596 0006 0546     		mov	r5, r0
  482:FreeRTOS-Kernel/event_groups.c ****         configASSERT( ( uxBitsToClear & eventEVENT_BITS_CONTROL_BYTES ) == 0 );
-ARM GAS  /tmp/ccMPlAtg.s 			page 32
+ARM GAS  /tmp/ccPwwIpz.s 			page 32
 
 
  597              		.loc 1 482 36 is_stmt 1 discriminator 2 view .LVU178
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  642 0020 4FF05003 		   mov r3, #80                                              
  643 0024 83F31188 	   msr basepri, r3                                         
  644 0028 BFF36F8F 	   isb                                                     
-ARM GAS  /tmp/ccMPlAtg.s 			page 33
+ARM GAS  /tmp/ccPwwIpz.s 			page 33
 
 
  645 002c BFF34F8F 	   dsb                                                     
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  685              		.loc 1 501 5 is_stmt 0 discriminator 2 view .LVU205
  686 0042 3046     		mov	r0, r6
  687 0044 70BD     		pop	{r4, r5, r6, pc}
-ARM GAS  /tmp/ccMPlAtg.s 			page 34
+ARM GAS  /tmp/ccPwwIpz.s 			page 34
 
 
  501:FreeRTOS-Kernel/event_groups.c **** /*-----------------------------------------------------------*/
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  721 0004 4FF05002 	   mov r2, #80                                              
  722 0008 82F31188 	   msr basepri, r2                                         
  723 000c BFF36F8F 	   isb                                                     
-ARM GAS  /tmp/ccMPlAtg.s 			page 35
+ARM GAS  /tmp/ccPwwIpz.s 			page 35
 
 
  724 0010 BFF34F8F 	   dsb                                                     
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  755              		.loc 1 543 9 view .LVU225
  544:FreeRTOS-Kernel/event_groups.c **** /*-----------------------------------------------------------*/
  756              		.loc 1 544 5 is_stmt 0 view .LVU226
-ARM GAS  /tmp/ccMPlAtg.s 			page 36
+ARM GAS  /tmp/ccPwwIpz.s 			page 36
 
 
  757 001a 7047     		bx	lr
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  800 0008 B1F1807F 		cmp	r1, #16777216
  801 000c 11D3     		bcc	.L49
  563:FreeRTOS-Kernel/event_groups.c **** 
-ARM GAS  /tmp/ccMPlAtg.s 			page 37
+ARM GAS  /tmp/ccPwwIpz.s 			page 37
 
 
  802              		.loc 1 563 9 view .LVU240
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  846              	.L48:
  217:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     (
  847              		.loc 2 217 5 is_stmt 0 view .LVU251
-ARM GAS  /tmp/ccMPlAtg.s 			page 38
+ARM GAS  /tmp/ccPwwIpz.s 			page 38
 
 
  848              	.LBE70:
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  884 0046 2168     		ldr	r1, [r4]
  599:FreeRTOS-Kernel/event_groups.c ****                 {
  885              		.loc 1 599 24 view .LVU270
-ARM GAS  /tmp/ccMPlAtg.s 			page 39
+ARM GAS  /tmp/ccPwwIpz.s 			page 39
 
 
  886 0048 32EA0101 		bics	r1, r2, r1
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  923              		.loc 1 587 19 is_stmt 0 view .LVU287
  924 0068 13F0806F 		tst	r3, #67108864
  925 006c EBD1     		bne	.L52
-ARM GAS  /tmp/ccMPlAtg.s 			page 40
+ARM GAS  /tmp/ccPwwIpz.s 			page 40
 
 
  590:FreeRTOS-Kernel/event_groups.c ****                     {
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  963              	.LFE10:
  965              		.section	.text.xEventGroupSync,"ax",%progbits
  966              		.align	1
-ARM GAS  /tmp/ccMPlAtg.s 			page 41
+ARM GAS  /tmp/ccPwwIpz.s 			page 41
 
 
  967              		.global	xEventGroupSync
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  1009              		.loc 1 197 9 is_stmt 1 discriminator 1 view .LVU317
  197:FreeRTOS-Kernel/event_groups.c ****         configASSERT( uxBitsToWaitFor != 0 );
  1010              		.loc 1 197 9 discriminator 1 view .LVU318
-ARM GAS  /tmp/ccMPlAtg.s 			page 42
+ARM GAS  /tmp/ccPwwIpz.s 			page 42
 
 
  1011 0016 FEE7     		b	.L62
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  1055 0036 FEE7     		b	.L64
  1056              	.LVL85:
  1057              	.L63:
-ARM GAS  /tmp/ccMPlAtg.s 			page 43
+ARM GAS  /tmp/ccPwwIpz.s 			page 43
 
 
  198:FreeRTOS-Kernel/event_groups.c ****         #if ( ( INCLUDE_xTaskGetSchedulerState == 1 ) || ( configUSE_TIMERS == 1 ) )
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  1098              	.LVL89:
  209:FreeRTOS-Kernel/event_groups.c **** 
  1099              		.loc 1 209 13 is_stmt 1 discriminator 8 view .LVU343
-ARM GAS  /tmp/ccMPlAtg.s 			page 44
+ARM GAS  /tmp/ccPwwIpz.s 			page 44
 
 
  209:FreeRTOS-Kernel/event_groups.c **** 
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  1137              	@ 254 "FreeRTOS-Kernel/event_groups.c" 1
  1138 0084 BFF34F8F 		dsb
  1139              	@ 0 "" 2
-ARM GAS  /tmp/ccMPlAtg.s 			page 45
+ARM GAS  /tmp/ccPwwIpz.s 			page 45
 
 
  254:FreeRTOS-Kernel/event_groups.c ****             }
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  1177              		.loc 1 214 17 is_stmt 1 view .LVU377
  218:FreeRTOS-Kernel/event_groups.c **** 
  1178              		.loc 1 218 17 view .LVU378
-ARM GAS  /tmp/ccMPlAtg.s 			page 46
+ARM GAS  /tmp/ccPwwIpz.s 			page 46
 
 
  218:FreeRTOS-Kernel/event_groups.c **** 
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  1218              		.loc 1 287 17 view .LVU393
  1219 00ca FFF7FEFF 		bl	vPortExitCritical
  1220              	.LVL106:
-ARM GAS  /tmp/ccMPlAtg.s 			page 47
+ARM GAS  /tmp/ccPwwIpz.s 			page 47
 
 
  289:FreeRTOS-Kernel/event_groups.c ****             }
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  1264              	.LVL110:
  658:FreeRTOS-Kernel/event_groups.c ****         {
  1265              		.loc 1 658 9 discriminator 2 view .LVU407
-ARM GAS  /tmp/ccMPlAtg.s 			page 48
+ARM GAS  /tmp/ccPwwIpz.s 			page 48
 
 
  1266 0006 FFF7FEFF 		bl	vTaskSuspendAll
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  1308              	.LVL114:
  1309              		.thumb
  1310              		.syntax unified
-ARM GAS  /tmp/ccMPlAtg.s 			page 49
+ARM GAS  /tmp/ccPwwIpz.s 			page 49
 
 
  1311              	.L82:
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  1353              	.LVL117:
  693:FreeRTOS-Kernel/event_groups.c ****     }
  1354              		.loc 1 693 40 is_stmt 1 view .LVU432
-ARM GAS  /tmp/ccMPlAtg.s 			page 50
+ARM GAS  /tmp/ccPwwIpz.s 			page 50
 
 
  694:FreeRTOS-Kernel/event_groups.c **** /*-----------------------------------------------------------*/
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  739:FreeRTOS-Kernel/event_groups.c ****     #endif /* configSUPPORT_STATIC_ALLOCATION */
  1395              		.loc 1 739 9 discriminator 2 view .LVU449
  1396 0008 7047     		bx	lr
-ARM GAS  /tmp/ccMPlAtg.s 			page 51
+ARM GAS  /tmp/ccPwwIpz.s 			page 51
 
 
  1397              	.LVL121:
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  1440              	.LVL123:
  1441              		.thumb
  1442              		.syntax unified
-ARM GAS  /tmp/ccMPlAtg.s 			page 52
+ARM GAS  /tmp/ccPwwIpz.s 			page 52
 
 
  1443              	.L96:
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  1491              	vEventGroupClearBitsCallback:
  1492              	.LVL126:
  1493              	.LFB14:
-ARM GAS  /tmp/ccMPlAtg.s 			page 53
+ARM GAS  /tmp/ccPwwIpz.s 			page 53
 
 
  763:FreeRTOS-Kernel/event_groups.c ****         traceENTER_vEventGroupClearBitsCallback( pvEventGroup, ulBitsToClear );
@@ -3157,33 +3157,33 @@ ARM GAS  /tmp/ccMPlAtg.s 			page 1
  1521              		.file 7 "FreeRTOS-Kernel/include/list.h"
  1522              		.file 8 "FreeRTOS-Kernel/include/event_groups.h"
  1523              		.file 9 "FreeRTOS-Kernel/include/task.h"
-ARM GAS  /tmp/ccMPlAtg.s 			page 54
+ARM GAS  /tmp/ccPwwIpz.s 			page 54
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 event_groups.c
-     /tmp/ccMPlAtg.s:21     .text.prvTestWaitCondition:0000000000000000 $t
-     /tmp/ccMPlAtg.s:26     .text.prvTestWaitCondition:0000000000000000 prvTestWaitCondition
-     /tmp/ccMPlAtg.s:80     .text.xEventGroupCreateStatic:0000000000000000 $t
-     /tmp/ccMPlAtg.s:86     .text.xEventGroupCreateStatic:0000000000000000 xEventGroupCreateStatic
-     /tmp/ccMPlAtg.s:210    .text.xEventGroupWaitBits:0000000000000000 $t
-     /tmp/ccMPlAtg.s:216    .text.xEventGroupWaitBits:0000000000000000 xEventGroupWaitBits
-     /tmp/ccMPlAtg.s:569    .text.xEventGroupClearBits:0000000000000000 $t
-     /tmp/ccMPlAtg.s:575    .text.xEventGroupClearBits:0000000000000000 xEventGroupClearBits
-     /tmp/ccMPlAtg.s:693    .text.xEventGroupGetBitsFromISR:0000000000000000 $t
-     /tmp/ccMPlAtg.s:699    .text.xEventGroupGetBitsFromISR:0000000000000000 xEventGroupGetBitsFromISR
-     /tmp/ccMPlAtg.s:762    .text.xEventGroupSetBits:0000000000000000 $t
-     /tmp/ccMPlAtg.s:768    .text.xEventGroupSetBits:0000000000000000 xEventGroupSetBits
-     /tmp/ccMPlAtg.s:966    .text.xEventGroupSync:0000000000000000 $t
-     /tmp/ccMPlAtg.s:972    .text.xEventGroupSync:0000000000000000 xEventGroupSync
-     /tmp/ccMPlAtg.s:1237   .text.vEventGroupDelete:0000000000000000 $t
-     /tmp/ccMPlAtg.s:1243   .text.vEventGroupDelete:0000000000000000 vEventGroupDelete
-     /tmp/ccMPlAtg.s:1362   .text.xEventGroupGetStaticBuffer:0000000000000000 $t
-     /tmp/ccMPlAtg.s:1368   .text.xEventGroupGetStaticBuffer:0000000000000000 xEventGroupGetStaticBuffer
-     /tmp/ccMPlAtg.s:1454   .text.vEventGroupSetBitsCallback:0000000000000000 $t
-     /tmp/ccMPlAtg.s:1460   .text.vEventGroupSetBitsCallback:0000000000000000 vEventGroupSetBitsCallback
-     /tmp/ccMPlAtg.s:1485   .text.vEventGroupClearBitsCallback:0000000000000000 $t
-     /tmp/ccMPlAtg.s:1491   .text.vEventGroupClearBitsCallback:0000000000000000 vEventGroupClearBitsCallback
+     /tmp/ccPwwIpz.s:21     .text.prvTestWaitCondition:0000000000000000 $t
+     /tmp/ccPwwIpz.s:26     .text.prvTestWaitCondition:0000000000000000 prvTestWaitCondition
+     /tmp/ccPwwIpz.s:80     .text.xEventGroupCreateStatic:0000000000000000 $t
+     /tmp/ccPwwIpz.s:86     .text.xEventGroupCreateStatic:0000000000000000 xEventGroupCreateStatic
+     /tmp/ccPwwIpz.s:210    .text.xEventGroupWaitBits:0000000000000000 $t
+     /tmp/ccPwwIpz.s:216    .text.xEventGroupWaitBits:0000000000000000 xEventGroupWaitBits
+     /tmp/ccPwwIpz.s:569    .text.xEventGroupClearBits:0000000000000000 $t
+     /tmp/ccPwwIpz.s:575    .text.xEventGroupClearBits:0000000000000000 xEventGroupClearBits
+     /tmp/ccPwwIpz.s:693    .text.xEventGroupGetBitsFromISR:0000000000000000 $t
+     /tmp/ccPwwIpz.s:699    .text.xEventGroupGetBitsFromISR:0000000000000000 xEventGroupGetBitsFromISR
+     /tmp/ccPwwIpz.s:762    .text.xEventGroupSetBits:0000000000000000 $t
+     /tmp/ccPwwIpz.s:768    .text.xEventGroupSetBits:0000000000000000 xEventGroupSetBits
+     /tmp/ccPwwIpz.s:966    .text.xEventGroupSync:0000000000000000 $t
+     /tmp/ccPwwIpz.s:972    .text.xEventGroupSync:0000000000000000 xEventGroupSync
+     /tmp/ccPwwIpz.s:1237   .text.vEventGroupDelete:0000000000000000 $t
+     /tmp/ccPwwIpz.s:1243   .text.vEventGroupDelete:0000000000000000 vEventGroupDelete
+     /tmp/ccPwwIpz.s:1362   .text.xEventGroupGetStaticBuffer:0000000000000000 $t
+     /tmp/ccPwwIpz.s:1368   .text.xEventGroupGetStaticBuffer:0000000000000000 xEventGroupGetStaticBuffer
+     /tmp/ccPwwIpz.s:1454   .text.vEventGroupSetBitsCallback:0000000000000000 $t
+     /tmp/ccPwwIpz.s:1460   .text.vEventGroupSetBitsCallback:0000000000000000 vEventGroupSetBitsCallback
+     /tmp/ccPwwIpz.s:1485   .text.vEventGroupClearBitsCallback:0000000000000000 $t
+     /tmp/ccPwwIpz.s:1491   .text.vEventGroupClearBitsCallback:0000000000000000 vEventGroupClearBitsCallback
 
 UNDEFINED SYMBOLS
 vListInitialise

@@ -1,26 +1,136 @@
-#include "contactor.h"
-
 #include "stm32xx_hal.h"
+#include "contactor.h"
+#include "CAN.h"
+
+#define blinky 1
+// #define cantest 2
+// #define contactorcode 3
 
 #define m_enable_pin GPIO_PIN_0
 #define mpre_enable_pin GPIO_PIN_3
 #define apre_enable_pin GPIO_PIN_7
 #define m_sense_pin GPIO_PIN_1
 #define mpre_sense_pin GPIO_PIN_4
-#define apre_sense_pin GPIO_PIN_2
+#define apre_sense_pin GPIO_PIN_0 // B PLEASE REMEMBER
 #define mt_fault_pin GPIO_PIN_10
 #define ms_fault_pin GPIO_PIN_8
-#define at_fault_pin GPIO_PIN_3   //B PLEASE REMEMBER
+#define at_fault_pin GPIO_PIN_3 // B PLEASE REMEMBER
 #define as_fault_pin GPIO_PIN_9
-#define mpre_ready_pin GPIO_PIN_4 //B PLEASE REMEMBER
-#define apre_ready_pin GPIO_PIN_5 //B PLEASE REMEMBER
+#define mpre_ready_pin GPIO_PIN_4 // B PLEASE REMEMBER
+#define apre_ready_pin GPIO_PIN_5 // B PLEASE REMEMBER
+
+#define m_direct HAL_GPIO_ReadPin(GPIOA, m_enable_pin)
+
+#define m_pre_enable(state) HAL_GPIO_WritePin(GPIOA, mpre_enable_pin, state)
+#define a_pre_enable(state) HAL_GPIO_WritePin(GPIOA, apre_enable_pin, state)
+
+#define m_sense HAL_GPIO_ReadPin(GPIOA, m_sense_pin)
+#define m_pre_sense HAL_GPIO_ReadPin(GPIOA, mpre_sense_pin)
+#define a_pre_sense HAL_GPIO_ReadPin(GPIOA, apre_sense_pin)
+
+#define m_pre_ready HAL_GPIO_ReadPin(GPIOB, mpre_ready_pin)
+#define a_pre_ready HAL_GPIO_ReadPin(GPIOB, apre_ready_pin)
+
+#define mt_fault(state) HAL_GPIO_WritePin(GPIOA, mt_fault_pin, state)
+#define ms_fault(state) HAL_GPIO_WritePin(GPIOA, ms_fault_pin, state)
+#define at_fault(state) HAL_GPIO_WritePin(GPIOB, at_fault_pin, state)
+#define as_fault(state) HAL_GPIO_WritePin(GPIOA, as_fault_pin, state)
+
+ typedef enum {
+    OPEN,
+    CLOSED,
+    FAULT
+} State;
+
+typedef enum{
+  NO_FAULT,
+  MT_FAULT,
+  MS_FAULT,
+  AT_FAULT,
+  AS_FAULT
+} Fault;
+
+#define M_TIMEOUT 1000
+#define MPRE_TIMEOUT 1000
+#define APRE_TIMEOUT 1000
+
+
+static void error_handler(void)
+{
+  while (1)
+  {
+    ms_fault(1);
+    HAL_Delay(1000);
+    ms_fault(0);
+    HAL_Delay(1000);
+  }
+}
+
+// // CAN_HandleTypeDef hcan1;
+
+// // Private function prototypes -----------------------------------------------
+// void SystemClock_Config(void);
+// static void MX_GPIO_Init(void);
+// void StartDefaultTask(void const * argument);
+
+
+// /**
+//   * @brief System Clock Configuration
+//   * @retval None
+//   */
+// void SystemClock_Config(void)
+// {
+//   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+//   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+
+//   /** Configure the main internal regulator output voltage
+//   */
+//   if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1) != HAL_OK)
+//   {
+//     error_handler();
+//   }
+
+//   /** Initializes the RCC Oscillators according to the specified parameters
+//   * in the RCC_OscInitTypeDef structure.
+//   */
+//   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+//   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+//   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+//   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+//   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+//   RCC_OscInitStruct.PLL.PLLM = 2;
+//   RCC_OscInitStruct.PLL.PLLN = 25;
+//   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV7;
+//   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+//   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV4;
+//   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+//   {
+//     error_handler();
+//   }
+
+//   /** Initializes the CPU, AHB and APB buses clocks
+//   */
+//   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+//                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+//   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+//   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+//   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+//   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+
+//   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_3) != HAL_OK)
+//   {
+//     error_handler();
+//   }
+// }
+// 
 
 /**
  * @brief GPIO Initialization Function
  * @param None
  * @retval None
  */
-static void MX_GPIO_Init(void) {
+static void MX_GPIO_Init(void)
+{
   GPIO_InitTypeDef GPIO_InitStruct = {0};
   /* USER CODE BEGIN MX_GPIO_Init_1 */
   /* USER CODE END MX_GPIO_Init_1 */
@@ -37,14 +147,13 @@ static void MX_GPIO_Init(void) {
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, at_fault_pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PA0 PA2 PA3 PA5
-                           PA7 */
-  GPIO_InitStruct.Pin = m_sense_pin | mpre_sense_pin | apre_sense_pin;
+  /*Configure GPIO pins : PA1 PA4 */
+  GPIO_InitStruct.Pin = m_sense_pin | mpre_sense_pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PA1 PA4 PA6 PA9 PA10 */
+  /*Configure GPIO pins : PA0 PA3 PA7 PA8 PA9 PA10 */
   GPIO_InitStruct.Pin = m_enable_pin | mpre_enable_pin | apre_enable_pin | mt_fault_pin | ms_fault_pin | as_fault_pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -59,7 +168,7 @@ static void MX_GPIO_Init(void) {
   // GPIO_InitStruct.Alternate = GPIO_AF3_USART2;
   // HAL_GPIO_Init(VCP_RX_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : LD3_Pin */
+  /*Configure GPIO pin : PB3 led */
   GPIO_InitStruct.Pin = at_fault_pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -67,7 +176,7 @@ static void MX_GPIO_Init(void) {
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PB4 PB5 */
-  GPIO_InitStruct.Pin = mpre_ready_pin | apre_ready_pin;
+  GPIO_InitStruct.Pin = mpre_ready_pin | apre_ready_pin | apre_sense_pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
@@ -76,12 +185,8 @@ static void MX_GPIO_Init(void) {
   /* USER CODE END MX_GPIO_Init_2 */
 }
 
-//  typedef enum {
-//     OPEN,
-//     CLOSED,
-//     FAULT
-// } State;
 
+/*
 // #define start &contactorFSM[0]
 // #define closing &contactorFSM[1]
 // #define closed &contactorFSM[2]
@@ -94,18 +199,20 @@ static void MX_GPIO_Init(void) {
 // #define preclosed &prechargeFSM[3]
 // #define preopening &prechargeFSM[4]
 // #define prefault &prechargeFSM[5]
+*/
 
-typedef struct motorContactor {
-  int state;  // open, closed
+typedef struct motorContactor
+{
+  int state; // open, closed
   int enable_in;
-  int sense_out;   // GPIO pin to read the contactor's state
-  int enable_out;  // GPIO pin to control the contactor
+  int sense;  // GPIO pin to read the contactor's state
+  // int enable_out; // GPIO pin to control the contactor
   int fault;
-  int timeout;
-  uint32_t start_time;  // HAL_getTick()
+  uint32_t start_time; // HAL_getTick()
   // const struct motorContactor *next[4];
 } motorContactor;
 
+/*
 // const motorContactor motorContactorFSM[5] = {
 //     {0, 0, 0, {start, fault, closing, fault}}, //open
 //     {1, 0, 1, {opening, opening, closing, closed}},//closing
@@ -113,19 +220,21 @@ typedef struct motorContactor {
 //     {0, 1, 0, {start, opening, start, closed}},//opening
 //     {0, 0, 0, {fault, fault, fault, fault}} // fault
 // };
+*/
 
-typedef struct Precharge {
-  int state;      // open, closed
-  int sense_in;   // GPIO pin to read the contactor's state
-  int pre_ready;  // Precharge ready signal
+typedef struct Precharge
+{
+  int state;     // open, closed
+  int sense_in;  // GPIO pin to read the contactor's state
+  int pre_ready; // Precharge ready signal
   int pre_sense;
-  int enable_out;  // GPIO pin to control the contactor
+  int enable_out; // GPIO pin to control the contactor
   int fault;
-  int timeout;
   uint32_t start_time;
   // const struct Precharge *next[8];
 } Precharge;
 
+/*
 // const Contactor prechargeFSM[6] = {
 //   {0, 0, 0, 0, {prestart, prefault, prestart, prefault, precharge, prefault,
 //   precharge, prefault}}, //open {1, 0, 0, 0, {prestart, prefault, prestart,
@@ -137,88 +246,217 @@ typedef struct Precharge {
 //   prefault, prestart, preopening}}, // opening {0, 0, 0, 0, {fault, fault,
 //   fault, fault, fault, fault, fault, fault}} // fault
 // };
+*/
 
-// Contactor*
-#define m_CAN HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_9)      // D1 B
-#define m_direct HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10)  // D0 B
-
-#define m_enable(state) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, state)  // A1 A
-// #define a_enable(state) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, state)   // A
-#define m_pre_enable(state) HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, state)  // D13 B
-#define a_pre_enable(state) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, state)  // A5 A
-
-#define m_sense HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_3)      // A2 A
-#define a_sense HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_4)      // A3 A
-#define m_pre_sense HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0)  // A0 A
-#define a_pre_sense HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_7)  // A6 A
-
-#define m_pre_ready HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_4)  // D12 B
-#define a_pre_ready HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_5)  // D11 B
-
-motorContactor motor = {0, 0, 0, 0, 0, 0, 0};
-Precharge motorPre = {0, 0, 0, 0, 0, 0};
-Precharge arrayPre = {0, 0, 0, 0, 0, 0};
+motorContactor motor = {OPEN, OPEN, OPEN, NO_FAULT, 0};
+Precharge motorPre = {OPEN, OPEN, OPEN, OPEN, OPEN, NO_FAULT, 0};
+Precharge arrayPre = {OPEN, OPEN, OPEN, OPEN, OPEN, NO_FAULT, 0};
 int time;
 int BPS_safe;
 int moco_fault;
-int fault;
+int fault[5];
 int on = 1;
-int cycles =0;
+int cycles = 0;
 
-static void contactorTask(void* pvParamters) {
-  while(1){
-  time = HAL_GetTick();
-  /* // blinky tester
-  m_pre_enable(1);
-  m_enable(1);
-  a_pre_enable(1);
-  HAL_Delay(1000);
-  m_pre_enable(0);
-  m_enable(0);
-  a_pre_enable(0);
-  HAL_Delay(1000);
-  */
-  // if(time/1000 >cycles){
-  //   if(on ==0){
-  //     on = 1;
-  //   }else{
-  //     on = 0;
-  //   }
-  //   cycles++;
-  // }
-  // m_enable(on);
-  // m_pre_enable(on);
-  // a_pre_enable(on);
-  // HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, 1);
-  // m_enable(1);
-  // return;
+static void contactorTask(void *pvParamters)
+{
+  HAL_Delay(5000);
+  while (1)
+  {
+    time = HAL_GetTick();
+    // blinky tester
+    #ifdef blinky
+    m_pre_enable(1);
+    mt_fault(1);
+    ms_fault(1);
+    at_fault(1);
+    as_fault(1);
+    a_pre_enable(1);
+    HAL_Delay(1000);
+    m_pre_enable(0);
+    mt_fault(0);
+    ms_fault(0);
+    at_fault(0);
+    as_fault(0);
+    a_pre_enable(0);
+    HAL_Delay(1000);
+    #endif
 
-  // if ((motor.fault | motorPre.fault | arrayPre.fault | BPS_safe | moco_fault |
-  //      motor.timeout | motorPre.timeout | arrayPre.timeout) != 0) {
-  //   motor.enable_out = 0;
-  //   motorPre.enable_out = 0;
-  //   arrayPre.enable_out = 0;
-  //   fault = 1;
-  // } else {
-    motor.enable_in = (m_CAN); //& m_direct);
-    motor.sense_out = m_sense;
+    #ifdef contactorcode
+    // Read Inputs
+    motor.enable_in = (m_direct);
+    motor.sense = m_sense;
 
     motorPre.pre_ready = m_pre_ready;
     motorPre.pre_sense = m_pre_sense;
-    motorPre.sense_in = motor.sense_out;
+    // motorPre.sense_in = motor.sense;
 
     arrayPre.pre_ready = a_pre_ready;
     arrayPre.pre_sense = a_pre_sense;
-    arrayPre.sense_in = a_sense;
 
-    motor.enable_out = motor.enable_in;
-    motorPre.enable_out = motorPre.sense_in;
+    motorPre.enable_out = m_pre_ready;
     arrayPre.enable_out = a_pre_ready;
 
-    m_enable(motor.enable_out);
+    //Update States and Faults
+    if(motor.fault==NO_FAULT){
+      if(motor.state==OPEN && motor.enable_in==CLOSED){ // closing motor
+        if(motor.start_time==0){ //
+          motor.start_time = time;
+        }else if(motor.start_time+1000<time){
+          motor.fault = MT_FAULT;
+        }else if(motor.sense==CLOSED){
+          motorPre.pre_sense = CLOSED;
+          motor.state = CLOSED;
+          motor.start_time = 0;
+        }
+      }else if(motor.state==CLOSED && motor.enable_in == OPEN){ // opening motor
+        if(motor.start_time == 0){
+          motor.start_time = time;
+        }else if(motor.start_time+1000<time){
+          motor.fault = MT_FAULT;
+        }else if(motor.sense==OPEN){
+          motor.state = OPEN;
+          motorPre.sense_in = OPEN;
+          motor.start_time = 0;
+        }
+      }else if(motor.state == OPEN && motor.enable_in == OPEN){
+        if(motor.sense == CLOSED){
+          if(motor.start_time==0){
+            motor.start_time = time;
+          }else if(motor.start_time+10>time){
+            motor.fault = MS_FAULT;
+          }
+        }else{
+          motor.start_time = 0;
+        }
+      }else if(motor.state == CLOSED && motor.enable_in == CLOSED){
+        if(motor.sense == OPEN){
+          if(motor.start_time==0){
+            motor.start_time = time;
+          }else if(motor.start_time+10>time){
+            motor.fault =MS_FAULT;
+          }
+        }else{
+          motor.start_time = 0;
+        }
+      }
+    }else{
+      fault[motor.fault] = 1;
+    }
+
+    if(motorPre.fault==NO_FAULT){
+      if(motorPre.state==OPEN && motorPre.sense_in==CLOSED){ // closing motorPre
+        if(motorPre.start_time==0){ //
+          motorPre.start_time = time;
+        }else if(motorPre.start_time+1000<time){
+          motorPre.fault = MT_FAULT;
+        }else if(motorPre.pre_sense==CLOSED){
+          motorPre.state = CLOSED;
+          motorPre.start_time = 0;
+        }
+      }else if(motorPre.state==CLOSED && motorPre.sense_in == OPEN){ // opening motorPre
+        if(motorPre.start_time == 0){
+          motorPre.start_time = time;
+        }else if(motorPre.start_time+1000<time){
+          motorPre.fault = MT_FAULT;
+        }else if(motorPre.pre_sense==OPEN){
+          motorPre.state = OPEN;
+          motorPre.start_time = 0;
+        }
+      }else if(motorPre.state == OPEN && motorPre.sense_in == OPEN){
+        if(motorPre.pre_sense == CLOSED){
+          if(motorPre.start_time==0){
+            motorPre.start_time = time;
+          }else if(motorPre.start_time+10>time){
+            motorPre.fault = MS_FAULT;
+          }
+        }else{
+          motorPre.start_time = 0;
+        }
+      }else if(motorPre.state == CLOSED && motorPre.sense_in == CLOSED){
+        if(motorPre.pre_sense == OPEN){
+          if(motorPre.start_time==0){
+            motorPre.start_time = time;
+          }else if(motorPre.start_time+10>time){
+            motorPre.fault = MS_FAULT;
+          }
+        }else{
+          motorPre.start_time = 0;
+        }
+      }
+    }else{
+      fault[motorPre.fault] = 1;
+    }
+    
+    if(arrayPre.fault==NO_FAULT){
+      if(arrayPre.state==OPEN && arrayPre.sense_in==CLOSED){ // closing arrayPre
+        if(arrayPre.start_time==0){ //
+          arrayPre.start_time = time;
+        }else if(arrayPre.start_time+1000<time){
+          arrayPre.fault = AT_FAULT;
+        }else if(arrayPre.pre_sense==CLOSED){
+          arrayPre.state = CLOSED;
+          arrayPre.start_time = 0;
+        }
+      }else if(arrayPre.state==CLOSED && arrayPre.sense_in == OPEN){ // opening arrayPre
+        if(arrayPre.start_time == 0){
+          arrayPre.start_time = time;
+        }else if(arrayPre.start_time+1000<time){
+          arrayPre.fault = AT_FAULT;
+        }else if(arrayPre.pre_sense==OPEN){
+          arrayPre.state = OPEN;
+          arrayPre.start_time = 0;
+        }
+      }else if(arrayPre.state == OPEN && arrayPre.sense_in == OPEN){
+        if(arrayPre.pre_sense == CLOSED){
+          if(arrayPre.start_time==0){
+            arrayPre.start_time = time;
+          }else if(arrayPre.start_time+10>time){
+            arrayPre.fault = AS_FAULT;
+          }
+        }else{
+          arrayPre.start_time = 0;
+        }
+      }else if(arrayPre.state == CLOSED && arrayPre.sense_in == CLOSED){
+        if(arrayPre.pre_sense == OPEN){
+          if(arrayPre.start_time==0){
+            arrayPre.start_time = time;
+          }else if(arrayPre.start_time+10>time){
+            arrayPre.fault = AS_FAULT;
+          }
+        }else{
+          arrayPre.start_time = 0;
+        }
+      }
+    }else{
+      fault[arrayPre.fault] = 1;
+    }
+    if(arrayPre.start_time == 0 && arrayPre.enable_out == CLOSED){
+      arrayPre.start_time = time;
+    }
+
+    //Check Faults
+
+    if ((motor.fault | motorPre.fault | arrayPre.fault | BPS_safe | moco_fault) != NO_FAULT)
+    {
+      motorPre.enable_out = 0;
+      arrayPre.enable_out = 0;
+      //sense fault on CAN
+      // at_fault(1);
+      if(arrayPre.fault==AS_FAULT){
+        at_fault(1);
+      }
+      
+    }else{
+      at_fault(0);
+    }
+
+    // m_enable(motor.enable_out);
     m_pre_enable(motorPre.enable_out);
-    // a_pre_enable(arrayPre.enable_out);
-    a_pre_enable(1);
+    a_pre_enable(arrayPre.enable_out);
+    // a_pre_enable(1);
+
+    #endif
 
     // HAL_Delay(500);
     // HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_5));
@@ -254,95 +492,153 @@ static void contactorTask(void* pvParamters) {
     //     arrayPre.enable_out = 1;  // enable contactor
     //     arrayPre.start_time = HAL_GetTick();
     //   }
-  // }
+    // }
 
-  // contactor logic
+    // contactor logic
 
-  // if ((HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6)) ) {
-  //   // HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_1);
-  //   HAL_Delay(500);
-  //   // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, 1);
-  //   m_state = 1;
-  // }else {
-  //   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, 0);
-  // }
+    // if ((HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6)) ) {
+    //   // HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_1);
+    //   HAL_Delay(500);
+    //   // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, 1);
+    //   m_state = 1;
+    // }else {
+    //   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, 0);
+    // }
 
-  // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, ~HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_7));
-  // int output = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6);
-  // int out1 = output;
-  // if(output!=0){
-  //   out1=0;
-  // }else{
-  //   out1=1;
-  // }
-  // HAL_GPIO_WritePin(GPIOA, ( GPIO_PIN_6), out1);
-  // HAL_GPIO_WritePin(GPIOA, (GPIO_PIN_1),out1);//HAL_GPIO_ReadPin(GPIOB,
-  // GPIO_PIN_6)); HAL_GPIO_WritePin(GPIOA, (GPIO_PIN_4), output);//
-  // HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6));
+    // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, ~HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_7));
+    // int output = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6);
+    // int out1 = output;
+    // if(output!=0){
+    //   out1=0;
+    // }else{
+    //   out1=1;
+    // }
+    // HAL_GPIO_WritePin(GPIOA, ( GPIO_PIN_6), out1);
+    // HAL_GPIO_WritePin(GPIOA, (GPIO_PIN_1),out1);//HAL_GPIO_ReadPin(GPIOB,
+    // GPIO_PIN_6)); HAL_GPIO_WritePin(GPIOA, (GPIO_PIN_4), output);//
+    // HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6));
 
-  // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, 1);
-  // m_enable(GPIO_PIN_SET);
+    // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, 1);
+    // m_enable(GPIO_PIN_SET);
 
-  // // if (m_CAN == 0) {  // if CAN tells contactor to close
-  // //   m_enable(0);
-  // //   m_state = 0;
-  // // }
-  // if (a_CAN == 0) {  // if CAN tells contactor to close
-  //   a_enable(0);
-  //   a_state = 0;
-  // }
+    // // if (m_CAN == 0) {  // if CAN tells contactor to close
+    // //   m_enable(0);
+    // //   m_state = 0;
+    // // }
+    // if (a_CAN == 0) {  // if CAN tells contactor to close
+    //   a_enable(0);
+    //   a_state = 0;
+    // }
 
-  // if ((m_sense == 1) && (m_pre_ready == 1) && (m_fault == 0) &&
-  //     (m_pre_fault == 0)) {  // if m_contactor is closed (sense = 0) and
-  //                            // precharge ready and neither has faulted
-  //   m_pre_enable(1);
-  //   m_pre_state = 1;
-  // }
-  // if ((a_sense == 1) && (a_pre_ready == 1) && (a_fault == 0) &&
-  //     (a_pre_fault == 0)) {  // if a_contactor is closed (sense = 0) and
-  //                            // precharge ready and neither has faulted
-  //   a_pre_enable(1);
-  //   a_pre_state = 1;
-  // }
+    // if ((m_sense == 1) && (m_pre_ready == 1) && (m_fault == 0) &&
+    //     (m_pre_fault == 0)) {  // if m_contactor is closed (sense = 0) and
+    //                            // precharge ready and neither has faulted
+    //   m_pre_enable(1);
+    //   m_pre_state = 1;
+    // }
+    // if ((a_sense == 1) && (a_pre_ready == 1) && (a_fault == 0) &&
+    //     (a_pre_fault == 0)) {  // if a_contactor is closed (sense = 0) and
+    //                            // precharge ready and neither has faulted
+    //   a_pre_enable(1);
+    //   a_pre_state = 1;
+    // }
 
-  // if ((m_sense == 0) &&
-  //     (m_pre_sense ==
-  //      1)) {          // if m contactor open and m_pre contactor is closed
-  //   m_pre_enable(0);  // turn m_pre contactor off
-  //   m_pre_state = 0;  // set state info off
-  // }
-  // if ((a_sense == 0) &&
-  //     (a_pre_sense ==
-  //      1)) {          // if a contactor open and a_pre contactor is closed
-  //   a_pre_enable(0);  // turn a_pre contactor off
-  //   a_pre_state = 0;  // set state info off
-  // }
+    // if ((m_sense == 0) &&
+    //     (m_pre_sense ==
+    //      1)) {          // if m contactor open and m_pre contactor is closed
+    //   m_pre_enable(0);  // turn m_pre contactor off
+    //   m_pre_state = 0;  // set state info off
+    // }
+    // if ((a_sense == 0) &&
+    //     (a_pre_sense ==
+    //      1)) {          // if a contactor open and a_pre contactor is closed
+    //   a_pre_enable(0);  // turn a_pre contactor off
+    //   a_pre_state = 0;  // set state info off
+    // }
 
-  // if ((m_fault == 1) || (m_pre_fault == 1)) {  // if either faults
-  //   m_pre_enable(
-  //       0);  // disable precharge for saftey and send fault message over CAN
-  //   m_pre_state = 0;
-  // }
-  // if ((a_fault == 1) || (a_pre_fault == 1)) {  // if either faults
-  //   a_pre_enable(
-  //       0);  // disable precharge for saftey and send fault message over CAN
-  //   a_pre_state = 0;
-  // }
-}
+    // if ((m_fault == 1) || (m_pre_fault == 1)) {  // if either faults
+    //   m_pre_enable(
+    //       0);  // disable precharge for saftey and send fault message over CAN
+    //   m_pre_state = 0;
+    // }
+    // if ((a_fault == 1) || (a_pre_fault == 1)) {  // if either faults
+    //   a_pre_enable(
+    //       0);  // disable precharge for saftey and send fault message over CAN
+    //   a_pre_state = 0;
+    // }
+  }
 }
 
 StaticTask_t task_buffer;
 StackType_t task_stack[configMINIMAL_STACK_SIZE];
 
-static void error_handler(void) {
-  while (1) {
-  }
+
+
+static void canTask(void *pvParamters)
+{
+  while(1){
+  // HAL_Delay(1000);
+  CAN_FilterTypeDef  sFilterConfig;
+  sFilterConfig.FilterBank = 0;
+  sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
+  sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
+  sFilterConfig.FilterIdHigh = 0x0000;
+  sFilterConfig.FilterIdLow = 0x0000;
+  sFilterConfig.FilterMaskIdHigh = 0x0000;
+  sFilterConfig.FilterMaskIdLow = 0x0000;
+  sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
+  sFilterConfig.FilterActivation = ENABLE;
+  sFilterConfig.SlaveStartFilterBank = 14;
+
+  // setup can1 init
+  hcan1->Init.Prescaler = 16;
+  hcan1->Init.Mode = CAN_MODE_LOOPBACK;
+  hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
+  hcan1->Init.TimeSeg1 = CAN_BS1_16TQ;
+  hcan1->Init.TimeSeg2 = CAN_BS2_8TQ;
+  hcan1->Init.TimeTriggeredMode = DISABLE;
+  hcan1->Init.AutoBusOff = DISABLE;
+  hcan1->Init.AutoWakeUp = DISABLE;
+  hcan1->Init.AutoRetransmission = ENABLE;
+  hcan1->Init.ReceiveFifoLocked = DISABLE;
+
+  // If TransmitFifoPriority is disabled, the hardware selects the mailbox based on the message ID priority. 
+  // If enabled, the hardware uses a FIFO mechanism to select the mailbox based on the order of transmission requests.
+  hcan1->Init.TransmitFifoPriority = ENABLE;
+
+  // initialize CAN1
+  if (can_init(hcan1, &sFilterConfig) != CAN_OK) error_handler();
+  if (can_start(hcan1) != CAN_OK) error_handler();
+
+  
+  // create payload to send
+  CAN_TxHeaderTypeDef tx_header = {0};   
+  tx_header.StdId = 0x1;
+  tx_header.RTR = CAN_RTR_DATA;
+  tx_header.IDE = CAN_ID_STD;
+  tx_header.DLC = 2;
+  tx_header.TransmitGlobalTime = DISABLE;
+
+  // send two payloads to 0x1
+  uint8_t tx_data[8] = {0};
+  tx_data[0] = 0x01;
+  tx_data[1] = 0x00;
+  //HAL_Delay(5000);
+  if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
+}
 }
 
-int main() {
+int main()
+{
   HAL_Init();
   HAL_MspInit();
   MX_GPIO_Init();
+  SystemClock_Config();
+
+  
+  as_fault(1);
+  // HAL_Delay(5000);
+  // as_fault(0);
 
   // __HAL_RCC_GPIOB_CLK_ENABLE(); // enable clock for GPIOA
   // HAL_GPIO_Init(GPIOB, &led_config); // initialize GPIOA with led_config
@@ -354,6 +650,8 @@ int main() {
   //     // error: send can error message
   //     HAL_Delay(1000);
   // }
+  xTaskCreateStatic(canTask, "can task", configMINIMAL_STACK_SIZE,
+    NULL, tskIDLE_PRIORITY + 1, task_stack, &task_buffer);
   xTaskCreateStatic(contactorTask, "contactor task", configMINIMAL_STACK_SIZE,
                     NULL, tskIDLE_PRIORITY + 2, task_stack, &task_buffer);
 

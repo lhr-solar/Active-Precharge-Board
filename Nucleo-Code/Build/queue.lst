@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccnrBCYQ.s 			page 1
+ARM GAS  /tmp/ccEs6zRw.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
   28:FreeRTOS-Kernel/queue.c **** 
   29:FreeRTOS-Kernel/queue.c **** #include <stdlib.h>
   30:FreeRTOS-Kernel/queue.c **** #include <string.h>
-ARM GAS  /tmp/ccnrBCYQ.s 			page 2
+ARM GAS  /tmp/ccEs6zRw.s 			page 2
 
 
   31:FreeRTOS-Kernel/queue.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
   85:FreeRTOS-Kernel/queue.c **** #if ( configUSE_PREEMPTION == 0 )
   86:FreeRTOS-Kernel/queue.c **** 
   87:FreeRTOS-Kernel/queue.c **** /* If the cooperative scheduler is being used then a yield should not be
-ARM GAS  /tmp/ccnrBCYQ.s 			page 3
+ARM GAS  /tmp/ccEs6zRw.s 			page 3
 
 
   88:FreeRTOS-Kernel/queue.c ****  * performed just because a higher priority task has been woken. */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  142:FreeRTOS-Kernel/queue.c **** /*-----------------------------------------------------------*/
  143:FreeRTOS-Kernel/queue.c **** 
  144:FreeRTOS-Kernel/queue.c **** /*
-ARM GAS  /tmp/ccnrBCYQ.s 			page 4
+ARM GAS  /tmp/ccEs6zRw.s 			page 4
 
 
  145:FreeRTOS-Kernel/queue.c ****  * The queue registry is just a means for kernel aware debuggers to locate
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  199:FreeRTOS-Kernel/queue.c **** /*
  200:FreeRTOS-Kernel/queue.c ****  * Copies an item into the queue, either at the front of the queue or the
  201:FreeRTOS-Kernel/queue.c ****  * back of the queue.
-ARM GAS  /tmp/ccnrBCYQ.s 			page 5
+ARM GAS  /tmp/ccEs6zRw.s 			page 5
 
 
  202:FreeRTOS-Kernel/queue.c ****  */
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  256:FreeRTOS-Kernel/queue.c ****  * accessing the queue event lists.
  257:FreeRTOS-Kernel/queue.c ****  */
  258:FreeRTOS-Kernel/queue.c **** #define prvLockQueue( pxQueue )                            \
-ARM GAS  /tmp/ccnrBCYQ.s 			page 6
+ARM GAS  /tmp/ccEs6zRw.s 			page 6
 
 
  259:FreeRTOS-Kernel/queue.c ****     taskENTER_CRITICAL();                                  \
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  313:FreeRTOS-Kernel/queue.c ****     if( ( pxQueue != NULL ) &&
  314:FreeRTOS-Kernel/queue.c ****         ( pxQueue->uxLength >= 1U ) &&
  315:FreeRTOS-Kernel/queue.c ****         /* Check for multiplication overflow. */
-ARM GAS  /tmp/ccnrBCYQ.s 			page 7
+ARM GAS  /tmp/ccEs6zRw.s 			page 7
 
 
  316:FreeRTOS-Kernel/queue.c ****         ( ( SIZE_MAX / pxQueue->uxLength ) >= pxQueue->uxItemSize ) )
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  370:FreeRTOS-Kernel/queue.c ****     return xReturn;
  371:FreeRTOS-Kernel/queue.c **** }
  372:FreeRTOS-Kernel/queue.c **** /*-----------------------------------------------------------*/
-ARM GAS  /tmp/ccnrBCYQ.s 			page 8
+ARM GAS  /tmp/ccEs6zRw.s 			page 8
 
 
  373:FreeRTOS-Kernel/queue.c **** 
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  427:FreeRTOS-Kernel/queue.c **** 
  428:FreeRTOS-Kernel/queue.c ****             prvInitialiseNewQueue( uxQueueLength, uxItemSize, pucQueueStorage, ucQueueType, pxNewQu
  429:FreeRTOS-Kernel/queue.c ****         }
-ARM GAS  /tmp/ccnrBCYQ.s 			page 9
+ARM GAS  /tmp/ccEs6zRw.s 			page 9
 
 
  430:FreeRTOS-Kernel/queue.c ****         else
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  484:FreeRTOS-Kernel/queue.c ****                 *ppucQueueStorage = ( uint8_t * ) pxQueue->pcHead;
  485:FreeRTOS-Kernel/queue.c ****             }
  486:FreeRTOS-Kernel/queue.c **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 10
+ARM GAS  /tmp/ccEs6zRw.s 			page 10
 
 
  487:FreeRTOS-Kernel/queue.c ****             *ppxStaticQueue = ( StaticQueue_t * ) pxQueue;
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  541:FreeRTOS-Kernel/queue.c ****                 }
  542:FreeRTOS-Kernel/queue.c ****                 #endif /* configSUPPORT_STATIC_ALLOCATION */
  543:FreeRTOS-Kernel/queue.c **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 11
+ARM GAS  /tmp/ccEs6zRw.s 			page 11
 
 
  544:FreeRTOS-Kernel/queue.c ****                 prvInitialiseNewQueue( uxQueueLength, uxItemSize, pucQueueStorage, ucQueueType, pxN
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  598:FreeRTOS-Kernel/queue.c ****         pxNewQueue->ucQueueType = ucQueueType;
  599:FreeRTOS-Kernel/queue.c ****     }
  600:FreeRTOS-Kernel/queue.c ****     #endif /* configUSE_TRACE_FACILITY */
-ARM GAS  /tmp/ccnrBCYQ.s 			page 12
+ARM GAS  /tmp/ccEs6zRw.s 			page 12
 
 
  601:FreeRTOS-Kernel/queue.c **** 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  655:FreeRTOS-Kernel/queue.c **** 
  656:FreeRTOS-Kernel/queue.c ****         return xNewQueue;
  657:FreeRTOS-Kernel/queue.c ****     }
-ARM GAS  /tmp/ccnrBCYQ.s 			page 13
+ARM GAS  /tmp/ccEs6zRw.s 			page 13
 
 
  658:FreeRTOS-Kernel/queue.c **** 
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  712:FreeRTOS-Kernel/queue.c ****             }
  713:FreeRTOS-Kernel/queue.c ****         }
  714:FreeRTOS-Kernel/queue.c ****         taskEXIT_CRITICAL();
-ARM GAS  /tmp/ccnrBCYQ.s 			page 14
+ARM GAS  /tmp/ccEs6zRw.s 			page 14
 
 
  715:FreeRTOS-Kernel/queue.c **** 
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  769:FreeRTOS-Kernel/queue.c ****          * pxMutexHolder is accessed simultaneously by another task.  Therefore no
  770:FreeRTOS-Kernel/queue.c ****          * mutual exclusion is required to test the pxMutexHolder variable. */
  771:FreeRTOS-Kernel/queue.c ****         if( pxMutex->u.xSemaphore.xMutexHolder == xTaskGetCurrentTaskHandle() )
-ARM GAS  /tmp/ccnrBCYQ.s 			page 15
+ARM GAS  /tmp/ccEs6zRw.s 			page 15
 
 
  772:FreeRTOS-Kernel/queue.c ****         {
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  826:FreeRTOS-Kernel/queue.c ****          * xQueueGiveMutexRecursive(). */
  827:FreeRTOS-Kernel/queue.c **** 
  828:FreeRTOS-Kernel/queue.c ****         traceTAKE_MUTEX_RECURSIVE( pxMutex );
-ARM GAS  /tmp/ccnrBCYQ.s 			page 16
+ARM GAS  /tmp/ccEs6zRw.s 			page 16
 
 
  829:FreeRTOS-Kernel/queue.c **** 
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  883:FreeRTOS-Kernel/queue.c ****                 traceCREATE_COUNTING_SEMAPHORE_FAILED();
  884:FreeRTOS-Kernel/queue.c ****             }
  885:FreeRTOS-Kernel/queue.c ****         }
-ARM GAS  /tmp/ccnrBCYQ.s 			page 17
+ARM GAS  /tmp/ccEs6zRw.s 			page 17
 
 
  886:FreeRTOS-Kernel/queue.c ****         else
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  940:FreeRTOS-Kernel/queue.c ****                               const void * const pvItemToQueue,
  941:FreeRTOS-Kernel/queue.c ****                               TickType_t xTicksToWait,
  942:FreeRTOS-Kernel/queue.c ****                               const BaseType_t xCopyPosition )
-ARM GAS  /tmp/ccnrBCYQ.s 			page 18
+ARM GAS  /tmp/ccEs6zRw.s 			page 18
 
 
  943:FreeRTOS-Kernel/queue.c **** {
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  997:FreeRTOS-Kernel/queue.c ****                     }
  998:FreeRTOS-Kernel/queue.c ****                     else
  999:FreeRTOS-Kernel/queue.c ****                     {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 19
+ARM GAS  /tmp/ccEs6zRw.s 			page 19
 
 
 1000:FreeRTOS-Kernel/queue.c ****                         /* If there was a task waiting for data to arrive on the
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1054:FreeRTOS-Kernel/queue.c ****                         /* This path is a special case that will only get
 1055:FreeRTOS-Kernel/queue.c ****                          * executed if the task was holding multiple mutexes and
 1056:FreeRTOS-Kernel/queue.c ****                          * the mutexes were given back in an order that is
-ARM GAS  /tmp/ccnrBCYQ.s 			page 20
+ARM GAS  /tmp/ccEs6zRw.s 			page 20
 
 
 1057:FreeRTOS-Kernel/queue.c ****                          * different to that in which they were taken. */
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1111:FreeRTOS-Kernel/queue.c ****         if( xTaskCheckForTimeOut( &xTimeOut, &xTicksToWait ) == pdFALSE )
 1112:FreeRTOS-Kernel/queue.c ****         {
 1113:FreeRTOS-Kernel/queue.c ****             if( prvIsQueueFull( pxQueue ) != pdFALSE )
-ARM GAS  /tmp/ccnrBCYQ.s 			page 21
+ARM GAS  /tmp/ccEs6zRw.s 			page 21
 
 
 1114:FreeRTOS-Kernel/queue.c ****             {
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1168:FreeRTOS-Kernel/queue.c ****     configASSERT( pxQueue );
 1169:FreeRTOS-Kernel/queue.c ****     configASSERT( !( ( pvItemToQueue == NULL ) && ( pxQueue->uxItemSize != ( UBaseType_t ) 0U ) ) )
 1170:FreeRTOS-Kernel/queue.c ****     configASSERT( !( ( xCopyPosition == queueOVERWRITE ) && ( pxQueue->uxLength != 1 ) ) );
-ARM GAS  /tmp/ccnrBCYQ.s 			page 22
+ARM GAS  /tmp/ccEs6zRw.s 			page 22
 
 
 1171:FreeRTOS-Kernel/queue.c **** 
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1225:FreeRTOS-Kernel/queue.c ****                             mtCOVERAGE_TEST_MARKER();
 1226:FreeRTOS-Kernel/queue.c ****                         }
 1227:FreeRTOS-Kernel/queue.c ****                         else if( prvNotifyQueueSetContainer( pxQueue ) != pdFALSE )
-ARM GAS  /tmp/ccnrBCYQ.s 			page 23
+ARM GAS  /tmp/ccEs6zRw.s 			page 23
 
 
 1228:FreeRTOS-Kernel/queue.c ****                         {
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1282:FreeRTOS-Kernel/queue.c ****                             if( pxHigherPriorityTaskWoken != NULL )
 1283:FreeRTOS-Kernel/queue.c ****                             {
 1284:FreeRTOS-Kernel/queue.c ****                                 *pxHigherPriorityTaskWoken = pdTRUE;
-ARM GAS  /tmp/ccnrBCYQ.s 			page 24
+ARM GAS  /tmp/ccEs6zRw.s 			page 24
 
 
 1285:FreeRTOS-Kernel/queue.c ****                             }
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1339:FreeRTOS-Kernel/queue.c ****      * item size is 0.  Don't directly wake a task that was blocked on a queue
 1340:FreeRTOS-Kernel/queue.c ****      * read, instead return a flag to say whether a context switch is required or
 1341:FreeRTOS-Kernel/queue.c ****      * not (i.e. has a task with a higher priority than us been woken by this
-ARM GAS  /tmp/ccnrBCYQ.s 			page 25
+ARM GAS  /tmp/ccEs6zRw.s 			page 25
 
 
 1342:FreeRTOS-Kernel/queue.c ****      * post). */
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1396:FreeRTOS-Kernel/queue.c ****              * be done when the queue is unlocked later. */
 1397:FreeRTOS-Kernel/queue.c ****             if( cTxLock == queueUNLOCKED )
 1398:FreeRTOS-Kernel/queue.c ****             {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 26
+ARM GAS  /tmp/ccEs6zRw.s 			page 26
 
 
 1399:FreeRTOS-Kernel/queue.c ****                 #if ( configUSE_QUEUE_SETS == 1 )
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1453:FreeRTOS-Kernel/queue.c ****                     {
 1454:FreeRTOS-Kernel/queue.c ****                         if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToReceive ) ) != pdF
 1455:FreeRTOS-Kernel/queue.c ****                         {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 27
+ARM GAS  /tmp/ccEs6zRw.s 			page 27
 
 
 1456:FreeRTOS-Kernel/queue.c ****                             /* The task waiting has a higher priority so record that a
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1510:FreeRTOS-Kernel/queue.c ****     traceENTER_xQueueReceive( xQueue, pvBuffer, xTicksToWait );
 1511:FreeRTOS-Kernel/queue.c **** 
 1512:FreeRTOS-Kernel/queue.c ****     /* Check the pointer is not NULL. */
-ARM GAS  /tmp/ccnrBCYQ.s 			page 28
+ARM GAS  /tmp/ccEs6zRw.s 			page 28
 
 
 1513:FreeRTOS-Kernel/queue.c ****     configASSERT( ( pxQueue ) );
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1567:FreeRTOS-Kernel/queue.c ****             {
 1568:FreeRTOS-Kernel/queue.c ****                 if( xTicksToWait == ( TickType_t ) 0 )
 1569:FreeRTOS-Kernel/queue.c ****                 {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 29
+ARM GAS  /tmp/ccEs6zRw.s 			page 29
 
 
 1570:FreeRTOS-Kernel/queue.c ****                     /* The queue was empty and no block time is specified (or
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1624:FreeRTOS-Kernel/queue.c ****                  * data. */
 1625:FreeRTOS-Kernel/queue.c ****                 prvUnlockQueue( pxQueue );
 1626:FreeRTOS-Kernel/queue.c ****                 ( void ) xTaskResumeAll();
-ARM GAS  /tmp/ccnrBCYQ.s 			page 30
+ARM GAS  /tmp/ccEs6zRw.s 			page 30
 
 
 1627:FreeRTOS-Kernel/queue.c ****             }
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1681:FreeRTOS-Kernel/queue.c ****         taskENTER_CRITICAL();
 1682:FreeRTOS-Kernel/queue.c ****         {
 1683:FreeRTOS-Kernel/queue.c ****             /* Semaphores are queues with an item size of 0, and where the
-ARM GAS  /tmp/ccnrBCYQ.s 			page 31
+ARM GAS  /tmp/ccEs6zRw.s 			page 31
 
 
 1684:FreeRTOS-Kernel/queue.c ****              * number of messages in the queue is the semaphore's count value. */
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1738:FreeRTOS-Kernel/queue.c ****                 if( xTicksToWait == ( TickType_t ) 0 )
 1739:FreeRTOS-Kernel/queue.c ****                 {
 1740:FreeRTOS-Kernel/queue.c ****                     /* The semaphore count was 0 and no block time is specified
-ARM GAS  /tmp/ccnrBCYQ.s 			page 32
+ARM GAS  /tmp/ccEs6zRw.s 			page 32
 
 
 1741:FreeRTOS-Kernel/queue.c ****                      * (or the block time has expired) so exit now. */
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1795:FreeRTOS-Kernel/queue.c ****                     }
 1796:FreeRTOS-Kernel/queue.c ****                 }
 1797:FreeRTOS-Kernel/queue.c ****                 #endif /* if ( configUSE_MUTEXES == 1 ) */
-ARM GAS  /tmp/ccnrBCYQ.s 			page 33
+ARM GAS  /tmp/ccEs6zRw.s 			page 33
 
 
 1798:FreeRTOS-Kernel/queue.c **** 
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1852:FreeRTOS-Kernel/queue.c ****                              * it can result in out-of-bounds access which is not true because
 1853:FreeRTOS-Kernel/queue.c ****                              * uxHighestWaitingPriority, as returned by prvGetDisinheritPriorityAft
 1854:FreeRTOS-Kernel/queue.c ****                              * is capped at ( configMAX_PRIORITIES - 1 ). */
-ARM GAS  /tmp/ccnrBCYQ.s 			page 34
+ARM GAS  /tmp/ccEs6zRw.s 			page 34
 
 
 1855:FreeRTOS-Kernel/queue.c ****                             /* coverity[overrun] */
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1909:FreeRTOS-Kernel/queue.c ****              * must be the highest priority task wanting to access the queue. */
 1910:FreeRTOS-Kernel/queue.c ****             if( uxMessagesWaiting > ( UBaseType_t ) 0 )
 1911:FreeRTOS-Kernel/queue.c ****             {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 35
+ARM GAS  /tmp/ccEs6zRw.s 			page 35
 
 
 1912:FreeRTOS-Kernel/queue.c ****                 /* Remember the read position so it can be reset after the data
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1966:FreeRTOS-Kernel/queue.c ****                     vTaskInternalSetTimeOutState( &xTimeOut );
 1967:FreeRTOS-Kernel/queue.c ****                     xEntryTimeSet = pdTRUE;
 1968:FreeRTOS-Kernel/queue.c ****                 }
-ARM GAS  /tmp/ccnrBCYQ.s 			page 36
+ARM GAS  /tmp/ccEs6zRw.s 			page 36
 
 
 1969:FreeRTOS-Kernel/queue.c ****                 else
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2023:FreeRTOS-Kernel/queue.c **** 
 2024:FreeRTOS-Kernel/queue.c ****                 return errQUEUE_EMPTY;
 2025:FreeRTOS-Kernel/queue.c ****             }
-ARM GAS  /tmp/ccnrBCYQ.s 			page 37
+ARM GAS  /tmp/ccEs6zRw.s 			page 37
 
 
 2026:FreeRTOS-Kernel/queue.c ****             else
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2080:FreeRTOS-Kernel/queue.c **** 
 2081:FreeRTOS-Kernel/queue.c ****             /* If the queue is locked the event list will not be modified.
 2082:FreeRTOS-Kernel/queue.c ****              * Instead update the lock count so the task that unlocks the queue
-ARM GAS  /tmp/ccnrBCYQ.s 			page 38
+ARM GAS  /tmp/ccEs6zRw.s 			page 38
 
 
 2083:FreeRTOS-Kernel/queue.c ****              * will know that an ISR has removed data while the queue was
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2137:FreeRTOS-Kernel/queue.c **** {
 2138:FreeRTOS-Kernel/queue.c ****     BaseType_t xReturn;
 2139:FreeRTOS-Kernel/queue.c ****     UBaseType_t uxSavedInterruptStatus;
-ARM GAS  /tmp/ccnrBCYQ.s 			page 39
+ARM GAS  /tmp/ccEs6zRw.s 			page 39
 
 
 2140:FreeRTOS-Kernel/queue.c ****     int8_t * pcOriginalReadPosition;
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2194:FreeRTOS-Kernel/queue.c **** }
 2195:FreeRTOS-Kernel/queue.c **** /*-----------------------------------------------------------*/
 2196:FreeRTOS-Kernel/queue.c **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 40
+ARM GAS  /tmp/ccEs6zRw.s 			page 40
 
 
 2197:FreeRTOS-Kernel/queue.c **** UBaseType_t uxQueueMessagesWaiting( const QueueHandle_t xQueue )
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2251:FreeRTOS-Kernel/queue.c **** }
 2252:FreeRTOS-Kernel/queue.c **** /*-----------------------------------------------------------*/
 2253:FreeRTOS-Kernel/queue.c **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 41
+ARM GAS  /tmp/ccEs6zRw.s 			page 41
 
 
 2254:FreeRTOS-Kernel/queue.c **** void vQueueDelete( QueueHandle_t xQueue )
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2308:FreeRTOS-Kernel/queue.c ****         return ( ( Queue_t * ) xQueue )->uxQueueNumber;
 2309:FreeRTOS-Kernel/queue.c ****     }
 2310:FreeRTOS-Kernel/queue.c **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 42
+ARM GAS  /tmp/ccEs6zRw.s 			page 42
 
 
 2311:FreeRTOS-Kernel/queue.c **** #endif /* configUSE_TRACE_FACILITY */
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2365:FreeRTOS-Kernel/queue.c ****     static UBaseType_t prvGetDisinheritPriorityAfterTimeout( const Queue_t * const pxQueue )
 2366:FreeRTOS-Kernel/queue.c ****     {
   29              		.loc 1 2366 5 view -0
-ARM GAS  /tmp/ccnrBCYQ.s 			page 43
+ARM GAS  /tmp/ccEs6zRw.s 			page 43
 
 
   30              		.cfi_startproc
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
   67              	.LFB34:
 2386:FreeRTOS-Kernel/queue.c **** 
 2387:FreeRTOS-Kernel/queue.c **** #endif /* configUSE_MUTEXES */
-ARM GAS  /tmp/ccnrBCYQ.s 			page 44
+ARM GAS  /tmp/ccEs6zRw.s 			page 44
 
 
 2388:FreeRTOS-Kernel/queue.c **** /*-----------------------------------------------------------*/
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2442:FreeRTOS-Kernel/queue.c ****         {
 2443:FreeRTOS-Kernel/queue.c ****             mtCOVERAGE_TEST_MARKER();
 2444:FreeRTOS-Kernel/queue.c ****         }
-ARM GAS  /tmp/ccnrBCYQ.s 			page 45
+ARM GAS  /tmp/ccEs6zRw.s 			page 45
 
 
 2445:FreeRTOS-Kernel/queue.c **** 
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2499:FreeRTOS-Kernel/queue.c ****      * removed from the queue while the queue was locked.  When a queue is
 2500:FreeRTOS-Kernel/queue.c ****      * locked items can be added or removed, but the event lists cannot be
 2501:FreeRTOS-Kernel/queue.c ****      * updated. */
-ARM GAS  /tmp/ccnrBCYQ.s 			page 46
+ARM GAS  /tmp/ccEs6zRw.s 			page 46
 
 
 2502:FreeRTOS-Kernel/queue.c ****     taskENTER_CRITICAL();
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2556:FreeRTOS-Kernel/queue.c ****                 {
 2557:FreeRTOS-Kernel/queue.c ****                     if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToReceive ) ) != pdFALSE
 2558:FreeRTOS-Kernel/queue.c ****                     {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 47
+ARM GAS  /tmp/ccEs6zRw.s 			page 47
 
 
 2559:FreeRTOS-Kernel/queue.c ****                         /* The task waiting has a higher priority so record that
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2613:FreeRTOS-Kernel/queue.c **** 
 2614:FreeRTOS-Kernel/queue.c **** static BaseType_t prvIsQueueEmpty( const Queue_t * pxQueue )
 2615:FreeRTOS-Kernel/queue.c **** {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 48
+ARM GAS  /tmp/ccEs6zRw.s 			page 48
 
 
 2616:FreeRTOS-Kernel/queue.c ****     BaseType_t xReturn;
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
   77              		.cfi_offset 14, -4
   78 0002 0446     		mov	r4, r0
 2661:FreeRTOS-Kernel/queue.c ****     BaseType_t xReturn;
-ARM GAS  /tmp/ccnrBCYQ.s 			page 49
+ARM GAS  /tmp/ccEs6zRw.s 			page 49
 
 
   79              		.loc 1 2661 5 is_stmt 1 view .LVU14
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  116              		.thumb_func
  118              	prvIsQueueEmpty:
  119              	.LVL10:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 50
+ARM GAS  /tmp/ccEs6zRw.s 			page 50
 
 
  120              	.LFB32:
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  162              		.section	.text.prvCopyDataToQueue,"ax",%progbits
  163              		.align	1
  164              		.syntax unified
-ARM GAS  /tmp/ccnrBCYQ.s 			page 51
+ARM GAS  /tmp/ccEs6zRw.s 			page 51
 
 
  165              		.thumb
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2463:FreeRTOS-Kernel/queue.c ****         }
  207              		.loc 1 2463 37 is_stmt 1 view .LVU52
 2467:FreeRTOS-Kernel/queue.c **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 52
+ARM GAS  /tmp/ccEs6zRw.s 			page 52
 
 
  208              		.loc 1 2467 5 view .LVU53
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2421:FreeRTOS-Kernel/queue.c **** 
  246              		.loc 1 2421 38 view .LVU70
  247 002e 226C     		ldr	r2, [r4, #64]
-ARM GAS  /tmp/ccnrBCYQ.s 			page 53
+ARM GAS  /tmp/ccEs6zRw.s 			page 53
 
 
 2421:FreeRTOS-Kernel/queue.c **** 
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  285 0052 2268     		ldr	r2, [r4]
 2437:FreeRTOS-Kernel/queue.c ****         {
  286              		.loc 1 2437 11 view .LVU88
-ARM GAS  /tmp/ccnrBCYQ.s 			page 54
+ARM GAS  /tmp/ccEs6zRw.s 			page 54
 
 
  287 0054 9342     		cmp	r3, r2
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  328              		.syntax unified
  329              		.thumb
  330              		.thumb_func
-ARM GAS  /tmp/ccnrBCYQ.s 			page 55
+ARM GAS  /tmp/ccEs6zRw.s 			page 55
 
 
  332              	prvCopyDataFromQueue:
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2486:FreeRTOS-Kernel/queue.c ****         }
  372              		.loc 1 2486 37 is_stmt 1 view .LVU117
 2489:FreeRTOS-Kernel/queue.c ****     }
-ARM GAS  /tmp/ccnrBCYQ.s 			page 56
+ARM GAS  /tmp/ccEs6zRw.s 			page 56
 
 
  373              		.loc 1 2489 9 view .LVU118
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  421              	.LVL39:
 2507:FreeRTOS-Kernel/queue.c ****         {
  422              		.loc 1 2507 9 is_stmt 1 view .LVU127
-ARM GAS  /tmp/ccnrBCYQ.s 			page 57
+ARM GAS  /tmp/ccEs6zRw.s 			page 57
 
 
 2507:FreeRTOS-Kernel/queue.c ****         {
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  462              	.LVL44:
 2583:FreeRTOS-Kernel/queue.c ****     {
  463              		.loc 1 2583 5 view .LVU143
-ARM GAS  /tmp/ccnrBCYQ.s 			page 58
+ARM GAS  /tmp/ccEs6zRw.s 			page 58
 
 
  464 0038 FFF7FEFF 		bl	vPortEnterCritical
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  502              		.loc 1 2593 21 is_stmt 1 view .LVU159
  503 005c FFF7FEFF 		bl	vTaskMissedYield
  504              	.LVL51:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 59
+ARM GAS  /tmp/ccEs6zRw.s 			page 59
 
 
  505 0060 F0E7     		b	.L38
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  550 0006 0446     		mov	r4, r0
  311:FreeRTOS-Kernel/queue.c **** 
  551              		.loc 1 311 28 discriminator 1 view .LVU171
-ARM GAS  /tmp/ccnrBCYQ.s 			page 60
+ARM GAS  /tmp/ccEs6zRw.s 			page 60
 
 
  313:FreeRTOS-Kernel/queue.c ****         ( pxQueue->uxLength >= 1U ) &&
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
   25:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****  * https://github.com/FreeRTOS
   26:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****  *
   27:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****  */
-ARM GAS  /tmp/ccnrBCYQ.s 			page 61
+ARM GAS  /tmp/ccEs6zRw.s 			page 61
 
 
   28:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
   82:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** #define portTICK_PERIOD_MS    ( ( TickType_t ) 1000 / configTICK_RATE_HZ )
   83:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** #define portBYTE_ALIGNMENT    8
   84:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** #define portDONT_DISCARD      __attribute__( ( used ) )
-ARM GAS  /tmp/ccnrBCYQ.s 			page 62
+ARM GAS  /tmp/ccEs6zRw.s 			page 62
 
 
   85:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** /*-----------------------------------------------------------*/
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  139:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     #define portSUPPRESS_TICKS_AND_SLEEP( xExpectedIdleTime )    vPortSuppressTicksAndSleep( xExpec
  140:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** #endif
  141:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** /*-----------------------------------------------------------*/
-ARM GAS  /tmp/ccnrBCYQ.s 			page 63
+ARM GAS  /tmp/ccEs6zRw.s 			page 63
 
 
  142:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  196:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     /* Obtain the number of the currently executing interrupt. */
  197:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
  198:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 64
+ARM GAS  /tmp/ccEs6zRw.s 			page 64
 
 
  199:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     if( ulCurrentInterrupt == 0 )
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  604              		.loc 2 217 5 view .LVU189
  605              		.syntax unified
  606              	@ 217 "FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h" 1
-ARM GAS  /tmp/ccnrBCYQ.s 			page 65
+ARM GAS  /tmp/ccEs6zRw.s 			page 65
 
 
  607 002a 4FF05003 		   mov r3, #80                                              
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  322:FreeRTOS-Kernel/queue.c ****             pxQueue->u.xQueue.pcReadFrom = pxQueue->pcHead + ( ( pxQueue->uxLength - 1U ) * pxQueue
  648              		.loc 1 322 32 is_stmt 0 view .LVU204
  649 0054 6360     		str	r3, [r4, #4]
-ARM GAS  /tmp/ccnrBCYQ.s 			page 66
+ARM GAS  /tmp/ccEs6zRw.s 			page 66
 
 
  323:FreeRTOS-Kernel/queue.c ****             pxQueue->cRxLock = queueUNLOCKED;
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  336:FreeRTOS-Kernel/queue.c ****                     {
  685              		.loc 1 336 21 is_stmt 1 view .LVU224
  336:FreeRTOS-Kernel/queue.c ****                     {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 67
+ARM GAS  /tmp/ccEs6zRw.s 			page 67
 
 
  686              		.loc 1 336 25 is_stmt 0 view .LVU225
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  734              		@ args = 4, pretend = 0, frame = 0
  735              		@ frame_needed = 0, uses_anonymous_args = 0
  571:FreeRTOS-Kernel/queue.c ****     /* Remove compiler warnings about unused parameters should
-ARM GAS  /tmp/ccnrBCYQ.s 			page 68
+ARM GAS  /tmp/ccEs6zRw.s 			page 68
 
 
  736              		.loc 1 571 1 is_stmt 0 view .LVU234
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  774              		.loc 1 587 9 is_stmt 1 view .LVU250
  587:FreeRTOS-Kernel/queue.c ****     }
  775              		.loc 1 587 28 is_stmt 0 view .LVU251
-ARM GAS  /tmp/ccnrBCYQ.s 			page 69
+ARM GAS  /tmp/ccEs6zRw.s 			page 69
 
 
  776 0018 0260     		str	r2, [r0]
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  820              	.LBB129:
  821              	.LBI129:
  213:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 70
+ARM GAS  /tmp/ccEs6zRw.s 			page 70
 
 
  822              		.loc 2 213 30 view .LVU264
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  870              	.LBE132:
  871              	.LBE131:
  388:FreeRTOS-Kernel/queue.c **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 71
+ARM GAS  /tmp/ccEs6zRw.s 			page 71
 
 
  872              		.loc 1 388 9 is_stmt 1 discriminator 1 view .LVU275
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  917              	.LBE134:
  406:FreeRTOS-Kernel/queue.c ****                 ( void ) xSize;                             /* Prevent unused variable warning when
  918              		.loc 1 406 17 is_stmt 1 discriminator 2 view .LVU287
-ARM GAS  /tmp/ccnrBCYQ.s 			page 72
+ARM GAS  /tmp/ccEs6zRw.s 			page 72
 
 
  406:FreeRTOS-Kernel/queue.c ****                 ( void ) xSize;                             /* Prevent unused variable warning when
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  450:FreeRTOS-Kernel/queue.c ****         Queue_t * const pxQueue = xQueue;
  963              		.loc 1 450 9 view .LVU300
  451:FreeRTOS-Kernel/queue.c **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 73
+ARM GAS  /tmp/ccEs6zRw.s 			page 73
 
 
  964              		.loc 1 451 9 view .LVU301
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  215:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
  1000              		.loc 2 215 5 view .LVU320
  1001              		.loc 2 217 5 view .LVU321
-ARM GAS  /tmp/ccnrBCYQ.s 			page 74
+ARM GAS  /tmp/ccEs6zRw.s 			page 74
 
 
  1002              		.syntax unified
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1050              		.align	1
  1051              		.global	xQueueCreateCountingSemaphoreStatic
  1052              		.syntax unified
-ARM GAS  /tmp/ccnrBCYQ.s 			page 75
+ARM GAS  /tmp/ccEs6zRw.s 			page 75
 
 
  1053              		.thumb
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1097              	
  1098              	@ 0 "" 2
  1099              	.LVL90:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 76
+ARM GAS  /tmp/ccEs6zRw.s 			page 76
 
 
  1100              		.thumb
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1142              		.align	1
  1143              		.global	xQueueGenericSend
  1144              		.syntax unified
-ARM GAS  /tmp/ccnrBCYQ.s 			page 77
+ARM GAS  /tmp/ccEs6zRw.s 			page 77
 
 
  1145              		.thumb
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1188 0014 E36B     		ldr	r3, [r4, #60]
  1189 0016 012B     		cmp	r3, #1
  1190 0018 1DD0     		beq	.L92
-ARM GAS  /tmp/ccnrBCYQ.s 			page 78
+ARM GAS  /tmp/ccEs6zRw.s 			page 78
 
 
  952:FreeRTOS-Kernel/queue.c ****     #if ( ( INCLUDE_xTaskGetSchedulerState == 1 ) || ( configUSE_TIMERS == 1 ) )
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1237              		.loc 2 217 5 is_stmt 0 view .LVU381
  1238              	.LBE145:
  1239              	.LBE144:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 79
+ARM GAS  /tmp/ccEs6zRw.s 			page 79
 
 
  950:FreeRTOS-Kernel/queue.c ****     configASSERT( !( ( pvItemToQueue == NULL ) && ( pxQueue->uxItemSize != ( UBaseType_t ) 0U ) ) )
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1282 005a 0646     		mov	r6, r0
  1283 005c 58B9     		cbnz	r0, .L109
  955:FreeRTOS-Kernel/queue.c ****     }
-ARM GAS  /tmp/ccnrBCYQ.s 			page 80
+ARM GAS  /tmp/ccEs6zRw.s 			page 80
 
 
  1284              		.loc 1 955 9 discriminator 2 view .LVU396
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1328 0084 636A     		ldr	r3, [r4, #36]
 1037:FreeRTOS-Kernel/queue.c ****                     {
  1329              		.loc 1 1037 23 view .LVU409
-ARM GAS  /tmp/ccnrBCYQ.s 			page 81
+ARM GAS  /tmp/ccEs6zRw.s 			page 81
 
 
  1330 0086 7BB9     		cbnz	r3, .L113
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1372              		.cfi_restore_state
 1039:FreeRTOS-Kernel/queue.c ****                         {
  1373              		.loc 1 1039 25 is_stmt 1 view .LVU422
-ARM GAS  /tmp/ccnrBCYQ.s 			page 82
+ARM GAS  /tmp/ccEs6zRw.s 			page 82
 
 
 1039:FreeRTOS-Kernel/queue.c ****                         {
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1415              	.LVL115:
 1093:FreeRTOS-Kernel/queue.c ****                 }
  1416              		.loc 1 1093 21 view .LVU436
-ARM GAS  /tmp/ccnrBCYQ.s 			page 83
+ARM GAS  /tmp/ccEs6zRw.s 			page 83
 
 
 1093:FreeRTOS-Kernel/queue.c ****                 }
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1075:FreeRTOS-Kernel/queue.c ****                 {
  1457              		.loc 1 1075 17 is_stmt 1 view .LVU451
 1075:FreeRTOS-Kernel/queue.c ****                 {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 84
+ARM GAS  /tmp/ccEs6zRw.s 			page 84
 
 
  1458              		.loc 1 1075 34 is_stmt 0 view .LVU452
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1111:FreeRTOS-Kernel/queue.c ****         {
  1500              		.loc 1 1111 11 discriminator 6 view .LVU465
  1501 0140 D8B9     		cbnz	r0, .L106
-ARM GAS  /tmp/ccnrBCYQ.s 			page 85
+ARM GAS  /tmp/ccEs6zRw.s 			page 85
 
 
 1113:FreeRTOS-Kernel/queue.c ****             {
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1145:FreeRTOS-Kernel/queue.c ****             ( void ) xTaskResumeAll();
  1544              		.loc 1 1145 13 view .LVU478
  1545 017a 2046     		mov	r0, r4
-ARM GAS  /tmp/ccnrBCYQ.s 			page 86
+ARM GAS  /tmp/ccEs6zRw.s 			page 86
 
 
  1546 017c FFF7FEFF 		bl	prvUnlockQueue
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1588              		.loc 1 623 37 is_stmt 0 view .LVU492
  1589 0008 0160     		str	r1, [r0]
  626:FreeRTOS-Kernel/queue.c **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 87
+ARM GAS  /tmp/ccEs6zRw.s 			page 87
 
 
  1590              		.loc 1 626 13 is_stmt 1 view .LVU493
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1637 0004 0B46     		mov	r3, r1
  667:FreeRTOS-Kernel/queue.c ****         const UBaseType_t uxMutexLength = ( UBaseType_t ) 1, uxMutexSize = ( UBaseType_t ) 0;
  1638              		.loc 1 667 9 is_stmt 1 view .LVU503
-ARM GAS  /tmp/ccnrBCYQ.s 			page 88
+ARM GAS  /tmp/ccEs6zRw.s 			page 88
 
 
  668:FreeRTOS-Kernel/queue.c **** 
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1682              	.LVL142:
  1683              	.LFB11:
  757:FreeRTOS-Kernel/queue.c ****         BaseType_t xReturn;
-ARM GAS  /tmp/ccnrBCYQ.s 			page 89
+ARM GAS  /tmp/ccEs6zRw.s 			page 89
 
 
  1684              		.loc 1 757 5 is_stmt 1 view -0
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1724              	.LBB151:
  215:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
  1725              		.loc 2 215 5 view .LVU532
-ARM GAS  /tmp/ccnrBCYQ.s 			page 90
+ARM GAS  /tmp/ccEs6zRw.s 			page 90
 
 
  1726              		.loc 2 217 5 view .LVU533
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  787:FreeRTOS-Kernel/queue.c ****             }
  1767              		.loc 1 787 17 is_stmt 1 view .LVU548
  787:FreeRTOS-Kernel/queue.c ****             }
-ARM GAS  /tmp/ccnrBCYQ.s 			page 91
+ARM GAS  /tmp/ccEs6zRw.s 			page 91
 
 
  1768              		.loc 1 787 26 is_stmt 0 view .LVU549
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1816 000c 0546     		mov	r5, r0
 1168:FreeRTOS-Kernel/queue.c ****     configASSERT( !( ( pvItemToQueue == NULL ) && ( pxQueue->uxItemSize != ( UBaseType_t ) 0U ) ) )
  1817              		.loc 1 1168 28 discriminator 2 view .LVU558
-ARM GAS  /tmp/ccnrBCYQ.s 			page 92
+ARM GAS  /tmp/ccEs6zRw.s 			page 92
 
 
 1169:FreeRTOS-Kernel/queue.c ****     configASSERT( !( ( xCopyPosition == queueOVERWRITE ) && ( pxQueue->uxLength != 1 ) ) );
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1861              	.LBB155:
  215:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
  1862              		.loc 2 215 5 view .LVU572
-ARM GAS  /tmp/ccnrBCYQ.s 			page 93
+ARM GAS  /tmp/ccEs6zRw.s 			page 93
 
 
  1863              		.loc 2 217 5 view .LVU573
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1910              	.LBE157:
  1911              	.LBE156:
 1169:FreeRTOS-Kernel/queue.c ****     configASSERT( !( ( xCopyPosition == queueOVERWRITE ) && ( pxQueue->uxLength != 1 ) ) );
-ARM GAS  /tmp/ccnrBCYQ.s 			page 94
+ARM GAS  /tmp/ccEs6zRw.s 			page 94
 
 
  1912              		.loc 1 1169 5 is_stmt 1 discriminator 2 view .LVU584
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  243:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     /* This return will not be reached but is necessary to prevent compiler
  244:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****      * warnings. */
  245:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     return ulOriginalBASEPRI;
-ARM GAS  /tmp/ccnrBCYQ.s 			page 95
+ARM GAS  /tmp/ccEs6zRw.s 			page 95
 
 
  1937              		.loc 2 245 5 discriminator 8 view .LVU592
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  1975 0080 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
  1976              	.LVL163:
  1977              	.L143:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 96
+ARM GAS  /tmp/ccEs6zRw.s 			page 96
 
 
  1978              	.LBB162:
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2015              		.loc 1 1282 29 is_stmt 1 view .LVU622
 1282:FreeRTOS-Kernel/queue.c ****                             {
  2016              		.loc 1 1282 31 is_stmt 0 view .LVU623
-ARM GAS  /tmp/ccnrBCYQ.s 			page 97
+ARM GAS  /tmp/ccEs6zRw.s 			page 97
 
 
  2017 00b0 DEB1     		cbz	r6, .L151
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2057              	@ 217 "FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h" 1
  2058 00d4 4FF05003 		   mov r3, #80                                              
  2059 00d8 83F31188 	   msr basepri, r3                                         
-ARM GAS  /tmp/ccnrBCYQ.s 			page 98
+ARM GAS  /tmp/ccEs6zRw.s 			page 98
 
 
  2060 00dc BFF36F8F 	   isb                                                     
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2108              		@ frame_needed = 0, uses_anonymous_args = 0
 1331:FreeRTOS-Kernel/queue.c ****     BaseType_t xReturn;
  2109              		.loc 1 1331 1 is_stmt 0 view .LVU646
-ARM GAS  /tmp/ccnrBCYQ.s 			page 99
+ARM GAS  /tmp/ccEs6zRw.s 			page 99
 
 
  2110 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2152              	.LBE168:
  2153              	.LBE167:
 1348:FreeRTOS-Kernel/queue.c **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 100
+ARM GAS  /tmp/ccEs6zRw.s 			page 100
 
 
  2154              		.loc 1 1348 5 is_stmt 1 discriminator 2 view .LVU659
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2195              	.LBI171:
  229:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** {
  2196              		.loc 2 229 34 discriminator 8 view .LVU673
-ARM GAS  /tmp/ccnrBCYQ.s 			page 101
+ARM GAS  /tmp/ccEs6zRw.s 			page 101
 
 
  2197              	.LBB172:
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2237              	.LVL182:
 1393:FreeRTOS-Kernel/queue.c **** 
  2238              		.loc 1 1393 40 view .LVU688
-ARM GAS  /tmp/ccnrBCYQ.s 			page 102
+ARM GAS  /tmp/ccEs6zRw.s 			page 102
 
 
  2239 005c A363     		str	r3, [r4, #56]
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  217:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     (
  2281              		.loc 2 217 5 is_stmt 0 view .LVU701
  2282              	.LBE182:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 103
+ARM GAS  /tmp/ccEs6zRw.s 			page 103
 
 
  2283              	.LBE181:
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2322 00a4 5BB2     		sxtb	r3, r3
  2323 00a6 84F84530 		strb	r3, [r4, #69]
  2324              	.LBE175:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 104
+ARM GAS  /tmp/ccEs6zRw.s 			page 104
 
 
 1486:FreeRTOS-Kernel/queue.c ****         }
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2367              		.loc 1 1491 21 view .LVU728
  2368              	.LBE183:
 1494:FreeRTOS-Kernel/queue.c **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 105
+ARM GAS  /tmp/ccEs6zRw.s 			page 105
 
 
  2369              		.loc 1 1494 5 is_stmt 1 view .LVU729
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2418              	.LFB17:
 1505:FreeRTOS-Kernel/queue.c ****     BaseType_t xEntryTimeSet = pdFALSE;
  2419              		.loc 1 1505 1 is_stmt 1 view -0
-ARM GAS  /tmp/ccnrBCYQ.s 			page 106
+ARM GAS  /tmp/ccEs6zRw.s 			page 106
 
 
  2420              		.cfi_startproc
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2461              	.LBB187:
  2462              	.LBI187:
  213:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 107
+ARM GAS  /tmp/ccEs6zRw.s 			page 107
 
 
  2463              		.loc 2 213 30 view .LVU752
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2507              	.LBE190:
  2508              	.LBE189:
 1513:FreeRTOS-Kernel/queue.c **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 108
+ARM GAS  /tmp/ccEs6zRw.s 			page 108
 
 
  2509              		.loc 1 1513 5 is_stmt 1 discriminator 1 view .LVU763
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2552 005e 2046     		mov	r0, r4
  2553 0060 FFF7FEFF 		bl	prvCopyDataFromQueue
  2554              	.LVL207:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 109
+ARM GAS  /tmp/ccEs6zRw.s 			page 109
 
 
 1538:FreeRTOS-Kernel/queue.c ****                 pxQueue->uxMessagesWaiting = ( UBaseType_t ) ( uxMessagesWaiting - ( UBaseType_t ) 
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2593              		.loc 1 1546 25 is_stmt 0 view .LVU790
  2594 0076 04F11000 		add	r0, r4, #16
  2595 007a FFF7FEFF 		bl	xTaskRemoveFromEventList
-ARM GAS  /tmp/ccnrBCYQ.s 			page 110
+ARM GAS  /tmp/ccEs6zRw.s 			page 110
 
 
  2596              	.LVL212:
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2637              	.LVL216:
  2638              	.L206:
 1584:FreeRTOS-Kernel/queue.c ****                 }
-ARM GAS  /tmp/ccnrBCYQ.s 			page 111
+ARM GAS  /tmp/ccEs6zRw.s 			page 111
 
 
  2639              		.loc 1 1584 35 view .LVU804
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2680              		.loc 1 1526 5 discriminator 8 view .LVU817
 1528:FreeRTOS-Kernel/queue.c ****         {
  2681              		.loc 1 1528 9 discriminator 8 view .LVU818
-ARM GAS  /tmp/ccnrBCYQ.s 			page 112
+ARM GAS  /tmp/ccEs6zRw.s 			page 112
 
 
  2682 00da FFF7FEFF 		bl	vPortEnterCritical
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1599:FreeRTOS-Kernel/queue.c **** 
  2722              		.loc 1 1599 9 discriminator 3 view .LVU833
  2723 0106 94F84530 		ldrb	r3, [r4, #69]	@ zero_extendqisi2
-ARM GAS  /tmp/ccnrBCYQ.s 			page 113
+ARM GAS  /tmp/ccEs6zRw.s 			page 113
 
 
  2724 010a 5BB2     		sxtb	r3, r3
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1614:FreeRTOS-Kernel/queue.c ****                 }
  2765              		.loc 1 1614 21 is_stmt 1 view .LVU847
  2766 0144 4FF0E023 		mov	r3, #-536813568
-ARM GAS  /tmp/ccnrBCYQ.s 			page 114
+ARM GAS  /tmp/ccEs6zRw.s 			page 114
 
 
  2767 0148 4FF08052 		mov	r2, #268435456
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2816              	.LVL236:
 1656:FreeRTOS-Kernel/queue.c ****     Queue_t * const pxQueue = xQueue;
  2817              		.loc 1 1656 5 view .LVU855
-ARM GAS  /tmp/ccnrBCYQ.s 			page 115
+ARM GAS  /tmp/ccEs6zRw.s 			page 115
 
 
 1657:FreeRTOS-Kernel/queue.c **** 
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2857              		.loc 2 213 30 view .LVU870
  2858              	.LBB199:
  215:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 116
+ARM GAS  /tmp/ccEs6zRw.s 			page 116
 
 
  2859              		.loc 2 215 5 view .LVU871
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2902              	
  2903              	@ 0 "" 2
  2904              	.LVL240:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 117
+ARM GAS  /tmp/ccEs6zRw.s 			page 117
 
 
  2905              		.thumb
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2945              	.L218:
 1727:FreeRTOS-Kernel/queue.c ****                 }
  2946              		.loc 1 1727 45 is_stmt 1 view .LVU897
-ARM GAS  /tmp/ccnrBCYQ.s 			page 118
+ARM GAS  /tmp/ccEs6zRw.s 			page 118
 
 
 1730:FreeRTOS-Kernel/queue.c **** 
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  2988 008c C3F8042D 		str	r2, [r3, #3332]
 1718:FreeRTOS-Kernel/queue.c ****                     }
  2989              		.loc 1 1718 25 view .LVU911
-ARM GAS  /tmp/ccnrBCYQ.s 			page 119
+ARM GAS  /tmp/ccEs6zRw.s 			page 119
 
 
  2990              		.syntax unified
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3031 00b4 0023     		movs	r3, #0
  3032 00b6 84F84530 		strb	r3, [r4, #69]
  3033 00ba 34E0     		b	.L223
-ARM GAS  /tmp/ccnrBCYQ.s 			page 120
+ARM GAS  /tmp/ccEs6zRw.s 			page 120
 
 
  3034              	.L241:
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3074              		.loc 1 1829 15 view .LVU938
  3075 00ea 0028     		cmp	r0, #0
  3076 00ec 42D1     		bne	.L235
-ARM GAS  /tmp/ccnrBCYQ.s 			page 121
+ARM GAS  /tmp/ccEs6zRw.s 			page 121
 
 
  3077              	.LVL261:
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3115 010a FFF7FEFF 		bl	vPortEnterCritical
  3116              	.LVL268:
 1769:FreeRTOS-Kernel/queue.c **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 122
+ARM GAS  /tmp/ccEs6zRw.s 			page 122
 
 
  3117              		.loc 1 1769 9 view .LVU955
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1799:FreeRTOS-Kernel/queue.c ****                 prvUnlockQueue( pxQueue );
  3158              		.loc 1 1799 17 view .LVU969
  3159 0146 0199     		ldr	r1, [sp, #4]
-ARM GAS  /tmp/ccnrBCYQ.s 			page 123
+ARM GAS  /tmp/ccEs6zRw.s 			page 123
 
 
  3160 0148 04F12400 		add	r0, r4, #36
@@ -7378,7 +7378,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3200 0176 0020     		movs	r0, #0
  3201 0178 78E7     		b	.L208
  3202              	.L242:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 124
+ARM GAS  /tmp/ccEs6zRw.s 			page 124
 
 
 1838:FreeRTOS-Kernel/queue.c ****                         {
@@ -7438,7 +7438,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  823:FreeRTOS-Kernel/queue.c **** 
  3247              		.loc 1 823 9 view .LVU996
  3248 0000 80B1     		cbz	r0, .L250
-ARM GAS  /tmp/ccnrBCYQ.s 			page 125
+ARM GAS  /tmp/ccEs6zRw.s 			page 125
 
 
  817:FreeRTOS-Kernel/queue.c ****         BaseType_t xReturn;
@@ -7498,7 +7498,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  854:FreeRTOS-Kernel/queue.c ****     }
  3287              		.loc 1 854 9 view .LVU1013
  854:FreeRTOS-Kernel/queue.c ****     }
-ARM GAS  /tmp/ccnrBCYQ.s 			page 126
+ARM GAS  /tmp/ccEs6zRw.s 			page 126
 
 
  3288              		.loc 1 854 16 is_stmt 0 view .LVU1014
@@ -7558,7 +7558,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3333 0036 EB68     		ldr	r3, [r5, #12]
  832:FreeRTOS-Kernel/queue.c ****             xReturn = pdPASS;
  3334              		.loc 1 832 59 view .LVU1024
-ARM GAS  /tmp/ccnrBCYQ.s 			page 127
+ARM GAS  /tmp/ccEs6zRw.s 			page 127
 
 
  3335 0038 0133     		adds	r3, r3, #1
@@ -7618,7 +7618,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3380              		.loc 1 1886 60 view .LVU1035
 1889:FreeRTOS-Kernel/queue.c **** 
  3381              		.loc 1 1889 5 view .LVU1036
-ARM GAS  /tmp/ccnrBCYQ.s 			page 128
+ARM GAS  /tmp/ccEs6zRw.s 			page 128
 
 
  3382 0006 90B1     		cbz	r0, .L272
@@ -7678,7 +7678,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3423              		.loc 1 1898 9 discriminator 3 view .LVU1049
  3424 002c FEE7     		b	.L258
  3425              	.LVL293:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 129
+ARM GAS  /tmp/ccEs6zRw.s 			page 129
 
 
  3426              	.L272:
@@ -7738,7 +7738,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3468 004e BFF36F8F 	   isb                                                     
  3469 0052 BFF34F8F 	   dsb                                                     
  3470              	
-ARM GAS  /tmp/ccnrBCYQ.s 			page 130
+ARM GAS  /tmp/ccEs6zRw.s 			page 130
 
 
  3471              	@ 0 "" 2
@@ -7798,7 +7798,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3510              		.loc 1 1942 17 view .LVU1076
  3511 006c FFF7FEFF 		bl	vPortExitCritical
  3512              	.LVL300:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 131
+ARM GAS  /tmp/ccEs6zRw.s 			page 131
 
 
 1944:FreeRTOS-Kernel/queue.c **** 
@@ -7858,7 +7858,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3555              		.thumb
  3556              		.syntax unified
  3557 0096 E9E7     		b	.L261
-ARM GAS  /tmp/ccnrBCYQ.s 			page 132
+ARM GAS  /tmp/ccEs6zRw.s 			page 132
 
 
  3558              	.LVL304:
@@ -7918,7 +7918,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3598 00c0 FFF7FEFF 		bl	xTaskResumeAll
  3599              	.LVL309:
  3600 00c4 09E0     		b	.L259
-ARM GAS  /tmp/ccnrBCYQ.s 			page 133
+ARM GAS  /tmp/ccEs6zRw.s 			page 133
 
 
  3601              	.L267:
@@ -7978,7 +7978,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3639 00e6 002B     		cmp	r3, #0
  3640 00e8 D6D0     		beq	.L277
 1961:FreeRTOS-Kernel/queue.c ****                 {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 134
+ARM GAS  /tmp/ccEs6zRw.s 			page 134
 
 
  3641              		.loc 1 1961 22 is_stmt 1 view .LVU1119
@@ -8038,7 +8038,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 1989:FreeRTOS-Kernel/queue.c ****             {
  3683              		.loc 1 1989 17 is_stmt 0 view .LVU1132
  3684 0122 2046     		mov	r0, r4
-ARM GAS  /tmp/ccnrBCYQ.s 			page 135
+ARM GAS  /tmp/ccEs6zRw.s 			page 135
 
 
  3685 0124 FFF7FEFF 		bl	prvIsQueueEmpty
@@ -8098,7 +8098,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3727 015c 89E7     		b	.L252
  3728              		.cfi_endproc
  3729              	.LFE19:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 136
+ARM GAS  /tmp/ccEs6zRw.s 			page 136
 
 
  3731              		.section	.text.xQueueReceiveFromISR,"ax",%progbits
@@ -8158,7 +8158,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2067:FreeRTOS-Kernel/queue.c ****     {
  3775              		.loc 1 2067 5 discriminator 8 view .LVU1156
  3776              	.LBB217:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 137
+ARM GAS  /tmp/ccEs6zRw.s 			page 137
 
 
  3777              	.LBI217:
@@ -8218,7 +8218,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3818              		.syntax unified
  3819              	@ 251 "FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h" 1
  3820 002c 85F31188 		   msr basepri, r5 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 138
+ARM GAS  /tmp/ccEs6zRw.s 			page 138
 
 
  3821              	@ 0 "" 2
@@ -8278,7 +8278,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3863              	.LBB229:
  3864              	.LBI229:
  213:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 139
+ARM GAS  /tmp/ccEs6zRw.s 			page 139
 
 
  3865              		.loc 2 213 30 view .LVU1183
@@ -8338,7 +8338,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2085:FreeRTOS-Kernel/queue.c ****             {
  3907              		.loc 1 2085 13 is_stmt 1 view .LVU1196
 2085:FreeRTOS-Kernel/queue.c ****             {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 140
+ARM GAS  /tmp/ccEs6zRw.s 			page 140
 
 
  3908              		.loc 1 2085 15 is_stmt 0 view .LVU1197
@@ -8398,7 +8398,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3947 00a4 06D0     		beq	.L300
 2116:FreeRTOS-Kernel/queue.c ****             }
  3948              		.loc 1 2116 17 discriminator 4 view .LVU1213
-ARM GAS  /tmp/ccnrBCYQ.s 			page 141
+ARM GAS  /tmp/ccEs6zRw.s 			page 141
 
 
 2116:FreeRTOS-Kernel/queue.c ****             }
@@ -8458,7 +8458,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  3991              		.loc 1 2119 21 view .LVU1225
  3992 00c6 0120     		movs	r0, #1
  3993 00c8 B0E7     		b	.L286
-ARM GAS  /tmp/ccnrBCYQ.s 			page 142
+ARM GAS  /tmp/ccEs6zRw.s 			page 142
 
 
  3994              	.L293:
@@ -8518,7 +8518,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4040 0002 68B1     		cbz	r0, .L311
  4041 0004 0D46     		mov	r5, r1
  4042 0006 0446     		mov	r4, r0
-ARM GAS  /tmp/ccnrBCYQ.s 			page 143
+ARM GAS  /tmp/ccEs6zRw.s 			page 143
 
 
 2145:FreeRTOS-Kernel/queue.c ****     configASSERT( !( ( pvBuffer == NULL ) && ( pxQueue->uxItemSize != ( UBaseType_t ) 0U ) ) );
@@ -8578,7 +8578,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  217:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     (
  4083              		.loc 2 217 5 view .LVU1250
  4084              		.syntax unified
-ARM GAS  /tmp/ccnrBCYQ.s 			page 144
+ARM GAS  /tmp/ccEs6zRw.s 			page 144
 
 
  4085              	@ 217 "FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h" 1
@@ -8638,7 +8638,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4129              		.loc 1 2146 5 is_stmt 1 discriminator 2 view .LVU1260
 2146:FreeRTOS-Kernel/queue.c ****     configASSERT( pxQueue->uxItemSize != 0 ); /* Can't peek a semaphore. */
  4130              		.loc 1 2146 5 discriminator 2 view .LVU1261
-ARM GAS  /tmp/ccnrBCYQ.s 			page 145
+ARM GAS  /tmp/ccEs6zRw.s 			page 145
 
 
  4131 0048 FEE7     		b	.L305
@@ -8698,7 +8698,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4171              	.LBB240:
  4172              	.LBI240:
  249:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 146
+ARM GAS  /tmp/ccEs6zRw.s 			page 146
 
 
  4173              		.loc 2 249 30 view .LVU1276
@@ -8758,7 +8758,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4218              	uxQueueMessagesWaiting:
  4219              	.LVL359:
  4220              	.LFB22:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 147
+ARM GAS  /tmp/ccEs6zRw.s 			page 147
 
 
 2198:FreeRTOS-Kernel/queue.c ****     UBaseType_t uxReturn;
@@ -8818,7 +8818,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  213:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** {
  4261              		.loc 2 213 30 view .LVU1303
  4262              	.LBB243:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 148
+ARM GAS  /tmp/ccEs6zRw.s 			page 148
 
 
  215:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
@@ -8878,7 +8878,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4310              	.LVL366:
 2222:FreeRTOS-Kernel/queue.c **** 
  4311              		.loc 1 2222 48 view .LVU1313
-ARM GAS  /tmp/ccnrBCYQ.s 			page 149
+ARM GAS  /tmp/ccEs6zRw.s 			page 149
 
 
 2224:FreeRTOS-Kernel/queue.c **** 
@@ -8938,7 +8938,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4351              	@ 0 "" 2
  4352              	.LVL371:
  4353              		.thumb
-ARM GAS  /tmp/ccnrBCYQ.s 			page 150
+ARM GAS  /tmp/ccEs6zRw.s 			page 150
 
 
  4354              		.syntax unified
@@ -8998,7 +8998,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2245:FreeRTOS-Kernel/queue.c ****     uxReturn = pxQueue->uxMessagesWaiting;
  4396              		.loc 1 2245 5 is_stmt 1 view .LVU1343
  4397              	.LBB246:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 151
+ARM GAS  /tmp/ccEs6zRw.s 			page 151
 
 
  4398              	.LBI246:
@@ -9058,7 +9058,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4443 0000 006C     		ldr	r0, [r0, #64]
  4444              	.LVL377:
 2350:FreeRTOS-Kernel/queue.c **** /*-----------------------------------------------------------*/
-ARM GAS  /tmp/ccnrBCYQ.s 			page 152
+ARM GAS  /tmp/ccEs6zRw.s 			page 152
 
 
  4445              		.loc 1 2350 1 view .LVU1355
@@ -9118,7 +9118,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4493              		.loc 1 2640 51 view .LVU1365
 2642:FreeRTOS-Kernel/queue.c **** 
  4494              		.loc 1 2642 5 view .LVU1366
-ARM GAS  /tmp/ccnrBCYQ.s 			page 153
+ARM GAS  /tmp/ccEs6zRw.s 			page 153
 
 
  4495 0000 18B1     		cbz	r0, .L336
@@ -9178,7 +9178,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4535              		.loc 1 2650 17 is_stmt 0 view .LVU1380
  4536 001c 0020     		movs	r0, #0
  4537              	.LVL384:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 154
+ARM GAS  /tmp/ccEs6zRw.s 			page 154
 
 
 2653:FreeRTOS-Kernel/queue.c **** 
@@ -9238,7 +9238,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2695:FreeRTOS-Kernel/queue.c ****         xReturn = pdFALSE;
  4574              		.loc 1 2695 17 view .LVU1394
  4575 000a 0020     		movs	r0, #0
-ARM GAS  /tmp/ccnrBCYQ.s 			page 155
+ARM GAS  /tmp/ccEs6zRw.s 			page 155
 
 
  4576              	.LVL386:
@@ -9298,7 +9298,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4615              	.LFE35:
  4617              		.section	.text.vQueueAddToRegistry,"ax",%progbits
  4618              		.align	1
-ARM GAS  /tmp/ccnrBCYQ.s 			page 156
+ARM GAS  /tmp/ccEs6zRw.s 			page 156
 
 
  4619              		.global	vQueueAddToRegistry
@@ -9358,7 +9358,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2749:FreeRTOS-Kernel/queue.c ****                 /* Were any co-routines waiting for data to become available? */
 2750:FreeRTOS-Kernel/queue.c ****                 if( listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToReceive ) ) == pdFALSE )
 2751:FreeRTOS-Kernel/queue.c ****                 {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 157
+ARM GAS  /tmp/ccEs6zRw.s 			page 157
 
 
 2752:FreeRTOS-Kernel/queue.c ****                     /* In this instance the co-routine could be placed directly
@@ -9418,7 +9418,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2806:FreeRTOS-Kernel/queue.c ****                  * leave with nothing? */
 2807:FreeRTOS-Kernel/queue.c ****                 if( xTicksToWait > ( TickType_t ) 0 )
 2808:FreeRTOS-Kernel/queue.c ****                 {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 158
+ARM GAS  /tmp/ccEs6zRw.s 			page 158
 
 
 2809:FreeRTOS-Kernel/queue.c ****                     /* As this is a co-routine we cannot block directly, but return
@@ -9478,7 +9478,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2863:FreeRTOS-Kernel/queue.c ****                     }
 2864:FreeRTOS-Kernel/queue.c ****                 }
 2865:FreeRTOS-Kernel/queue.c ****                 else
-ARM GAS  /tmp/ccnrBCYQ.s 			page 159
+ARM GAS  /tmp/ccEs6zRw.s 			page 159
 
 
 2866:FreeRTOS-Kernel/queue.c ****                 {
@@ -9538,7 +9538,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2920:FreeRTOS-Kernel/queue.c ****             }
 2921:FreeRTOS-Kernel/queue.c ****             else
 2922:FreeRTOS-Kernel/queue.c ****             {
-ARM GAS  /tmp/ccnrBCYQ.s 			page 160
+ARM GAS  /tmp/ccEs6zRw.s 			page 160
 
 
 2923:FreeRTOS-Kernel/queue.c ****                 mtCOVERAGE_TEST_MARKER();
@@ -9598,7 +9598,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 2977:FreeRTOS-Kernel/queue.c ****                     else
 2978:FreeRTOS-Kernel/queue.c ****                     {
 2979:FreeRTOS-Kernel/queue.c ****                         mtCOVERAGE_TEST_MARKER();
-ARM GAS  /tmp/ccnrBCYQ.s 			page 161
+ARM GAS  /tmp/ccEs6zRw.s 			page 161
 
 
 2980:FreeRTOS-Kernel/queue.c ****                     }
@@ -9658,7 +9658,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4642 0004 0446     		mov	r4, r0
  4643              		.loc 1 3017 31 is_stmt 1 discriminator 2 view .LVU1413
 3018:FreeRTOS-Kernel/queue.c **** 
-ARM GAS  /tmp/ccnrBCYQ.s 			page 162
+ARM GAS  /tmp/ccEs6zRw.s 			page 162
 
 
 3019:FreeRTOS-Kernel/queue.c ****         if( pcQueueName != NULL )
@@ -9718,7 +9718,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4685              	.LCFI50:
  4686              		.cfi_def_cfa_offset 4
  4687              		.cfi_offset 4, -4
-ARM GAS  /tmp/ccnrBCYQ.s 			page 163
+ARM GAS  /tmp/ccEs6zRw.s 			page 163
 
 
 3024:FreeRTOS-Kernel/queue.c ****             {
@@ -9778,7 +9778,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4715              		.loc 1 3032 22 is_stmt 1 view .LVU1436
 3032:FreeRTOS-Kernel/queue.c ****                 {
  4716              		.loc 1 3032 24 is_stmt 0 view .LVU1437
-ARM GAS  /tmp/ccnrBCYQ.s 			page 164
+ARM GAS  /tmp/ccEs6zRw.s 			page 164
 
 
  4717 003a 0028     		cmp	r0, #0
@@ -9838,7 +9838,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4755              		.loc 1 3053 5 view .LVU1453
  4756 005a 7047     		bx	lr
  4757              	.L360:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 165
+ARM GAS  /tmp/ccEs6zRw.s 			page 165
 
 
  4758              		.align	2
@@ -9898,7 +9898,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4793              		.loc 1 3074 37 is_stmt 0 view .LVU1462
  4794 000a 0B4A     		ldr	r2, .L371
  4795 000c 02EBC302 		add	r2, r2, r3, lsl #3
-ARM GAS  /tmp/ccnrBCYQ.s 			page 166
+ARM GAS  /tmp/ccEs6zRw.s 			page 166
 
 
  4796 0010 5268     		ldr	r2, [r2, #4]
@@ -9958,7 +9958,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4834              	.L370:
 3076:FreeRTOS-Kernel/queue.c ****                 break;
  4835              		.loc 1 3076 17 view .LVU1474
-ARM GAS  /tmp/ccnrBCYQ.s 			page 167
+ARM GAS  /tmp/ccEs6zRw.s 			page 167
 
 
 3076:FreeRTOS-Kernel/queue.c ****                 break;
@@ -10018,7 +10018,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4873              		.loc 1 3097 9 view .LVU1482
 3098:FreeRTOS-Kernel/queue.c **** 
 3099:FreeRTOS-Kernel/queue.c ****         traceENTER_vQueueUnregisterQueue( xQueue );
-ARM GAS  /tmp/ccnrBCYQ.s 			page 168
+ARM GAS  /tmp/ccEs6zRw.s 			page 168
 
 
  4874              		.loc 1 3099 51 view .LVU1483
@@ -10078,7 +10078,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  213:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** {
  4904              		.loc 2 213 30 view .LVU1494
  4905              	.LBB257:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 169
+ARM GAS  /tmp/ccEs6zRw.s 			page 169
 
 
  215:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h **** 
@@ -10138,7 +10138,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4945 0040 00000000 		.word	xQueueRegistry
  4946              		.cfi_endproc
  4947              	.LFE38:
-ARM GAS  /tmp/ccnrBCYQ.s 			page 170
+ARM GAS  /tmp/ccEs6zRw.s 			page 170
 
 
  4949              		.section	.text.vQueueDelete,"ax",%progbits
@@ -10198,7 +10198,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  4990              		.loc 2 215 5 view .LVU1519
  217:FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h ****     (
  4991              		.loc 2 217 5 view .LVU1520
-ARM GAS  /tmp/ccnrBCYQ.s 			page 171
+ARM GAS  /tmp/ccEs6zRw.s 			page 171
 
 
  4992              		.syntax unified
@@ -10258,7 +10258,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  5035 0002 0446     		mov	r4, r0
  5036 0004 0D46     		mov	r5, r1
  5037 0006 1646     		mov	r6, r2
-ARM GAS  /tmp/ccnrBCYQ.s 			page 172
+ARM GAS  /tmp/ccEs6zRw.s 			page 172
 
 
 3136:FreeRTOS-Kernel/queue.c ****         Queue_t * const pxQueue = xQueue;
@@ -10318,7 +10318,7 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
 3163:FreeRTOS-Kernel/queue.c ****             mtCOVERAGE_TEST_MARKER();
  5065              		.loc 1 3163 37 is_stmt 1 view .LVU1535
 3164:FreeRTOS-Kernel/queue.c ****         }
-ARM GAS  /tmp/ccnrBCYQ.s 			page 173
+ARM GAS  /tmp/ccEs6zRw.s 			page 173
 
 
 3165:FreeRTOS-Kernel/queue.c **** 
@@ -10377,89 +10377,89 @@ ARM GAS  /tmp/ccnrBCYQ.s 			page 1
  5110              		.file 9 "FreeRTOS-Kernel/include/queue.h"
  5111              		.file 10 "/usr/share/arm-gnu-toolchain/arm-none-eabi/include/string.h"
  5112              		.file 11 "<built-in>"
-ARM GAS  /tmp/ccnrBCYQ.s 			page 174
+ARM GAS  /tmp/ccEs6zRw.s 			page 174
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 queue.c
-     /tmp/ccnrBCYQ.s:21     .text.prvGetDisinheritPriorityAfterTimeout:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:26     .text.prvGetDisinheritPriorityAfterTimeout:0000000000000000 prvGetDisinheritPriorityAfterTimeout
-     /tmp/ccnrBCYQ.s:60     .text.prvIsQueueFull:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:65     .text.prvIsQueueFull:0000000000000000 prvIsQueueFull
-     /tmp/ccnrBCYQ.s:113    .text.prvIsQueueEmpty:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:118    .text.prvIsQueueEmpty:0000000000000000 prvIsQueueEmpty
-     /tmp/ccnrBCYQ.s:163    .text.prvCopyDataToQueue:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:168    .text.prvCopyDataToQueue:0000000000000000 prvCopyDataToQueue
-     /tmp/ccnrBCYQ.s:327    .text.prvCopyDataFromQueue:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:332    .text.prvCopyDataFromQueue:0000000000000000 prvCopyDataFromQueue
-     /tmp/ccnrBCYQ.s:392    .text.prvUnlockQueue:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:397    .text.prvUnlockQueue:0000000000000000 prvUnlockQueue
-     /tmp/ccnrBCYQ.s:522    .text.xQueueGenericReset:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:528    .text.xQueueGenericReset:0000000000000000 xQueueGenericReset
-     /tmp/ccnrBCYQ.s:724    .text.prvInitialiseNewQueue:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:729    .text.prvInitialiseNewQueue:0000000000000000 prvInitialiseNewQueue
-     /tmp/ccnrBCYQ.s:782    .text.xQueueGenericCreateStatic:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:788    .text.xQueueGenericCreateStatic:0000000000000000 xQueueGenericCreateStatic
-     /tmp/ccnrBCYQ.s:949    .text.xQueueGenericGetStaticBuffers:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:955    .text.xQueueGenericGetStaticBuffers:0000000000000000 xQueueGenericGetStaticBuffers
-     /tmp/ccnrBCYQ.s:1050   .text.xQueueCreateCountingSemaphoreStatic:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:1056   .text.xQueueCreateCountingSemaphoreStatic:0000000000000000 xQueueCreateCountingSemaphoreStatic
-     /tmp/ccnrBCYQ.s:1142   .text.xQueueGenericSend:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:1148   .text.xQueueGenericSend:0000000000000000 xQueueGenericSend
-     /tmp/ccnrBCYQ.s:1562   .text.prvInitialiseMutex:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:1567   .text.prvInitialiseMutex:0000000000000000 prvInitialiseMutex
-     /tmp/ccnrBCYQ.s:1615   .text.xQueueCreateMutexStatic:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:1621   .text.xQueueCreateMutexStatic:0000000000000000 xQueueCreateMutexStatic
-     /tmp/ccnrBCYQ.s:1675   .text.xQueueGiveMutexRecursive:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:1681   .text.xQueueGiveMutexRecursive:0000000000000000 xQueueGiveMutexRecursive
-     /tmp/ccnrBCYQ.s:1781   .text.xQueueGenericSendFromISR:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:1787   .text.xQueueGenericSendFromISR:0000000000000000 xQueueGenericSendFromISR
-     /tmp/ccnrBCYQ.s:2096   .text.xQueueGiveFromISR:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:2102   .text.xQueueGiveFromISR:0000000000000000 xQueueGiveFromISR
-     /tmp/ccnrBCYQ.s:2410   .text.xQueueReceive:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:2416   .text.xQueueReceive:0000000000000000 xQueueReceive
-     /tmp/ccnrBCYQ.s:2790   .text.xQueueSemaphoreTake:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:2796   .text.xQueueSemaphoreTake:0000000000000000 xQueueSemaphoreTake
-     /tmp/ccnrBCYQ.s:3231   .text.xQueueTakeMutexRecursive:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:3237   .text.xQueueTakeMutexRecursive:0000000000000000 xQueueTakeMutexRecursive
-     /tmp/ccnrBCYQ.s:3350   .text.xQueuePeek:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:3356   .text.xQueuePeek:0000000000000000 xQueuePeek
-     /tmp/ccnrBCYQ.s:3732   .text.xQueueReceiveFromISR:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:3738   .text.xQueueReceiveFromISR:0000000000000000 xQueueReceiveFromISR
-     /tmp/ccnrBCYQ.s:4010   .text.xQueuePeekFromISR:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:4016   .text.xQueuePeekFromISR:0000000000000000 xQueuePeekFromISR
-     /tmp/ccnrBCYQ.s:4212   .text.uxQueueMessagesWaiting:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:4218   .text.uxQueueMessagesWaiting:0000000000000000 uxQueueMessagesWaiting
-     /tmp/ccnrBCYQ.s:4287   .text.uxQueueSpacesAvailable:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:4293   .text.uxQueueSpacesAvailable:0000000000000000 uxQueueSpacesAvailable
-     /tmp/ccnrBCYQ.s:4366   .text.uxQueueMessagesWaitingFromISR:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:4372   .text.uxQueueMessagesWaitingFromISR:0000000000000000 uxQueueMessagesWaitingFromISR
-     /tmp/ccnrBCYQ.s:4425   .text.uxQueueGetQueueItemSize:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:4431   .text.uxQueueGetQueueItemSize:0000000000000000 uxQueueGetQueueItemSize
-     /tmp/ccnrBCYQ.s:4451   .text.uxQueueGetQueueLength:0000000000000000 $t
-ARM GAS  /tmp/ccnrBCYQ.s 			page 175
+     /tmp/ccEs6zRw.s:21     .text.prvGetDisinheritPriorityAfterTimeout:0000000000000000 $t
+     /tmp/ccEs6zRw.s:26     .text.prvGetDisinheritPriorityAfterTimeout:0000000000000000 prvGetDisinheritPriorityAfterTimeout
+     /tmp/ccEs6zRw.s:60     .text.prvIsQueueFull:0000000000000000 $t
+     /tmp/ccEs6zRw.s:65     .text.prvIsQueueFull:0000000000000000 prvIsQueueFull
+     /tmp/ccEs6zRw.s:113    .text.prvIsQueueEmpty:0000000000000000 $t
+     /tmp/ccEs6zRw.s:118    .text.prvIsQueueEmpty:0000000000000000 prvIsQueueEmpty
+     /tmp/ccEs6zRw.s:163    .text.prvCopyDataToQueue:0000000000000000 $t
+     /tmp/ccEs6zRw.s:168    .text.prvCopyDataToQueue:0000000000000000 prvCopyDataToQueue
+     /tmp/ccEs6zRw.s:327    .text.prvCopyDataFromQueue:0000000000000000 $t
+     /tmp/ccEs6zRw.s:332    .text.prvCopyDataFromQueue:0000000000000000 prvCopyDataFromQueue
+     /tmp/ccEs6zRw.s:392    .text.prvUnlockQueue:0000000000000000 $t
+     /tmp/ccEs6zRw.s:397    .text.prvUnlockQueue:0000000000000000 prvUnlockQueue
+     /tmp/ccEs6zRw.s:522    .text.xQueueGenericReset:0000000000000000 $t
+     /tmp/ccEs6zRw.s:528    .text.xQueueGenericReset:0000000000000000 xQueueGenericReset
+     /tmp/ccEs6zRw.s:724    .text.prvInitialiseNewQueue:0000000000000000 $t
+     /tmp/ccEs6zRw.s:729    .text.prvInitialiseNewQueue:0000000000000000 prvInitialiseNewQueue
+     /tmp/ccEs6zRw.s:782    .text.xQueueGenericCreateStatic:0000000000000000 $t
+     /tmp/ccEs6zRw.s:788    .text.xQueueGenericCreateStatic:0000000000000000 xQueueGenericCreateStatic
+     /tmp/ccEs6zRw.s:949    .text.xQueueGenericGetStaticBuffers:0000000000000000 $t
+     /tmp/ccEs6zRw.s:955    .text.xQueueGenericGetStaticBuffers:0000000000000000 xQueueGenericGetStaticBuffers
+     /tmp/ccEs6zRw.s:1050   .text.xQueueCreateCountingSemaphoreStatic:0000000000000000 $t
+     /tmp/ccEs6zRw.s:1056   .text.xQueueCreateCountingSemaphoreStatic:0000000000000000 xQueueCreateCountingSemaphoreStatic
+     /tmp/ccEs6zRw.s:1142   .text.xQueueGenericSend:0000000000000000 $t
+     /tmp/ccEs6zRw.s:1148   .text.xQueueGenericSend:0000000000000000 xQueueGenericSend
+     /tmp/ccEs6zRw.s:1562   .text.prvInitialiseMutex:0000000000000000 $t
+     /tmp/ccEs6zRw.s:1567   .text.prvInitialiseMutex:0000000000000000 prvInitialiseMutex
+     /tmp/ccEs6zRw.s:1615   .text.xQueueCreateMutexStatic:0000000000000000 $t
+     /tmp/ccEs6zRw.s:1621   .text.xQueueCreateMutexStatic:0000000000000000 xQueueCreateMutexStatic
+     /tmp/ccEs6zRw.s:1675   .text.xQueueGiveMutexRecursive:0000000000000000 $t
+     /tmp/ccEs6zRw.s:1681   .text.xQueueGiveMutexRecursive:0000000000000000 xQueueGiveMutexRecursive
+     /tmp/ccEs6zRw.s:1781   .text.xQueueGenericSendFromISR:0000000000000000 $t
+     /tmp/ccEs6zRw.s:1787   .text.xQueueGenericSendFromISR:0000000000000000 xQueueGenericSendFromISR
+     /tmp/ccEs6zRw.s:2096   .text.xQueueGiveFromISR:0000000000000000 $t
+     /tmp/ccEs6zRw.s:2102   .text.xQueueGiveFromISR:0000000000000000 xQueueGiveFromISR
+     /tmp/ccEs6zRw.s:2410   .text.xQueueReceive:0000000000000000 $t
+     /tmp/ccEs6zRw.s:2416   .text.xQueueReceive:0000000000000000 xQueueReceive
+     /tmp/ccEs6zRw.s:2790   .text.xQueueSemaphoreTake:0000000000000000 $t
+     /tmp/ccEs6zRw.s:2796   .text.xQueueSemaphoreTake:0000000000000000 xQueueSemaphoreTake
+     /tmp/ccEs6zRw.s:3231   .text.xQueueTakeMutexRecursive:0000000000000000 $t
+     /tmp/ccEs6zRw.s:3237   .text.xQueueTakeMutexRecursive:0000000000000000 xQueueTakeMutexRecursive
+     /tmp/ccEs6zRw.s:3350   .text.xQueuePeek:0000000000000000 $t
+     /tmp/ccEs6zRw.s:3356   .text.xQueuePeek:0000000000000000 xQueuePeek
+     /tmp/ccEs6zRw.s:3732   .text.xQueueReceiveFromISR:0000000000000000 $t
+     /tmp/ccEs6zRw.s:3738   .text.xQueueReceiveFromISR:0000000000000000 xQueueReceiveFromISR
+     /tmp/ccEs6zRw.s:4010   .text.xQueuePeekFromISR:0000000000000000 $t
+     /tmp/ccEs6zRw.s:4016   .text.xQueuePeekFromISR:0000000000000000 xQueuePeekFromISR
+     /tmp/ccEs6zRw.s:4212   .text.uxQueueMessagesWaiting:0000000000000000 $t
+     /tmp/ccEs6zRw.s:4218   .text.uxQueueMessagesWaiting:0000000000000000 uxQueueMessagesWaiting
+     /tmp/ccEs6zRw.s:4287   .text.uxQueueSpacesAvailable:0000000000000000 $t
+     /tmp/ccEs6zRw.s:4293   .text.uxQueueSpacesAvailable:0000000000000000 uxQueueSpacesAvailable
+     /tmp/ccEs6zRw.s:4366   .text.uxQueueMessagesWaitingFromISR:0000000000000000 $t
+     /tmp/ccEs6zRw.s:4372   .text.uxQueueMessagesWaitingFromISR:0000000000000000 uxQueueMessagesWaitingFromISR
+     /tmp/ccEs6zRw.s:4425   .text.uxQueueGetQueueItemSize:0000000000000000 $t
+     /tmp/ccEs6zRw.s:4431   .text.uxQueueGetQueueItemSize:0000000000000000 uxQueueGetQueueItemSize
+     /tmp/ccEs6zRw.s:4451   .text.uxQueueGetQueueLength:0000000000000000 $t
+ARM GAS  /tmp/ccEs6zRw.s 			page 175
 
 
-     /tmp/ccnrBCYQ.s:4457   .text.uxQueueGetQueueLength:0000000000000000 uxQueueGetQueueLength
-     /tmp/ccnrBCYQ.s:4477   .text.xQueueIsQueueEmptyFromISR:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:4483   .text.xQueueIsQueueEmptyFromISR:0000000000000000 xQueueIsQueueEmptyFromISR
-     /tmp/ccnrBCYQ.s:4546   .text.xQueueIsQueueFullFromISR:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:4552   .text.xQueueIsQueueFullFromISR:0000000000000000 xQueueIsQueueFullFromISR
-     /tmp/ccnrBCYQ.s:4618   .text.vQueueAddToRegistry:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:4624   .text.vQueueAddToRegistry:0000000000000000 vQueueAddToRegistry
-     /tmp/ccnrBCYQ.s:4760   .text.vQueueAddToRegistry:000000000000005c $d
-     /tmp/ccnrBCYQ.s:5100   .bss.xQueueRegistry:0000000000000000 xQueueRegistry
-     /tmp/ccnrBCYQ.s:4765   .text.pcQueueGetName:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:4771   .text.pcQueueGetName:0000000000000000 pcQueueGetName
-     /tmp/ccnrBCYQ.s:4854   .text.pcQueueGetName:0000000000000038 $d
-     /tmp/ccnrBCYQ.s:4859   .text.vQueueUnregisterQueue:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:4865   .text.vQueueUnregisterQueue:0000000000000000 vQueueUnregisterQueue
-     /tmp/ccnrBCYQ.s:4945   .text.vQueueUnregisterQueue:0000000000000040 $d
-     /tmp/ccnrBCYQ.s:4950   .text.vQueueDelete:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:4956   .text.vQueueDelete:0000000000000000 vQueueDelete
-     /tmp/ccnrBCYQ.s:5014   .text.vQueueWaitForMessageRestricted:0000000000000000 $t
-     /tmp/ccnrBCYQ.s:5020   .text.vQueueWaitForMessageRestricted:0000000000000000 vQueueWaitForMessageRestricted
-     /tmp/ccnrBCYQ.s:5097   .bss.xQueueRegistry:0000000000000000 $d
+     /tmp/ccEs6zRw.s:4457   .text.uxQueueGetQueueLength:0000000000000000 uxQueueGetQueueLength
+     /tmp/ccEs6zRw.s:4477   .text.xQueueIsQueueEmptyFromISR:0000000000000000 $t
+     /tmp/ccEs6zRw.s:4483   .text.xQueueIsQueueEmptyFromISR:0000000000000000 xQueueIsQueueEmptyFromISR
+     /tmp/ccEs6zRw.s:4546   .text.xQueueIsQueueFullFromISR:0000000000000000 $t
+     /tmp/ccEs6zRw.s:4552   .text.xQueueIsQueueFullFromISR:0000000000000000 xQueueIsQueueFullFromISR
+     /tmp/ccEs6zRw.s:4618   .text.vQueueAddToRegistry:0000000000000000 $t
+     /tmp/ccEs6zRw.s:4624   .text.vQueueAddToRegistry:0000000000000000 vQueueAddToRegistry
+     /tmp/ccEs6zRw.s:4760   .text.vQueueAddToRegistry:000000000000005c $d
+     /tmp/ccEs6zRw.s:5100   .bss.xQueueRegistry:0000000000000000 xQueueRegistry
+     /tmp/ccEs6zRw.s:4765   .text.pcQueueGetName:0000000000000000 $t
+     /tmp/ccEs6zRw.s:4771   .text.pcQueueGetName:0000000000000000 pcQueueGetName
+     /tmp/ccEs6zRw.s:4854   .text.pcQueueGetName:0000000000000038 $d
+     /tmp/ccEs6zRw.s:4859   .text.vQueueUnregisterQueue:0000000000000000 $t
+     /tmp/ccEs6zRw.s:4865   .text.vQueueUnregisterQueue:0000000000000000 vQueueUnregisterQueue
+     /tmp/ccEs6zRw.s:4945   .text.vQueueUnregisterQueue:0000000000000040 $d
+     /tmp/ccEs6zRw.s:4950   .text.vQueueDelete:0000000000000000 $t
+     /tmp/ccEs6zRw.s:4956   .text.vQueueDelete:0000000000000000 vQueueDelete
+     /tmp/ccEs6zRw.s:5014   .text.vQueueWaitForMessageRestricted:0000000000000000 $t
+     /tmp/ccEs6zRw.s:5020   .text.vQueueWaitForMessageRestricted:0000000000000000 vQueueWaitForMessageRestricted
+     /tmp/ccEs6zRw.s:5097   .bss.xQueueRegistry:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 vPortEnterCritical

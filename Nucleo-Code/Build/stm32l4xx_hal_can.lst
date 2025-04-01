@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccgJ85Jg.s 			page 1
+ARM GAS  /tmp/ccGTiPoM.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
   27:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   ==============================================================================
   28:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****                         ##### How to use this driver #####
   29:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   ==============================================================================
-ARM GAS  /tmp/ccgJ85Jg.s 			page 2
+ARM GAS  /tmp/ccGTiPoM.s 			page 2
 
 
   30:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     [..]
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
   84:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
   85:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       (#) Transmission:
   86:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****             (++) Monitor the Tx mailboxes availability until at least one Tx
-ARM GAS  /tmp/ccgJ85Jg.s 			page 3
+ARM GAS  /tmp/ccGTiPoM.s 			page 3
 
 
   87:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****                  mailbox is free, using HAL_CAN_GetTxMailboxesFreeLevel().
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  141:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   =============================================
  142:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
  143:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   The compilation define  USE_HAL_CAN_REGISTER_CALLBACKS when set to 1
-ARM GAS  /tmp/ccgJ85Jg.s 			page 4
+ARM GAS  /tmp/ccGTiPoM.s 			page 4
 
 
  144:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   allows the user to configure dynamically the driver callbacks.
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  198:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   in HAL_CAN_STATE_READY or HAL_CAN_STATE_RESET state,
  199:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   thus registered (user) MspInit/DeInit callbacks can be used during the Init/DeInit.
  200:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   In that case first register the MspInit/MspDeInit user callbacks
-ARM GAS  /tmp/ccgJ85Jg.s 			page 5
+ARM GAS  /tmp/ccGTiPoM.s 			page 5
 
 
  201:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   using HAL_CAN_RegisterCallback() before calling HAL_CAN_DeInit()
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  255:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   ==============================================================================
  256:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****               ##### Initialization and de-initialization functions #####
  257:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   ==============================================================================
-ARM GAS  /tmp/ccgJ85Jg.s 			page 6
+ARM GAS  /tmp/ccGTiPoM.s 			page 6
 
 
  258:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     [..]  This section provides functions allowing to:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  312:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     hcan->TxMailbox2AbortCallback    =  HAL_CAN_TxMailbox2AbortCallback;    /* Legacy weak TxMailbo
  313:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     hcan->SleepCallback              =  HAL_CAN_SleepCallback;              /* Legacy weak SleepCal
  314:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     hcan->WakeUpFromRxMsgCallback    =  HAL_CAN_WakeUpFromRxMsgCallback;    /* Legacy weak WakeUpFr
-ARM GAS  /tmp/ccgJ85Jg.s 			page 7
+ARM GAS  /tmp/ccGTiPoM.s 			page 7
 
 
  315:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     hcan->ErrorCallback              =  HAL_CAN_ErrorCallback;              /* Legacy weak ErrorCal
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  369:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       /* Change CAN state */
  370:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       hcan->State = HAL_CAN_STATE_ERROR;
  371:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
-ARM GAS  /tmp/ccgJ85Jg.s 			page 8
+ARM GAS  /tmp/ccGTiPoM.s 			page 8
 
 
  372:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       return HAL_ERROR;
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  426:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   /* Set the transmit FIFO priority */
  427:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   if (hcan->Init.TransmitFifoPriority == ENABLE)
  428:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   {
-ARM GAS  /tmp/ccgJ85Jg.s 			page 9
+ARM GAS  /tmp/ccGTiPoM.s 			page 9
 
 
  429:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     SET_BIT(hcan->Instance->MCR, CAN_MCR_TXFP);
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  483:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** #else
  484:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   /* DeInit the low level hardware: CLOCK, NVIC */
  485:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   HAL_CAN_MspDeInit(hcan);
-ARM GAS  /tmp/ccgJ85Jg.s 			page 10
+ARM GAS  /tmp/ccGTiPoM.s 			page 10
 
 
  486:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** #endif /* USE_HAL_CAN_REGISTER_CALLBACKS */
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  277:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
   55              		.loc 1 277 3 view .LVU4
  280:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   {
-ARM GAS  /tmp/ccgJ85Jg.s 			page 11
+ARM GAS  /tmp/ccGTiPoM.s 			page 11
 
 
   56              		.loc 1 280 3 view .LVU5
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
   92 0018 1360     		str	r3, [r2]
  338:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
   93              		.loc 1 338 3 view .LVU24
-ARM GAS  /tmp/ccgJ85Jg.s 			page 12
+ARM GAS  /tmp/ccGTiPoM.s 			page 12
 
 
  338:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  131              	.L3:
  451:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
  132              		.loc 1 451 1 view .LVU42
-ARM GAS  /tmp/ccgJ85Jg.s 			page 13
+ARM GAS  /tmp/ccGTiPoM.s 			page 13
 
 
  133 0044 38BD     		pop	{r3, r4, r5, pc}
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  172              		.loc 1 367 7 is_stmt 1 view .LVU57
  367:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
  173              		.loc 1 367 11 is_stmt 0 view .LVU58
-ARM GAS  /tmp/ccgJ85Jg.s 			page 14
+ARM GAS  /tmp/ccGTiPoM.s 			page 14
 
 
  174 006e 636A     		ldr	r3, [r4, #36]
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  397:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   {
  213              		.loc 1 397 6 view .LVU74
  214 00a0 012B     		cmp	r3, #1
-ARM GAS  /tmp/ccgJ85Jg.s 			page 15
+ARM GAS  /tmp/ccGTiPoM.s 			page 15
 
 
  215 00a2 39D0     		beq	.L31
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  256 00dc 1360     		str	r3, [r2]
  257              	.L20:
  437:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****                                             hcan->Init.SyncJumpWidth  |
-ARM GAS  /tmp/ccgJ85Jg.s 			page 16
+ARM GAS  /tmp/ccGTiPoM.s 			page 16
 
 
  258              		.loc 1 437 3 view .LVU88
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  409:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   }
  303              		.loc 1 409 5 view .LVU98
  304 0124 2268     		ldr	r2, [r4]
-ARM GAS  /tmp/ccgJ85Jg.s 			page 17
+ARM GAS  /tmp/ccGTiPoM.s 			page 17
 
 
  305 0126 1368     		ldr	r3, [r2]
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  524:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** {
  349              		.loc 1 524 1 is_stmt 1 view -0
  350              		.cfi_startproc
-ARM GAS  /tmp/ccgJ85Jg.s 			page 18
+ARM GAS  /tmp/ccGTiPoM.s 			page 18
 
 
  351              		@ args = 0, pretend = 0, frame = 0
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  562:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   HAL_StatusTypeDef status = HAL_OK;
  563:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
  564:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   if (pCallback == NULL)
-ARM GAS  /tmp/ccgJ85Jg.s 			page 19
+ARM GAS  /tmp/ccGTiPoM.s 			page 19
 
 
  565:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   {
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  619:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
  620:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       case HAL_CAN_WAKEUP_FROM_RX_MSG_CB_ID :
  621:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****         hcan->WakeUpFromRxMsgCallback = pCallback;
-ARM GAS  /tmp/ccgJ85Jg.s 			page 20
+ARM GAS  /tmp/ccGTiPoM.s 			page 20
 
 
  622:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****         break;
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  676:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** }
  677:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
  678:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** /**
-ARM GAS  /tmp/ccgJ85Jg.s 			page 21
+ARM GAS  /tmp/ccGTiPoM.s 			page 21
 
 
  679:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   * @brief  Unregister a CAN CallBack.
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  733:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
  734:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       case HAL_CAN_RX_FIFO0_MSG_PENDING_CB_ID :
  735:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****         hcan->RxFifo0MsgPendingCallback = HAL_CAN_RxFifo0MsgPendingCallback;
-ARM GAS  /tmp/ccgJ85Jg.s 			page 22
+ARM GAS  /tmp/ccGTiPoM.s 			page 22
 
 
  736:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****         break;
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  790:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
  791:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       default :
  792:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****         /* Update the error code */
-ARM GAS  /tmp/ccgJ85Jg.s 			page 23
+ARM GAS  /tmp/ccGTiPoM.s 			page 23
 
 
  793:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****         hcan->ErrorCode |= HAL_CAN_ERROR_INVALID_CALLBACK;
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  842:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   uint32_t filternbrbitpos;
  375              		.loc 1 842 3 view .LVU107
  843:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   CAN_TypeDef *can_ip = hcan->Instance;
-ARM GAS  /tmp/ccgJ85Jg.s 			page 24
+ARM GAS  /tmp/ccGTiPoM.s 			page 24
 
 
  376              		.loc 1 843 3 view .LVU108
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  881:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
  882:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** #endif /* CAN3 */
  883:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     /* Convert filter number into bit position */
-ARM GAS  /tmp/ccgJ85Jg.s 			page 25
+ARM GAS  /tmp/ccGTiPoM.s 			page 25
 
 
  884:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     filternbrbitpos = (uint32_t)1 << (sFilterConfig->FilterBank & 0x1FU);
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  938:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     {
  939:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       /* FIFO 0 assignation for the filter */
  940:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       CLEAR_BIT(can_ip->FFA1R, filternbrbitpos);
-ARM GAS  /tmp/ccgJ85Jg.s 			page 26
+ARM GAS  /tmp/ccGTiPoM.s 			page 26
 
 
  941:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     }
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  853:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     assert_param(IS_CAN_FILTER_MODE(sFilterConfig->FilterMode));
  416              		.loc 1 853 5 view .LVU126
  854:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     assert_param(IS_CAN_FILTER_SCALE(sFilterConfig->FilterScale));
-ARM GAS  /tmp/ccgJ85Jg.s 			page 27
+ARM GAS  /tmp/ccGTiPoM.s 			page 27
 
 
  417              		.loc 1 854 5 view .LVU127
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  897:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****         ((0x0000FFFFU & (uint32_t)sFilterConfig->FilterMaskIdLow) << 16U) |
  454              		.loc 1 897 44 view .LVU145
  455 0056 4869     		ldr	r0, [r1, #20]
-ARM GAS  /tmp/ccgJ85Jg.s 			page 28
+ARM GAS  /tmp/ccGTiPoM.s 			page 28
 
 
  898:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****         (0x0000FFFFU & (uint32_t)sFilterConfig->FilterIdLow);
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  494 008c 0869     		ldr	r0, [r1, #16]
  937:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     {
  495              		.loc 1 937 8 view .LVU162
-ARM GAS  /tmp/ccgJ85Jg.s 			page 29
+ARM GAS  /tmp/ccGTiPoM.s 			page 29
 
 
  496 008e 70BB     		cbnz	r0, .L42
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  915:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****         (0x0000FFFFU & (uint32_t)sFilterConfig->FilterIdLow);
  539              		.loc 1 915 72 view .LVU175
  540 00c2 0D68     		ldr	r5, [r1]
-ARM GAS  /tmp/ccgJ85Jg.s 			page 30
+ARM GAS  /tmp/ccGTiPoM.s 			page 30
 
 
  541 00c4 44EA0544 		orr	r4, r4, r5, lsl #16
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  586              		.thumb
  587              		.thumb_func
  589              	HAL_CAN_Start:
-ARM GAS  /tmp/ccgJ85Jg.s 			page 31
+ARM GAS  /tmp/ccGTiPoM.s 			page 31
 
 
  590              	.LVL28:
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  604 0002 0446     		mov	r4, r0
 1008:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   uint32_t tickstart;
  605              		.loc 1 1008 3 is_stmt 1 view .LVU188
-ARM GAS  /tmp/ccgJ85Jg.s 			page 32
+ARM GAS  /tmp/ccGTiPoM.s 			page 32
 
 
 1009:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  620              		.loc 1 1048 12 is_stmt 0 view .LVU196
  621 0016 0125     		movs	r5, #1
  622              	.LVL29:
-ARM GAS  /tmp/ccgJ85Jg.s 			page 33
+ARM GAS  /tmp/ccGTiPoM.s 			page 33
 
 
  623              	.L56:
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1025:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       {
  661              		.loc 1 1025 10 view .LVU212
  662 0042 0A2B     		cmp	r3, #10
-ARM GAS  /tmp/ccgJ85Jg.s 			page 34
+ARM GAS  /tmp/ccGTiPoM.s 			page 34
 
 
  663 0044 F5D9     		bls	.L55
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  699              		.cfi_startproc
  700              		@ args = 0, pretend = 0, frame = 0
  701              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccgJ85Jg.s 			page 35
+ARM GAS  /tmp/ccGTiPoM.s 			page 35
 
 
  702              		.loc 1 1059 1 is_stmt 0 view .LVU225
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1097:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     /* Update error code */
 1098:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     hcan->ErrorCode |= HAL_CAN_ERROR_NOT_STARTED;
  719              		.loc 1 1098 5 is_stmt 1 view .LVU230
-ARM GAS  /tmp/ccgJ85Jg.s 			page 36
+ARM GAS  /tmp/ccGTiPoM.s 			page 36
 
 
  720              		.loc 1 1098 9 is_stmt 0 view .LVU231
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  759              	.LVL39:
 1074:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       {
  760              		.loc 1 1074 26 view .LVU247
-ARM GAS  /tmp/ccgJ85Jg.s 			page 37
+ARM GAS  /tmp/ccGTiPoM.s 			page 37
 
 
  761 0038 431B     		subs	r3, r0, r5
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  804              	.LFB289:
  461:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   /* Check CAN handle */
  805              		.loc 1 461 1 is_stmt 1 view -0
-ARM GAS  /tmp/ccgJ85Jg.s 			page 38
+ARM GAS  /tmp/ccGTiPoM.s 			page 38
 
 
  806              		.cfi_startproc
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  846              		.cfi_def_cfa_offset 0
  847              		.cfi_restore 4
  848              		.cfi_restore 14
-ARM GAS  /tmp/ccgJ85Jg.s 			page 39
+ARM GAS  /tmp/ccGTiPoM.s 			page 39
 
 
  465:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   }
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1121:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     SET_BIT(hcan->Instance->MCR, CAN_MCR_SLEEP);
 1122:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
 1123:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     /* Return function status */
-ARM GAS  /tmp/ccgJ85Jg.s 			page 40
+ARM GAS  /tmp/ccGTiPoM.s 			page 40
 
 
 1124:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     return HAL_OK;
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1138:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   *         When returning with HAL_OK status from this function, Sleep mode
 1139:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   *         is exited.
 1140:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   * @param  hcan pointer to a CAN_HandleTypeDef structure that contains
-ARM GAS  /tmp/ccgJ85Jg.s 			page 41
+ARM GAS  /tmp/ccGTiPoM.s 			page 41
 
 
 1141:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   *         the configuration information for the specified CAN.
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  958 001c 019B     		ldr	r3, [sp, #4]
  959 001e 0133     		adds	r3, r3, #1
  960 0020 0193     		str	r3, [sp, #4]
-ARM GAS  /tmp/ccgJ85Jg.s 			page 42
+ARM GAS  /tmp/ccGTiPoM.s 			page 42
 
 
 1160:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  996              	.L81:
 1173:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   }
 1174:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   else
-ARM GAS  /tmp/ccgJ85Jg.s 			page 43
+ARM GAS  /tmp/ccGTiPoM.s 			page 43
 
 
 1175:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   {
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1035              		@ link register save eliminated.
 1193:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   uint32_t status = 0U;
  1036              		.loc 1 1193 3 view .LVU331
-ARM GAS  /tmp/ccgJ85Jg.s 			page 44
+ARM GAS  /tmp/ccGTiPoM.s 			page 44
 
 
 1194:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   HAL_CAN_StateTypeDef state = hcan->State;
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1074              		.cfi_endproc
  1075              	.LFE297:
  1077              		.section	.text.HAL_CAN_AddTxMessage,"ax",%progbits
-ARM GAS  /tmp/ccgJ85Jg.s 			page 45
+ARM GAS  /tmp/ccGTiPoM.s 			page 45
 
 
  1078              		.align	1
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1232:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   assert_param(IS_CAN_DLC(pHeader->DLC));
  1110              		.loc 1 1232 3 view .LVU356
 1233:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   if (pHeader->IDE == CAN_ID_STD)
-ARM GAS  /tmp/ccgJ85Jg.s 			page 46
+ARM GAS  /tmp/ccGTiPoM.s 			page 46
 
 
  1111              		.loc 1 1233 3 view .LVU357
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1140              		.loc 1 1258 18 is_stmt 0 view .LVU373
  1141 002a 8B68     		ldr	r3, [r1, #8]
  1142              	.LVL72:
-ARM GAS  /tmp/ccgJ85Jg.s 			page 47
+ARM GAS  /tmp/ccGTiPoM.s 			page 47
 
 
  1143              		.loc 1 1258 10 view .LVU374
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1276:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****         SET_BIT(hcan->Instance->sTxMailBox[transmitmailbox].TDTR, CAN_TDT0R_TGT);
 1277:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       }
 1278:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
-ARM GAS  /tmp/ccgJ85Jg.s 			page 48
+ARM GAS  /tmp/ccGTiPoM.s 			page 48
 
 
 1279:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       /* Set up the data field */
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1214 00a8 0020     		movs	r0, #0
  1215              	.LVL76:
  1216              		.loc 1 1295 14 view .LVU395
-ARM GAS  /tmp/ccgJ85Jg.s 			page 49
+ARM GAS  /tmp/ccGTiPoM.s 			page 49
 
 
  1217 00aa 1DE0     		b	.L100
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1256 00da 0120     		movs	r0, #1
  1257              	.LVL81:
  1258              		.loc 1 1302 14 view .LVU409
-ARM GAS  /tmp/ccgJ85Jg.s 			page 50
+ARM GAS  /tmp/ccGTiPoM.s 			page 50
 
 
  1259 00dc 04E0     		b	.L100
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1324:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   HAL_CAN_StateTypeDef state = hcan->State;
  1294              		.loc 1 1324 3 view .LVU417
  1295              		.loc 1 1324 24 is_stmt 0 view .LVU418
-ARM GAS  /tmp/ccgJ85Jg.s 			page 51
+ARM GAS  /tmp/ccGTiPoM.s 			page 51
 
 
  1296 0000 90F82030 		ldrb	r3, [r0, #32]	@ zero_extendqisi2
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1361:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     return HAL_ERROR;
  1314              		.loc 1 1361 5 is_stmt 1 view .LVU427
  1315              		.loc 1 1361 12 is_stmt 0 view .LVU428
-ARM GAS  /tmp/ccgJ85Jg.s 			page 52
+ARM GAS  /tmp/ccGTiPoM.s 			page 52
 
 
  1316 0014 0120     		movs	r0, #1
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1356              		.loc 1 1354 12 view .LVU441
  1357 004a 7047     		bx	lr
  1358              		.cfi_endproc
-ARM GAS  /tmp/ccgJ85Jg.s 			page 53
+ARM GAS  /tmp/ccGTiPoM.s 			page 53
 
 
  1359              	.LFE299:
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1385:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     /* Check Tx Mailbox 1 status */
 1386:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     if ((hcan->Instance->TSR & CAN_TSR_TME1) != 0U)
 1387:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     {
-ARM GAS  /tmp/ccgJ85Jg.s 			page 54
+ARM GAS  /tmp/ccGTiPoM.s 			page 54
 
 
 1388:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       freelevel++;
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1423              		.loc 1 1392 5 is_stmt 1 view .LVU463
 1392:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     {
  1424              		.loc 1 1392 24 is_stmt 0 view .LVU464
-ARM GAS  /tmp/ccgJ85Jg.s 			page 55
+ARM GAS  /tmp/ccGTiPoM.s 			page 55
 
 
  1425 0026 9B68     		ldr	r3, [r3, #8]
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1420:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   assert_param(IS_CAN_TX_MAILBOX_LIST(TxMailboxes));
  1458              		.loc 1 1420 3 is_stmt 1 view .LVU473
 1421:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
-ARM GAS  /tmp/ccgJ85Jg.s 			page 56
+ARM GAS  /tmp/ccGTiPoM.s 			page 56
 
 
 1422:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   if ((state == HAL_CAN_STATE_READY) ||
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1496              		.loc 1 1416 12 view .LVU489
  1497 0024 7047     		bx	lr
  1498              		.cfi_endproc
-ARM GAS  /tmp/ccgJ85Jg.s 			page 57
+ARM GAS  /tmp/ccGTiPoM.s 			page 57
 
 
  1499              	.LFE301:
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1533 000c 0020     		movs	r0, #0
  1534              	.LVL111:
 1456:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       (state == HAL_CAN_STATE_LISTENING))
-ARM GAS  /tmp/ccgJ85Jg.s 			page 58
+ARM GAS  /tmp/ccGTiPoM.s 			page 58
 
 
 1457:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   {
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
   34:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /* Fallback for __has_builtin */
   35:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __has_builtin
   36:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __has_builtin(x) (0)
-ARM GAS  /tmp/ccgJ85Jg.s 			page 59
+ARM GAS  /tmp/ccGTiPoM.s 			page 59
 
 
   37:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
   91:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
   92:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_READ(addr)          (((const struct T_UINT16_READ *)(const void *)(add
   93:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  /tmp/ccgJ85Jg.s 			page 60
+ARM GAS  /tmp/ccGTiPoM.s 			page 60
 
 
   94:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_WRITE
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  148:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   extern const __zero_table_t __zero_table_start__;
  149:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   extern const __zero_table_t __zero_table_end__;
  150:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccgJ85Jg.s 			page 61
+ARM GAS  /tmp/ccGTiPoM.s 			page 61
 
 
  151:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   for (__copy_table_t const* pTable = &__copy_table_start__; pTable < &__copy_table_end__; ++pTable
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  205:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
  206:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  */
  207:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
-ARM GAS  /tmp/ccgJ85Jg.s 			page 62
+ARM GAS  /tmp/ccGTiPoM.s 			page 62
 
 
  208:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** {
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  262:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR control_ns, %0" : : "r" (control) : "memory");
  263:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** }
  264:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  /tmp/ccgJ85Jg.s 			page 63
+ARM GAS  /tmp/ccGTiPoM.s 			page 63
 
 
  265:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  319:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   return(result);
  320:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** }
  321:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccgJ85Jg.s 			page 64
+ARM GAS  /tmp/ccGTiPoM.s 			page 64
 
 
  322:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  376:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
  377:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
  378:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  /tmp/ccgJ85Jg.s 			page 65
+ARM GAS  /tmp/ccGTiPoM.s 			page 65
 
 
  379:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer (non-secure)
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  433:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Stack Pointer (non-secure)
  434:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Stack Pointer (SP) when in secure state.
  435:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfStack  Stack Pointer value to set
-ARM GAS  /tmp/ccgJ85Jg.s 			page 66
+ARM GAS  /tmp/ccGTiPoM.s 			page 66
 
 
  436:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  */
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  490:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  */
  491:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_PRIMASK_NS(uint32_t priMask)
  492:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  /tmp/ccgJ85Jg.s 			page 67
+ARM GAS  /tmp/ccGTiPoM.s 			page 67
 
 
  493:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR primask_ns, %0" : : "r" (priMask) : "memory");
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  547:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, basepri_ns" : "=r" (result) );
  548:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   return(result);
  549:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  /tmp/ccgJ85Jg.s 			page 68
+ARM GAS  /tmp/ccGTiPoM.s 			page 68
 
 
  550:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  604:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /**
  605:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Fault Mask (non-secure)
  606:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Fault Mask register when in secure state.
-ARM GAS  /tmp/ccgJ85Jg.s 			page 69
+ARM GAS  /tmp/ccGTiPoM.s 			page 69
 
 
  607:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \return               Fault Mask register value
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  661:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) && \
  662:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     (!defined (__ARM_FEATURE_CMSE) || (__ARM_FEATURE_CMSE < 3)))
  663:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     // without main extensions, the non-secure PSPLIM is RAZ/WI
-ARM GAS  /tmp/ccgJ85Jg.s 			page 70
+ARM GAS  /tmp/ccGTiPoM.s 			page 70
 
 
  664:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   return 0U;
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  718:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer (non-secure)
  719:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
  720:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence the write is silently ignored.
-ARM GAS  /tmp/ccgJ85Jg.s 			page 71
+ARM GAS  /tmp/ccGTiPoM.s 			page 71
 
 
  721:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  775:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
  776:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msplim_ns" : "=r" (result) );
  777:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   return result;
-ARM GAS  /tmp/ccgJ85Jg.s 			page 72
+ARM GAS  /tmp/ccGTiPoM.s 			page 72
 
 
  778:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  832:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  */
  833:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_FPSCR(void)
  834:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  /tmp/ccgJ85Jg.s 			page 73
+ARM GAS  /tmp/ccGTiPoM.s 			page 73
 
 
  835:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #if ((defined (__FPU_PRESENT) && (__FPU_PRESENT == 1U)) && \
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  889:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #if defined (__thumb__) && !defined (__thumb2__)
  890:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_OUT_REG(r) "=l" (r)
  891:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_RW_REG(r) "+l" (r)
-ARM GAS  /tmp/ccgJ85Jg.s 			page 74
+ARM GAS  /tmp/ccGTiPoM.s 			page 74
 
 
  892:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_USE_REG(r) "l" (r)
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  946:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("dsb 0xF":::"memory");
  947:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** }
  948:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccgJ85Jg.s 			page 75
+ARM GAS  /tmp/ccGTiPoM.s 			page 75
 
 
  949:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1003:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #if (__GNUC__ > 4) || (__GNUC__ == 4 && __GNUC_MINOR__ >= 8)
 1004:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   return (int16_t)__builtin_bswap16(value);
 1005:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #else
-ARM GAS  /tmp/ccgJ85Jg.s 			page 76
+ARM GAS  /tmp/ccGTiPoM.s 			page 76
 
 
 1006:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   int16_t result;
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1548              		.syntax unified
  1549              	@ 1055 "stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h" 1
  1550 0010 91FAA1F1 		rbit r1, r1
-ARM GAS  /tmp/ccgJ85Jg.s 			page 77
+ARM GAS  /tmp/ccGTiPoM.s 			page 77
 
 
  1551              	@ 0 "" 2
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1567              		.loc 2 1093 10 is_stmt 0 view .LVU513
  1568 0016 B1FA81F1 		clz	r1, r1
  1569              	.LVL114:
-ARM GAS  /tmp/ccgJ85Jg.s 			page 78
+ARM GAS  /tmp/ccGTiPoM.s 			page 78
 
 
  1570              	.L125:
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1473:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   * @param  RxFifo Fifo number of the received message to be read.
 1474:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   *         This parameter can be a value of @arg CAN_receive_FIFO_number.
 1475:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   * @param  pHeader pointer to a CAN_RxHeaderTypeDef structure where the header
-ARM GAS  /tmp/ccgJ85Jg.s 			page 79
+ARM GAS  /tmp/ccGTiPoM.s 			page 79
 
 
 1476:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   *         of the Rx frame will be stored.
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1647 001c 14F0030F 		tst	r4, #3
  1648 0020 10D1     		bne	.L132
 1495:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       {
-ARM GAS  /tmp/ccgJ85Jg.s 			page 80
+ARM GAS  /tmp/ccGTiPoM.s 			page 80
 
 
 1496:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****         /* Update error code */
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1512:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     }
 1513:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
 1514:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     /* Get the header */
-ARM GAS  /tmp/ccgJ85Jg.s 			page 81
+ARM GAS  /tmp/ccGTiPoM.s 			page 81
 
 
 1515:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     pHeader->IDE = CAN_RI0R_IDE & hcan->Instance->sFIFOMailBox[RxFifo].RIR;
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1729 007c A444     		add	ip, ip, r4
  1730 007e DCF80450 		ldr	r5, [ip, #4]
  1731              		.loc 1 1526 8 view .LVU574
-ARM GAS  /tmp/ccgJ85Jg.s 			page 82
+ARM GAS  /tmp/ccGTiPoM.s 			page 82
 
 
  1732 0082 15F0080F 		tst	r5, #8
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1772              		.loc 1 1540 81 view .LVU593
  1773 00b8 02EB0112 		add	r2, r2, r1, lsl #4
  1774 00bc D2F8B821 		ldr	r2, [r2, #440]
-ARM GAS  /tmp/ccgJ85Jg.s 			page 83
+ARM GAS  /tmp/ccGTiPoM.s 			page 83
 
 
  1775              		.loc 1 1540 16 view .LVU594
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1824 010a C2F30742 		ubfx	r2, r2, #16, #8
  1825              		.loc 1 1545 14 view .LVU619
  1826 010e 9A71     		strb	r2, [r3, #6]
-ARM GAS  /tmp/ccgJ85Jg.s 			page 84
+ARM GAS  /tmp/ccGTiPoM.s 			page 84
 
 
 1546:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     aData[7] = (uint8_t)((CAN_RDH0R_DATA7 & hcan->Instance->sFIFOMailBox[RxFifo].RDHR) >> CAN_RDH0R
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1856              		.cfi_remember_state
  1857              		.cfi_restore 5
  1858              		.cfi_restore 4
-ARM GAS  /tmp/ccgJ85Jg.s 			page 85
+ARM GAS  /tmp/ccGTiPoM.s 			page 85
 
 
  1859              		.cfi_def_cfa_offset 0
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1902              		.cfi_restore 4
  1903              		.cfi_restore 5
 1566:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
-ARM GAS  /tmp/ccgJ85Jg.s 			page 86
+ARM GAS  /tmp/ccGTiPoM.s 			page 86
 
 
  1904              		.loc 1 1566 5 is_stmt 1 view .LVU643
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1940              		.loc 1 1586 3 is_stmt 1 view .LVU653
 1587:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
 1588:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   if ((state == HAL_CAN_STATE_READY) ||
-ARM GAS  /tmp/ccgJ85Jg.s 			page 87
+ARM GAS  /tmp/ccGTiPoM.s 			page 87
 
 
  1941              		.loc 1 1588 3 view .LVU654
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  1972              	.LVL145:
  1973              	.L146:
 1597:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     }
-ARM GAS  /tmp/ccgJ85Jg.s 			page 88
+ARM GAS  /tmp/ccGTiPoM.s 			page 88
 
 
  1974              		.loc 1 1597 7 is_stmt 1 view .LVU668
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1632:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   */
 1633:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** HAL_StatusTypeDef HAL_CAN_ActivateNotification(CAN_HandleTypeDef *hcan, uint32_t ActiveITs)
 1634:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** {
-ARM GAS  /tmp/ccgJ85Jg.s 			page 89
+ARM GAS  /tmp/ccGTiPoM.s 			page 89
 
 
  1998              		.loc 1 1634 1 is_stmt 1 view -0
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2030              	.L152:
 1644:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
  2031              		.loc 1 1644 5 is_stmt 1 view .LVU687
-ARM GAS  /tmp/ccgJ85Jg.s 			page 90
+ARM GAS  /tmp/ccGTiPoM.s 			page 90
 
 
  2032 0018 0268     		ldr	r2, [r0]
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2068              	.LVL156:
  2069              		.loc 1 1673 38 view .LVU697
  2070 0006 DBB2     		uxtb	r3, r3
-ARM GAS  /tmp/ccgJ85Jg.s 			page 91
+ARM GAS  /tmp/ccGTiPoM.s 			page 91
 
 
  2071              		.loc 1 1673 6 view .LVU698
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2106              		.thumb
  2107              		.thumb_func
  2109              	HAL_CAN_TxMailbox0CompleteCallback:
-ARM GAS  /tmp/ccgJ85Jg.s 			page 92
+ARM GAS  /tmp/ccGTiPoM.s 			page 92
 
 
  2110              	.LVL160:
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1742:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** #if USE_HAL_CAN_REGISTER_CALLBACKS == 1
 1743:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****           /* Call registered callback*/
 1744:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****           hcan->TxMailbox0AbortCallback(hcan);
-ARM GAS  /tmp/ccgJ85Jg.s 			page 93
+ARM GAS  /tmp/ccGTiPoM.s 			page 93
 
 
 1745:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** #else
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1799:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       /* Clear the Transmission Complete flag (and TXOK2,ALST2,TERR2 bits) */
 1800:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       __HAL_CAN_CLEAR_FLAG(hcan, CAN_FLAG_RQCP2);
 1801:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
-ARM GAS  /tmp/ccgJ85Jg.s 			page 94
+ARM GAS  /tmp/ccGTiPoM.s 			page 94
 
 
 1802:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       if ((tsrflags & CAN_TSR_TXOK2) != 0U)
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1856:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     if ((rf0rflags & CAN_RF0R_FULL0) != 0U)
 1857:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     {
 1858:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       /* Clear FIFO 0 full Flag */
-ARM GAS  /tmp/ccgJ85Jg.s 			page 95
+ARM GAS  /tmp/ccGTiPoM.s 			page 95
 
 
 1859:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       __HAL_CAN_CLEAR_FLAG(hcan, CAN_FLAG_FF0);
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1913:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       hcan->RxFifo1FullCallback(hcan);
 1914:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** #else
 1915:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       /* Call weak (surcharged) callback */
-ARM GAS  /tmp/ccgJ85Jg.s 			page 96
+ARM GAS  /tmp/ccGTiPoM.s 			page 96
 
 
 1916:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       HAL_CAN_RxFifo1FullCallback(hcan);
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1970:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       /* Call weak (surcharged) callback */
 1971:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       HAL_CAN_WakeUpFromRxMsgCallback(hcan);
 1972:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** #endif /* USE_HAL_CAN_REGISTER_CALLBACKS */
-ARM GAS  /tmp/ccgJ85Jg.s 			page 97
+ARM GAS  /tmp/ccGTiPoM.s 			page 97
 
 
 1973:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     }
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 2027:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****             errorcode |= HAL_CAN_ERROR_ACK;
 2028:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****             break;
 2029:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****           case (CAN_ESR_LEC_2):
-ARM GAS  /tmp/ccgJ85Jg.s 			page 98
+ARM GAS  /tmp/ccGTiPoM.s 			page 98
 
 
 2030:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****             /* Set CAN error code to Bit recessive error */
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 2084:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       (+) HAL_CAN_TxMailbox0CompleteCallback
 2085:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       (+) HAL_CAN_TxMailbox1CompleteCallback
 2086:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       (+) HAL_CAN_TxMailbox2CompleteCallback
-ARM GAS  /tmp/ccgJ85Jg.s 			page 99
+ARM GAS  /tmp/ccGTiPoM.s 			page 99
 
 
 2087:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       (+) HAL_CAN_TxMailbox0AbortCallback
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 2122:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   *         the configuration information for the specified CAN.
 2123:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   * @retval None
 2124:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   */
-ARM GAS  /tmp/ccgJ85Jg.s 			page 100
+ARM GAS  /tmp/ccGTiPoM.s 			page 100
 
 
 2125:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** __weak void HAL_CAN_TxMailbox1CompleteCallback(CAN_HandleTypeDef *hcan)
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2162              		.cfi_endproc
  2163              	.LFE310:
  2165              		.section	.text.HAL_CAN_TxMailbox0AbortCallback,"ax",%progbits
-ARM GAS  /tmp/ccgJ85Jg.s 			page 101
+ARM GAS  /tmp/ccGTiPoM.s 			page 101
 
 
  2166              		.align	1
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2197              		.cfi_startproc
  2198              		@ args = 0, pretend = 0, frame = 0
  2199              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccgJ85Jg.s 			page 102
+ARM GAS  /tmp/ccGTiPoM.s 			page 102
 
 
  2200              		@ link register save eliminated.
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2232              		.thumb
  2233              		.thumb_func
  2235              	HAL_CAN_RxFifo0MsgPendingCallback:
-ARM GAS  /tmp/ccgJ85Jg.s 			page 103
+ARM GAS  /tmp/ccGTiPoM.s 			page 103
 
 
  2236              	.LVL166:
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2264              		.loc 1 2230 3 view .LVU731
 2231:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
 2232:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   /* NOTE : This function Should not be modified, when the callback is needed,
-ARM GAS  /tmp/ccgJ85Jg.s 			page 104
+ARM GAS  /tmp/ccGTiPoM.s 			page 104
 
 
 2233:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****             the HAL_CAN_RxFifo0FullCallback could be implemented in the user
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 2255:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** /**
 2256:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   * @brief  Rx FIFO 1 full callback.
 2257:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   * @param  hcan pointer to a CAN_HandleTypeDef structure that contains
-ARM GAS  /tmp/ccgJ85Jg.s 			page 105
+ARM GAS  /tmp/ccGTiPoM.s 			page 105
 
 
 2258:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   *         the configuration information for the specified CAN.
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2328              		.loc 1 2286 1 is_stmt 0 view .LVU741
  2329 0000 7047     		bx	lr
  2330              		.cfi_endproc
-ARM GAS  /tmp/ccgJ85Jg.s 			page 106
+ARM GAS  /tmp/ccGTiPoM.s 			page 106
 
 
  2331              	.LFE318:
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 2312:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** {
  2364              		.loc 1 2312 1 is_stmt 1 view -0
  2365              		.cfi_startproc
-ARM GAS  /tmp/ccgJ85Jg.s 			page 107
+ARM GAS  /tmp/ccGTiPoM.s 			page 107
 
 
  2366              		@ args = 0, pretend = 0, frame = 0
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2409              		.loc 1 1700 12 view .LVU753
  2410 0008 5C69     		ldr	r4, [r3, #20]
  2411              	.LVL175:
-ARM GAS  /tmp/ccgJ85Jg.s 			page 108
+ARM GAS  /tmp/ccGTiPoM.s 			page 108
 
 
 1701:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   uint32_t tsrflags = READ_REG(hcan->Instance->TSR);
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1729:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****         {
  2448              		.loc 1 1729 12 is_stmt 0 view .LVU772
  2449 0032 17F0040F 		tst	r7, #4
-ARM GAS  /tmp/ccgJ85Jg.s 			page 109
+ARM GAS  /tmp/ccGTiPoM.s 			page 109
 
 
  2450 0036 0CD1     		bne	.L203
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2490              		.loc 1 1772 9 is_stmt 1 view .LVU786
 1772:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****         {
  2491              		.loc 1 1772 12 is_stmt 0 view .LVU787
-ARM GAS  /tmp/ccgJ85Jg.s 			page 110
+ARM GAS  /tmp/ccGTiPoM.s 			page 110
 
 
  2492 006c 17F4806F 		tst	r7, #1024
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2529              		.loc 1 1846 17 is_stmt 0 view .LVU804
  2530 00a6 46F40076 		orr	r6, r6, #512
  2531              	.LVL188:
-ARM GAS  /tmp/ccgJ85Jg.s 			page 111
+ARM GAS  /tmp/ccGTiPoM.s 			page 111
 
 
 1849:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     }
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2569 00d8 46F48066 		orr	r6, r6, #1024
  2570              	.LVL189:
 1898:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     }
-ARM GAS  /tmp/ccgJ85Jg.s 			page 112
+ARM GAS  /tmp/ccGTiPoM.s 			page 112
 
 
  2571              		.loc 1 1898 7 is_stmt 1 view .LVU822
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2609 010a 14F4803F 		tst	r4, #65536
  2610 010e 02D0     		beq	.L188
 1960:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     {
-ARM GAS  /tmp/ccgJ85Jg.s 			page 113
+ARM GAS  /tmp/ccGTiPoM.s 			page 113
 
 
  2611              		.loc 1 1960 5 is_stmt 1 view .LVU839
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 2002:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****           ((esrflags & CAN_ESR_BOFF) != 0U))
  2649              		.loc 1 2002 10 is_stmt 0 view .LVU856
  2650 0142 14F4806F 		tst	r4, #1024
-ARM GAS  /tmp/ccgJ85Jg.s 			page 114
+ARM GAS  /tmp/ccGTiPoM.s 			page 114
 
 
  2651 0146 04D0     		beq	.L193
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 1777:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****         {
  2692              		.loc 1 1777 17 is_stmt 0 view .LVU870
  2693 0180 17F4006F 		tst	r7, #2048
-ARM GAS  /tmp/ccgJ85Jg.s 			page 115
+ARM GAS  /tmp/ccGTiPoM.s 			page 115
 
 
  2694 0184 02D0     		beq	.L177
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2735              		.loc 1 1867 7 view .LVU883
  2736 01b6 2846     		mov	r0, r5
  2737 01b8 FFF7FEFF 		bl	HAL_CAN_RxFifo0FullCallback
-ARM GAS  /tmp/ccgJ85Jg.s 			page 116
+ARM GAS  /tmp/ccGTiPoM.s 			page 116
 
 
  2738              	.LVL202:
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 2015:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****         {
  2784              		.loc 1 2015 9 is_stmt 0 view .LVU892
  2785 01f8 B9F1100F 		cmp	r9, #16
-ARM GAS  /tmp/ccgJ85Jg.s 			page 117
+ARM GAS  /tmp/ccGTiPoM.s 			page 117
 
 
  2786 01fc 01D1     		bne	.L199
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2826 022a 46F01006 		orr	r6, r6, #16
  2827              	.LVL212:
 2024:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****           case (CAN_ESR_LEC_1 | CAN_ESR_LEC_0):
-ARM GAS  /tmp/ccgJ85Jg.s 			page 118
+ARM GAS  /tmp/ccGTiPoM.s 			page 118
 
 
  2828              		.loc 1 2024 13 is_stmt 1 view .LVU907
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 2323:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   */
 2324:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** 
 2325:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** /** @defgroup CAN_Exported_Functions_Group6 Peripheral State and Error functions
-ARM GAS  /tmp/ccgJ85Jg.s 			page 119
+ARM GAS  /tmp/ccGTiPoM.s 			page 119
 
 
 2326:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   * @brief   CAN Peripheral State functions
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 2359:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****       state = HAL_CAN_STATE_SLEEP_ACTIVE;
 2360:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     }
 2361:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     /* Check sleep mode request flag */
-ARM GAS  /tmp/ccgJ85Jg.s 			page 120
+ARM GAS  /tmp/ccGTiPoM.s 			page 120
 
 
 2362:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     else if ((hcan->Instance->MCR & CAN_MCR_SLEEP) != 0U)
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2921              	.LVL223:
 2359:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****     }
  2922              		.loc 1 2359 13 view .LVU939
-ARM GAS  /tmp/ccgJ85Jg.s 			page 121
+ARM GAS  /tmp/ccGTiPoM.s 			page 121
 
 
  2923 002a 7047     		bx	lr
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
 2396:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c **** {
  2961              		.loc 1 2396 1 is_stmt 1 view -0
  2962              		.cfi_startproc
-ARM GAS  /tmp/ccgJ85Jg.s 			page 122
+ARM GAS  /tmp/ccGTiPoM.s 			page 122
 
 
  2963              		@ args = 0, pretend = 0, frame = 0
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  2996              		.loc 1 2404 5 is_stmt 1 view .LVU959
 2404:stm/stm32l4xx/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c ****   }
  2997              		.loc 1 2404 21 is_stmt 0 view .LVU960
-ARM GAS  /tmp/ccgJ85Jg.s 			page 123
+ARM GAS  /tmp/ccGTiPoM.s 			page 123
 
 
  2998 0018 0023     		movs	r3, #0
@@ -7341,87 +7341,87 @@ ARM GAS  /tmp/ccgJ85Jg.s 			page 1
  3014              		.file 7 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
  3015              		.file 8 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_can.h"
  3016              		.file 9 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  /tmp/ccgJ85Jg.s 			page 124
+ARM GAS  /tmp/ccGTiPoM.s 			page 124
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_can.c
-     /tmp/ccgJ85Jg.s:21     .text.HAL_CAN_MspInit:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:27     .text.HAL_CAN_MspInit:0000000000000000 HAL_CAN_MspInit
-     /tmp/ccgJ85Jg.s:42     .text.HAL_CAN_Init:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:48     .text.HAL_CAN_Init:0000000000000000 HAL_CAN_Init
-     /tmp/ccgJ85Jg.s:340    .text.HAL_CAN_MspDeInit:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:346    .text.HAL_CAN_MspDeInit:0000000000000000 HAL_CAN_MspDeInit
-     /tmp/ccgJ85Jg.s:361    .text.HAL_CAN_ConfigFilter:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:367    .text.HAL_CAN_ConfigFilter:0000000000000000 HAL_CAN_ConfigFilter
-     /tmp/ccgJ85Jg.s:583    .text.HAL_CAN_Start:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:589    .text.HAL_CAN_Start:0000000000000000 HAL_CAN_Start
-     /tmp/ccgJ85Jg.s:689    .text.HAL_CAN_Stop:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:695    .text.HAL_CAN_Stop:0000000000000000 HAL_CAN_Stop
-     /tmp/ccgJ85Jg.s:796    .text.HAL_CAN_DeInit:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:802    .text.HAL_CAN_DeInit:0000000000000000 HAL_CAN_DeInit
-     /tmp/ccgJ85Jg.s:858    .text.HAL_CAN_RequestSleep:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:864    .text.HAL_CAN_RequestSleep:0000000000000000 HAL_CAN_RequestSleep
-     /tmp/ccgJ85Jg.s:914    .text.HAL_CAN_WakeUp:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:920    .text.HAL_CAN_WakeUp:0000000000000000 HAL_CAN_WakeUp
-     /tmp/ccgJ85Jg.s:1017   .text.HAL_CAN_WakeUp:0000000000000054 $d
-     /tmp/ccgJ85Jg.s:1022   .text.HAL_CAN_IsSleepActive:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:1028   .text.HAL_CAN_IsSleepActive:0000000000000000 HAL_CAN_IsSleepActive
-     /tmp/ccgJ85Jg.s:1078   .text.HAL_CAN_AddTxMessage:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:1084   .text.HAL_CAN_AddTxMessage:0000000000000000 HAL_CAN_AddTxMessage
-     /tmp/ccgJ85Jg.s:1280   .text.HAL_CAN_AbortTxRequest:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:1286   .text.HAL_CAN_AbortTxRequest:0000000000000000 HAL_CAN_AbortTxRequest
-     /tmp/ccgJ85Jg.s:1362   .text.HAL_CAN_GetTxMailboxesFreeLevel:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:1368   .text.HAL_CAN_GetTxMailboxesFreeLevel:0000000000000000 HAL_CAN_GetTxMailboxesFreeLevel
-     /tmp/ccgJ85Jg.s:1439   .text.HAL_CAN_IsTxMessagePending:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:1445   .text.HAL_CAN_IsTxMessagePending:0000000000000000 HAL_CAN_IsTxMessagePending
-     /tmp/ccgJ85Jg.s:1502   .text.HAL_CAN_GetTxTimestamp:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:1508   .text.HAL_CAN_GetTxTimestamp:0000000000000000 HAL_CAN_GetTxTimestamp
-     /tmp/ccgJ85Jg.s:1604   .text.HAL_CAN_GetRxMessage:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:1610   .text.HAL_CAN_GetRxMessage:0000000000000000 HAL_CAN_GetRxMessage
-     /tmp/ccgJ85Jg.s:1921   .text.HAL_CAN_GetRxFifoFillLevel:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:1927   .text.HAL_CAN_GetRxFifoFillLevel:0000000000000000 HAL_CAN_GetRxFifoFillLevel
-     /tmp/ccgJ85Jg.s:1989   .text.HAL_CAN_ActivateNotification:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:1995   .text.HAL_CAN_ActivateNotification:0000000000000000 HAL_CAN_ActivateNotification
-     /tmp/ccgJ85Jg.s:2046   .text.HAL_CAN_DeactivateNotification:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2052   .text.HAL_CAN_DeactivateNotification:0000000000000000 HAL_CAN_DeactivateNotification
-     /tmp/ccgJ85Jg.s:2103   .text.HAL_CAN_TxMailbox0CompleteCallback:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2109   .text.HAL_CAN_TxMailbox0CompleteCallback:0000000000000000 HAL_CAN_TxMailbox0CompleteCallback
-     /tmp/ccgJ85Jg.s:2124   .text.HAL_CAN_TxMailbox1CompleteCallback:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2130   .text.HAL_CAN_TxMailbox1CompleteCallback:0000000000000000 HAL_CAN_TxMailbox1CompleteCallback
-     /tmp/ccgJ85Jg.s:2145   .text.HAL_CAN_TxMailbox2CompleteCallback:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2151   .text.HAL_CAN_TxMailbox2CompleteCallback:0000000000000000 HAL_CAN_TxMailbox2CompleteCallback
-     /tmp/ccgJ85Jg.s:2166   .text.HAL_CAN_TxMailbox0AbortCallback:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2172   .text.HAL_CAN_TxMailbox0AbortCallback:0000000000000000 HAL_CAN_TxMailbox0AbortCallback
-     /tmp/ccgJ85Jg.s:2187   .text.HAL_CAN_TxMailbox1AbortCallback:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2193   .text.HAL_CAN_TxMailbox1AbortCallback:0000000000000000 HAL_CAN_TxMailbox1AbortCallback
-     /tmp/ccgJ85Jg.s:2208   .text.HAL_CAN_TxMailbox2AbortCallback:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2214   .text.HAL_CAN_TxMailbox2AbortCallback:0000000000000000 HAL_CAN_TxMailbox2AbortCallback
-     /tmp/ccgJ85Jg.s:2229   .text.HAL_CAN_RxFifo0MsgPendingCallback:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2235   .text.HAL_CAN_RxFifo0MsgPendingCallback:0000000000000000 HAL_CAN_RxFifo0MsgPendingCallback
-     /tmp/ccgJ85Jg.s:2250   .text.HAL_CAN_RxFifo0FullCallback:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2256   .text.HAL_CAN_RxFifo0FullCallback:0000000000000000 HAL_CAN_RxFifo0FullCallback
-ARM GAS  /tmp/ccgJ85Jg.s 			page 125
+     /tmp/ccGTiPoM.s:21     .text.HAL_CAN_MspInit:0000000000000000 $t
+     /tmp/ccGTiPoM.s:27     .text.HAL_CAN_MspInit:0000000000000000 HAL_CAN_MspInit
+     /tmp/ccGTiPoM.s:42     .text.HAL_CAN_Init:0000000000000000 $t
+     /tmp/ccGTiPoM.s:48     .text.HAL_CAN_Init:0000000000000000 HAL_CAN_Init
+     /tmp/ccGTiPoM.s:340    .text.HAL_CAN_MspDeInit:0000000000000000 $t
+     /tmp/ccGTiPoM.s:346    .text.HAL_CAN_MspDeInit:0000000000000000 HAL_CAN_MspDeInit
+     /tmp/ccGTiPoM.s:361    .text.HAL_CAN_ConfigFilter:0000000000000000 $t
+     /tmp/ccGTiPoM.s:367    .text.HAL_CAN_ConfigFilter:0000000000000000 HAL_CAN_ConfigFilter
+     /tmp/ccGTiPoM.s:583    .text.HAL_CAN_Start:0000000000000000 $t
+     /tmp/ccGTiPoM.s:589    .text.HAL_CAN_Start:0000000000000000 HAL_CAN_Start
+     /tmp/ccGTiPoM.s:689    .text.HAL_CAN_Stop:0000000000000000 $t
+     /tmp/ccGTiPoM.s:695    .text.HAL_CAN_Stop:0000000000000000 HAL_CAN_Stop
+     /tmp/ccGTiPoM.s:796    .text.HAL_CAN_DeInit:0000000000000000 $t
+     /tmp/ccGTiPoM.s:802    .text.HAL_CAN_DeInit:0000000000000000 HAL_CAN_DeInit
+     /tmp/ccGTiPoM.s:858    .text.HAL_CAN_RequestSleep:0000000000000000 $t
+     /tmp/ccGTiPoM.s:864    .text.HAL_CAN_RequestSleep:0000000000000000 HAL_CAN_RequestSleep
+     /tmp/ccGTiPoM.s:914    .text.HAL_CAN_WakeUp:0000000000000000 $t
+     /tmp/ccGTiPoM.s:920    .text.HAL_CAN_WakeUp:0000000000000000 HAL_CAN_WakeUp
+     /tmp/ccGTiPoM.s:1017   .text.HAL_CAN_WakeUp:0000000000000054 $d
+     /tmp/ccGTiPoM.s:1022   .text.HAL_CAN_IsSleepActive:0000000000000000 $t
+     /tmp/ccGTiPoM.s:1028   .text.HAL_CAN_IsSleepActive:0000000000000000 HAL_CAN_IsSleepActive
+     /tmp/ccGTiPoM.s:1078   .text.HAL_CAN_AddTxMessage:0000000000000000 $t
+     /tmp/ccGTiPoM.s:1084   .text.HAL_CAN_AddTxMessage:0000000000000000 HAL_CAN_AddTxMessage
+     /tmp/ccGTiPoM.s:1280   .text.HAL_CAN_AbortTxRequest:0000000000000000 $t
+     /tmp/ccGTiPoM.s:1286   .text.HAL_CAN_AbortTxRequest:0000000000000000 HAL_CAN_AbortTxRequest
+     /tmp/ccGTiPoM.s:1362   .text.HAL_CAN_GetTxMailboxesFreeLevel:0000000000000000 $t
+     /tmp/ccGTiPoM.s:1368   .text.HAL_CAN_GetTxMailboxesFreeLevel:0000000000000000 HAL_CAN_GetTxMailboxesFreeLevel
+     /tmp/ccGTiPoM.s:1439   .text.HAL_CAN_IsTxMessagePending:0000000000000000 $t
+     /tmp/ccGTiPoM.s:1445   .text.HAL_CAN_IsTxMessagePending:0000000000000000 HAL_CAN_IsTxMessagePending
+     /tmp/ccGTiPoM.s:1502   .text.HAL_CAN_GetTxTimestamp:0000000000000000 $t
+     /tmp/ccGTiPoM.s:1508   .text.HAL_CAN_GetTxTimestamp:0000000000000000 HAL_CAN_GetTxTimestamp
+     /tmp/ccGTiPoM.s:1604   .text.HAL_CAN_GetRxMessage:0000000000000000 $t
+     /tmp/ccGTiPoM.s:1610   .text.HAL_CAN_GetRxMessage:0000000000000000 HAL_CAN_GetRxMessage
+     /tmp/ccGTiPoM.s:1921   .text.HAL_CAN_GetRxFifoFillLevel:0000000000000000 $t
+     /tmp/ccGTiPoM.s:1927   .text.HAL_CAN_GetRxFifoFillLevel:0000000000000000 HAL_CAN_GetRxFifoFillLevel
+     /tmp/ccGTiPoM.s:1989   .text.HAL_CAN_ActivateNotification:0000000000000000 $t
+     /tmp/ccGTiPoM.s:1995   .text.HAL_CAN_ActivateNotification:0000000000000000 HAL_CAN_ActivateNotification
+     /tmp/ccGTiPoM.s:2046   .text.HAL_CAN_DeactivateNotification:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2052   .text.HAL_CAN_DeactivateNotification:0000000000000000 HAL_CAN_DeactivateNotification
+     /tmp/ccGTiPoM.s:2103   .text.HAL_CAN_TxMailbox0CompleteCallback:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2109   .text.HAL_CAN_TxMailbox0CompleteCallback:0000000000000000 HAL_CAN_TxMailbox0CompleteCallback
+     /tmp/ccGTiPoM.s:2124   .text.HAL_CAN_TxMailbox1CompleteCallback:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2130   .text.HAL_CAN_TxMailbox1CompleteCallback:0000000000000000 HAL_CAN_TxMailbox1CompleteCallback
+     /tmp/ccGTiPoM.s:2145   .text.HAL_CAN_TxMailbox2CompleteCallback:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2151   .text.HAL_CAN_TxMailbox2CompleteCallback:0000000000000000 HAL_CAN_TxMailbox2CompleteCallback
+     /tmp/ccGTiPoM.s:2166   .text.HAL_CAN_TxMailbox0AbortCallback:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2172   .text.HAL_CAN_TxMailbox0AbortCallback:0000000000000000 HAL_CAN_TxMailbox0AbortCallback
+     /tmp/ccGTiPoM.s:2187   .text.HAL_CAN_TxMailbox1AbortCallback:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2193   .text.HAL_CAN_TxMailbox1AbortCallback:0000000000000000 HAL_CAN_TxMailbox1AbortCallback
+     /tmp/ccGTiPoM.s:2208   .text.HAL_CAN_TxMailbox2AbortCallback:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2214   .text.HAL_CAN_TxMailbox2AbortCallback:0000000000000000 HAL_CAN_TxMailbox2AbortCallback
+     /tmp/ccGTiPoM.s:2229   .text.HAL_CAN_RxFifo0MsgPendingCallback:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2235   .text.HAL_CAN_RxFifo0MsgPendingCallback:0000000000000000 HAL_CAN_RxFifo0MsgPendingCallback
+     /tmp/ccGTiPoM.s:2250   .text.HAL_CAN_RxFifo0FullCallback:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2256   .text.HAL_CAN_RxFifo0FullCallback:0000000000000000 HAL_CAN_RxFifo0FullCallback
+ARM GAS  /tmp/ccGTiPoM.s 			page 125
 
 
-     /tmp/ccgJ85Jg.s:2271   .text.HAL_CAN_RxFifo1MsgPendingCallback:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2277   .text.HAL_CAN_RxFifo1MsgPendingCallback:0000000000000000 HAL_CAN_RxFifo1MsgPendingCallback
-     /tmp/ccgJ85Jg.s:2292   .text.HAL_CAN_RxFifo1FullCallback:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2298   .text.HAL_CAN_RxFifo1FullCallback:0000000000000000 HAL_CAN_RxFifo1FullCallback
-     /tmp/ccgJ85Jg.s:2313   .text.HAL_CAN_SleepCallback:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2319   .text.HAL_CAN_SleepCallback:0000000000000000 HAL_CAN_SleepCallback
-     /tmp/ccgJ85Jg.s:2334   .text.HAL_CAN_WakeUpFromRxMsgCallback:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2340   .text.HAL_CAN_WakeUpFromRxMsgCallback:0000000000000000 HAL_CAN_WakeUpFromRxMsgCallback
-     /tmp/ccgJ85Jg.s:2355   .text.HAL_CAN_ErrorCallback:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2361   .text.HAL_CAN_ErrorCallback:0000000000000000 HAL_CAN_ErrorCallback
-     /tmp/ccgJ85Jg.s:2376   .text.HAL_CAN_IRQHandler:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2382   .text.HAL_CAN_IRQHandler:0000000000000000 HAL_CAN_IRQHandler
-     /tmp/ccgJ85Jg.s:2861   .text.HAL_CAN_GetState:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2867   .text.HAL_CAN_GetState:0000000000000000 HAL_CAN_GetState
-     /tmp/ccgJ85Jg.s:2928   .text.HAL_CAN_GetError:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2934   .text.HAL_CAN_GetError:0000000000000000 HAL_CAN_GetError
-     /tmp/ccgJ85Jg.s:2952   .text.HAL_CAN_ResetError:0000000000000000 $t
-     /tmp/ccgJ85Jg.s:2958   .text.HAL_CAN_ResetError:0000000000000000 HAL_CAN_ResetError
+     /tmp/ccGTiPoM.s:2271   .text.HAL_CAN_RxFifo1MsgPendingCallback:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2277   .text.HAL_CAN_RxFifo1MsgPendingCallback:0000000000000000 HAL_CAN_RxFifo1MsgPendingCallback
+     /tmp/ccGTiPoM.s:2292   .text.HAL_CAN_RxFifo1FullCallback:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2298   .text.HAL_CAN_RxFifo1FullCallback:0000000000000000 HAL_CAN_RxFifo1FullCallback
+     /tmp/ccGTiPoM.s:2313   .text.HAL_CAN_SleepCallback:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2319   .text.HAL_CAN_SleepCallback:0000000000000000 HAL_CAN_SleepCallback
+     /tmp/ccGTiPoM.s:2334   .text.HAL_CAN_WakeUpFromRxMsgCallback:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2340   .text.HAL_CAN_WakeUpFromRxMsgCallback:0000000000000000 HAL_CAN_WakeUpFromRxMsgCallback
+     /tmp/ccGTiPoM.s:2355   .text.HAL_CAN_ErrorCallback:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2361   .text.HAL_CAN_ErrorCallback:0000000000000000 HAL_CAN_ErrorCallback
+     /tmp/ccGTiPoM.s:2376   .text.HAL_CAN_IRQHandler:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2382   .text.HAL_CAN_IRQHandler:0000000000000000 HAL_CAN_IRQHandler
+     /tmp/ccGTiPoM.s:2861   .text.HAL_CAN_GetState:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2867   .text.HAL_CAN_GetState:0000000000000000 HAL_CAN_GetState
+     /tmp/ccGTiPoM.s:2928   .text.HAL_CAN_GetError:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2934   .text.HAL_CAN_GetError:0000000000000000 HAL_CAN_GetError
+     /tmp/ccGTiPoM.s:2952   .text.HAL_CAN_ResetError:0000000000000000 $t
+     /tmp/ccGTiPoM.s:2958   .text.HAL_CAN_ResetError:0000000000000000 HAL_CAN_ResetError
 
 UNDEFINED SYMBOLS
 HAL_GetTick
