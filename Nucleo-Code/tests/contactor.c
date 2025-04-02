@@ -1,58 +1,5 @@
-#include "stm32xx_hal.h"
 #include "contactor.h"
-#include "CAN.h"
 
-#define blinky 1
-// #define cantest 2
-// #define contactorcode 3
-
-#define m_enable_pin GPIO_PIN_0
-#define mpre_enable_pin GPIO_PIN_3
-#define apre_enable_pin GPIO_PIN_7
-#define m_sense_pin GPIO_PIN_1
-#define mpre_sense_pin GPIO_PIN_4
-#define apre_sense_pin GPIO_PIN_0 // B PLEASE REMEMBER
-#define mt_fault_pin GPIO_PIN_10
-#define ms_fault_pin GPIO_PIN_8
-#define at_fault_pin GPIO_PIN_3 // B PLEASE REMEMBER
-#define as_fault_pin GPIO_PIN_9
-#define mpre_ready_pin GPIO_PIN_4 // B PLEASE REMEMBER
-#define apre_ready_pin GPIO_PIN_5 // B PLEASE REMEMBER
-
-#define m_direct HAL_GPIO_ReadPin(GPIOA, m_enable_pin)
-
-#define m_pre_enable(state) HAL_GPIO_WritePin(GPIOA, mpre_enable_pin, state)
-#define a_pre_enable(state) HAL_GPIO_WritePin(GPIOA, apre_enable_pin, state)
-
-#define m_sense HAL_GPIO_ReadPin(GPIOA, m_sense_pin)
-#define m_pre_sense HAL_GPIO_ReadPin(GPIOA, mpre_sense_pin)
-#define a_pre_sense HAL_GPIO_ReadPin(GPIOA, apre_sense_pin)
-
-#define m_pre_ready HAL_GPIO_ReadPin(GPIOB, mpre_ready_pin)
-#define a_pre_ready HAL_GPIO_ReadPin(GPIOB, apre_ready_pin)
-
-#define mt_fault(state) HAL_GPIO_WritePin(GPIOA, mt_fault_pin, state)
-#define ms_fault(state) HAL_GPIO_WritePin(GPIOA, ms_fault_pin, state)
-#define at_fault(state) HAL_GPIO_WritePin(GPIOB, at_fault_pin, state)
-#define as_fault(state) HAL_GPIO_WritePin(GPIOA, as_fault_pin, state)
-
- typedef enum {
-    OPEN,
-    CLOSED,
-    FAULT
-} State;
-
-typedef enum{
-  NO_FAULT,
-  MT_FAULT,
-  MS_FAULT,
-  AT_FAULT,
-  AS_FAULT
-} Fault;
-
-#define M_TIMEOUT 1000
-#define MPRE_TIMEOUT 1000
-#define APRE_TIMEOUT 1000
 
 
 static void error_handler(void)
@@ -66,6 +13,16 @@ static void error_handler(void)
   }
 }
 
+static void success_handler(void) {
+  while(1){
+    as_fault(1);
+    HAL_Delay(1000);
+    as_fault(0);
+    HAL_Delay(1000);
+  }
+}
+
+/*
 // // CAN_HandleTypeDef hcan1;
 
 // // Private function prototypes -----------------------------------------------
@@ -268,16 +225,10 @@ static void contactorTask(void *pvParamters)
     #ifdef blinky
     m_pre_enable(1);
     mt_fault(1);
-    ms_fault(1);
-    at_fault(1);
-    as_fault(1);
     a_pre_enable(1);
     HAL_Delay(1000);
     m_pre_enable(0);
     mt_fault(0);
-    ms_fault(0);
-    at_fault(0);
-    as_fault(0);
     a_pre_enable(0);
     HAL_Delay(1000);
     #endif
@@ -569,47 +520,12 @@ static void contactorTask(void *pvParamters)
   }
 }
 
-StaticTask_t task_buffer;
-StackType_t task_stack[configMINIMAL_STACK_SIZE];
+
 
 
 
 static void canTask(void *pvParamters)
 {
-  while(1){
-  // HAL_Delay(1000);
-  CAN_FilterTypeDef  sFilterConfig;
-  sFilterConfig.FilterBank = 0;
-  sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
-  sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
-  sFilterConfig.FilterIdHigh = 0x0000;
-  sFilterConfig.FilterIdLow = 0x0000;
-  sFilterConfig.FilterMaskIdHigh = 0x0000;
-  sFilterConfig.FilterMaskIdLow = 0x0000;
-  sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
-  sFilterConfig.FilterActivation = ENABLE;
-  sFilterConfig.SlaveStartFilterBank = 14;
-
-  // setup can1 init
-  hcan1->Init.Prescaler = 16;
-  hcan1->Init.Mode = CAN_MODE_LOOPBACK;
-  hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
-  hcan1->Init.TimeSeg1 = CAN_BS1_16TQ;
-  hcan1->Init.TimeSeg2 = CAN_BS2_8TQ;
-  hcan1->Init.TimeTriggeredMode = DISABLE;
-  hcan1->Init.AutoBusOff = DISABLE;
-  hcan1->Init.AutoWakeUp = DISABLE;
-  hcan1->Init.AutoRetransmission = ENABLE;
-  hcan1->Init.ReceiveFifoLocked = DISABLE;
-
-  // If TransmitFifoPriority is disabled, the hardware selects the mailbox based on the message ID priority. 
-  // If enabled, the hardware uses a FIFO mechanism to select the mailbox based on the order of transmission requests.
-  hcan1->Init.TransmitFifoPriority = ENABLE;
-
-  // initialize CAN1
-  if (can_init(hcan1, &sFilterConfig) != CAN_OK) error_handler();
-  if (can_start(hcan1) != CAN_OK) error_handler();
-
   
   // create payload to send
   CAN_TxHeaderTypeDef tx_header = {0};   
@@ -625,7 +541,8 @@ static void canTask(void *pvParamters)
   tx_data[1] = 0x00;
   //HAL_Delay(5000);
   if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
-}
+
+  success_handler();
 }
 
 int main()
@@ -651,9 +568,9 @@ int main()
   //     HAL_Delay(1000);
   // }
   xTaskCreateStatic(canTask, "can task", configMINIMAL_STACK_SIZE,
-    NULL, tskIDLE_PRIORITY + 1, task_stack, &task_buffer);
+    NULL, tskIDLE_PRIORITY + 2, cantask_stack, &cantask_buffer);
   xTaskCreateStatic(contactorTask, "contactor task", configMINIMAL_STACK_SIZE,
-                    NULL, tskIDLE_PRIORITY + 2, task_stack, &task_buffer);
+                    NULL, tskIDLE_PRIORITY + 3, contactortask_stack, &contactortask_buffer);
 
   vTaskStartScheduler();
 
