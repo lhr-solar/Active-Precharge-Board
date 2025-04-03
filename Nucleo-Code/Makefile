@@ -15,13 +15,13 @@ NC=\033[0m # No Color
 
 
 # Project Configuration ----------
-TEST ?= contactor
+TEST ?= main
 PROJECT_TARGET ?= stm32l432kcu
 # stm32f413rht
 
 # source and include directories
-PROJECT_C_INCLUDES = $(wildcard tests/)
-PROJECT_C_SOURCES = $(wildcard tests/)
+PROJECT_C_INCLUDES = $(wildcard */Inc)
+PROJECT_C_SOURCES = $(wildcard */Src/*.c)
 
 # build directories
 PROJECT_BUILD_DIR = Build

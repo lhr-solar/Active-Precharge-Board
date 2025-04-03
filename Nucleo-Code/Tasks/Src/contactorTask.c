@@ -1,8 +1,23 @@
 #include "contactor.h"
 
+int m_direct(){return HAL_GPIO_ReadPin(GPIOA, m_enable_pin);}
 
+void m_pre_enable(int state){ HAL_GPIO_WritePin(GPIOA, mpre_enable_pin, state);} 
+void a_pre_enable(int state){ HAL_GPIO_WritePin(GPIOA, apre_enable_pin, state);}
 
-static void error_handler(void)
+int m_sense(){return HAL_GPIO_ReadPin(GPIOA, m_sense_pin);}
+int m_pre_sense(){return HAL_GPIO_ReadPin(GPIOA, mpre_sense_pin);}
+int a_pre_sense(){return HAL_GPIO_ReadPin(GPIOA, apre_sense_pin);}
+
+int m_pre_ready(){return HAL_GPIO_ReadPin(GPIOB, mpre_ready_pin);}
+int a_pre_ready(){return HAL_GPIO_ReadPin(GPIOB, apre_ready_pin);}
+
+void mt_fault(int state){HAL_GPIO_WritePin(GPIOA, mt_fault_pin, state);}
+void ms_fault(int state){HAL_GPIO_WritePin(GPIOA, ms_fault_pin, state);}
+void at_fault(int state){HAL_GPIO_WritePin(GPIOB, at_fault_pin, state);}
+void as_fault(int state){HAL_GPIO_WritePin(GPIOA, as_fault_pin, state);}
+
+void error_handler(void)
 {
   while (1)
   {
@@ -13,7 +28,7 @@ static void error_handler(void)
   }
 }
 
-static void success_handler(void) {
+void success_handler(void) {
   while(1){
     as_fault(1);
     HAL_Delay(1000);
@@ -22,7 +37,8 @@ static void success_handler(void) {
   }
 }
 
-/*
+
+
 // // CAN_HandleTypeDef hcan1;
 
 // // Private function prototypes -----------------------------------------------
@@ -31,10 +47,10 @@ static void success_handler(void) {
 // void StartDefaultTask(void const * argument);
 
 
-// /**
-//   * @brief System Clock Configuration
-//   * @retval None
-//   */
+/*
+  * @brief System Clock Configuration
+  * @retval None
+  */
 // void SystemClock_Config(void)
 // {
 //   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
@@ -79,14 +95,14 @@ static void success_handler(void) {
 //     error_handler();
 //   }
 // }
-// 
+
 
 /**
  * @brief GPIO Initialization Function
  * @param None
  * @retval None
  */
-static void MX_GPIO_Init(void)
+void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
   /* USER CODE BEGIN MX_GPIO_Init_1 */
@@ -215,9 +231,9 @@ int fault[5];
 int on = 1;
 int cycles = 0;
 
-static void contactorTask(void *pvParamters)
+void contactorTask(void *pvParamters)
 {
-  HAL_Delay(5000);
+  // HAL_Delay(5000);
   while (1)
   {
     time = HAL_GetTick();
@@ -235,18 +251,18 @@ static void contactorTask(void *pvParamters)
 
     #ifdef contactorcode
     // Read Inputs
-    motor.enable_in = (m_direct);
-    motor.sense = m_sense;
+    motor.enable_in = (m_direct());
+    motor.sense = m_sense();
 
-    motorPre.pre_ready = m_pre_ready;
-    motorPre.pre_sense = m_pre_sense;
+    motorPre.pre_ready = m_pre_ready();
+    motorPre.pre_sense = m_pre_sense();
     // motorPre.sense_in = motor.sense;
 
-    arrayPre.pre_ready = a_pre_ready;
-    arrayPre.pre_sense = a_pre_sense;
+    arrayPre.pre_ready = a_pre_ready();
+    arrayPre.pre_sense = a_pre_sense();
 
-    motorPre.enable_out = m_pre_ready;
-    arrayPre.enable_out = a_pre_ready;
+    motorPre.enable_out = m_pre_ready();
+    arrayPre.enable_out = a_pre_ready();
 
     //Update States and Faults
     if(motor.fault==NO_FAULT){
@@ -523,57 +539,28 @@ static void contactorTask(void *pvParamters)
 
 
 
-
-static void canTask(void *pvParamters)
-{
-  
-  // create payload to send
-  CAN_TxHeaderTypeDef tx_header = {0};   
-  tx_header.StdId = 0x1;
-  tx_header.RTR = CAN_RTR_DATA;
-  tx_header.IDE = CAN_ID_STD;
-  tx_header.DLC = 2;
-  tx_header.TransmitGlobalTime = DISABLE;
-
-  // send two payloads to 0x1
-  uint8_t tx_data[8] = {0};
-  tx_data[0] = 0x01;
-  tx_data[1] = 0x00;
-  //HAL_Delay(5000);
-  if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
-
-  success_handler();
-}
-
+/*
 int main()
 {
   HAL_Init();
   HAL_MspInit();
   MX_GPIO_Init();
+  Task_Init();
   SystemClock_Config();
 
   
-  as_fault(1);
+  // as_fault(1);
   // HAL_Delay(5000);
   // as_fault(0);
 
-  // __HAL_RCC_GPIOB_CLK_ENABLE(); // enable clock for GPIOA
-  // HAL_GPIO_Init(GPIOB, &led_config); // initialize GPIOA with led_config
-
-  // while(1){
-  //     // HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_3);
-  //     // update
-
-  //     // error: send can error message
-  //     HAL_Delay(1000);
-  // }
-  xTaskCreateStatic(canTask, "can task", configMINIMAL_STACK_SIZE,
-    NULL, tskIDLE_PRIORITY + 2, cantask_stack, &cantask_buffer);
-  xTaskCreateStatic(contactorTask, "contactor task", configMINIMAL_STACK_SIZE,
-                    NULL, tskIDLE_PRIORITY + 3, contactortask_stack, &contactortask_buffer);
+  // xTaskCreateStatic(canTask, "can task", configMINIMAL_STACK_SIZE,
+  //   NULL, tskIDLE_PRIORITY + 2, cantask_stack, &cantask_buffer);
+  // xTaskCreateStatic(contactorTask, "contactor task", configMINIMAL_STACK_SIZE,
+  //                   NULL, tskIDLE_PRIORITY + 3, contactortask_stack, &contactortask_buffer);
 
   vTaskStartScheduler();
 
   error_handler();
   return 0;
 }
+*/

@@ -1,3 +1,4 @@
+#pragma once
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
@@ -19,8 +20,8 @@
 /* USER CODE END Header */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __MAIN_H
-#define __MAIN_H
+#ifndef CONTACTOR_H
+#define CONTACTOR_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -29,6 +30,8 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32l4xx_hal.h"
 #include "CAN.h"
+// #include "../Drivers/Inc/can.h"
+// #include "initTask.c"
 
 
 /* Private includes ----------------------------------------------------------*/
@@ -52,7 +55,13 @@ extern "C" {
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
-void Error_Handler(void);
+void error_handler(void);
+void success_handler(void);
+void task_Init();
+void contactorTask();
+void MX_GPIO_Init(void);
+void contactorCAN_Init();
+void contactorCANTask(void *pvParamters);
 
 /* USER CODE BEGIN EFP */
 
@@ -77,24 +86,7 @@ void Error_Handler(void);
 #define mpre_ready_pin GPIO_PIN_4 // B PLEASE REMEMBER
 #define apre_ready_pin GPIO_PIN_5 // B PLEASE REMEMBER
 
-#define m_direct HAL_GPIO_ReadPin(GPIOA, m_enable_pin)
-
-#define m_pre_enable(state) HAL_GPIO_WritePin(GPIOA, mpre_enable_pin, state)
-#define a_pre_enable(state) HAL_GPIO_WritePin(GPIOA, apre_enable_pin, state)
-
-#define m_sense HAL_GPIO_ReadPin(GPIOA, m_sense_pin)
-#define m_pre_sense HAL_GPIO_ReadPin(GPIOA, mpre_sense_pin)
-#define a_pre_sense HAL_GPIO_ReadPin(GPIOA, apre_sense_pin)
-
-#define m_pre_ready HAL_GPIO_ReadPin(GPIOB, mpre_ready_pin)
-#define a_pre_ready HAL_GPIO_ReadPin(GPIOB, apre_ready_pin)
-
-#define mt_fault(state) HAL_GPIO_WritePin(GPIOA, mt_fault_pin, state)
-#define ms_fault(state) HAL_GPIO_WritePin(GPIOA, ms_fault_pin, state)
-#define at_fault(state) HAL_GPIO_WritePin(GPIOB, at_fault_pin, state)
-#define as_fault(state) HAL_GPIO_WritePin(GPIOA, as_fault_pin, state)
-
- typedef enum {
+typedef enum {
     OPEN,
     CLOSED,
     FAULT
@@ -112,12 +104,6 @@ typedef enum{
 #define MPRE_TIMEOUT 1000
 #define APRE_TIMEOUT 1000
 
-/* USER CODE BEGIN Private defines */
-StaticTask_t contactortask_buffer;
-StackType_t contactortask_stack[configMINIMAL_STACK_SIZE];
-
-StaticTask_t cantask_buffer;
-StackType_t cantask_stack[configMINIMAL_STACK_SIZE];
 
 /* USER CODE END Private defines */
 
@@ -125,4 +111,4 @@ StackType_t cantask_stack[configMINIMAL_STACK_SIZE];
 }
 #endif
 
-#endif /* __MAIN_H */
+#endif /* CONTACTOR_H */
