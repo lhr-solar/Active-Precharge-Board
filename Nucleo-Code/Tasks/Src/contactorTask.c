@@ -30,21 +30,13 @@ void error_handler(void)
 
 void success_handler(void) {
   while(1){
-    as_fault(1);
+    mt_fault(1);
     HAL_Delay(1000);
-    as_fault(0);
+    mt_fault(0);
     HAL_Delay(1000);
   }
 }
 
-
-
-// // CAN_HandleTypeDef hcan1;
-
-// // Private function prototypes -----------------------------------------------
-// void SystemClock_Config(void);
-// static void MX_GPIO_Init(void);
-// void StartDefaultTask(void const * argument);
 
 
 /*
@@ -158,22 +150,6 @@ void MX_GPIO_Init(void)
   /* USER CODE END MX_GPIO_Init_2 */
 }
 
-
-/*
-// #define start &contactorFSM[0]
-// #define closing &contactorFSM[1]
-// #define closed &contactorFSM[2]
-// #define opening &contactorFSM[3]
-// #define fault &contactorFSM[4]
-
-// #define prestart &prechargeFSM[0]
-// #define precharge &prechargeFSM[1]
-// #define preclosing &prechargeFSM[2]
-// #define preclosed &prechargeFSM[3]
-// #define preopening &prechargeFSM[4]
-// #define prefault &prechargeFSM[5]
-*/
-
 typedef struct motorContactor
 {
   int state; // open, closed
@@ -184,16 +160,6 @@ typedef struct motorContactor
   uint32_t start_time; // HAL_getTick()
   // const struct motorContactor *next[4];
 } motorContactor;
-
-/*
-// const motorContactor motorContactorFSM[5] = {
-//     {0, 0, 0, {start, fault, closing, fault}}, //open
-//     {1, 0, 1, {opening, opening, closing, closed}},//closing
-//     {1, 1, 1, {fault, opening, fault, closed}},//closed
-//     {0, 1, 0, {start, opening, start, closed}},//opening
-//     {0, 0, 0, {fault, fault, fault, fault}} // fault
-// };
-*/
 
 typedef struct Precharge
 {
@@ -206,20 +172,6 @@ typedef struct Precharge
   uint32_t start_time;
   // const struct Precharge *next[8];
 } Precharge;
-
-/*
-// const Contactor prechargeFSM[6] = {
-//   {0, 0, 0, 0, {prestart, prefault, prestart, prefault, precharge, prefault,
-//   precharge, prefault}}, //open {1, 0, 0, 0, {prestart, prefault, prestart,
-//   prefault, precharge, prefault, preclosing, prefault}},//charging {1, 1, 0,
-//   1, {prestart, prestart, prestart, prestart, precharge, prefault,
-//   preclosing, preclosed}},//closing {1, 1, 1, 1, {prefault, prefault,
-//   prefault, preopening, prefault, prefault, prefault, preclosed}},//closed
-//   {0, 1, 1, 0, {prestart, preopening, prestart, preopening, preopening,
-//   prefault, prestart, preopening}}, // opening {0, 0, 0, 0, {fault, fault,
-//   fault, fault, fault, fault, fault, fault}} // fault
-// };
-*/
 
 motorContactor motor = {OPEN, OPEN, OPEN, NO_FAULT, 0};
 Precharge motorPre = {OPEN, OPEN, OPEN, OPEN, OPEN, NO_FAULT, 0};
@@ -237,6 +189,120 @@ void contactorTask(void *pvParamters)
   while (1)
   {
     time = HAL_GetTick();
+    // drive contactor based on sense
+    #ifdef sensetest
+    
+    motor.enable_in = (m_direct());
+    motor.sense = m_sense();
+
+    motorPre.pre_ready = m_pre_ready();
+    motorPre.pre_sense = m_pre_sense();
+    motorPre.sense_in = motor.sense;
+
+    if(motor.fault==NO_FAULT){
+      if(motor.state==OPEN && motor.enable_in==CLOSED){ // closing motor
+        if(motor.start_time==0){ //
+          motor.start_time = time;
+        }else if(motor.start_time+1000<time){
+          motor.fault = MT_FAULT;
+        }else if(motor.sense==CLOSED){
+          motorPre.pre_sense = CLOSED;
+          motor.state = CLOSED;
+          motor.start_time = 0;
+        }
+      }else if(motor.state==CLOSED && motor.enable_in == OPEN){ // opening motor
+        if(motor.start_time == 0){
+          motor.start_time = time;
+        }else if(motor.start_time+1000<time){
+          motor.fault = MT_FAULT;
+        }else if(motor.sense==OPEN){
+          motor.state = OPEN;
+          motorPre.sense_in = OPEN;
+          motor.start_time = 0;
+        }
+      }else if(motor.state == OPEN && motor.enable_in == OPEN){
+        if(motor.sense == CLOSED){
+          if(motor.start_time==0){
+            motor.start_time = time;
+          }else if(motor.start_time+10>time){
+            motor.fault = MS_FAULT;
+          }
+        }else{
+          motor.start_time = 0;
+        }
+      }else if(motor.state == CLOSED && motor.enable_in == CLOSED){
+        if(motor.sense == OPEN){
+          if(motor.start_time==0){
+            motor.start_time = time;
+          }else if(motor.start_time+10>time){
+            motor.fault =MS_FAULT;
+          }
+        }else{
+          motor.start_time = 0;
+        }
+      }
+    }else{
+      fault[motor.fault] = 1;
+    }
+
+    if(motorPre.fault==NO_FAULT){
+      if(motorPre.state==OPEN && motorPre.sense_in==CLOSED){ // closing motorPre
+        if(motorPre.start_time==0){ //
+          motorPre.start_time = time;
+        }else if(motorPre.start_time+1000<time){
+          motorPre.fault = MT_FAULT;
+        }else if(motorPre.pre_sense==CLOSED){
+          motorPre.state = CLOSED;
+          motorPre.start_time = 0;
+        }
+      }else if(motorPre.state==CLOSED && motorPre.sense_in == OPEN){ // opening motorPre
+        if(motorPre.start_time == 0){
+          motorPre.start_time = time;
+        }else if(motorPre.start_time+1000<time){
+          motorPre.fault = MT_FAULT;
+        }else if(motorPre.pre_sense==OPEN){
+          motorPre.state = OPEN;
+          motorPre.start_time = 0;
+        }
+      }else if(motorPre.state == OPEN && motorPre.sense_in == OPEN){
+        if(motorPre.pre_sense == CLOSED){
+          if(motorPre.start_time==0){
+            motorPre.start_time = time;
+          }else if(motorPre.start_time+10>time){
+            motorPre.fault = MS_FAULT;
+          }
+        }else{
+          motorPre.start_time = 0;
+        }
+      }else if(motorPre.state == CLOSED && motorPre.sense_in == CLOSED){
+        if(motorPre.pre_sense == OPEN){
+          if(motorPre.start_time==0){
+            motorPre.start_time = time;
+          }else if(motorPre.start_time+10>time){
+            motorPre.fault = MS_FAULT;
+          }
+        }else{
+          motorPre.start_time = 0;
+        }
+      }
+    }else{
+      fault[motorPre.fault] = 1;
+    }
+
+    if((fault[0]| fault[1] | fault[2] | fault[3] | fault[4]) == 0){
+      if(motorPre.start_time+500<time && motorPre.start_time!=0){
+        m_pre_enable(m_sense());
+      }
+      // m_pre_enable(m_sense());
+    }else{
+      m_pre_enable(0);
+    }
+
+    mt_fault(fault[MT_FAULT]);
+    ms_fault(fault[MS_FAULT]);
+
+    #endif
+
     // blinky tester
     #ifdef blinky
     m_pre_enable(1);
@@ -404,8 +470,11 @@ void contactorTask(void *pvParamters)
 
     //Check Faults
 
-    if ((motor.fault | motorPre.fault | arrayPre.fault | BPS_safe | moco_fault) != NO_FAULT)
+    if ((motor.fault | motorPre.fault | arrayPre.fault | BPS_safe | moco_fault) == NO_FAULT)
     {
+      motorPre.enable_out = motorPre.sense_in & motorPre.pre_ready;
+      arrayPre.enable_out = arrayPre.sense_in & arrayPre.pre_ready;
+    }else{
       motorPre.enable_out = 0;
       arrayPre.enable_out = 0;
       //sense fault on CAN
@@ -413,15 +482,15 @@ void contactorTask(void *pvParamters)
       if(arrayPre.fault==AS_FAULT){
         at_fault(1);
       }
-      
-    }else{
-      at_fault(0);
     }
+    mt_fault(fault[MT_FAULT]);
+    ms_fault(fault[MS_FAULT]);
+    at_fault(fault[AT_FAULT]);
+    as_fault(fault[AS_FAULT]);
 
-    // m_enable(motor.enable_out);
+    
     m_pre_enable(motorPre.enable_out);
     a_pre_enable(arrayPre.enable_out);
-    // a_pre_enable(1);
 
     #endif
 

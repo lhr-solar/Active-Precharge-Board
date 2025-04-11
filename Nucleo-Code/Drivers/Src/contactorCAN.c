@@ -16,11 +16,11 @@ void contactorCAN_Init(){
   sFilterConfig.SlaveStartFilterBank = 14;
 
   // setup can1 init
-  hcan1->Init.Prescaler = 40;
+  hcan1->Init.Prescaler = 16;
   hcan1->Init.Mode = CAN_MODE_LOOPBACK;
-  hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
-  hcan1->Init.TimeSeg1 = CAN_BS1_13TQ;
-  hcan1->Init.TimeSeg2 = CAN_BS2_2TQ;
+  hcan1->Init.SyncJumpWidth = CAN_SJW_2TQ;
+  hcan1->Init.TimeSeg1 = CAN_BS1_1TQ;
+  hcan1->Init.TimeSeg2 = CAN_BS2_6TQ;
   hcan1->Init.TimeTriggeredMode = DISABLE;
   hcan1->Init.AutoBusOff = DISABLE;
   hcan1->Init.AutoWakeUp = DISABLE;

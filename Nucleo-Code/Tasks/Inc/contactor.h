@@ -60,8 +60,8 @@ void success_handler(void);
 void task_Init();
 void contactorTask();
 void MX_GPIO_Init(void);
-void contactorCAN_Init();
-void contactorCANTask(void *pvParamters);
+// void contactorCAN_Init();
+// void contactorCANTask(void *pvParamters);
 
 /* USER CODE BEGIN EFP */
 
@@ -69,9 +69,10 @@ void contactorCANTask(void *pvParamters);
 
 /* Private defines -----------------------------------------------------------*/
 
-#define blinky 1
+// #define blinky 1
 // #define cantest 2
-// #define contactorcode 3
+#define contactorcode 3
+// #define sensetest 4
 
 #define m_enable_pin GPIO_PIN_0
 #define mpre_enable_pin GPIO_PIN_3
