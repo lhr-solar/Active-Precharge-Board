@@ -40,24 +40,21 @@ void success_handler(void) {
 
 
 /*
-  * @brief System Clock Configuration
-  * @retval None
-  */
 // void SystemClock_Config(void)
 // {
 //   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
 //   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-//   /** Configure the main internal regulator output voltage
-//   */
+//   // Configure the main internal regulator output voltage
+//   
 //   if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1) != HAL_OK)
 //   {
 //     error_handler();
 //   }
 
-//   /** Initializes the RCC Oscillators according to the specified parameters
-//   * in the RCC_OscInitTypeDef structure.
-//   */
+//   // Initializes the RCC Oscillators according to the specified parameters
+//   // in the RCC_OscInitTypeDef structure.
+//   
 //   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
 //   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
 //   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
@@ -73,8 +70,8 @@ void success_handler(void) {
 //     error_handler();
 //   }
 
-//   /** Initializes the CPU, AHB and APB buses clocks
-//   */
+//   // Initializes the CPU, AHB and APB buses clocks
+//   
 //   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
 //                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
 //   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
@@ -87,6 +84,7 @@ void success_handler(void) {
 //     error_handler();
 //   }
 // }
+*/
 
 
 /**
@@ -246,7 +244,11 @@ void contactorTask(void *pvParamters)
     }
 
     if(motorPre.fault==NO_FAULT){
-      if(motorPre.state==OPEN && motorPre.sense_in==CLOSED){ // closing motorPre
+      if(motorPre.sense_in == OPEN){
+        if(motorPre.pre_ready == CLOSED){
+          motorPre.fault = MS_FAULT;
+        }
+      }else if(motorPre.state==OPEN && motorPre.pre_ready==CLOSED){ // closing motorPre
         if(motorPre.start_time==0){ //
           motorPre.start_time = time;
         }else if(motorPre.start_time+1000<time){
@@ -255,7 +257,7 @@ void contactorTask(void *pvParamters)
           motorPre.state = CLOSED;
           motorPre.start_time = 0;
         }
-      }else if(motorPre.state==CLOSED && motorPre.sense_in == OPEN){ // opening motorPre
+      }else if(motorPre.state==CLOSED && motorPre.pre_ready == OPEN){ // opening motorPre
         if(motorPre.start_time == 0){
           motorPre.start_time = time;
         }else if(motorPre.start_time+1000<time){
@@ -264,7 +266,7 @@ void contactorTask(void *pvParamters)
           motorPre.state = OPEN;
           motorPre.start_time = 0;
         }
-      }else if(motorPre.state == OPEN && motorPre.sense_in == OPEN){
+      }else if(motorPre.state == OPEN && motorPre.pre_ready == OPEN){
         if(motorPre.pre_sense == CLOSED){
           if(motorPre.start_time==0){
             motorPre.start_time = time;
@@ -274,7 +276,7 @@ void contactorTask(void *pvParamters)
         }else{
           motorPre.start_time = 0;
         }
-      }else if(motorPre.state == CLOSED && motorPre.sense_in == CLOSED){
+      }else if(motorPre.state == CLOSED && motorPre.pre_ready == CLOSED){
         if(motorPre.pre_sense == OPEN){
           if(motorPre.start_time==0){
             motorPre.start_time = time;
@@ -289,9 +291,9 @@ void contactorTask(void *pvParamters)
       fault[motorPre.fault] = 1;
     }
 
-    if((fault[0]| fault[1] | fault[2] | fault[3] | fault[4]) == 0){
-      if(motorPre.start_time+500<time && motorPre.start_time!=0){
-        m_pre_enable(m_sense());
+    if((fault[0]| fault[1] | fault[2] | fault[3] | fault[4]) == NO_FAULT){
+      if(motorPre.start_time<time && motorPre.start_time!=0){
+        m_pre_enable(motorPre.pre_ready);
       }
       // m_pre_enable(m_sense());
     }else{
