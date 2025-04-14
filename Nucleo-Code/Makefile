@@ -30,11 +30,11 @@ BUILD_MAKEFILE_DIR = Embedded-Sharepoint
 # generate paths
 MAKEFILE_DIR = $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
-PROJECT_MAIN_DIR ?= 
+PROJECT_MAIN_DIR ?= Apps/Src/main
 
 ifneq ($(TEST), main)
 PROJECT_C_SOURCES := $(filter-out $(PROJECT_MAIN_DIR).c, $(PROJECT_C_SOURCES))
-PROJECT_C_SOURCES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_SOURCES) Tests/$(TEST).c)
+PROJECT_C_SOURCES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_SOURCES) Tests/test_$(TEST).c)
 else
 PROJECT_C_SOURCES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_SOURCES))
 endif
@@ -43,6 +43,12 @@ endif
 ifeq ($(PRINT_DEBUG), true)
 $(info SOURCES: $(PROJECT_C_SOURCES))
 $(info INCLUDES: $(PROJECT_C_INCLUDES))
+endif
+
+CAN_LOOPBACK ?= 1
+
+ifeq ($(CAN_LOOPBACK), 1)
+CFLAGS += -DCAN_LOOPBACK
 endif
 
 # generate paths (cont.d)
