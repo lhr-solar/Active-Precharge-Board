@@ -93,6 +93,7 @@ ifneq ($(TEST), main)
 else
 	@echo "Making ${PURPLE}$(PROJECT_TARGET)${NC}build with ${ORANGE}no test.${NC}"
 endif
+	@echo "Can Loopback is set to ${GREEN}$(CAN_LOOPBACK)${NC}"
 	$(BEAR_PREFIX) $(MAKE) -C $(BUILD_MAKEFILE_DIR) all -j
 	@echo "${BLUE}Compiled for Contactors Board! Splendid! Jolly Good!!${NC}"
 #---------------------------------

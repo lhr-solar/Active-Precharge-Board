@@ -9,7 +9,8 @@
 
 #include "stm32xx_hal.h"
 #include "CAN.h"
-#include "StatusLeds.h"
+#include "statusLeds.h"
+#include "common.h"
 
 StaticTask_t task_buffer;
 StackType_t task_stack[configMINIMAL_STACK_SIZE];
@@ -41,29 +42,17 @@ static void task(void *pvParameters) {
     tx_data[0] = 0x01;
     tx_data[1] = 0x00;
     if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
-    #ifdef CAN2
-    if (can_send(hcan2, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
-    #endif /* CAN2 */
 
     tx_data[0] = 0x02;
     if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
-    #ifdef CAN2
-    if (can_send(hcan2, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
-    #endif /* CAN2 */
 
     // send two payloads to 0x3
     tx_data[0] = 0x03;
     tx_header.StdId = 0x003;
     if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
-    #ifdef CAN2
-    if (can_send(hcan2, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
-    #endif /* CAN2 */
 
     tx_data[0] = 0x04;
     if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
-    #ifdef CAN2
-    if (can_send(hcan2, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
-    #endif /* CAN2 */
 
     // receive what was sent to 0x1
     CAN_RxHeaderTypeDef rx_header = {0};
@@ -76,28 +65,12 @@ static void task(void *pvParameters) {
     status = can_recv(hcan1, 0x1, &rx_header, rx_data, portMAX_DELAY);
     if (status != CAN_RECV && rx_data[0] != 0x2) error_handler();
 
-    #ifdef CAN2
-    // CAN2
-    status = can_recv(hcan2, 0x1, &rx_header, rx_data, portMAX_DELAY);
-    if (status != CAN_RECV && rx_data[0] != 0x1) error_handler();
-    status = can_recv(hcan2, 0x1, &rx_header, rx_data, portMAX_DELAY);
-    if (status != CAN_RECV && rx_data[0] != 0x2) error_handler();
-    #endif /* CAN2 */
-
     // make sure we don't receive from wrong ID and nonblocking works
     // CAN1
     status = can_recv(hcan1, 0x1, &rx_header, rx_data, 0);
     if (status != CAN_EMPTY) error_handler();
     status = can_recv(hcan1, 0x1, &rx_header, rx_data, 0);
     if (status != CAN_EMPTY) error_handler();
-
-    #ifdef CAN2
-    // CAN2
-    status = can_recv(hcan2, 0x1, &rx_header, rx_data, 0);
-    if (status != CAN_EMPTY) error_handler();
-    status = can_recv(hcan2, 0x1, &rx_header, rx_data, 0);
-    if (status != CAN_EMPTY) error_handler();
-    #endif /* CAN2 */
 
     // receive the rest
     // CAN1
@@ -207,32 +180,10 @@ int main(void) {
   Status_Leds_Write(MOTOR_TIMEOUT_FAULT_LED, true);
   // create filter
   CAN_FilterTypeDef  sFilterConfig;
-  sFilterConfig.FilterBank = 0;
-  sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
-  sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
-  sFilterConfig.FilterIdHigh = 0x0000;
-  sFilterConfig.FilterIdLow = 0x0000;
-  sFilterConfig.FilterMaskIdHigh = 0x0000;
-  sFilterConfig.FilterMaskIdLow = 0x0000;
-  sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
-  sFilterConfig.FilterActivation = ENABLE;
-  sFilterConfig.SlaveStartFilterBank = 14;
+  can_filter_config(&sFilterConfig);
 
   // setup can1 init
-  hcan1->Init.Prescaler = 40;
-  hcan1->Init.Mode = CAN_MODE_NORMAL;
-  hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
-  hcan1->Init.TimeSeg1 = CAN_BS1_13TQ;
-  hcan1->Init.TimeSeg2 = CAN_BS2_2TQ;
-  hcan1->Init.TimeTriggeredMode = DISABLE;
-  hcan1->Init.AutoBusOff = DISABLE;
-  hcan1->Init.AutoWakeUp = DISABLE;
-  hcan1->Init.AutoRetransmission = ENABLE;
-  hcan1->Init.ReceiveFifoLocked = DISABLE;
-
-  // If TransmitFifoPriority is disabled, the hardware selects the mailbox based on the message ID priority. 
-  // If enabled, the hardware uses a FIFO mechanism to select the mailbox based on the order of transmission requests.
-  hcan1->Init.TransmitFifoPriority = ENABLE;
+  can1_config();
 
   // initialize CAN1
   if (can_init(hcan1, &sFilterConfig) != CAN_OK) error_handler();

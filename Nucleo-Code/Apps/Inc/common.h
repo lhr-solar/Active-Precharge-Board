@@ -5,4 +5,7 @@
 
 void sys_clock_config(void);
 
+void can_filter_config(CAN_FilterTypeDef* filter);
+void can1_config(void);
+
 #endif
