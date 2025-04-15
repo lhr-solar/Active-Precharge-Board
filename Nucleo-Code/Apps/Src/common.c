@@ -97,7 +97,7 @@ void can1_config(void){
   #else
   hcan1->Init.Mode = CAN_MODE_NORMAL;
   #endif
-  
+
   hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
   hcan1->Init.TimeSeg1 = CAN_BS1_13TQ;
   hcan1->Init.TimeSeg2 = CAN_BS2_2TQ;
@@ -106,6 +106,7 @@ void can1_config(void){
   hcan1->Init.AutoWakeUp = DISABLE;
   hcan1->Init.AutoRetransmission = ENABLE;
   hcan1->Init.ReceiveFifoLocked = DISABLE;
+  
   // If TransmitFifoPriority is disabled, the hardware selects the mailbox based on the message ID priority. 
   // If enabled, the hardware uses a FIFO mechanism to select the mailbox based on the order of transmission requests.
   hcan1->Init.TransmitFifoPriority = ENABLE;
