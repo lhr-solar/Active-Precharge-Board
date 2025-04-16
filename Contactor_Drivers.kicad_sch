@@ -1655,6 +1655,16 @@
 	)
 	(wire
 		(pts
+			(xy 67.31 100.33) (xy 67.31 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "051e9363-64d5-4dc0-b8ba-536007f45882")
+	)
+	(wire
+		(pts
 			(xy 62.23 110.49) (xy 69.85 110.49)
 		)
 		(stroke
@@ -1672,6 +1682,16 @@
 			(type default)
 		)
 		(uuid "07109aa4-658f-40a6-a705-634751489224")
+	)
+	(wire
+		(pts
+			(xy 64.77 105.41) (xy 69.85 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12145413-b7f4-4c02-a5f9-47df0862fba3")
 	)
 	(wire
 		(pts
@@ -1812,6 +1832,16 @@
 			(type default)
 		)
 		(uuid "2eec5888-54be-4221-85a5-2d8f7eaecc4c")
+	)
+	(wire
+		(pts
+			(xy 44.45 175.26) (xy 55.88 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32048450-8118-41a8-8d3c-70ae8e1500e7")
 	)
 	(wire
 		(pts
@@ -2105,7 +2135,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 102.87) (xy 69.85 102.87)
+			(xy 62.23 100.33) (xy 67.31 100.33)
 		)
 		(stroke
 			(width 0)
@@ -2265,6 +2295,16 @@
 	)
 	(wire
 		(pts
+			(xy 67.31 102.87) (xy 69.85 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b507eca4-03db-4339-9cd0-1080f0378114")
+	)
+	(wire
+		(pts
 			(xy 219.71 107.95) (xy 222.25 107.95)
 		)
 		(stroke
@@ -2325,16 +2365,6 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 175.26) (xy 55.88 175.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c18dd1a3-568c-4565-9bf0-5f196b153dd3")
-	)
-	(wire
-		(pts
 			(xy 119.38 50.8) (xy 119.38 54.61)
 		)
 		(stroke
@@ -2342,6 +2372,16 @@
 			(type default)
 		)
 		(uuid "c35d2077-32e2-48e4-b40a-19122cfd8856")
+	)
+	(wire
+		(pts
+			(xy 64.77 102.87) (xy 64.77 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c52f1913-e086-4e47-aa6c-e3bb79f7e4ad")
 	)
 	(wire
 		(pts
@@ -2365,7 +2405,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 105.41) (xy 62.23 105.41)
+			(xy 64.77 102.87) (xy 62.23 102.87)
 		)
 		(stroke
 			(width 0)
@@ -2710,7 +2750,7 @@
 	)
 	(text "Motor\nCoil+"
 		(exclude_from_sim no)
-		(at 65.278 98.806 0)
+		(at 72.39 98.044 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2805,6 +2845,17 @@
 		)
 		(uuid "8b6a2eb2-1ac0-489a-a560-0b31ffcd7d85")
 	)
+	(label "MSense"
+		(at 44.45 175.26 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b35c4d11-2394-4270-83b4-33790c906fed")
+	)
 	(label "MCon-"
 		(at 80.01 54.61 180)
 		(fields_autoplaced yes)
@@ -2826,6 +2877,17 @@
 			(justify right bottom)
 		)
 		(uuid "dffe355f-0b42-42eb-bef1-109d9e39657c")
+	)
+	(label "MSense"
+		(at 62.23 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e847dd70-ef37-4b6a-8869-05c53124956c")
 	)
 	(label "AUX+"
 		(at 115.57 177.8 0)
@@ -2924,7 +2986,7 @@
 	)
 	(hierarchical_label "LV+"
 		(shape input)
-		(at 62.23 105.41 180)
+		(at 62.23 102.87 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3092,7 +3154,7 @@
 	)
 	(hierarchical_label "LV+"
 		(shape input)
-		(at 62.23 102.87 180)
+		(at 62.23 100.33 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3113,18 +3175,6 @@
 			(justify left)
 		)
 		(uuid "c6fbc50d-320d-4939-85e9-8d928de353aa")
-	)
-	(hierarchical_label "M_Sense"
-		(shape output)
-		(at 48.26 175.26 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e5d50b01-5133-406d-902d-44a51242cedf")
 	)
 	(hierarchical_label "A_Pre_Sense"
 		(shape output)
