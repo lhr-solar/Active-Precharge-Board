@@ -1,6 +1,5 @@
 #include "FreeRTOS.h" /* Must come first. */
-#include "task.h" 
-#include "contactor.h"
+#include "Tasks.h"
 // #include "pinConfig.h"
 #include "stm32xx_hal.h"
 
@@ -12,7 +11,7 @@ int main() {
     MX_GPIO_Init();
     
     xTaskCreateStatic(
-                    task_Init, /* The function that implements the task. */
+                    Task_Init, /* The function that implements the task. */
                     "Init Task", /* Text name for the task. */
                     configMINIMAL_STACK_SIZE, /* The size (in words) of the stack that should be created for the task. */
                     (void*)NULL, /* Paramter passed into the task. */
