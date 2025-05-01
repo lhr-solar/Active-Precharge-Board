@@ -62,6 +62,23 @@ void MX_GPIO_Init(void)
   /* USER CODE END MX_GPIO_Init_2 */
 }
 
+int motor_direct(){return HAL_GPIO_ReadPin(m_enable_port, m_enable_pin);}
+
+void motor_precharge_enable(int state){ HAL_GPIO_WritePin(mpre_enable_port, mpre_enable_pin, state);} 
+void array_precharge_enable(int state){ HAL_GPIO_WritePin(apre_enable_port, apre_enable_pin, state);}
+
+int motor_sense(){return HAL_GPIO_ReadPin(m_sense_port, m_sense_pin);}
+int motor_precharge_sense(){return HAL_GPIO_ReadPin(mpre_sense_port, mpre_sense_pin);}
+int array_precharge_sense(){return HAL_GPIO_ReadPin(apre_sense_port, apre_sense_pin);}
+
+int motor_precharge_ready(){return HAL_GPIO_ReadPin(mpre_ready_port, mpre_ready_pin);}
+int array_precharge_ready(){return HAL_GPIO_ReadPin(apre_ready_port, apre_ready_pin);}
+
+void motor_timeout_fault(int state){HAL_GPIO_WritePin(mt_fault_port, mt_fault_pin, state);}
+void motor_sense_fault(int state){HAL_GPIO_WritePin(ms_fault_port, ms_fault_pin, state);}
+void array_timeout_fault(int state){HAL_GPIO_WritePin(at_fault_port, at_fault_pin, state);}
+void array_sense_fault(int state){HAL_GPIO_WritePin(as_fault_port, as_fault_pin, state);}
+
 void Status_LEDS_Toggle(int led){
   switch(led){
     case MT_LED:

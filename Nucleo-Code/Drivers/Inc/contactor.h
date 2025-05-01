@@ -151,22 +151,22 @@ void error_handler(void);
 void success_handler(void);
 void MX_GPIO_Init(void);
 
-int motor_direct(){return HAL_GPIO_ReadPin(m_enable_port, m_enable_pin);}
+int motor_direct();
 
-void motor_precharge_enable(int state){ HAL_GPIO_WritePin(mpre_enable_port, mpre_enable_pin, state);} 
-void array_precharge_enable(int state){ HAL_GPIO_WritePin(apre_enable_port, apre_enable_pin, state);}
+void motor_precharge_enable(int state);
+void array_precharge_enable(int state);
 
-int motor_sense(){return HAL_GPIO_ReadPin(m_sense_port, m_sense_pin);}
-int motor_precharge_sense(){return HAL_GPIO_ReadPin(mpre_sense_port, mpre_sense_pin);}
-int array_precharge_sense(){return HAL_GPIO_ReadPin(apre_sense_port, apre_sense_pin);}
+int motor_sense();
+int motor_precharge_sense();
+int array_precharge_sense();
 
-int motor_precharge_ready(){return HAL_GPIO_ReadPin(mpre_ready_port, mpre_ready_pin);}
-int array_precharge_ready(){return HAL_GPIO_ReadPin(apre_ready_port, apre_ready_pin);}
+int motor_precharge_ready();
+int array_precharge_ready();
 
-void motor_timeout_fault(int state){HAL_GPIO_WritePin(mt_fault_port, mt_fault_pin, state);}
-void motor_sense_fault(int state){HAL_GPIO_WritePin(ms_fault_port, ms_fault_pin, state);}
-void array_timeout_fault(int state){HAL_GPIO_WritePin(at_fault_port, at_fault_pin, state);}
-void array_sense_fault(int state){HAL_GPIO_WritePin(as_fault_port, as_fault_pin, state);}
+void motor_timeout_fault(int state);
+void motor_sense_fault(int state);
+void array_timeout_fault(int state);
+void array_sense_fault(int state);
 
 void Status_LEDS_Toggle(int statusLED);
 void Status_LEDS_Write(status_led_t led, int state);
@@ -176,17 +176,11 @@ void Status_LEDS_Write(status_led_t led, int state);
 
 /* USER CODE BEGIN EFP */
 
-motorContactor motor = {OPEN, OPEN, OPEN, NO_FAULT, 0};
-Precharge motorPre = {OPEN, OPEN, OPEN, OPEN, OPEN, NO_FAULT, 0};
-Precharge arrayPre = {OPEN, OPEN, OPEN, OPEN, OPEN, NO_FAULT, 0};
-
-int time = 0;
-int fault[5];
 
 /* USER CODE END Private defines */
 
-#ifdef __cplusplus
-}
-#endif
+// #ifdef __cplusplus
+// }
+// #endif
 
 #endif /* CONTACTOR_H */

@@ -1,5 +1,13 @@
 #include "Task_Contactor.h"
 
+
+motorContactor motor = {OPEN, OPEN, OPEN, NO_FAULT, 0};
+Precharge motorPre = {OPEN, OPEN, OPEN, OPEN, OPEN, NO_FAULT, 0};
+Precharge arrayPre = {OPEN, OPEN, OPEN, OPEN, OPEN, NO_FAULT, 0};
+
+int time = 0;
+int fault[5];
+
 void Task_Contactors(void *pvParamters)
 {
   // HAL_Delay(5000);
