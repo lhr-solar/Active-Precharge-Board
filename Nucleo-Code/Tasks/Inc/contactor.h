@@ -72,7 +72,7 @@ void MX_GPIO_Init(void);
 // #define blinky 1
 // #define cantest 2
 // #define contactorcode 3
-#define sensetest 4
+#define validated_logic 4 // fully validated 4/29/2025
 
 #define m_enable_pin GPIO_PIN_0
 #define mpre_enable_pin GPIO_PIN_3

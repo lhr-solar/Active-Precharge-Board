@@ -148,160 +148,356 @@ void MX_GPIO_Init(void)
   /* USER CODE END MX_GPIO_Init_2 */
 }
 
-typedef struct motorContactor
+typedef struct Contactor
 {
   int state; // open, closed
   int enable_in;
   int sense;  // GPIO pin to read the contactor's state
-  // int enable_out; // GPIO pin to control the contactor
   int fault;
   uint32_t start_time; // HAL_getTick()
-  // const struct motorContactor *next[4];
-} motorContactor;
+} Contactor;
 
-typedef struct Precharge
+typedef struct prechargeContactor
 {
   int state;     // open, closed
-  int sense_in;  // GPIO pin to read the contactor's state
   int pre_ready; // Precharge ready signal
-  int pre_sense;
+  int sense;
   int enable_out; // GPIO pin to control the contactor
   int fault;
   uint32_t start_time;
-  // const struct Precharge *next[8];
-} Precharge;
+} prechargeContactor;
 
-motorContactor motor = {OPEN, OPEN, OPEN, NO_FAULT, 0};
-Precharge motorPre = {OPEN, OPEN, OPEN, OPEN, OPEN, NO_FAULT, 0};
-Precharge arrayPre = {OPEN, OPEN, OPEN, OPEN, OPEN, NO_FAULT, 0};
+Contactor motor = {OPEN, OPEN, OPEN, NO_FAULT, 0};
+Contactor array = {OPEN, OPEN, OPEN, NO_FAULT, 0};
+prechargeContactor motorPre = {OPEN, OPEN, OPEN, OPEN, NO_FAULT, 0};
+prechargeContactor arrayPre = {OPEN, OPEN, OPEN, OPEN, NO_FAULT, 0};
 int time;
+int fault[10];
+uint32_t mPre_initial_delay = 0;
+uint32_t aPre_initial_delay = 0;
+uint32_t mPre_timeout = 0;
+uint32_t aPre_timeout = 0;
+bool disable_motorPre = false; //semaphore, true when motor sucsessfully disabled in event in turn off sequence
+bool disable_arrayPre = false; //semaphore, true when array sucsessfully disabled whenever its supposed to be
+bool CAN_fault = false; // in CAN handler set this to true for any car faults such as BPS unsafe
+
+/* unused globals
 int BPS_safe;
 int moco_fault;
-int fault[5];
-int on = 1;
 int cycles = 0;
+int on = 1;
+*/
 
-void contactorTask(void *pvParamters)
-{
-  // HAL_Delay(5000);
+
+void contactorTask(void *pvParamters) {
+
+  for (int i = 0; i < 10; i++){ //initialize system to be faultless
+    fault[i] = NO_FAULT;
+  }
+
+  while (false){ //change this to wait here for BPS safe
+    //waiting for BPS safe or waiting for HV+/- contactors to close
+    //no need to execute through the while loop on start up before BPS safe
+    //no HV behavior to control
+  }
+
+
   while (1)
   {
     time = HAL_GetTick();
-    // drive contactor based on sense
-    #ifdef sensetest
+
+    //logic working and validated 4/29/2025
+    #ifdef validated_logic
     
+    //read pins
     motor.enable_in = (m_direct());
     motor.sense = m_sense();
-
     motorPre.pre_ready = m_pre_ready();
-    motorPre.pre_sense = m_pre_sense();
-    motorPre.sense_in = motor.sense;
+    motorPre.sense = m_pre_sense();
 
-    if(motor.fault==NO_FAULT){
-      if(motor.state==OPEN && motor.enable_in==CLOSED){ // closing motor
-        if(motor.start_time==0){ //
-          motor.start_time = time;
-        }else if(motor.start_time+1000<time){
-          motor.fault = MT_FAULT;
-        }else if(motor.sense==CLOSED){
-          motorPre.pre_sense = CLOSED;
-          motor.state = CLOSED;
-          motor.start_time = 0;
-        }
-      }else if(motor.state==CLOSED && motor.enable_in == OPEN){ // opening motor
-        if(motor.start_time == 0){
-          motor.start_time = time;
-        }else if(motor.start_time+1000<time){
-          motor.fault = MT_FAULT;
-        }else if(motor.sense==OPEN){
-          motor.state = OPEN;
-          motorPre.sense_in = OPEN;
-          motor.start_time = 0;
-        }
-      }else if(motor.state == OPEN && motor.enable_in == OPEN){
-        if(motor.sense == CLOSED){
-          if(motor.start_time==0){
-            motor.start_time = time;
-          }else if(motor.start_time+10>time){
-            motor.fault = MS_FAULT;
-          }
-        }else{
-          motor.start_time = 0;
-        }
-      }else if(motor.state == CLOSED && motor.enable_in == CLOSED){
-        if(motor.sense == OPEN){
-          if(motor.start_time==0){
-            motor.start_time = time;
-          }else if(motor.start_time+10>time){
-            motor.fault =MS_FAULT;
-          }
-        }else{
-          motor.start_time = 0;
-        }
-      }
-    }else{
-      fault[motor.fault] = 1;
+    //array.enable_in = from CAN  //fix this
+    //array.sense = from CAN //fix this
+    arrayPre.pre_ready = a_pre_ready();
+    arrayPre.sense = a_pre_sense();
+
+    //handle faults
+    if((fault[0]| fault[1] | fault[2] | fault[3] | fault[4] | fault[5]| fault[6] | fault[7] | fault[8] | fault[9] |CAN_fault) == FAULT){
+
+      //disable contactors under our domain (m_pre and a_pre)
+      m_pre_enable(0);
+      a_pre_enable(0);
+
+      //send CAN specific message based on fault
+      // if (CAN_fault) {do nothing, only disable contactors;}
+      if (fault[0]){  //m_enable unplug       
+        ms_fault(1); 
+        mt_fault(1); 
+        //send this specific CAN message
+      } 
+      if (fault[1]){  //motor sense fault
+        ms_fault(1); 
+        //send this specific CAN message
+      } 
+      if (fault[2]){  //motor timeout fault
+        mt_fault(1); 
+        //send this specific CAN message
+      } 
+      if (fault[3]){  //motorPre sense fault
+        ms_fault(1); 
+        //send this specific CAN message
+      } 
+      if (fault[4]){  //motorPre timeout fault
+        mt_fault(1); 
+        //send this specific CAN message
+      } 
+      if (fault[5]){  //a_enable fault       
+        as_fault(1); 
+        at_fault(1); 
+        //send this specific CAN message
+      } 
+      if (fault[6]){  //array sense fault
+        as_fault(1); 
+        //send this specific CAN message
+      } 
+      if (fault[7]){  //array timeout fault
+        at_fault(1); 
+        //send this specific CAN message
+      } 
+      if (fault[8]){  //arrayPre sense fault
+        as_fault(1); 
+        //send this specific CAN message
+      } 
+      if (fault[9]){  //arrayPre timeout fault
+        at_fault(1); 
+        //send this specific CAN message
+      } 
+
     }
 
-    if(motorPre.fault==NO_FAULT){
-      if(motorPre.sense_in == OPEN){
-        if(motorPre.pre_ready == CLOSED){
-          motorPre.fault = MS_FAULT;
+    else{ //this else executes if no faults
+
+      //motor logic
+      if (motor.enable_in == CLOSED && motor.state == OPEN) {
+        if(motor.start_time == 0){ 
+          motor.start_time = time;
         }
-      }else if(motorPre.state==OPEN && motorPre.pre_ready==CLOSED){ // closing motorPre
-        if(motorPre.start_time==0){ //
-          motorPre.start_time = time;
-        }else if(motorPre.start_time+1000<time){
-          motorPre.fault = MT_FAULT;
-        }else if(motorPre.pre_sense==CLOSED){
-          motorPre.state = CLOSED;
-          motorPre.start_time = 0;
+        else if ((motor.sense == OPEN) && (motor.start_time + 100 < time)){  //if 100ms after contactor enabled, fault, not reading sense right
+          fault[1] = FAULT; //motor sense fault
         }
-      }else if(motorPre.state==CLOSED && motorPre.pre_ready == OPEN){ // opening motorPre
-        if(motorPre.start_time == 0){
+        else if(motor.sense==CLOSED){
+          if (mPre_initial_delay == 0){
+            mPre_initial_delay = time;
+          }
+          else if (mPre_initial_delay + 100 < time){  //bake in 100ms of delay for the contactor to fully close and reset precharge logic
+            motor.state = CLOSED;
+            motor.start_time = 0;
+            mPre_initial_delay = 0;
+            mPre_timeout = time;
+          }
+        }
+      }
+      else if (motor.enable_in == OPEN && motor.state == CLOSED){
+        if (false) { //change false to say if were in the right part if ignition state for m.enable to go low, then
+          if (motor.start_time == 0){
+            motor.start_time = time;
+          }
+          else if ((motor.sense == CLOSED) && (motor.start_time + 100 < time)){
+            fault[2] = FAULT; //motor timeout fault
+          }
+          else if (motor.sense == OPEN){
+            motor.state =  OPEN;
+            motor.start_time = 0;
+            disable_motorPre = true;  //sempahore, turn off motorPre
+          }
+        }
+        else {
+          if (motor.start_time == 0){
+            motor.start_time = time;
+          }
+          else if (motor.start_time + 10 < time){
+            fault[0] = FAULT; //otherwise, m.enable probably unplugged, fault
+          }
+        }
+        
+      } 
+      else if(motor.enable_in == OPEN && motor.state == OPEN){ //if conactor is unenabled and sense high, wait 10ms and if still true, fault
+        if(motor.sense == CLOSED){
+          if(motor.start_time == 0){ 
+            motor.start_time = time;
+          }
+          else if(motor.start_time + 10 > time){
+            fault[1] = FAULT; //motor sense fault
+          }
+        }
+        else motor.start_time = 0; 
+      }
+      else if(motor.enable_in == CLOSED && motor.state == CLOSED){ //if conactor is enabled and sense low, wait 10ms and if still true, fault
+        if(motor.sense == OPEN){
+          if(motor.start_time == 0){
+            motor.start_time = time;
+          }
+          else if(motor.start_time + 10 > time){
+            fault[1] = FAULT; //motor sense fault
+          }
+        }
+        else motor.start_time = 0;
+      }
+
+      //motorPre logic
+      if (motor.state == CLOSED){ //handle event where pre_ready is high bc motor.state was just open and enabling motorPre after
+        if (motorPre.pre_ready == OPEN){
+          if (mPre_timeout == 0){
+            mPre_timeout = time;
+          } 
+          else if (motorPre.state == CLOSED && mPre_timeout + 100 < time) {
+            fault[4] = FAULT; //motor precharge steady state timeout fault
+          }
+          else if (mPre_timeout + 1000 < time){
+            fault[4] = FAULT; //motor precharge initial timeout fault
+          }
+        }
+        else if (motorPre.pre_ready == CLOSED){
+          m_pre_enable(1);
+          if(motorPre.start_time == 0){ 
+            motorPre.start_time = time;
+          }
+          else if ((motorPre.sense == OPEN) && (motorPre.start_time + 100 < time)){  //if 100ms after contactor enabled, fault, not reading sense right
+            fault[3] = FAULT; //motor precharge sense fault 
+          }
+          else if (motorPre.sense == CLOSED){
+            motorPre.state = CLOSED;
+            motorPre.start_time = 0;
+            mPre_timeout = 0;
+          }
+        }
+      }
+      else if (disable_motorPre){ //handle motorPre disable when motor was just disabled
+        if (motorPre.start_time == 0){
           motorPre.start_time = time;
-        }else if(motorPre.start_time+1000<time){
-          motorPre.fault = MT_FAULT;
-        }else if(motorPre.pre_sense==OPEN){
+          m_pre_enable(0);
+        }
+        else if (motorPre.sense == CLOSED && motorPre.start_time + 100 < time){
+          fault[4] = FAULT; //motor precharge turn off timeout fault
+        }
+        else if (motorPre.sense == OPEN){
           motorPre.state = OPEN;
           motorPre.start_time = 0;
-        }
-      }else if(motorPre.state == OPEN && motorPre.pre_ready == OPEN){
-        if(motorPre.pre_sense == CLOSED){
-          if(motorPre.start_time==0){
-            motorPre.start_time = time;
-          }else if(motorPre.start_time+10>time){
-            motorPre.fault = MS_FAULT;
-          }
-        }else{
-          motorPre.start_time = 0;
-        }
-      }else if(motorPre.state == CLOSED && motorPre.pre_ready == CLOSED){
-        if(motorPre.pre_sense == OPEN){
-          if(motorPre.start_time==0){
-            motorPre.start_time = time;
-          }else if(motorPre.start_time+10>time){
-            motorPre.fault = MS_FAULT;
-          }
-        }else{
-          motorPre.start_time = 0;
+          disable_motorPre = false;
         }
       }
-    }else{
-      fault[motorPre.fault] = 1;
-    }
-
-    if((fault[0]| fault[1] | fault[2] | fault[3] | fault[4]) == NO_FAULT){
-      if(motorPre.start_time<time && motorPre.start_time!=0){
-        m_pre_enable(motorPre.pre_ready);
+    
+      /* array logic never tested before but identical to motor
+      //array logic
+      if (array.enable_in == CLOSED && array.state == OPEN) {
+        if(array.start_time == 0){ 
+          array.start_time = time;
+        }
+        else if ((array.sense == OPEN) && (array.start_time + 100 < time)){  //if 100ms after contactor enabled, fault, not reading sense right
+          fault[6] = FAULT; //array sense fault
+        }
+        else if(array.sense==CLOSED){
+          if (aPre_initial_delay == 0){
+            aPre_initial_delay = time;
+          }
+          else if (aPre_initial_delay + 100 < time){  //bake in 100ms of delay for the contactor to fully close and reset precharge logic
+            array.state = CLOSED;
+            array.start_time = 0;
+            aPre_initial_delay = 0;
+            aPre_timeout = time;
+          }
+        }
       }
-      // m_pre_enable(m_sense());
-    }else{
-      m_pre_enable(0);
-    }
+      else if (array.enable_in == OPEN && array.state == CLOSED){
+        if (false) { //change false to say if were in the right part if ignition state for a.enable to go low, then
+          if (array.start_time == 0){
+            array.start_time = time;
+          }
+          else if ((array.sense == CLOSED) && (array.start_time + 100 < time)){
+            fault[7] = FAULT;  //array timeout fault
+          }
+          else if (array.sense == OPEN){
+            array.state =  OPEN;
+            array.start_time = 0;
+            disable_arrayPre = true;  //sempahore, turn off arrayPre
+          }
+        }
+        else {
+          if (array.start_time == 0){
+            array.start_time = time;
+          }
+          else if (array.start_time + 10 < time){
+            fault[5] = FAULT; //otherwise, were not in the right part of ignition state for this to happen, fault
+          }
+        }
+        
+      } 
+      else if(array.enable_in == OPEN && array.state == OPEN){ //if conactor is unenabled and sense high, wait 10ms and if still true, fault
+        if(array.sense == CLOSED){
+          if(array.start_time == 0){ 
+            array.start_time = time;
+          }
+          else if(array.start_time + 10 > time){
+            fault[6] = FAULT; //array sense fault
+          }
+        }
+        else array.start_time = 0; 
+      }
+      else if(array.enable_in == CLOSED && array.state == CLOSED){ //if conactor is enabled and sense low, wait 10ms and if still true, fault
+        if(array.sense == OPEN){
+          if(array.start_time == 0){
+            array.start_time = time;
+          }
+          else if(array.start_time + 10 > time){
+            fault[6] = FAULT; //array sense fault
+          }
+        }
+        else array.start_time = 0;
+      }
 
-    mt_fault(fault[MT_FAULT]);
-    ms_fault(fault[MS_FAULT]);
+      //arrayPre logic
+      if (array.state == CLOSED){ //handle event where pre_ready is high bc array.state was just open and enabling arrayPre after
+        if (arrayPre.pre_ready == OPEN){
+          if (aPre_timeout == 0){
+            aPre_timeout = time;
+          } 
+          else if (arrayPre.state == CLOSED && aPre_timeout + 100 < time) {
+            fault[9] = FAULT; //array precharge steady state timeout fault
+          }
+          else if (aPre_timeout + 1000 < time){
+            fault[9] = FAULT; //array precharge initial timeout fault
+          }
+        }
+        else if (arrayPre.pre_ready == CLOSED){
+          a_pre_enable(1);
+          if(arrayPre.start_time == 0){ 
+            arrayPre.start_time = time;
+          }
+          else if ((arrayPre.sense == OPEN) && (arrayPre.start_time + 100 < time)){  //if 100ms after contactor enabled, fault, not reading sense right
+            fault[8] = FAULT; //array precharge sense fault
+          }
+          else if (arrayPre.sense == CLOSED){
+            arrayPre.state = CLOSED;
+            arrayPre.start_time = 0;
+            aPre_timeout = 0;
+          }
+        }
+      }
+      else if (disable_arrayPre){ //handle arrayPre disable when array was just disabled
+        if (arrayPre.start_time == 0){
+          arrayPre.start_time = time;
+          a_pre_enable(0);
+        }
+        else if (arrayPre.sense == CLOSED && arrayPre.start_time + 100 < time){
+          fault[9] = FAULT; //array precharge turn off timeout fault
+        }
+        else if (arrayPre.sense == OPEN){
+          arrayPre.state = OPEN;
+          arrayPre.start_time = 0;
+          disable_arrayPre = false;
+        }
+      }
+      */
+    }
 
     #endif
 
