@@ -4,10 +4,6 @@
 #ifndef CONTACTOR_H
 #define CONTACTOR_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /* Includes ------------------------------------------------------------------*/
 #include "common.h"
 #include "stm32l4xx_hal.h"
@@ -18,7 +14,6 @@ void success_handler(void);
 void MX_GPIO_Init(void);
 
 // timeouts
-// TODO: more descriptive names
 #define MOTOR_TIMEOUT 1000
 #define MOTOR_PRECHARGE_TIMEOUT 1000
 #define ARRAY_PRECHARGE_TIMEOUT 1000
@@ -90,7 +85,7 @@ typedef enum {
 
 // Function definitions
 // READ-ONLY drive/sense signals from controls-driven motor contactor
-int motor_direct();
+uint8_t motor_enable_read();
 int motor_sense();
 
 // drive/sense signals for motor precharge contactor
@@ -112,7 +107,8 @@ void motor_sense_fault_led(int state);
 void array_timeout_fault_led(int state);
 void array_sense_fault_led(int state);
 
+// TODO: get rid of all individual status LED functions and call this...
 void Status_LEDS_Toggle(int statusLED);
-void Status_LEDS_Write(status_led_t led, int state)
+void Status_LEDS_Write(status_led_t led, int state);
 
 #endif /* CONTACTOR_H */
