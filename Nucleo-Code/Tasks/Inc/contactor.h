@@ -15,15 +15,13 @@ extern "C" {
 /* Exported functions prototypes ---------------------------------------------*/
 void error_handler(void);
 void success_handler(void);
-void task_Init();
-void contactorTask();
 void MX_GPIO_Init(void);
 
 // timeouts
 // TODO: more descriptive names
-#define M_TIMEOUT 1000
-#define MPRE_TIMEOUT 1000
-#define APRE_TIMEOUT 1000
+#define MOTOR_TIMEOUT 1000
+#define MOTOR_PRECHARGE_TIMEOUT 1000
+#define ARRAY_PRECHARGE_TIMEOUT 1000
 
 // TODO: remove ts
 // #define blinky 1
@@ -31,7 +29,7 @@ void MX_GPIO_Init(void);
 // #define contactorcode 3
 #define validated_logic 4 // fully validated 4/29/2025
 
-// Contactor pin definitions
+// Contactor drive/sense pin definitions
 #define MOTOR_ENABLE_PORT GPIOA
 #define MOTOR_ENABLE_PIN GPIO_PIN_0
 #define MOTOR_SENSE_PORT GPIOA
@@ -60,11 +58,12 @@ void MX_GPIO_Init(void);
 #define ARRAY_SENSE_FAULT_LED_PORT GPIOA
 #define ARRAY_SENSE_FAULT_LED_PIN GPIO_PIN_9
 
-#define MOTOR_PRECHARGE_READY_LED_PORT GPIOB
-#define MOTOR_PRECHARGE_READY_LED_PIN GPIO_PIN_4
+// Precharge ready indicators (input from hardware comparison)
+#define MOTOR_PRECHARGE_READY_PORT GPIOB
+#define MOTOR_PRECHARGE_READY_PIN GPIO_PIN_4
 
-#define ARRAY_PRECHARGE_READY_LED_PORT GPIOB
-#define ARRAY_PRECHARGE_READY_LED_PIN GPIO_PIN_5
+#define ARRAY_PRECHARGE_READY_PORT GPIOB
+#define ARRAY_PRECHARGE_READY_PIN GPIO_PIN_5
 
 // Enums for various device state
 typedef enum {
@@ -89,8 +88,31 @@ typedef enum {
     NUM_LEDS,
 } status_led_t;
 
-#ifdef __cplusplus
-}
-#endif
+// Function definitions
+// READ-ONLY drive/sense signals from controls-driven motor contactor
+int motor_direct();
+int motor_sense();
+
+// drive/sense signals for motor precharge contactor
+void motor_precharge_enable(int state);
+int motor_precharge_sense();
+
+// drive/sense signals for array precharge contactor
+void array_precharge_enable(int state);
+int array_precharge_sense();
+
+// read precharge ready indicators from hardware comparison
+int motor_precharge_ready();
+int array_precharge_ready();
+
+// fault/status LEDs
+void motor_timeout_fault_led(int state);
+void motor_sense_fault_led(int state);
+
+void array_timeout_fault_led(int state);
+void array_sense_fault_led(int state);
+
+void Status_LEDS_Toggle(int statusLED);
+void Status_LEDS_Write(status_led_t led, int state)
 
 #endif /* CONTACTOR_H */
