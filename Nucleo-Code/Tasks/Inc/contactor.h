@@ -1,23 +1,4 @@
-#pragma once
-/* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file           : main.h
-  * @brief          : Header for main.c file.
-  *                   This file contains the common defines of the application.
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2025 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
-/* USER CODE END Header */
+#pragma once // TODO: why pragma....
 
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef CONTACTOR_H
@@ -28,31 +9,8 @@ extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
+#include "common.h"
 #include "stm32l4xx_hal.h"
-#include "CAN.h"
-// #include "../Drivers/Inc/can.h"
-// #include "initTask.c"
-
-
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
-
-/* USER CODE END Includes */
-
-/* Exported types ------------------------------------------------------------*/
-/* USER CODE BEGIN ET */
-
-/* USER CODE END ET */
-
-/* Exported constants --------------------------------------------------------*/
-/* USER CODE BEGIN EC */
-
-/* USER CODE END EC */
-
-/* Exported macro ------------------------------------------------------------*/
-/* USER CODE BEGIN EM */
-
-/* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
 void error_handler(void);
@@ -60,53 +18,76 @@ void success_handler(void);
 void task_Init();
 void contactorTask();
 void MX_GPIO_Init(void);
-// void contactorCAN_Init();
-// void contactorCANTask(void *pvParamters);
 
-/* USER CODE BEGIN EFP */
+// timeouts
+// TODO: more descriptive names
+#define M_TIMEOUT 1000
+#define MPRE_TIMEOUT 1000
+#define APRE_TIMEOUT 1000
 
-/* USER CODE END EFP */
-
-/* Private defines -----------------------------------------------------------*/
-
+// TODO: remove ts
 // #define blinky 1
 // #define cantest 2
 // #define contactorcode 3
 #define validated_logic 4 // fully validated 4/29/2025
 
-#define m_enable_pin GPIO_PIN_0
-#define mpre_enable_pin GPIO_PIN_3
-#define apre_enable_pin GPIO_PIN_7
-#define m_sense_pin GPIO_PIN_1
-#define mpre_sense_pin GPIO_PIN_4
-#define apre_sense_pin GPIO_PIN_0 // B PLEASE REMEMBER
-#define mt_fault_pin GPIO_PIN_10
-#define ms_fault_pin GPIO_PIN_8
-#define at_fault_pin GPIO_PIN_3 // B PLEASE REMEMBER
-#define as_fault_pin GPIO_PIN_9
-#define mpre_ready_pin GPIO_PIN_4 // B PLEASE REMEMBER
-#define apre_ready_pin GPIO_PIN_5 // B PLEASE REMEMBER
+// Contactor pin definitions
+#define MOTOR_ENABLE_PORT GPIOA
+#define MOTOR_ENABLE_PIN GPIO_PIN_0
+#define MOTOR_SENSE_PORT GPIOA
+#define MOTOR_SENSE_PIN GPIO_PIN_1
 
+#define MOTOR_PRECHARGE_ENABLE_PORT GPIOA
+#define MOTOR_PRECHARGE_ENABLE_PIN GPIO_PIN_3
+#define MOTOR_PRECHARGE_SENSE_PORT GPIOA
+#define MOTOR_PRECHARGE_SENSE_PIN GPIO_PIN_4
+
+#define ARRAY_PRECHARGE_ENABLE_PORT GPIOA
+#define ARRAY_PRECHARGE_ENABLE_PIN GPIO_PIN_7
+#define ARRAY_PRECHARGE_SENSE_PORT GPIOB
+#define ARRAY_PRECHARGE_SENSE_PIN GPIO_PIN_0
+
+// Status LEDs
+#define MOTOR_TIMEOUT_FAULT_LED_PORT GPIOA
+#define MOTOR_TIMEOUT_FAULT_LED_PIN GPIO_PIN_10
+
+#define MOTOR_SENSE_FAULT_LED_PORT GPIOA
+#define MOTOR_SENSE_FAULT_LED_PIN GPIO_PIN_8
+
+#define ARRAY_TIMEOUT_FAULT_LED_PORT GPIOB
+#define ARRAY_TIMEOUT_FAULT_LED_PIN GPIO_PIN_3
+
+#define ARRAY_SENSE_FAULT_LED_PORT GPIOA
+#define ARRAY_SENSE_FAULT_LED_PIN GPIO_PIN_9
+
+#define MOTOR_PRECHARGE_READY_LED_PORT GPIOB
+#define MOTOR_PRECHARGE_READY_LED_PIN GPIO_PIN_4
+
+#define ARRAY_PRECHARGE_READY_LED_PORT GPIOB
+#define ARRAY_PRECHARGE_READY_LED_PIN GPIO_PIN_5
+
+// Enums for various device state
 typedef enum {
     OPEN,
     CLOSED,
     FAULT
-} State;
+} contactor_state_t;
 
-typedef enum{
-  NO_FAULT,
-  MT_FAULT,
-  MS_FAULT,
-  AT_FAULT,
-  AS_FAULT
-} Fault;
+typedef enum {
+    NO_FAULT,
+    MOTOR_TIMEOUT_FAULT,
+    MOTOR_SENSE_FAULT,
+    ARRAY_TIMEOUT_FAULT,
+    ARRAY_SENSE_FAULT
+} contactor_fault_t;
 
-#define M_TIMEOUT 1000
-#define MPRE_TIMEOUT 1000
-#define APRE_TIMEOUT 1000
-
-
-/* USER CODE END Private defines */
+typedef enum {
+    MOTOR_TIMEOUT_LED,
+    MOTOR_SENSE_LED,
+    ARRAY_TIMEOUT_LED,
+    ARRAY_SENSE_LED,
+    NUM_LEDS,
+} status_led_t;
 
 #ifdef __cplusplus
 }
