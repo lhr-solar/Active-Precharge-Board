@@ -86,29 +86,29 @@ typedef enum {
 // Function definitions
 // READ-ONLY drive/sense signals from controls-driven motor contactor
 uint8_t motor_enable_read();
-int motor_sense();
+uint8_t motor_sense();
 
 // drive/sense signals for motor precharge contactor
-void motor_precharge_enable(int state);
-int motor_precharge_sense();
+void motor_precharge_enable(uint8_t state);
+uint8_t motor_precharge_sense();
 
 // drive/sense signals for array precharge contactor
-void array_precharge_enable(int state);
-int array_precharge_sense();
+void array_precharge_enable(uint8_t state);
+uint8_t array_precharge_sense();
 
 // read precharge ready indicators from hardware comparison
-int motor_precharge_ready();
-int array_precharge_ready();
+uint8_t motor_precharge_ready();
+uint8_t array_precharge_ready();
 
 // fault/status LEDs
-void motor_timeout_fault_led(int state);
-void motor_sense_fault_led(int state);
+void motor_timeout_fault_led(uint8_t state);
+void motor_sense_fault_led(uint8_t state);
 
-void array_timeout_fault_led(int state);
-void array_sense_fault_led(int state);
+void array_timeout_fault_led(uint8_t state);
+void array_sense_fault_led(uint8_t state);
 
 // TODO: get rid of all individual status LED functions and call this...
-void Status_LEDS_Toggle(int statusLED);
-void Status_LEDS_Write(status_led_t led, int state);
+void Status_LEDS_Toggle(uint8_t statusLED);
+void Status_LEDS_Write(status_led_t led, uint8_t state);
 
 #endif /* CONTACTOR_H */
