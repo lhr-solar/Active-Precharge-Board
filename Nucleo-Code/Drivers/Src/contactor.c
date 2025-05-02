@@ -5,9 +5,8 @@
  * @param None
  * @retval None
  */
-void MX_GPIO_Init(void)
-{
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
+void MX_GPIO_Init(void) {
+  GPIO_InitTypeDef GPIO_InitStruct = { 0 };
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
@@ -16,7 +15,7 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, MOTOR_ENABLE_PIN | MOTOR_PRECHARGE_ENABLE_PIN | ARRAY_PRECHARGE_ENABLE_PIN | MOTOR_TIMEOUT_FAULT_LED_PIN | MOTOR_SENSE_FAULT_LED_PIN | ARRAY_SENSE_FAULT_LED_PIN,
-                    GPIO_PIN_RESET);
+    GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(ARRAY_TIMEOUT_FAULT_LED_PORT, ARRAY_TIMEOUT_FAULT_LED_PIN, GPIO_PIN_RESET);
@@ -49,7 +48,7 @@ void MX_GPIO_Init(void)
 }
 
 // TODO: fix status LEDs...
-void Status_LEDS_Toggle(int led){
+void Status_LEDS_Toggle(uint8_t statusLED) {
   // switch(led){
   //   case MT_LED:
   //     HAL_GPIO_TogglePin(mt_fault_port, mt_fault_pin);
@@ -68,7 +67,7 @@ void Status_LEDS_Toggle(int led){
   // }
 }
 
-void Status_LEDS_Write(status_led_t led, int state){
+void Status_LEDS_Write(status_led_t led, uint8_t state) {
   // switch(led){
   //   case MS_LED:
   //     motor_sense_fault(state);
@@ -87,19 +86,18 @@ void Status_LEDS_Write(status_led_t led, int state){
   // }
 }
 
-void error_handler(void)
-{
+void error_handler(void) {
   while (1)
   {
-    Status_LEDS_Toggle(MT_LED);
-    Status_LEDS_Toggle(MS_LED);
-    Status_LEDS_Toggle(AT_LED);
-    Status_LEDS_Toggle(AS_LED);
+    // Status_LEDS_Toggle(MT_LED);
+    // Status_LEDS_Toggle(MS_LED);
+    // Status_LEDS_Toggle(AT_LED);
+    // Status_LEDS_Toggle(AS_LED);
   }
 }
 
 void success_handler(void) {
-  while(1){
+  while (1) {
     // mt_fault(1);
     // HAL_Delay(1000);
     // mt_fault(0);

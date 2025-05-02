@@ -14,9 +14,15 @@ void success_handler(void);
 void MX_GPIO_Init(void);
 
 // timeouts
-#define MOTOR_TIMEOUT 1000
-#define MOTOR_PRECHARGE_TIMEOUT 1000
-#define ARRAY_PRECHARGE_TIMEOUT 1000
+#define MOTOR_TIMEOUT 100
+#define MOTOR_PRECHARGE_STEADYSTATE_TIMEOUT 100
+#define MOTOR_PRECHARGE_INITIAL_TIMEOUT 1000
+
+#define ARRAY_TIMEOUT 100
+#define ARRAY_PRECHARGE_STEADYSTATE_TIMEOUT 100
+#define ARRAY_PRECHARGE_INITIAL_TIMEOUT 1000
+
+#define UNPLUG_DELAY 10
 
 // TODO: remove ts
 // #define blinky 1
@@ -101,6 +107,7 @@ uint8_t motor_precharge_ready();
 uint8_t array_precharge_ready();
 
 // fault/status LEDs
+// TODO: this should all be one function that reads contactor_fault_t
 void motor_timeout_fault_led(uint8_t state);
 void motor_sense_fault_led(uint8_t state);
 
