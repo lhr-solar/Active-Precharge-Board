@@ -1,17 +1,8 @@
-#pragma once // TODO: why pragma....
-
-/* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef CONTACTOR_H
 #define CONTACTOR_H
 
-/* Includes ------------------------------------------------------------------*/
 #include "common.h"
 #include "stm32l4xx_hal.h"
-
-/* Exported functions prototypes ---------------------------------------------*/
-void error_handler(void);
-void success_handler(void);
-void MX_GPIO_Init(void);
 
 // timeouts
 #define MOTOR_TIMEOUT 100
@@ -40,19 +31,6 @@ void MX_GPIO_Init(void);
 #define ARRAY_PRECHARGE_SENSE_PORT GPIOB
 #define ARRAY_PRECHARGE_SENSE_PIN GPIO_PIN_0
 
-// Status LEDs
-#define MOTOR_TIMEOUT_FAULT_LED_PORT GPIOA
-#define MOTOR_TIMEOUT_FAULT_LED_PIN GPIO_PIN_10
-
-#define MOTOR_SENSE_FAULT_LED_PORT GPIOA
-#define MOTOR_SENSE_FAULT_LED_PIN GPIO_PIN_8
-
-#define ARRAY_TIMEOUT_FAULT_LED_PORT GPIOB
-#define ARRAY_TIMEOUT_FAULT_LED_PIN GPIO_PIN_3
-
-#define ARRAY_SENSE_FAULT_LED_PORT GPIOA
-#define ARRAY_SENSE_FAULT_LED_PIN GPIO_PIN_9
-
 // Precharge ready indicators (input from hardware comparison)
 #define MOTOR_PRECHARGE_READY_PORT GPIOB
 #define MOTOR_PRECHARGE_READY_PIN GPIO_PIN_4
@@ -75,14 +53,7 @@ typedef enum {
     ARRAY_SENSE_FAULT
 } contactor_fault_t;
 
-typedef enum {
-    MOTOR_TIMEOUT_LED,
-    MOTOR_SENSE_LED,
-    ARRAY_TIMEOUT_LED,
-    ARRAY_SENSE_LED,
-    NUM_LEDS,
-} status_led_t;
-
+// structs to manage contactor states
 typedef struct Contactor {
     uint8_t state; // open, closed
     uint8_t enable_in;
@@ -121,12 +92,11 @@ uint8_t array_precharge_ready();
 // TODO: this should all be one function that reads contactor_fault_t
 void motor_timeout_fault_led(uint8_t state);
 void motor_sense_fault_led(uint8_t state);
-
 void array_timeout_fault_led(uint8_t state);
 void array_sense_fault_led(uint8_t state);
 
-// TODO: get rid of all individual status LED functions and call this...
-void Status_LEDS_Toggle(uint8_t statusLED);
-void Status_LEDS_Write(status_led_t led, uint8_t state);
+// initialization & handler for contactor and precharge logic
+void contactors_init(void);
+void contactors_handler(void);
 
 #endif /* CONTACTOR_H */

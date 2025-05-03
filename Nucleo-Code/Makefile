@@ -45,6 +45,12 @@ $(info SOURCES: $(PROJECT_C_SOURCES))
 $(info INCLUDES: $(PROJECT_C_INCLUDES))
 endif
 
+CAN_LOOPBACK ?= 0
+
+ifeq ($(CAN_LOOPBACK), 1)
+CFLAGS += -DCAN_LOOPBACK
+endif
+
 # generate paths (cont.d)
 PROJECT_C_INCLUDES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_INCLUDES))
 PROJECT_BUILD_DIR := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_BUILD_DIR))
@@ -87,6 +93,7 @@ ifneq ($(TEST), main)
 else
 	@echo "Making ${PURPLE}$(PROJECT_TARGET)${NC}build with ${ORANGE}no test.${NC}"
 endif
+	@echo "Can Loopback is set to ${GREEN}$(CAN_LOOPBACK)${NC}"
 	$(BEAR_PREFIX) $(MAKE) -C $(BUILD_MAKEFILE_DIR) all -j
 	@echo "${BLUE}Compiled for Contactors Board! Splendid! Jolly Good!!${NC}"
 #---------------------------------

@@ -8,6 +8,7 @@ void sys_clock_config(void);
 void can_filter_config(CAN_FilterTypeDef* filter);
 void can1_config(void);
 
-void error_handler();
-void success_handler();
+void error_handler(void);
+void success_handler(void);
+
 #endif

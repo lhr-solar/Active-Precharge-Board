@@ -1,15 +1,16 @@
 #include "common.h"
+#include "statusLEDs.h"
 
-/**
-* @brief Error handler that can be overriden by the user
-* @retval None
-*/
-__weak void error_handler(){
-  while(1){}
+void error_handler(void) {
+  while(1) {
+    Status_Leds_Toggle(MOTOR_FAULT_LED);
+    HAL_Delay(500);
+  }
 }
 
-__weak void success_handler(){
-    while(1){}
+void success_handler(void) {
+  Status_Leds_Toggle(ARRAY_FAULT_LED);
+  HAL_Delay(500);
 }
 
 /**
