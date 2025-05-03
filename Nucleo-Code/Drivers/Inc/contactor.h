@@ -71,15 +71,9 @@ typedef struct prechargeContactor {
     uint32_t start_time;
 } prechargeContactor;
 
-// fault/status LEDs
-// TODO: this should all be one function that reads contactor_fault_t
-void motor_timeout_fault_led(uint8_t state);
-void motor_sense_fault_led(uint8_t state);
-void array_timeout_fault_led(uint8_t state);
-void array_sense_fault_led(uint8_t state);
-
 // initialization & handler for contactor and precharge logic
 void contactors_init(void);
+bool contactors_fault_handler(void);
 void contactors_handler(void);
 
 #endif /* CONTACTOR_H */

@@ -31,13 +31,13 @@ void Status_Leds_Init(void) {
  */
 void Status_Leds_Write(status_led_t led, bool state) {
     switch (led) {
-    case MOTOR_FAULT_LED:
+    case MOTOR_SENSE_FAULT_LED:
         HAL_GPIO_WritePin(MOTOR_SENSE_FAULT_LED_PORT, MOTOR_SENSE_FAULT_LED_PIN, state);
         break;
     case MOTOR_TIMEOUT_FAULT_LED:
         HAL_GPIO_WritePin(MOTOR_TIMEOUT_FAULT_LED_PORT, MOTOR_TIMEOUT_FAULT_LED_PIN, state);
         break;
-    case ARRAY_FAULT_LED:
+    case ARRAY_SENSE_FAULT_LED:
         HAL_GPIO_WritePin(ARRAY_SENSE_FAULT_LED_PORT, ARRAY_SENSE_FAULT_LED_PIN, state);
         break;
     case ARRAY_TIMEOUT_FAULT_LED:
@@ -55,13 +55,13 @@ void Status_Leds_Write(status_led_t led, bool state) {
  */
 void Status_Leds_Toggle(status_led_t led) {
     switch (led) {
-    case MOTOR_FAULT_LED:
+    case MOTOR_SENSE_FAULT_LED:
         HAL_GPIO_TogglePin(MOTOR_SENSE_FAULT_LED_PORT, MOTOR_SENSE_FAULT_LED_PIN);
         break;
     case MOTOR_TIMEOUT_FAULT_LED:
         HAL_GPIO_TogglePin(MOTOR_TIMEOUT_FAULT_LED_PORT, MOTOR_TIMEOUT_FAULT_LED_PIN);
         break;
-    case ARRAY_FAULT_LED:
+    case ARRAY_SENSE_FAULT_LED:
         HAL_GPIO_TogglePin(ARRAY_SENSE_FAULT_LED_PORT, ARRAY_SENSE_FAULT_LED_PIN);
         break;
     case ARRAY_TIMEOUT_FAULT_LED:

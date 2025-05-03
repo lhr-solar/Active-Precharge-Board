@@ -3,13 +3,13 @@
 
 void error_handler(void) {
   while(1) {
-    Status_Leds_Toggle(MOTOR_FAULT_LED);
+    Status_Leds_Toggle(MOTOR_SENSE_FAULT_LED);
     HAL_Delay(500);
   }
 }
 
 void success_handler(void) {
-  Status_Leds_Toggle(ARRAY_FAULT_LED);
+  Status_Leds_Toggle(ARRAY_SENSE_FAULT_LED);
   HAL_Delay(500);
 }
 

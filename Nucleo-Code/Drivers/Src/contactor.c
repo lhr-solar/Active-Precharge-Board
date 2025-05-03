@@ -85,21 +85,62 @@ static uint8_t array_precharge_ready() {
   return HAL_GPIO_ReadPin(ARRAY_PRECHARGE_READY_PORT, ARRAY_PRECHARGE_READY_PIN);
 }
 
-// fault/status LEDs
-void motor_timeout_fault_led(uint8_t state) {
-  HAL_GPIO_WritePin(MOTOR_TIMEOUT_FAULT_LED_PORT, MOTOR_TIMEOUT_FAULT_LED_PIN, state);
-}
+// trigger LEDs for all faults (and send fault message?)
+bool contactors_fault_handler(void) {
+  if ((fault[0] | fault[1] | fault[2] | fault[3] | fault[4] | fault[5] | fault[6] | fault[7] | fault[8] | fault[9] | CAN_fault) == FAULT) {
+    // open motor & array precharge contactors
+    motor_precharge_enable(0);
+    array_precharge_enable(0);
 
-void motor_sense_fault_led(uint8_t state) {
-  HAL_GPIO_WritePin(MOTOR_SENSE_FAULT_LED_PORT, MOTOR_SENSE_FAULT_LED_PIN, state);
-}
+    // TODO: send CAN specific message based on fault
 
-void array_timeout_fault_led(uint8_t state) {
-  HAL_GPIO_WritePin(ARRAY_TIMEOUT_FAULT_LED_PORT, ARRAY_TIMEOUT_FAULT_LED_PIN, state);
-}
+    // TODO: if (CAN_fault) {do nothing, only disable contactors;}
 
-void array_sense_fault_led(uint8_t state) {
-  HAL_GPIO_WritePin(ARRAY_SENSE_FAULT_LED_PORT, ARRAY_SENSE_FAULT_LED_PIN, state);
+    if (fault[0]) { // m_enable unplug
+      Status_Leds_Write(MOTOR_SENSE_FAULT_LED, true);
+      Status_Leds_Write(MOTOR_TIMEOUT_FAULT_LED, true);
+      // send this specific CAN message
+    }
+    if (fault[1]) { // motor sense fault
+      Status_Leds_Write(MOTOR_SENSE_FAULT_LED, true);
+      // send this specific CAN message
+    }
+    if (fault[2]) { // motor timeout fault
+      Status_Leds_Write(MOTOR_TIMEOUT_FAULT_LED, true);
+      // send this specific CAN message
+    }
+    if (fault[3]) { // motorPre sense fault
+      Status_Leds_Write(MOTOR_SENSE_FAULT_LED, true);
+      // send this specific CAN message
+    }
+    if (fault[4]) { // motorPre timeout fault
+      Status_Leds_Write(MOTOR_TIMEOUT_FAULT_LED, true);
+      // send this specific CAN message
+    }
+    if (fault[5]) { // a_enable fault
+      Status_Leds_Write(ARRAY_SENSE_FAULT_LED, true);
+      Status_Leds_Write(ARRAY_TIMEOUT_FAULT_LED, true);
+      // send this specific CAN message
+    }
+    if (fault[6]) { // array sense fault
+      Status_Leds_Write(ARRAY_SENSE_FAULT_LED, true);
+      // send this specific CAN message
+    }
+    if (fault[7]) { // array timeout fault
+      Status_Leds_Write(ARRAY_TIMEOUT_FAULT_LED, true);
+      // send this specific CAN message
+    }
+    if (fault[8]) { // arrayPre sense fault
+      Status_Leds_Write(ARRAY_SENSE_FAULT_LED, true);
+      // send this specific CAN message
+    }
+    if (fault[9]) { // arrayPre timeout fault
+      Status_Leds_Write(ARRAY_TIMEOUT_FAULT_LED, true);
+      // send this specific CAN message
+    }
+    return true;
+  }
+  return false;
 }
 
 // handles all contactor and precharge logic
@@ -118,64 +159,7 @@ void contactors_handler(void) {
   arrayPre.pre_ready = array_precharge_ready();
   arrayPre.sense = array_precharge_sense();
 
-  // handle faults
-  // TODO: make this a function
-  if ((fault[0] | fault[1] | fault[2] | fault[3] | fault[4] | fault[5] | fault[6] | fault[7] | fault[8] | fault[9] | CAN_fault) == FAULT) {
-
-    // disable motor & array precharge contactors
-    motor_precharge_enable(0);
-    array_precharge_enable(0);
-
-    // TODO: send CAN specific message based on fault
-
-    // TODO: if (CAN_fault) {do nothing, only disable contactors;}
-
-    if (fault[0]) { // m_enable unplug
-      motor_sense_fault_led(1);
-      motor_timeout_fault_led(1);
-      // send this specific CAN message
-    }
-    if (fault[1]) { // motor sense fault
-      motor_sense_fault_led(1);
-      // send this specific CAN message
-    }
-    if (fault[2]) { // motor timeout fault
-      motor_timeout_fault_led(1);
-      // send this specific CAN message
-    }
-    if (fault[3]) { // motorPre sense fault
-      motor_sense_fault_led(1);
-      // send this specific CAN message
-    }
-    if (fault[4]) { // motorPre timeout fault
-      motor_timeout_fault_led(1);
-      // send this specific CAN message
-    }
-    if (fault[5]) { // a_enable fault
-      array_sense_fault_led(1);
-      array_timeout_fault_led(1);
-      // send this specific CAN message
-    }
-    if (fault[6]) { // array sense fault
-      array_sense_fault_led(1);
-      // send this specific CAN message
-    }
-    if (fault[7]) { // array timeout fault
-      array_timeout_fault_led(1);
-      // send this specific CAN message
-    }
-    if (fault[8]) { // arrayPre sense fault
-      array_sense_fault_led(1);
-      // send this specific CAN message
-    }
-    if (fault[9]) { // arrayPre timeout fault
-      array_timeout_fault_led(1);
-      // send this specific CAN message
-    }
-
-  }
-
-  else { // executes if faults are all clear
+  if (!contactors_fault_handler()) {
     // motor contactor logic
     if (motor.enable_in == CLOSED && motor.state == OPEN) {
       if (motor.start_time == 0) {

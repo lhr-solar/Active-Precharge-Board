@@ -7,9 +7,9 @@
  * Possible Status LED Pins
  */
 typedef enum {
-    MOTOR_FAULT_LED = 0,
+    MOTOR_SENSE_FAULT_LED = 0,
     MOTOR_TIMEOUT_FAULT_LED,
-    ARRAY_FAULT_LED,
+    ARRAY_SENSE_FAULT_LED,
     ARRAY_TIMEOUT_FAULT_LED,
     NUM_STATUS_LED,
 } status_led_t;
