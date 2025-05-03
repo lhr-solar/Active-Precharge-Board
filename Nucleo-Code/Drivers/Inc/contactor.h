@@ -71,23 +71,6 @@ typedef struct prechargeContactor {
     uint32_t start_time;
 } prechargeContactor;
 
-// Function definitions
-// READ-ONLY drive/sense signals from controls-driven motor contactor
-uint8_t motor_enable_read();
-uint8_t motor_sense();
-
-// drive/sense signals for motor precharge contactor
-void motor_precharge_enable(uint8_t state);
-uint8_t motor_precharge_sense();
-
-// drive/sense signals for array precharge contactor
-void array_precharge_enable(uint8_t state);
-uint8_t array_precharge_sense();
-
-// read precharge ready indicators from hardware comparison
-uint8_t motor_precharge_ready();
-uint8_t array_precharge_ready();
-
 // fault/status LEDs
 // TODO: this should all be one function that reads contactor_fault_t
 void motor_timeout_fault_led(uint8_t state);

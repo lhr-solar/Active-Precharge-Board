@@ -50,38 +50,38 @@ void contactors_init(void) {
 }
 
 // READ-ONLY drive/sense signals from controls-driven motor contactor
-uint8_t motor_enable_read() {
+static uint8_t motor_enable_read() {
   return HAL_GPIO_ReadPin(MOTOR_ENABLE_PORT, MOTOR_ENABLE_PIN);
 }
 
-uint8_t motor_sense() {
+static uint8_t motor_sense() {
   return HAL_GPIO_ReadPin(MOTOR_SENSE_PORT, MOTOR_SENSE_PIN);
 }
 
 // drive/sense signals for motor precharge contactor
-void motor_precharge_enable(uint8_t state) {
+static void motor_precharge_enable(uint8_t state) {
   HAL_GPIO_WritePin(MOTOR_PRECHARGE_ENABLE_PORT, MOTOR_PRECHARGE_ENABLE_PIN, state);
 }
 
-uint8_t motor_precharge_sense() {
+static uint8_t motor_precharge_sense() {
   return HAL_GPIO_ReadPin(MOTOR_PRECHARGE_SENSE_PORT, MOTOR_PRECHARGE_SENSE_PIN);
 }
 
 // drive/sense signals for array precharge contactor
-void array_precharge_enable(uint8_t state) {
+static void array_precharge_enable(uint8_t state) {
   HAL_GPIO_WritePin(ARRAY_PRECHARGE_ENABLE_PORT, ARRAY_PRECHARGE_ENABLE_PIN, state);
 }
 
-uint8_t array_precharge_sense() {
+static uint8_t array_precharge_sense() {
   return HAL_GPIO_ReadPin(ARRAY_PRECHARGE_SENSE_PORT, ARRAY_PRECHARGE_SENSE_PIN);
 }
 
 // read precharge ready indicators from hardware comparison
-uint8_t motor_precharge_ready() {
+static uint8_t motor_precharge_ready() {
   return HAL_GPIO_ReadPin(MOTOR_PRECHARGE_READY_PORT, MOTOR_PRECHARGE_READY_PIN);
 }
 
-uint8_t array_precharge_ready() {
+static uint8_t array_precharge_ready() {
   return HAL_GPIO_ReadPin(ARRAY_PRECHARGE_READY_PORT, ARRAY_PRECHARGE_READY_PIN);
 }
 
