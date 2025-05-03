@@ -24,12 +24,6 @@ void MX_GPIO_Init(void);
 
 #define UNPLUG_DELAY 10
 
-// TODO: remove ts
-// #define blinky 1
-// #define cantest 2
-// #define contactorcode 3
-#define validated_logic 4 // fully validated 4/29/2025
-
 // Contactor drive/sense pin definitions
 #define MOTOR_ENABLE_PORT GPIOA
 #define MOTOR_ENABLE_PIN GPIO_PIN_0
@@ -88,6 +82,23 @@ typedef enum {
     ARRAY_SENSE_LED,
     NUM_LEDS,
 } status_led_t;
+
+typedef struct Contactor {
+    uint8_t state; // open, closed
+    uint8_t enable_in;
+    uint8_t sense; // GPIO pin to read the contactor's state
+    uint8_t fault;
+    uint32_t start_time; // HAL_getTick()
+} Contactor;
+
+typedef struct prechargeContactor {
+    uint8_t state; // open, closed
+    uint8_t pre_ready; // Precharge ready signal
+    uint8_t sense;
+    uint8_t enable_out; // GPIO pin to control the contactor
+    uint8_t fault;
+    uint32_t start_time;
+} prechargeContactor;
 
 // Function definitions
 // READ-ONLY drive/sense signals from controls-driven motor contactor
