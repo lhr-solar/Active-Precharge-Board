@@ -2,13 +2,14 @@
 #include "statusLEDs.h"
 
 // structs to manage contactor states
-Contactor motor = { OPEN, OPEN, OPEN, NO_FAULT, 0 };
-Contactor array = { OPEN, OPEN, OPEN, NO_FAULT, 0 };
-prechargeContactor motorPre = { OPEN, OPEN, OPEN, OPEN, NO_FAULT, 0 };
-prechargeContactor arrayPre = { OPEN, OPEN, OPEN, OPEN, NO_FAULT, 0 };
+Contactor motor = { OPEN, OPEN, OPEN, 0 };
+Contactor array = { OPEN, OPEN, OPEN, 0 };
+prechargeContactor motorPre = { OPEN, OPEN, OPEN, OPEN, 0 };
+prechargeContactor arrayPre = { OPEN, OPEN, OPEN, OPEN, 0 };
 
 uint32_t time;  // HAL tick value (ms)
-uint8_t fault[10];  // TODO: handle this better, struct?
+uint8_t contactor_fault[10] = { 0 };  // TODO: handle this better, change to fault bitmap
+uint32_t fault_bitmap = 0;
 
 // various timing stuff
 // TODO: better names for these

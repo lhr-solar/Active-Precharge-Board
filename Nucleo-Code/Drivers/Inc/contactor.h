@@ -45,29 +45,19 @@ typedef enum {
     FAULT
 } contactor_state_t;
 
-typedef enum {
-    NO_FAULT,
-    MOTOR_TIMEOUT_FAULT,
-    MOTOR_SENSE_FAULT,
-    ARRAY_TIMEOUT_FAULT,
-    ARRAY_SENSE_FAULT
-} contactor_fault_t;
-
 // structs to manage contactor states
 typedef struct Contactor {
-    uint8_t state; // open, closed
-    uint8_t enable_in;
-    uint8_t sense; // GPIO pin to read the contactor's state
-    uint8_t fault;
+    contactor_state_t state; // open, closed
+    contactor_state_t enable_in;
+    contactor_state_t sense; // GPIO pin to read the contactor's state
     uint32_t start_time; // HAL_getTick()
 } Contactor;
 
 typedef struct prechargeContactor {
-    uint8_t state; // open, closed
-    uint8_t pre_ready; // Precharge ready signal
-    uint8_t sense;
-    uint8_t enable_out; // GPIO pin to control the contactor
-    uint8_t fault;
+    contactor_state_t state; // open, closed
+    contactor_state_t pre_ready; // Precharge ready signal
+    contactor_state_t sense;
+    contactor_state_t enable_out; // GPIO pin to control the contactor
     uint32_t start_time;
 } prechargeContactor;
 
