@@ -8,7 +8,7 @@ prechargeContactor motorPre = { OPEN, OPEN, OPEN, OPEN, 0 };
 prechargeContactor arrayPre = { OPEN, OPEN, OPEN, OPEN, 0 };
 
 uint32_t time;  // HAL tick value (ms)
-uint8_t contactor_fault[10] = { 0 };  // TODO: handle this better, change to fault bitmap
+// uint8_t contactor_fault[10] = { 0 };  // TODO: handle this better, change to fault bitmap
 uint32_t fault_bitmap = 0;
 
 // various timing stuff
@@ -88,7 +88,7 @@ static uint8_t array_precharge_ready() {
 
 // trigger LEDs for all faults (and send fault message?)
 bool contactors_fault_handler(void) {
-  if ((contactor_fault[0] | contactor_fault[1] | contactor_fault[2] | contactor_fault[3] | contactor_fault[4] | contactor_fault[5] | contactor_fault[6] | contactor_fault[7] | contactor_fault[8] | contactor_fault[9] | CAN_fault) == FAULT) {
+  if (fault_bitmap != FAULT_NONE) {
     // open motor & array precharge contactors
     motor_precharge_enable(0);
     array_precharge_enable(0);
@@ -97,45 +97,45 @@ bool contactors_fault_handler(void) {
 
     // TODO: if (CAN_fault) {do nothing, only disable contactors;}
 
-    if (contactor_fault[0]) { // m_enable unplug
+    if (fault_bitmap & FAULT_MOTOR_ENABLE_UNPLUG) { // m_enable unplug
       Status_Leds_Write(MOTOR_SENSE_FAULT_LED, true);
       Status_Leds_Write(MOTOR_TIMEOUT_FAULT_LED, true);
       // send this specific CAN message
     }
-    if (contactor_fault[1]) { // motor sense fault
+    if (fault_bitmap & FAULT_MOTOR_SENSE) { // motor sense fault
       Status_Leds_Write(MOTOR_SENSE_FAULT_LED, true);
       // send this specific CAN message
     }
-    if (contactor_fault[2]) { // motor timeout fault
+    if (fault_bitmap & FAULT_MOTOR_TIMEOUT) { // motor timeout fault
       Status_Leds_Write(MOTOR_TIMEOUT_FAULT_LED, true);
       // send this specific CAN message
     }
-    if (contactor_fault[3]) { // motorPre sense fault
+    if (fault_bitmap & FAULT_MOTOR_PRECHARGE_SENSE) { // motorPre sense fault
       Status_Leds_Write(MOTOR_SENSE_FAULT_LED, true);
       // send this specific CAN message
     }
-    if (contactor_fault[4]) { // motorPre timeout fault
+    if (fault_bitmap & FAULT_MOTOR_PRECHARGE_TIMEOUT) { // motorPre timeout fault
       Status_Leds_Write(MOTOR_TIMEOUT_FAULT_LED, true);
       // send this specific CAN message
     }
-    if (contactor_fault[5]) { // a_enable fault
+    if (fault_bitmap & FAULT_ARRAY_ENABLE) { // a_enable fault
       Status_Leds_Write(ARRAY_SENSE_FAULT_LED, true);
       Status_Leds_Write(ARRAY_TIMEOUT_FAULT_LED, true);
       // send this specific CAN message
     }
-    if (contactor_fault[6]) { // array sense fault
+    if (fault_bitmap & FAULT_ARRAY_SENSE) { // array sense fault
       Status_Leds_Write(ARRAY_SENSE_FAULT_LED, true);
       // send this specific CAN message
     }
-    if (contactor_fault[7]) { // array timeout fault
+    if (fault_bitmap & FAULT_ARRAY_TIMEOUT) { // array timeout fault
       Status_Leds_Write(ARRAY_TIMEOUT_FAULT_LED, true);
       // send this specific CAN message
     }
-    if (contactor_fault[8]) { // arrayPre sense fault
+    if (fault_bitmap & FAULT_ARRAY_PRECHARGE_SENSE) { // arrayPre sense fault
       Status_Leds_Write(ARRAY_SENSE_FAULT_LED, true);
       // send this specific CAN message
     }
-    if (contactor_fault[9]) { // arrayPre timeout fault
+    if (fault_bitmap & FAULT_ARRAY_PRECHARGE_TIMEOUT) { // arrayPre timeout fault
       Status_Leds_Write(ARRAY_TIMEOUT_FAULT_LED, true);
       // send this specific CAN message
     }
@@ -168,7 +168,7 @@ void contactors_handler(void) {
           motor.start_time = time;
         }
         else if ((motor.sense == OPEN) && (motor.start_time + MOTOR_TIMEOUT < time)) { // if 100ms after contactor enabled, fault, not reading sense right
-          contactor_fault[1] = FAULT; // motor sense fault
+          fault_bitmap |= FAULT_MOTOR_SENSE; // motor sense fault
         }
         else if (motor.sense == CLOSED) {
           if (mPre_initial_delay == 0) {
@@ -188,7 +188,7 @@ void contactors_handler(void) {
             motor.start_time = time;
           }
           else if ((motor.sense == CLOSED) && (motor.start_time + MOTOR_TIMEOUT < time)) {
-            contactor_fault[2] = FAULT; // motor timeout fault
+            fault_bitmap |= FAULT_MOTOR_TIMEOUT; // motor timeout fault
           }
           else if (motor.sense == OPEN) {
             motor.state = OPEN;
@@ -201,7 +201,7 @@ void contactors_handler(void) {
             motor.start_time = time;
           }
           else if (motor.start_time + UNPLUG_DELAY < time) {
-            contactor_fault[0] = FAULT; // otherwise, m.enable probably unplugged, fault
+            fault_bitmap |= FAULT_MOTOR_ENABLE_UNPLUG; // otherwise, m.enable probably unplugged, fault
           }
         }
 
@@ -212,7 +212,7 @@ void contactors_handler(void) {
             motor.start_time = time;
           }
           else if (motor.start_time + UNPLUG_DELAY > time) {
-            contactor_fault[1] = FAULT; // motor sense fault
+            fault_bitmap |= FAULT_MOTOR_SENSE; // motor sense fault
           }
         }
         else
@@ -224,7 +224,7 @@ void contactors_handler(void) {
             motor.start_time = time;
           }
           else if (motor.start_time + UNPLUG_DELAY > time) {
-            contactor_fault[1] = FAULT; // motor sense fault
+            fault_bitmap |= FAULT_MOTOR_SENSE; // motor sense fault
           }
         }
         else
@@ -238,10 +238,10 @@ void contactors_handler(void) {
             mPre_timeout = time;
           }
           else if (motorPre.state == CLOSED && mPre_timeout + MOTOR_PRECHARGE_STEADYSTATE_TIMEOUT < time) {
-            contactor_fault[4] = FAULT; // motor precharge steady state timeout fault
+            fault_bitmap |= FAULT_MOTOR_PRECHARGE_TIMEOUT; // motor precharge steady state timeout fault
           }
           else if (mPre_timeout + MOTOR_PRECHARGE_INITIAL_TIMEOUT < time) {
-            contactor_fault[4] = FAULT; // motor precharge initial timeout fault
+            fault_bitmap |= FAULT_MOTOR_PRECHARGE_TIMEOUT; // motor precharge initial timeout fault
           }
         }
         else if (motorPre.pre_ready == CLOSED) {
@@ -250,7 +250,7 @@ void contactors_handler(void) {
             motorPre.start_time = time;
           }
           else if ((motorPre.sense == OPEN) && (motorPre.start_time + MOTOR_PRECHARGE_STEADYSTATE_TIMEOUT < time)) { // if 100ms after contactor enabled, fault, not reading sense right
-            contactor_fault[3] = FAULT; // motor precharge sense fault
+            fault_bitmap |= FAULT_MOTOR_PRECHARGE_SENSE; // motor precharge sense fault
           }
           else if (motorPre.sense == CLOSED) {
             motorPre.state = CLOSED;
@@ -265,7 +265,7 @@ void contactors_handler(void) {
           motor_precharge_enable(0);
         }
         else if (motorPre.sense == CLOSED && motorPre.start_time + MOTOR_PRECHARGE_STEADYSTATE_TIMEOUT < time) {
-          contactor_fault[4] = FAULT; // motor precharge turn off timeout fault
+          fault_bitmap |= FAULT_MOTOR_PRECHARGE_TIMEOUT; // motor precharge turn off timeout fault
         }
         else if (motorPre.sense == OPEN) {
           motorPre.state = OPEN;
@@ -281,7 +281,7 @@ void contactors_handler(void) {
           array.start_time = time;
         }
         else if ((array.sense == OPEN) && (array.start_time + ARRAY_TIMEOUT < time)) {  //if 100ms after contactor enabled, fault, not reading sense right
-          contactor_fault[6] = FAULT; //array sense fault
+          fault_bitmap |= FAULT_ARRAY_SENSE; //array sense fault
         }
         else if (array.sense == CLOSED) {
           if (aPre_initial_delay == 0) {
@@ -301,7 +301,7 @@ void contactors_handler(void) {
             array.start_time = time;
           }
           else if ((array.sense == CLOSED) && (array.start_time + ARRAY_TIMEOUT < time)) {
-            contactor_fault[7] = FAULT;  //array timeout fault
+            fault_bitmap |= FAULT_ARRAY_TIMEOUT;  //array timeout fault
           }
           else if (array.sense == OPEN) {
             array.state = OPEN;
@@ -314,7 +314,7 @@ void contactors_handler(void) {
             array.start_time = time;
           }
           else if (array.start_time + UNPLUG_DELAY < time) {
-            contactor_fault[5] = FAULT; //otherwise, were not in the right part of ignition state for this to happen, fault
+            fault_bitmap |= FAULT_ARRAY_ENABLE; //otherwise, were not in the right part of ignition state for this to happen, fault
           }
         }
 
@@ -325,7 +325,7 @@ void contactors_handler(void) {
             array.start_time = time;
           }
           else if (array.start_time + UNPLUG_DELAY > time) {
-            contactor_fault[6] = FAULT; //array sense fault
+            fault_bitmap |= FAULT_ARRAY_SENSE; //array sense fault
           }
         }
         else array.start_time = 0;
@@ -336,7 +336,7 @@ void contactors_handler(void) {
             array.start_time = time;
           }
           else if (array.start_time + UNPLUG_DELAY > time) {
-            contactor_fault[6] = FAULT; //array sense fault
+            fault_bitmap |= FAULT_ARRAY_SENSE; //array sense fault
           }
         }
         else array.start_time = 0;
@@ -349,10 +349,10 @@ void contactors_handler(void) {
             aPre_timeout = time;
           }
           else if (arrayPre.state == CLOSED && aPre_timeout + ARRAY_PRECHARGE_STEADYSTATE_TIMEOUT < time) {
-            contactor_fault[9] = FAULT; //array precharge steady state timeout fault
+            fault_bitmap |= FAULT_ARRAY_PRECHARGE_TIMEOUT; //array precharge steady state timeout fault
           }
           else if (aPre_timeout + ARRAY_PRECHARGE_INITIAL_TIMEOUT < time) {
-            contactor_fault[9] = FAULT; //array precharge initial timeout fault
+            fault_bitmap |= FAULT_ARRAY_PRECHARGE_TIMEOUT; //array precharge initial timeout fault
           }
         }
         else if (arrayPre.pre_ready == CLOSED) {
@@ -361,7 +361,7 @@ void contactors_handler(void) {
             arrayPre.start_time = time;
           }
           else if ((arrayPre.sense == OPEN) && (arrayPre.start_time + ARRAY_PRECHARGE_INITIAL_TIMEOUT < time)) {  //if 100ms after contactor enabled, fault, not reading sense right
-            contactor_fault[8] = FAULT; //array precharge sense fault
+            fault_bitmap |= FAULT_ARRAY_PRECHARGE_SENSE; //array precharge sense fault
           }
           else if (arrayPre.sense == CLOSED) {
             arrayPre.state = CLOSED;
@@ -376,7 +376,7 @@ void contactors_handler(void) {
           array_precharge_enable(0);
         }
         else if (arrayPre.sense == CLOSED && arrayPre.start_time + ARRAY_PRECHARGE_INITIAL_TIMEOUT < time) {
-          contactor_fault[9] = FAULT; //array precharge turn off timeout fault
+          fault_bitmap |= FAULT_ARRAY_PRECHARGE_TIMEOUT; //array precharge turn off timeout fault
         }
         else if (arrayPre.sense == OPEN) {
           arrayPre.state = OPEN;

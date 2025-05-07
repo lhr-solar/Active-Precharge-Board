@@ -39,6 +39,22 @@
 #define ARRAY_PRECHARGE_READY_PIN GPIO_PIN_5
 
 // Enums for various device state
+
+typedef enum {
+    FAULT_NONE = 0,
+    FAULT_MOTOR_ENABLE_UNPLUG = 1 << 0,
+    FAULT_MOTOR_SENSE = 1 << 1,
+    FAULT_MOTOR_TIMEOUT = 1 << 2,
+    FAULT_MOTOR_PRECHARGE_SENSE = 1 << 3,
+    FAULT_MOTOR_PRECHARGE_TIMEOUT = 1 << 4,
+    FAULT_ARRAY_ENABLE = 1 << 5,
+    FAULT_ARRAY_SENSE = 1 << 6,
+    FAULT_ARRAY_TIMEOUT = 1 << 7,
+    FAULT_ARRAY_PRECHARGE_SENSE = 1 << 8,
+    FAULT_ARRAY_PRECHARGE_TIMEOUT = 1 << 9,
+    // TODO: add CAN faults here.....
+} fault_state_t;
+
 typedef enum {
     OPEN,
     CLOSED,
@@ -58,7 +74,7 @@ typedef struct prechargeContactor {
     contactor_state_t pre_ready; // Precharge ready signal
     contactor_state_t sense;
     contactor_state_t enable_out; // GPIO pin to control the contactor
-    uint32_t start_time;
+    uint32_t start_time; // HAL_getTick()
 } prechargeContactor;
 
 // initialization & handler for contactor and precharge logic
