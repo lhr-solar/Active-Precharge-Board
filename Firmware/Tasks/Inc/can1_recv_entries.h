@@ -1,0 +1,3 @@
+CAN_RECV_ENTRY(0x001, 5, false)
+CAN_RECV_ENTRY(0x002, 8, false)
+CAN_RECV_ENTRY(0x003, 3, false)
