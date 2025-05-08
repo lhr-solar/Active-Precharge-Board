@@ -2,22 +2,24 @@
 #include "StatusLEDs.h"
 
 void error_handler(void) {
-  while(1) {
+  while (1) {
     Status_Leds_Toggle(MOTOR_SENSE_FAULT_LED);
     HAL_Delay(500);
   }
 }
 
 void success_handler(void) {
-  Status_Leds_Toggle(ARRAY_SENSE_FAULT_LED);
-  HAL_Delay(500);
+  while (1) {
+    Status_Leds_Toggle(ARRAY_SENSE_FAULT_LED);
+    HAL_Delay(500);
+  }
 }
 
 /**
 * @brief Configure the can filter
 * @retval None
 */
-void can_filter_config(CAN_FilterTypeDef* sFilterConfig){
+void can_filter_config(CAN_FilterTypeDef* sFilterConfig) {
   sFilterConfig->FilterBank = 0;
   sFilterConfig->FilterMode = CAN_FILTERMODE_IDMASK;
   sFilterConfig->FilterScale = CAN_FILTERSCALE_32BIT;
@@ -34,14 +36,14 @@ void can_filter_config(CAN_FilterTypeDef* sFilterConfig){
 * @brief Configure can1
 * @retval None
 */
-void can1_config(void){
+void can1_config(void) {
   hcan1->Init.Prescaler = 40;
 
-  #ifdef CAN_LOOPBACK
+#ifdef CAN_LOOPBACK
   hcan1->Init.Mode = CAN_MODE_LOOPBACK;
-  #else
+#else
   hcan1->Init.Mode = CAN_MODE_NORMAL;
-  #endif
+#endif
 
   hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
   hcan1->Init.TimeSeg1 = CAN_BS1_13TQ;
@@ -51,7 +53,7 @@ void can1_config(void){
   hcan1->Init.AutoWakeUp = DISABLE;
   hcan1->Init.AutoRetransmission = ENABLE;
   hcan1->Init.ReceiveFifoLocked = DISABLE;
-  
+
   // If TransmitFifoPriority is disabled, the hardware selects the mailbox based on the message ID priority. 
   // If enabled, the hardware uses a FIFO mechanism to select the mailbox based on the order of transmission requests.
   hcan1->Init.TransmitFifoPriority = ENABLE;
