@@ -27,8 +27,10 @@
 #define ARRAY_PRECHARGE_READY_PORT GPIOB
 #define ARRAY_PRECHARGE_READY_PIN GPIO_PIN_5
 
-// Enums for various device state
+// Open/Closed definition
+typedef enum { OFF = 0, ON } State;
 
+// Fault state bitmap enum
 typedef enum {
     FAULT_NONE = 0,
     FAULT_MOTOR_ENABLE_UNPLUG = 1 << 0,
@@ -44,5 +46,45 @@ typedef enum {
     FAULT_BPS = 1 << 10,
     FAULT_CONTROLS = 1 << 11
 } fault_state_t;
+
+// Enum to index into contactors array
+typedef enum {
+    MOTOR_CONTACTOR = 0,
+    MOTOR_PRECHARGE_CONTACTOR,
+    ARRAY_CONTACTOR,
+    ARRAY_PRECHARGE_CONTACTOR
+} contactor_enum_t;
+
+// Struct to define the current state of a contactor
+typedef struct contactor_t {
+    bool state; // ON or OFF
+    bool isPrechargeContactor; // only true for motor/array precharge contactors
+} contactor_t;
+
+/**
+ * @brief   Initializes contactors to be used
+ *          in connection with the Motor and Array
+ * @return  None
+ */
+void Contactors_Init();
+
+/**
+ * @brief   Returns the current state of
+ *          a specified contactor
+ * @param   contactor the contactor
+ *              (MOTOR_CONTACTOR/MOTOR_PRECHARGE_CONTACTOR/ARRAY_CONTACTOR/ARRAY_PRECHARGE_CONTACTOR)
+ * @return  The contactor's state (ON/OFF) based on its sense pin
+ */
+bool Contactors_Get(contactor_enum_t contactor);
+
+/**
+ * @brief   Sets the state of a specified contactor
+ * @param   contactor the contactor
+ *              (MOTOR_CONTACTOR/MOTOR_PRECHARGE_CONTACTOR/ARRAY_CONTACTOR/ARRAY_PRECHARGE_CONTACTOR)
+ * @param   state the state to set (ON/OFF) (true/false)
+ * @param   blocking whether or not this should be a blocking call
+ * @return  Whether or not the contactor was successfully set
+ */
+ErrorStatus Contactors_Set(contactor_enum_t contactor, bool state, bool blocking);
 
 #endif
