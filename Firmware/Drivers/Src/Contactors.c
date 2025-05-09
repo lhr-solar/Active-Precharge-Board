@@ -136,9 +136,8 @@ void Contactors_Init() {
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
     // Start precharge contactors disabled
-    for (int contactor = 0; contactor < NUM_CONTACTORS; contactor++) {
-        setContactor(contactor, OFF);
-    }
+    setContactor(MOTOR_PRECHARGE_CONTACTOR, OFF);
+    setContactor(ARRAY_PRECHARGE_CONTACTOR, OFF);
 
     // Create a mutex type semaphore for contactors, don't check if null since not dynamically allocated
     contactorsMutex = xSemaphoreCreateMutexStatic(&contactorsMutexBuffer);
