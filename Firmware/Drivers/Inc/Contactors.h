@@ -4,7 +4,8 @@
 #include "common.h"
 #include "stm32l4xx_hal.h"
 
-#define NUM_CONTACTORS 4
+// Number of contactors controlled directly
+#define NUM_CONTACTORS 2
 
 // Contactor drive/sense pin definitions
 #define MOTOR_ENABLE_PORT GPIOA
