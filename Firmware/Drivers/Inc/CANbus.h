@@ -3,6 +3,6 @@
 
 #include "common.h"
 
-void contactorCAN_Init();
+void CAN_Init();
 
 #endif

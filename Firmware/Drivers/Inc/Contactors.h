@@ -64,6 +64,9 @@ typedef struct contactor_t {
     bool isPrechargeContactor; // only true for motor/array precharge contactors
 } contactor_t;
 
+// Bitmap of current fault state
+extern uint32_t fault_bitmap;
+
 /**
  * @brief   Initializes contactors to be used
  *          in connection with the Motor and Array

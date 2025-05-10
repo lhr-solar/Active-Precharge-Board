@@ -1,8 +1,10 @@
 #include "FreeRTOS.h" /* Must come first. */
+#include "Tasks.h"
 #include "common.h"
-#include "Tasks.h" 
 #include "stm32xx_hal.h"
 #include "StatusLEDs.h"
+#include "Contactors.h"
+#include "CANbus.h"
 
 StaticTask_t Task_Init_Buffer;
 StackType_t Task_Init_Stack_Array[TASK_INIT_STACK_SIZE];
@@ -10,8 +12,13 @@ StackType_t Task_Init_Stack_Array[TASK_INIT_STACK_SIZE];
 int main() {
     HAL_Init();
     SystemClock_Config();
-    Status_Leds_Init();
 
+    // Init drivers for status LEDs, contactors, CAN bus
+    Status_Leds_Init();
+    Contactors_Init();
+    CAN_Init();
+
+    // Create Init Task
     xTaskCreateStatic(
         Task_Init, /* The function that implements the task. */
         "Init Task", /* Text name for the task. */

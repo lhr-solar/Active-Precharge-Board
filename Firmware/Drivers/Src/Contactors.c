@@ -208,8 +208,6 @@ ErrorStatus Contactors_Set(contactor_enum_t contactor, bool state, bool blocking
     // Set contactor to new state
     setContactor(contactor, state);
 
-    // TODO: start sense timer 
-
     bool ret = Contactors_Get(contactor);
     result = (ret == state) ? SUCCESS : ERROR;
 
