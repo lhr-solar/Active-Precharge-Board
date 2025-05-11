@@ -31,4 +31,9 @@ void can1_config(void);
 void error_handler(void);
 void success_handler(void);
 
+/**
+ * @brief   Reads fault bitmap - sets status LEDs and sends CAN message based on the fault type
+ */
+void fault_handler(void);
+
 #endif

@@ -9,7 +9,6 @@ StaticSemaphore_t contactorsMutexBuffer;
 // Array describes the state of the contactors
 static contactor_t contactorState[NUM_CONTACTORS];
 
-
 /**
  * @brief   Helper function for reading precharge completion state
  *          Should only be called if contactor is a precharge contactor
@@ -51,53 +50,6 @@ static void setContactor(contactor_enum_t contactor, bool state) {
         break;
     default:
         break;
-    }
-}
-
-/**
- * @brief   Helper function for handling precharge timeout fault - opens contactors, sets status LEDs, sends fault CAN message
- * @param   contactor the contactor
- *              (MOTOR_PRECHARGE_CONTACTOR/ARRAY_PRECHARGE_CONTACTOR)
- * @return  None
- */
-static void prechargeTimeoutFaultHandler(contactor_enum_t contactor) {
-    // Disable all contactors regardless of which faulted
-    setContactor(MOTOR_PRECHARGE_CONTACTOR, OFF);
-    setContactor(ARRAY_PRECHARGE_CONTACTOR, OFF);
-
-    // Setup fault CAN message
-    CAN_TxHeaderTypeDef tx_header = { 0 };
-    tx_header.StdId = PRECHARGE_TIMEOUT_;
-    tx_header.RTR = CAN_RTR_DATA;
-    tx_header.IDE = CAN_ID_STD;
-    tx_header.DLC = 2;
-    tx_header.TransmitGlobalTime = DISABLE;
-    uint8_t tx_data[8] = { 0 };
-
-    // Turn on fault LEDs and set fault bits
-    switch (contactor) {
-    case MOTOR_PRECHARGE_CONTACTOR:
-        Status_Leds_Write(MOTOR_TIMEOUT_FAULT_LED, true);
-        fault_bitmap |= FAULT_MOTOR_PRECHARGE_TIMEOUT;
-
-        // Send fault CAN message
-        tx_data[0] = (1 << 0); // Motor Precharge Timeout
-        if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
-        break;
-    case ARRAY_PRECHARGE_CONTACTOR:
-        Status_Leds_Write(ARRAY_TIMEOUT_FAULT_LED, true);
-        fault_bitmap |= FAULT_ARRAY_PRECHARGE_TIMEOUT;
-
-        // Send fault CAN message
-        tx_data[0] = (1 << 1); // Array Precharge Timeout
-        if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
-        break;
-    default:
-        break;
-    }
-
-    while (1) {
-
     }
 }
 
@@ -145,8 +97,8 @@ void Contactors_Init() {
  * @brief   Returns the current state of
  *          a specified contactor
  * @param   contactor the contactor
- *              (MOTOR_CONTACTOR/MOTOR_PRECHARGE_CONTACTOR/ARRAY_CONTACTOR/ARRAY_PRECHARGE_CONTACTOR)
- * @return  The contactor's state (ON/OFF) based on its sense pin (for motor, motor precharge, array precharge) or CAN message (for array)
+ *              (MOTOR_CONTACTOR/MOTOR_PRECHARGE_CONTACTOR/ARRAY_CONTACTOR/ARRAY_PRECHARGE_CONTACTOR/HV_PLUS_CONTACTOR/HV_MINUS_CONTACTOR)
+ * @return  The contactor's state (ON/OFF) based on its sense pin (for motor, motor precharge, array precharge) or CAN message (for array, hv)
  */
 bool Contactors_Get(contactor_enum_t contactor) {
     switch (contactor) {
@@ -198,7 +150,12 @@ ErrorStatus Contactors_Set(contactor_enum_t contactor, bool state, bool blocking
     // Check if precharge completed - if not completed we have a fault
     // TODO: this function should only be called from timer callback, delay for precharge should be built-in
     if (contactorState[contactor].isPrechargeContactor && !getPrecharge(contactor)) {
-        prechargeTimeoutFaultHandler(contactor);
+        if (contactor == MOTOR_PRECHARGE_CONTACTOR) {
+            fault_bitmap |= FAULT_MOTOR_PRECHARGE_TIMEOUT;
+        } else if (contactor == ARRAY_PRECHARGE_CONTACTOR) {
+            fault_bitmap |= FAULT_ARRAY_PRECHARGE_TIMEOUT;
+        }
+        fault_handler();
         return ERROR;
     }
 
@@ -221,4 +178,15 @@ ErrorStatus Contactors_Set(contactor_enum_t contactor, bool state, bool blocking
     }
 
     return result;
+}
+
+/**
+ * @brief   Disables all contactors and bypasses mutex
+ *          Should only used in a fault state
+ *          Note: NOT not turn off array/motor contactors (only precharge)
+ * @return  None
+ */
+void Contactors_EmergencyDisable() {
+    setContactor(MOTOR_PRECHARGE_CONTACTOR, OFF);
+    setContactor(ARRAY_PRECHARGE_CONTACTOR, OFF);
 }

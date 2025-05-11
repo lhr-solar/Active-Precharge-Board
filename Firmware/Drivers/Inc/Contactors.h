@@ -40,7 +40,9 @@ typedef enum {
     MOTOR_CONTACTOR = 0,
     MOTOR_PRECHARGE_CONTACTOR,
     ARRAY_CONTACTOR,
-    ARRAY_PRECHARGE_CONTACTOR
+    ARRAY_PRECHARGE_CONTACTOR,
+    HV_PLUS_CONTACTOR,
+    HV_MINUS_CONTACTOR
 } contactor_enum_t;
 
 // Struct to define the current state of a contactor
@@ -54,25 +56,33 @@ typedef struct contactor_t {
  *          in connection with the Motor and Array
  * @return  None
  */
-void Contactors_Init();
+void Contactors_Init(void);
 
 /**
  * @brief   Returns the current state of
  *          a specified contactor
  * @param   contactor the contactor
- *              (MOTOR_CONTACTOR/MOTOR_PRECHARGE_CONTACTOR/ARRAY_CONTACTOR/ARRAY_PRECHARGE_CONTACTOR)
- * @return  The contactor's state (ON/OFF) based on its sense pin
+ *              (MOTOR_CONTACTOR/MOTOR_PRECHARGE_CONTACTOR/ARRAY_CONTACTOR/ARRAY_PRECHARGE_CONTACTOR/HV_PLUS_CONTACTOR/HV_MINUS_CONTACTOR)
+ * @return  The contactor's state (ON/OFF) based on its sense pin (for motor, motor precharge, array precharge) or CAN message (for array, hv)
  */
 bool Contactors_Get(contactor_enum_t contactor);
 
 /**
  * @brief   Sets the state of a specified contactor
  * @param   contactor the contactor
- *              (MOTOR_CONTACTOR/MOTOR_PRECHARGE_CONTACTOR/ARRAY_CONTACTOR/ARRAY_PRECHARGE_CONTACTOR)
+ *              (MOTOR_PRECHARGE_CONTACTOR/ARRAY_PRECHARGE_CONTACTOR)
  * @param   state the state to set (ON/OFF) (true/false)
  * @param   blocking whether or not this should be a blocking call
  * @return  Whether or not the contactor was successfully set
  */
 ErrorStatus Contactors_Set(contactor_enum_t contactor, bool state, bool blocking);
+
+/**
+ * @brief   Disables all contactors and bypasses mutex
+ *          Should only used in a fault state
+ *          Note: NOT not turn off array/motor contactors (only precharge)
+ * @return  None
+ */
+void Contactors_EmergencyDisable(void);
 
 #endif

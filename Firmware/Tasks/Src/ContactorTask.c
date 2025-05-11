@@ -28,8 +28,8 @@ void Task_Contactor() {
     // maybe have initial delay?
 
     while (1) {
-        fault_bitmap |= FAULT_BPS &~ getBPSState();
-        fault_bitmap |= FAULT_CONTROLS &~ getControlsState();
+        fault_bitmap |= FAULT_BPS & !getBPSSafe();
+        fault_bitmap |= FAULT_CONTROLS & !getControlsFault();
 
 /*
       get bps safe
