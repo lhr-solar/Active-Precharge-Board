@@ -7,15 +7,42 @@
 uint32_t fault_bitmap = 0;
 
 /**
+ * @brief   Helper function for BPS state - checks if BPS_TRIP message was receieved
+ * @return  True if BPS has tripped, false otherwise
+ */
+static bool getBPS_TRIP() {
+  bool result = false;
+
+  // Receive BPS_TRIP
+  CAN_RxHeaderTypeDef rx_header = { 0 };
+  uint8_t rx_data[8] = { 0 };
+  can_status_t status = CAN_EMPTY;
+
+  status = can_recv(hcan1, BPS_TRIP, &rx_header, rx_data, 0);
+  if (status == CAN_RECV) {
+    result = rx_data[0];  // 1 (true) if BPS has tripped, 0 (false) if not tripped
+  }
+  else if (status == CAN_ERR) {
+    // TODO: handle CAN error
+  }
+
+  return result;
+}
+
+/**
  * @brief   Gets current BPS fault state over CAN
  * @return  SAFE if HV+ and HV- contactors are closed, FAULT if BPS has tripped, NOT_CHECKED if neither
  */
 static safety_status_t getBPS_State() {
-  // Holds current BPS fault state - NOT_CHECKED by default
-  static safety_status_t BPS_status = NOT_CHECKED;
-  // use BPS TRIP to enter fault state
-  // use BPS Contactor State to check if safe
-  return true;
+  if (getBPS_TRIP()) {
+    return FAULT;
+  }
+
+  if ((Contactors_Get(HV_PLUS_CONTACTOR) == ON) && (Contactors_Get(HV_MINUS_CONTACTOR) == ON)) {
+    return SAFE;
+  }
+
+  return NOT_CHECKED;
 }
 
 /**
@@ -81,13 +108,13 @@ void Task_Contactor() {
 
   while (1) {
     // If BPS fault, enter fault handler
-    if (getBPS_State()) {
+    if (getBPS_State() == FAULT) {
       fault_bitmap |= FAULT_BPS;
       fault_handler();
     }
 
     // If Controls fault, enter fault handler
-    if (getControls_State()) {
+    if (getControls_State() == FAULT) {
       fault_bitmap |= FAULT_CONTROLS;
       fault_handler();
     }
@@ -96,10 +123,6 @@ void Task_Contactor() {
 
     if (current_ign_state == IGNITION_MOTOR) {
       // TODO: logic - static function
-    }
-    else if (current_ign_state == IGNITION_ARRAY) {
-      // TODO: logic - static function
-    }
 
     /*
         if(motorPre.state == CLOSED && !MOTOR_IGNITION_STATE){ fault }
@@ -120,5 +143,10 @@ void Task_Contactor() {
             }
           }
     */
+
+    }
+    else if (current_ign_state == IGNITION_ARRAY) {
+      // TODO: logic - static function
+    }
   }
 }
