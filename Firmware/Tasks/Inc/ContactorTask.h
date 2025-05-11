@@ -10,4 +10,10 @@ typedef enum {
     IGNITION_MOTOR
 } ignition_state_t;
 
+typedef enum {
+    NOT_CHECKED = 0,
+    SAFE,
+    FAULT
+} safety_status_t;
+
 #endif
