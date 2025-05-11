@@ -3,7 +3,6 @@
 #include "common.h"
 #include "stm32xx_hal.h"
 #include "StatusLEDs.h"
-#include "Contactors.h"
 #include "CANbus.h"
 
 StaticTask_t Task_Init_Buffer;
@@ -15,7 +14,6 @@ int main() {
 
     // Init drivers for status LEDs, contactors, CAN bus
     Status_Leds_Init();
-    Contactors_Init();
     CAN_Init();
 
     // Create Init Task

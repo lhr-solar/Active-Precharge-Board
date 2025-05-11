@@ -1,4 +1,5 @@
 #include "Tasks.h"
+#include "Contactors.h"
 
 // Task Stack Arrays 
 StackType_t Task_Contactor_Stack_Array[TASK_CONTACTOR_STACK_SIZE];
@@ -7,8 +8,10 @@ StackType_t Task_Contactor_Stack_Array[TASK_CONTACTOR_STACK_SIZE];
 StaticTask_t Task_Contactor_Buffer;
 
 void Task_Init() {
-    // TODO: init tasks here...
+    // Initialize contactors driver
+    Contactors_Init();
 
+    // Create contactor task
     xTaskCreateStatic(
         Task_Contactor,                 /* The function that implements the task. */
         "Contactor Task",               /* Text name for the task. */
@@ -18,7 +21,6 @@ void Task_Init() {
         Task_Contactor_Stack_Array,     /* Stack array. */
         &Task_Contactor_Buffer          /* Buffer for static allocation. */
     );
-
 
     // Task deletes itself after all other taks are init'd
     vTaskDelete(NULL);
