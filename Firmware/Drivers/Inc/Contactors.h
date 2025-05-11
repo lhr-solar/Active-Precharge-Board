@@ -7,6 +7,8 @@
 // Number of contactors controlled directly
 #define NUM_CONTACTORS 2
 
+#define CONTACTOR_SENSE_DELAY (50 / portTICK_PERIOD_MS)
+
 // Contactor drive/sense pin definitions
 #define MOTOR_ENABLE_PORT GPIOA
 #define MOTOR_ENABLE_PIN GPIO_PIN_0
@@ -33,23 +35,6 @@
 // Open/Closed definition
 typedef enum { OFF = 0, ON } State;
 
-// Fault state bitmap enum
-typedef enum {
-    FAULT_NONE = 0,
-    FAULT_MOTOR_ENABLE_UNPLUG = 1 << 0,
-    FAULT_MOTOR_SENSE = 1 << 1,
-    FAULT_MOTOR_TIMEOUT = 1 << 2,
-    FAULT_MOTOR_PRECHARGE_SENSE = 1 << 3,
-    FAULT_MOTOR_PRECHARGE_TIMEOUT = 1 << 4,
-    FAULT_ARRAY_ENABLE = 1 << 5,
-    FAULT_ARRAY_SENSE = 1 << 6,
-    FAULT_ARRAY_TIMEOUT = 1 << 7,
-    FAULT_ARRAY_PRECHARGE_SENSE = 1 << 8,
-    FAULT_ARRAY_PRECHARGE_TIMEOUT = 1 << 9,
-    FAULT_BPS = 1 << 10,
-    FAULT_CONTROLS = 1 << 11
-} fault_state_t;
-
 // Enum to index into contactors array
 typedef enum {
     MOTOR_CONTACTOR = 0,
@@ -63,9 +48,6 @@ typedef struct contactor_t {
     bool state; // ON or OFF
     bool isPrechargeContactor; // only true for motor/array precharge contactors
 } contactor_t;
-
-// Bitmap of current fault state
-extern uint32_t fault_bitmap;
 
 /**
  * @brief   Initializes contactors to be used

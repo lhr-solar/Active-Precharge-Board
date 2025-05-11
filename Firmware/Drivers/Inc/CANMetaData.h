@@ -63,34 +63,4 @@ typedef enum {
     LARGEST_CAN_ID
 } CANID_t;
 
-// Union of data that can be sent across CAN bus. Only one field must be filled out
-typedef union {
-    uint8_t b;
-    uint16_t h;
-    uint32_t w;
-    float f;
-    uint8_t bytes[8];   // use when data matches no normal datatype
-} CANData_t;
-
-/**
- * @note    idx is only used when an array of data needs to be sent.
- * @note    data is a union so only one of the fields should be filled out or bad stuff will happen.
- */
-typedef struct {
-    uint8_t idx;
-    CANData_t data;
-} CANPayload_t;
-
-// This data type is used to push messages onto the queue
-typedef struct {
-    CANID_t id;
-    CANPayload_t payload;
-} CANMSG_t;
-
-// Used to format the fields in the CAN metadata lookup table
-
-struct CANLUTEntry {uint8_t idx_used : 1; uint8_t len : 7;};
-
-extern const struct CANLUTEntry CanMetadataLUT[LARGEST_CAN_ID];
-
 #endif

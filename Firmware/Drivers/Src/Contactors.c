@@ -9,8 +9,6 @@ StaticSemaphore_t contactorsMutexBuffer;
 // Array describes the state of the contactors
 static contactor_t contactorState[NUM_CONTACTORS];
 
-// Bitmap of current fault state
-uint32_t fault_bitmap = 0;
 
 /**
  * @brief   Helper function for reading precharge completion state
@@ -194,7 +192,6 @@ ErrorStatus Contactors_Set(contactor_enum_t contactor, bool state, bool blocking
 
     // Acquire mutex lock if available
     if (xSemaphoreTake(contactorsMutex, blocking ? portMAX_DELAY : 0) == pdFALSE) {
-        // TODO: set fault in bitmap??? do we care?
         return ERROR;
     }
 
@@ -208,12 +205,18 @@ ErrorStatus Contactors_Set(contactor_enum_t contactor, bool state, bool blocking
     // Set contactor to new state
     setContactor(contactor, state);
 
+    // Precharge contactors with sense pins
+    if (blocking && (contactor == (ARRAY_PRECHARGE_CONTACTOR || MOTOR_PRECHARGE_CONTACTOR))) {
+        // Delay to allow sense pin to settle before reading to confirm contactor state
+        vTaskDelay(CONTACTOR_SENSE_DELAY);
+    }
+
+    // Read new state and confirm
     bool ret = Contactors_Get(contactor);
     result = (ret == state) ? SUCCESS : ERROR;
 
     // Release mutex lock
     if (xSemaphoreGive(contactorsMutex) == pdFALSE) {
-        // TODO: set fault in bitmap???
         return ERROR;
     }
 

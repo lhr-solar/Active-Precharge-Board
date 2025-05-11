@@ -1,6 +1,9 @@
 #include "Tasks.h"
 #include "Contactors.h"
 
+// Bitmap of current fault state
+uint32_t fault_bitmap = 0;
+
 /**
  * @brief   Gets current state of BPS over CAN
  * @return  True/false corresponding to BPS safe/fault
@@ -8,6 +11,7 @@
 static bool getBPSSafe() {
     // use BPS TRIP to enter fault state
     // use BPS Contactor State to check if safe
+    return false;
 }
 
 /**
@@ -15,11 +19,11 @@ static bool getBPSSafe() {
  * @return  True/false corresponding to Controls safe/fault
  */
 static bool getControlsFault() {
-
+    return false;
 }
 
 void Task_Contactor() {
-    fault_bitmap = 0;
+    fault_bitmap = FAULT_NONE;
 
     // maybe have initial delay?
 
