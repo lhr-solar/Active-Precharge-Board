@@ -10,6 +10,27 @@ StaticSemaphore_t contactorsMutexBuffer;
 static contactor_t contactorState[NUM_CONTACTORS];
 
 /**
+ * @brief   Helper function for receiving BPS contactor state over CAN to update contactorState
+ * @return  None
+ */
+static void updateBPSContactors() {
+    // Receive BPS contactor state
+    CAN_RxHeaderTypeDef rx_header = { 0 };
+    uint8_t rx_data[8] = { 0 };
+    can_status_t status = CAN_EMPTY;
+
+    status = can_recv(hcan1, BPS_CONTACTOR_STATE, &rx_header, rx_data, 0);
+    if (status == CAN_RECV) {
+        contactorState[ARRAY_CONTACTOR].state = rx_data[0] & 0x01 ? ON : OFF;
+        contactorState[HV_PLUS_CONTACTOR].state = rx_data[0] & 0x04 ? ON : OFF;
+        contactorState[HV_MINUS_CONTACTOR].state = rx_data[0] & 0x02 ? ON : OFF;
+    }
+    else if (status == CAN_ERR) {
+        // TODO: handle CAN error
+    }
+}
+
+/**
  * @brief   Helper function for reading precharge completion state
  *          Should only be called if contactor is a precharge contactor
  * @param   contactor the contactor
@@ -109,21 +130,16 @@ bool Contactors_Get(contactor_enum_t contactor) {
         contactorState[MOTOR_PRECHARGE_CONTACTOR].state = HAL_GPIO_ReadPin(MOTOR_PRECHARGE_SENSE_PORT, MOTOR_PRECHARGE_SENSE_PIN);
         break;
     case ARRAY_CONTACTOR:
-        // Receive BPS contactor state
-        CAN_RxHeaderTypeDef rx_header = { 0 };
-        uint8_t rx_data[8] = { 0 };
-        can_status_t status = CAN_EMPTY;
-
-        status = can_recv(hcan1, BPS_CONTACTOR_STATE, &rx_header, rx_data, 0);
-        if (status == CAN_RECV) {
-            contactorState[ARRAY_CONTACTOR].state = rx_data[0] & 0x01 ? ON : OFF;
-        }
-        else if (status == CAN_ERR) {
-            // TODO: handle CAN error
-        }
+        updateBPSContactors();
         break;
     case ARRAY_PRECHARGE_CONTACTOR:
         contactorState[MOTOR_PRECHARGE_CONTACTOR].state = HAL_GPIO_ReadPin(MOTOR_PRECHARGE_SENSE_PORT, MOTOR_PRECHARGE_SENSE_PIN);
+        break;
+    case HV_PLUS_CONTACTOR:
+        updateBPSContactors();
+        break;
+    case HV_MINUS_CONTACTOR:
+        updateBPSContactors();
         break;
     default:
         break;
@@ -152,7 +168,8 @@ ErrorStatus Contactors_Set(contactor_enum_t contactor, bool state, bool blocking
     if (contactorState[contactor].isPrechargeContactor && !getPrecharge(contactor)) {
         if (contactor == MOTOR_PRECHARGE_CONTACTOR) {
             fault_bitmap |= FAULT_MOTOR_PRECHARGE_TIMEOUT;
-        } else if (contactor == ARRAY_PRECHARGE_CONTACTOR) {
+        }
+        else if (contactor == ARRAY_PRECHARGE_CONTACTOR) {
             fault_bitmap |= FAULT_ARRAY_PRECHARGE_TIMEOUT;
         }
         fault_handler();
