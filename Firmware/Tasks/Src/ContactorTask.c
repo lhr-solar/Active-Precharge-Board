@@ -102,6 +102,70 @@ static ignition_state_t getIgnitionState() {
   return ign_state;
 }
 
+/**
+ * @brief   Executes contactor logic according to car state
+ * @param   current_ign_state the current ignition state of the car
+ *              (IGNITION_OFF, IGNITION_ARRAY, IGNITION_MOTOR)
+ * @return  None
+ */
+static void logic_handler(ignition_state_t current_ign_state) {
+  switch (current_ign_state) {
+  case IGNITION_OFF:
+    if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == ON) {
+      if (getBPS_State != SAFE) {
+        fault_bitmap |= FAULT_BPS;
+        fault_handler();
+      }
+      else {
+        // Turn off motor precharge contactor in blocking mode
+        if (Contactors_Set(MOTOR_PRECHARGE_CONTACTOR, OFF, true) == ERROR) {
+          fault_bitmap |= FAULT_MOTOR_PRECHARGE_SENSE;
+          fault_handler();
+        }
+      }
+    }
+    if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON) {
+      if (getBPS_State != SAFE) {
+        fault_bitmap |= FAULT_BPS;
+        fault_handler();
+      }
+      else {
+        // Turn off array precharge contactor in blocking mode
+        if (Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, true) == ERROR) {
+          fault_bitmap |= FAULT_ARRAY_PRECHARGE_SENSE;
+          fault_handler();
+        }
+      }
+    }
+    break;
+  case IGNITION_ARRAY:
+    break;
+  case IGNITION_MOTOR:
+    break;
+  default:
+    break;
+  }
+  /*
+      if(motorPre.state == CLOSED && !MOTOR_IGNITION_STATE){ fault }
+       // Controls has turned the motor contactor on
+        if(motor.enable_in == CLOSED){
+          if(!BPS_SAFE || !MOTOR_IGNITION_STATE){
+            // fault
+          }
+          // controls turned motor on, but not yet closed
+          if(motor.state == OPEN && motorCLoseTimerNotStarted){
+            // start FreeRTOS timer to ensure that the Contactor closes
+          }
+          // Motor Contactor is closed, need to start precharge
+          if(motor.state == CLOSED){
+            if(motorPre.state == OPEN){
+              // start precharge timer if not alr started
+            }
+          }
+        }
+  */
+}
+
 void Task_Contactor() {
   // Reset fault bitmap
   fault_bitmap = FAULT_NONE;
@@ -119,34 +183,7 @@ void Task_Contactor() {
       fault_handler();
     }
 
-    ignition_state_t current_ign_state = getIgnitionState();
-
-    if (current_ign_state == IGNITION_MOTOR) {
-      // TODO: logic - static function
-
-    /*
-        if(motorPre.state == CLOSED && !MOTOR_IGNITION_STATE){ fault }
-         // Controls has turned the motor contactor on
-          if(motor.enable_in == CLOSED){
-            if(!BPS_SAFE || !MOTOR_IGNITION_STATE){
-              // fault
-            }
-            // controls turned motor on, but not yet closed
-            if(motor.state == OPEN && motorCLoseTimerNotStarted){
-              // start FreeRTOS timer to ensure that the Contactor closes
-            }
-            // Motor Contactor is closed, need to start precharge
-            if(motor.state == CLOSED){
-              if(motorPre.state == OPEN){
-                // start precharge timer if not alr started
-              }
-            }
-          }
-    */
-
-    }
-    else if (current_ign_state == IGNITION_ARRAY) {
-      // TODO: logic - static function
-    }
+    // handle contactor logic based on OFF, ARRAY, or MOTOR state
+    logic_handler(getIgnitionState());
   }
 }
