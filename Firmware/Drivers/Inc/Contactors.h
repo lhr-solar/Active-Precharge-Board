@@ -7,7 +7,11 @@
 // Number of contactors controlled directly
 #define NUM_CONTACTORS 2
 
+// Sense pin delay for contactor set (50 miliseconds)
 #define CONTACTOR_SENSE_DELAY (50 / portTICK_PERIOD_MS)
+
+// Timeout for precharge completion (1 second)
+#define PRECHARGE_TIMEOUT_DELAY (1000 / portTICK_PERIOD_MS)
 
 // Contactor drive/sense pin definitions
 #define MOTOR_ENABLE_PORT GPIOA
@@ -49,6 +53,10 @@ typedef enum {
 typedef struct contactor_t {
     bool state; // ON or OFF
     bool isPrechargeContactor; // only true for motor/array precharge contactors
+    TimerHandle_t prechargeTimer; // timer handle for checking if precharge completed
+    StaticTimer_t prechargeTimerBuffer;
+    TimerHandle_t senseTimer; // timer handle for checking if contactor closed/opened (non-blocking mode)
+    StaticTimer_t senseTimerBuffer;
 } contactor_t;
 
 /**
@@ -84,5 +92,21 @@ ErrorStatus Contactors_Set(contactor_enum_t contactor, bool state, bool blocking
  * @return  None
  */
 void Contactors_EmergencyDisable(void);
+
+/**
+ * @brief   Gets the sense timer handle associated with a contactor
+ * @param   contactor the contactor
+ *              (MOTOR_CONTACTOR/MOTOR_PRECHARGE_CONTACTOR/ARRAY_PRECHARGE_CONTACTOR)
+ * @return  FreeRTOS timer handle for the specified contactor's sense timer
+ */
+TimerHandle_t Contactors_GetSenseTimerHandle(contactor_enum_t contactor);
+
+/**
+ * @brief   Gets the precharge completion timer handle associated with a contactor
+ * @param   contactor the contactor
+ *              (MOTOR_PRECHARGE_CONTACTOR/ARRAY_PRECHARGE_CONTACTOR)
+ * @return  FreeRTOS timer handle for the specified contactor's precharge timer
+ */
+TimerHandle_t Contactors_GetPrechargeTimerHandle(contactor_enum_t contactor);
 
 #endif

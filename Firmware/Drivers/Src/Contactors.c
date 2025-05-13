@@ -75,6 +75,92 @@ static void setContactor(contactor_enum_t contactor, bool state) {
 }
 
 /**
+ * @brief   Checks if contactor is in expected state, fault otherwise
+ * @param   senseTimer handle to the contactor's sense timer
+ * @return  None
+ */
+static void senseTimerCallback(TimerHandle_t senseTimer) {
+    // Timer ID holds the contactor ID
+    contactor_enum_t contactor = (contactor_enum_t)pvTimerGetTimerID(senseTimer);
+    // If sense doesn't match state, enter fault
+    if (contactorState[contactor].state != Contactors_Get(contactor)) {
+        if (contactor == MOTOR_PRECHARGE_CONTACTOR) {
+            fault_bitmap |= FAULT_MOTOR_PRECHARGE_SENSE;
+        }
+        else if (contactor == ARRAY_PRECHARGE_CONTACTOR) {
+            fault_bitmap |= FAULT_ARRAY_PRECHARGE_SENSE;
+        }
+        fault_handler();
+    }
+}
+
+/**
+ * @brief   Turns on contactor if precharge is complete, otherwise enters fault state
+ * @param   prechargeTimer handle to the contactor's precharge completion timer
+ * @return  None
+ */
+static void prechargeTimerCallback(TimerHandle_t prechargeTimer) {
+    // Timer ID holds the contactor ID
+    contactor_enum_t contactor = (contactor_enum_t)pvTimerGetTimerID(prechargeTimer);
+    // Check if precharge completed - if not completed we have a fault
+    if (!getPrecharge(contactor)) {
+        if (contactor == MOTOR_PRECHARGE_CONTACTOR) {
+            fault_bitmap |= FAULT_MOTOR_PRECHARGE_TIMEOUT;
+        }
+        else if (contactor == ARRAY_PRECHARGE_CONTACTOR) {
+            fault_bitmap |= FAULT_ARRAY_PRECHARGE_TIMEOUT;
+        }
+        fault_handler();
+    }
+    // Precharge is complete - turn on the contactor (non-blocking mode)
+    // This also starts the sense timer to confirm that it closed
+    Contactors_Set(contactor, ON, false);
+}
+
+/**
+ * @brief   Gets the sense timer handle associated with a contactor
+ * @param   contactor the contactor
+ *              (MOTOR_CONTACTOR/MOTOR_PRECHARGE_CONTACTOR/ARRAY_PRECHARGE_CONTACTOR)
+ * @return  FreeRTOS timer handle for the specified contactor's sense timer
+ */
+TimerHandle_t Contactors_GetSenseTimerHandle(contactor_enum_t contactor) {
+    switch (contactor) {
+    case MOTOR_CONTACTOR:
+        return contactorState[MOTOR_CONTACTOR].senseTimer;
+        break;
+    case MOTOR_PRECHARGE_CONTACTOR:
+        return contactorState[MOTOR_PRECHARGE_CONTACTOR].senseTimer;
+        break;
+    case ARRAY_PRECHARGE_CONTACTOR:
+        return contactorState[ARRAY_PRECHARGE_CONTACTOR].senseTimer;
+        break;
+    default:
+        return NULL;
+        break;
+    }
+}
+
+/**
+ * @brief   Gets the precharge completion timer handle associated with a contactor
+ * @param   contactor the contactor
+ *              (MOTOR_PRECHARGE_CONTACTOR/ARRAY_PRECHARGE_CONTACTOR)
+ * @return  FreeRTOS timer handle for the specified contactor's precharge timer
+ */
+TimerHandle_t Contactors_GetPrechargeTimerHandle(contactor_enum_t contactor) {
+    switch (contactor) {
+    case MOTOR_PRECHARGE_CONTACTOR:
+        return contactorState[MOTOR_PRECHARGE_CONTACTOR].prechargeTimer;
+        break;
+    case ARRAY_PRECHARGE_CONTACTOR:
+        return contactorState[ARRAY_PRECHARGE_CONTACTOR].prechargeTimer;
+        break;
+    default:
+        return NULL;
+        break;
+    }
+}
+
+/**
  * @brief   Initializes contactors to be used
  *          in connection with the Motor and Array
  * @return  None
@@ -106,12 +192,60 @@ void Contactors_Init() {
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
+    // Set precharge contactors
+    contactorState[MOTOR_PRECHARGE_CONTACTOR].isPrechargeContactor = true;
+    contactorState[ARRAY_PRECHARGE_CONTACTOR].isPrechargeContactor = true;
+
     // Start precharge contactors disabled
     setContactor(MOTOR_PRECHARGE_CONTACTOR, OFF);
     setContactor(ARRAY_PRECHARGE_CONTACTOR, OFF);
 
     // Create a mutex type semaphore for contactors, don't check if null since not dynamically allocated
     contactorsMutex = xSemaphoreCreateMutexStatic(&contactorsMutexBuffer);
+
+    // Create sense timers
+    contactorState[MOTOR_CONTACTOR].senseTimer = xTimerCreateStatic(
+        "Motor Contactor Sense Timer",                      /* Name of the timer */
+        CONTACTOR_SENSE_DELAY,                              /* Timer period in ticks */
+        pdFALSE,                                            /* Don't auto-reload */
+        (void*)MOTOR_CONTACTOR,                             /* Timer ID */
+        senseTimerCallback,                                 /* Callback function */
+        &(contactorState[MOTOR_CONTACTOR].senseTimerBuffer) /* Buffer to hold timer data */
+    );
+    contactorState[MOTOR_PRECHARGE_CONTACTOR].senseTimer = xTimerCreateStatic(
+        "Motor Precharge Contactor Sense Timer",            /* Name of the timer */
+        CONTACTOR_SENSE_DELAY,                              /* Timer period in ticks */
+        pdFALSE,                                            /* Don't auto-reload */
+        (void*)MOTOR_PRECHARGE_CONTACTOR,                   /* Timer ID */
+        senseTimerCallback,                                 /* Callback function */
+        &(contactorState[MOTOR_PRECHARGE_CONTACTOR].senseTimerBuffer) /* Buffer to hold timer data */
+    );
+    contactorState[ARRAY_PRECHARGE_CONTACTOR].senseTimer = xTimerCreateStatic(
+        "Array Precharge Contactor Sense Timer",            /* Name of the timer */
+        CONTACTOR_SENSE_DELAY,                              /* Timer period in ticks */
+        pdFALSE,                                            /* Don't auto-reload */
+        (void*)ARRAY_PRECHARGE_CONTACTOR,                   /* Timer ID */
+        senseTimerCallback,                                 /* Callback function */
+        &(contactorState[ARRAY_PRECHARGE_CONTACTOR].senseTimerBuffer) /* Buffer to hold timer data */
+    );
+
+    // Create precharge timers
+    contactorState[MOTOR_PRECHARGE_CONTACTOR].prechargeTimer = xTimerCreateStatic(
+        "Motor Precharge Completion Timer",                               /* Name of the timer */
+        PRECHARGE_TIMEOUT_DELAY,                                          /* Timer period in ticks */
+        pdFALSE,                                                          /* Don't auto-reload */
+        (void*)MOTOR_PRECHARGE_CONTACTOR,                                 /* Timer ID */
+        prechargeTimerCallback,                                           /* Callback function */
+        &(contactorState[MOTOR_PRECHARGE_CONTACTOR].prechargeTimerBuffer) /* Buffer to hold timer data */
+    );
+    contactorState[ARRAY_PRECHARGE_CONTACTOR].prechargeTimer = xTimerCreateStatic(
+        "Array Precharge Completion Timer",                               /* Name of the timer */
+        PRECHARGE_TIMEOUT_DELAY,                                          /* Timer period in ticks */
+        pdFALSE,                                                          /* Don't auto-reload */
+        (void*)ARRAY_PRECHARGE_CONTACTOR,                                 /* Timer ID */
+        prechargeTimerCallback,                                           /* Callback function */
+        &(contactorState[ARRAY_PRECHARGE_CONTACTOR].prechargeTimerBuffer) /* Buffer to hold timer data */
+    );
 }
 
 /**
@@ -133,7 +267,7 @@ bool Contactors_Get(contactor_enum_t contactor) {
         updateBPSContactors();
         break;
     case ARRAY_PRECHARGE_CONTACTOR:
-        contactorState[MOTOR_PRECHARGE_CONTACTOR].state = HAL_GPIO_ReadPin(MOTOR_PRECHARGE_SENSE_PORT, MOTOR_PRECHARGE_SENSE_PIN);
+        contactorState[ARRAY_PRECHARGE_CONTACTOR].state = HAL_GPIO_ReadPin(ARRAY_PRECHARGE_SENSE_PORT, ARRAY_PRECHARGE_SENSE_PIN);
         break;
     case HV_PLUS_CONTACTOR:
         updateBPSContactors();
@@ -163,31 +297,23 @@ ErrorStatus Contactors_Set(contactor_enum_t contactor, bool state, bool blocking
         return ERROR;
     }
 
-    // Check if precharge completed - if not completed we have a fault
-    // TODO: this function should only be called from timer callback, delay for precharge should be built-in
-    if (contactorState[contactor].isPrechargeContactor && !getPrecharge(contactor)) {
-        if (contactor == MOTOR_PRECHARGE_CONTACTOR) {
-            fault_bitmap |= FAULT_MOTOR_PRECHARGE_TIMEOUT;
-        }
-        else if (contactor == ARRAY_PRECHARGE_CONTACTOR) {
-            fault_bitmap |= FAULT_ARRAY_PRECHARGE_TIMEOUT;
-        }
-        fault_handler();
-        return ERROR;
-    }
-
     // Set contactor to new state
     setContactor(contactor, state);
 
     // Precharge contactors with sense pins
-    if (blocking && (contactor == (ARRAY_PRECHARGE_CONTACTOR || MOTOR_PRECHARGE_CONTACTOR))) {
+    if (blocking && (contactor == ARRAY_PRECHARGE_CONTACTOR || contactor == MOTOR_PRECHARGE_CONTACTOR)) {
         // Delay to allow sense pin to settle before reading to confirm contactor state
         vTaskDelay(CONTACTOR_SENSE_DELAY);
-    }
 
-    // Read new state and confirm
-    bool ret = Contactors_Get(contactor);
-    result = (ret == state) ? SUCCESS : ERROR;
+        // Read new state and confirm
+        bool ret = Contactors_Get(contactor);
+        result = (ret == state) ? SUCCESS : ERROR;
+    }
+    else {
+        // Start sense timer
+        xTimerStart(Contactors_GetSenseTimerHandle(contactor), 0);
+        result = SUCCESS; // MUST check sense pin using timer
+    }
 
     // Release mutex lock
     if (xSemaphoreGive(contactorsMutex) == pdFALSE) {

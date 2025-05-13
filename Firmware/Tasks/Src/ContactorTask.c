@@ -6,10 +6,6 @@
 // Bitmap of current contactor board fault state
 uint32_t fault_bitmap = 0;
 
-// Keep track of whether 
-bool array_precharge_timer_started = false;
-bool motor_precharge_timer_started = false;
-
 /**
  * @brief   Helper function for BPS state - checks if BPS_TRIP message was receieved
  * @return  True if BPS has tripped, false otherwise
@@ -117,7 +113,7 @@ static void logic_handler(ignition_state_t current_ign_state) {
   case IGNITION_OFF:
     if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == ON) {
       // If HV+/- contactors are open, other contactors shouldn't be closed
-      if (getBPS_State != SAFE) {
+      if (getBPS_State() != SAFE) {
         fault_bitmap |= FAULT_BPS;
         fault_handler();
       }
@@ -131,7 +127,7 @@ static void logic_handler(ignition_state_t current_ign_state) {
     }
     if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON) {
       // If HV+/- contactors are open, other contactors shouldn't be closed
-      if (getBPS_State != SAFE) {
+      if (getBPS_State() != SAFE) {
         fault_bitmap |= FAULT_BPS;
         fault_handler();
       }
@@ -147,14 +143,15 @@ static void logic_handler(ignition_state_t current_ign_state) {
   case IGNITION_ARRAY:
     if (Contactors_Get(ARRAY_CONTACTOR) == ON) {
       // If HV+/- contactors are open, other contactors shouldn't be closed
-      if (getBPS_State != SAFE) {
+      if (getBPS_State() != SAFE) {
         fault_bitmap |= FAULT_BPS;
         fault_handler();
       }
-      if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && !array_precharge_timer_started) {
-        // TODO: start freeRTOS timer for array - make this part of struct?
-        // Callback will check if complete and fault or close contactor...
-          // TODO: fix driver code to not assume fault
+      // Wait for precharge to finish, then close array precharge contactor (start timer if not active)
+      if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR)) == pdFALSE) {
+        // Start timer - callback will check if complete and either fault or close contactor
+        xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), 0);
+        // TODO: fix driver code to not assume fault
         // Since timer callbacks can't be blocking, may need additional timer for sense...
       }
     }
@@ -162,14 +159,15 @@ static void logic_handler(ignition_state_t current_ign_state) {
   case IGNITION_MOTOR:
     if (Contactors_Get(MOTOR_CONTACTOR) == ON) {
       // If HV+/- contactors are open, other contactors shouldn't be closed
-      if (getBPS_State != SAFE) {
+      if (getBPS_State() != SAFE) {
         fault_bitmap |= FAULT_BPS;
         fault_handler();
       }
-      if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == OFF && !motor_precharge_timer_started) {
-        // TODO: start freeRTOS timer for motor - make this part of struct?
-        // Callback will check if complete and fault or close contactor...
-          // TODO: fix driver code to not assume fault
+      // Wait for precharge to finish, then close motor precharge contactor (start timer if not active)
+      if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR)) == pdFALSE) {
+        // Start timer - callback will check if complete and either fault or close contactor
+        xTimerStart(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR), 0);
+        // TODO: fix driver code to not assume fault
         // Since timer callbacks can't be blocking, may need additional timer for sense...
       }
     }

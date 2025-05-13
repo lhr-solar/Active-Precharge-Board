@@ -90,6 +90,8 @@ void fault_handler(void) {
     tx_data[0] = (1 << 1); // Array Precharge Timeout
   }
 
+  // TODO: add fault LEDs for all other faults...
+
   if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
 
   while (1) {
