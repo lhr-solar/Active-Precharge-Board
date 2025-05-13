@@ -151,8 +151,6 @@ static void logic_handler(ignition_state_t current_ign_state) {
       if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR)) == pdFALSE) {
         // Start timer - callback will check if complete and either fault or close contactor
         xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), 0);
-        // TODO: fix driver code to not assume fault
-        // Since timer callbacks can't be blocking, may need additional timer for sense...
       }
     }
     break;
@@ -167,8 +165,6 @@ static void logic_handler(ignition_state_t current_ign_state) {
       if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR)) == pdFALSE) {
         // Start timer - callback will check if complete and either fault or close contactor
         xTimerStart(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR), 0);
-        // TODO: fix driver code to not assume fault
-        // Since timer callbacks can't be blocking, may need additional timer for sense...
       }
     }
     break;
