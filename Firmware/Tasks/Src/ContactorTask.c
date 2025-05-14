@@ -111,6 +111,7 @@ static ignition_state_t getIgnitionState() {
 static void logic_handler(ignition_state_t current_ign_state) {
   switch (current_ign_state) {
   case IGNITION_OFF:
+    // In off state, all contactors should be off
     if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == ON) {
       // If HV+/- contactors are open, other contactors shouldn't be closed
       if (getBPS_State() != SAFE) {
@@ -141,6 +142,7 @@ static void logic_handler(ignition_state_t current_ign_state) {
     }
     break;
   case IGNITION_ARRAY:
+    // In array state, array and array precharge contactors should turn on
     if (Contactors_Get(ARRAY_CONTACTOR) == ON) {
       // If HV+/- contactors are open, other contactors shouldn't be closed
       if (getBPS_State() != SAFE) {
@@ -153,8 +155,13 @@ static void logic_handler(ignition_state_t current_ign_state) {
         xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), 0);
       }
     }
+    // If BPS has turned off array contactor, turn off precharge contactor as well (charging disabled)
+    else if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON) {
+      Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, false);
+    }
     break;
   case IGNITION_MOTOR:
+    // In motor state, motor, motor precharge, array, and array precharge contactors should turn on
     if (Contactors_Get(MOTOR_CONTACTOR) == ON) {
       // If HV+/- contactors are open, other contactors shouldn't be closed
       if (getBPS_State() != SAFE) {
@@ -166,6 +173,28 @@ static void logic_handler(ignition_state_t current_ign_state) {
         // Start timer - callback will check if complete and either fault or close contactor
         xTimerStart(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR), 0);
       }
+    }
+    // If Controls has turned off motor contactor, turn off precharge contactor as well
+    else if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == ON) {
+      Contactors_Set(MOTOR_PRECHARGE_CONTACTOR, OFF, false);
+    }
+
+    // Turn on array precharge if needed
+    if (Contactors_Get(ARRAY_CONTACTOR) == ON) {
+      // If HV+/- contactors are open, other contactors shouldn't be closed
+      if (getBPS_State() != SAFE) {
+        fault_bitmap |= FAULT_BPS;
+        fault_handler();
+      }
+      // Wait for precharge to finish, then close array precharge contactor (start timer if not active)
+      if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR)) == pdFALSE) {
+        // Start timer - callback will check if complete and either fault or close contactor
+        xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), 0);
+      }
+    }
+    // If BPS has turned off array contactor, turn off precharge contactor as well (charging disabled)
+    else if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON) {
+      Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, false);
     }
     break;
   default:
