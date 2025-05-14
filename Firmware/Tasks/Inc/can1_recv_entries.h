@@ -1,5 +1,11 @@
 #include "CANMetaData.h"
 
 CAN_RECV_ENTRY(BPS_TRIP, 1, false)
-CAN_RECV_ENTRY(BPS_ALL_CLEAR, 1, false)
 CAN_RECV_ENTRY(BPS_CONTACTOR_STATE, 1, false)
+CAN_RECV_ENTRY(CONTROLS_FAULT, 1, false)
+CAN_RECV_ENTRY(IO_STATE, 3, false)
+
+// for CAN test
+CAN_RECV_ENTRY(0x01, 2, false)
+CAN_RECV_ENTRY(0x03, 2, false)
+CAN_RECV_ENTRY(0x04, 1, false)

@@ -22,6 +22,6 @@ void Task_Init() {
         &Task_Contactor_Buffer          /* Buffer for static allocation. */
     );
 
-    // Task deletes itself after all other taks are init'd
+    // Task deletes itself after all other tasks are init'd
     vTaskDelete(NULL);
 }

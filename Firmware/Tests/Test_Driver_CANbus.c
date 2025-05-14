@@ -9,23 +9,11 @@
 
 #include "stm32xx_hal.h"
 #include "CAN.h"
-#include "statusLEDs.h"
+#include "StatusLEDs.h"
 #include "common.h"
 
 StaticTask_t task_buffer;
 StackType_t task_stack[configMINIMAL_STACK_SIZE];
-
-void error_handler(void) {
-  while(1) {
-    Status_Leds_Toggle(MOTOR_FAULT_LED);
-    HAL_Delay(500);
-  }
-}
-
-void success_handler(void) {
-  Status_Leds_Toggle(ARRAY_FAULT_LED);
-  HAL_Delay(500);
-}
 
 static void task(void *pvParameters) {
   while(1){
@@ -122,7 +110,7 @@ int main(void) {
   // initialize the HAL and system clock
   if (HAL_Init() != HAL_OK) error_handler();
   Status_Leds_Init();
-  sys_clock_config();
+  SystemClock_Config();
   Status_Leds_Write(MOTOR_TIMEOUT_FAULT_LED, true);
   // create filter
   CAN_FilterTypeDef  sFilterConfig;
