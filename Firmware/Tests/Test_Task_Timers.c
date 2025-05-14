@@ -22,12 +22,29 @@ void Task_Timers() {
     if (result != pdPASS) {
         Status_Leds_All_On();
     }
+    result = xTimerIsTimerActive(Contactors_GetSenseTimerHandle(ARRAY_PRECHARGE_CONTACTOR));
 
     // Test 1s timer - should visibly delay before turning on timeout fault LED
     result = xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), 0);
     if (result != pdPASS) {
         Status_Leds_All_On();
     }
+    result = xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR));
+\
+    // Test 50ms timer - you won't be able to see this one
+    // Can breakpoint at the callback and make sure it fires
+    result = xTimerStart(Contactors_GetSenseTimerHandle(MOTOR_PRECHARGE_CONTACTOR), 0);
+    if (result != pdPASS) {
+        Status_Leds_All_On();
+    }
+    result = xTimerIsTimerActive(Contactors_GetSenseTimerHandle(MOTOR_PRECHARGE_CONTACTOR));
+
+    // Test 1s timer - should visibly delay before turning on timeout fault LED
+    result = xTimerStart(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR), 0);
+    if (result != pdPASS) {
+        Status_Leds_All_On();
+    }
+    result = xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR));
 
     while (1) {
 
