@@ -4,7 +4,7 @@
 #include "CANMetaData.h"
 
 // Bitmap of current contactor board fault state
-uint32_t fault_bitmap = 0;
+uint32_t fault_bitmap = FAULT_NONE;
 
 /**
  * @brief   Helper function for BPS state - checks if BPS_TRIP message was receieved
