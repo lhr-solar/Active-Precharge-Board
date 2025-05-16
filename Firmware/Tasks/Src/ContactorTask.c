@@ -9,6 +9,9 @@ uint32_t fault_bitmap = FAULT_NONE;
 // Stores current BPS state
 safety_status_t BPS_status = NOT_CHECKED;
 
+// Bitmap of current Controls ignition state
+uint8_t ignition_bitmap = IGNITION_OFF;
+
 /**
  * @brief   Helper function for BPS state - checks if BPS_TRIP message was receieved
  * @return  True if BPS has tripped, false otherwise
@@ -74,13 +77,10 @@ static safety_status_t getControls_State() {
 }
 
 /**
- * @brief   Gets current ignition state over CAN
- * @return  Possible ignition states from controls: OFF, ARRAY, MOTOR
+ * @brief   Gets current ignition state over CAN - updates ignition bitmap
+ *          Bit 0 = Motor, Bit 1 = Array
  */
-static ignition_state_t getIgnitionState() {
-  // Current ignition state
-  static ignition_state_t ign_state = IGNITION_OFF;
-
+static void updateIgnitionState() {
   // Receive controls IO_STATE
   CAN_RxHeaderTypeDef rx_header = { 0 };
   uint8_t rx_data[8] = { 0 };
@@ -88,32 +88,53 @@ static ignition_state_t getIgnitionState() {
 
   status = can_recv(hcan1, IO_STATE, &rx_header, rx_data, 0);
   if (status == CAN_RECV) {
-    if (rx_data[2] & IGNITION_MOTOR) {
-      ign_state = IGNITION_MOTOR;
-    }
-    else if (rx_data[2] & IGNITION_ARRAY) {
-      ign_state = IGNITION_ARRAY;
-    }
-    else {
-      ign_state = IGNITION_OFF;
-    }
+    // Ignition state is bit 0 and 1 of IO_STATE message
+    // Directly map those bits to ignition_bitmap
+    ignition_bitmap = rx_data[2] & 0x03;
   }
   else if (status == CAN_ERR) {
     // TODO: handle CAN error
   }
-
-  return ign_state;
 }
 
 /**
  * @brief   Executes contactor logic according to car state
- * @param   current_ign_state the current ignition state of the car
- *              (IGNITION_OFF, IGNITION_ARRAY, IGNITION_MOTOR)
  * @return  None
  */
-static void logic_handler(ignition_state_t current_ign_state) {
-  switch (current_ign_state) {
-  case IGNITION_OFF:
+static void logic_handler() {
+  // In motor ignition state
+  if (ignition_bitmap & IGNITION_MOTOR) {
+    // In motor state, motor, motor precharge, array, and array precharge contactors should turn on
+    // If HV+/- contactors are open, other contactors shouldn't be closed
+    if (Contactors_Get(MOTOR_CONTACTOR) == ON && BPS_status == SAFE) {
+      // Wait for precharge to finish, then close motor precharge contactor (start timer if not active)
+      if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR)) == pdFALSE) {
+        // Start timer - callback will check if complete and either fault or close contactor
+        xTimerStart(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR), 0);
+      }
+    }
+    // If Controls has turned off motor contactor or BPS has turned off HV+/- contactors, turn off precharge contactor as well
+    else if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == ON) {
+      Contactors_Set(MOTOR_PRECHARGE_CONTACTOR, OFF, false);
+    }
+  }
+  if (ignition_bitmap & IGNITION_ARRAY) {
+    // In array state, array and array precharge contactors should turn on
+    // If HV+/- contactors are open, other contactors shouldn't be closed
+    if (Contactors_Get(ARRAY_CONTACTOR) == ON && BPS_status == SAFE) {
+      // Wait for precharge to finish, then close array precharge contactor (start timer if not active)
+      if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR)) == pdFALSE) {
+        // Start timer - callback will check if complete and either fault or close contactor
+        xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), 0);
+      }
+    }
+    // If BPS has turned off array or HV+/- contactors, turn off precharge contactor as well (charging disabled)
+    else if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON) {
+      Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, false);
+    }
+  }
+  // Must be in OFF state if array bit is not set
+  else {
     // In off state, all contactors should be off
     if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == ON) {
       // Turn off motor precharge contactor in blocking mode
@@ -129,64 +150,20 @@ static void logic_handler(ignition_state_t current_ign_state) {
         fault_handler();
       }
     }
-    break;
-  case IGNITION_ARRAY:
-    // In array state, array and array precharge contactors should turn on
-    // If HV+/- contactors are open, other contactors shouldn't be closed
-    if (Contactors_Get(ARRAY_CONTACTOR) == ON && BPS_status == SAFE) {
-      // Wait for precharge to finish, then close array precharge contactor (start timer if not active)
-      if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR)) == pdFALSE) {
-        // Start timer - callback will check if complete and either fault or close contactor
-        xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), 0);
-      }
-    }
-    // If BPS has turned off array or HV+/- contactors, turn off precharge contactor as well (charging disabled)
-    else if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON) {
-      Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, false);
-    }
-    break;
-  case IGNITION_MOTOR:
-    // In motor state, motor, motor precharge, array, and array precharge contactors should turn on
-    // If HV+/- contactors are open, other contactors shouldn't be closed
-    if (Contactors_Get(MOTOR_CONTACTOR) == ON && BPS_status == SAFE) {
-      // Wait for precharge to finish, then close motor precharge contactor (start timer if not active)
-      if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR)) == pdFALSE) {
-        // Start timer - callback will check if complete and either fault or close contactor
-        xTimerStart(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR), 0);
-      }
-    }
-    // If Controls has turned off motor contactor or BPS has turned off HV+/- contactors, turn off precharge contactor as well
-    else if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == ON) {
-      Contactors_Set(MOTOR_PRECHARGE_CONTACTOR, OFF, false);
-    }
-
-    // Turn on array precharge if needed
-    // If HV+/- contactors are open, other contactors shouldn't be closed
-    if (Contactors_Get(ARRAY_CONTACTOR) == ON && BPS_status == SAFE) {
-      // Wait for precharge to finish, then close array precharge contactor (start timer if not active)
-      if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR)) == pdFALSE) {
-        // Start timer - callback will check if complete and either fault or close contactor
-        xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), 0);
-      }
-    }
-    // If BPS has turned off array or HV+/- contactors, turn off precharge contactor as well (charging disabled)
-    else if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON) {
-      Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, false);
-    }
-    break;
-  default:
-    break;
   }
 }
 
 void Task_Contactor() {
-  // Reset fault bitmap
+  // Reset status variables/bitmaps
   fault_bitmap = FAULT_NONE;
+  BPS_status = NOT_CHECKED;
+  ignition_bitmap = IGNITION_OFF;
 
   while (1) {
-    // If BPS fault, enter fault handler
+    // Update current BPS state
     BPS_status = getBPS_State();
 
+    // If BPS fault, enter fault handler
     if (BPS_status == FAULT) {
       fault_bitmap |= FAULT_BPS;
       fault_handler();
@@ -198,7 +175,10 @@ void Task_Contactor() {
       fault_handler();
     }
 
-    // handle contactor logic based on OFF, ARRAY, or MOTOR state
-    logic_handler(getIgnitionState());
+    // Update current ignition state bitmap based on controls
+    updateIgnitionState();
+
+    // Handle contactor logic based on OFF, ARRAY, or MOTOR state
+    logic_handler();
   }
 }

@@ -8,10 +8,10 @@
 #define NUM_CONTACTORS 2
 
 // Sense pin delay for contactor set (50 miliseconds)
-#define CONTACTOR_SENSE_DELAY (50 / portTICK_PERIOD_MS)
+#define CONTACTOR_SENSE_DELAY pdMS_TO_TICKS(50)
 
 // Timeout for precharge completion (1 second)
-#define PRECHARGE_TIMEOUT_DELAY (1000 / portTICK_PERIOD_MS)
+#define PRECHARGE_TIMEOUT_DELAY pdMS_TO_TICKS(1000)
 
 // Contactor drive/sense pin definitions
 #define MOTOR_ENABLE_PORT GPIOA
