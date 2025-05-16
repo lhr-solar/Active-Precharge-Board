@@ -16,24 +16,24 @@ void Task_Timers() {
 
     fault_bitmap = FAULT_NONE;
 
-    // Test 50ms timer - you won't be able to see this one
-    // Can breakpoint at the callback and make sure it fires
-    volatile BaseType_t result = xTimerStart(Contactors_GetSenseTimerHandle(ARRAY_PRECHARGE_CONTACTOR), 0);
-    if (result != pdPASS) {
-        Status_Leds_All_On();
-    }
-    result = xTimerIsTimerActive(Contactors_GetSenseTimerHandle(ARRAY_PRECHARGE_CONTACTOR));
+    // // Test 50ms timer - you won't be able to see this one
+    // // Can breakpoint at the callback and make sure it fires
+    // volatile BaseType_t result = xTimerStart(Contactors_GetSenseTimerHandle(ARRAY_PRECHARGE_CONTACTOR), 0);
+    // if (result != pdPASS) {
+    //     Status_Leds_All_On();
+    // }
+    // result = xTimerIsTimerActive(Contactors_GetSenseTimerHandle(ARRAY_PRECHARGE_CONTACTOR));
 
-    // Test 1s timer - should visibly delay before turning on timeout fault LED
-    result = xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), 0);
-    if (result != pdPASS) {
-        Status_Leds_All_On();
-    }
-    result = xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR));
-\
+    // // Test 1s timer - should visibly delay before turning on timeout fault LED
+    // result = xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), 0);
+    // if (result != pdPASS) {
+    //     Status_Leds_All_On();
+    // }
+    // result = xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR));
+
     // Test 50ms timer - you won't be able to see this one
     // Can breakpoint at the callback and make sure it fires
-    result = xTimerStart(Contactors_GetSenseTimerHandle(MOTOR_PRECHARGE_CONTACTOR), 0);
+    volatile BaseType_t result = xTimerStart(Contactors_GetSenseTimerHandle(MOTOR_PRECHARGE_CONTACTOR), 0);
     if (result != pdPASS) {
         Status_Leds_All_On();
     }

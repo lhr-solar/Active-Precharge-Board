@@ -4,6 +4,7 @@
 #include "stm32xx_hal.h"
 #include "StatusLEDs.h"
 #include "CANbus.h"
+#include "Contactors.h"
 
 StaticTask_t Task_Init_Buffer;
 StackType_t Task_Init_Stack_Array[TASK_INIT_STACK_SIZE];
@@ -16,17 +17,28 @@ int main() {
     Status_Leds_Init();
     CAN_Init();
 
-    // Create Init Task
+    // // Create Init Task
+    // xTaskCreateStatic(
+    //     Task_Init, /* The function that implements the task. */
+    //     "Init Task", /* Text name for the task. */
+    //     TASK_INIT_STACK_SIZE, /* The size (in words) of the stack that should be created for the task. */
+    //     (void*)NULL, /* Paramter passed into the task. */
+    //     TASK_INIT_PRIO, /* Task Prioriy. */
+    //     Task_Init_Stack_Array, /* Stack array. */
+    //     &Task_Init_Buffer  /* Buffer for static allocation. */
+    // );
+
+    // Create contactor task
     xTaskCreateStatic(
-        Task_Init, /* The function that implements the task. */
-        "Init Task", /* Text name for the task. */
-        TASK_INIT_STACK_SIZE, /* The size (in words) of the stack that should be created for the task. */
-        (void*)NULL, /* Paramter passed into the task. */
-        TASK_INIT_PRIO, /* Task Prioriy. */
-        Task_Init_Stack_Array, /* Stack array. */
-        &Task_Init_Buffer  /* Buffer for static allocation. */
+        Task_Contactor,                 /* The function that implements the task. */
+        "Contactor Task",               /* Text name for the task. */
+        TASK_CONTACTOR_STACK_SIZE,      /* The size (in words) of the stack that should be created for the task. */
+        (void*)NULL,                    /* Paramter passed into the task. */
+        TASK_INIT_PRIO,                 /* Task Prioriy. */
+        Task_Contactor_Stack_Array,     /* Stack array. */
+        &Task_Contactor_Buffer          /* Buffer for static allocation. */
     );
-    
+
     // Start the scheduler
     vTaskStartScheduler();
 

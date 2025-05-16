@@ -6,7 +6,7 @@
 
 // Task priorities
 #define TASK_INIT_PRIO tskIDLE_PRIORITY + 1
-#define TASK_CONTACTOR_PRIO tskIDLE_PRIORITY + 2
+#define TASK_CONTACTOR_PRIO tskIDLE_PRIORITY + 3
 
 // Task stack sizes
 #define TASK_INIT_STACK_SIZE configMINIMAL_STACK_SIZE

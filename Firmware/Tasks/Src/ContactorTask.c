@@ -2,6 +2,7 @@
 #include "Contactors.h"
 #include "ContactorTask.h"
 #include "CANMetaData.h"
+#include "StatusLEDs.h"
 
 // Bitmap of current contactor board fault state
 uint32_t fault_bitmap = FAULT_NONE;
@@ -11,6 +12,8 @@ safety_status_t BPS_status = NOT_CHECKED;
 
 // Bitmap of current Controls ignition state
 uint8_t ignition_bitmap = IGNITION_OFF;
+
+bool arrayPrechargeTimerActive = false;
 
 /**
  * @brief   Helper function for BPS state - checks if BPS_TRIP message was receieved
@@ -123,9 +126,13 @@ static void logic_handler() {
     // If HV+/- contactors are open, other contactors shouldn't be closed
     if (Contactors_Get(ARRAY_CONTACTOR) == ON && BPS_status == SAFE) {
       // Wait for precharge to finish, then close array precharge contactor (start timer if not active)
-      if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR)) == pdFALSE) {
+      if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && !arrayPrechargeTimerActive) {
+        arrayPrechargeTimerActive = true;
         // Start timer - callback will check if complete and either fault or close contactor
-        xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), 0);
+        volatile BaseType_t result = xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), portMAX_DELAY);
+        if (result != pdPASS) {
+          Status_Leds_All_On();
+        }
       }
     }
     // If BPS has turned off array or HV+/- contactors, turn off precharge contactor as well (charging disabled)
@@ -154,10 +161,30 @@ static void logic_handler() {
 }
 
 void Task_Contactor() {
+  // Initialize contactors driver
+  Contactors_Init();
+
   // Reset status variables/bitmaps
   fault_bitmap = FAULT_NONE;
   BPS_status = NOT_CHECKED;
   ignition_bitmap = IGNITION_OFF;
+
+  // Test 50ms timer - you won't be able to see this one
+  // Can breakpoint at the callback and make sure it fires
+  volatile BaseType_t result = xTimerStart(Contactors_GetSenseTimerHandle(MOTOR_PRECHARGE_CONTACTOR), 0);
+  if (result != pdPASS) {
+    Status_Leds_All_On();
+  }
+  result = xTimerIsTimerActive(Contactors_GetSenseTimerHandle(MOTOR_PRECHARGE_CONTACTOR));
+
+  // Test 1s timer - should visibly delay before turning on timeout fault LED
+  result = xTimerStart(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR), 0);
+  if (result != pdPASS) {
+    Status_Leds_All_On();
+  }
+  result = xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR));
+
+  arrayPrechargeTimerActive = true;
 
   while (1) {
     // Update current BPS state
