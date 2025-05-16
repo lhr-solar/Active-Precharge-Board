@@ -104,7 +104,7 @@ void fault_handler(void) {
     Status_Leds_Write(ARRAY_SENSE_FAULT_LED, true);
     // Send fault CAN message
     tx_header.StdId = CONTACTOR_SENSE;
-    tx_data[0] = (1 << 8); // Array Precharge Sense Fault
+    tx_data[1] = (1 << 0); // Array Precharge Sense Fault
     // TODO: add other info to all sense fault messages (expected vs. actual sense value)
   }
 
