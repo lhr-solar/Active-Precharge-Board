@@ -16,7 +16,7 @@ bool CAN_Init(){
   sFilterConfig.SlaveStartFilterBank = 14;
 
   // setup can1 init
-  hcan1->Init.Prescaler = 5;
+  hcan1->Init.Prescaler = 40;
   #ifdef CAN_LOOPBACK
   hcan1->Init.Mode = CAN_MODE_LOOPBACK;
   #else
@@ -24,7 +24,7 @@ bool CAN_Init(){
   #endif
   hcan1->Init.Mode = CAN_MODE_LOOPBACK;
   hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
-  hcan1->Init.TimeSeg1 = CAN_BS1_6TQ;
+  hcan1->Init.TimeSeg1 = CAN_BS1_13TQ;
   hcan1->Init.TimeSeg2 = CAN_BS2_2TQ;
   hcan1->Init.TimeTriggeredMode = DISABLE;
   hcan1->Init.AutoBusOff = DISABLE;
