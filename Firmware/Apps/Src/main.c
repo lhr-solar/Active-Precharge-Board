@@ -6,8 +6,14 @@
 #include "CANbus.h"
 #include "Contactors.h"
 
-StaticTask_t Task_Init_Buffer;
-StackType_t Task_Init_Stack_Array[TASK_INIT_STACK_SIZE];
+// StaticTask_t Task_Init_Buffer;
+// StackType_t Task_Init_Stack_Array[TASK_INIT_STACK_SIZE];
+
+// Task Stack Arrays 
+StackType_t Task_Contactor_Stack_Array[configMINIMAL_STACK_SIZE];
+
+// Task Buffers
+StaticTask_t Task_Contactor_Buffer;
 
 int main() {
     HAL_Init();
@@ -17,6 +23,7 @@ int main() {
     Status_Leds_Init();
     CAN_Init();
 
+    // init task was fucking with timer prios so i got rid of it :D
     // // Create Init Task
     // xTaskCreateStatic(
     //     Task_Init, /* The function that implements the task. */
@@ -32,7 +39,7 @@ int main() {
     xTaskCreateStatic(
         Task_Contactor,                 /* The function that implements the task. */
         "Contactor Task",               /* Text name for the task. */
-        TASK_CONTACTOR_STACK_SIZE,      /* The size (in words) of the stack that should be created for the task. */
+        configMINIMAL_STACK_SIZE,      /* The size (in words) of the stack that should be created for the task. */
         (void*)NULL,                    /* Paramter passed into the task. */
         TASK_INIT_PRIO,                 /* Task Prioriy. */
         Task_Contactor_Stack_Array,     /* Stack array. */

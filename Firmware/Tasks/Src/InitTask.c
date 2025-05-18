@@ -1,12 +1,6 @@
 #include "Tasks.h"
 #include "Contactors.h"
 
-// Task Stack Arrays 
-StackType_t Task_Contactor_Stack_Array[TASK_CONTACTOR_STACK_SIZE];
-
-// Task Buffers
-StaticTask_t Task_Contactor_Buffer;
-
 void Task_Init() {
     // // Initialize contactors driver
     // Contactors_Init();

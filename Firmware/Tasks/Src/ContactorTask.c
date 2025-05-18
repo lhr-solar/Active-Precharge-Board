@@ -13,8 +13,6 @@ safety_status_t BPS_status = NOT_CHECKED;
 // Bitmap of current Controls ignition state
 uint8_t ignition_bitmap = IGNITION_OFF;
 
-bool arrayPrechargeTimerActive = false;
-
 /**
  * @brief   Helper function for BPS state - checks if BPS_TRIP message was receieved
  * @return  True if BPS has tripped, false otherwise
@@ -51,7 +49,8 @@ static safety_status_t getBPS_State() {
     return SAFE;
   }
 
-  return NOT_CHECKED;
+  // CHANGE BACK TO NOT_CHECKED
+  return SAFE;
 }
 
 /**
@@ -98,6 +97,9 @@ static void updateIgnitionState() {
   else if (status == CAN_ERR) {
     // TODO: handle CAN error
   }
+
+  // CHANGE: REMOVE THIS LINE!!!!
+  ignition_bitmap = IGNITION_ARRAY;
 }
 
 /**
@@ -124,10 +126,10 @@ static void logic_handler() {
   if (ignition_bitmap & IGNITION_ARRAY) {
     // In array state, array and array precharge contactors should turn on
     // If HV+/- contactors are open, other contactors shouldn't be closed
-    if (Contactors_Get(ARRAY_CONTACTOR) == ON && BPS_status == SAFE) {
+    // CHANGE BACK TO ON
+    if (Contactors_Get(ARRAY_CONTACTOR) == OFF && BPS_status == SAFE) {
       // Wait for precharge to finish, then close array precharge contactor (start timer if not active)
-      if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && !arrayPrechargeTimerActive) {
-        arrayPrechargeTimerActive = true;
+      if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR)) == pdFALSE) {
         // Start timer - callback will check if complete and either fault or close contactor
         volatile BaseType_t result = xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), portMAX_DELAY);
         if (result != pdPASS) {
@@ -162,29 +164,13 @@ static void logic_handler() {
 
 void Task_Contactor() {
   // Initialize contactors driver
+  // This MUST happen here....or else
   Contactors_Init();
 
   // Reset status variables/bitmaps
   fault_bitmap = FAULT_NONE;
   BPS_status = NOT_CHECKED;
   ignition_bitmap = IGNITION_OFF;
-
-  // Test 50ms timer - you won't be able to see this one
-  // Can breakpoint at the callback and make sure it fires
-  volatile BaseType_t result = xTimerStart(Contactors_GetSenseTimerHandle(MOTOR_PRECHARGE_CONTACTOR), 0);
-  if (result != pdPASS) {
-    Status_Leds_All_On();
-  }
-  result = xTimerIsTimerActive(Contactors_GetSenseTimerHandle(MOTOR_PRECHARGE_CONTACTOR));
-
-  // Test 1s timer - should visibly delay before turning on timeout fault LED
-  result = xTimerStart(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR), 0);
-  if (result != pdPASS) {
-    Status_Leds_All_On();
-  }
-  result = xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR));
-
-  arrayPrechargeTimerActive = true;
 
   while (1) {
     // Update current BPS state
