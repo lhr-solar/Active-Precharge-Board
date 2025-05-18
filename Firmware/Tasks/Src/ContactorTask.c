@@ -49,8 +49,7 @@ static safety_status_t getBPS_State() {
     return SAFE;
   }
 
-  // CHANGE BACK TO NOT_CHECKED
-  return SAFE;
+  return NOT_CHECKED;
 }
 
 /**
@@ -97,9 +96,6 @@ static void updateIgnitionState() {
   else if (status == CAN_ERR) {
     // TODO: handle CAN error
   }
-
-  // CHANGE: REMOVE THIS LINE!!!!
-  ignition_bitmap = IGNITION_ARRAY;
 }
 
 /**
@@ -126,8 +122,7 @@ static void logic_handler() {
   if (ignition_bitmap & IGNITION_ARRAY) {
     // In array state, array and array precharge contactors should turn on
     // If HV+/- contactors are open, other contactors shouldn't be closed
-    // CHANGE BACK TO ON
-    if (Contactors_Get(ARRAY_CONTACTOR) == OFF && BPS_status == SAFE) {
+    if (Contactors_Get(ARRAY_CONTACTOR) == ON && BPS_status == SAFE) {
       // Wait for precharge to finish, then close array precharge contactor (start timer if not active)
       if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR)) == pdFALSE) {
         // Start timer - callback will check if complete and either fault or close contactor
