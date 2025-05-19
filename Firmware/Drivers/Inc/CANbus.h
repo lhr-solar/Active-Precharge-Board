@@ -3,6 +3,6 @@
 
 #include "common.h"
 
-void CAN_Init();
+bool CAN_Init();
 
 #endif
