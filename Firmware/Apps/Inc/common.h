@@ -3,6 +3,9 @@
 #include "stm32xx_hal.h"
 #include "CAN.h"
 
+// Delay between each fault CAN message (200ms)
+#define FAULT_MESSAGE_DELAY pdMS_TO_TICKS(200)
+
 // Bitmap of current fault state
 extern uint32_t fault_bitmap;
 

@@ -108,9 +108,10 @@ void fault_handler(void) {
     // TODO: add other info to all sense fault messages (expected vs. actual sense value)
   }
 
-  if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
-
   while (1) {
-    // blah blah
+    // Send fault msg every 200ms
+    if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
+
+    vTaskDelay(FAULT_MESSAGE_DELAY);
   }
 }
