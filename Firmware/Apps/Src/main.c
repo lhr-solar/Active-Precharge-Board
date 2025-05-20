@@ -21,7 +21,8 @@ int main() {
 
     // Init drivers for status LEDs, contactors, CAN bus
     Status_Leds_Init();
-    CAN_Init();
+    if (!CAN_Init()) error_handler();
+    if (can_start(hcan1) != CAN_OK) error_handler();
 
     // init task was fucking with timer prios so i got rid of it :D
     // // Create Init Task

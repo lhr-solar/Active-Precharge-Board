@@ -162,6 +162,20 @@ void Task_Contactor() {
   // This MUST happen here....or else
   Contactors_Init();
 
+  // DELETE THIS LATER - SEND HELLOWORLD CAN MSG
+  // create payload to send
+  CAN_TxHeaderTypeDef tx_header = { 0 };
+  tx_header.StdId = 0x650;
+  tx_header.RTR = CAN_RTR_DATA;
+  tx_header.IDE = CAN_ID_STD;
+  tx_header.DLC = 1;
+  tx_header.TransmitGlobalTime = DISABLE;
+
+  uint8_t tx_data[8] = { 0 };
+
+  tx_data[0] = 0x01;
+  if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
+
   // Reset status variables/bitmaps
   fault_bitmap = FAULT_NONE;
   BPS_status = NOT_CHECKED;

@@ -2,7 +2,8 @@
 #include "common.h"
 
 /**
-  * @brief System Clock Configuration
+  * @brief System Clock Configuration FOR THIS NUCLEO SPECIFICALLY
+  * DO NOT USE THE EMBEDDED SHAREPOINT CLOCK CONFIG FOR NUCLEO-L432KCU
   * @retval None
   */
 void Sys_Clock_Config(void) {
@@ -66,7 +67,7 @@ bool CAN_Init() {
 
   // setup can1 init
   hcan1->Init.Prescaler = 40;
-  hcan1->Init.Mode = CAN_MODE_LOOPBACK;
+  hcan1->Init.Mode = CAN_MODE_NORMAL;
   hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
   hcan1->Init.TimeSeg1 = CAN_BS1_7TQ;
   hcan1->Init.TimeSeg2 = CAN_BS2_8TQ;
