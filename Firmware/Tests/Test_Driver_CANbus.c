@@ -26,6 +26,7 @@ static void task(void* pvParameters) {
 
   // send two payloads to 0x1
   uint8_t tx_data[8] = { 0 };
+
   tx_data[0] = 0x01;
   tx_data[1] = 0x00;
   if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
