@@ -112,7 +112,7 @@ static void task(void* pvParameters) {
 int main(void) {
   // initialize the HAL and system clock
   if (HAL_Init() != HAL_OK) error_handler();
-  SystemClock_Config();
+  Sys_Clock_Config();
   Status_Leds_Init();
 
   if (!CAN_Init()) error_handler();

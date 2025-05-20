@@ -17,7 +17,7 @@ StaticTask_t Task_Contactor_Buffer;
 
 int main() {
     HAL_Init();
-    SystemClock_Config();
+    Sys_Clock_Config();
 
     // Init drivers for status LEDs, contactors, CAN bus
     Status_Leds_Init();
