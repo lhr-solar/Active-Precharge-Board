@@ -37,7 +37,7 @@ static void updateBPSContactors() {
  *              (MOTOR_PRECHARGE_CONTACTOR/ARRAY_PRECHARGE_CONTACTOR)
  * @return  The contactor's precharge completion state from the output of hardware comparison
  */
-static bool getPrecharge(contactor_enum_t contactor) {
+bool getPrecharge(contactor_enum_t contactor) {
     switch (contactor) {
     case MOTOR_PRECHARGE_CONTACTOR:
         return HAL_GPIO_ReadPin(MOTOR_PRECHARGE_READY_PORT, MOTOR_PRECHARGE_READY_PIN);

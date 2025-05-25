@@ -43,6 +43,9 @@ void Status_Leds_Write(status_led_t led, bool state) {
     case ARRAY_TIMEOUT_FAULT_LED:
         HAL_GPIO_WritePin(ARRAY_TIMEOUT_FAULT_LED_PORT, ARRAY_TIMEOUT_FAULT_LED_PIN, state);
         break;
+    case ONBOARD_LED:
+        HAL_GPIO_WritePin(ONBOARD_LED_PORT, ONBOARD_LED_PIN, state);
+        break;
     default:
         break;
     }

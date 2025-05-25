@@ -8,10 +8,10 @@
 #define NUM_CONTACTORS 2
 
 // Sense pin delay for contactor set (50 miliseconds)
-#define CONTACTOR_SENSE_DELAY pdMS_TO_TICKS(50)
+#define CONTACTOR_SENSE_DELAY pdMS_TO_TICKS(2500)
 
-// Timeout for precharge completion (1 second)
-#define PRECHARGE_TIMEOUT_DELAY pdMS_TO_TICKS(1000)
+// Timeout for precharge completion (5 second)
+#define PRECHARGE_TIMEOUT_DELAY pdMS_TO_TICKS(2500)
 
 // Contactor drive/sense pin definitions
 #define MOTOR_ENABLE_PORT GPIOA
@@ -108,5 +108,7 @@ TimerHandle_t Contactors_GetSenseTimerHandle(contactor_enum_t contactor);
  * @return  FreeRTOS timer handle for the specified contactor's precharge timer
  */
 TimerHandle_t Contactors_GetPrechargeTimerHandle(contactor_enum_t contactor);
+
+bool getPrecharge(contactor_enum_t contactor);
 
 #endif
