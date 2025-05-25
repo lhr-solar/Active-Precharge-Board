@@ -68,7 +68,7 @@ static safety_status_t getControls_State() {
   status = can_recv(hcan1, CONTROLS_FAULT, &rx_header, rx_data, 0);
   if (status == CAN_RECV) {
     // If any bit is set (not 0), fault has occurred
-    controls_status = rx_data[0] ? FAULT : SAFE;
+    controls_status = rx_data[0] != 0? FAULT : SAFE;
   }
   else if (status == CAN_ERR) {
     // TODO: handle CAN error
@@ -162,7 +162,7 @@ void Task_Contactor() {
   // This MUST happen here....or else
   Contactors_Init();
 
-  // DELETE THIS LATER - SEND HELLOWORLD CAN MSG
+  // // DELETE THIS LATER - SEND HELLOWORLD CAN MSG
   // create payload to send
   CAN_TxHeaderTypeDef tx_header = { 0 };
   tx_header.StdId = 0x650;
