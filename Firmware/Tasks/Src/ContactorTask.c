@@ -126,46 +126,46 @@ static void logic_handler() {
       Contactors_Set(MOTOR_PRECHARGE_CONTACTOR, OFF, false);
     }
   }
-  if (ignition_bitmap & IGNITION_ARRAY) {
-    // In array state, array and array precharge contactors should turn on
-    // If HV+/- contactors are open, other contactors shouldn't be closed
-    if (Contactors_Get(ARRAY_CONTACTOR) == ON && BPS_status == SAFE) {
-      // Wait for precharge to finish, then close array precharge contactor (start timer if not active)
-      if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR)) == pdFALSE) {
-        // Start timer - callback will check if complete and either fault or close contactor
-        volatile BaseType_t result = xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), portMAX_DELAY);
-        if (result != pdPASS) {
-          Status_Leds_All_On();
-        }
-      }
-    }
-    // If BPS has turned off array or HV+/- contactors, turn off precharge contactor as well (charging disabled)
-    else if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON) {
-      Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, false);
-    }
-  }
-  // Must be in OFF state if array bit is not set
-  else {
-    // In off state, all contactors should be off
-    if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == ON) {
-      // Turn off motor precharge contactor in blocking mode
-      if (Contactors_Set(MOTOR_PRECHARGE_CONTACTOR, OFF, true) == ERROR) {
-        fault_bitmap |= FAULT_MOTOR_PRECHARGE_SENSE;
-        fault_handler();
-      }
-    }
+  // if (ignition_bitmap & IGNITION_ARRAY) {
+  //   // In array state, array and array precharge contactors should turn on
+  //   // If HV+/- contactors are open, other contactors shouldn't be closed
+  //   if (Contactors_Get(ARRAY_CONTACTOR) == ON && BPS_status == SAFE) {
+  //     // Wait for precharge to finish, then close array precharge contactor (start timer if not active)
+  //     if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR)) == pdFALSE) {
+  //       // Start timer - callback will check if complete and either fault or close contactor
+  //       volatile BaseType_t result = xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), portMAX_DELAY);
+  //       if (result != pdPASS) {
+  //         Status_Leds_All_On();
+  //       }
+  //     }
+  //   }
+  //   // If BPS has turned off array or HV+/- contactors, turn off precharge contactor as well (charging disabled)
+  //   else if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON) {
+  //     Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, false);
+  //   }
+  // }
+  // // Must be in OFF state if array bit is not set
+  // else {
+  //   // In off state, all contactors should be off
+  //   if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == ON) {
+  //     // Turn off motor precharge contactor in blocking mode
+  //     if (Contactors_Set(MOTOR_PRECHARGE_CONTACTOR, OFF, true) == ERROR) {
+  //       fault_bitmap |= FAULT_MOTOR_PRECHARGE_SENSE;
+  //       fault_handler();
+  //     }
+  //   }
 
-    // TODO: add thing to make sure motor contactor is actually set as off
-    Contactors_Set(MOTOR_CONTACTOR, OFF, true);
+  //   // TODO: add thing to make sure motor contactor is actually set as off
+  //   Contactors_Set(MOTOR_CONTACTOR, OFF, true);
 
-    if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON) {
-      // Turn off array precharge contactor in blocking mode
-      if (Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, true) == ERROR) {
-        fault_bitmap |= FAULT_ARRAY_PRECHARGE_SENSE;
-        fault_handler();
-      }
-    }
-  }
+  //   if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON) {
+  //     // Turn off array precharge contactor in blocking mode
+  //     if (Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, true) == ERROR) {
+  //       fault_bitmap |= FAULT_ARRAY_PRECHARGE_SENSE;
+  //       fault_handler();
+  //     }
+  //   }
+  // }
 
   // Check if Precharge ready has gone low since activaton
 
@@ -173,9 +173,9 @@ static void logic_handler() {
   if(!getPrecharge(MOTOR_PRECHARGE_CONTACTOR) && Contactors_Get(MOTOR_PRECHARGE_CONTACTOR)){
     Contactors_Set(MOTOR_PRECHARGE_CONTACTOR, OFF, true);
   }
-  if(!getPrecharge(ARRAY_PRECHARGE_CONTACTOR) && Contactors_Get(ARRAY_PRECHARGE_CONTACTOR)){
-    Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, true);
-  }
+  // if(!getPrecharge(ARRAY_PRECHARGE_CONTACTOR) && Contactors_Get(ARRAY_PRECHARGE_CONTACTOR)){
+  //   Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, true);
+  // }
   // TODO: need to start sense timer
 
 }
