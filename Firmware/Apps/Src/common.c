@@ -68,7 +68,6 @@ void fault_handler(void) {
     // Send fault msg every 200ms
     if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
     
-    Status_Leds_Write(ONBOARD_LED, true);
 
     //vTaskDelay(FAULT_MESSAGE_DELAY);
     //if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
@@ -76,8 +75,10 @@ void fault_handler(void) {
     //Status_Leds_Write(ONBOARD_LED, false);
 
     //vTaskDelay(FAULT_MESSAGE_DELAY);
-    
+    Status_Leds_Toggle(ONBOARD_LED);
     Contactors_EmergencyDisable();
+    HAL_Delay(500);
+
   }
 }
 

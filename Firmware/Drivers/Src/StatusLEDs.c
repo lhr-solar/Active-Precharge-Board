@@ -70,6 +70,9 @@ void Status_Leds_Toggle(status_led_t led) {
     case ARRAY_TIMEOUT_FAULT_LED:
         HAL_GPIO_TogglePin(ARRAY_TIMEOUT_FAULT_LED_PORT, ARRAY_TIMEOUT_FAULT_LED_PIN);
         break;
+    case ONBOARD_LED:
+        HAL_GPIO_TogglePin(ONBOARD_LED_PORT, ONBOARD_LED_PIN);
+        break;
     default:
         break;
     }
