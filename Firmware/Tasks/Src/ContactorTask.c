@@ -123,24 +123,24 @@ static void logic_handler() {
       Contactors_Set(MOTOR_PRECHARGE_CONTACTOR, OFF, false);
     }
   }
-  if (ignition_bitmap & IGNITION_ARRAY) {
-    // In array state, array and array precharge contactors should turn on
-    // If HV+/- contactors are open, other contactors shouldn't be closed
-    if (Contactors_Get(ARRAY_CONTACTOR) == ON && BPS_status == SAFE) {
-      // Wait for precharge to finish, then close array precharge contactor (start timer if not active)
-      if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR)) == pdFALSE) {
-        // Start timer - callback will check if complete and either fault or close contactor
-        volatile BaseType_t result = xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), portMAX_DELAY);
-        if (result != pdPASS) {
-          Status_Leds_All_On();
-        }
-      }
-    }
-    // If BPS has turned off array or HV+/- contactors, turn off precharge contactor as well (charging disabled)
-    else if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON) {
-      Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, false);
-    }
-  }
+  // if (ignition_bitmap & IGNITION_ARRAY) {
+  //   // In array state, array and array precharge contactors should turn on
+  //   // If HV+/- contactors are open, other contactors shouldn't be closed
+  //   if (Contactors_Get(ARRAY_CONTACTOR) == ON && BPS_status == SAFE) {
+  //     // Wait for precharge to finish, then close array precharge contactor (start timer if not active)
+  //     if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR)) == pdFALSE) {
+  //       // Start timer - callback will check if complete and either fault or close contactor
+  //       volatile BaseType_t result = xTimerStart(Contactors_GetPrechargeTimerHandle(ARRAY_PRECHARGE_CONTACTOR), portMAX_DELAY);
+  //       if (result != pdPASS) {
+  //         Status_Leds_All_On();
+  //       }
+  //     }
+  //   }
+  //   // If BPS has turned off array or HV+/- contactors, turn off precharge contactor as well (charging disabled)
+  //   else if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON) {
+  //     Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, false);
+  //   }
+  // }
   // Must be in OFF state if array bit is not set
   else {
     // In off state, all contactors should be off
@@ -163,6 +163,67 @@ static void logic_handler() {
       }
     }
   }
+}
+
+static void send_contactor_sense() {
+  // Contactor sense payload
+  // CAN_TxHeaderTypeDef tx_header = { 0 };
+  // tx_header.RTR = CAN_RTR_DATA;
+  // tx_header.IDE = CAN_ID_STD;
+  // tx_header.DLC = 2;
+  // tx_header.TransmitGlobalTime = DISABLE;
+  // tx_header.StdId = CONTACTOR_SENSE;
+  // uint8_t tx_data[8] = { 0 };
+
+  // uint8_t array_precharge_fault    = (fault_bitmap & FAULT_ARRAY_PRECHARGE_SENSE) ? 1 : 0;
+  // uint8_t array_precharge_expected = Contactors_Get(ARRAY_PRECHARGE_CONTACTOR);
+  // uint8_t array_precharge_actual   = Contactors_Get(ARRAY_PRECHARGE_CONTACTOR);
+
+  // uint8_t motor_precharge_fault    = (fault_bitmap & FAULT_MOTOR_PRECHARGE_SENSE) ? 1 : 0;
+  // uint8_t motor_precharge_expected = Contactors_Get(MOTOR_PRECHARGE_CONTACTOR);
+  // uint8_t motor_precharge_actual   = Contactors_Get(MOTOR_PRECHARGE_CONTACTOR);
+
+  // uint8_t motor_fault              = 0;
+  // uint8_t motor_expected           = Contactors_Get(MOTOR_CONTACTOR);
+  // uint8_t motor_actual             = Contactors_Get(MOTOR_CONTACTOR);
+
+  // // Pack bits into two bytes
+  // // [8]: array_precharge_fault
+  // // [7]: array_precharge_expected
+  // // [6]: array_precharge_actual
+  // // [5]: motor_precharge_fault
+  // // [4]: motor_precharge_expected
+  // // [3]: motor_precharge_actual
+  // // [2]: motor_fault
+  // // [1]: motor_expected
+  // // [0]: motor_actual
+
+  // uint16_t packed = 0;
+  // packed |= ((array_precharge_fault    & 0x1) << 8);
+  // packed |= ((array_precharge_expected & 0x1) << 7);
+  // packed |= ((array_precharge_actual   & 0x1) << 6);
+  // packed |= ((motor_precharge_fault    & 0x1) << 5);
+  // packed |= ((motor_precharge_expected & 0x1) << 4);
+  // packed |= ((motor_precharge_actual   & 0x1) << 3);
+  // packed |= ((motor_fault              & 0x1) << 2);
+  // packed |= ((motor_expected           & 0x1) << 1);
+  // packed |= ((motor_actual             & 0x1) << 0);
+
+  // tx_data[0] = packed & 0xFF;        // Lower 8 bits
+  // tx_data[1] = (packed >> 8) & 0x01; // Only bit 8 is used in the second byte
+
+  // // can_send(hcan1, &tx_header, tx_data, portMAX_DELAY);
+  // CAN_TxHeaderTypeDef tx_header = { 0 };
+  // tx_header.StdId = CONTACTOR_SENSE;
+  // tx_header.RTR = CAN_RTR_DATA;
+  // tx_header.IDE = CAN_ID_STD;
+  // tx_header.DLC = 1;
+  // tx_header.TransmitGlobalTime = DISABLE;
+
+  // uint8_t tx_data[8] = { 0 };
+  // tx_data[0] |= 0x01; // Motor contactor sense is on
+  // tx_data[0] |= 0x08; // Motor Precharge contactor sense is on
+  // if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
 }
 
 void Task_Contactor() {
@@ -190,8 +251,9 @@ void Task_Contactor() {
   ignition_bitmap = IGNITION_OFF;
 
   while (1) {
+    BPS_status = getBPS_State();
     // If BPS fault, enter fault handler
-    if (getBPS_State() == FAULT) {
+    if (BPS_status == FAULT) {
       fault_bitmap |= FAULT_BPS;
       fault_handler();
     }
@@ -213,5 +275,8 @@ void Task_Contactor() {
 
     // Handle contactor logic based on OFF, ARRAY, or MOTOR state
     logic_handler();
+
+    send_contactor_sense();
+    vTaskDelay(pdMS_TO_TICKS(100)); // Run every 100ms
   }
 }

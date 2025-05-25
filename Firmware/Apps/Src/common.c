@@ -71,3 +71,16 @@ void fault_handler(void) {
     vTaskDelay(FAULT_MESSAGE_DELAY);
   }
 }
+
+void HardFault_Handler(){
+  error_handler();
+
+}
+
+void BusFault_Handler(){
+  error_handler();
+}
+
+void UsageFault_Handler(){
+  error_handler();
+}

@@ -336,4 +336,5 @@ ErrorStatus Contactors_Set(contactor_enum_t contactor, bool state, bool blocking
 void Contactors_EmergencyDisable() {
     setContactor(MOTOR_PRECHARGE_CONTACTOR, OFF);
     setContactor(ARRAY_PRECHARGE_CONTACTOR, OFF);
+    setContactor(MOTOR_CONTACTOR, OFF);
 }

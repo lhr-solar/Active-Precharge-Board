@@ -5,9 +5,9 @@
 #include "stm32l4xx_hal.h"
 
 typedef enum {
-    IGNITION_OFF = 0,
-    IGNITION_ARRAY,
-    IGNITION_MOTOR
+    IGNITION_OFF = 0x00,
+    IGNITION_ARRAY = 0x01,
+    IGNITION_MOTOR = 0x02
 } ignition_state_t;
 
 typedef enum {
