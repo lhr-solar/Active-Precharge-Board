@@ -69,6 +69,10 @@ static void setContactor(contactor_enum_t contactor, bool state) {
         contactorState[ARRAY_PRECHARGE_CONTACTOR].state = state;
         HAL_GPIO_WritePin(ARRAY_PRECHARGE_ENABLE_PORT, ARRAY_PRECHARGE_ENABLE_PIN, state);
         break;
+    case MOTOR_CONTACTOR:
+        contactorState[MOTOR_CONTACTOR].state = state;
+        HAL_GPIO_WritePin(MOTOR_ENABLE_PORT, MOTOR_ENABLE_PIN, state);
+        break;
     default:
         break;
     }

@@ -17,7 +17,8 @@ typedef enum {
     FAULT_ARRAY_PRECHARGE_SENSE = 1 << 8,
     FAULT_ARRAY_PRECHARGE_TIMEOUT = 1 << 9,
     FAULT_BPS = 1 << 10,
-    FAULT_CONTROLS = 1 << 11
+    FAULT_CONTROLS = 1 << 11,
+    FAULT_MOTOR = 1 << 12
 } fault_state_t;
 
 void sys_clock_config(void);

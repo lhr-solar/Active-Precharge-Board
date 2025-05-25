@@ -107,7 +107,11 @@ static void logic_handler() {
   if (ignition_bitmap & IGNITION_MOTOR) {
     // In motor state, motor, motor precharge, array, and array precharge contactors should turn on
     // If HV+/- contactors are open, other contactors shouldn't be closed
-    if (Contactors_Get(MOTOR_CONTACTOR) == ON && BPS_status == SAFE) {
+    if(Contactors_Get(MOTOR_CONTACTOR) == OFF && BPS_status == SAFE){
+      Contactors_Set(MOTOR_CONTACTOR, ON, true);
+      HAL_Delay(100);
+    } 
+    else if (Contactors_Get(MOTOR_CONTACTOR) == ON && BPS_status == SAFE) {
       // Wait for precharge to finish, then close motor precharge contactor (start timer if not active)
       if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == OFF && xTimerIsTimerActive(Contactors_GetPrechargeTimerHandle(MOTOR_PRECHARGE_CONTACTOR)) == pdFALSE) {
         // Start timer - callback will check if complete and either fault or close contactor
@@ -147,6 +151,10 @@ static void logic_handler() {
         fault_handler();
       }
     }
+
+    // TODO: add thing to make sure motor contactor is actually set as off
+    Contactors_Set(MOTOR_CONTACTOR, OFF, true);
+
     if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON) {
       // Turn off array precharge contactor in blocking mode
       if (Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, true) == ERROR) {
@@ -182,14 +190,17 @@ void Task_Contactor() {
   ignition_bitmap = IGNITION_OFF;
 
   while (1) {
-    // Update current BPS state
-    BPS_status = getBPS_State();
-
     // If BPS fault, enter fault handler
-    if (BPS_status == FAULT) {
+    if (getBPS_State() == FAULT) {
       fault_bitmap |= FAULT_BPS;
       fault_handler();
     }
+
+    // Get Motor Contactor state from controls
+    // if(getMotor_State() == FAULT){
+    //   fault_bitmap |= FAULT_MOTOR;
+    //   fault_handler;
+    // }
 
     // If Controls fault, enter fault handler
     if (getControls_State() == FAULT) {
