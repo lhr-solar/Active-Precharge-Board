@@ -173,9 +173,9 @@ static void logic_handler() {
   if(!getPrecharge(MOTOR_PRECHARGE_CONTACTOR) && Contactors_Get(MOTOR_PRECHARGE_CONTACTOR)){
     Contactors_Set(MOTOR_PRECHARGE_CONTACTOR, OFF, true);
   }
-  // if(!getPrecharge(ARRAY_PRECHARGE_CONTACTOR) && Contactors_Get(ARRAY_PRECHARGE_CONTACTOR)){
-  //   Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, true);
-  // }
+  if(!getPrecharge(ARRAY_PRECHARGE_CONTACTOR) && Contactors_Get(ARRAY_PRECHARGE_CONTACTOR)){
+    Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, true);
+  }
   // TODO: need to start sense timer
 
 }

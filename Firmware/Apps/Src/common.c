@@ -61,6 +61,7 @@ void fault_handler(void) {
     // Send fault CAN message
     tx_header.StdId = CONTACTOR_SENSE;
     tx_data[1] = (1 << 0); // Array Precharge Sense Fault
+    
     // TODO: add other info to all sense fault messages (expected vs. actual sense value)
   }
 
