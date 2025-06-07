@@ -64,18 +64,17 @@ void fault_handler(void) {
     
     // TODO: add other info to all sense fault messages (expected vs. actual sense value)
   }
+  else if(fault_bitmap & FAULT_MOTOR){
+    // Send fault CAN message
+    tx_header.StdId = CONTACTOR_SENSE;
+    tx_data[0] = (1 << 2); // Motor Sense Fault
+  }
 
   while (1) {
     // Send fault msg every 200ms
-    if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
-    
-
-    //vTaskDelay(FAULT_MESSAGE_DELAY);
-    //if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
-    
-    //Status_Leds_Write(ONBOARD_LED, false);
-
-    //vTaskDelay(FAULT_MESSAGE_DELAY);
+    if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) {
+      error_handler();
+    }
     Status_Leds_Toggle(ONBOARD_LED);
     Contactors_EmergencyDisable();
     HAL_Delay(500);

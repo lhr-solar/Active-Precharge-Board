@@ -94,8 +94,13 @@ static void senseTimerCallback(TimerHandle_t senseTimer) {
         else if (contactor == ARRAY_PRECHARGE_CONTACTOR) {
             fault_bitmap |= FAULT_ARRAY_PRECHARGE_SENSE;
         }
+        else if(contactor == MOTOR_CONTACTOR){
+            fault_bitmap |= FAULT_MOTOR;
+        }
         fault_handler();
     }
+    // Update state to match sense pin
+    contactorState[contactor].state = Contactors_Get(contactor); 
 }
 
 /**
@@ -253,8 +258,7 @@ void Contactors_Init() {
 }
 
 /**
- * @brief   Returns the current state of
- *          a specified contactor
+ * @brief   Returns the current state of a Contactor, for direct connections it returns the state of the sense pin
  * @param   contactor the contactor
  *              (MOTOR_CONTACTOR/MOTOR_PRECHARGE_CONTACTOR/ARRAY_CONTACTOR/ARRAY_PRECHARGE_CONTACTOR/HV_PLUS_CONTACTOR/HV_MINUS_CONTACTOR)
  * @return  The contactor's state (ON/OFF) based on its sense pin (for motor, motor precharge, array precharge) or CAN message (for array, hv)
@@ -262,16 +266,16 @@ void Contactors_Init() {
 bool Contactors_Get(contactor_enum_t contactor) {
     switch (contactor) {
     case MOTOR_CONTACTOR:
-        contactorState[MOTOR_CONTACTOR].state = HAL_GPIO_ReadPin(MOTOR_SENSE_PORT, MOTOR_SENSE_PIN);
+        return HAL_GPIO_ReadPin(MOTOR_SENSE_PORT, MOTOR_SENSE_PIN);
         break;
     case MOTOR_PRECHARGE_CONTACTOR:
-        contactorState[MOTOR_PRECHARGE_CONTACTOR].state = HAL_GPIO_ReadPin(MOTOR_PRECHARGE_SENSE_PORT, MOTOR_PRECHARGE_SENSE_PIN);
+        return HAL_GPIO_ReadPin(MOTOR_PRECHARGE_SENSE_PORT, MOTOR_PRECHARGE_SENSE_PIN);
         break;
     case ARRAY_CONTACTOR:
         updateBPSContactors();
         break;
     case ARRAY_PRECHARGE_CONTACTOR:
-        contactorState[ARRAY_PRECHARGE_CONTACTOR].state = HAL_GPIO_ReadPin(ARRAY_PRECHARGE_SENSE_PORT, ARRAY_PRECHARGE_SENSE_PIN);
+        return HAL_GPIO_ReadPin(ARRAY_PRECHARGE_SENSE_PORT, ARRAY_PRECHARGE_SENSE_PIN);
         break;
     case HV_PLUS_CONTACTOR:
         updateBPSContactors();
@@ -304,21 +308,12 @@ ErrorStatus Contactors_Set(contactor_enum_t contactor, bool state, bool blocking
     // Set contactor to new state
     setContactor(contactor, state);
 
-    // Precharge contactors with sense pins
-    if (blocking && (contactor == ARRAY_PRECHARGE_CONTACTOR || contactor == MOTOR_PRECHARGE_CONTACTOR)) {
-        // Delay to allow sense pin to settle before reading to confirm contactor state
-        vTaskDelay(CONTACTOR_SENSE_DELAY);
-
-        // Read new state and confirm
-        bool ret = Contactors_Get(contactor);
-        result = (ret == state) ? SUCCESS : ERROR;
-    }
-    else {
-        // Start sense timer
-        xTimerStart(Contactors_GetSenseTimerHandle(contactor), 0);
+    if(contactor == ARRAY_PRECHARGE_CONTACTOR || contactor == MOTOR_PRECHARGE_CONTACTOR || contactor == MOTOR_CONTACTOR) {
+        // Start a timer that will check if the sense pin is on after a delay, or it will fault
+        xTimerStart(Contactors_GetSenseTimerHandle(contactor), blocking ? portMAX_DELAY : 0);
         result = SUCCESS; // MUST check sense pin using timer
     }
-
+    
     // Release mutex lock
     if (xSemaphoreGive(contactorsMutex) == pdFALSE) {
         return ERROR;
