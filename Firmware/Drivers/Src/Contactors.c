@@ -96,6 +96,7 @@ static void senseTimerCallback(TimerHandle_t senseTimer) {
         }
         fault_handler();
     }
+    contactorState[contactor].state = Contactors_Get(contactor); // Update state after sense check
 }
 
 /**
@@ -262,16 +263,16 @@ void Contactors_Init() {
 bool Contactors_Get(contactor_enum_t contactor) {
     switch (contactor) {
     case MOTOR_CONTACTOR:
-        contactorState[MOTOR_CONTACTOR].state = HAL_GPIO_ReadPin(MOTOR_SENSE_PORT, MOTOR_SENSE_PIN);
+        return HAL_GPIO_ReadPin(MOTOR_SENSE_PORT, MOTOR_SENSE_PIN);
         break;
     case MOTOR_PRECHARGE_CONTACTOR:
-        contactorState[MOTOR_PRECHARGE_CONTACTOR].state = HAL_GPIO_ReadPin(MOTOR_PRECHARGE_SENSE_PORT, MOTOR_PRECHARGE_SENSE_PIN);
+        return HAL_GPIO_ReadPin(MOTOR_PRECHARGE_SENSE_PORT, MOTOR_PRECHARGE_SENSE_PIN);
         break;
     case ARRAY_CONTACTOR:
         updateBPSContactors();
         break;
     case ARRAY_PRECHARGE_CONTACTOR:
-        contactorState[ARRAY_PRECHARGE_CONTACTOR].state = HAL_GPIO_ReadPin(ARRAY_PRECHARGE_SENSE_PORT, ARRAY_PRECHARGE_SENSE_PIN);
+        return HAL_GPIO_ReadPin(ARRAY_PRECHARGE_SENSE_PORT, ARRAY_PRECHARGE_SENSE_PIN);
         break;
     case HV_PLUS_CONTACTOR:
         updateBPSContactors();
