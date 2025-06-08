@@ -7,10 +7,10 @@
 // Number of contactors controlled directly
 #define NUM_CONTACTORS 2
 
-// Sense pin delay for contactor set (50 miliseconds)
+// Sense pin delay for contactor set
 #define CONTACTOR_SENSE_DELAY pdMS_TO_TICKS(2500)
 
-// Timeout for precharge completion (5 second)
+// Timeout for precharge completion
 #define PRECHARGE_TIMEOUT_DELAY pdMS_TO_TICKS(2500)
 
 // Contactor drive/sense pin definitions

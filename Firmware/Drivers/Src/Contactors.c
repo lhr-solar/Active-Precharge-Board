@@ -316,6 +316,9 @@ ErrorStatus Contactors_Set(contactor_enum_t contactor, bool state, bool blocking
     }
     else {
         // Start sense timer
+        if(xTimerIsTimerActive(Contactors_GetSenseTimerHandle(contactor))) {
+            xTimerReset(Contactors_GetSenseTimerHandle(contactor), 0);
+        }
         xTimerStart(Contactors_GetSenseTimerHandle(contactor), 0);
         result = SUCCESS; // MUST check sense pin using timer
     }

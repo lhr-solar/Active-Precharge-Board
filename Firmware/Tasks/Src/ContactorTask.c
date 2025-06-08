@@ -112,7 +112,6 @@ static void logic_handler() {
     // If HV+/- contactors are open, other contactors shouldn't be closed
     if(Contactors_Get(MOTOR_CONTACTOR) == OFF && BPS_status == SAFE){
       Contactors_Set(MOTOR_CONTACTOR, ON, true);
-      HAL_Delay(100);
     } 
     else if (Contactors_Get(MOTOR_CONTACTOR) == ON && BPS_status == SAFE) {
       // Wait for precharge to finish, then close motor precharge contactor (start timer if not active)
@@ -144,9 +143,8 @@ static void logic_handler() {
       Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, false);
     }
   }
-  // Must be in OFF state if array bit is not set
-  else {
-    // In off state, all contactors should be off
+
+  if(!(ignition_bitmap & IGNITION_MOTOR)) {
     if (Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == ON) {
       // Turn off motor precharge contactor in blocking mode
       if (Contactors_Set(MOTOR_PRECHARGE_CONTACTOR, OFF, true) == ERROR) {
@@ -154,10 +152,10 @@ static void logic_handler() {
         fault_handler();
       }
     }
-
-    // TODO: add thing to make sure motor contactor is actually set as off
     Contactors_Set(MOTOR_CONTACTOR, OFF, true);
+  }
 
+  if(!(ignition_bitmap & IGNITION_ARRAY)){
     if (Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON) {
       // Turn off array precharge contactor in blocking mode
       if (Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, true) == ERROR) {
@@ -236,12 +234,7 @@ void Task_Contactor() {
 
     // Update current ignition state bitmap based on controls
     updateIgnitionState();
-
-    // if(fault_bitmap == 0){
-    //   // Handle contactor logic based on OFF, ARRAY, or MOTOR state
-    //   logic_handler();
-
-    // }
+    
     logic_handler();
     send_contactor_sense(false, false, false);
     vTaskDelay(pdMS_TO_TICKS(100)); // Run every 100ms
