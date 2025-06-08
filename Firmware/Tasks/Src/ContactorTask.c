@@ -165,17 +165,13 @@ static void logic_handler() {
     }
   }
 
-  // Check if Precharge ready has gone low since activaton
-
   // If the precharge ready signal is low and the precharge contactor is on, turn off precharge contactor
-  if(!getPrecharge(MOTOR_PRECHARGE_CONTACTOR) && Contactors_Get(MOTOR_PRECHARGE_CONTACTOR)){
+  if(!getPrecharge(MOTOR_PRECHARGE_CONTACTOR) && Contactors_Get(MOTOR_PRECHARGE_CONTACTOR) == ON){
     Contactors_Set(MOTOR_PRECHARGE_CONTACTOR, OFF, true);
   }
-  if(!getPrecharge(ARRAY_PRECHARGE_CONTACTOR) && Contactors_Get(ARRAY_PRECHARGE_CONTACTOR)){
+  if(!getPrecharge(ARRAY_PRECHARGE_CONTACTOR) && Contactors_Get(ARRAY_PRECHARGE_CONTACTOR) == ON){
     Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, true);
   }
-  // TODO: need to start sense timer
-
 }
 
 static void send_contactor_sense(bool motor_fault, bool motor_precharge_fault, bool array_precharge_fault) {
