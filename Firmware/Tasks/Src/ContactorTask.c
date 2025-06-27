@@ -173,13 +173,19 @@ static void logic_handler() {
     Contactors_Set(ARRAY_PRECHARGE_CONTACTOR, OFF, true);
   }
 }
-
-static void send_contactor_sense(bool motor_fault, bool motor_precharge_fault, bool array_precharge_fault) {
+/** 
+ * @brief   Sends contactor sense message over CAN
+ * @param   motor_fault true if motor contactor sense fault, false otherwise
+ * @param   motor_precharge_fault true if motor precharge contactor sense fault, false otherwise
+ * @param   array_precharge_fault true if array precharge contactor sense fault, false otherwise
+ * @return  None
+*/
+void send_contactor_sense(bool motor_fault, bool motor_precharge_fault, bool array_precharge_fault) {
   CAN_TxHeaderTypeDef tx_header = { 0 };
   tx_header.StdId = 0x400;
   tx_header.RTR = CAN_RTR_DATA;
   tx_header.IDE = CAN_ID_STD;
-  tx_header.DLC = 1;
+  tx_header.DLC = CONTACTOR_SENSE_LENGTH;
   tx_header.TransmitGlobalTime = DISABLE;
 
   uint8_t tx_data[8] = { 0 };

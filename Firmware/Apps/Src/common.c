@@ -2,7 +2,7 @@
 #include "StatusLEDs.h"
 #include "Contactors.h"
 #include "CANMetaData.h"
-
+#include "ContactorTask.h"
 void error_handler(void) {
   while (1) {
     Status_Leds_Toggle(MOTOR_SENSE_FAULT_LED);
@@ -28,7 +28,7 @@ void fault_handler(void) {
   CAN_TxHeaderTypeDef tx_header = { 0 };
   tx_header.RTR = CAN_RTR_DATA;
   tx_header.IDE = CAN_ID_STD;
-  tx_header.DLC = 2;
+  tx_header.DLC = CONTACTOR_SENSE_LENGTH;
   tx_header.TransmitGlobalTime = DISABLE;
   uint8_t tx_data[8] = { 0 };
 
@@ -65,11 +65,17 @@ void fault_handler(void) {
     // TODO: add other info to all sense fault messages (expected vs. actual sense value)
   }
 
+  // bool motor_precharge_fault = (fault_bitmap & FAULT_MOTOR_PRECHARGE_SENSE);
+  bool array_precharge_fault = (fault_bitmap & FAULT_ARRAY_PRECHARGE_SENSE);
+  if(array_precharge_fault) {
+    Status_Leds_Write(ARRAY_SENSE_FAULT_LED, true);
+  }
+  // bool motor_fault = (fault_bitmap & FAULT_MOTOR);
+
   while (1) {
     // Send fault msg every 200ms
     if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
     
-
     //vTaskDelay(FAULT_MESSAGE_DELAY);
     //if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) error_handler();
     
