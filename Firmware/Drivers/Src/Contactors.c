@@ -107,15 +107,29 @@ static void senseTimerCallback(TimerHandle_t senseTimer) {
 static void prechargeTimerCallback(TimerHandle_t prechargeTimer) {
     // Timer ID holds the contactor ID
     contactor_enum_t contactor = (contactor_enum_t)pvTimerGetTimerID(prechargeTimer);
+
+    // If the main Contactor opened during the precharge process, turn off precharge and don't turn on precharge contactor
+    if(contactor == MOTOR_PRECHARGE_CONTACTOR){
+        if(contactorState[MOTOR_CONTACTOR].state == false){
+            return;
+        }
+    }
+    if(contactor == ARRAY_PRECHARGE_CONTACTOR){
+        if(contactorState[ARRAY_CONTACTOR].state == false){
+            return;
+        }
+    }
+
     // Check if precharge completed - if not completed we have a fault
     if (!getPrecharge(contactor)) {
         if (contactor == MOTOR_PRECHARGE_CONTACTOR) {
             fault_bitmap |= FAULT_MOTOR_PRECHARGE_TIMEOUT;
+            fault_handler();
         }
-        else if (contactor == ARRAY_PRECHARGE_CONTACTOR) {
+        if(contactor == ARRAY_PRECHARGE_CONTACTOR){
             fault_bitmap |= FAULT_ARRAY_PRECHARGE_TIMEOUT;
+            fault_handler();
         }
-        fault_handler();
     }
     // Precharge is complete - turn on the contactor (non-blocking mode)
     // This also starts the sense timer to confirm that it closed
